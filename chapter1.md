@@ -55,7 +55,7 @@ Thus $w=w'$, as desired.
 
 ### 1.30 The number 0 times a vector
 
-$0v=0$ for every $v in V$.
+$0v=0$ for every $v \in V$.
 
 Proof: For $v \in V$, we have
 
@@ -160,3 +160,106 @@ $$0=0v=(1+(-1))v = 1v + (-1)v = v+(-v)$$
 The second equality comes from distributive properties. The third
 equality comes from multiplicative inverse and (1.32). Since $v+(-v)=0$,
 $(-v)$ must be the additive inverse of $v$.
+
+#### 6)
+
+Let $\infty$ and $-\infty$ denote two distinct objects, neither of which
+is in $R$. Define an addition and scalar multiplication on
+$R \cup \{\infty, -\infty \}$ as you could guess from the notation.
+Specifically, the sum and product of two real numbers is as usual, and
+for $t \in R$ define
+
+$t \infty = -\infty$ if $t<0$
+
+$t \infty = 0$ if $t=0$
+
+$t \infty = \infty$ if $t>0$
+
+$t (-\infty) = \infty$ if $t<0$
+
+$t (-\infty) = 0$ if $t=0$
+
+$t (-\infty) = -\infty$ if $t>0$
+
+$$t + \infty = \infty + t = \infty + \infty = \infty$$
+
+$$t + (-\infty) = (-\infty) + t = (-\infty) + (-\infty) = -\infty$$
+
+$$\infty + (-\infty) = (-\infty) + \infty = 0$$
+
+With these operations of addition and scalar multiplication, is
+$R \cup \{-\infty, \infty \}$ a vector space? Explain.
+
+It is not a vector space. Commutativity, additive inverse, additive
+identity, multiplicative identity are satisfied from the definitions. We
+give an counter-example for associativity.
+
+Let $t \in R$ and we have
+
+$$(t + \infty) + (-\infty) = \infty + (-\infty)$$
+
+$$t + (\infty + (-\infty)) = t + 0 = t$$
+
+$$(t + \infty) + (-\infty) \neq t + (\infty + (-\infty))$$
+
+Associativity is not satisfied.
+
+#### 7) Suppose $S$ is a nonempty set. Let $V^S$ denote the set of functions from $S$ to $V$. Define a natural addition and scalar multiplication on $V^S$, and show that $V^S$ is a vector space with these definitions.
+
+Addition and scalar multiplication are defined as follows: for
+$f, g \in V^S$, $(f+g)(x) = f(x) + g(x)$ for all $x \in S$; for
+$a \in F$ and $f \in V^S$, $(af)(x) = af(x)$.
+
+The proof for each condition invokes the the fact that $V^S$ maps to $V$
+which is a vector space.
+
+Communitativity:
+
+$$(f+g)(x) = f(x) + g(x) = g(x) + f(x) = (g+f)(x)$$
+
+The second equality comes from the fact that $g(x), f(x) \in V$.
+
+Associativity:
+
+$$((f+g)+h)(x) = (f+g)(x) + h(x) = (f(x) + g(x)) + h(x) = f(x) + (g(x) + h(x)) = f(x) + (g+h)(x) = (f+(g+h))(x)$$
+
+Additive identity: define $0(x) = 0_V, 0 \in V^S$. Therefore for
+$f \in V^S$,
+
+$$(f+0)(x) = f(x) + 0(x) = f(x) + 0_V = f(x)$$
+
+Additive inverse: define $(-f)(x) = -f(x), -f \in V^S$.
+
+$$(f+(-f))(x) = f(x) + (-f)(x) = f(x) + (-f(x)) = 0_V$$
+
+Multiplicative identity:
+
+$$(1f)(x) = 1 f(x) = f(x)$$
+
+Distributive properties: for $a, b \in F$ and $f, g \in V^S$,
+
+$$(a(f+g))(x) = a (f+g)(x) = a(f(x)+g(x)) = af(x) + ag(x) = (af)(x) + (ag)(x)$$
+
+$$((a+b)f)(x) = (a+b)f(x) = af(x) + bf(x) = (af)(x) + (bf)(x)$$
+
+------------------------------------------------------------------------
+
+# 1C Subspaces
+
+### 1.33 Definition: subspace
+
+A subset $U$ of $V$ is called a subspace of $V$ if $U$ is also a vector
+space with the same additive identity, addition, and scalar
+multiplication as on $V$.
+
+### 1.34 Conditions for a subspace
+
+A subset $U$ of $V$ is a subspace of $V$ if and only if $U$ satisfies
+the following three conditions.
+
+- additive identity: $0 \in U$.
+- closed under addition: $u, w \in U$ implies $u + w \in U$.
+- closed under scalar multiplication: $a \in F$ and $u \in U$ implies
+  $au \in U$.
+
+Proof:
