@@ -223,5 +223,21 @@ A subset $U$ of $V$ is a subspace of $V$ if and only if $U$ satisfies the follow
 * closed under addition: $u, w \in U$ implies $u + w \in U$.
 * closed under scalar multiplication: $a \in F$ and $u \in U$ implies $au \in U$.
 
-Proof: 
+
+## Exercises
+#### 15 Suppose $U$ is a subspace of $V$. What is $U+U$?
+
+#### 16 Is the operation of addition on teh subspaces of $V$ commutative? In other words, if $U$ and $W$ are subspaces of $V$, is $U+W=W+U$?
+
+#### 17 Is the operation of addition on the subspaces of $V$ associative? In other words, if $V_1$, $V_2$, $V_3$ are subspaces of $V$, is $(V_1+V_2)+V_3 = V_1+(V_2+V_3)$?
+
+#### 18 Does the operation of addition on the subspaces of $V$ have an additive identity? Which subspaces have additive inverses?
+
+#### 19 Prove or give a counterexample: If $V_1$, $V_2$, $U$ are subspaces of $V$ such that $V_1+U=V_2+U$, then $V_1=V_2$.
+
+#### 20 Suppose $U=\{(x,x,y,y) \in F^4: x,y\in F\}$. Find a subspace $W$ of $F^4$ such that $F^4=U \oplus W$.
+
+#### 21 Suppose $U=\{(x,y,x+y,x-y, 2x) \in F^5: x,y\in F \}$. Find a subspace $W$ of $F^5$ such that $F^5=U \oplus W$.
+
+
 
