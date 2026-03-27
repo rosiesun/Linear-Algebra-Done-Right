@@ -108,10 +108,9 @@ The last equality comes from multiplicative identity.
 
 #### 2) Suppose $a \in F, v \in V$, and $av=0$. Prove that $a=0$ or $v=0$.
 
-*(Disclaimer: I spent forever trying to prove “if $v \neq 0$ then $a=0$”
-after the first statement. Had to ask Claude for help. Turns out proving
-one statement is the same as proving the OR statement. I could be
-wrong.)*
+*(I spent forever trying to prove “if $v \neq 0$ then $a=0$” after the
+first statement. Had to ask Claude for help. Turns out proving one
+statement is the same as proving the OR statement. I could be wrong.)*
 
 Assume $a \neq 0$. Then
 
@@ -135,10 +134,9 @@ conditions vacuously.
 
 #### 5) Show that in the definition of a vector space (1.20), the additive inverse condition can be replaced with the condition that $0v=0$ for all $v \in V$.
 
-*(Disclaimer: Had to get a hint from Claude for direction 2. Why is math
-so hard. This reminds me why I didn’t like proofs in school. A lot of
-times you just had to FEEL what’s the right starting point. Otherwise
-you’re just in purgatory.)*
+*(Had to get a hint from Claude for direction 2. A lot of times you just
+had to FEEL what’s the right starting point. Otherwise you’re just in
+purgatory.)*
 
 Direction 1: Any space satisfying the original axioms (with additive
 inverse) also satisfies $0v=0$ for all $v$.
@@ -264,6 +262,109 @@ the following three conditions.
 
 ## Exercises
 
+#### 1 For each of the following subsets of $F^3$, determine whether it is a subsapce of $F^3$.
+
+#### (a)
+
+$U = \{(x_1, x_2, x_3) \in F^3: x_1 + 2x_2 + 3x_3 = 0\}$
+
+$(0, 0, 0) \in U$.
+
+Let $u \in U, w \in U$ and $u=(x_1, x_2, x_3), w=(y_1, y_2, y_3)$. We
+want to show that $u+w = (x_1+y_1, x_2+y_2, x_3+y_3) \in U$.
+
+$$(x_1+y_1) + 2(x_2+y_2) + 3(x_3+y_3) = x_1+y_1+2x_2+2y_2+3x_3+3y_3 = (x_1+2x_2+3x_3) + (y_1+2y_2+3y_3)=0+0=0$$
+
+Hence $U$ is closed under addition.
+
+Let $u \in U, a \in F$, and $u=(x_1, x_2, x_3)$. We want to show that
+$au = (ax_1, ax_2, ax_3) \in U$.
+
+$$(ax_1) + 2(ax_2) + 3(ax_3) = a(x_1+2x_2+3x_3) = a0 = 0$$
+
+Hence $U$ is closed under scalar multiplication. By (1.34) $U$ is a
+subspace.
+
+#### (b)
+
+$U = \{(x_1, x_2, x_3) \in F^3: x_1 + 2x_2 + 3x_3 = 4\}$
+
+It is not a subspace because $(0,0,0) \notin U$.
+
+#### (c)
+
+$U = \{(x_1, x_2, x_3) \in F^3: x_1 x_2 x_3 = 0\}$
+
+It is not a subspace because it is not closed under addition.
+
+Counterexample: let $u=(1,0,0) \in U, w=(0,1,1) \in U$.
+$u+w=(1,1,1) \notin U$.
+
+#### (d)
+
+$U = \{(x_1, x_2, x_3) \in F^3: x_1 = 5x_3\}$
+
+$(0, 0, 0) \in U$.
+
+Let $u \in U, w \in U$ and $u=(x_1, x_2, x_3), w=(y_1, y_2, y_3)$. We
+want to show that $u+w = (x_1+y_1, x_2+y_2, x_3+y_3) \in U$.
+
+$$(x_1+y_1) - 5(x_3+y_3) = (x_1 - 5x_3) + (y_1 - 5y_3)= 0+0=0$$
+
+Hence $U$ is closed under addition.
+
+Let $u \in U, a \in F$, and $u=(x_1, x_2, x_3)$. We want to show that
+$au = (ax_1, ax_2, ax_3) \in U$.
+
+$$ax_1 - 5ax_3 = a(x_1 - 5x_3) = a0 = 0$$
+
+Hence $U$ is closed under scalar multiplication. By (1.34) $U$ is a
+subspace.
+
+#### 5 Is $R^2$ a subspace of the complex vector space $C^2$?
+
+$R^2$ is a subspace of the complex vector space $C^2$ because it is not
+closed under complex scalar multiplication.
+$i (1,1) = (i, i) \notin R^2$.
+
+#### 6 (a) Is $U=\{(a,b,c) \in R^3: a^3=b^3\}$ a subspace of $R^3$?
+
+$$a^3 = b^3 \iff a=b$$
+
+Another way to write $U$ is $U=\{(a,a,c): a,c \in R\}$.
+
+$(0,0,0) \in U$.
+
+Let $u=(a,a,c), w=(x,x,y)$. Then $u+w = (a+x, a+x, c+y) \in U$. Hence
+$U$ is closed under addition.
+
+Let $u=(a,a,c), \lambda \in F$. Then
+$\lambda u = (\lambda a, \lambda a, \lambda c) \in U$. Hence $U$ is
+closed under scalar multiplication. By (1.34) $U$ is a subspace.
+
+#### 6 (b) Is $U=\{(a,b,c) \in C^3: a^3=b^3\}$ a subspace of $C^3$?
+
+Counterexample: let $u=(1, 1, 0), w=(1, (-1+\sqrt(3)i)/2, 0)$. Then
+$u+w=(2, (1+\sqrt(3)i)/2, 0)$.
+
+$((1+\sqrt(3)i)/2)^3 = -1 \neq 8$, therefore $U$ is not closed under
+addition.
+
+#### 7 Prove or give a counterexample: If $U$ is a nonempty subset of $R^2$ such that $U$ is closed under addition and under taking additive inverses, then $U$ is a subspace of $R^2$.
+
+Counterexample: $U=Z^2$. $(0,0) \in U$ and for each $(a,b), a,b\in Z$,
+$(-a,-b) \in Z$ by the definition of integers. It is not closed under
+scalar multiplication, e.g. $0.5 (1, 1) \notin Z^2$.
+
+#### 8 Give an example of a nonempty subset $U$ of $R^2$ such that $U$ is closed under scalar multiplication, but $U$ is not a subspace of $R^2$.
+
+*(This was a tough one! I guess I simply lack imagination (which means I
+cannot be a mathematician). Had to ask Claude.)*
+
+Counterexample: $U= \{(x,0): x \in R\} \cup \{(0,y): y \in R\}$,
+i.e. the two axis lines. It is closed under scalar multiplication. It is
+not closed under addition, e.g. $(1,0) + (0,1) = (1,1) \notin U$.
+
 #### 15 Suppose $U$ is a subspace of $V$. What is $U+U$?
 
 #### 16 Is the operation of addition on teh subspaces of $V$ commutative? In other words, if $U$ and $W$ are subspaces of $V$, is $U+W=W+U$?
@@ -275,3 +376,5 @@ the following three conditions.
 #### 19 Prove or give a counterexample: If $V_1$, $V_2$, $U$ are subspaces of $V$ such that $V_1+U=V_2+U$, then $V_1=V_2$.
 
 #### 20 Suppose $U=\{(x,x,y,y) \in F^4: x,y\in F\}$. Find a subspace $W$ of $F^4$ such that $F^4=U \oplus W$.
+
+#### 21 Suppose $U=\{(x,y,x+y,x-y, 2x) \in F^5: x,y\in F \}$. Find a subspace $W$ of $F^5$ such that $F^5=U \oplus W$.
