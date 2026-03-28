@@ -163,7 +163,7 @@ $(-v)$ must be the additive inverse of $v$.
 
 Let $\infty$ and $-\infty$ denote two distinct objects, neither of which
 is in $R$. Define an addition and scalar multiplication on
-$R \cup \{\infty, -\infty \}$ as you could guess from the notation.
+$R \cup \\{\infty, -\infty \\}$ as you could guess from the notation.
 Specifically, the sum and product of two real numbers is as usual, and
 for $t \in R$ define
 
@@ -186,7 +186,7 @@ $$t + (-\infty) = (-\infty) + t = (-\infty) + (-\infty) = -\infty$$
 $$\infty + (-\infty) = (-\infty) + \infty = 0$$
 
 With these operations of addition and scalar multiplication, is
-$R \cup \{-\infty, \infty \}$ a vector space? Explain.
+$R \cup \\{-\infty, \infty \\}$ a vector space? Explain.
 
 It is not a vector space. Commutativity, additive inverse, additive
 identity, multiplicative identity are satisfied from the definitions. We
@@ -266,7 +266,7 @@ Suppose $V_1, ..., V_m$ are subspaces of $V$. The sum of $V_1, ..., V_m$
 denoted by $V_1 + ... + V_m$, is the set of all possible sums of
 elements of $V_1, ..., V_m$. More precisely,
 
-$$V_1 + ... +V_m = \{v_1 + ... + v_m: v1 \in V_1, ..., v_m \in V_m\}$$
+$$V_1 + ... +V_m = \\{v_1 + ... + v_m: v1 \in V_1, ..., v_m \in V_m\\}$$
 
 ### 1.40 Sum of subspaces is the smallest containing subspace
 
@@ -289,7 +289,7 @@ equal to 0.
 ### 1.46 Direct sum of two subspaces
 
 Suppose $U$ and $W$ are subspaces of V. Then $U + W$ is a direct sum
-$\iff U \cap W = \{0\}$.
+$\iff U \cap W = \\{0\\}$.
 
 ## Exercises
 
@@ -297,7 +297,7 @@ $\iff U \cap W = \{0\}$.
 
 #### (a)
 
-$U = \{(x_1, x_2, x_3) \in F^3: x_1 + 2x_2 + 3x_3 = 0\}$
+$U = \\{(x_1, x_2, x_3) \in F^3: x_1 + 2x_2 + 3x_3 = 0\\}$
 
 $(0, 0, 0) \in U$.
 
@@ -318,13 +318,13 @@ subspace.
 
 #### (b)
 
-$U = \{(x_1, x_2, x_3) \in F^3: x_1 + 2x_2 + 3x_3 = 4\}$
+$U = \\{(x_1, x_2, x_3) \in F^3: x_1 + 2x_2 + 3x_3 = 4\\}$
 
 It is not a subspace because $(0,0,0) \notin U$.
 
 #### (c)
 
-$U = \{(x_1, x_2, x_3) \in F^3: x_1 x_2 x_3 = 0\}$
+$U = \\{(x_1, x_2, x_3) \in F^3: x_1 x_2 x_3 = 0\\}$
 
 It is not a subspace because it is not closed under addition.
 
@@ -333,7 +333,7 @@ $u+w=(1,1,1) \notin U$.
 
 #### (d)
 
-$U = \{(x_1, x_2, x_3) \in F^3: x_1 = 5x_3\}$
+$U = \\{(x_1, x_2, x_3) \in F^3: x_1 = 5x_3\\}$
 
 $(0, 0, 0) \in U$.
 
@@ -358,11 +358,11 @@ $R^2$ is a subspace of the complex vector space $C^2$ because it is not
 closed under complex scalar multiplication.
 $i (1,1) = (i, i) \notin R^2$.
 
-#### 6 (a) Is $U=\{(a,b,c) \in R^3: a^3=b^3\}$ a subspace of $R^3$?
+#### 6 (a) Is $U=\\{(a,b,c) \in R^3: a^3=b^3\\}$ a subspace of $R^3$?
 
 $$a^3 = b^3 \iff a=b$$
 
-Another way to write $U$ is $U=\{(a,a,c): a,c \in R\}$.
+Another way to write $U$ is $U=\\{(a,a,c): a,c \in R\\}$.
 
 $(0,0,0) \in U$.
 
@@ -373,7 +373,7 @@ Let $u=(a,a,c), \lambda \in F$. Then
 $\lambda u = (\lambda a, \lambda a, \lambda c) \in U$. Hence $U$ is
 closed under scalar multiplication. By (1.34) $U$ is a subspace.
 
-#### 6 (b) Is $U=\{(a,b,c) \in C^3: a^3=b^3\}$ a subspace of $C^3$?
+#### 6 (b) Is $U=\\{(a,b,c) \in C^3: a^3=b^3\\}$ a subspace of $C^3$?
 
 Counterexample: let $u=(1, 1, 0), w=(1, (-1+\sqrt(3)i)/2, 0)$. Then
 $u+w=(2, (1+\sqrt(3)i)/2, 0)$.
@@ -392,7 +392,7 @@ scalar multiplication, e.g. $0.5 (1, 1) \notin Z^2$.
 *(This was a tough one! I guess I simply lack imagination (which means I
 cannot be a mathematician). Had to ask Claude.)*
 
-Counterexample: $U= \{(x,0): x \in R\} \cup \{(0,y): y \in R\}$,
+Counterexample: $U= \\{(x,0): x \in R\\} \cup \\{(0,y): y \in R\\}$,
 i.e. the two axis lines. It is closed under scalar multiplication. It is
 not closed under addition, e.g. $(1,0) + (0,1) = (1,1) \notin U$.
 
@@ -434,7 +434,7 @@ Therefore one subspace has to be contained in the other.
 
 #### 15) Suppose $U$ is a subspace of $V$. What is $U+U$?
 
-$U+U = \{u_1 + u_2: u_1 \in U, u_2 \in U\}$. By definition
+$U+U = \\{u_1 + u_2: u_1 \in U, u_2 \in U\\}$. By definition
 $u_1 + u_2 \in U$ because $U$ is closed under addition. Therefore
 $U+U \subset U$.
 
@@ -444,8 +444,8 @@ trivially. Thus $U=U+U$ as desired.
 #### 16) Is the operation of addition on the subspaces of $V$ commutative? In other words, if $U$ and $W$ are subspaces of $V$, is $U+W=W+U$?
 
 The operation is commutative, which comes from the fact that $V$ is a
-vector space. $U+W=\{(u+w): u \in U, w \in W\}$.
-$W+U= \{(w+u): w \in W, u \in U\}$. Since $u+w=w+u$ for all $u,w \in V$,
+vector space. $U+W=\\{(u+w): u \in U, w \in W\\}$.
+$W+U= \\{(w+u): w \in W, u \in U\\}$. Since $u+w=w+u$ for all $u,w \in V$,
 every element of $U+W$ is an element of $W_U$ and vice versa, hence
 $U+W=W+U$.
 
@@ -453,40 +453,40 @@ $U+W=W+U$.
 
 The operation is associative, which comes from the fact that $V$ is a
 vector space. Same argument as Ex.16.
-$(V_1 + V_2) + V_3 = \{(v_1+v_2)+v_3: v_1 \in V_1, v_2 \in V_2, v_3 \in V_3\}$.
-$V_1 + (V_2 + V_3) = \{v_1+(v_2+v_3): v_1 \in V_1, v_2 \in V_2, v_3 \in V_3\}$.
+$(V_1 + V_2) + V_3 = \\{(v_1+v_2)+v_3: v_1 \in V_1, v_2 \in V_2, v_3 \in V_3\\}$.
+$V_1 + (V_2 + V_3) = \\{v_1+(v_2+v_3): v_1 \in V_1, v_2 \in V_2, v_3 \in V_3\\}$.
 
 #### 18) Does the operation of addition on the subspaces of $V$ have an additive identity? Which subspaces have additive inverses?
 
-The operation has an additive identity $\{0\}$. Let $U$ be a subspace of
-$V$. $U+\{0\} = \{(u+0): u \in U, 0 \in \{0\}\} = U$.
+The operation has an additive identity $\\{0\\}$. Let $U$ be a subspace of
+$V$. $U+\\{0\\} = \\{(u+0): u \in U, 0 \in \\{0\\}\\} = U$.
 
-Only $\{0\}$ has additive inverse $\{0\}$. For any subspace
-$U \neq \{0\}$, there does not exist $W$ such that $U+W=\{0\}$. We have
+Only $\\{0\\}$ has additive inverse $\\{0\\}$. For any subspace
+$U \neq \\{0\\}$, there does not exist $W$ such that $U+W=\\{0\\}$. We have
 $U \subseteq U+W$, since for any $u \in U$, $u=u+0 \in U+W$. Then
-$U+W \supseteq U \neq \{0\}$.
+$U+W \supseteq U \neq \\{0\\}$.
 
 #### 19) Prove or give a counterexample: If $V_1$, $V_2$, $U$ are subspaces of $V$ such that $V_1+U=V_2+U$, then $V_1=V_2$.
 
-Counterexample: $V_1=\{(x,0): x \in R\}$, $V_2=\{(0,y): y \in R\}$,
+Counterexample: $V_1=\\{(x,0): x \in R\\}$, $V_2=\\{(0,y): y \in R\\}$,
 $U=R^2$.
 
-#### 20) Suppose $U=\{(x,x,y,y) \in F^4: x,y\in F\}$. Find a subspace $W$ of $F^4$ such that $F^4=U \oplus W$.
+#### 20) Suppose $U=\\{(x,x,y,y) \in F^4: x,y\in F\\}$. Find a subspace $W$ of $F^4$ such that $F^4=U \oplus W$.
 
-$W=\{(0,x,0,y): x,y \in F\}$.
+$W=\\{(0,x,0,y): x,y \in F\\}$.
 
-#### 21) Suppose $U=\{(x,y,x+y,x-y, 2x) \in F^5: x,y\in F \}$. Find a subspace $W$ of $F^5$ such that $F^5=U \oplus W$.
+#### 21) Suppose $U=\\{(x,y,x+y,x-y, 2x) \in F^5: x,y\in F \\}$. Find a subspace $W$ of $F^5$ such that $F^5=U \oplus W$.
 
-$W=\{(0,0,x,y,z): x,y,z \in F\}$.
+$W=\\{(0,0,x,y,z): x,y,z \in F\\}$.
 
-#### 22) Suppose $U=\{(x,y,x+y,x-y, 2x) \in F^5: x,y\in F \}$. Find three subspaces $W_1, W_2, W_3$ of $F^5$, none of which equals $\{0\}$, such that $F^5=U \oplus W_1 \oplus W_2 \oplus W_3$.
+#### 22) Suppose $U=\\{(x,y,x+y,x-y, 2x) \in F^5: x,y\in F \\}$. Find three subspaces $W_1, W_2, W_3$ of $F^5$, none of which equals $\\{0\\}$, such that $F^5=U \oplus W_1 \oplus W_2 \oplus W_3$.
 
-$W_1=\{(0,0,x,0,0): x \in F\}$, $W_2=\{(0,0,0,x,0): x \in F\}$,
-$W_3=\{(0,0,0,0,x): x \in F\}$.
+$W_1=\\{(0,0,x,0,0): x \in F\\}$, $W_2=\\{(0,0,0,x,0): x \in F\\}$,
+$W_3=\\{(0,0,0,0,x): x \in F\\}$.
 
 #### 23) Prove or give a counterexample: If $V_1, V_2, U$ are subspaces of $V$ such that $V=V_1 \oplus U$ and $V=V_2 \oplus U$, then $V_1=V_2$.
 
 Counterexample from Ex. 20: 
-$$V_1=\\{(x,x,y,y) \in F^4: x,y\in F \\}$$,
-$V_2=\\{(x,0,y,0) \in F^4: x,y\in F \\}$,
-$$U=\{(0,x,0,y) \in F^4: x,y\in F \}$$
+$V_1=\\{(x,x,y,y) \in F^4: x,y\in F \\\}$,
+$V_2=\\{(x,0,y,0) \in F^4: x,y\in F \\\}$,
+$U=\\{(0,x,0,y) \in F^4: x,y\in F \\\}$
