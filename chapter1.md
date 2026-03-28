@@ -260,6 +260,37 @@ the following three conditions.
 - closed under scalar multiplication: $a \in F$ and $u \in U$ implies
   $au \in U$.
 
+### 1.36 Definition: Sum of subspaces
+
+Suppose $V_1, ..., V_m$ are subspaces of $V$. The sum of $V_1, ..., V_m$
+denoted by $V_1 + ... + V_m$, is the set of all possible sums of
+elements of $V_1, ..., V_m$. More precisely,
+
+$$V_1 + ... +V_m = \{v_1 + ... + v_m: v1 \in V_1, ..., v_m \in V_m\}$$
+
+### 1.40 Sum of subspaces is the smallest containing subspace
+
+Suppose $V_1, ..., V_m$ are subspaces of $V$. Then $V_1 + ... + V_m$ is
+the smallest subspace of $V$ containing $V_1, ..., V_m$.
+
+### 1.41 Definition: Direct sum $\oplus$
+
+Suppose $V_1, ..., V_m$ are subspaces of $V$. The sum $V_1 + ... V_m$ is
+called a direct sum if each element of $V_1 + ... V_m$ can be written in
+only one way as a sum $v_1 + ... + v_m$, where each $v_k \in V_k$.
+
+### 1.45 Conditions for a direct sum
+
+Suppose $V_1, ..., V_m$ are subspaces of $V$. Then $V_1 + ... + V_m$ is
+a direct if and only if the only way to write 0 as a sum
+$v_1 + ... + v_m$, where each $v_k \in V_k$, is by taking each $v_k$
+equal to 0.
+
+### 1.46 Direct sum of two subspaces
+
+Suppose $U$ and $W$ are subspaces of V. Then $U + W$ is a direct sum
+$\iff U \cap W = \{0\}$.
+
 ## Exercises
 
 #### 1 For each of the following subsets of $F^3$, determine whether it is a subsapce of $F^3$.
@@ -321,7 +352,7 @@ $$ax_1 - 5ax_3 = a(x_1 - 5x_3) = a0 = 0$$
 Hence $U$ is closed under scalar multiplication. By (1.34) $U$ is a
 subspace.
 
-#### 5 Is $R^2$ a subspace of the complex vector space $C^2$?
+#### 5) Is $R^2$ a subspace of the complex vector space $C^2$?
 
 $R^2$ is a subspace of the complex vector space $C^2$ because it is not
 closed under complex scalar multiplication.
@@ -350,13 +381,13 @@ $u+w=(2, (1+\sqrt(3)i)/2, 0)$.
 $((1+\sqrt(3)i)/2)^3 = -1 \neq 8$, therefore $U$ is not closed under
 addition.
 
-#### 7 Prove or give a counterexample: If $U$ is a nonempty subset of $R^2$ such that $U$ is closed under addition and under taking additive inverses, then $U$ is a subspace of $R^2$.
+#### 7) Prove or give a counterexample: If $U$ is a nonempty subset of $R^2$ such that $U$ is closed under addition and under taking additive inverses, then $U$ is a subspace of $R^2$.
 
 Counterexample: $U=Z^2$. $(0,0) \in U$ and for each $(a,b), a,b\in Z$,
 $(-a,-b) \in Z$ by the definition of integers. It is not closed under
 scalar multiplication, e.g. $0.5 (1, 1) \notin Z^2$.
 
-#### 8 Give an example of a nonempty subset $U$ of $R^2$ such that $U$ is closed under scalar multiplication, but $U$ is not a subspace of $R^2$.
+#### 8) Give an example of a nonempty subset $U$ of $R^2$ such that $U$ is closed under scalar multiplication, but $U$ is not a subspace of $R^2$.
 
 *(This was a tough one! I guess I simply lack imagination (which means I
 cannot be a mathematician). Had to ask Claude.)*
@@ -365,16 +396,96 @@ Counterexample: $U= \{(x,0): x \in R\} \cup \{(0,y): y \in R\}$,
 i.e. the two axis lines. It is closed under scalar multiplication. It is
 not closed under addition, e.g. $(1,0) + (0,1) = (1,1) \notin U$.
 
-#### 15 Suppose $U$ is a subspace of $V$. What is $U+U$?
+#### 10) Suppose $V_1$ and $V_2$ are subspaces of $V$. Prove that the intersection $V_1 \cap V_2$ is a subspace of $V$.
 
-#### 16 Is the operation of addition on teh subspaces of $V$ commutative? In other words, if $U$ and $W$ are subspaces of $V$, is $U+W=W+U$?
+The proof is based on the fact that both $V_1$ and $V_2$ are subspaces.
 
-#### 17 Is the operation of addition on the subspaces of $V$ associative? In other words, if $V_1$, $V_2$, $V_3$ are subspaces of $V$, is $(V_1+V_2)+V_3 = V_1+(V_2+V_3)$?
+$0 \in V_1$ and $0 \in V_2$, therefore $0 \in V_1 \cap V_2$.
 
-#### 18 Does the operation of addition on the subspaces of $V$ have an additive identity? Which subspaces have additive inverses?
+Let $u,w \in V_1 \cap V_2$. We have $u \in V_1, w \in V_1, u+w \in V_1$,
+$u \in V_2, w \in V_2, u+w \in V_2$. Therefore $u+w \in V_1 \cap V_2$.
 
-#### 19 Prove or give a counterexample: If $V_1$, $V_2$, $U$ are subspaces of $V$ such that $V_1+U=V_2+U$, then $V_1=V_2$.
+Let $u \in V_1 \cap V_2, a \in F$. We have $u \in V_1, au \in V_1$,
+$u \in V_2, au \in V_2$. Therefore $au \in V_1 \cap V_2$.
 
-#### 20 Suppose $U=\{(x,x,y,y) \in F^4: x,y\in F\}$. Find a subspace $W$ of $F^4$ such that $F^4=U \oplus W$.
+By (1.34) $V_1 \cap V_2$ is a subspace.
 
-#### 21 Suppose $U=\{(x,y,x+y,x-y, 2x) \in F^5: x,y\in F \}$. Find a subspace $W$ of $F^5$ such that $F^5=U \oplus W$.
+#### 12) Prove that the union of two subspaces of $V$ is a subspace of $V$ if and only if one of the subspaces is contained in the other.
+
+Let $V_1, V_2$ be two subspaces of $V$.
+
+Note that the argument is symmetric. Assume $V_1 \subset V_2$. Then
+$V_1 \cup V_2 = V_2$. Since $V_2$ is a subspace $V_1 \cup V_2$ is a
+subspace.
+
+Assume $V_1 \cup V_2$ is a subspace. Assume towards contradiction that
+neither subspace contains the other. Let $u, w \in V_1 \cup V_2$. Assume
+$u \in V_1$ and $u \notin V_2$, $w \in V_2$ and $w \notin V_1$.
+
+Since $V_1 \cup V_2$ is a subspace, $u+w \in V_1 \cup V_2$.
+
+If $u+w \in V_1$, and $-u \in V_1$, $u+w+(-u) = w \in V_1$, which is a
+contradiction.
+
+If $u+w \in V_2$, and $-w \in V_2$, $u+w+(-w) = u \in V_2$, which is a
+contradiction.
+
+Therefore one subspace has to be contained in the other.
+
+#### 15) Suppose $U$ is a subspace of $V$. What is $U+U$?
+
+$U+U = \{u_1 + u_2: u_1 \in U, u_2 \in U\}$. By definition
+$u_1 + u_2 \in U$ because $U$ is closed under addition. Therefore
+$U+U \subset U$.
+
+Let $u \in U$. $u=u+0$, since $u \in U$ and $0 \in U$, $U \subset U+U$
+trivially. Thus $U=U+U$ as desired.
+
+#### 16) Is the operation of addition on the subspaces of $V$ commutative? In other words, if $U$ and $W$ are subspaces of $V$, is $U+W=W+U$?
+
+The operation is commutative, which comes from the fact that $V$ is a
+vector space. $U+W=\{(u+w): u \in U, w \in W\}$.
+$W+U= \{(w+u): w \in W, u \in U\}$. Since $u+w=w+u$ for all $u,w \in V$,
+every element of $U+W$ is an element of $W_U$ and vice versa, hence
+$U+W=W+U$.
+
+#### 17) Is the operation of addition on the subspaces of $V$ associative? In other words, if $V_1$, $V_2$, $V_3$ are subspaces of $V$, is $(V_1+V_2)+V_3 = V_1+(V_2+V_3)$?
+
+The operation is associative, which comes from the fact that $V$ is a
+vector space. Same argument as Ex.16.
+$(V_1 + V_2) + V_3 = \{(v_1+v_2)+v_3: v_1 \in V_1, v_2 \in V_2, v_3 \in V_3\}$.
+$V_1 + (V_2 + V_3) = \{v_1+(v_2+v_3): v_1 \in V_1, v_2 \in V_2, v_3 \in V_3\}$.
+
+#### 18) Does the operation of addition on the subspaces of $V$ have an additive identity? Which subspaces have additive inverses?
+
+The operation has an additive identity $\{0\}$. Let $U$ be a subspace of
+$V$. $U+\{0\} = \{(u+0): u \in U, 0 \in \{0\}\} = U$.
+
+Only $\{0\}$ has additive inverse $\{0\}$. For any subspace
+$U \neq \{0\}$, there does not exist $W$ such that $U+W=\{0\}$. We have
+$U \subseteq U+W$, since for any $u \in U$, $u=u+0 \in U+W$. Then
+$U+W \supseteq U \neq \{0\}$.
+
+#### 19) Prove or give a counterexample: If $V_1$, $V_2$, $U$ are subspaces of $V$ such that $V_1+U=V_2+U$, then $V_1=V_2$.
+
+Counterexample: $V_1=\{(x,0): x \in R\}$, $V_2=\{(0,y): y \in R\}$,
+$U=R^2$.
+
+#### 20) Suppose $U=\{(x,x,y,y) \in F^4: x,y\in F\}$. Find a subspace $W$ of $F^4$ such that $F^4=U \oplus W$.
+
+$W=\{(0,x,0,y): x,y \in F\}$.
+
+#### 21) Suppose $U=\{(x,y,x+y,x-y, 2x) \in F^5: x,y\in F \}$. Find a subspace $W$ of $F^5$ such that $F^5=U \oplus W$.
+
+$W=\{(0,0,x,y,z): x,y,z \in F\}$.
+
+#### 22) Suppose $U=\{(x,y,x+y,x-y, 2x) \in F^5: x,y\in F \}$. Find three subspaces $W_1, W_2, W_3$ of $F^5$, none of which equals $\{0\}$, such that $F^5=U \oplus W_1 \oplus W_2 \oplus W_3$.
+
+$W_1=\{(0,0,x,0,0): x \in F\}$, $W_2=\{(0,0,0,x,0): x \in F\}$,
+$W_3=\{(0,0,0,0,x): x \in F\}$.
+
+#### 23) Prove or give a counterexample: If $V_1, V_2, U$ are subspaces of $V$ such that $V=V_1 \oplus U$ and $V=V_2 \oplus U$, then $V_1=V_2$.
+
+Counterexample from Ex. 20: $V_1=\{(x,x,y,y) \in F^4: x,y\in F\}$,
+$V_2=\{(x,0,y,0) \in F^4: x,y\in F\}$,
+$U=\{(0,x,0,y) \in F^4: x,y\in F\}$
