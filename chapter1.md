@@ -1,5 +1,4 @@
 Linear Algebra Done Right - Chapter 1
-================
 Rosie Sun
 2026-03-23
 
