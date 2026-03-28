@@ -2,7 +2,7 @@
 title: "Linear Algebra Done Right - Chapter 1"
 author: "Rosie Sun"
 date: "2026-03-23"
-output: github_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
