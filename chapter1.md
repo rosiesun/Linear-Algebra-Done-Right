@@ -1,5 +1,6 @@
 Linear Algebra Done Right - Chapter 1
-Rosie Sun
+================
+Rosie Sun <br>
 2026-03-23
 
 # 1B Definition of Vector Space
