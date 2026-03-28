@@ -487,6 +487,6 @@ $W_3=\{(0,0,0,0,x): x \in F\}$.
 #### 23) Prove or give a counterexample: If $V_1, V_2, U$ are subspaces of $V$ such that $V=V_1 \oplus U$ and $V=V_2 \oplus U$, then $V_1=V_2$.
 
 Counterexample from Ex. 20: 
-$$V_1=\{(x,x,y,y) \in F^4: x,y\in F \}$$,
-$$V_2=\{(x,0,y,0) \in F^4: x,y\in F \}$$,
+$$V_1=\\{(x,x,y,y) \in F^4: x,y\in F \\}$$,
+$V_2=\\{(x,0,y,0) \in F^4: x,y\in F \\}$,
 $$U=\{(0,x,0,y) \in F^4: x,y\in F \}$$
