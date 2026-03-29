@@ -13,6 +13,34 @@ The set of all linear combinations of a list of vectors $v_1, ..., v_m$ in $V$ i
 
 The span of the empty list () is defined to be $\\{0\\}$
 
+### 2.6 Span is the smallest containing subspace
+The span of a list of vectors in $V$ is the smallest subspace of $V$ containing all vectors in the list.
+
+### 2.7 Definition: spans
+If $span(v_1,...,v_m)$ equals $V$, we say that the list $v_1,...,v_m$ spans V.
+
+### 2.9 Definition: finite-dimensional vector space
+A vector space is called finite-dimensional if some list of vectors in it spans the space.
+
+### 2.10 Definition: polynomial
+A function $p: F \rightarrow F$ is called a polynomial with coefficients in $F$ if there exist $a_0, ..., a_m \in F$ such that $p(z) = a_0 + a_1 z + a_2 z^2 + ... a_m z^m$ for all $z \in F$. $P(F)$ is the set of all polynomials with coefficients in $F$.
+
+### 2.15 Definition: linearly independent
+A list $v_1, ..., v_m$ of vectors in $V$ is called linearly independent if the only choice of $a_1,...,a_m \in F$ that makes $a_1 v_1 + ... + a_m v_m = 0$ is $a_1 = ... = a_m = 0$.
+
+### 2.17 Definition: linearly dependent
+A list of vectors in $V$ is called linearly dependent if it is not linearly independent. In other words, a list $v_1,..., v_m$ of vectors in $V$ is linearly dependent if there exist $a_1,...,a_m \in F$, not all 0, such that $a_1 v_1 + ... + v_m v_m = 0$.
+
+### 2.19 Linear dependence lemma
+Suppose $v_1,...,v_m$ is a linearly dependent list in $V$. Then there exists $k \in \\{1,2,...,m\\}$ such that $v_k \in span(v_1,...,v_{k-1})$. Furthermore, if $k$ satisfies the condition above and the kth term is removed from $v_1,...,v_m$, then the span of the remaining list equals $span(v_1,...,v_m)$.
+
+### 2.22 Length of linearly independent list $\leq$ length of spanning list.
+In a finite-dimensional vector space, the length of every linearly indpeendent list of vectors is less than or equal to the length of every spanning list of vectors.
+
+### 2.25 Finite dimensional subspaces
+Every subspace of a finite-dimensional vector space is finite-dimensional.
+
+
 ## Exercises
 
 #### (1) Find a list of four distinct vectors in $F^3$ whose span equals $\\{(x,y,z) \in F^3: x+y+z=0 \\}$.
@@ -77,6 +105,26 @@ Suppose $b_1 v_1 + ... b_m v_m = 0$. We can rewrite it as $b_1 w_1 + b_2 (w_2-w_
 
 # 2B Bases
 
+### 2.26 Definition: basis
+A basis of $V$ is a list of vectors in $V$ that is linearly independent and spans $V$.
+
+### 2.28 Criterion for basis
+A list $v_1,...,v_n$ of vectors in $V$ is a basis of $V$ if and only if every $v \in V$ can be written uniquely in the form $v=a_1 v_1 + ... a_n v_n$, where $a_1,...,a_n \in F$.
+
+### 2.30 Every spanning list contains a basis
+Every spanning list in a vector space can be reduced to a basis of the vector space.
+
+### 2.31 Basis of finite-dimensional vector space
+Every finite-dimensional vector space has a basis.
+
+### 2.32 Every linearly independent list extends to a basis
+Every linearly independent list of vectors in a finite-dimensional vector space can be extended to a basis of the vector space.
+
+### 2.33 Every subspace of $V$ is part of a direct sum equal to $V$
+Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Then there is a subspace $W$ of $V$ such that $V=U \oplus W$.
+
+## Exercises
+
 
 
 
@@ -86,3 +134,27 @@ Suppose $b_1 v_1 + ... b_m v_m = 0$. We can rewrite it as $b_1 w_1 + b_2 (w_2-w_
 
 
 # 2C Dimension
+
+### 2.34 Basis length does not depend on basis
+Any two bases of a finite-dimensional vector space have the same length.
+
+### 2.35 Definition: dimension
+The dimension of a finite-dimensional vector space is the length of any basis of the vector space. The dimension of a finite-dimensional vector space is denoted by $dim V$.
+
+### 2.37 Dimension of a subspace
+If $V$ is finite-dimensional and $U$ is a subspace of $V$, then $dim U \leq dim V$.
+
+### 2.38 Linearly independent list of the right length is a basis
+Suppose $V$ is finite-dimensional. Then every linearly independent list of vectors in $V$ of length $dim V$ is a basis of $V$.
+
+### 2.39 Subspace of full dimension equals the whole space
+Suppose that $V$ is finite-dimensional and $U$ is a subspace of $V$ such that $dim U = dim V$. THen $U = V$.
+
+### 2.42 Spanning list of the right length is a basis
+Suppose $V$ is finite-dimensional. Then every list of vectors in $V$ that spans $V$ and has the length $dim V$ is a basis of $V$.
+
+### 2.43 Dimension of a sum
+If $V_1$ and $V_2$ are subspaces of a finite-dimensional vector space, then $dim (V_1+V_2) = dim V_1 + dim V_2 - dim(v_1 \cap V_2)$.
+
+
+## Exercises
