@@ -66,7 +66,7 @@ Suppose $a(1+i)+b(1-i)=0, a,b \in R$. Then $(a+b) + (a-b)i = 0$. We have $a+b=a-
 Suppose $(a+bi)(1+i)+(c+di)(1-i)=0, a,b,c,d \in R$. Then $(a-b+c+d)+(a+b-c+d)i=0$. This holds if $a=d=0, b=c=1$. Thus by (2.17) they are linearly dependent.
 
 
-#### (8) Suppose $v_1, v_2, v_3, v_4$ is linearly in $V$. Prove that the list $v_1-v_2, v_2-v_3, v_3-v_4, v_4$ is also linearly independent.
+#### (8) Suppose $v_1, v_2, v_3, v_4$ is linearly independent in $V$. Prove that the list $v_1-v_2, v_2-v_3, v_3-v_4, v_4$ is also linearly independent.
 Suppose $a(v_1-v_2) + b(v_2-v_3) + c(v_3-v_4) + dv_4 =0$. We want to show that $a=b=c=d=0$. We can rewrite the equation as $av_1 + (b-a)v_2 + (c-b)v_3 + (d-c)v_4 = 0$. Given that $v_1, v_2, v_3, v_4$ are linearly independent, we have $a=b-a=c-b=d-c=0$, $a=b=c=d=0$. Thus $v_1-v_2, v_2-v_3, v_3-v_4, v_4$ are linearly independent as desired.
 
 
@@ -83,7 +83,11 @@ Counterexample: $(1,0), (0,1) \in R^2$ is linearly independent. $(-1,0), (0,-1) 
 
 
 #### (12) Suppose $v_1,...,v_m$ is linearly independent in $V$ and $w \in V$. Prove that if $v_1+w, ..., v_m+w$ is linearly dependent, then $w \in span(v_1,...,v_m)$.
-By (2.19), if $v_1+w,...,v_m+w$ is linearly dependent, there exist $v_k+w$ such that $v_k+w \in span(v_1+w,...,v_{k-1}+w), k \in \\{1,...,m\\}$. $v_k+w = a_1 (v_1+w) + ... + a_{k-1} (v_{k-1} +w)$. Expanding, we have $(1-a_1-...-a_{k-1}) w = a_1 v_1 + ... + a_{k-1} v_{k-1}$. If $1-a_1-...-a_{k-1} \neq 0$, then $w = 1/(1-a_1-...-a_{k-1}) (a_1 v_1 + ... + a_{k-1} v_{k-1})$, thus $w \in span(v_1,...,v_m)$. If $1-a_1-...-a_{k-1} = 0$, then we have $0 = a_1 v_1 + ... + a_{k-1} v_{k-1}$. Since $v_1,...,v_m$ is linearly independent, $a_1=...=a_{k-1}=0$. So $1-a_1-...-a_{k-1}=1$, which is a contradiction, showing that this case is not possible.
+By (2.19), if $v_1+w,...,v_m+w$ is linearly dependent, there exist $v_k+w$ such that $v_k+w \in span(v_1+w,...,v_{k-1}+w), k \in \\{1,...,m\\}$. $v_k+w = a_1 (v_1+w) + ... + a_{k-1} (v_{k-1} +w)$. Expanding, we have $(1-a_1-...-a_{k-1}) w = a_1 v_1 + ... + a_{k-1} v_{k-1}$. 
+
+If $1-a_1-...-a_{k-1} \neq 0$, then $w = 1/(1-a_1-...-a_{k-1}) (a_1 v_1 + ... + a_{k-1} v_{k-1})$, thus $w \in span(v_1,...,v_m)$. 
+
+If $1-a_1-...-a_{k-1} = 0$, then we have $0 = a_1 v_1 + ... + a_{k-1} v_{k-1}$. Since $v_1,...,v_m$ is linearly independent, $a_1=...=a_{k-1}=0$. So $1-a_1-...-a_{k-1}=1$, which is a contradiction, showing that this case is not possible.
 
 
 #### (13) Suppose $v_1,...,v_m$ is linearly independent in $V$ and $w \in V$. Show that $v_1,...,v_m,w$ is linearly independent $iff w \notin span(v_1,...,v_m)$.
@@ -125,11 +129,40 @@ Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Then there is a 
 
 ## Exercises
 
+#### (3) 
+(a) Let $U$ be the subspace of $R^5$ defined by $U=\\{(x_1,x_2,x_3,x_4,x_5) \in R^5: x_1=3x_2, x_3=7x_4\\}$. Find a basis of $U$. <br>
+$(3,1,0,0,0), (0,0,7,1,0), (0,0,0,0,1)$.
+
+(b) Extend the basis in (a) to a basis in $R^5$. <br>
+$(3,1,0,0,0), (0,0,7,1,0), (0,0,0,0,1), (0,1,0,0,0), (0,0,0,1,0)$.
+ 
+(c) Find a subspace $W$ of $R^5$ such that $R^5 = U \oplus W$. <br>
+$W = span((0,1,0,0,0), (0,0,0,1,0))$.
+
+#### (4)
+(a) Let $U$ be the subspace of $C^5$ defined by $U=\\{(z_1,z_2,z_3,z_4,z_5) \in C^5: 6z_1=z_2, z_3+2z_4+3z_5 = 0 \\}$. Find a basis of $U$. <br>
+$(1,6,0,0,0), (0,0,-2,1,0), (0,0,-3,0,1)$.
+
+(b) Extend the basis in (a) to a basis in $C^5$. <br>
+$(0,1,0,0,0), (0,0,1,0,0)$.
+
+(c) Find a subspace $W$ of $C^5$ such that $C^5 = U \oplus W$. <br>
+$W=span((0,1,0,0,0), (0,0,1,0,0))$.
+
+#### (5) Suppose $V$ is a finite-dimensional and $U, W$ are subspaces of $V$ such that $V=U+W$. Prove that there exists a basis of $V$ consisting of vectors in $U \cup W$.
+Let $u_1,...,u_m$ be a basis of $U$ and $w_1,...,w_n$ be a basis of $W$. Let $v \in V$. Since $V=U+W$, $v=u+w, u \in U, w \in W$. Then we can rewrite $v$ as $v=u+w = a_1 u_1 + ... + a_m u_m + b_1 w_1 + ... + b_n w_n$. Thus $v \in span(u_1,...,u_m, w_1,...,w_n)$, and $V = span(u_1,...,u_m, w_1,...,w_n)$. By construction $u_1,...,u_m,w_1,...,w_n \in U \cup W$. By 2.30, every spanning list of a vector space contains a basis of the vector space. Thus there exists a basis of $V$ contained in $\\{u_1,...,u_m,w_1,...,w_n\\} \subset U \cup W$.
 
 
+#### (8) Prove or give a counterexample: If $v_1,v_2,v_3,v_4$ is a basis of $V$ and $U$ is a subspace of $V$ such that $v_1, v_2 \in U$, and $v_3 \notin U$, $v_4 \notin U$, then $v_1,v_2$ is a basis of $U$.
+Counterexample: Let $V=R^4$ with $v_1,v_2,v_3,v_4$ being the standard basis. Let $U = span(v_1, v_2, v_3+v_4)$. Then $v_1,v_2$ does not span $U$.
 
 
+#### (10) Suppose $U$ and $W$ are subspaces of $V$ such that $V=U \oplus W$. Suppose also that $u_1,...,u_m$ is a basis of $U$ and $w_1,...,w_n$ is a basis of $W$. Prove that $u_1,...,u_m,w_1,...,w_n$ is a basis of $V$.
+Let $v \in V$. Given that $V$ is a direct sum of $U$ and $W$, we have $v=u+w, u \in U, w \in W$. We can rewrite with basis vectors $v = (a_1 u_1 + ... + a_m u_m) + (b_1 w_1 + ... + b_n w_n), a_1,...,a_m,b_1,...,b_n \in F$. Then $v \in span(u_1,...,u_m,w_1,...,w_n)$. 
 
+Suppose $v=0$. Then by 1.45 we have $u=w=0$. Rewriting, we have $0=(a_1 u_1 + ... + a_m u_m) + (b_1 w_1 + ... + b_n w_n)$. By 2.15, $u=0$ implies that $a_1=...=a_m=0$ and $w=0$ implies $b_1=...=b_n=0$. Thus $a_1, ..., a_m, b_1, ..., b_n$ is linearly independent.
+
+By 2.26 we conclude $u_1,...,u_m,w_1,...,w_n$ is a basis of $V$.
 
 
 
@@ -167,6 +200,8 @@ We want to show that this list is linearly independent. Suppose $a_1 (v_1-v_2) +
 We can see that $(v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w) \in span(v_1+w,...,v_m+w)$. Then $span((v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)) \subset span(v_1+w,...,v_m+w)$. By 2.37, $m-1=dim span((v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)) \leq dim span(v_1+w,...,v_m+w)$. 
 
 
+#### (13) Suppose $U$ and $W$ are both five-dimensional subspaces of $R^9$. Prove that $U \cap W \neq \\{0\\}$.
+$dim U = dim W = 5$, $dim(U + W) <= 9$. By 2.43, $5+5-dim(U \cap W) <= 9$. Thus $dim(U \cap W) >= 1$. 
 
 
 #### (18) Suppose $V$ is finite-dimensional, with $dim V=n \geq 1$. Prove that there exist one-dimensional subspaces $V_1, ..., V_n$ of $V$ such that $V=V_1 \oplus ... \oplus V_n$.
