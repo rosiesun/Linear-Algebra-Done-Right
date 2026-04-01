@@ -158,3 +158,17 @@ If $V_1$ and $V_2$ are subspaces of a finite-dimensional vector space, then $dim
 
 
 ## Exercises
+
+#### (9) Suppose $v_1,...,v_m$ is linearly independent in $V$ and $w \in V$. Prove that $dim span(v_1+w,...,v_m+w) \geq m-1$.
+Consider the list of vectors of length $m-1$ formed by taking the differences $(v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)$. We can re-write it as $v_1-v_2, ..., v_{m-1} - v_m$. 
+
+We want to show that this list is linearly independent. Suppose $a_1 (v_1-v_2) +  ... + a_{m-1} (v_{m-1} - v_m) = 0$. Then $a_1 v_1 + (a_2-a_1) v_2 + ... - a_{m-1} v_m = 0$. Since $v_1,...,v_m$ is linearly independent, $a_1 = 0, (a_2-a_1)= 0, ..., -a_{m-1}=0$, we can conclude $a_1, ..., a_{m-1}=0$. Thus $(v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)$ is linearly independent. 
+
+We can see that $(v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w) \in span(v_1+w,...,v_m+w)$. Then $span((v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)) \subset span(v_1+w,...,v_m+w)$. By 2.37, $m-1=dim span((v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)) \leq dim span(v_1+w,...,v_m+w)$. 
+
+
+
+
+#### (18) Suppose $V$ is finite-dimensional, with $dim V=n \geq 1$. Prove that there exist one-dimensional subspaces $V_1, ..., V_n$ of $V$ such that $V=V_1 \oplus ... \oplus V_n$.
+Let $v_1, ..., v_n$ be a basis of $V$. Let $V_1 = span(v1), ..., V_n = span(v_n)$, each space being one-dimensional. Let $v \in V$. Then $v = a_1 v_1 + ... +a_n v_n, a_1,...,a_n \in F$. Since $a_1 v_1 \in V_1, ..., a_n v_n \in V_n$, $V = V_1 + ... + V_n$. From Definition 1.41, $V$ is a direct sum of $V_1,...,V_n$ iff $v=u_1+...+u_n, u_1 \in V_1, u_n \in V_n$ is unique. Since the representation of $v$ using a given basis is unique, i.e. $a_1,...,a_n$ is unique, $u_1=a_1 v_1, ..., u_n=a_n v_n$ is unique. Thus $V = V_1 \oplus ... \oplus V_n$. $
+
