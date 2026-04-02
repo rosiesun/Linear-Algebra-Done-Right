@@ -1,7 +1,7 @@
 Linear Algebra Done Right - Chapter 3
 ================
 Rosie Sun <br>
-2026-04-03
+2026-04-02
 
 # 3A Vector Space of Linear Maps
 
@@ -47,7 +47,41 @@ Suppose $T$ is a linear map from $V$ to $W$. Then $T(0)=0$.
 
 # 3B Null Spaces and Ranges
 
+### 3.11 Definition: null space
+For $T \in L(V,W)$, the null space of $T$, denoted by $null T$, is the subset of $V$ consisting of those vectors that $T$ maps to 0: $null T = \\{v \in V: Tv = 0\\}$.
 
+### 3.13 The null space is a subspace
+Suppose $T \in L(V,W)$. Then $null T$ is a subspace of $V$.
+
+### 3.14 Definition: injective
+A function $T:V \rightarrow W$ is called injective if $Tv = Tu$ implies $u=v$.
+
+### 3.15
+Let $T \in L(V,W)$. Then $T$ is injective if and only if $null T = \\{0\\}$. 
+
+### 3.16 Definition: range
+For $T \in L(V,W)$, the range of $T$ is the subset of $W$ consisting of those vectors that are equal to $Tv$ for some $v \in V$: $range T = \\{Tv: v \in V\\}$.
+
+### 3.18 The range is a subspace
+If $T \in L(V,W)$, then $range T$ is a subspace of $W$.
+
+### 3.19 Definition: surjective
+A function $T: V \rightarrow W$ is called surjective if its range equals $W$.
+
+### 3.21 Fundamental theorem of linear maps
+Suppose $V$ is finite-dimensional and $T \in L(V,W)$. Then $range T$ is finite-dimensional and $dim V = dim null T + dim range T$.
+
+### 3.22 Linear map to a lower-dimensional space is not injective
+Suppose $V$ and $W$ are finite-dimensional vector spaces such that $dim V > dim W$. Then no linear map from $V$ to $W$ is injective.
+
+### 3.24 Linear map to a higher-dimensional space is not surjective
+Suppose $V$ and $W$ are finite-dimensional vector spaces such that $dim V < dim W$. Then no linear map from $V$ to $W$ is surjective.
+
+### 3.26 Homogeneous system of linear equations
+A homogeneous system of linear equations with more variables than equations has nonzero solutions.
+
+### 3.28 System of linear equations with more equations than variables
+A system of linear equations with more equations than variables has no solution for some choice of the constant terms.
 
 
 
