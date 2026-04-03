@@ -39,6 +39,39 @@ Distributive properties: $(S_1 + S_2) T = S_1 T + S_2 T$ and $S(T_1 + T_2) = ST_
 Suppose $T$ is a linear map from $V$ to $W$. Then $T(0)=0$.
 
 
+## Exercises
+#### (5) Prove that $L(V,W) is a vector space, as was asserted in 3.6.$
+Commutativity: Let $S,T \in L(V,W)$, let $v \in V$. $(S+T)(v) = Sv + Tv = Tv + Sv = (T+S)(v)$ by the fact that $W$ is a vector space. 
+
+Associativity: Let $R, S, T \in L(V,W)$, let $v \in V$. $((R+S)+T)(v) = (R+S)(v) + Tv = Rv + Sv + Tv = Rv + (S+T)(v) = (R+(S+T))(v)$ by the fact that $W$ is a vector space.
+
+Additive identity: Defined in 3.3. There exists $0 \in L(V,W)$ where $0v=0$. Let $T \in L(V,W)$. Then $(T+0)(v) = Tv + 0(v) = Tv + 0 = Tv$.
+
+Additive inverse: Let $T \in L(V,W)$. Define $(-T) \in L(V,W)$ such that $(-T)(v) = -Tv$. $(-T) \in L(V,W)$ since $(-T)(u+v) = -T(u+v) = (-Tu) + (-Tv) = (-T)(u) + (-T)(v)$, and $(-T)(av) = -T(av) = -aTv = a(-T)(v)$. Thus additivity and homogeneity are satisfied.
+
+Then $(T+(-T))(v) = Tv + (-T)(v) = Tv + (-Tv) = 0$.
+
+Multiplicative identity: Let $T \in L(V,W)$. $(1T)(v) = 1(Tv) = Tv$.
+
+Distributive properties: Let $S, T \in L(V,W), a,b \in F$. Then $(a(S+T))(v) = a((S+T)(v)) = a(Sv + Tv) = a(Sv) + a(Tv) = (aS)(v) + (aT)(v)$. And $((a+b)T)(v) = (a+b)(Tv) = a(Tv) + b(Tv) = (aT)(v) + (bT)(v)$. 
+
+
+#### (6) Prove that multiplication of linear maps has the associative, identity, and distributive properties asserted in 3.8.
+
+Associativity: Let $T_3 \in L(U,V), T_2 \in L(V, W), T_1 \in L(W,Z)$. Then $((T_1 T_2)T_3)(u) = (T_1 T_2)(T_3 u) = T_1 (T_2 (T_3 u))$, and $(T_1(T_2 T_3))(u) = T_1 ((T_2 T_3)(u)) = T_1 (T_2 (T_3 u))$. Thus $(T_1 T_2) T_3 = T_1 (T_2 T_3)$.
+
+Identity: Let $T \in L(V,W)$. $(TI)(v) = T(Iv) = Tv$. $(IT)(v) = I(Tv) = Tv$. Thus $TI = IT = T$.
+
+Distributive properties: 
+
+Let $T, T_1, T_2 \in L(U,V), S, S_1, S_2 \in L(V,W)$. Then $(S(T_1+T_2))(u) = S((T_1+T_2)(u)) = S(T_1 u + T_2 u) = S(T_1 u) + S (T_2 u) = (S T_1)(u) + (S T_2)(u)$. And $((S_1+S_2)T)(u) = (S_1+S_2)(Tu) = S_1(Tu) + S_2(Tu) = (S_1 T)(u) + (S_2 T)(u)$.
+
+
+#### (11)
+
+
+
+#### (13)
 
 
 
