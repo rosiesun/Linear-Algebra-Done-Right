@@ -43,26 +43,43 @@ Suppose $T$ is a linear map from $V$ to $W$. Then $T(0)=0$.
 #### (5) Prove that $L(V,W)$ is a vector space, as was asserted in 3.6.
 Commutativity: Let $S,T \in L(V,W)$, let $v \in V$. $$(S+T)(v) = Sv + Tv = Tv + Sv = (T+S)(v)$$ by the fact that $W$ is a vector space. 
 
-Associativity: Let $R, S, T \in L(V,W)$, let $v \in V$. $$((R+S)+T)(v) = (R+S)(v) + Tv = Rv + Sv + Tv = Rv + (S+T)(v) = (R+(S+T))(v)$$ by the fact that $W$ is a vector space.
+Associativity: Let $R, S, T \in L(V,W)$, let $v \in V$. <br>
+$((R+S)+T)(v) = (R+S)(v) + Tv = Rv + Sv + Tv = Rv + (S+T)(v) = (R+(S+T))(v)$ <br>
+by the fact that $W$ is a vector space.
 
-Additive identity: Defined in 3.3. There exists $0 \in L(V,W)$ where $0v=0$. Let $T \in L(V,W)$. Then $$(T+0)(v) = Tv + 0(v) = Tv + 0 = Tv$$.
+Additive identity: Defined in 3.3. There exists $0 \in L(V,W)$ where $0v=0$. Let $T \in L(V,W)$. Then <br>
+$(T+0)(v) = Tv + 0(v) = Tv + 0 = Tv$.
 
-Additive inverse: Let $T \in L(V,W)$. Define $(-T) \in L(V,W)$ such that $(-T)(v) = -Tv$. $(-T) \in L(V,W)$ since $(-T)(u+v) = -T(u+v) = (-Tu) + (-Tv) = (-T)(u) + (-T)(v)$, and $(-T)(av) = -T(av) = -aTv = a(-T)(v)$. Thus additivity and homogeneity are satisfied, so $(-T)$ is a linear map. Then $$(T+(-T))(v) = Tv + (-T)(v) = Tv + (-Tv) = 0$$.
+Additive inverse: Let $T \in L(V,W)$. Define $(-T) \in L(V,W)$ such that $(-T)(v) = -Tv$. $(-T) \in L(V,W)$ since $(-T)(u+v) = -T(u+v) = (-Tu) + (-Tv) = (-T)(u) + (-T)(v)$, and $(-T)(av) = -T(av) = -aTv = a(-T)(v)$. Thus additivity and homogeneity are satisfied, so $(-T)$ is a linear map. Then <br>
+$(T+(-T))(v) = Tv + (-T)(v) = Tv + (-Tv) = 0$.
 
-Multiplicative identity: Let $T \in L(V,W)$. $$(1T)(v) = 1(Tv) = Tv$$.
+Multiplicative identity: Let $T \in L(V,W)$. <br>
+$(1T)(v) = 1(Tv) = Tv$.
 
-Distributive properties: Let $S, T \in L(V,W), a,b \in F$. Then $$(a(S+T))(v) = a((S+T)(v)) = a(Sv + Tv) = a(Sv) + a(Tv) = (aS)(v) + (aT)(v)$$. And $$((a+b)T)(v) = (a+b)(Tv) = a(Tv) + b(Tv) = (aT)(v) + (bT)(v)$$. 
+Distributive properties: Let $S, T \in L(V,W), a,b \in F$. Then <br>
+$(a(S+T))(v) = a((S+T)(v)) = a(Sv + Tv) = a(Sv) + a(Tv) = (aS)(v) + (aT)(v)$. <br>
+And $((a+b)T)(v) = (a+b)(Tv) = a(Tv) + b(Tv) = (aT)(v) + (bT)(v)$. 
 
 
 #### (6) Prove that multiplication of linear maps has the associative, identity, and distributive properties asserted in 3.8.
 
-Associativity: Let $T_3 \in L(U,V), T_2 \in L(V, W), T_1 \in L(W,Z)$. Then $$((T_1 T_2)T_3)(u) = (T_1 T_2)(T_3 u) = T_1 (T_2 (T_3 u))$$, and $$(T_1(T_2 T_3))(u) = T_1 ((T_2 T_3)(u)) = T_1 (T_2 (T_3 u))$$. Thus $(T_1 T_2) T_3 = T_1 (T_2 T_3)$.
+Associativity: Let $T_3 \in L(U,V), T_2 \in L(V, W), T_1 \in L(W,Z)$. Then <br>
+$((T_1 T_2)T_3)(u) = (T_1 T_2)(T_3 u) = T_1 (T_2 (T_3 u))$, 
+and <br>
+$(T_1(T_2 T_3))(u) = T_1 ((T_2 T_3)(u)) = T_1 (T_2 (T_3 u))$. <br>
+Thus $(T_1 T_2) T_3 = T_1 (T_2 T_3)$.
 
-Identity: Let $T \in L(V,W)$. $$(TI)(v) = T(Iv) = Tv$$. $$(IT)(v) = I(Tv) = Tv$$. Thus $TI = IT = T$.
+Identity: Let $T \in L(V,W)$. <br>
+$(TI)(v) = T(Iv) = Tv$. <br>
+$(IT)(v) = I(Tv) = Tv$. <br>
+Thus $TI = IT = T$.
 
 Distributive properties: 
 
-Let $T, T_1, T_2 \in L(U,V), S, S_1, S_2 \in L(V,W)$. Then $$(S(T_1+T_2))(u) = S((T_1+T_2)(u)) = S(T_1 u + T_2 u) = S(T_1 u) + S (T_2 u) = (S T_1)(u) + (S T_2)(u)$$. And $$((S_1+S_2)T)(u) = (S_1+S_2)(Tu) = S_1(Tu) + S_2(Tu) = (S_1 T)(u) + (S_2 T)(u)$$.
+Let $T, T_1, T_2 \in L(U,V), S, S_1, S_2 \in L(V,W)$. Then <br>
+$(S(T_1+T_2))(u) = S((T_1+T_2)(u)) = S(T_1 u + T_2 u) = S(T_1 u) + S (T_2 u) = (S T_1)(u) + (S T_2)(u)$.<br>
+And <br>
+$((S_1+S_2)T)(u) = (S_1+S_2)(Tu) = S_1(Tu) + S_2(Tu) = (S_1 T)(u) + (S_2 T)(u)$.
 
 
 #### (11)
