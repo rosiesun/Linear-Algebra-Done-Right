@@ -53,8 +53,10 @@ $(T+0)(v) = Tv + 0(v) = Tv + 0 = Tv$.
 Additive inverse: Let $T \in L(V,W)$. Define $(-T) \in L(V,W)$ such that $(-T)(v) = -Tv$. $(-T) \in L(V,W)$ since $(-T)(u+v) = -T(u+v) = (-Tu) + (-Tv) = (-T)(u) + (-T)(v)$, and $(-T)(av) = -T(av) = -aTv = a(-T)(v)$. Thus additivity and homogeneity are satisfied, so $(-T)$ is a linear map. Then <br>
 $(T+(-T))(v) = Tv + (-T)(v) = Tv + (-Tv) = 0$.
 
-Multiplicative identity: Let $T \in L(V,W)$. <br>
-$(1T)(v) = 1(Tv) = Tv$.
+Multiplicative identity: Let $T \in L(V,W)$.
+$$
+(1T)(v) = 1(Tv) = Tv
+$$
 
 Distributive properties: Let $S, T \in L(V,W), a,b \in F$. Then <br>
 $(a(S+T))(v) = a((S+T)(v)) = a(Sv + Tv) = a(Sv) + a(Tv) = (aS)(v) + (aT)(v)$. <br>
@@ -63,23 +65,36 @@ And $((a+b)T)(v) = (a+b)(Tv) = a(Tv) + b(Tv) = (aT)(v) + (bT)(v)$.
 
 #### (6) Prove that multiplication of linear maps has the associative, identity, and distributive properties asserted in 3.8.
 
-Associativity: Let $T_3 \in L(U,V), T_2 \in L(V, W), T_1 \in L(W,Z)$. Then <br>
-$((T_1 T_2)T_3)(u) = (T_1 T_2)(T_3 u) = T_1 (T_2 (T_3 u))$, 
-and <br>
-$(T_1(T_2 T_3))(u) = T_1 ((T_2 T_3)(u)) = T_1 (T_2 (T_3 u))$. <br>
+Associativity: Let $T_3 \in L(U,V), T_2 \in L(V, W), T_1 \in L(W,Z)$. Then 
+$$
+((T_1 T_2)T_3)(u) = (T_1 T_2)(T_3 u) = T_1 (T_2 (T_3 u))
+$$ 
+and 
+$$
+(T_1(T_2 T_3))(u) = T_1 ((T_2 T_3)(u)) = T_1 (T_2 (T_3 u))
+$$
 Thus $(T_1 T_2) T_3 = T_1 (T_2 T_3)$.
 
-Identity: Let $T \in L(V,W)$. <br>
-$(TI)(v) = T(Iv) = Tv$. <br>
-$(IT)(v) = I(Tv) = Tv$. <br>
+Identity: Let $T \in L(V,W)$. 
+$$
+(TI)(v) = T(Iv) = Tv
+$$
+And
+$$
+(IT)(v) = I(Tv) = Tv
+$$
 Thus $TI = IT = T$.
 
 Distributive properties: 
 
-Let $T, T_1, T_2 \in L(U,V), S, S_1, S_2 \in L(V,W)$. Then <br>
-$(S(T_1+T_2))(u) = S((T_1+T_2)(u)) = S(T_1 u + T_2 u) = S(T_1 u) + S (T_2 u) = (S T_1)(u) + (S T_2)(u)$.<br>
-And <br>
-$((S_1+S_2)T)(u) = (S_1+S_2)(Tu) = S_1(Tu) + S_2(Tu) = (S_1 T)(u) + (S_2 T)(u)$.
+Let $T, T_1, T_2 \in L(U,V), S, S_1, S_2 \in L(V,W)$. Then 
+$$
+(S(T_1+T_2))(u) = S((T_1+T_2)(u)) = S(T_1 u + T_2 u) = S(T_1 u) + S (T_2 u) = (S T_1)(u) + (S T_2)(u)
+$$
+And
+$$
+((S_1+S_2)T)(u) = (S_1+S_2)(Tu) = S_1(Tu) + S_2(Tu) = (S_1 T)(u) + (S_2 T)(u)
+$$
 
 
 #### (11)
