@@ -110,7 +110,23 @@ $$((S_1+S_2)T)(u) = (S_1+S_2)(Tu) = S_1(Tu) + S_2(Tu) = (S_1 T)(u) + (S_2 T)(u)$
 #### (8) Give an example of a function $\phi: R^2 \rightarrow R$ such that $\phi (av) = a \phi(v)$ for all $a \in R$ and $v \in R^2$, but $\phi$ is not linear.
 Let $\phi(x,y) = x^2 / y$ if $y \neq 0$, and $\phi(x,y) = 0$ if $y=0$.
 
-When $y \neq 0$, $\phi(ax, ay) = (ax)^2/(ay) = ax/y$.
+When $y \neq 0$, 
+
+$$\phi(ax, ay) = (ax)^2/(ay) = a x^2 /y = a phi(x,y)$$
+
+When $y = 0$, 
+
+$$\phi(ax,ay) = 0 = a phi(x,y)$$
+
+Therefore the function satisfies the homogeneity property.
+
+When $y_1 \neq 0, y_2 \neq 0, y_1 + y_2 \neq 0$,
+
+$$\phi(x_1 + x_2, y_1 + y_2) = (x_1+x_2)^2/(y_1 + y_2)$$
+
+$$\phi(x_1,y_1) + \phi(x_2, y_2) = x_1^2 / y_1 + x_2^2 / y_2 $$
+
+which is not equal to each other.
 
 #### (9)
 
@@ -213,7 +229,18 @@ A system of linear equations with more equations than variables has no solution 
 
 # 3D Invertibility and Isomorphisms
 
+### 3.59 Definition: Invertible, inverse
+- A linear map $T \in L(V,W)$ is called invertible if there exists a linear map $S \in L(W,V)$ such that $ST$ equals the identity operator on $V$ and $TS$ equals the identity operator on $W$.
+- A linear map $S \in L(W,V)$ satisfying $ST=I$ and $TS=I$ is called an inverse of $T$ (note that the first $I$ is the identity operator on $V$ and the second $I$ is the identity operator on $W$).
 
+### 3.60 Inverse is unique
+An invertible linear map has a unique inverse.
+
+### 3.63 invertibility $iff$ injectivity and surjectivity
+A linear map is invertible if and only if it is injective and surjective.
+
+### 3.65
+Suppose that 
 
 
 
@@ -229,7 +256,17 @@ A system of linear equations with more equations than variables has no solution 
 
 # 3F Duality
 
+### 3.108 Definition: linear functional
+A linear functional on $V$ is a linear map from $V$ to $F$. In other words, a linear functional is an element of $L(V,F)$.
 
+### 3.110 Definition: dual space
+The dual space of $V$, denoted by $V'$, is the vector space of all linear functionals on $V$. In other words, $V' = L(V,F)$.
+
+### 3.111 
+Suppose $V$ is finite-dimensional. Then $V'$ is also finite-dimensional and $dim V' = dim V$.
+
+### 3.112 Definition: dual basis
+If $v_1,...,v_n$ is a basis for $V$, then the dual basis of $v_1,...,v_n$ is the list $\phi_1, ..., \phi_n$ of elements of $V'$, where each $\phi_j$ is the linear functional on $V$ such that $\phi_j(v_k)=1$ if $k=j$, $\phi_j(v_k)=0$ if $k \neq j$.
 
 
 
