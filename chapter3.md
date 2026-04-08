@@ -216,7 +216,39 @@ A homogeneous system of linear equations with more variables than equations has 
 A system of linear equations with more equations than variables has no solution for some choice of the constant terms.
 
 
+## Exercises
 
+#### (7) Suppose $V$ and $W$ are finite-dimensional with $2 \leq dim V \leq dim W$. Show that $\\{T \in L(V,W): T is not injective \\}$ is not a subspace of $L(V,W)$.
+Let $v_1,...,v_n$ be a basis of $V$. Let $w_1,...,w_n$ be a list of linearly independent vectors in $W$. We know that there are at least n linearly independent vectors because $dim W >= dim V$.
+
+Define linear maps $S, T \in L(V,W)$ such that
+
+$$S(v_j) = \begin{cases} 
+0 & j = 1 \\ 
+w_j & j \neq 1 
+\end{cases}$$
+
+$$T(v_j) = \begin{cases} 
+0 & j = 2 \\ 
+w_j & j \neq 2
+\end{cases}$$
+
+Then $null S = span(v_1)$ and $null T = span(v_2)$. Thus $S, T$ are not injective.
+
+We want to show that $S+T$ is injective.
+
+Suppose $(S+T)(v) = 0$ for some $v \in V$. Then $v=a_1 v_1 + ... + a_n v_n$, for some $a_1,...,a_n \in F$. We can rewrite the equation as 
+
+$$(S+T)(v) = S(a_1 v_1 + ... + a_n v_n) + T(a_1 v_1 + ... + a_n v_n) = a_1 w_1 + a_2 w_2 + 2 a_3 w_3 + ... + 2 a_n w_n$$
+
+since $S(a_1 v_1) + T(a_1 v_1) = a_1 w_1$, and $S(a_2 v_2) + T(a_2 v_2) = a_2 w_2$.
+
+Since $w_1,...,w_n$ is linearly independent by design, $a_1 = a_2 = ... = a_n = 0$, which means $v=0$. Thus $null (S+T) = \\{0\\}$.
+
+Hence $(S+T)$ is injective, while $S$ and $T$ are both non-injective. $\\{T \in L(V,W): T is not injective \\}$ is not closed under addition, therefore is not a subspace of $L(V,W)$.
+
+
+#### (8) Suppose $V$ and $W$ are finite-dimensional with $dim V \geq dim W \geq 2$. Show that $\\{T \in L(V,W): T is not surjective \\}$ is not a subspace of $L(V,W)$.
 
 
 
