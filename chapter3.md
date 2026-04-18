@@ -328,6 +328,126 @@ which establishes that $range T \subseteq \\{Tu: u \in U\\}$. The reverse inclus
 Therefore $range T = \\{Tu: u \in U\\}$.
 
 
+#### (12) Suppose $T$ is a linear map from $F^4$ to $F^2$ such that $null T = \\{(x_1,x_2,x_3,x_4) \in F^4: x_1=5x_2, x_3=7x_4\\}$. Prove that $T$ is surjective.
+Given the definition of $null T$, a basis of $null T$ is $(5,1,0,0), (0,0,7,1)$, which implies that $dim null T = 2$. Thus by 3.21,
+
+$$dim range T = dim (F^4) - dim null T = 4-2=2$$
+
+Since $T: F^4 \rightarrow F^2$ and $dim range T = dim F^2 = 2$, we have $range T = F^2$.
+
+By definition, $range T$ is surjective.
+
+
+### (19) Suppose $W$ is finite-dimensional and $T \in L(V,W)$. Prove that $T$ is injective if and only if there exists $S \in L(W,V)$ such that $ST$ is the identity operator on $V$.
+
+$$\rightarrow$$
+
+Assume $T$ is injective. Let $v_1,...,v_n$ be a basis for $V$. Since $T is injective, $Tv_1,...,Tv_n$ is linearly independent in $W$ and spans $range T$ (exercise 9, 10). Then $Tv_1, ..., Tv_n$ is a basis of $range T$. We can extend it to a basis of $W$, $Tv_1,...,Tv_n, u_1,...,u_m$. 
+
+Define $S \in L(W,V)$ such that 
+
+$$S(Tv_i) = v_i, i=1,...,n$$ 
+
+$$S(u_j) = 0, j=1,...,m$$ 
+
+Then $ST(v_i)=v_i$.
+
+Since $ST$ is linear and agrees with the identity operator on the basis vectors $v_1,..., v_n$ of $V$, it must be the identity operator on all of $V$.
+
+$$\leftarrow$$
+
+Assume there exists $S \in L(W,V)$ such that $ST$ is the identity operator on $V$. Assume towards contradiction that $T$ is not injective, i.e. $null T \neq \\{0\\}$. Let $v \in null T, v \neq 0$. Then we have 
+
+$$S(Tv)= S(0)=0$$
+
+$$(ST)(v)=v \neq 0$$
+
+which is a contradiction. Therefore we conclude that $T$ is injective.
+
+
+#### (20) Suppose $W$ is finite-dimensional and $T \in L(V,W)$. Prove that $T$ is surjective if and only if there exists $S \in L(W,V)$ such that $TS$ is the identity operator on $W$.
+$$\rightarrow$$
+
+Assume $T$ is surjective, i.e. $range T = W$. Let $w_1,...,w_n$ be a basis of $W$. Since $w_1,...,w_n \in range T$, there exist $v_1,...,v_n$ such that $Tv_1=w_1,...,Tv_n=w_n$. Define $S \in L(W,V)$ such that 
+
+$$S(w_i)=v_i, i=1,...,n$$
+
+Then 
+
+$$TS(w_i) = T(Sw_i)=Tv_i=w_i$$ 
+
+for $i=1,...,n$. Since Since $TS$ is linear and agrees with the identity operator on the basis vectors $w_1,..., w_n$ of $w$, it must be the identity operator on all of $W$.
+
+$$\leftarrow$$
+
+Assume that there exists $S \in L(W,V)$ such that $TS$ is the identity operator on $W$. Let $w \in W$. $TS(w) = T(Sw)=w$. Therefore $w \in range T$. Therefore $range T = W$, and $T$ is surjective.
+
+
+#### (25) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S \subseteq null T$ if and only if there exists $E \in L(W)$ such that $T=ES$.
+$$\leftarrow$$
+
+Assume there exists $E \in L(W)$ such that $T=ES$. We want to show that $null S \subseteq null T$. 
+
+Let $v \in null S$. Then $Sv = 0$. 
+
+$$Tv=(ES)(v)=E(Sv)=E(0)=0$$
+
+Hence $v \in null T$. Thus $null S \subseteq null T$ as desired.
+
+$$\rightarrow$$
+
+Assume $null S \subseteq null T$. Let $w_1,...,w_n$ be a basis of $range S$. Then there exist some $v_1,...,v_n \in V$ such that $Sv_1=w_1,...,Sv_n=w_n$. 
+
+Define $E$ such that 
+
+$$E w_i = Tv_i$$
+
+for $i=1,...,n$.
+
+To show $E$ is well-defined, assume there is some $u_i \in V$ such that $Sv_i = Su_i$ for $i \in \\{1,...,n\\}$. 
+
+$$S(u_i) - S(v_i) = S(u_i - v_i) = 0$$
+
+Therefore $u_i - v_i \in null S$. 
+
+Since $null S \subseteq null T$, $u_i - v_i \in null T$.
+
+$$T(u_i - v_i) = T(u_i) - T(v_i) = 0$$
+
+Therefore $T(u_i) = T(v_i)$. 
+
+Thus it does matter if we had picked the pre-image $v_i$ or $u_i$, the linear map $E$ is well-defined. We can extend it to $range S$ by linearity. 
+
+To extend from $range S$ to $W$, extend the basis vectors of $range S$ to $W$, $w_1,...,w_n, y_1,...,y_m$. Define $E(y_j) = 0, j=1,...,m$. 
+
+Let $v \in V$. Then $Sv = a_1 w_1 + ... + a_n w_n$ for some $a_1,...,a_n$. Since $w_i = Sv_i$, we have
+
+$$Sv = a_1 Sv_1 + ... + a_n Sv_n = S(a_1 v_1 + ... + a_n v_n)$$
+
+Therefore 
+
+$$v - (a_1 v_1 + ... + a_n v_n) \in null S$$
+
+By the hypothesis, $null S \in null T$, so 
+
+$$Tv - T(a_1 v_1 + ... + a_n v_n) = 0$$
+
+Hence we conclude
+
+$$ES(v) = E(Sv) = E(a_1 w_1 + ... + a_n w_n) = a_1 Tv_1 + ... + a_n Tv_n = Tv$$
+
+
+#### (26) Suppose that $V$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $range S \subseteq range T$ if and only if there exists $E \in L(V)$ such that $S = TE$.
+
+
+#### (27) Suppose $P \in L(V)$ and $P^2 = P$. Prove that $V = null P \oplus range P$.
+
+
+#### (30) Suppose $\phi \in L(V,F)$ and $\phi \neq 0$. Suppose $u \in V$ is not in $null \phi$. Prove that $V = null \phi \oplus \\{au: a \in F\\}$.
+
+
+
+
 
 # 3C Matrices
 
