@@ -40,6 +40,21 @@ Suppose $T$ is a linear map from $V$ to $W$. Then $T(0)=0$.
 
 
 ## Exercises
+
+#### (4) Suppose $T \in L(V,W)$ and $v_1,...,v_m$ is a list of vectors in $V$ such that $Tv_1,...,Tv_m$ is a linearly independent list in $W$. Prove that $v_1,...,v_m$ is linearly independent.
+Let $a_1 v_1 + ... + a_m v_m = 0$.
+
+Applying $T$,
+
+$$T(a_1 v_1 + ... + a_m v_m) = T0 = 0$$
+
+By linearity, 
+
+$$a_1 Tv_1 + ... + a_m Tv_m = 0$$
+
+Since $Tv_1,...,Tv_m$ is linearly independent, $a_1 = ... = a_m = 0$. Therefore $v_1,...,v_m$ is linearly independent in $V$.
+
+
 #### (5) Prove that $L(V,W)$ is a vector space, as was asserted in 3.6.
 Commutativity: Let $S,T \in L(V,W)$, let $v \in V$. 
 
@@ -105,6 +120,20 @@ $$(S(T_1+T_2))(u) = S((T_1+T_2)(u)) = S(T_1 u + T_2 u) = S(T_1 u) + S (T_2 u) = 
 And
 
 $$((S_1+S_2)T)(u) = (S_1+S_2)(Tu) = S_1(Tu) + S_2(Tu) = (S_1 T)(u) + (S_2 T)(u)$$
+
+
+#### (7) Show that every linear map from a one-dimensional vector space to itself is multiplication by some scalar. More precisely, prove that if $dim V = 1$ and $T \in L(V)$, then there exists $\lambda \in F$ such that $Tv=\lambda v$ for all $v \in V$.
+Let $v \in V$. Let $e$ be a basis of $V$. 
+
+Since $Te \in V$, we can write $Te = \lambda e$ for some unique $\lambda in F$.
+
+Let $v=ae$ for some $a \in F$.
+
+We have
+
+$$Tv = T(ae) = aTe = a (\lambda e) = \lambda(ae) = \lambda v$$ 
+
+Therefore $T$ is multiplication by $\lambda$.
 
 
 #### (8) Give an example of a function $\phi: R^2 \rightarrow R$ such that $\phi (av) = a \phi(v)$ for all $a \in R$ and $v \in R^2$, but $\phi$ is not linear.
@@ -200,6 +229,18 @@ Applying $T$, we have $T(0) = 0$, but
 $$T(a_1 v_1 + ... a_m v_m) = a_1 Tv_1 + ... a_m Tv_m = a_j w \neq 0$$
 
 which is a contradiction. 
+
+
+#### (16) Suppose $V$ is finite-dimensional with $dim V > 1$. Prove that there exist $S,T \in L(V)$ such that $ST \neq TS$.
+Let $V=P_3(F)$. Let $p(z) \in V$. 
+
+Define differentiation map and multiplication map $Dp=p', Mp = zp(z)$. Then 
+
+$$(DM)(p) = D (z p(z)) = p + z p'$$
+
+$$(MD)(p) = M (p') = z p'$$
+
+Thus $DM \neq MD$.
 
 
 
@@ -338,7 +379,57 @@ Since $T: F^4 \rightarrow F^2$ and $dim range T = dim F^2 = 2$, we have $range T
 By definition, $range T$ is surjective.
 
 
-### (19) Suppose $W$ is finite-dimensional and $T \in L(V,W)$. Prove that $T$ is injective if and only if there exists $S \in L(W,V)$ such that $ST$ is the identity operator on $V$.
+#### (16) Suppose $V$ and $W$ are both finite-dimensional. Prove that there exists an injective linear map from $V$ to $W$ if and only if $dim V \leq dim W$.
+$$\rightarrow$$
+
+Let $T \in L(V,w)$. Assume $T$ is injective. Then $null T = \\{0\\}$ and $dim null T = 0$.
+
+Therefore $$dim V = dim null T + dim range T = dim range T \leq dim W$$
+
+$$\leftarrow$$
+
+Assume $dim V \leq dim W$. 
+
+Let $v_1,...,v_n$ be a basis of $V$. Let $w_1,...,w_m$ be a basis of $W$. Since $dim V \leq dim W$, $n \leq m$. 
+
+Define $T \in L(V,W)$ such that 
+
+$$Tv_i=w_i, i=1,...,n$$
+
+To show that $T$ is injective, assume $Tv=0$ for some $v \in V$. We can rewrite $v=a_1 v_1  + ... + a_n v_n$ for some $a_1,...,a_n$.
+
+Applying $T$,
+
+$$Tv = a_1 Tv1 + ... + a_n Tv_n = a_1 w_1 + ... + a_n w_n = 0$$
+
+Since $w_1,...,w_n$ are linearly independent, $a_1,...,a_n = 0$.
+
+Thus $v=0$, so $null T = \\{0\\}$. Therefore $T$ is injective.
+
+
+#### (17) Suppose $V$ and $W$ are both finite-dimensional. Prove that there exists an surjective linear map from $V$ to $W$ if and only if $dim V \geq dim W$.
+$$\rightarrow$$
+
+Let $T \in L(V,W)$. Assume $T$ is surjective. Then $range T = W$.
+
+$$dim V = dim null T + dim range T = dim null T + dim W \geq dim W$$
+
+$$\leftarrow$$
+
+Assume $dim V \geq dim W$. Let $v_1,...,v_n$ be a basis of $V$, $w_1,...,w_m$ be a basis of $W$. $n \geq m$.
+
+Define $T \in L(V,W)$ such that 
+
+$$T(v_i) = w_i, i=1,...,m$$
+
+We want to show that $T$ is surjective. Let $w \in W$. We can rewrite $w=a_1 w_1 + ... + a_m w_m$ for some $a_1,...,a_m$. Then 
+
+$$w = a_1 w_1 + ... + a_m w_m = a_1 Tv_1 + ... + a_m Tv_m = T(a_1 v_1 + ... + a_m v_m)$$
+
+Therefore $w \in range T$. Thus $range T = W$ and we conclude that $T$ is surjective.
+
+
+#### (19) Suppose $W$ is finite-dimensional and $T \in L(V,W)$. Prove that $T$ is injective if and only if there exists $S \in L(W,V)$ such that $ST$ is the identity operator on $V$.
 
 $$\rightarrow$$
 
@@ -438,15 +529,94 @@ $$ES(v) = E(Sv) = E(a_1 w_1 + ... + a_n w_n) = a_1 Tv_1 + ... + a_n Tv_n = Tv$$
 
 
 #### (26) Suppose that $V$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $range S \subseteq range T$ if and only if there exists $E \in L(V)$ such that $S = TE$.
+$$\leftarrow$$
+
+Assume there exists $E \in L(V)$ such that $S=TE$. Let $w \in range S$. We want to show that $w \in range T$.
+Since $w \in range S$, there exist some $v \in V$ such that $Sv = w$. By assumption, we have 
+
+$$Sv = TEv = T(Ev) = w$$
+
+Therefore $w \in range T$. Hence $range S \subseteq range T$.
+
+$$\rightarrow$$
+Assume $range S \subseteq range T$. We will construct $E \in L(V)$.
+
+Let $v_1,...,v_n$ be a basis of $V$. Then $Sv_i=w_i$ for some $w_i, i=1,...,n$. By assumption, since $w_i \in range S$, $w_i \in range T$. Then there exist some $u_i$ such that $Tu_i=w_i$. 
+
+Define $E$ such that
+
+$$Ev_i = u_i$$
+
+for $i = 1,...,n$.
+
+Then 
+
+$$Sv_i = w_i = Tu_i = T(Ev_i) = (TE)(v_i)$$
+
+We can extend $E$ by linearity to the entire $V$.
+
+Let $v \in V$. We can rewrite as $v = a_1 v_1 + ... + a_n v_n$ for some $a_1,...,a_n$.
+
+We have 
+
+$$Sv = \sum_{i=1}^{n} a_i Sv_i = \sum_{i=1}^{n} a_i w_i = \sum_{i=1}^{n} a_i Tu_i = \sum_{i=1}^{n} a_i T(Ev_i) = \sum_{i=1}^{n} a_i TE(v_i) = (TE)(v)$$
+
+Thus $S=TE$.
 
 
 #### (27) Suppose $P \in L(V)$ and $P^2 = P$. Prove that $V = null P \oplus range P$.
+First we want to show that $null P \cap range P = \\{0\\}$.
+
+Assume $v \in null P \cap range P$. Then $Pv = 0$ and $Px = v$ for some $x \in V$. 
+
+Applying $P$, we have 
+
+$$PPx=Pv=0$$
+
+Therefore $Px \in null P$. Then $Px = 0 = v$. Thus $null P \cap range P = \\{0\\}$ as desired.
+
+Next we want to show that $V = null P + range P$.
+
+Let $v \in V$. We can rewrite as $v = (v - Pv) + Pv$. 
+
+Note that $P(v - Pv) = Pv - PPv = 0$, therefore $v-Pv \in null P$. 
+
+And $Pv \in range P$ by definition. Therefore $V = null P + range P$. 
+
+Hence we conclude $V = null P \oplus range P$.
+
 
 
 #### (30) Suppose $\phi \in L(V,F)$ and $\phi \neq 0$. Suppose $u \in V$ is not in $null \phi$. Prove that $V = null \phi \oplus \\{au: a \in F\\}$.
+First we want to show that $null \phi \cap \\{au: a \in F\\} = \\{0\\}$. 
 
+Assume $v \in null \phi \cap \\{au: a \in F\\}$. Then $\phi v = 0$ and $v = au$ for some $a \in F$.
 
+Applying $\phi$, 
 
+$$\phi v = \phi (au) = a \phi u = 0$$
+
+Since $\phi u \neq 0$ by definition, $a=0$. Therefore $v=0$, and $null \phi$ and $\\{au: a \in F\\}$ are disjoint. 
+
+Next we want to show that $V = null \phi + \\{au: a \in F\\}$.
+
+Let $v = w + au$, where $w \in null \phi$, $a \in F$.
+
+Applying $\phi$,
+
+$$\phi v = \phi(w + au) = \phi w + \phi (au) = a \phi u$$
+
+Then
+
+$$a = \phi v / \phi u, \phi u \neq 0$$
+
+Now rewrite $v = (v - au) + au$.
+
+$$\phi (v-au) = \phi v - \phi (au) = \phi v - (\phi v / \phi u) \phi u = \phi v - \phi v = 0$$
+
+Therefore $v-au \in null \phi$, and $V = null \phi + \\{au: a \in F\\}$.
+
+Thus $V = null \phi \oplus \\{au: a \in F\\}$.
 
 
 # 3C Matrices
