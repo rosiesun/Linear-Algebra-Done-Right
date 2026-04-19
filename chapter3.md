@@ -1,4 +1,5 @@
-Linear Algebra Done Right - Chapter 3
+Linear Algebra Done Right - Chapter 3 <br>
+Linear Maps
 ================
 Rosie Sun <br>
 2026-04-02
@@ -639,33 +640,43 @@ An invertible linear map has a unique inverse.
 A linear map is invertible if and only if it is injective and surjective.
 
 ### 3.65
-Suppose that 
+Suppose that $V$ and $W$ are finite-dimensional vector spaces, $dim V = dim W$, and $T \in L(V,W)$. Then $T$ is invertible $\iff T$ is injective $\iff T$ is surjective.
+
+### 3.68
+Suppose $V$ and $W$ are finite-dimensional vector spaces of the same dimension, $S \in L(W,V)$ and $T \in L(V,W)$. Then $ST=I$ if and only if $TS=I$.
+
+### 3.69 Definition: isomorphism, isomorphic
+- An isomorphism is an invertible linear map.
+- Two vector spaces are called isomorphic if there is an isomorphism from one vector space onto the other one.
+
+### 3.70
+Two finite-dimensional vector spaces over $F$ are isomorhpic if and only if they have the same dimension.
+
+### 3.71
+Suppose $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_m$ is a basis of $W$. Then $M$ is an isomorphism between and $F^{m,n}$
+
+### 3.72
+Suppose $V$ and $W$ are finite-dimensional. Then $L(V,W)$ is finite-dimensional and $dim L(V,W) = (dim V) (dim W)$.
 
 
+## Exercises
+
+#### (2) Suppose $T \in L(U,V)$ and $S \in L(V,W)$ are both invertible linear maps. Prove that $ST \in L(U,W)$ is invertible and that $(ST)^{-1} = T^{-1} S^{-1}$.
+
+#### (4) Suppose $V$ is finite-dimensional and $dim V > 1$. Prove that the set of noninvertible linear maps from $V$ to itself is not a subspace of $L(V)$.
+
+#### (6) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S = null T$ if and only if there exists an invertible $E \in L(W)$ such that $S=ET$.
+
+#### (7) Suppose that $V$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $range S = range T$ if and only if there exists an invertible $E \in L(V)$ such that $S=TE$.
+
+#### (11) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ is invertible $\iff S$ and $T$ are invertible.
+
+#### (12) Suppose $V$ is finite-dimensional and $S,T,U \in L(V)$ and $STU=I$. Show that $T$ is invertible and that $T^{-1} = US$.
+
+#### (14) Prove or give a counterexample: If $V$ is a finite-dimensional vector space and $R,S,T \in L(V)$ are such that $RST$ is surjective, then $S$ is injective.
 
 
-
-# 3E Products and Quotients of Vector Spaces
-
-
-
-
-
-
-
-# 3F Duality
-
-### 3.108 Definition: linear functional
-A linear functional on $V$ is a linear map from $V$ to $F$. In other words, a linear functional is an element of $L(V,F)$.
-
-### 3.110 Definition: dual space
-The dual space of $V$, denoted by $V'$, is the vector space of all linear functionals on $V$. In other words, $V' = L(V,F)$.
-
-### 3.111 
-Suppose $V$ is finite-dimensional. Then $V'$ is also finite-dimensional and $dim V' = dim V$.
-
-### 3.112 Definition: dual basis
-If $v_1,...,v_n$ is a basis for $V$, then the dual basis of $v_1,...,v_n$ is the list $\phi_1, ..., \phi_n$ of elements of $V'$, where each $\phi_j$ is the linear functional on $V$ such that $\phi_j(v_k)=1$ if $k=j$, $\phi_j(v_k)=0$ if $k \neq j$.
+#### (15) Suppose $T \in L(V)$ and $v_1,...,v_m$ is a list in $V$ such that $Tv_1,...,Tv_m$ spans $V$. Show that $v_1,...,v_m$ spans $V$.
 
 
 
