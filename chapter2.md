@@ -58,7 +58,11 @@ Thus $v \in span(v_1 - v_2, v_2 - v_3, v_3 - v_4, v_4)$, and $V \subseteq span(v
 
 The new vectors are linear combinations of the old vectors. 
 
-$$v_1-v_2=1v_1 + (-1)v_2 + 0v_3 + 0v_4$, $v_2-v_3=0v_1 + 1v_2 + (-1)v_3 + 0v_4$, $v_3-v_4=0v_1 + 0v_2 + 1v_3 + (-1)v_4$$, 
+$$v_1-v_2=1v_1 + (-1)v_2 + 0v_3 + 0v_4$$, 
+
+$$v_2-v_3=0v_1 + 1v_2 + (-1)v_3 + 0v_4$$, 
+
+$$v_3-v_4=0v_1 + 0v_2 + 1v_3 + (-1)v_4$$, 
 
 $$v_4=0v_1 + 0v_2 + 0v_3 + 1v_4$$. 
 
@@ -183,7 +187,6 @@ which violates (2.15).
 Therefore $w \notin span(v_1,...,v_m)$.
 
 $$\Leftarrow$$
-
 Assume towards contradiction that $v_1,...,v_m,w$ is linearly dependent. 
 
 By (2.21), there exist a vector in $v_1,...,v_m,w$ which is a linear combination of the previous vectors. 
@@ -197,7 +200,6 @@ Therefore $v_1,...,v_m,w$ is linearly independent.
 
 #### (14) Suppose $v_1,...,v_m$ is a list of vectors in $V$. For $k \in \\{1,...,m\\}$, let $w_k=v_1+...+v_k$. Show that the list $v_1,...,v_m$ is linearly independent if and only if the list $w_1,...,w_m$ is linearly independent.
 $$\Rightarrow$$
-
 Suppose $a_1 w_1 + ... a_m w_m = 0$. 
 
 We can rewrite it as 
@@ -211,7 +213,6 @@ Given that $v_1,...,v_m$ is linearly independent, we have $a_1+...+a_m=0, a_2+..
 Thus $w_1,...,w_m$ is linearly independent.
 
 $$\Leftarrow$$
-
 Suppose $b_1 v_1 + ... b_m v_m = 0$. 
 
 We can rewrite it as 
