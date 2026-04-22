@@ -2,7 +2,7 @@ Linear Algebra Done Right - Chapter 4 <br>
 Polynomials
 ================
 Rosie Sun <br>
-2026-04-30
+2026-04-19
 
 
 ### 4.5 Definition: zero of a polynomial
