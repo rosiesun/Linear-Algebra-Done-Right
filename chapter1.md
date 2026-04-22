@@ -1,7 +1,9 @@
-Linear Algebra Done Right - Chapter 1
+Linear Algebra Done Right - Chapter 1 <br>
+Vector Spaces
 ================
 Rosie Sun <br>
 2026-03-23
+
 
 # 1B Definition of Vector Space
 
@@ -10,6 +12,7 @@ Rosie Sun <br>
   $u+v \in V$ to each pair of elements $u,v \in V$.
 - A scalar multiplication on a set $V$ is a function that assigns an
   element $\lambda v \in V$ to each $\lambda \in F$ and each $v \in V$.
+
 
 ### 1.20 Definition: vector space
 A vector space is a set $V$ along with an addition on $V$ and a scalar
@@ -26,6 +29,7 @@ multiplcation on $V$ such that the following properties hold.
 - distributive properties: $a(u+v)=au+av$ and $(a+b)v=av+bv$ for all
   $a,b \in F$ and all $u,v \in V$.
 
+
 ### 1.26 Unique additive identity
 A vector space has a unique additive identity.
 
@@ -39,6 +43,7 @@ second equality comes from commutativity, and the third equality holds
 because 0’ is an additive identity. Thus $0'=0$ proving that $V$ has
 only one additive identity.
 
+
 ### 1.27 Unique additive inverse
 Every element in a vector space has a unique additive inverse.
 
@@ -48,6 +53,7 @@ $w'$ are additive inverses of $v$. Then
 $$w = w + 0 = w + (v+w') = (w+v)+w' = 0 + w' = w'$$
 
 Thus $w=w'$, as desired.
+
 
 ### 1.30 The number 0 times a vector
 $0v=0$ for every $v \in V$.
@@ -64,6 +70,7 @@ $$0 = 0v$$
 
 as desired.
 
+
 ### 1.31 A number times the vector 0
 $a0=0$ for every $a \in F$.
 
@@ -79,6 +86,7 @@ $$0 = a0$$
 
 as desired.
 
+
 ### 1.32 The number -1 times a vector
 $(-1)v = -v$ for every $v \in V$.
 
@@ -88,6 +96,7 @@ $$v + (-1)v = 1v + (-1)v = (1+(-1))v = 0v = 0$$
 
 This equation says that $(-1)v$, when added to $v$, gives 0. Thus
 \$(-1)v is the additive inverse of $v$, as desired.
+
 
 ## Exercises
 
@@ -124,11 +133,15 @@ inverse) also satisfies $0v=0$ for all $v$.
 
 The proof of the first direction comes from (1.30). For $v \in V$,
 
-$$0v = (0+0)v = 0v + 0v$$ by distributive properties.
+$$0v = (0+0)v = 0v + 0v$$ 
+
+by distributive properties.
 
 $$0v + (-0v) = 0v + 0v + (-0v)$$
 
-$$0 = 0v$$ by additive inverse on both sides.
+$$0 = 0v$$ 
+
+by additive inverse on both sides.
 
 Direction 2: Any space satisfying the modified axioms (with $0v=0$ for
 all $v$ instead of additive inverse) actually does have additive
@@ -183,12 +196,9 @@ $$(t + \infty) + (-\infty) \neq t + (\infty + (-\infty))$$
 Associativity is not satisfied.
 
 #### (7) Suppose $S$ is a nonempty set. Let $V^S$ denote the set of functions from $S$ to $V$. Define a natural addition and scalar multiplication on $V^S$, and show that $V^S$ is a vector space with these definitions.
-Addition and scalar multiplication are defined as follows: for
-$f, g \in V^S$, $(f+g)(x) = f(x) + g(x)$ for all $x \in S$; for
-$a \in F$ and $f \in V^S$, $(af)(x) = af(x)$.
+Addition and scalar multiplication are defined as follows: for $f, g \in V^S$, $(f+g)(x) = f(x) + g(x)$ for all $x \in S$; for $a \in F$ and $f \in V^S$, $(af)(x) = af(x)$.
 
-The proof for each condition invokes the the fact that $V^S$ maps to $V$
-which is a vector space.
+The proof for each condition invokes the the fact that $V^S$ maps to $V$ which is a vector space.
 
 Communitativity:
 
@@ -200,12 +210,15 @@ Associativity:
 
 $$((f+g)+h)(x) = (f+g)(x) + h(x) = (f(x) + g(x)) + h(x) = f(x) + (g(x) + h(x)) = f(x) + (g+h)(x) = (f+(g+h))(x)$$
 
-Additive identity: define $0(x) = 0_V, 0 \in V^S$. Therefore for
-$f \in V^S$,
+Additive identity: 
+
+define $0(x) = 0_V, 0 \in V^S$. Therefore for $f \in V^S$,
 
 $$(f+0)(x) = f(x) + 0(x) = f(x) + 0_V = f(x)$$
 
-Additive inverse: define $(-f)(x) = -f(x), -f \in V^S$.
+Additive inverse: 
+
+define $(-f)(x) = -f(x), -f \in V^S$.
 
 $$(f+(-f))(x) = f(x) + (-f)(x) = f(x) + (-f(x)) = 0_V$$
 
@@ -213,7 +226,9 @@ Multiplicative identity:
 
 $$(1f)(x) = 1 f(x) = f(x)$$
 
-Distributive properties: for $a, b \in F$ and $f, g \in V^S$,
+Distributive properties: 
+
+For $a, b \in F$ and $f, g \in V^S$,
 
 $$(a(f+g))(x) = a (f+g)(x) = a(f(x)+g(x)) = af(x) + ag(x) = (af)(x) + (ag)(x)$$
 
@@ -224,13 +239,12 @@ $$((a+b)f)(x) = (a+b)f(x) = af(x) + bf(x) = (af)(x) + (bf)(x)$$
 # 1C Subspaces
 
 ### 1.33 Definition: subspace
-
 A subset $U$ of $V$ is called a subspace of $V$ if $U$ is also a vector
 space with the same additive identity, addition, and scalar
 multiplication as on $V$.
 
-### 1.34 Conditions for a subspace
 
+### 1.34 Conditions for a subspace
 A subset $U$ of $V$ is a subspace of $V$ if and only if $U$ satisfies
 the following three conditions.
 
@@ -239,36 +253,37 @@ the following three conditions.
 - closed under scalar multiplication: $a \in F$ and $u \in U$ implies
   $au \in U$.
 
-### 1.36 Definition: Sum of subspaces
 
+### 1.36 Definition: Sum of subspaces
 Suppose $V_1, ..., V_m$ are subspaces of $V$. The sum of $V_1, ..., V_m$
 denoted by $V_1 + ... + V_m$, is the set of all possible sums of
 elements of $V_1, ..., V_m$. More precisely,
 
 $$V_1 + ... +V_m = \\{v_1 + ... + v_m: v1 \in V_1, ..., v_m \in V_m\\}$$
 
-### 1.40 Sum of subspaces is the smallest containing subspace
 
+### 1.40 Sum of subspaces is the smallest containing subspace
 Suppose $V_1, ..., V_m$ are subspaces of $V$. Then $V_1 + ... + V_m$ is
 the smallest subspace of $V$ containing $V_1, ..., V_m$.
 
-### 1.41 Definition: Direct sum $\oplus$
 
+### 1.41 Definition: Direct sum $\oplus$
 Suppose $V_1, ..., V_m$ are subspaces of $V$. The sum $V_1 + ... V_m$ is
 called a direct sum if each element of $V_1 + ... V_m$ can be written in
 only one way as a sum $v_1 + ... + v_m$, where each $v_k \in V_k$.
 
-### 1.45 Conditions for a direct sum
 
+### 1.45 Conditions for a direct sum
 Suppose $V_1, ..., V_m$ are subspaces of $V$. Then $V_1 + ... + V_m$ is
 a direct if and only if the only way to write 0 as a sum
 $v_1 + ... + v_m$, where each $v_k \in V_k$, is by taking each $v_k$
 equal to 0.
 
-### 1.46 Direct sum of two subspaces
 
+### 1.46 Direct sum of two subspaces
 Suppose $U$ and $W$ are subspaces of V. Then $U + W$ is a direct sum
 $\iff U \cap W = \\{0\\}$.
+
 
 ## Exercises
 
