@@ -1,4 +1,5 @@
-Linear Algebra Done Right - Chapter 2
+Linear Algebra Done Right - Chapter 2 <br>
+Finite-Dimensional Vector Spaces
 ================
 Rosie Sun <br>
 2026-03-28
