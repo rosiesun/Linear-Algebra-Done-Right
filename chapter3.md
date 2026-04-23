@@ -662,10 +662,28 @@ Suppose $V$ and $W$ are finite-dimensional. Then $L(V,W)$ is finite-dimensional 
 ## Exercises
 
 #### (2) Suppose $T \in L(U,V)$ and $S \in L(V,W)$ are both invertible linear maps. Prove that $ST \in L(U,W)$ is invertible and that $(ST)^{-1} = T^{-1} S^{-1}$.
+Since $S, T$ are invertible, we have 
+
+$$S S^{-1} = S^{-1} S = I$$ 
+
+and 
+
+$$T T^{-1} = T^{-1} T = I$$
+
+We have 
+
+$$(ST)(T^{-1} S^{-1}) = S (T T^{-1}) S^{-1} = S I S^{-1} = S S^{-1} = I$$
+
+$$(T^{-1} S^{-1})(ST) = T^{-1} (S^{-1} S) T  = T^{-1} I T = T^{-1} T = I$$
+
+Therefore $ST$ is invertible and $T^{-1} S^{-1}$ is the inverse of $ST$.
+
 
 #### (4) Suppose $V$ is finite-dimensional and $dim V > 1$. Prove that the set of noninvertible linear maps from $V$ to itself is not a subspace of $L(V)$.
 
+
 #### (6) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S = null T$ if and only if there exists an invertible $E \in L(W)$ such that $S=ET$.
+
 
 #### (7) Suppose that $V$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $range S = range T$ if and only if there exists an invertible $E \in L(V)$ such that $S=TE$.
 
