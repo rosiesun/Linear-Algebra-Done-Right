@@ -679,22 +679,146 @@ $$(T^{-1} S^{-1})(ST) = T^{-1} (S^{-1} S) T  = T^{-1} I T = T^{-1} T = I$$
 Therefore $ST$ is invertible and $T^{-1} S^{-1}$ is the inverse of $ST$.
 
 
-#### (4) Suppose $V$ is finite-dimensional and $dim V > 1$. Prove that the set of noninvertible linear maps from $V$ to itself is not a subspace of $L(V)$.
-
-
 #### (6) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S = null T$ if and only if there exists an invertible $E \in L(W)$ such that $S=ET$.
+$\Leftarrow$
+
+Suppose there exists invertible $E \in L(W)$ such that $S=ET$. 
+
+First let $v \in null S$. Then $Sv = 0$, $ETv = Sv= 0$. Applying $E^{-1}$ to both sides, we have 
+
+$$E^{-1} E T v = E^{-1} 0$$
+
+Thus $Tv = 0$, and $v \in null T$.
+
+Next let $v \in null T$. Then $Tv = 0$, $Sv = ETv = E0 = 0$. Thus $v \in null S$.
+
+Hence we conclude that $null S = null T$.
+
+$\Rightarrow$
+Let $w_1,...,w_n$ be a basis of $range T$, and let $Y$ be a complement subspace such that $W = range T \oplus Y$. Let $y_1,...,y_m$ be a basis of $Y$.
+
+Since $w_i \in range T, i=1,...,n$, there exists $v_i \in V$ such that $Tv_i=w_i, i=1,...,n$.
+
+Define $E \in L(W)$ such that
+
+$$Ew_i = Tv_i = Sv_i, i=1,...,n$$
+
+$$Ey_j = y_j, j=1,...,m$$
+
+To show that $E$ is well-defined on $range T$, we want to show that if $Tu_1 = Tu_2$, $u_1, u_2 \in V$, then $Su_1 = Su_2$. 
+
+Assume $Tu_1 = Tu_2$. Then $T(u_1 - u_2) = 0$. $u_1 - u_2 \in null T$. By hypothesis, $u_1 - u_2 \in null S$, and $S(u_1 - u_2) = 0$. Hence $Su_1 = Su_2$, and $E$ is well-defined on $range T$. 
+
+We want to show that $S=ET$.
+
+Let $v \in V$. Then $Tv \in range T$, and we can write 
+
+$$Tv = a_1 w_1 + ... + a_n w_n$$ 
+
+for some $a_1,...,a_n$. Since $w_1 = Tv_1, ..., w_n = Tv_n$ for some $v_1,...,v_n$, 
+
+$$Tv = a_1 Tv_1 + ... + a_n Tv_n = T (a_1 v_1 + ... + a_n v_n)$$
+
+$T(v - (a_1 v_1 + ... + a_n v_n)) = 0$, therefore $v - (a_1 v_1 + ... + a_n v_n) \in null T$. By hypothesis, $v - (a_1 v_1 + ... + a_n v_n) \in null S$. So $S(v - (a_1 v_1 + ... + a_n v_n)) = 0$ and $Sv = S(a_1 v_1 + ... + a_n v_n)$. 
+
+$$ETv = ET(a_1 v_1 + ... + a_n v_n) = a_1 Ew_1 + ... + a_n Ew_n = a_1 Sv_1 + ... + a_n Sv_n = Sv$$
+
+By design, $range E = W$. By 3.65, $E$ is invertible.
 
 
 #### (7) Suppose that $V$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $range S = range T$ if and only if there exists an invertible $E \in L(V)$ such that $S=TE$.
+$\Leftarrow$
+Suppose there exists an invertible $E \in L(V)$ such that $S=TE$. 
+
+Let $w \in range S$. Then there exists $v \in V$ such that $Sv = w$. Since $TEv = T(Ev) = Sv = w$, $w \in range T$. 
+
+Let $w \in range T$. Then there exists $v \in V$ such that $Tv = w$. Since $TEv = Sv$, applying $E^{-1}$ gives us $TEE^{-1} v = S E^{-1} v$, $w = Tv = S (E^{-1} v)$. Therefore $w \in range S$. 
+
+Hence we conclude that $range S = range T$.
+
+$\Rightarrow$
+Suppose $range S = range T$. Since 
+
+$$dim V = dim null S + dim range S = dim null T + dim range T$$, 
+
+and $dim range S = dim range T$, $dim null S = dim null T$.
+
+Let $s_1,...,s_n$ be a basis of $null S$, let $U$ be a complement subspace that $null S \oplus U = V$, and let $u_1,...,u_m$ be a basis of $U$.
+
+Let $t_1,...,t_n$ be a basis of $null T$, let $U'$ be a complement subspace that $null T \oplus U' = V$, and let $u'_1,...,u'_m$ be a basis of $U'$. 
+
+Since $Su_j \in range S = range T$, $Tx_j = Su_j, j=1,...,m$ for some $x_j \in V$.
+
+Define $E \in L(V)$ such that 
+
+$$E s_i = t_i, i=1,...,n$$
+
+$$E u_j = x_j, j=1,...,m$$
+
+First we want to show that $S=TE$.
+
+$$(TE)(s_i) = T(Es_i) = Tt_i = 0 = S(s_i)$$
+
+$$(TE)(u_j) = T (T|_{U'})^{-1} Su_j = Su_j$$
+
+Next we want to show that $E$ is invertible.
+
+On $null S$, $E$ sends the basis $s_1,...,s_n$ bijectively to $t_1,...,t_n$.
+
+On $U$, $E$ is a composition of two bijective maps, $(T|_{U'})^{-1}$ and $S|_{U}$. Hence it is bijective. 
+
+Since any vector in $V$ decomposes uniquely as a sum from $null S$ and $U$, and $E$ is bijective on both pieces, $E$ is bijective on $V$. Therefore $E$ is invertible.
+
 
 #### (11) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ is invertible $\iff S$ and $T$ are invertible.
+$\Leftarrow$
+
+Suppose $ST$ is invertible. Then $ST$ is injective and surjective. 
+
+We have $range ST = V$. Thus $range S = V$, and $S$ is surjective. 
+
+Assume towards contradiction that $T$ is not surjective. Then $dim range T < dim V$.
+
+Then the restriction $S|_{range T}: range T \rightarrow V$ is not surjective by 3.24. Thus $S(range T) \neq V$. But $range ST = S(range T)$, so $ST$ is not surjective, which is a contradiction. Thus $T$ is surjective.
+
+By 3.65, $S,T$ are invertible.
+
+$\Rightarrow$
+
+Suppose $S,T$ are invertible. Then 
+
+$$ST T^{-1} S^{-1} = I = T^{-1} S^{-1} ST$$
+
+Therefore $ST$ is invertible.
+
 
 #### (12) Suppose $V$ is finite-dimensional and $S,T,U \in L(V)$ and $STU=I$. Show that $T$ is invertible and that $T^{-1} = US$.
+By 3.68,
+
+$$STU = S(TU) = I \Rightarrow (TU)S = T(US) = I$$
+
+$$STU = (ST)U = I \Rightarrow U(ST) = (US)T = I$$
+
+Thus $T$ is invertible and $T^{-1} = US$.
+
 
 #### (14) Prove or give a counterexample: If $V$ is a finite-dimensional vector space and $R,S,T \in L(V)$ are such that $RST$ is surjective, then $S$ is injective.
+By 3.65, $RST$ being surjective implies it is injective and invertible.
+
+Then 
+
+$$dim V = dim null RST + dim range RST = dim range RST$$
+
+Assume towards contradiction that $S$ is not injective. Then $dim null S >= 1$. 
+
+$$dim V = dim null S + dim range S > dim range S$$
+
+Since $dim range S < dim V$, and $dim range ST \leq dim S$, we have $dim range ST < dim V$. Similarly, $dim range RST < dim V$. This is a contradiction to the fact that $RST$ is surjective.
+
+Therefore we conclude $S$ is injective.
 
 
 #### (15) Suppose $T \in L(V)$ and $v_1,...,v_m$ is a list in $V$ such that $Tv_1,...,Tv_m$ spans $V$. Show that $v_1,...,v_m$ spans $V$.
+Let $v \in V$. Since $Tv_1,...,Tv_m$ spans $V$, we can write $v = a_1 Tv_1 + ... + a_m Tv_m$ for some $a_1,...,a_m$. Then $v \in range T$. Therefore $T$ is surjective. By 3.65, $T$ is injective and invertible. 
 
-
-
+Since $V = span(Tv_1,...,Tv_m)$, $V = T(span(v_1,...,v_m))$ by linearity. Because $T$ is invertible, $span(v_1,...,v_m) = V$. 
