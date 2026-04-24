@@ -79,7 +79,65 @@ Suppose $p, q \in P(F)$ and $T \in L(V)$. Then
 Suppose $T \in L(V)$ and $p \in P(F)$. Then $null p(T)$ and $range p(T)$ are invariant under $T$.
 
 
+
 ## Exercises
+
+#### (1) Suppose $T \in L(V)$ and $U$ is a subspace of $V$. 
+(a) Prove that if $U \subseteq null T$, then $U$ is invariant under $T$.
+
+(b) Prove that if $range T \subseteq U$, thten $U$ is invariant under $T$.
+
+
+#### (2) Suppose that $T \in L(V)$ and $V_1,...,V_m$ are subspaces of $V$ invariant under $T$. Prove that $V_1 + ... + V_m$ is invariant under $T$.
+
+
+#### (4) Prove or give a counterexample: If $V$ is finite-dimensional and $U$ is a subspace of $V$ that is invariant under every operator on $V$, then $U=\\{0\\}$ or $U=V$.
+
+
+#### (5) Suppose $T \in L(R^2)$ is defined by $T(x,y) = (-3y, x)$. Find the eigenvalues of $T$.
+
+
+#### (6) Define $T \in L(F^2)$ by $T(w,z) = (z,w)$. Find all eigenvalues and eigenvectors of $T$.
+
+
+#### (7) Define $T \in L(F^3)$ by $T(z_1,z_2,z_3) = (2z_2, 0, 5z_3)$. Find all eigenvalues and eigenvectors of $T$.
+
+
+#### (8) Suppose $P \in L(V)$ is such that $P^2 = P$. Prove that if $\lambda$ is an eigenvalue of $P$, then $\lambda = 0$ or $\lambda = 1$.
+
+
+#### (12) Suppose $V = U \oplus W$, where $U$ and $W$ are nonzero subspaces of $V$. Define $P \in L(V)$ by $P(u+w) = u$ for each $u \in U, w \in W$. Find all eigenvalues and eigenvectors of $P$.
+
+#### (13) Suppose $T \in L(V)$. Suppose $S \in L(V)$ is invertible.
+(a) Prove that $T$ and $S^{-1} T S$ have the same eigenvalues.
+
+(b) What is the relationship between the eigenvalues of $T$ and the eigenvalues of $S^{-1} T S$?
+
+
+#### (14) Give an example of an operator on $R^4$ that has no real eigenvalues.
+
+
+#### (21) Suppose $T \in L(V)$ is invertible.
+(a) Suppose $\lambda \in F$ with $\lambda \neq 0$. Prove that $\lambda$ is an eigenvalue of $T$ if and only if $1/\lambda$ is an eigenvalue of $T^{-1}$.
+
+(b) Prove that $T$ and $T^{-1}$ have the same eigenvectors.
+
+
+#### (26) Suppose $T \in L(V)$ is such that every nonzero vector in $V$ is an eigenvector of $T$. Prove that $T$ is a scalar multiple of the identity operator.
+
+
+#### (27) Suppose that $V$ is finite-dimensional and $k \in \\{1,...,dimV - 1\\}$. Suppose $T \in L(V)$ is such that every subspace of $V$ of dimension $k$ is invariant under $T$. Prove that $T$ is a scalar multiple of the identity operator.
+
+
+#### (31) Give an example of $T \in L(R^2)$ such that $T^4 = -I$.
+
+
+#### (34) Suppose $V$ is finite-dimensional and $v_1,...,v_m \in V$. Prove that the list $v_1,...,v_m$ is linearly independent if and only if there exists $T \in L(V)$ such that $v_1,...,v_m$ are eigenvectors of $T$ corresponding to distinct eigenvalues.
+
+
+#### (36) Suppose that $\lambda_1,...,\lambda_n$ is a list of distinct positive numbers. Prove that the list $cos(\lambda_1 x), ..., cos(\lambda_n x)$ is linearly independent in the vector space of real-valued functions on $R$.
+
+
 
 
 
