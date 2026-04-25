@@ -85,42 +85,125 @@ Suppose $T \in L(V)$ and $p \in P(F)$. Then $null p(T)$ and $range p(T)$ are inv
 #### (1) Suppose $T \in L(V)$ and $U$ is a subspace of $V$. 
 (a) Prove that if $U \subseteq null T$, then $U$ is invariant under $T$.
 
+Let $u \in U$. Then $u \in U \subseteq null T$. Thus $Tu=0$. Since $0$ is in any subspace, $Tu \in U$. Therefore $U$ is invariant under $T$.
+
 (b) Prove that if $range T \subseteq U$, thten $U$ is invariant under $T$.
+
+Let $u \in U$. Then $Tu \in range T \subseteq U$. Therefore $U$ is invariant under $T$.
 
 
 #### (2) Suppose that $T \in L(V)$ and $V_1,...,V_m$ are subspaces of $V$ invariant under $T$. Prove that $V_1 + ... + V_m$ is invariant under $T$.
+Let $v \in V_1 + ... + V_m$. Then we can write $v = v_1 + ... + v_m$ for some $v_1 \in V_1, ..., v_m \in V_m$. Then $Tv = T(v_1 + ... + v_m) = Tv_1 + ... + Tv_m$. By assumption, $V_1,...,V_m$ are invariant under $T$, so $Tv_1 \in V_1, ..., Tv_m \in V_m$. Thus $Tv \in V_1 + ... + V_m$, and we conclude that $V_1 + ... + V_m$ is invariant under $T$.
 
 
 #### (4) Prove or give a counterexample: If $V$ is finite-dimensional and $U$ is a subspace of $V$ that is invariant under every operator on $V$, then $U=\\{0\\}$ or $U=V$.
+Suppose $U \neq \\{0\\}$. Let $u \in U, u \neq 0$. We can decompose $V$ such that $V = span(u) \oplus W$. 
+
+For any $v \in V$, define the linear operator $T$ such that 
+
+$$Tu = v$$
+
+$$Tw = 0, w \in W$$
+
+By assumption, $u \in U$ implies $Tu \in U$. Since $Tu = v$, $v \in U$. But $v \in V$ was arbitrary, so we conclude $U = V$.
 
 
 #### (5) Suppose $T \in L(R^2)$ is defined by $T(x,y) = (-3y, x)$. Find the eigenvalues of $T$.
+There are no real eigenvalues.
 
 
 #### (6) Define $T \in L(F^2)$ by $T(w,z) = (z,w)$. Find all eigenvalues and eigenvectors of $T$.
+Eigenvalue 1, eigenvectors $\\{(w,z) \in R^2: w=z\\}$
+Eigenvalue -1, eigenvectors $\\{(w,z) in R^2: w = -z\\}$.
 
 
 #### (7) Define $T \in L(F^3)$ by $T(z_1,z_2,z_3) = (2z_2, 0, 5z_3)$. Find all eigenvalues and eigenvectors of $T$.
+Eigenvalue 5, eigenvectors $span(z_3)$.
+Eigenvalue 0, eigenvectors $span(z_1)$.
 
 
 #### (8) Suppose $P \in L(V)$ is such that $P^2 = P$. Prove that if $\lambda$ is an eigenvalue of $P$, then $\lambda = 0$ or $\lambda = 1$.
+Suppose $\lambda$ is an eigenvalue of $P$. Then $Pv = \lambda v$ for some nonzero $v \in V$. Applying $P$ to both sides, we have 
+
+$$PPv = P lambda v = \lambda Pv = \lambda (\lambda v) = \lambda^2 v$$
+
+Since $P^2 = P$, we also have 
+
+$$PPv = Pv = \lambda v$$
+
+$$\lambda^2 v = \lambda v$$
+
+Rearranging, we have
+
+$$\lambda (\lambda - 1) v = 0$$
+
+Since $v \neq 0$, we must have $\lambda (\lambda - 1) = 0$. Thus $\lambda = 1$ or $\lambda = 0$.
 
 
 #### (12) Suppose $V = U \oplus W$, where $U$ and $W$ are nonzero subspaces of $V$. Define $P \in L(V)$ by $P(u+w) = u$ for each $u \in U, w \in W$. Find all eigenvalues and eigenvectors of $P$.
+Eigenvalue 1, eigenvectors $u \in U, u \neq 0$.
+Eigenvalue 0, eigenvectors $w \in W, w \neq 0$.
+
 
 #### (13) Suppose $T \in L(V)$. Suppose $S \in L(V)$ is invertible.
 (a) Prove that $T$ and $S^{-1} T S$ have the same eigenvalues.
 
-(b) What is the relationship between the eigenvalues of $T$ and the eigenvalues of $S^{-1} T S$?
+Suppose $\lambda$ is an eigenvalue of $T$ corresponding to some eigenvector $v \in V$. Then $Tv = \lambda v$. 
+
+Since $S$ is invertible, there is some $u \in V$ such that $Su = v$. 
+
+$$S^{-1} T Su = S^{-1} T v = S^{-1} (\lambda v) = \lambda S^{-1} v = \lambda u$$
+
+Therefore $\lambda$ is an eigenvalue of $S^{-1} T S$.
+
+(b) What is the relationship between the eigenvectors of $T$ and the eigenvectors of $S^{-1} T S$?
+
+If $v$ is an eigenvector of $T$, then $S^{-1}v$ is an eigenvector of $S^{-1} T S$.
 
 
-#### (14) Give an example of an operator on $R^4$ that has no real eigenvalues.
+#### (14) Give an example of an operator on $R^4$ that has no (real) eigenvalues.
+$$T(x_1, x_2, x_3, x_4) = (-x_2, x_1, -x_4, x_3)$$
+
+
+#### (15) Suppose $V$ is finite-dimensional, $T \in L(V)$, and $\lambda \in F$. Show that $\lambda$ is an eigenvalue of $T$ if and only if $\lambda$ is an eigenvalue of the dual operator $T' \in L(V')$.
 
 
 #### (21) Suppose $T \in L(V)$ is invertible.
 (a) Suppose $\lambda \in F$ with $\lambda \neq 0$. Prove that $\lambda$ is an eigenvalue of $T$ if and only if $1/\lambda$ is an eigenvalue of $T^{-1}$.
 
+$\Rightarrow$
+
+Let $\lambda$ be an eigenvalue of $T$ corresponding to some $v \in V$. Then $Tv = \lambda v$. Applying $T^{-1}$ to both sides, we have
+
+$$T^{-1} T v = T^{-1} \lambda v$$
+
+$$v = \lambda T^{-1} v$$
+
+$$T^{-1} v = 1/\lambda v$$
+
+Thus $\lambda$ is an eigenvalue of $T^{-1}$.
+
+$\Leftarrow$
+
+Let $1/\lambda$ be an eigenvalue of $T^{-1}$ corresponding to some $v \in V$. Then $T^{-1}v = 1/\lambda v$. Applying $T$ to both sides, we have
+
+$$T T^{-1}v = T (1/\lambda) v$$
+
+$$v = 1/\lambda T v$$
+
+$$T v = \lambda v$$
+
+Thus $\lambda$ is an eigenvalue of $T$.
+
 (b) Prove that $T$ and $T^{-1}$ have the same eigenvectors.
+
+From the equations from (a), they have the same eigenvectors.
+
+
+#### (23) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ and $TS have the same eigenvalues.
+
+
+#### (25) Suppose $T \in L(V)$ and $u, w$ are eigenvectors of $T$ such that $u+w$ is also an eigenvector of $T$. Prove that $u$ and $w$ are eigenvectors of $T$ corresponding to the same eigenvalue.
 
 
 #### (26) Suppose $T \in L(V)$ is such that every nonzero vector in $V$ is an eigenvector of $T$. Prove that $T$ is a scalar multiple of the identity operator.
@@ -128,15 +211,30 @@ Suppose $T \in L(V)$ and $p \in P(F)$. Then $null p(T)$ and $range p(T)$ are inv
 
 #### (27) Suppose that $V$ is finite-dimensional and $k \in \\{1,...,dimV - 1\\}$. Suppose $T \in L(V)$ is such that every subspace of $V$ of dimension $k$ is invariant under $T$. Prove that $T$ is a scalar multiple of the identity operator.
 
+#### (28) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that $T$ has at most $1 + dim range T$ distinct eigenvalues.
+
 
 #### (31) Give an example of $T \in L(R^2)$ such that $T^4 = -I$.
+
+
+#### (32) Suppose $T \in L(V)$ has no eigenvalues and $T^4 = I$. Prove that $T^2 = -I$.
+
+
+#### (33) Suppose $T \in L(V)$ and $m$ is a positive integer.
+
+(a) Prove that $T$ is injective if and only if $T^m$ is injective.
+
+(b) Prove that $T$ is surjective if and only if $T^m$ is surjective.
 
 
 #### (34) Suppose $V$ is finite-dimensional and $v_1,...,v_m \in V$. Prove that the list $v_1,...,v_m$ is linearly independent if and only if there exists $T \in L(V)$ such that $v_1,...,v_m$ are eigenvectors of $T$ corresponding to distinct eigenvalues.
 
 
+
 #### (36) Suppose that $\lambda_1,...,\lambda_n$ is a list of distinct positive numbers. Prove that the list $cos(\lambda_1 x), ..., cos(\lambda_n x)$ is linearly independent in the vector space of real-valued functions on $R$.
 
+
+#### (39) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that $T$ has an eigenvalue if and only if there exists a subspace of $V$ of dimension $dim V - 1$ that is invariant under $T$.
 
 
 
