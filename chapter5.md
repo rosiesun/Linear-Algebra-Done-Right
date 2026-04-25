@@ -10,14 +10,11 @@ Rosie Sun <br>
 ### 5.1 Definition: operator
 A linear map from a vector space to itself is called an operator.
 
-
 ### 5.2 Definition: invariant subspace
 Suppose $T \in L(V)$. A subspace $U$ of $V$ is called invariant under $T$ if $Tu \in U$ for every $u \in U$.
 
-
 ### 5.5 Definition: eigenvalue
 Suppose $T \in L(V)$. A number $\lambda \in F$ is called an eigenvalue of $T$ if there exists $v \in V$ such that $v \neq 0$ and $Tv = \lambda v$.
-
 
 ### 5.7
 Suppose $V$ is finite-dimensional, $T \in L(V)$, and $\lambda \in F$. Then the following are equivalent. 
@@ -27,18 +24,14 @@ Suppose $V$ is finite-dimensional, $T \in L(V)$, and $\lambda \in F$. Then the f
 - $T - \lambda I$ is not surjective.
 - $T - \lambda I$ is not invertible.
 
-
 ### 5.8 Definition: eigenvector
 Suppose $T \in L(V)$ and $\lambda \in F$ is an eigenvalue of $T$. A vector $v \in V$ is called an eigenvector of $T$ corresponding to $\lambda$ if $v \neq 0$ and $Tv = \lambda v$.
-
 
 ### 5.11 
 Suppose $T \in L(V)$. Then every list of eigenvectors of $T$ corresponding to distinct eigenvalues of $T$ is linearly independent.
 
-
 ### 5.12
 Suppose $V$ is finite-dimensional. Then each operator on $V$ has at most $dim V$ distinct eigenvalues.
-
 
 ### 5.13 Notation
 Suppose $T \in L(V)$ and $m$ is a positive integer.
@@ -49,7 +42,6 @@ Suppose $T \in L(V)$ and $m$ is a positive integer.
 
 $$T^{-m} = (T^{-1})^m$$
 
-
 ### 5.14
 Suppose $T \in L(V)$ and $p \in P(F)$ is a polynomial given by 
 
@@ -59,7 +51,6 @@ for all $z \in F$. Then $p(T)$ is the operator on $V$ defined by
 
 $$p(T) = a_0 I + a_1 T + a_2 T^2 + ... + a_m T^m$$
 
-
 ### 5.16 Definition: product of polynomials
 If $p, q \in P(F)$, then $pq \in P(F)$ is the polynomial defined by
 
@@ -67,13 +58,11 @@ $$(pq)(z) = p(z) q(z)$$
 
 for all $z \in F$.
 
-
 ### 5.17
 Suppose $p, q \in P(F)$ and $T \in L(V)$. Then
 
 - $(pq)(T) = p(T) q(T)$
 - $p(T) q(T) = q(T) p(T)$
-
 
 ### 5.18
 Suppose $T \in L(V)$ and $p \in P(F)$. Then $null p(T)$ and $range p(T)$ are invariant under $T$.
@@ -305,15 +294,72 @@ Suppose $T \in L(V)$ and $v_1,...,v_n$ is a basis of $V$. Then the following are
 - $span (v_1,...,v_k)$ is invariant under $T$ for each $k = 1,...,n$.
 - $Tv_k \in span (v_1,...,v_k)$ for each $k = 1,...,n$
 
-
 ### 5.40
 Suppose $T \in L(V)$ and $V$ has a basis with respect to which $T$ has an upper triangular matrix with diagonal entries $\lambda_1,...,\lambda_n$. Then
 
 $$(T - \lambda_1 I) ... (T - \lambda_n I) = 0$$
 
+### 5.41
+Suppose $T \in L(V)$ has an upper-triangular matrix with respect to some basis of $V$. Then the eigenvalues of $T$ are precisely the entries on the diagonal of that upper-triangular matrix.
+
+### 5.44
+Suppose $V$ is finite-dimensional and $T \in L(V)$. Then $T$ has an upper-triangular matrix with respect to some basis of $V$ if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some $\lambda_1,...,\lambda_m \in F$.
+
+### 5.47
+Suppose $V$ is a finite-dimensional complex vector space and $T \in L(V)$. Then $T$ has an upper-triangular matrix with respect to some basis of $V$.
+
+
 
 # 5D Diagonalizable Operators
 
+### 5.48 Definition: diagonal matrix
+A diagonal matrix is a square matrix that is 0 everywhere except possibly on the diagonal.
+
+### 5.50 Definition: diagonalizable
+An operator on $V$ is called diagonalizable if the operator has a diagonal matrix with respect to some basis of $V$.
+
+### 5.52 Definition: eigenspace
+Suppose $T \in L(V)$ and $\lambda \in F$. The eigenspace of $T$ corresponding to $\lambda$ is the subspace $E(\lambda, T)$ of $V$ defined by
+
+$$E(\lambda, T) = null (T - \lambda I) = \\{v \in V: Tv = \lambda v\\}$$
+
+Hence $E(\lambda, T)$ is the set of all eigenvectors of $T$ corresponding to $\lambda$, along with the 0 vector.
+
+### 5.54
+Suppose $T \in L(V)$ and $\lambda_1,...,\lambda_m$ are distinct eigenvalues of $T$. Then 
+
+$$E(\lambda_1, T) + ... + E(\lambda_m, T)$$
+
+is a direct sum. Furthermore, if $V$ is finite-dimensional, then 
+
+$$dim E(\lambda_1, T) + ... + dim E (\lambda_m, T) \leq dim V$$.
+
+### 5.55
+Suppose $V$ is finite-dimensional and $T \in L(V)$. Let $\lambda_1,...,\lambda_m$ denote the distinct eigenvalues of $T$. Then the following are equivalent:
+
+- $T$ is diagonalizable.
+- $V$ has a basis consisting of eigenvectors of $T$.
+- $V = E(\lambda_1,T) \oplus ... \oplus E(\lambda_m, T)$
+- $dim V = dim E(\lambda_1, T) + ... + dim E(\lambda_m, T)$.
+
+### 5.58
+Suppose $V$ is finite-dimensional and $T \in L(V)$ has $dim V$ distinct eigenvalues. Then $T$ is diagonalizable.
+
+### 5.62
+Suppose $V$ is finite-dimensional and $T \in L(V)$. Then $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m \in F$.
+
+### 5.65
+Suppose $T \in L(V)$ is diagonalizable and $U$ is a subspace of $V$ that is invariant under $T$. Then $T|_U$ is a diagonalizable operator on $U$.
+
+### 5.66 Definition: Gershgorin disks
+Suppose $T \in L(V)$ and $v_1,...,v_n$ is a basis of $V$. Let $A$ denote the matrix of $T$ with respect to this basis. A gershgorin disk of $T$ with respect to the basis $v_1,...,v_n$ is a set of the form 
+
+$$\\{z \in F: |z-A_{j,j}| \leq \sum^n_{k=1, k \neq j} |A_jk| \\}$$
+
+where $j \in \\{1,...,n\\}$.
+
+### 5.67
+Suppose $T \in L(V)$ and $v_1,...,v_n$ is a basis of $V$. Then each eigenvalue of $T$ is contained in some Gershgorin disk of $T$ with respect to the basis $v_1,...,v_n$.
 
 
 # 5E Commuting Operators
