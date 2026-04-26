@@ -189,18 +189,79 @@ Thus $\lambda$ is an eigenvalue of $T$.
 From the equations from (a), they have the same eigenvectors.
 
 
-#### (23) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ and $TS have the same eigenvalues.
+#### (23) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ and $TS$ have the same eigenvalues.
+Let $\lambda$ be an eigenvalue of $ST$ corresponding to some $v \in V, v \neq 0$. Then 
+
+$$STv = \lambda v$$. 
+
+Applying $T$ to both sides, we have 
+
+$$TSTv = T \lambda v$$
+
+$$TS(Tv) = \lambda (Tv)$$
+
+Since $v \neq 0$, $Tv=0$ if $\lambda = 0$.
+
+If $\lambda = 0$, then $null ST \neq \\{0\\}$. We have $TS(Tv) = 0$. Then $Tv \in null TS$. $\lambda$ is an eigenvalue of $TS$.
+
+If $\lambda \neq 0$, then $TS(Tv) = \lambda (Tv)$ implies that $Tv$ is an eigenvector of $TS$ with eigenvalue of $\lambda$.
+
+The other direction follows by switching the order of $S$ and $T$.
 
 
 #### (25) Suppose $T \in L(V)$ and $u, w$ are eigenvectors of $T$ such that $u+w$ is also an eigenvector of $T$. Prove that $u$ and $w$ are eigenvectors of $T$ corresponding to the same eigenvalue.
+Since $u, w$ are eigenvectors of $T$, there is some $\lambda_1, \lambda_2 \in F$ such that $Tu = \lambda_1 u$ and $Tw = \lambda_2 w$.
+
+Since $u+w$ is an eigenvector of $T$, some is some $\lambda_3 \in F$ such that $T(u+w) = \lambda_3 (u+w)$.
+
+Assume towards contradiction that $\lambda_1 \neq \lambda_2$. We have 
+
+$$T(u+w) = \lambda_3 u + \lambda_3 w$$
+
+$$T(u+w) = Tu + Tw = \lambda_1 u + \lambda_2 w$$
+
+$$(\lambda_1 - \lambda_3) u + (\lambmda_2 - \lambda_3) w = 0$$
+
+By 5.11, every list of eigenvectors of $T$ corresponding to distinct eigenvalues of $T$ is linearly independent. By 2.15, $\lambda_1 - \lambda_3 = 0$ and $\lambda_2 - \lambda_3 = 0$. Thus $\lambda_1 = \lambda_3 = \lambda_2$. But this is a contradiction. 
+
+Therefore we conclude that $\lambda_1 = \lambda_2$.
 
 
 #### (26) Suppose $T \in L(V)$ is such that every nonzero vector in $V$ is an eigenvector of $T$. Prove that $T$ is a scalar multiple of the identity operator.
+Let $u, w \in V, u, w \neq 0$. Then $u, w$ are eigenvectors of $T$. 
+
+$Tu = \lambda_1 u$ and $Tw = \lambda_2 w$.
+
+If $u+w \neq 0$, $u+w$ is an eigenvector of $T$. From exercise (25), $u, w, u+w$ have the same eigenvalue $\lambda$. 
+
+If $u+w = 0$, $w = -u$. We have $Tw = -Tu = -\lambda_1 u$. We also have $Tw = \lambda_2 w = -\lambda_2 u$. $-\lambda_1 u = -\lambda_2 u$, since $u \neq 0$, $\lambda_1 = \lambda_2$.
+
+Therefore every vector in $V$ has the same eigenvalue. We conclude that $T = \lambda I$.
 
 
 #### (27) Suppose that $V$ is finite-dimensional and $k \in \\{1,...,dimV - 1\\}$. Suppose $T \in L(V)$ is such that every subspace of $V$ of dimension $k$ is invariant under $T$. Prove that $T$ is a scalar multiple of the identity operator.
 
+Suppose $dim V = n$.
+
+If $k=1$, then every 1-dimensional subspace $U$ is invariant under $T$. For any $u \in U$, $Tu \in U$. Then $Tu = \lambda u$ for some $\lambda \in F$. Then $u$ is an eigenvector of $T$. Since every 1-dimensional subspace $U$ is invariant, every nonzero vector is an eigenvector. We can apply exercise (26) and conclude that $T$ is a scalar multiple of the identity operator.
+
+If $k \neq 1$, assume towards contradiction that there exists $v \in V$ such that $span(v)$ is not invariant under $T$. Then $Tv \notin span(v)$, so $v, Tv$ are linearly independent. Construct two k-dimensional subspaces 
+
+$$U_1 = span(v, Tv, u_3,...,u_k)$$
+
+$$U_2 = span(v, u_2, u_3, ..., u_k)$$
+
+such that $Tv \notin U_2$. This is possible because $k < n$.
+
+By hypothesis, $U_1$ and $U_2$ are invariant under $T$. Since $v \in U_2$, $Tv \in U_2$. But this is a contradiction. Therefore we conclude that every 1-dimensional subspace is invariant under $T$. We can apply exercise (26) and conclude $T$ is a scalar multiple of the identity operator.
+
+
 #### (28) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that $T$ has at most $1 + dim range T$ distinct eigenvalues.
+By 5.12, $T$ has at most $dim V$ distinct eigenvalues. 
+
+If $dim null T = 0$, then $dim V = dim range T$, so $T$ has at most $dim range T$ eigenvalues.
+
+If $dim null T \neq 0$, then 0 is an eigenvalue of $T$. $range T$ is invariant under $T$ by 5.4. Applying 5.12 to the restriction $T:range T \rightarrow range T$, $T|_{range T}$ has at most $dim range T$ distinct eigenvaluges. Therefore $T$ has at most $1 + dim range T$ eigenvalues.
 
 
 #### (31) Give an example of $T \in L(R^2)$ such that $T^4 = -I$.
@@ -211,20 +272,39 @@ From the equations from (a), they have the same eigenvectors.
 
 #### (33) Suppose $T \in L(V)$ and $m$ is a positive integer.
 
-(a) Prove that $T$ is injective if and only if $T^m$ is injective.
+#### (a) Prove that $T$ is injective if and only if $T^m$ is injective.
+$\Rightarrow$
+Suppose $T$ is injective. 
 
-(b) Prove that $T$ is surjective if and only if $T^m$ is surjective.
+First we want to show that compositions of injective maps are injective. Let $T_1, T_2 \in L(V)$ be injective linear maps. Suppose $T_1 T_2 v = 0$. Then $T_2 v = 0$ (from the injectivity of $T_1$). Then we have $v = 0$ (from the injectivity of $T_2$). Thus $T_1 T_2$ is injective. 
+
+We can apply what we just showed to $T^m$ and conclude that $T^m$ is injective.
+
+$\Leftarrow$
+Suppose $T^m$ is injective. Then $null T^m = \\{0\\}$. 
+
+Suppose $Tv = 0$. Applying $T$ m times, we have $T^m v = 0$. Since $T^m$ is injective, $v = 0$. Thus $T$ is injective.
+
+#### (b) Prove that $T$ is surjective if and only if $T^m$ is surjective.
+$\Rightarrow$
+Suppose $T$ is surjective.
+
+First we want to show that compositions of surjective maps are surjective. Let $T_1, T_2 \in L(V)$ be surjective linear maps. Let $w \in V$. Since $T_1$ is surjective, there exists $u \in V$ such that $T_1 u = w$. Since $T_2$ is surjective, there exists $v \in V$ such that $T_2 v = u$. Then $T_1 T_2 v = T_1 u = w$. Therefore $w \in range (T_1 T_2)$. Hence $T_1 T_2$ is surjective.
+
+We can apply what we just showed to $T^m$ and conclude that $T^m$ is surjective.
+
+$\Leftarrow$
+Suppose $T^m$ is surjective. Then $range T^m = V$.
+
+Let $v \in V$. Then there exists some $u \in V$ such that $T^m u = v$. We can write $T (T^{m-1} u) = v$. Thus $v \in range T$. We conclude that $T$ is surjective.
 
 
 #### (34) Suppose $V$ is finite-dimensional and $v_1,...,v_m \in V$. Prove that the list $v_1,...,v_m$ is linearly independent if and only if there exists $T \in L(V)$ such that $v_1,...,v_m$ are eigenvectors of $T$ corresponding to distinct eigenvalues.
+$\Leftarrow$
+Suppose there exists $T \in L(V)$ such that $v_1,...,v_m$ are eigenvectors of $T$ corresponding to distinct eigenvalues. Then by 5.11, $v_1,...,v_m$ are linearly independent. 
 
-
-
-#### (36) Suppose that $\lambda_1,...,\lambda_n$ is a list of distinct positive numbers. Prove that the list $cos(\lambda_1 x), ..., cos(\lambda_n x)$ is linearly independent in the vector space of real-valued functions on $R$.
-
-
-#### (39) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that $T$ has an eigenvalue if and only if there exists a subspace of $V$ of dimension $dim V - 1$ that is invariant under $T$.
-
+$\Rightarrow$
+Suppose $v_1,...,v_m$ is linearly independent. Extend to a basis $v_1,...,v_m, w_1,...,w_n$ of $V$. Define $T \in L(V)$ such that $Tv_i = \lambda_i v_i, i=1,...,m$, $\lambda_i$ all distinct. $Tw_j = 0, j = 1,...,n$. 
 
 
 
