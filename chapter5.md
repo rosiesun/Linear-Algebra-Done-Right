@@ -30,6 +30,18 @@ Suppose $T \in L(V)$ and $\lambda \in F$ is an eigenvalue of $T$. A vector $v \i
 ### 5.11 
 Suppose $T \in L(V)$. Then every list of eigenvectors of $T$ corresponding to distinct eigenvalues of $T$ is linearly independent.
 
+Proof: 
+
+Suppose the desired result is false. Then there exists a smallest positive integer $m$ such that there exists a linearly dependent list $v_1,...,v_m$ of eigenvectors of $T$ corresponding to distinct eigenvalues $\lambda_1,...,\lambda_m$ of $T$ (note that $m \geq 2$ because an eigenvector is by definition nonzero). Thus there exist $a_1,...,a_m \in F$ none of which are 0 (because of the minimality of $m$), such that 
+
+$$a_1 v_1 + ... + a_m v_m = 0$$
+
+Applying $T - \lambda_m I$ to both sides of the equation, getting
+
+$$a_1 (\lambda_1 - \lambda_m) v_1 + ... + a_{m-1} (\lambda_{m-1} - \lambda_m) v_{m-1} = 0$$
+
+Because the eigenvalues $\lambda_1,...,\lambda_m$ are distinct, none of the coefficients above equal 0. Thus $v_1,...,v_{m-1}$ is a linearly dependent list of $m-1$ eigenvectors of $T$ corresponding to distinct eigenvalues, contradicting the minimality of $m$. This contradiction completes the proof.
+
 ### 5.12
 Suppose $V$ is finite-dimensional. Then each operator on $V$ has at most $dim V$ distinct eigenvalues.
 
@@ -67,6 +79,19 @@ Suppose $p, q \in P(F)$ and $T \in L(V)$. Then
 ### 5.18
 Suppose $T \in L(V)$ and $p \in P(F)$. Then $null p(T)$ and $range p(T)$ are invariant under $T$.
 
+Proof:
+
+Suppose $u \in null p(T)$. Then $p(T)u = 0$. Thus 
+
+$$(p(T))Tu = (p(T)T)u = (Tp(T))u = T(p(T)u) = T0 = 0$$
+
+Hence $Tu \in null p(T)$. Thus $null p(T)$ is invariant under $T$, as desired.
+
+Suppose $u \in range p(T)$. Then there exists $v \in V$ such that $p(T)v = u$. Thus 
+
+$$Tu = T(p(T)v) = (p(T)T)v = p(T)(Tv)$$
+
+Hence $Tu \in range p(T)$. Thus $range p(T)$ is invariant under $T$, as desired.
 
 
 ## Exercises
@@ -309,11 +334,32 @@ Suppose $v_1,...,v_m$ is linearly independent. Extend to a basis $v_1,...,v_m, w
 
 
 
-
 # 5B The Minimal Polynomial
 
 ### 5.19
 Every operator on a finite-dimensional nonzero complex vector space has an eigenvalue.
+
+Proof:
+
+Suppose $V$ is a finite-dimensional complex vector space of dimension $n>0$ and $T \in L(V)$. Choose $v \in V, v \neq 0$. Then
+
+$$v, Tv, T^2v, ..., T^n v$$
+
+is not linearly independent, because $dim V = n$ and this list has length $n+1$.
+
+Thus there exists a nonconstant polynomial $p$ of smalllest degree such that 
+
+$$p(T)v = 0$$
+
+By 4.12, there exists $\lambda \in C$ such that $p(\lambda)=0$. Hence there exists a polynomial $q \in P(C)$ such that 
+
+$$p(z) = (z-\lambda) q(z)$$
+
+for every $z \in C$ by 4.6. This implies (using 5.17) that 
+
+$$0 = p(T)v = (T-\lambda I) (q(T)v)$$
+
+Because $q$ has smaller degree than $p$, we know that $q(T)v \neq 0$. Thus teh equation above implies that $\lambda$ is an eigenvalue of $T$ with eigenvector $q(T)v$.
 
 
 ### 5.21 Definition: monic polynomial
@@ -322,6 +368,52 @@ A monic polynomial is a polynomial whose highest-degree coefficient equals 1.
 
 ### 5.22
 Suppose $V$ is finite-dimensional and $T \in L(V)$. Then there is a unique monic polynomial $p \in P(F)$ of smallest degree such that $p(T) = 0$. Furthermore, $deg p \leq deg V$.
+
+Proof:
+
+If $dim V = 0$, then $I$ is the zero operator on $V$ and thus we take $p$ to be the constant polynomial 1.
+
+Now use induction on $dim V$. Thus assume that $dim V > 0$ and that the desired result is true for all operators on all vector spaces of smaller dimension.
+
+Let $u \in V$ be such that $u \neq 0$. The list $u, Tu, ..., T^{dim V} u$ has length $dim V + 1$ and thus is linearly dependent. By 2.19, there is a smallest positive integer $m \leq dim V$ such that $T^m u$ is a linear combination of $u, Tu, ..., T^{m-1} u$. Thus there exist scalars $c_0, c_1,...,c_{m-1}$ such that 
+
+$$c_0 u + c_1 Tu + ... + c_{m-1} T^{m-1} u + T^m u = 0$$
+
+Define a monic polynomial $q \in P_m(F)$ by
+
+$$q(z) = c_0 + c_1 z + ... + c_{m-1} z^{m-1} + z^m$$
+
+Then $q(T)u=0$.
+
+If $k$ is a nonnegative integer, then 
+
+$$q(T)(T^k u) = T^k (q(T)u) = T^k (0) = 0$$
+
+2.19 shows that $u, Tu, ..., T^{m-1} u$ is linearly independent. Thus the equation above implies that $dim null q(T) \geq m$. Hence
+
+$$dim range q(T) = dim V - dim null q(T) \leq dim V - m$$
+
+Because $range q(T)$ is invariant under $T$ by 5.18, we can apply our induction hypothesis to the operator $T|_{range q(T)}$ on the vector space $range q(T)$. Thus there is a monic polynomial $s \in P(F)$ with 
+
+$$deg s \leq dim V - m$$
+
+and 
+
+$$s(T|_{range q(T)}) = 0$$
+
+Hence for all $v \in V$ we have 
+
+$$(sq(T)) v = (s(T) q(T)) v = s(T) (q(T)v) = 0$$
+
+because $q(T)v \in range q(T)$ and $s(T)|_{range q(T)} = s(T|_{range q(T)}) = 0$.
+
+Thus $sq$ is a monic polynomial such that $deg sq \leq dim V$ and and $(sq)(T) = 0$.
+
+The section above shows that there is a monic polynomial of degree at most $dim V$ that when applied to $T$ gives the 0 operator. 
+
+Thus there is a monic polynomial of smallest degree with this property, completing the existence part of this result.
+
+Let $p \in P(F)$ be a monic polynomial of smallest degree such that $p(T)=0$. To prove the uniqueness part of the result, suppose $r \in P(F)$ is a monic polynomial of the same degree as $p$ and $r(T) = 0$. Then $(p-r)(T) = 0$ and also $deg (p-r) < deg p$. If $p-r$ were not equal to 0, then we could divide $p-r$ by the coefficient of the highest-order term in $p-r$ to get a monic polynomial (of smaller degree than $p$) that when applied to $T$ gives the 0 operator. Thus $p-r=0$, as desired.
 
 
 ### 5.24 Definition: minimal polynomial
