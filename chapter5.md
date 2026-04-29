@@ -430,25 +430,134 @@ $$(z - \lambda_1) ... (z - \lambda_m) $$
 
 where $\lambda_1, ..., \lambda_m$ is a list of all eigenvalues of $T$, possibly with repetitions.
 
+Proof:
+
+Let $p$ be the minimal of $T$.
+
+First suppose $\lambda \in F$ is a zero of $p$. Then $p$ can be written in the form 
+
+$$p(z) = (z-\lambda) q(z)$$
+
+where $q$ is a monic polynomial with coefficients in $F$. Because $p(T)=0$, we have 
+
+$$0 = ((T-\lambda)q(T))v = (T-\lambda) (q(T)v)$$
+
+for all $v \in V$. Because $deg q = (deg p) - 1$ and $p$ is the minimal polynomial of $T$, there exists at least one vector $v \in V$ such that $q(T)v \neq 0$. The equation above implies that $\lambda$ is an eigenvalue of $T$, as desired.
+
+To prove that every eigenvalue of $T$ is a zero of $p$, now suppose $\lambda \in F$ is an eigenvalue of $T$. Thus there exists $v \in V, v \neq 0$ such that $Tv = \lambda v$. Repeated applications of $T$ to both sides of this equation show that $T^k v = \lambda^k v$ for every nonnegative integer $k$. Applying $p(T)$, we have
+
+$$p(T)v = (a_0 I + a_1 T + ... + T^m)v =(a_0 v + a_1 \lambda v + ... + \lambda^m v) = p(\lambda) v$$
+
+Because $p$ is the minimal polynomial of $T$, we have $p(T)v=0$. Hence the equation above implies that $p(\lambda)=0$. Thus $\lambda$ is a zero of $p$, as desired.
+
 
 ### 5.29
 Suppose $V$ is finite-dimensional, $T \in L(V)$, and $q \in P(F)$. Then $q(T) = 0$ if and only if $q$ is a polynomial multiple of the minimal polynomial of $T$.
+
+Proof:
+
+Let $p$ denote the minimal polynomial of $T$.
+
+$\Rightarrow$
+First suppose $q(T)=0$. By the division algorithm for polynomials 4.9, there exist polynomials $s, r \in P(F)$ such that $q = ps + r$ and $deg r < deg p$. We have
+
+$$0 = q(T) = p(T)s(T) + r(T) = r(T)$$
+
+The equation above implies that $r=0$ (otherwise, dividing $r$ by its highest-degree coefficient would produce a monic polynomial that when applied to $T$ gives 0; this polynomial would have a smaller degree than the minimal polynomial, which would be a contradiction). 
+
+Thus we have $q = ps$. Hence $q$ is a polynomial multiple of $p$, as desired.
+
+$\Leftarrow$
+Suppose $q$ is a polynomial multiple of $p$. Thus there exists a polynomial $s \in P(F)$ such that $q = ps$. We have 
+
+$$q(T) = p(T)s(T) = 0 s(T) = 0$$
+
+as desired.
 
 
 ### 5.31
 Suppose $V$ is finite-dimensional, $T \in L(V)$, and $U$ is a subspace of $V$ that is invariant under $V$. Then the minimal polynomial of $T$ is a polynomial multiple of the minimal polynomial of $T|_{U}$.
 
+Proof:
+
+Suppose $p$ is the minimal polynomial of $T$. Thus $p(T)v = 0$ for all $v \in V$. 
+
+In particular, $p(T)u = 0$ for all $u \in U$.
+
+Thus $p(T|_U) = 0$. Now 5.29, applied to the operator $T|_U$ in place of $T$, implies that $p$ is a polynomial multiple of the minimal polynomial of $T|_U$.
+
 
 ### 5.32
 Suppose $V$ is finite-dimensional and $T \in L(V)$. Then $T$ is not invertible if and only if the constant term of the minimal polynomial of $T$ is 0.
+
+Proof:
+
+Suppose $T \in L(V)$ and $p$ is the minimal polynomial of $T$. Then 
+
+$T$ is not invertible $\iff$ 0 is an eigenvalue of $T$ 
+
+$\iff$ 0 is a zero of $p$ $\iff$ the constant term of $p$ is 0
 
 
 ### 5.33
 Suppose $F = R$ and $V$ is finite-dimensional. Suppose also that $T \in L(V)$ and $b, c \in R$ with $b^2 < 4c$. Then $dim null (T^2 + bT + cI)$ is an even number.
 
+Proof:
+
+Recall that $null (T^2 + bT + cI)$ is invariant under $T$ by 5.18. By replacing $V$ with $null (T^2 + bT + cI)$ and replacing $T$ with $T$ restricted to $null (T^2 + bT + cI)$, we can assume that $T^2 + bT + cI = 0$; we now need to prove that $dim V$ is even.
+
+Suppose $\lambda \in R$ and $v \in V$ are such that $Tv = \lambda v$. Then 
+
+$$0 = (T^2 + bT + cI)v = (\lambda^2 + b \lambda + c) v = ((\lambda+b/2)^2 + c - b^2/4)v$$
+
+Since $b^2 < 4c$, the term in the parentheses above is a positive number. Thus the equation above implies that $v=0$. Hence we have show that $T$ has no eigenvectors.
+
+Let $U$ be a subspace of $V$ that is invariant under $T$, and has the largest dimension among all subspaces of $V that are invariant under $T$ and have even dimension. 
+
+If $U=V$, then we are done; otherwise assume there exists $w \in V$ such that $w \notin U$.
+
+Let $W = span(w, Tw)$. Then $W$ is invariant under $T$ because $Tw \in W$, $T(Tw) = -bTw - cw$. Furthermore, $dim W = 2$, because otherwise $w$ would be an eigenvalue of $T$.
+
+$$dim (U+W) = dim U + dim W - dim (U \cap W) = dim U + 2$$
+
+where $U \cap W = \\{0\\}$, because otherwise $U \cap W$ would be a one-dimensional subspace of $V$ that is invariant under $T$, which is impossible because $T$ has no eigenvectors.
+
+Because $U+W$ is invariant under $T$, the equation above shows that there exists a subspace of $V$ invariant under $T$ of even dimension larger than $dim U$. Thus the assumption that $U \neq V$ was incorrect. Hence $V$ has even dimension.
+
 
 ### 5.34
 Every operator on an odd-dimensional vector space has an eigenvalue.
+
+Proof:
+
+Suppose $F=R$ and $V$ is finite-dimensional. Let $dim V = n$, and suppose $n$ is an odd number. Let $T \in L(V)$.
+
+We will use induction on $n$ in steps of size two to show that $T$ has an eigenvalue. 
+
+To get started, note that the desired result holds if $dim V = 1$ because then every nonzero vector in $V$ is an eigenvector of $T$.
+
+Now suppose $n \geq 3$ and the desired result holds for all operators on all odd-dimensional vector spaces of dimension less than $n$.
+
+Let $p$ denote the minimal polynomial of $T$. 
+
+If $p$ is a polynomial multiple of $(x-\lambda)$ for some $\lambda \in R$, then $\lambda$ is an eigenvalue of $T$ by 5.27, and we are done
+
+Thus we can assume that there exist $b, c \in R$ such that $b^2 < 4c$ and $p$ is a polynomial multiple of $x^2 + bx + c$ (4.16).
+
+There exists a monic polynomial $q \in P(R)$ such that $p(x) = q(x) (x^2 + bx + c)$ for all $x \in R$. Now 
+
+$$0 = p(T) = (q(T))(T^2 + bT + cI)$$
+
+which means $q(T) = 0$ on $range (T^2 + bT + cI)$. Because $deg q < deg p$ and $p$ is the minimal polynomial of $T, this implies that $range (T^2 + bT + cI) \neq V$.
+
+By 3.21, 
+
+$$dim V = dim null (T^2 + bT + cI) + dim range (T^2 + bT + cI)$$
+
+Because $dim V$ is odd by hypothesis, and $dim null (T^2 + bT + cI)$ is even by 5.33, the equation above shows that $dim range (T^2 + bT + cI)$ is odd.
+
+Hence $range (T^2 + bT + cI)$ is a subspace of $V$ that is invariant under $T$ by 5.18, and has odd dimension less than $dim V$. Our induction hypothesis now implies that $T$ restricted to $range (T^2 + bT + cI)$ has an eigenvalue, which means that $T$ has an eigenvalue.
+
 
 
 ## Exercises
