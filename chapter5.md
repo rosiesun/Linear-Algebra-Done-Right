@@ -562,6 +562,21 @@ Hence $range (T^2 + bT + cI)$ is a subspace of $V$ that is invariant under $T$ b
 
 ## Exercises
 
+#### (10) Suppose $V is finite-dimensional, $T \in L(V)$, and $v \in V$. Prove that $span(v, Tv, ..., T^m v) = span(v, Tv, ..., T^{dim V -1} v)$ for all integers $m \geq dim V - 1$.
+
+Let $dim V = n$. If $m = n-1$ then the case is trivial. Consider $m = n$.
+
+$(v, Tv, ..., T^m v)$ is a list of length $n+1$, so they are linearly dependent in $V$. By 2.19, there exists a $k \in \\{1,...,n\\}$ such that 
+
+$$T^k v= a_0 v + a_1 Tv + ... + a_{k-1} T^{k-1}v$$. 
+
+Applying $T$ to both sides, we have 
+
+$$T T^k v = a_0 Tv + a_1 T^2 v + ... + a_{k-1} T^k v \in span(v, Tv, ..., T^{k-1}v)$$
+
+Similarly, for $m=n+1, n+2$, we can find such a $k$ and applying $T$ repeatedly shows that the span does not grow.
+
+Therefore $span(v, Tv, ..., T^m v) = span(v, Tv, ..., T^{dim V -1} v)$ for all integers $m \geq dim V - 1$. 
 
 
 
