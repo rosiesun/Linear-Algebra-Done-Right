@@ -590,19 +590,130 @@ Suppose $T \in L(V)$ and $v_1,...,v_n$ is a basis of $V$. Then the following are
 - $span (v_1,...,v_k)$ is invariant under $T$ for each $k = 1,...,n$.
 - $Tv_k \in span (v_1,...,v_k)$ for each $k = 1,...,n$
 
+Proof:
+
+First suppose (a) holds. To prove that (b) holds, suppose $k \in \\{1,..,n\\}$. 
+
+If $j \in \\{1,...,n\\}$, then $Tv_j \in span(v_1,...,v_j)$ because the matrix of $T$ with respect to $v_1,...,v_n$ is upper triangular. 
+
+Because $span(v_1,...,v_j) \subseteq span(v_1,...,v_k)$ if $j \leq k$, we see that $Tv_j \in span(v_1,...,v_k)$ for each $j \in \\{1,...,k\\}$. THus $span(v_1,...,v_k)$ is invariant under $T$, completing the proof that (a) implies (b).
+
+Now suppose (b) holds, so $span(v_1,...,v_k)$ is invariant under $T$ for each $k=1,...,n$. In particular, $Tv_k \in span(v_1,...,v_k)$ for each $k=1,...,n$. Thus (b) implies (c).
+
+Now suppose (c) holds, so $Tv_k \in span(v_1,...,v_k)$ for each $k=1,...,n$. This means that when writing each $Tv_k$ as a linear combination of the basis vectors $v_1,...,v_n$, we need to use only the vectors $v_1,...,v_k$. Hence all entries under the diagonal of $M(T)$ are 0. Thus $M(T)$ is an upper-triangular matrix, copmleting the proof (c) implies (a).
+
+
 ### 5.40
 Suppose $T \in L(V)$ and $V$ has a basis with respect to which $T$ has an upper triangular matrix with diagonal entries $\lambda_1,...,\lambda_n$. Then
 
 $$(T - \lambda_1 I) ... (T - \lambda_n I) = 0$$
 
+Proof:
+
+Let $v_1,...,v_n$ denote a basis of $V$ with respect to which $T$ has an upper-triangular matrix with diagonal entries $\lambda_1,...,\lambda_n$. Then $Tv_1 = \lambda_1 v_1$, which means that $(T - \lambda_1 I) v_1 = 0$, which implies that 
+
+$$(T-\lambda_1 I) ... (T - \lambda_m I) v_1 = 0$$
+
+for $m = 1,...,n$, using the commutativity of each $T - \lambda_j I$ with each $T - \lambda_k I$. 
+
+Note that 
+
+$$(T - \lambda_2 I) v_2 = Tv_2 - \lambda_2 v_2 = a_1 v_1 + \lambda_2 v_2 - \lambda_2 v_2 \in span(v_1)$$
+
+Thus 
+
+$$(T - \lambda_1 I) (T - \lambda_2 I) v_2 = 0$$
+
+by the previous paragraph, which implies that 
+
+$$(T - \lambda_1 I) ... (T - \lambda_m I) v_2 = 0$$
+
+for $m=2,...,n$, using the commutativity of each $T - \lambda_j I$ with each $T - \lambda_k I$. 
+
+Note that 
+
+$$(T - \lambda_3 I) v_3 = T v_3 - \lambda_3 v_3 = a_1 v_1 + a_2 v_2 + \lambda_3 v_3 - \lambda_3 v_3 \in span(v_1, v_2)$$
+
+Thus by the previous paragraph, 
+
+$$(T-\lambda_1 I)(T-\lambda_2 I)(T-\lambda_3 I)v_3 = 0$$
+
+which implies that 
+
+$$(T-\lambda_1 I)... (T-\lambda_m I)v_3 = 0$$
+
+for $m=3,...,n$, using the commutativity of each $T - \lambda_j I$ with each $T - \lambda_k I$. 
+
+Continuing this pattern, we see that $(T-\lambda_1 I)...(T-\lambda_n I)v_k = 0$ for each $k=1,...,n$. Thus $(T-\lambda_1 I)...(T-\lambda_n I)$ is the 0 operator because it is 0 on each vector in a basis of $V$.
+
+
 ### 5.41
 Suppose $T \in L(V)$ has an upper-triangular matrix with respect to some basis of $V$. Then the eigenvalues of $T$ are precisely the entries on the diagonal of that upper-triangular matrix.
+
+Proof:
+
+Suppose $v_1,...,v_n$ is a basis of $V$ with respect to which $T$ has an upper-triangular matrix. Because $Tv_1 = \lambda_1 v_1$, we see that $\lambda_1$ is an eigenvalue of $T$.
+
+Suppose $k = \{{2,...,n\}}$. Then $(T-\lambda_k I) v_k \in span(v_1,...,v_{k-1})$. Thus $T-\lambda_k I$ maps $span(v_1,...,v_k)$ into $span(v_1,...,v_{k-1})$. 
+
+Beacuse $dim span(v_1,...,v_k) = k$ and $dim span(v_1,...,v_{k-1}) = k-1$, this implies that $T-\lambda_k I$ restricted to $span(v_1,...,v_k)$ is not injective, by 3.22. Thus there exists $v \in span(v_1,...,v_k)$ such that $v \neq 0, (T-\lambda_k I)v=0$. Thus $\lambda_k$ is an eigenvalue of $T$. Hence we have shown that every entry on the diagonal of $M(T)$ is an eigenvalue of $T$.
+
+To prove $T$ has no other eigenvalues, let $q$ be the polynomial defined by $q(z)=(z-\lambda_1)...(z-\lambda_n)$. Then $q(T)=0$ by 5.40. Hence $q$ is a polynomial multiple of the minimal polynomial of $T$, by 5.29. Thus every zero of the minimal polynomial of $T$ is a zero of $q$. Because the zeros of the minimal polynomial of $T$ are the eigenvalues of $T$, by 5.27, this implies that every eigenvalue of $T$ is a zero of $q$. Hence the eigenvalues of $T$ are all contained in the list $\lambda_1,...,\lambda_n$.
+
 
 ### 5.44
 Suppose $V$ is finite-dimensional and $T \in L(V)$. Then $T$ has an upper-triangular matrix with respect to some basis of $V$ if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some $\lambda_1,...,\lambda_m \in F$.
 
+Proof:
+
+$\Rightarrow$
+First suppose $T$ has an upper-triangular matrix with respect to some basis of $V$. Let $\alpha_1,...,\alpha_n$ denote the diagonal entries of that matrix. 
+
+Define a polynomial $q \in P(F)$ by $q(z) = (z-\alpha_1)...(z-\alpha_n)$. Then $q(T)=0$, by 5.40. Hence $q$ is a polynomial multiple of the minimal polynomial of $T$, by 5.29. Thus the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some $\lambda_1,...,\lambda_m \in F$ with $\\{\lambda_1,...,\lambda_m\\} \subseteq \\{\alpha_1,...,\alpha_n\\}$.
+
+$\Leftarrow$
+Suppose the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some $\lambda_1,...,\lambda_m \in F$. 
+
+We will use induction on m.
+
+To get started, if $m=1$, then $z-\lambda_1$ is the minimal polynomial of $T$, which implies that $T=\lambda_1 I$, which implies that the matrix of $T$ with respect to any basis of $V$ is upper triangular.
+
+Now suppose $m > 1$, and the desired result holds for all smaller positive integers.
+
+Let $U = range (T - \lambda_m I)$. Then $U$ is invariant under $T$ by 5.18. Thus $T|_U$ is an operator on $U$.
+
+If $u \in U$, then $(T-\lambda_m I)v = u$ for some $v \in V$ and
+
+$$(T-\lambda_1 I)...(T-\lambda_{m-1})u = (T-\lambda_1 I)...(T-\lambda_m I)v = 0$$
+
+Hence $(z-\lambda_1)...(z-\lambda_{m-1})$ is a polynomial multiple of the minimal polynomial of $T|_U$, by 5.29. Thus the minimal polynomial of $T|_U$ is the product of at most $m-1$ terms of the form $z-\lambda_k$.
+
+By our induction hypothesis, there is a basis $u_1,...,u_M$ of $U$ with respect to which $T|_U$ has an upper-triangular matrix.
+
+Thus for each $k \in \\{1,...,M\\}$, we have, using 5.39,
+
+$$Tu_k = (T|_U) u_k \in span (u_1,...,u_k)$$
+
+Extend $u_1,...,u_M$ to a basis $u_1,...,u_M, v_1,...,v_N$ of $V$. 
+
+If $k \in \\{1,...,N\\}$, then 
+
+$$Tv_k = (T - \lambda_m I) v_k + \lambda_m v_k$$
+
+The definition of $U$ shows that $(T-\lambda_m I)v_k \in U = span(u_1,...,u_M)$. Thus the equation above shows that 
+
+$$Tv_k \in span(u_1,...,u_M,v_1,...,v_k)$$
+
+We conclude, using 5.39, that $T$ has an upper-triangular matrix with respect to the basis $u_1,...,u_M, v_1,...,v_N$ of $V$.
+
+
 ### 5.47
 Suppose $V$ is a finite-dimensional complex vector space and $T \in L(V)$. Then $T$ has an upper-triangular matrix with respect to some basis of $V$.
+
+Proof:
+
+The desired result follows from 5.44 and the second version of the fundamental theorem of algebra (4.13).
+
 
 
 
