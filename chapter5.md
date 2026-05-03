@@ -741,19 +741,101 @@ is a direct sum. Furthermore, if $V$ is finite-dimensional, then
 
 $$dim E(\lambda_1, T) + ... + dim E (\lambda_m, T) \leq dim V$$.
 
+Proof:
+
+To show that $E(\lambda_1, T) + ... + E(\lambda_m, T)$ is a direct sum, suppose $v_1 + ... + v_m = 0$, where each $v_k$ is in $E(\lambda_k, T)$. Because eigenvectors corresponding to distinct eigenvalues are linearly independent, by 5.11, this implies that each $v_k$ equals 0. Thus $E(\lambda_1, T) + ... + E(\lambda_m, T)$ is a direct sum by 1.45, as desired.
+
+Now suppose $V$ is finite-dimensional. Then 
+
+$$dim E(\lambda_1, T) + ... + dim E(\lambda_m, T) = dim (E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)) \leq dim V$$
+
+where the first line follows from 3.94 and the second line follows from 2.37.
+
+
 ### 5.55
 Suppose $V$ is finite-dimensional and $T \in L(V)$. Let $\lambda_1,...,\lambda_m$ denote the distinct eigenvalues of $T$. Then the following are equivalent:
 
-- $T$ is diagonalizable.
-- $V$ has a basis consisting of eigenvectors of $T$.
-- $V = E(\lambda_1,T) \oplus ... \oplus E(\lambda_m, T)$
-- $dim V = dim E(\lambda_1, T) + ... + dim E(\lambda_m, T)$.
+(a) $T$ is diagonalizable.
+(b) $V$ has a basis consisting of eigenvectors of $T$.
+(c) $V = E(\lambda_1,T) \oplus ... \oplus E(\lambda_m, T)$
+(d) $dim V = dim E(\lambda_1, T) + ... + dim E(\lambda_m, T)$.
+
+Proof:
+
+An operator $T \in L(V)$ has a diagonal matrix with respect to a basis $v_1,...,v_n$ of $V$ if and only if $Tv_k = \lambda_k v_k$ for each $k$. Thus (a) and (b) are equivalent.
+
+Suppose (b) holds; thus $V$ has a basis consisting of eigenvectors of $T$. Hence every vector in $V$ is a linear combination of eigenvectors of $T$, which implies that $V = E(\lambda_1, T) + ... + E(\lambda_m, T)$. 5.54 shows that (c) holds, proving that (b) implies (c).
+
+That (c) implies (d) follows immediately from 3.94.
+
+Suppose (d) holds; thus $dim V = dim E(\lambda_1, T) + ... + E(\lambda_m, T)$. Choose a basis of each $E(\lambda_k, T)$; put all these bases together to form a list $v_1,...,v_n$ of eigenvectors of $T$, where $dim V = n$.
+
+To show that this list is linearly independent, suppose $a_1 v_1 + ... + a_n v_n = 0$, where $a_1,...,a_n \in F$. 
+
+For each $k = 1,...,m$, let $u_k$ denote the sum of all the terms $a_j v_j$ such that $v_j \in E(\lambda_k, T)$. Thus each $u_k$ is in $E(\lambda_k, T)$, and $u_1+...+u_m=0$. 
+
+Because eigenvectors corresponding to distinct eigenvalues are linearly independent (5.11), this implies that each $u_k$ equals 0. 
+
+Because each $u_k$ is a sum of terms $a_j v_j$ where the $v_j$'s were chosen to be a basis of $E(\lambda_k, T)$, this implies that all $a_j$'s equal 0. Thus $v_1,...,v_n$ is linearly independent and hence is a basis of $V$ by 2.38. 
+
+Thus (d) implies (b), completing the proof.
+
 
 ### 5.58
 Suppose $V$ is finite-dimensional and $T \in L(V)$ has $dim V$ distinct eigenvalues. Then $T$ is diagonalizable.
 
+Proof:
+
+Suppose $T$ has distinct eigenvalues $\lambda_1,...,\lambda_{dim V}$. For each $k$, let $v_k \in V$ be an eigenvector corresponding to the eigenvalue $\lambda_k$. Because eigenvectors corresponding to distinct eigenvalues are linearly independent (5.11), $v_1,...,v_{dim V}$ is linearly independent.
+
+A linearly independent list of $dim V$ vectors in $V$ is a basis of $V$ (2.38); thus $v_1,...,v_{dim V}$ is a basis of $V$. With respect to this basis consisting of eigenvectors, $T$ has a diagonal matrix.
+
+
 ### 5.62
 Suppose $V$ is finite-dimensional and $T \in L(V)$. Then $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m \in F$.
+
+$\Rightarrow$
+Suppose $T$ has diagonalizable. Thus there is a basis $v_1,...,v_n$ of $V$ consisting of eigenvectors of $T$.
+
+Let $\lambda_1,...,\lambda_m$ be the distinct eigenvalues of $T$. Then for each $v_j$, there exists $\lambda_k$ with $(T-\lambda_k I) v_j = 0$. Thus 
+
+$$(T-\lambda_1 I)...(T-\lambda_m I) v_j = 0$$
+
+which implies that the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$.
+
+$\Leftarrow$
+Suppose the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m \in F$. Thus
+
+$$(T-\lambda_1 I)...(T-\lambda_m I)=0$$
+
+We will prove that $T$ is diagonalizable by induction on $m$.
+
+To get started, suppose $m=1$. Then $T-\lambda_1 I = 0$, which means that $T$ is a scalar multiple of the identity operator, which implies that $T$ is diagonalizable.
+
+Now suppose $m>1$ and the desired result holds for all smaller values of $m$.
+
+The subspace $range (T-\lambda_m I)$ is invariant under $T$ (5.18). Thus $T$ restricted to $range (T-\lambda_m I)$ is an operator on $range (T-\lambda_m I)$.
+
+If $u \in range(T-\lambda_m I)$, then $(T-\lambda_m I)v = u$ for some $v \in V$, and 
+
+$$(T-\lambda_1 I)...(T-\lambda_{m-1} I)u = (T-\lambda_1 I)...(T-\lambda_m I)v = 0$$
+
+Hence $(z-\lambda_1)...(z-\lambda_{m-1})$ is a polynomial multiple of the minimal polynomial of $T$ restricted to $range (T-\lambda_m I)$ by 5.29. 
+
+Thus by our induction hypothesis, there is a basis of $range (T-\lambda_m I)$ consisting of eigenvectors of $T$.
+
+Suppose $u \in range(T-\lambda_m I) \cap null (T-\lambda_m I)$. Then $Tu = \lambda_m u$. 
+
+$$0 = (T-\lambda_1 I)...(T-\lambda_{m-1} I) u = (\lambda_m - \lambda_1)...(\lambda_m - \lambda_{m-1}) u$$
+
+Because $\lambda_1,...,\lambda_m$ are distinct, the equation above implies that $u=0$. Hence $range (T-\lambda_m I) \cap null (T-\lambda_m I) = \\{0\\}$.
+
+Thus $range (T-\lambda_m I) + null (T-\lambda_m I)$ is a direct sum by 1.46, whose dimension is $dim V$, by 3.94 and 3.21. Hence $range (T-\lambda_m I) \oplus null (T-\lambda_m I) = V$.
+
+Every nonzero vector in $null (T-\lambda_m I)$ is an eigenvector of $T$ with eigenvalue $\lambda_m$.
+
+Earlier in this proof we saw that there is a basis of $range (T-\lambda_m I)$ consisting of eigenvectors of $T$. Adjoining to that basis a basis of $null (T-\lambda_m I)$ gives a basis of $V$ consisting of eigenvectors of $T$. The matrix of $T$ with respect to this basis is a diagonal matrix, as desired.
+
 
 ### 5.65
 Suppose $T \in L(V)$ is diagonalizable and $U$ is a subspace of $V$ that is invariant under $T$. Then $T|_U$ is a diagonalizable operator on $U$.
@@ -767,6 +849,23 @@ where $j \in \\{1,...,n\\}$.
 
 ### 5.67
 Suppose $T \in L(V)$ and $v_1,...,v_n$ is a basis of $V$. Then each eigenvalue of $T$ is contained in some Gershgorin disk of $T$ with respect to the basis $v_1,...,v_n$.
+
+
+## Exercises
+
+#### (1)
+
+#### (2)
+
+#### (3)
+
+#### (4)
+
+#### (5)
+
+#### (6)
+
+#### (8)
 
 
 # 5E Commuting Operators
