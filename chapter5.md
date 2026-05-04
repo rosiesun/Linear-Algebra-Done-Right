@@ -853,17 +853,174 @@ Suppose $T \in L(V)$ and $v_1,...,v_n$ is a basis of $V$. Then each eigenvalue o
 
 ## Exercises
 
-#### (1)
+#### (1) Suppose $V$ is a finite-dimensional complex vector space and $T \in L(V)$.
 
-#### (2)
+(a) Prove that if $T^4 = I$, then $T$ is diagonalizable.
 
-#### (3)
+If $T^4 = I$, we have $T^4 - I = 0$. Then $p(z)=(z^4 - 1)$ is a polynomial multiple of the minimal polynomial of $T$ by 5.29. We can factor $p(z) = (z + i) (z - i) (z + 1) (z - 1)$. By 5.62, $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m$. Since $p$ is a polynomial multiple of the minimal polynomial, the minimal polynomial satisfies the condition of 5.62. Thus $T$ is diagonalizable. 
 
-#### (4)
+(b) Prove that if $T^4 = T$, then $T$ is diagonalizable.
 
-#### (5)
+If $T^4 = T$, we have $T^4 - T = 0$. Then $p(z)=(z^4 - z)$ is a polynomial multiple of the minimal polynomial of $T$ by 5.29. We can factor $p(z) = (z - 0) (z - 1) (z- ( (-1+i \sqrt{3})/2)) (z- ( (-1-i \sqrt{3})/2))$. By 5.62, $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m$. Since $p$ is a polynomial multiple of the minimal polynomial, the minimal polynomial satisfies the condition of 5.62. Thus $T$ is diagonalizable. 
 
-#### (6)
+(c) Give an example of an operator $T \in L(C^2)$ such that $T^4 = T^2$ and $T$ is not diagonalizable.
+
+$$
+\begin{pmatrix} 
+0 & 1 \\ 0 & 0 
+\end{pmatrix}
+$$
+
+We verify that $T^4 = T^2 = 0$. 
+
+0 is the only eigenvalue, and $E(0, T) = span(0,1)$. $dim E(0,T) < dim V = 2$. Hence $T$ is not diagonalizable by 5.55.
+
+
+#### (2) Suppose $T \in L(V)$ has a diagonal matrix $A$ with respect to some basis of $V$. Prove that if $\lambda \in F$, then $\lambda$ appears on the diagonal of $A$ precisely $dim E(\lambda, T)$ times.
+
+Suppose $dim V = n$. Let $v_1,...,v_n$ be the basis with respect to which $T$ has a diagonal matrix. 
+
+$Tv_i = \lambda_i v_i, i=1,...,n$, where $\lambda_i$'s are the diagonal entries of $A$.
+
+Let $\lambda \in F$. Let $I_\lambda = \\{i: \lambda_i = \lambda \\}$ be the indices where $\lambda$ appears on the diagonal. Let $d$ be the number of times $\lambda$ appears.
+
+We want to show that $\\{v_i: i \in I_\lambda \\}$ is a basis of $E(\lambda, T)$.
+
+Since $Tv_i = \lambda v_i, i \in I_\lambda$, $v_i \in E(\lambda, T)$.
+
+$v_i, i \in I_\lambda$'s are linearly independent because they are subset of the basis $v_1,...,v_n$.
+
+Let $u \in E(\lambda, T)$. $u = a_1 v_1 + ... + a_n v_n$ for some $a_1,...,a_n$.
+
+$(T-\lambda I) u = 0 = \sum_{i=1}^n a_i (\lambda_i - \lambda) v_i, i \notin I_\lambda$.
+
+For $i \in I_\lambda$, $\lambda_i = \lambda$ so those terms disappear. 
+
+For $i \notin I_\lambda$, $\lambda_i \neq \lambda$, which forces $a_i = 0$. 
+
+So $u = \sum_{i \in I_\lambda} a_i v_i$. Therefore $v_i: i \in I_\lambda$ spans $E(\lambda, T)$.
+
+Thus $\\{v_i: i \in I_\lambda \\}$ is a basis of $E(\lambda, T)$. 
+
+$dim E(\lambda, T) = d$, and $\lambda$ appears on the diagonal $d$ times.
+
+
+#### (3) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that if the operator $T$ is diagonalizable, then $V = null T \oplus range T$.
+Let $v_1,...,v_n$ be a basis of eigenvectors with respect to which $T$ has a diagonal matrix. Let $\lambda_1,...,\lambda_n$ be the corresponding diagonal entries (eigenvalues with possible repetitions). 
+
+Let $u \in null T \cap range T$. Then $Tu = 0$ and $Tv = u$ for some $v \in V$. 
+
+We can write $u = a_1 v_1 + ... + a_n v_n$ for some $a_1,...,a_n \in F$, $v = b_1 v_1 + ... + b_n v_n$ for some $b_1,...,b_n \in F$. We have
+
+$$Tu = a_1 \lambda_1 v_1 + ... a_n \lambda_n v_n = 0$$
+
+$$Tv = b_1 \lambda_1 v_1 + ... b_n \lambda_n v_n = a_1 v_1 + ... a_n v_n$$
+
+Thus $b_i \lambda_i = a_i = 0, i=1,...,n$.
+
+Assume towards contradiction that $a_i \neq 0$ for some $i \in \\{1,...,n\\}$. 
+
+Since $a_i \lambda_i = 0$, $\lambda_i = 0$. Then $b_i \lambda_i = 0$. But $b_i \lambda_i = a_i \neq 0$, which is a contradiction.
+
+Therefore $a_1=...=a_n = 0$, so $u = 0$, and $null T \cap range T = \\{0\\}$.
+
+Thus $null T + range T$ is a direct sum by 1.46. 
+
+$$dim (null T \oplus range T) = dim null T + dim range T = dim V$$ 
+
+by 3.94 and 3.21. Therefore $V = null T + range T$ by 2.39.
+
+
+#### (4) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that the following are equivalent. (a) $V = null T \oplus range T$. (b) $V = null T + range T$. (c) $null T \cap range T = \\{0\\}$.
+
+If (a) holds, then (c) holds from 1.46.
+
+Suppose (c) holds. We have 
+
+$$dim (null T + range T) = dim null T + dim range T - dim (null T \cap range T) = dim null T + dim range T - 0 = dim V$$
+
+Therefore $null T + range T = V$ by 2.39, and (b) holds.
+
+Suppose (b) holds. Since $V = null T + range T$, 
+
+$$dim V = dim (null T + range T) = dim null T + dim range T - dim (null T \cap range T) = dim V - dim (null T \cap range T)$$
+
+Therefore $dim (null T \cap range T) = 0$, and (c) holds. (b) and (c) together implies that (a) holds.
+
+
+#### (5) Suppose $V$ is a finite-dimensional complex vector space and $T \in L(V)$. Prove that $T$ is diagonalizable if and only if $V = null (T-\lambda I) \oplus range (T-\lambda I)$ for every $\lambda \in C$.
+$\Rightarrow$
+Suppose $T$ is diagonalizable. Then $V = E(\lambda_1,T) \oplus ... \oplus E(\lambda_m,T)$ for some distinct eigenvalues $\lambda_1,...,\lambda_m$.
+
+Let $\lambda \in C$.
+
+Case 1: $\lambda$ is not an eigenvalue. 
+
+Then $T-\lambda I$ is invertible, by 5.7. Therefore $range (T-\lambda I) = V$ and $null (T-\lambda I) = \\{0\\}$, and $V = null (T-\lambda I) \oplus range (T-\lambda I)$.
+
+Case 2: $\lambda$ is an eigenvalue.
+
+Suppose $\lambda = \lambda_i, i \in \\{1,...,m\\}$. Then $null (T-\lambda I) = E(\lambda_i, T)$. 
+
+Let $w \in range (T-\lambda I)$. Then $(T-\lambda I)v=w$, for some $v \in V$. Since $V = E(\lambda_1,T) \oplus ... \oplus E(\lambda_m,T)$, we can write $v = e_1 + ... + e_m, e_k \in E(\lambda_k,T), k=1,...,m$. 
+
+$$w = (T-\lambda I)(e_1 + ... + e_m) = \sum_k^m (\lambda_k - \lambda) e_k = sum_{k \neq i} (\lambda_k - \lambda) e_k$$
+
+Therefore $w$ is the direct sum of all the other eigenspaces except $E(\lambda_i, T)$. We have 
+
+$$range (T-\lambda I) = E(\lambda_1,T) \oplus ... \oplus E(\lambda_{i-1}, T) \oplus E(\lambda_{i+1}, T) \oplus ... \oplus E(\lambda_m, T)$$
+
+By 5.54 and 5.55, $null (T-\lambda I) \oplus range (T-\lambda I) = V$.
+
+$\Leftarrow$
+Suppose $V = null (T-\lambda I) \oplus range (T-\lambda I)$ for every $\lambda \in C$. We want to show that $T$ is diagonalizable.
+
+We use induction on $dim V$.
+
+Base case: $dim V = 0$. $V = \\{0\\}$, so $T$ is trivially diagonalizable.
+
+Inductive step: suppose $dim V > 0$ and the desired result holds for all vector spaces of smaller dimension.
+
+$T$ has at least one eigenvalue by 5.19. Let $\lambda_1$ be an eigenvalue of $T$.
+
+Let $W = range (T-\lambda_1 I)$. By hypothesis, 
+
+$$V = null (T-\lambda_1 I) \oplus W = E(lambda_1, T) \oplus W$$
+
+First note that $W$ is invariant under $T$ by 5.18.
+
+Next note that $\lambda_1$ is not an eigenvalue of $W$ due to the disjointness of $null (T-\lambda_1 I)$ and $W$.
+
+Let $\mu \in C$. We want to show that $W = null (T|_W - \mu I) \oplus range (T|_W - \mu I)$.
+
+First note that $T|_W - \mu I: W \rightarrow W$. If $w \in W$, $(T-\lambda_1)u = w$ for some $u \in V$. 
+
+$$(T|_W - \mu I)w = (T|_W - \mu I)(T-\lambda_1 I)u = (T-\lambda_1 I)(T|_W - \mu I)u = (T-\lambda_1 I)(Tu - \mu u) $$
+
+$null (T|_W - \mu I)$ and $range (T|_W - \mu I)$ are disjoint due to the disjointness of $null (T - \mu I)$ and $range (T - \mu I)$.
+
+Therefore $W = null (T|_W - \mu I) \oplus range (T|_W - \mu I)$ from the disjointness and 3.21.
+
+Thus $T|_W$ is diagonalizable by the inductive hypothesis.
+
+$T|_W = E(\lambda_2,T) \oplus ... \oplus E(\lambda_m,T)$ for some distinct $\lambda_2,...,\lambda_m \in F$.
+
+Therefore $V = E(\lambda_1, T) \oplus E(\lambda_2, T) \oplus ... \oplus E(\lambda_m, T)$. By 5.55 $T$ is diagonalizable.
+
+
+#### (6) Suppose $T \in L(F^5)$ and $dim E(8,T) = 4$. Prove that $T-2I$ or $T-6I$ is invertible.
+Assume towards contradiction that both $T-2I$ and $T-6I$ are not invertible. 
+
+Then $T-2I$ and $T-6I$ are not injective, by 3.65. $null (T-2I) \neq \\{0\\}, null (T-6I) \neq \\{0\\}$. There exists some $u, w \in V$ such that $(T-2I)u = 0$ and $(T-6I)w = 0$. Therefore $u$ is an eigenvector corresponding to eigenvalue 2, and $w$ is an eigenvector corresponding to eigenvalue 6. 
+
+$$dim E(2,T) + dim E(6,T) + dim E(8,T) = \leq dim V = 5$$
+
+by 5.54 and
+
+$$dim E(2,T) + dim E(6,T) + dim E(8,T) \geq 1 + 1 + 4 = 6$$
+
+which is a contradiction. Thus we conclude $T-2I$ or $T-6I$ is invertible.
+
 
 #### (8)
 
