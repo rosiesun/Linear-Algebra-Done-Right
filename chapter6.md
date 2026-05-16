@@ -283,6 +283,55 @@ $$\phi(u) = <u, v>$$
 for every $u \in V$.
 
 
+## Exercises
+
+#### (1) Suppose $e_1,...,e_m$ is a list of vectors in $V$ such that $||a_1 e_1 + ... + a_m e_m||^2 = |a_1|^2 + ... + |a_m|^2$ for all $a_1,...,a_m \in F$. Show that $e_1,...,e_m$ is an orthonormal list.
+
+First we want to show that the norms of each $e_i, i=1,...,m$ is 1.
+
+Let $a_k=1$, $a_i = 0, i \neq k$. Then 
+
+$$||a_k e_k||^2 = |a_k|^2 ||e_k||^2 = |a_k|^2$$
+
+Therefore $||e_k|| = 1$. Since $k$ was arbitrary, all the $e_i, i=1,...,m$ has unit norm.
+
+Next we want to show that the inner product of $e_k, e_l$ is 0 for $k \neq l$.
+
+Let $a_k, a_l \in F$, $a_i = 0, i \neq k, i \neq l$. Then 
+
+$$||a_k e_k a_l e_l||^2 = |a_k|^2 + |a_l|^2 + a_k \overline{a_l} <e_k, e_l> + a_l \overline{a_k} <e_l, e_k> = |a_k|^2 + |a_l|^2$$
+
+Thus 
+
+$$a_k \overline{a_l} <e_k, e_l> + a_l \overline{a_k} <e_l, e_k> = 0$$ 
+
+for all $a_k, a_l \in F$.
+
+Consider $a_k = a_l = 1$. Then 
+
+$$<e_k, e_l> + <e_l, e_k> = <e_k, e_l> + \overline{<e_k, e_l>} = 2 Re(<e_k, e_l>) = 0$$ 
+
+Thus $Re(<e_k, e_l>) = 0$.
+
+Consider $a_k = i, a_l = 1$. Then
+
+$$i <e_k, e_l> + (-i) \overline{<e_k, e_l>} = i (<e_k, e_l> - \overline{<e_k,e_l>}) = i 2Im(<e_k, e_l>)$$
+
+Thus $Im(<e_k, e_l>) = 0$.
+
+Therefore $<e_k, e_l> = 0$ for $k \neq l$.
+
+
+#### (2)
+(a)
+
+(b)
+
+#### (3) Suppose $e_1,...,e_m$ is an orthonormal list in $V$ and $v \in V$. Prove that $||v||^2 = |<v,e_1>|^2 + ... + |<v,e_m>|^2 \iff v \in span (e_1,...,e_m)$.
+
+#### (4) Suppose $n$ is a positive integer. Prove ethat $1/\sqrt{2\pi}, cos x / sqrt{\pi}$
+
+
 
 # 6C Orthogonal Complements and Minimization Problems
 
