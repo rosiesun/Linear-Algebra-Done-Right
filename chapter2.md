@@ -17,6 +17,29 @@ The span of the empty list () is defined to be $\\{0\\}$
 ### 2.6 Span is the smallest containing subspace
 The span of a list of vectors in $V$ is the smallest subspace of $V$ containing all vectors in the list.
 
+Proof: 
+
+Suppose $v_1,...,v_m$ is a list of vectors in $V$.
+
+First we show that $span(v_1,...,v_m)$ is a subspace of $V$. The additive identity is in $span(v_1,...,v_m)$ because 
+
+$$0 = 0v_1 + ... + 0v_m$$ 
+
+Also, $span(v_1,...,v_m)$ is closed under addition because 
+
+$$(a_1 v_1 + ... + a_m v_m) + (c_1 v_1 + ... + c_m v_m) = (a_1 + c_1) v_1 + ... + (a_m + c_m) v_m$$
+
+Furthermore, $span(v_1,...,v_m)$ is closed under scalar multiplication because
+
+$$\lambda (a_1 v_1 + ... + a_m v_m) = \lambda a_1 v_1 + ... + \lambda a_m v_m$$
+
+Thus $span(v_1,...,v_m)$ is a subspace of $V$ by 1.34.
+
+Each $v_k$ is a linear combination of $v_1,...,v_m$ (to show this, set $a_k=1$ and let the other $a$'s equal 0). Thus $span(v_1,...,v_m)$ contains each $v_k$. 
+
+Conversely, because subspaces are closed under addition and scalar multiplication, every subspace of $V$ that contains each $v_k$ contains $span(v_1,...,v_m)$. Thus $span(v_1,...,v_m)$ is the smallest subspace of $V$ containing all the vectors $v_1,...,v_m$.
+
+
 ### 2.7 Definition: spans
 If $span(v_1,...,v_m)$ equals $V$, we say that the list $v_1,...,v_m$ spans V.
 
@@ -35,11 +58,53 @@ A list of vectors in $V$ is called linearly dependent if it is not linearly inde
 ### 2.19 Linear dependence lemma
 Suppose $v_1,...,v_m$ is a linearly dependent list in $V$. Then there exists $k \in \\{1,2,...,m\\}$ such that $v_k \in span(v_1,...,v_{k-1})$. Furthermore, if $k$ satisfies the condition above and the kth term is removed from $v_1,...,v_m$, then the span of the remaining list equals $span(v_1,...,v_m)$.
 
+Proof:
+
+Because the list $v_1,...,v_m$ is linearly dependent, there exist numbers $a_1,...,a_m \in F$, not all 0, such that $a_1 v_1 + ... + a_m v_m = 0$. 
+
+Let $k$ be the largest element of $\\{1,...,m\\}$ such that $a_k \neq 0$. Then 
+
+$$v_k = - \frac{a_1}{a_k} v_1 - ... - \frac{a_{k-1}}{a_k} v_{k-1}$$
+
+which proves that $v_k \in span(v_1,...,v_{k-1})$ as desired.
+
+Now suppose $k$ is an element of $\\{1,...,m\\}$ such that $v_k \in span(v_1,...,v_{k-1})$. Let $b_1,...,b_{k-1} \in F$ be such that
+
+$$v_k = b_1 v_1 + ... + b_{k-1} v_{k-1}$$
+
+Suppose $u \in span(v_1,...,v_m)$. Then there exist $c_1,...,c_m \in F$ such that 
+
+$$u = c_1 v_1 + ... + c_m v_m = c_1 v_1 + ... + c_k (b_1 v_1 + ... + b_{k-1} v_{k-1}) + ... + c_m v_m$$
+
+We can replace $v_k$ with $b_1 v_1 + ... + b_{k-1} v_{k-1}$, which shows that $u$ is in the span of the list obtained by removing the kth term from $v_1,...,v_m$. Thus removing the kth term of the list $v_1,...,v_m$ does not hcnage the span of the list.
+
 ### 2.22 Length of linearly independent list $\leq$ length of spanning list.
 In a finite-dimensional vector space, the length of every linearly indpeendent list of vectors is less than or equal to the length of every spanning list of vectors.
 
+Proof:
+
+Supopse $u_1,...,u_m$ is linearly independent in $V$. Suppose also that $w_1,...,w_n$ spans $V$. We need to prove that $m \leq n$. 
+
+We do so through the process described below with $m$ steps; note that in each step we add one of the $u$'s and remove one of the $w$'s. 
+
+Step 1:
+
+Let $B$ be the list $w_1,...,w_n$, which spans $V$. Adjoining $u_1$ at the beginning of this list produces a linearly dependent list (because $u_1$ can be written as a linear combination of $w_1,...,w_n$). In other words, the list $u_1,w_1,...,w_n$ is linearly dependent. 
+
+Thus by 2.19, one of the vectors in the list above is a linear combination of the previous vectors in the list. We know that $u_1 \neq 0$ because the list $u_1,...,u_m$ is linearly independent. Thus $u_1$ is not in the span of the previous vectors in the list above (because $u_1 \notin \\{0\\}$, which is the span of the empty list). Hence 2.19 implies that we can remove one of the $w$'s so that the new list $B$ of length $n$ consisting of $u_1$ and the remaining $w$'s spans $V$.
+
+Step $k$, for $k=2,...,m$
+
+The list $B$ of length $n$ from step $k-1$ spans $V$. In particular, $u_k$ is in the span of the list $B$. Thus the list of length $(n+1)$ obtained by adjoining $u_k$ to $B$, placing it just after $u_1,...,u_{k-1}$, is linearly dependent. By 2.19, one of the vectors in this list is in the span of the previous ones, and because $u_1,...,u_k$ is linearly independent, this vector cannot be one of the $u$'s. 
+
+Hence there still must be at least one remaining $w$ at this step. We can remove from our new list (after adjoining $u_k$ in the proper place) a $w$ that is a linearly combination of the previous vectors in the list, so that the new list $B$ of length $n$ consisting of $u_1,...,u_k$ and the remaining $w$'s spans $V$.
+
+After step $m$, we have added all the $u$'s and the process stops. At each step as we need a $u$ to $B$, the linear dependence lemma implies that there is some $w$ to remove. Thus there are at least as many $w$'s as $u$'s.
+
+
 ### 2.25 Finite dimensional subspaces
 Every subspace of a finite-dimensional vector space is finite-dimensional.
+
 
 
 ## Exercises
