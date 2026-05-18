@@ -11,7 +11,6 @@ Rosie Sun <br>
 - An addition on a set $V$ is a function that assigns an element $u+v \in V$ to each pair of elements $u,v \in V$.
 - A scalar multiplication on a set $V$ is a function that assigns an element $\lambda v \in V$ to each $\lambda \in F$ and each $v \in V$.
 
-
 ### 1.20 Definition: vector space
 A vector space is a set $V$ along with an addition on $V$ and a scalar multiplcation on $V$ such that the following properties hold.
 
@@ -21,7 +20,6 @@ A vector space is a set $V$ along with an addition on $V$ and a scalar multiplca
 - additive inverse: For every $v \in V$, there exists $w \in V$ such that $v+w=0$.
 - multiplicative identity: $1v=v$ for all $v \in V$.
 - distributive properties: $a(u+v)=au+av$ and $(a+b)v=av+bv$ for all $a,b \in F$ and all $u,v \in V$.
-
 
 ### 1.26 Unique additive identity
 A vector space has a unique additive identity.
@@ -34,6 +32,7 @@ $$0' = 0' + 0 = 0 + 0' = 0$$
 
 where the first equality holds because 0 is an additive identity, the second equality comes from commutativity, and the third equality holds because 0’ is an additive identity. Thus $0'=0$ proving that $V$ has only one additive identity.
 
+
 ### 1.27 Unique additive inverse
 Every element in a vector space has a unique additive inverse.
 
@@ -44,6 +43,7 @@ Suppose $V$ is a vector space. Let $v \in V$. Suppose $w$ and $w'$ are additive 
 $$w = w + 0 = w + (v+w') = (w+v)+w' = 0 + w' = w'$$
 
 Thus $w=w'$, as desired.
+
 
 ### 1.30 The number 0 times a vector
 $0v=0$ for every $v \in V$.
@@ -56,6 +56,7 @@ $$0v = (0+0)v = 0v + 0v$$
 
 Adding the additive inverse of $0v$ to both sides gives $0 = 0v$ as desired.
 
+
 ### 1.31 A number times the vector 0
 $a0=0$ for every $a \in F$.
 
@@ -66,6 +67,7 @@ For $a \in F$, we have
 $$a0 = a(0+0) = a0 + a0$$
 
 Adding the additive inverse of $a0$ to both sides gives $0 = a0$, as desired.
+
 
 ### 1.32 The number -1 times a vector
 $(-1)v = -v$ for every $v \in V$.
@@ -239,6 +241,7 @@ $V_1+...+V_m$ contains the additive identity 0 and is closed under addition and 
 
 The subspaces $V_1, ..., V_m$ are all contained in $V_1 + ... + V_m$ (to see this, consider sums $v_1+...+v_m$ where all except one of the $v_k$'s are 0). Conversely, every subspace of $V$ containing $V_1,...,V_m$ contains $V_1+...+V_m$ (because subspaces must contain all finite sums of their elements). Thus $V_1 + ... +V_m$ is the smallest subspace of $V$ containing $V_1,...,V_m$.
 
+
 ### 1.41 Definition: Direct sum $\oplus$
 Suppose $V_1, ..., V_m$ are subspaces of $V$. The sum $V_1 + ... V_m$ is called a direct sum if each element of $V_1 + ... V_m$ can be written in only one way as a sum $v_1 + ... + v_m$, where each $v_k \in V_k$.
 
@@ -260,6 +263,7 @@ To show that this representation is unique, suppose we also have $v = u_1 + ... 
 $$0 = (v_1 - u_1) + ... + (v_m - u_m)$$
 
 Because $v_1 - u_1 \in V_1, ..., v_m - u_m \in V_m$, the equation above implies that each $v_k - u_k$ equals 0. Thus $v_1 = u_1, ..., v_m = u_m$, as desired.
+
 
 ### 1.46 Direct sum of two subspaces
 Suppose $U$ and $W$ are subspaces of V. Then $U + W$ is a direct sum $\iff U \cap W = \\{0\\}$.
