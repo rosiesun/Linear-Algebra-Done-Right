@@ -105,6 +105,20 @@ After step $m$, we have added all the $u$'s and the process stops. At each step 
 ### 2.25 Finite dimensional subspaces
 Every subspace of a finite-dimensional vector space is finite-dimensional.
 
+Proof:
+
+Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. We need to prove that $U$ is finite-dimensional. We do this through the following multistep construction.
+
+Step 1
+
+If $U = \\{0\\}$, then $U$ is finite-dimensional and we are done. If $U \neq \\{0\\}$, then choose a nonzero vector $u_1 \in U$.
+
+Step $k$
+
+If $U = span(u_1,...,u_{k-1})$, then $U$ is finite-dimensional and we are done. If $U \notin span(u_1,...,u_{k-1})$, then choose a vector $u_k \in U$ such that $u_k \notin span(v_1,...,v_{k-1})$. 
+
+After each step, as long as the process continues, we have constructed a list of vectors such that no vector in this list is in the span of the previous vectors. Thus after each step we have constructed a linearly independent list, by 2.19. This linearly independent list cannot be longer than any spanning list of $V$ by 2.22. Thus the process eventually terminates, which means that $U$ is finite-dimensional.
+
 
 
 ## Exercises
@@ -293,25 +307,102 @@ Thus $v_1,...,v_m$ is linearly independent.
 
 
 
+
 # 2B Bases
 
 ### 2.26 Definition: basis
 A basis of $V$ is a list of vectors in $V$ that is linearly independent and spans $V$.
 
 ### 2.28 Criterion for basis
-A list $v_1,...,v_n$ of vectors in $V$ is a basis of $V$ if and only if every $v \in V$ can be written uniquely in the form $v=a_1 v_1 + ... a_n v_n$, where $a_1,...,a_n \in F$.
+A list $v_1,...,v_n$ of vectors in $V$ is a basis of $V$ if and only if every $v \in V$ can be written uniquely in the form 
+
+$$(2.29) v=a_1 v_1 + ... a_n v_n$$
+
+where $a_1,...,a_n \in F$.
+
+Proof:
+
+$\Rightarrow$
+First suppose that $v_1,...,v_n$ is a basis of $V$. Let $v \in V$. 
+
+Because $v_1,...,v_n$ spans $V$, there exist $a_1,...,a_n \in F$ such that 2.29 holds. To show that the representation in 2.29 is unique, suppose $c_1,...,c_n$ are scalars such that we also have $v = c_1 v_1 + ... + c_n v_n$. Subtracting the last equation from 2.29, we get
+
+$$0 = (a_1 - c_1) v_1 + ... + (a_n - c_n) v_n$$
+
+This implies that each $a_k - c_k = 0$ (because $v_1,...,v_n$ is linearly independent). Hence $a_1 = c_1, ..., a_n = c_n$. We have the desired uniqueness, completing the proof in one direction.
+
+$\Leftarrow$
+Suppose every $v \in V$ can be written uniquely in the form given by 2.29. 
+
+This implies that the list $v_1,...,v_n$ spans $V$. To show that $v_1,...,v_n$ is linearly independent, suppose $a_1,...,a_n \in F$ are such that $0 = a_1 v_1 + ... + a_n v_n$. The uniqueness of the representation 2.29 (taking $v=0$) now implies that $a_1=...=a_n=0$. Thus $v_1,...,v_n$ is linearly independent and hence is a basis of $V$.
+
 
 ### 2.30 Every spanning list contains a basis
 Every spanning list in a vector space can be reduced to a basis of the vector space.
 
+Proof:
+
+Suppose $v_1,...,v_n$ spans $V$. We want to remove some of the vectors from $v_1,...,v_n$ so that the remaining vectors form a basis of $V$. We do this through the multistep process described below.
+
+Start with $B$ equal to the list $v_1,...,v_n$. 
+
+Step 1
+
+If $v_1 = 0$, then delete $v_1$ from $B$. If $v_1 \neq 0$, then leave $B$ unchanged.
+
+Step $k$
+
+If $v_k$ is in $span(v_1,...,v_{k-1})$, then delete $v_k$ from the list $B$. If $v_k$ is not in $span(v_1,...,v_{k-1})$, then leave $B$ unchanged.
+
+Stop the process after step $n$, getting a list $B$. This list $B$ spans $V$ because our original list spanned $V$ and we have discarded only vectors that were already in the span of the previous vectors. The process ensures that no vector in $B$ is in the span of the previous ones. Thus $B$ is linearly independent, by 2.19. Hence $B$ is a basis of $V$.
+
+
 ### 2.31 Basis of finite-dimensional vector space
 Every finite-dimensional vector space has a basis.
+
+Proof:
+
+By definition, a finite-dimensional vector space has a spanning list. By 2.30, each spanning list can be reduced to a basis.
+
 
 ### 2.32 Every linearly independent list extends to a basis
 Every linearly independent list of vectors in a finite-dimensional vector space can be extended to a basis of the vector space.
 
+Proof:
+
+Suppose $u_1,...,u_m$ is linearly independent in a finite-dimensional vector space $V$. Let $w_1,...,w_n$ be a list of vectors in $V$ that spans $V$. Thus the list $w_1,...,w_m, v_1,...,v_n$ spans $V$. Applying the procedure of the proof of 2.30 to reduce this list to a basis of $V$ produces a basis consisting of the vectors $u_1,...,u_m$ and some of the $w$'s (none of the $u$'s get deleted in this procedure because $u_1,...,u_m$ is linearly independent). 
+
+
 ### 2.33 Every subspace of $V$ is part of a direct sum equal to $V$
 Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Then there is a subspace $W$ of $V$ such that $V=U \oplus W$.
+
+Proof:
+
+Because $V$ is finite-dimensional, so is $U$ by 2.25. Thus there is a basis $u_1,...,u_m$ of $U$ by 2.31. $u_1,...,u_m$ is a linearly independent list of vectors in $V$. Hence this list can be extended to a basis $u_1,...,u_m, w_1,...,w_n$ of $V by 2.32. Let $W = span(w_1,...,w_n)$. 
+
+To prove that $V = U \oplus W$, by 1.46 we need to show that $V = U + W$ and $U \cap W = \\{0\\}$. 
+
+To prove that $V = U + W$, suppose $v \in V$. Then, because the list $u_1,...,u_m, w_1,...,w_n$ spans $V$, there exist $a_1,...,a_m, b_1,...,b_n \in F$ such that 
+
+$$v = a_1 u_1 + ... + a_m u_m + b_1 w_1 + ... + b_n w_n$$
+
+We have $v = u + w$, where $u = a_1 u_1 + ... + a_m u_m \in U, w = b_1 w_1 + ... + b_n w_n \in W$. Thus $v \in U + W$, completing the proof that $V = U + W$.
+
+To show that $U \cap W = \\{0\\}$, suppose $v \in U \cap W$. Then there exist scalars $a_1,...,a_m, b_1,...,b_n \in F$ such that 
+
+$$v = a_1 u_1 + ... + a_m u_m = b_1 w_1 + ... + b_n w_n$$
+
+Thus 
+
+$$a_1 u_1 + ... + a_m u_m - b_1 w_1 - ... - b_n w_n = 0$$
+
+Because $u_1,...,u_m, w_1,...,w_n$ is linearly independent, this implies that 
+
+$$a_1=...=a_m=b_1=...=b_n=0$$
+
+Thus $v = 0$, completing the proof that $U \cap W = \\{0\\}$.
+
+
 
 ## Exercises
 
@@ -325,15 +416,20 @@ $(3,1,0,0,0), (0,0,7,1,0), (0,0,0,0,1), (0,1,0,0,0), (0,0,0,1,0)$.
 (c) Find a subspace $W$ of $R^5$ such that $R^5 = U \oplus W$. <br>
 $W = span((0,1,0,0,0), (0,0,0,1,0))$.
 
-#### (4)
-(a) Let $U$ be the subspace of $C^5$ defined by $U=\\{(z_1,z_2,z_3,z_4,z_5) \in C^5: 6z_1=z_2, z_3+2z_4+3z_5 = 0 \\}$. Find a basis of $U$. <br>
-$(1,6,0,0,0), (0,0,-2,1,0), (0,0,-3,0,1)$.
 
-(b) Extend the basis in (a) to a basis in $C^5$. <br>
-$(0,1,0,0,0), (0,0,1,0,0)$.
+#### (4) 
+(a) Let $U$ be the subspace of $C^5$ defined by $U=\\{(z_1,z_2,z_3,z_4,z_5) \in C^5: 6z_1=z_2, z_3+2z_4+3z_5 = 0 \\}$. Find a basis of $U$.
 
-(c) Find a subspace $W$ of $C^5$ such that $C^5 = U \oplus W$. <br>
-$W=span((0,1,0,0,0), (0,0,1,0,0))$.
+$$(1,6,0,0,0), (0,0,-2,1,0), (0,0,-3,0,1)$$
+
+(b) Extend the basis in (a) to a basis in $C^5$.
+
+$$(0,1,0,0,0), (0,0,1,0,0)$$
+
+(c) Find a subspace $W$ of $C^5$ such that $C^5 = U \oplus W$.
+
+$$W=span((0,1,0,0,0), (0,0,1,0,0))$$
+
 
 #### (5) Suppose $V$ is a finite-dimensional and $U, W$ are subspaces of $V$ such that $V=U+W$. Prove that there exists a basis of $V$ consisting of vectors in $U \cup W$.
 Let $u_1,...,u_m$ be a basis of $U$ and $w_1,...,w_n$ be a basis of $W$. Let $v \in V$. 
@@ -342,17 +438,23 @@ Since $V=U+W$, $v=u+w, u \in U, w \in W$.
 
 Then we can rewrite $v$ as 
 
-$$v=u+w = a_1 u_1 + ... + a_m u_m + b_1 w_1 + ... + b_n w_n$$. 
+$$v=u+w = a_1 u_1 + ... + a_m u_m + b_1 w_1 + ... + b_n w_n$$
 
 Thus $v \in span(u_1,...,u_m, w_1,...,w_n)$, and $V = span(u_1,...,u_m, w_1,...,w_n)$. 
 
 By construction $u_1,...,u_m,w_1,...,w_n \in U \cup W$. 
 
-By 2.30, every spanning list of a vector space contains a basis of the vector space. Thus there exists a basis of $V$ contained in $\\{u_1,...,u_m,w_1,...,w_n\\} \subset U \cup W$.
+By 2.30, every spanning list of a vector space contains a basis of the vector space. 
+
+Thus there exists a basis of $V$ contained in $\\{u_1,...,u_m,w_1,...,w_n\\} \subset U \cup W$.
 
 
 #### (8) Prove or give a counterexample: If $v_1,v_2,v_3,v_4$ is a basis of $V$ and $U$ is a subspace of $V$ such that $v_1, v_2 \in U$, and $v_3 \notin U$, $v_4 \notin U$, then $v_1,v_2$ is a basis of $U$.
-Counterexample: Let $V=R^4$ with $v_1,v_2,v_3,v_4$ being the standard basis. Let $U = span(v_1, v_2, v_3+v_4)$. Then $v_1,v_2$ does not span $U$.
+Counterexample: 
+
+Let $V=R^4$ with $v_1,v_2,v_3,v_4$ being the standard basis. 
+
+Let $U = span(v_1, v_2, v_3+v_4)$. Then $v_1,v_2$ does not span $U$.
 
 
 #### (10) Suppose $U$ and $W$ are subspaces of $V$ such that $V=U \oplus W$. Suppose also that $u_1,...,u_m$ is a basis of $U$ and $w_1,...,w_n$ is a basis of $W$. Prove that $u_1,...,u_m,w_1,...,w_n$ is a basis of $V$.
@@ -362,13 +464,13 @@ Given that $V$ is a direct sum of $U$ and $W$, we have $v=u+w, u \in U, w \in W$
 
 We can rewrite with basis vectors 
 
-$$v = (a_1 u_1 + ... + a_m u_m) + (b_1 w_1 + ... + b_n w_n), a_1,...,a_m,b_1,...,b_n \in F$$. 
+$$v = (a_1 u_1 + ... + a_m u_m) + (b_1 w_1 + ... + b_n w_n), a_1,...,a_m,b_1,...,b_n \in F$$
 
 Then $v \in span(u_1,...,u_m,w_1,...,w_n)$. Thus $u_1, ..., u_m, w_1, ..., w_n$ spans $V$.
 
-Suppose $v=0$. Then by 1.45 we have $u=w=0$. 
+Suppose $v=0$. Then by 1.45 we have $u=w=0$. Rewriting, we have 
 
-Rewriting, we have $$0=(a_1 u_1 + ... + a_m u_m) + (b_1 w_1 + ... + b_n w_n)$$. 
+$$0=(a_1 u_1 + ... + a_m u_m) + (b_1 w_1 + ... + b_n w_n)$$
 
 By 2.15, $u=0$ implies that $a_1=...=a_m=0$ and $w=0$ implies $b_1=...=b_n=0$. 
 
@@ -378,10 +480,13 @@ By 2.26 we conclude $u_1,...,u_m,w_1,...,w_n$ is a basis of $V$.
 
 
 
+
 # 2C Dimension
 
 ### 2.34 Basis length does not depend on basis
 Any two bases of a finite-dimensional vector space have the same length.
+
+Proof:
 
 ### 2.35 Definition: dimension
 The dimension of a finite-dimensional vector space is the length of any basis of the vector space. The dimension of a finite-dimensional vector space is denoted by $dim V$.
@@ -389,17 +494,28 @@ The dimension of a finite-dimensional vector space is the length of any basis of
 ### 2.37 Dimension of a subspace
 If $V$ is finite-dimensional and $U$ is a subspace of $V$, then $dim U \leq dim V$.
 
+Proof:
+
 ### 2.38 Linearly independent list of the right length is a basis
 Suppose $V$ is finite-dimensional. Then every linearly independent list of vectors in $V$ of length $dim V$ is a basis of $V$.
+
+Proof:
 
 ### 2.39 Subspace of full dimension equals the whole space
 Suppose that $V$ is finite-dimensional and $U$ is a subspace of $V$ such that $dim U = dim V$. THen $U = V$.
 
+Proof:
+
 ### 2.42 Spanning list of the right length is a basis
 Suppose $V$ is finite-dimensional. Then every list of vectors in $V$ that spans $V$ and has the length $dim V$ is a basis of $V$.
 
+Proof:
+
 ### 2.43 Dimension of a sum
 If $V_1$ and $V_2$ are subspaces of a finite-dimensional vector space, then $dim (V_1+V_2) = dim V_1 + dim V_2 - dim(v_1 \cap V_2)$.
+
+Proof:
+
 
 
 ## Exercises
