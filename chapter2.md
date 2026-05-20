@@ -488,6 +488,9 @@ Any two bases of a finite-dimensional vector space have the same length.
 
 Proof:
 
+Suppose $V$ is finite-dimensional. Let $B_1$ and $B_2$ be two bases of $V$. Then $B_1$ is linearly independent in $V$ and $B_2$ spans $V$, so the length of $B_1$ is at most the length of $B_2$ by 2.22. Interchanging the roles of $B_1$ and $B_2$, we also see that the length of $B_2$ is at most the length of $B_1$. Thus the length of $B_1$ equals the length of $B_2$, as desired.
+
+
 ### 2.35 Definition: dimension
 The dimension of a finite-dimensional vector space is the length of any basis of the vector space. The dimension of a finite-dimensional vector space is denoted by $dim V$.
 
@@ -496,26 +499,55 @@ If $V$ is finite-dimensional and $U$ is a subspace of $V$, then $dim U \leq dim 
 
 Proof:
 
+Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Think of a basis of $U$ as a linearly independent list in $V, and think of a basis of $V$ as a spanning list in $V$. Now use 2.22 to conclude that $dim U \leq dim V$.
+
+
 ### 2.38 Linearly independent list of the right length is a basis
 Suppose $V$ is finite-dimensional. Then every linearly independent list of vectors in $V$ of length $dim V$ is a basis of $V$.
 
 Proof:
+
+Suppose $dim V = n$ and $v_1,...,v_n$ is linearly independent in $V$. The list $v_1,...,v_n$ can be extended to a basis of $V$ by 2.32. However, every basis of $V$ has length $n$, so in this case the extension is the trivial one, meaning that no elements are adjoined to $v_1,...,v_n$. Thus $v_1,...,v_n$ is a basis of $V$, as desired.
+
 
 ### 2.39 Subspace of full dimension equals the whole space
 Suppose that $V$ is finite-dimensional and $U$ is a subspace of $V$ such that $dim U = dim V$. THen $U = V$.
 
 Proof:
 
+Let $u_1,...,u_n$ be a basis of $U$. Thus $dim U = n$, and by hypothesis we also have $dim V = n$. Thus $u_1,...,u_n$ is a linearly independent list of vectors in $V$ (because it is a basis of $U$) of length $dim V$. From 2.38, we see that $u_1,...,u_n$ is a basis of $V$. In particular every vector in $V$ is a linear combination of $u_1,...,u_n$. Thus $U = V$.
+
+
 ### 2.42 Spanning list of the right length is a basis
 Suppose $V$ is finite-dimensional. Then every list of vectors in $V$ that spans $V$ and has the length $dim V$ is a basis of $V$.
 
 Proof:
+
+Suppose $dim V = n$ and $v_1,...,v_n$ spans $V$. The list $v_1,...,v_n$ can be reduced to a basis of $V$ by 2.30. However, every basis of $V$ has length $n$, so in this case the reduction is the trivial one, meaning that no elements are deleted from $v_1,...,v_n$. Thus $v_1,...,v_n$ is a basis of $V$, as desired.
+
 
 ### 2.43 Dimension of a sum
 If $V_1$ and $V_2$ are subspaces of a finite-dimensional vector space, then $dim (V_1+V_2) = dim V_1 + dim V_2 - dim(v_1 \cap V_2)$.
 
 Proof:
 
+Let $v_1,...,v_m$ be a basis of $V_1 \cap V_2$; thus $dim (V_1 \cap V_2) = m$. 
+
+Because $v_1,...,v_m$ is a basis of $V_1 \cap V_2$, it is linearly independent in $V_1$. Hence this list can be extended to a basis $v_1,...,v_m, u_1,...,u_j$ of $V_1$ by 2.32. Thus $dim V_1 = m + j$.
+
+Also extend $v_1,...,v_m$ to a basis $v_1,...,v_m, w_1,...,w_k$ of $V_2$; thus $dim V_2 = m + k$.
+
+We will show that 
+
+$$(2.44) v_1,...,v_m, u_1,...,u_j,w_1,...,w_k$$ 
+
+is a basis of $V_1+V_2$. This will complete the proof, because then we will have 
+
+$$dim (V_1 + V_2) = m + j + k = (m+j)+(m+k)-m = dim V_1 + dim V_2 - dim (V_1 \cap V_2)$$
+
+The list 2.44 is contained in $V_1 \cup V_2$ and thus is contained in $V_1 + V_2$. The span of this list contains $V_1$ and contains $V_2$ and hence is equal to $V_1+V_2$. Thus to show that 2.44 is a basis of $V_1+V_2$ we only need to show that it is linearly independent.
+
+To prove that 2.44 is linearly independent
 
 
 ## Exercises
