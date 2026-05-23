@@ -547,7 +547,24 @@ $$dim (V_1 + V_2) = m + j + k = (m+j)+(m+k)-m = dim V_1 + dim V_2 - dim (V_1 \ca
 
 The list 2.44 is contained in $V_1 \cup V_2$ and thus is contained in $V_1 + V_2$. The span of this list contains $V_1$ and contains $V_2$ and hence is equal to $V_1+V_2$. Thus to show that 2.44 is a basis of $V_1+V_2$ we only need to show that it is linearly independent.
 
-To prove that 2.44 is linearly independent
+To prove that 2.44 is linearly independent, suppose 
+
+$$a_1 v_1 + ... + a_m v_m + b_1 u_1 + ... + b_j u_j + c_1 w_1 + ... + c_k w_k = 0$$
+
+where all the $a$'s, $b$'s, $c$'s are scalars. We need to prove that all the $a$'s, $b$'s, $c$'s equal 0. The equation above can be rewritten as
+
+$$(2.45) c_1 w_1 + ... + c_k w_k = -a_1 v_1 - ... - a_m v_m - b_1 u_1 - ... - b_j u_j$$
+
+which shows that $c_1 w_1 + ... + c_k w_k \in V_1$. All the $w$'s are in $V_2$, so this implies that $c_1 w_1 + ... + c_k w_k \in V_1 \cap V_2$. Because $v_1,...,v_m$ is a basis of $V_1 \cap V_2$, we have 
+
+$$c_1 w_1 + ... + c_k w_k = d_1 v_1 + ... + d_m v_m$$
+
+for some scalars $d_1,...,d_m$. But $v_1,...,v_m,w_1,...,w_k$ is linearly independent, so the last equation implies that all the $c$'s and $d$'s equal 0. Thus 2.45 becomes the equation 
+
+$$a_1 v_1 + ... + a_m v_m + b_1 u_1 + ... + b_j u_j = 0$$
+
+Because the list $v_1,...,v_m, u_1,...u_j$ is linearly independent, this equation implies that all the $a$'s and $b$'s are 0, completing the proof.
+
 
 
 ## Exercises
