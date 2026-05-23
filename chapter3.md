@@ -20,6 +20,33 @@ Homogeneity: $T(\lambda v) = \lambda (Tv)$ for all $\lambda in F$ and all $v \in
 ### 3.4 Linear map lemma
 Suppose $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_n \in W$. Then there exists a unique linear map $T:V \rightarrow W$ such taht $T v_k = w_k$ for each $k = 1,...,n$.
 
+Proof:
+
+First we show the existence of a linear map $T$ with the desired property. Define $T: V \rightarrow W$ by
+
+$$T(c_1 v_1 + ... + c_n v_n) = c_1 w_1 + ... + c_n w_n$$
+
+where $c_1,...,c_n$ are arbitrary elements of $F$. The list $v_1,...,v_n$ is a basis of $V$. Thus the equation above does indeed define a function $T$ from $V$ to $W$ (because each element of $V$ can be uniquely written in the form $c_1 v_1 + ... + c_n v_n$). 
+
+For each $k$, taking $c_k=1$ and the other $c$'s equal to 0 in the equation above shows that $Tv_k = w_k$.
+
+If $u,v \in V$ with $u=a_1 v_1 + ... + a_n v_n, v=c_1 v_1 + ... + c_n v_n$, then 
+
+$$T(u+v) = T((a_1 + c_1) v_1 + ... (a_n + c_n) v_n) = (a_1 + c_1) w_1 + ... + (a_n + c_n) w_n = (a_1 w_1 + ... + a_n w_n) + (c_1 w_1 + ... + c_n w_n) = Tu + Tv$$
+
+Similarly, if $\lambda \in F$ and $v = c_1 v_1 + ... + c_n v_n$, then 
+
+$$T(\lambda v) = T(\lambda c_1 v_1 + ... + \lambda c_n v_n) = \lambda c_1 w_1 + ... + \lambda c_n w_n = \lambda (c_1 w_1 + ... + c_n w_n) = \lambda Tv$$
+
+Thus $T$ is a linear map from $V$ to $W$.
+
+To prove uniqueness, now suppose that $T \in L(V,W)$ and that $Tv_k = w_k$ for each $k=1,...,n$. Let $c_1,...,c_n \in F$. Then the homogeneity of $T$ implies that $T(c_k v_k) = c_k w_k$ for each $k=1,...,n$. The additivity of $T$ now implies that 
+
+$$T(c_1 v_1 + ... + c_n v_n) = c_1 w_1 + ... + c_n w_n$$
+
+Thus $T$ is uniquely determined on $span(v_1,...,v_n)$ by the equation above. Because $v_1,...,v_n$ is a basis of $V$, this implies that $T$ is uniquely determined on $V$, as desired.
+
+
 ### 3.5 Definition: addition and scalar multiplication on $L(V,W)$
 Suppose $S, T \in L(V,W)$ and $\lambda \in F$. The sum $S+T$ and the product $\lambda T$ are the linear maps from $V$ to $W$ defined by $(S+T)(v) = Sv + Tv$ and $(\lambda T)(v) = \lambda (Tv)$ for all $v \in V$.
 
@@ -38,6 +65,15 @@ Distributive properties: $(S_1 + S_2) T = S_1 T + S_2 T$ and $S(T_1 + T_2) = ST_
 
 ### 3.10 Linear maps take 0 to 0
 Suppose $T$ is a linear map from $V$ to $W$. Then $T(0)=0$.
+
+Proof:
+
+By additivity, we have
+
+$$T(0) = T(0+0) = T(0) + T(0)$$
+
+Add the additive inverse of $T(0)$ to each side of the equation above to conclude that $T(0) = 0$.
+
 
 
 ## Exercises
@@ -245,6 +281,7 @@ Thus $DM \neq MD$.
 
 
 
+
 # 3B Null Spaces and Ranges
 
 ### 3.11 Definition: null space
@@ -253,11 +290,49 @@ For $T \in L(V,W)$, the null space of $T$, denoted by $null T$, is the subset of
 ### 3.13 The null space is a subspace
 Suppose $T \in L(V,W)$. Then $null T$ is a subspace of $V$.
 
+Proof:
+
+Because $T$ is a linear map, $T(0) = 0$ by 3.10. Thus $0 \in null T$.
+
+Suppose $u,v \in null T$. Then 
+
+$$T(u+v) = Tu + Tv = 0+0 = 0$$
+
+Hence $u+v \in null T$. Thus $null T$ is closed under addition.
+
+Suppose $u \in null T, \lambda \in F$. Then 
+
+$$T(\lambda u) = \lambda Tu = \lambda 0 = 0$$
+
+Hence $\lambda u \in null T$. Thus $null T$ is closed under scalar multiplication.
+
+We have shown that $null T$ contains 0, and is closed under addition and scalar multiplication. Thus $null T$ is a subspace of $V$ by 1.34.
+
+
 ### 3.14 Definition: injective
 A function $T:V \rightarrow W$ is called injective if $Tv = Tu$ implies $u=v$.
 
 ### 3.15
 Let $T \in L(V,W)$. Then $T$ is injective if and only if $null T = \\{0\\}$. 
+
+Proof:
+
+$\Rightarrow$
+First suppose $T$ is injective. We want to prove that $null T = \\{0\\}$. 
+
+We already know that $\\{0\\} \in null T$ by 3.10. 
+
+To prove the inclusion in the other direction, suppose $v \in null T$. Then $Tv = 0 = T(0)$. Because $T$ is injective, the equation implies that $v=0$. 
+
+Thus we can conclude that $null = \\{0\\}$, as desired.
+
+$\Leftarrow$
+Now suppose $null = \\{0\\}$. We want to prove that $T$ is injective.
+
+To do this, supopse $u,v \in V$ and $Tu = Tv$. Then $0 = Tu - Tv = T(u-v)$. Thus $u-v \in null T$, which equals $\\{0\\}$. Hence $u-v=0$, which implies that $u=v$. 
+
+Hence $T$ is injective, as desired.
+
 
 ### 3.16 Definition: range
 For $T \in L(V,W)$, the range of $T$ is the subset of $W$ consisting of those vectors that are equal to $Tv$ for some $v \in V$: $range T = \\{Tv: v \in V\\}$.
@@ -265,23 +340,90 @@ For $T \in L(V,W)$, the range of $T$ is the subset of $W$ consisting of those ve
 ### 3.18 The range is a subspace
 If $T \in L(V,W)$, then $range T$ is a subspace of $W$.
 
+Proof:
+
+Supopse $T \in L(V,W)$. Then $T(0) = 0$ by 3.10, which implies that $0 \in range T$.
+
+If $w_1,w_2 \in range T$, then there exist $v_1,v_2 \in V$ such that $Tv_1 = w_1, Tv_2 = w_2$. Thus 
+
+$$T(v_1+v_2) = Tv_1 + Tv_2 = w_1 + w_2$$
+
+Hence $w_1 + w_2 \in range T$. Thus $range T$ is closed under addition.
+
+If $w \in range T, \lambda \in F$, then there exists $v \in V$ such that $Tv = w$. Thus 
+
+$$T(\lambda v) = \lambda Tv = \lambda w$$
+
+Hence $\lambda w \in range T$. Thus $range T$ is closed under scalar multiplication.
+
+We have shown that $range T$ contains 0, and is closed under addition and scalar multiplication. Thus $range T$ is a subspace of $W$ by 1.34.
+
+
 ### 3.19 Definition: surjective
 A function $T: V \rightarrow W$ is called surjective if its range equals $W$.
 
 ### 3.21 Fundamental theorem of linear maps
 Suppose $V$ is finite-dimensional and $T \in L(V,W)$. Then $range T$ is finite-dimensional and $dim V = dim null T + dim range T$.
 
+Proof:
+
+Let $u_1,...,u_m$ be a basis of $null T$; thus $dim null T = m$. The linearly independent list $u_1,...,u_m$ can be extended to a basis $u_1,...,u_m, v_1,...,v_n$ of $V$ by 2.32. Thus $dim V = m + n$. 
+
+To complete the proof, we need to show that $range T$ is finite-dimensional and $dim range T = n$. We will do this by proving that $Tv_1,...,Tv_n$ is a basis of $range T$.
+
+Let $v \in V$. Because $u_1,...,u_m, v_1,...,v_n$ spans $V$, we can write 
+
+$$v = a_1 u_1 + ... + a_m u_m + b_1 v_1 + ... + b_n v_n$$
+
+where the $a$'s and $b$'s are in $F$. Applying $T$ to both sides of the equation, we get
+
+$$Tv = b_1 Tv_1 + ... + b_n Tv_n$$
+
+where the terms of the form $Tu_k$ disappeared because each $u_k$ is in $null T$. The last equation implies that the list $Tv_1,...,Tv_n$ spans $range T$. In particular, $range T$ is finite-dimensional.
+
+To show $Tv_1,...,Tv_n$ is linearly independent, suppose $c_1,...,c_n \in F$ and
+
+$$c_1 Tv_1 + ... + c_n Tv_n = 0$$
+
+Then $T(c_1 v_1 + ... + c_n v_n) = 0$. Hence $c_1 v_1 + ... + c_n v_n \in null T$. 
+
+Because $u_1,...,u_m$ spans $null T$, we can write 
+
+$$c_1 v_1 + ... + c_n v_n = d_1 u_1 + ... + d_m u_m$$
+
+where the $d$'s are in $F$. This equation implies that all the $c$'s and $d$'s are 0 (because $u_1,...,u_m, v_1,...,v_n$ is linearly independent). Thus $Tv_1,...,Tv_n$ is linearly independent and hence is a basis of $range T$, as desired.
+
+
 ### 3.22 Linear map to a lower-dimensional space is not injective
 Suppose $V$ and $W$ are finite-dimensional vector spaces such that $dim V > dim W$. Then no linear map from $V$ to $W$ is injective.
 
+Proof:
+
+Let $T \in L(V,W)$. Then 
+
+$$dim null T = dim V - dim range T \geq dim V - dim W > 0$$
+
+where the first equality comes from the fundamental theorem of linear maps (3.21) and the second inequality comes from 2.37. The inequality above states that $dim null T > 0$. This means that $null T$ contains vectors other than 0. Thus $T$ is not injective by 3.15.
+
+
 ### 3.24 Linear map to a higher-dimensional space is not surjective
 Suppose $V$ and $W$ are finite-dimensional vector spaces such that $dim V < dim W$. Then no linear map from $V$ to $W$ is surjective.
+
+Proof:
+
+Let $T \in L(V,W)$. Then 
+
+$$dim range T = dim V - dim null T \leq dim V < dim W$$
+
+where the first equality above comes from the fundamental theorem of linear maps (3.21). The inequality above states that $dim range T < dim W$. This means that $range T$ cannot equal $W$. Thus $T$ is not surjective.
+
 
 ### 3.26 Homogeneous system of linear equations
 A homogeneous system of linear equations with more variables than equations has nonzero solutions.
 
 ### 3.28 System of linear equations with more equations than variables
 A system of linear equations with more equations than variables has no solution for some choice of the constant terms.
+
 
 
 ## Exercises
@@ -620,8 +762,11 @@ Therefore $v-au \in null \phi$, and $V = null \phi + \\{au: a \in F\\}$.
 Thus $V = null \phi \oplus \\{au: a \in F\\}$.
 
 
+
+
 # 3C Matrices
 
+### 3.29 Definition: matrix
 
 
 
@@ -636,14 +781,26 @@ Thus $V = null \phi \oplus \\{au: a \in F\\}$.
 ### 3.60 Inverse is unique
 An invertible linear map has a unique inverse.
 
+Proof:
+
+
 ### 3.63 invertibility $iff$ injectivity and surjectivity
 A linear map is invertible if and only if it is injective and surjective.
+
+Proof:
+
 
 ### 3.65
 Suppose that $V$ and $W$ are finite-dimensional vector spaces, $dim V = dim W$, and $T \in L(V,W)$. Then $T$ is invertible $\iff T$ is injective $\iff T$ is surjective.
 
+Proof:
+
+
 ### 3.68
 Suppose $V$ and $W$ are finite-dimensional vector spaces of the same dimension, $S \in L(W,V)$ and $T \in L(V,W)$. Then $ST=I$ if and only if $TS=I$.
+
+Proof:
+
 
 ### 3.69 Definition: isomorphism, isomorphic
 - An isomorphism is an invertible linear map.
@@ -652,11 +809,18 @@ Suppose $V$ and $W$ are finite-dimensional vector spaces of the same dimension, 
 ### 3.70
 Two finite-dimensional vector spaces over $F$ are isomorhpic if and only if they have the same dimension.
 
+Proof:
+
+
 ### 3.71
 Suppose $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_m$ is a basis of $W$. Then $M$ is an isomorphism between and $F^{m,n}$
 
+Proof:
+
+
 ### 3.72
 Suppose $V$ and $W$ are finite-dimensional. Then $L(V,W)$ is finite-dimensional and $dim L(V,W) = (dim V) (dim W)$.
+
 
 
 ## Exercises
@@ -822,3 +986,8 @@ Therefore we conclude $S$ is injective.
 Let $v \in V$. Since $Tv_1,...,Tv_m$ spans $V$, we can write $v = a_1 Tv_1 + ... + a_m Tv_m$ for some $a_1,...,a_m$. Then $v \in range T$. Therefore $T$ is surjective. By 3.65, $T$ is injective and invertible. 
 
 Since $V = span(Tv_1,...,Tv_m)$, $V = T(span(v_1,...,v_m))$ by linearity. Because $T$ is invertible, $span(v_1,...,v_m) = V$. 
+
+
+# 3E Duality
+
+
