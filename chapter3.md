@@ -766,8 +766,42 @@ Thus $V = null \phi \oplus \\{au: a \in F\\}$.
 
 # 3C Matrices
 
-### 3.29 Definition: matrix
+We know that if $v_1,...,v_n$ is a basis of $V$ and $T: V \rightarrow W$ is linear, then the values of $Tv_1,...,Tv_n$ determine the values of $T$ on arbitrary vectors in $V$ - see the linear map lemma 3.4. As we will soon see, matrices provided an efficient method of recording the values of the $Tv_k$'s in terms of a basis of $W$.
 
+### 3.29 Definition: matrix
+Supppose $m, n$ are nonnegative integers. An m-by-n matrix $A$ is a rectangular array of elements of $F$ with m rows and n columns:
+
+$$
+\begin{pmatrix}
+A_{1,1} & ... & A_{1,n} \\
+... & ... & ... \\
+A_{m,1} & ... & A_{m,n}
+\end{pmatrix}
+$$
+
+The notation $A_{j,k}$ denotes the entry on row j, column k of $A$.
+
+### 3.31 Definition: matrix of a linear map
+Suppose $T \in L(V,W)$ and $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_m$ is a basis of $W$. The matrix of $T$ with respect to these bases is the m-by-n matrix $M(T)$ whose entries $A_{j,k}$ are defined by
+
+$$Tv_k = A_{1,k} w_1 + ... + A_{m,k} w_m$$
+
+If the bases $v_1,...,v_n$ and $w_1,...,w_m$ are not clear from the context, then the notation $M(T, (v_1,...,v_n), (w_1,...,w_m))$ is used.
+
+### 3.35 
+Suppose $S, T \in L(V,W)$. Then $M(S+T) = M(S) + M(T)$.
+
+### 3.38
+Suppose $\lambda \in F$ and $T \in L(V,W)$. Then $M(\lambda T) = \lambda M(T)$.
+
+### 3.39 Notation
+For m and n positive integers, the set of all m-by-n matrices with entries in $F$ is denoted by $F^{m,n}$. 
+
+### 3.40
+Suppose m and n are positive integers. With addition and scalar multiplication defined as above, $F^{m,n}$ is a vector space of dimension mn. 
+
+### 3.43
+If $T \in L(U,V)$ and $S \in L(V,W)$, then $M(ST) = M(S)M(T)$.
 
 
 
@@ -783,11 +817,54 @@ An invertible linear map has a unique inverse.
 
 Proof:
 
+Suppose $T \in L(V,W)$ is invertible and $S_1, S_2$ are inverses of $T$. Then 
+
+$$S_1 = S_1 I = S_1 (T S_2) = (S_1 T) S_2 = I S_2 = S_2$$
+
+Thus $S_1 = S_2$.
+
+
+### 3.61 Notation
+If $T$ is invertible, then its inverse is denoted by $T^{-1}$. In other words, if $T \in L(V,W)$ is invertible, then $T^{-1}$ is the unique element of $L(W,V)$ such that $T^{-1} T = I$ and $T T^{-1} = I$.
 
 ### 3.63 invertibility $iff$ injectivity and surjectivity
 A linear map is invertible if and only if it is injective and surjective.
 
 Proof:
+
+Suppose $T \in L(V,W)$. We need to show that $T$ is invertible if and only if it is injective and surjective.
+
+$\Rightarrow$
+First suppose $T$ is invertible. To show that $T$ is injective, suppose $u, v \in V$ and $Tu = Tv$. Then 
+
+$$u = T^{-1} (Tu) = T^{-1} (Tv) = v$$
+
+so $u = v$. Hence $T$ is injective. 
+
+To show that $T$ is surjective, let $w \in W$. Then $w = T (T^{-1} w)$, which shows that $w \in range T$. Thus $range T = W$. Hence $T$ is surjective, completing this direction of the proof.
+
+$\Leftarrow$
+Now suppose $T$ is injective and surjective. We want to prove that $T$ is invertible. 
+
+For each $w \in W$, define $S(w)$ to be the unqiue element of $V$ such that $T(S(w)) = w$ (the existence and uniqueness of such an element follow from the injectivity and surjectivity of $T$). The definition of $S$ implies that $TS$ equals the identity operator on $W$.
+
+To prove that $ST$ equals the identity operator on $V$, let $v \in V$. Then
+
+$$T(STv) = TS(Tv) = I Tv = Tv$$
+
+This equation implies that $STv = v$ because $T$ is injective. Thus $ST$ equals the identity on $V$.
+
+To complete the proof, we need to show that $S$ is linear. To do this, suppose $w_1,w_2 \in W$. Then 
+
+$$T(Sw_1 + Sw_2) = TSw_1 + TSw_2 = w_1 + w_2$$
+
+Thus $Sw_1 + Sw_2$ is the unique element of $V$ that $T$ maps to $w_1+w_2$. By the definition of $S$, this implies that $S(w_1+w_) = Sw_1 + Sw_2$. Hence $S$ satisfies the additive property required for linearity.
+
+The proof of homogeneity is similar. Specifically, if $w \in W$ and $\lambda \in F$, then 
+
+$$T(\lambda Sw) = \lambda T (Sw) = \lambda w$$
+
+Thus $\lambda Sw$ is the unique element of $V$ that $T$ maps to $\lambda w$. By the definition of $S$, this implies that $S (\lambda w) = \lambda Sw$. Hence $S$ is linear, as desired.
 
 
 ### 3.65
@@ -795,11 +872,39 @@ Suppose that $V$ and $W$ are finite-dimensional vector spaces, $dim V = dim W$, 
 
 Proof:
 
+The fundamental theorem of linear maps (3.21) states that 
+
+$$dim V = dim null T + dim range T$$
+
+If $T$ is injective (which by 3.15 is equivalent to the condition $dim null T = 0$), then the equation above implies that 
+
+$$dim range T = dim V - dim null T = dim V = dim W$$
+
+which implies that $T$ is surjective by 2.39.
+
+Conversely, if $T$ is surjective, then
+
+$$dim null T = dim V - dim range T = dim V - dim W = 0$$
+
+which implies that $T$ is injective.
+
+Thus we have shown that $T$ is injective if and only if $T$ is surjective. 
+
+Thus if $T$ is either injective or surjective, then $T$ is both injective and surjective, which implies that $T$ is invertible. Hence $T$ is invertible if and only if $T$ is injective if and only if $T$ is surjective.
+
 
 ### 3.68
 Suppose $V$ and $W$ are finite-dimensional vector spaces of the same dimension, $S \in L(W,V)$ and $T \in L(V,W)$. Then $ST=I$ if and only if $TS=I$.
 
 Proof:
+
+First suppose $ST = I$. If $v \in V$ and $Tv = 0$, then $v = Iv = (ST)v = S(Tv) = S(0) = 0$
+
+Thus $T$ is injective by 3.15. Because $V$ and $W$ have the same dimension, this implies that $T$ is invertible by 3.65.
+
+Now multiply both sides of the equation $ST = I$ by $T^{-1}$ on the right, getting $S=T^{-1}$. Thus $TS = T T^{-1} = I$, as desired.
+
+To prove the implication in the other direction, simply reverse the roles of $S$ and $T$ (and $V$ and $W$) in the direction we have already proved, showing that if $TS = I$, then $ST = I$. 
 
 
 ### 3.69 Definition: isomorphism, isomorphic
@@ -811,15 +916,84 @@ Two finite-dimensional vector spaces over $F$ are isomorhpic if and only if they
 
 Proof:
 
+$\Rightarrow$
+First suppose $V$ and $W$ are isomorphic finite-dimensional vector spaces. Thus there exists an isomorphism $T$ from $V$ onto $W$. 
+
+Because $T$ is invertible, we have $null T = \\{0\\}$ and $range T = W$. Thus $dim null T = 0$ and $dim range T = dim W$. The formula $dim V = dim null T + dim range T$ thus becomes the equation $dim V = dim W$, completing the proof in one direction.
+
+$\Leftarrow$
+Suppose $V$ and $W$ are finite-dimensional vector spaces of the same dimension. Let $v_1,...,v_n$ be a basis of $V$ and let $w_1,...,w_n$ be a basis of $W$. Let $T \in L(V,W)$ be defined by 
+
+$$T(c_1 v_1 + ... + c_n v_n) = c_1 w_1 + ... + c_n w_n$$
+
+Then $T$ is a well-defined linear map because $v_1,...,v_n$ is a basis of $V$. Also, $T$ is surjective because $w_1,...,w_n$ spans $W$. Furthermore, $null T = \\{0\\}$ because $w_1,...,w_n$ spans $W$. Thus $T$ is injective. Because $T$ is injective and surjective, it is an isomorphism (by 3.63). Hence $V$ and $W$ are isomorphic.
+
 
 ### 3.71
-Suppose $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_m$ is a basis of $W$. Then $M$ is an isomorphism between and $F^{m,n}$
+Suppose $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_m$ is a basis of $W$. Then $M$ is an isomorphism between $L(V,W)$ and $F^{m,n}$
 
 Proof:
+
+We already noted that $M$ is linear. We need to prove that $M$ is injective and surjective. 
+
+We begin with injectivity. If $T \in L(V,W)$ and $M(T) = 0$, then $Tv_k = 0$ for each $k=1,...,n$. Because $v_1,...,v_n$ is a basis of $V$, this implies that $T=0$. Thus $M$ is injective by 3.15.
+
+To prove that $M$ is surjective, suppose $A \in F^{m,n}$. By the linear map lemma 3.4, there exists $T \in L(V,W)$ such that 
+
+$$Tv_k = \sum_{j=1}^m A_{j,k} w_j$$
+
+for each $k=1,...,n$. Because $M(T)$ equals $A$, the range of $M$ equals $F^{m,n}$, as desired.
 
 
 ### 3.72
 Suppose $V$ and $W$ are finite-dimensional. Then $L(V,W)$ is finite-dimensional and $dim L(V,W) = (dim V) (dim W)$.
+
+Proof:
+
+The desired result follows from 3.71, 3.70, 3.40.
+
+
+### 3.73 Definition: matrix of a vector
+Suppose $v \in V$ and $v_1,...,v_n$ is a basis of $V$. The matrix of $v$ with respect to this basis is the n-by-1 matrix 
+
+$$M(v) = 
+\begin{pmatrix}
+b_1 \\
+... \\
+b_n
+\end{pmatrix}
+$$
+
+where $b_1,...,b_n$ are scalars such that $v = b_1 v_1 + ... + b_n v_n$.
+
+
+### 3.76 Linear maps act like matrix multiplication
+Suppose $T \in L(V,W)$ and $v \in V$. Suppose $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_m$ is a basis of $W$. Then 
+
+$$M(Tv) = M(T)M(v)$$
+
+Proof:
+
+Suppose $v = b_1 v_1 + ... + b_n v_n$, where $b_1,...,b_n \in F$. Thus 
+
+$$Tv = b_1 Tv_1 + ... + b_n Tv_n$$
+
+Hence 
+
+$$M(Tv) = b_1 M(Tv_1) + ... + b_n M(Tv_n) = b_1 M(T)_{.,1} + ... + b_n M(T)_{.,n} = M(T)M(v)$$
+
+
+### 3.82
+Suppose that $u_1,...,u_n$ and $v_1,...,v_n$ are bases of $V$. Then the matrices 
+
+$$M(I, (u_1,...,u_n), (v_1,...,v_n))$$
+
+$$M(I, (v_1,...,v_n), (u_1,...,u_n))$$
+
+are invertible, and each is the inverse of the other.
+
+### 3.84 Change-of-basis formula
+Suppose $T \in L(V)$. Suppose $u_1,...,u_n$ and $v_1,...,v_n$ are bases of $V$. Let $A = M(T, (u_1,...,u_n))$ and $B = M(T, (v_1,...,v_n))$, and $C = M(I, (u_1,...,u_n), (v_1,...,v_n))$. Then $A = C^{-1} B C$.
 
 
 
@@ -988,6 +1162,44 @@ Let $v \in V$. Since $Tv_1,...,Tv_m$ spans $V$, we can write $v = a_1 Tv_1 + ...
 Since $V = span(Tv_1,...,Tv_m)$, $V = T(span(v_1,...,v_m))$ by linearity. Because $T$ is invertible, $span(v_1,...,v_m) = V$. 
 
 
+
+
 # 3E Duality
 
+### 3.108 Definition: linear functional
+A linear functional on $V$ is a linear map from $V$ to $F$. In other words, a linear functional is an element of $L(V, F)$.
+
+### 3.110 Definition: dual space
+The dual space of $V$, denoted by $V'$, is the vector space of all linear functionals on $V$. In other words, $V' = L(V, F)$.
+
+### 3.111 
+Suppose $V$ is finite-dimensional. Then $V'$ is also finite-dimensional and $dim V' = dim V$.
+
+### 3.112 Definition: dual basis
+
+### 3.114
+
+### 3.116
+
+### 3.118 Definition: dual map
+
+### 3.120
+
+### 3.121 Definition: annihilator
+
+### 3.124
+
+### 3.125
+
+### 3.127
+
+### 3.128
+
+### 3.129
+
+### 3.130
+
+### 3.131
+
+### 3.132
 
