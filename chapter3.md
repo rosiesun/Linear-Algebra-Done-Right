@@ -1175,25 +1175,137 @@ The dual space of $V$, denoted by $V'$, is the vector space of all linear functi
 ### 3.111 
 Suppose $V$ is finite-dimensional. Then $V'$ is also finite-dimensional and $dim V' = dim V$.
 
+Proof:
+
+By 3.72 we have 
+
+$$dim V' = dim L(V,F) = (dim V) (dim F) = dim V$$
+
+
 ### 3.112 Definition: dual basis
+If $v_1,...,v_n$ is a basis of $V$, then the dual basis of $v_1,...,v_n$ is the list $\phi_1,...,\phi_n$ of elements of $V'$, where each $\phi_j$ is the linear functional on $V$ such that $\phi_j(v_k) = 1$ if $k=j$, $\phi_j(v_k) = 0$ if $k \neq j$.
 
 ### 3.114
+Suppose $v_1,...,v_n$ is a basis of $V$ and $\phi_1,...,\phi_n$ is the dual basis. Then
+
+$$v = \phi_1(v) v_1 + ... + \phi_n(v) v_n$$
+
+for each $v \in V$.
+
+Proof:
+
+Suppose $v \in V$. Then there exist $c_1,...,c_n \in F$ such that
+
+$$v = c_1 v_1 + ... + c_n v_n$$
+
+If $j \in \\{1,...,n\\}$, then applying $\phi_j$ to both sides of the equation above gives 
+
+$$\phi_j(v) = c_j$$
+
+Substituting the values for $c_1,...,c_n$ given by the equation shows that $v = \phi_1(v) v_1 + ... + \phi_n(v) v_n$.
+
 
 ### 3.116
+Suppose $V$ is finite-dimensional. Then the dual basis of a basis of $V$ is a basis of $V'$.
+
+Proof:
+
+Suppose $v_1,...,v_n$ is a basis of $V$. Let $\phi_1,...,\phi_n$ denote the dual basis. 
+
+To show that $\phi_1,...,\phi_n$ is a linearly independent list of elements of $V'$, suppose $a_1,...,a_n \in F$ are such that 
+
+$$a_1 \phi_1 + ... a_n \phi_n = 0$$
+
+$$(a_1 \phi_1 + ... + a_n \phi_n) (v_k) = a_k$$
+
+for each $k=1,...,n$. Thus $a_1=...=a_n=0$. Hence $\phi_1,...,\phi_n$ is linearly independent. 
+
+Because $\phi_1,...,\phi_n$ is a linearly independent list in $V'$ whose length equals $dim V'$ by 3.111, we can conclude that $\phi_1,...,\phi_n$ is a basis of $V'$ by 2.38.
+
 
 ### 3.118 Definition: dual map
+Suppose $T \in L(V,W)$. The dual map of $T$ is the linear map $T' \in L(W', V')$ defined for each $\phi \in W'$ by
+
+$$T'(\phi) = \phi \circ T$$
 
 ### 3.120
+Suppose $T \in L(V,W)$. Then
+
+(a) $(S+T)' = S' + T'$ for all $S \in L(V,W)$
+
+(b) $(\lambda T)' = \lambda T'$ for all $\lambda \in F$
+
+(c) $(ST)' = T'S'$ for all $S \in L(W,U)$
+
+Proof (c):
+
+Suppose $\phi \in U'$. Then 
+
+$$(ST)'(\phi) = \phi \circ (ST) = (\phi \circ S) \circ T = T' (\phi \circ S) = T'(S'(\phi)) = (T' S') (\phi)$$
+
+The equation above shows that $(ST)'(\phi) = (T' S')(\phi)$ for all $\phi \in U'$. Thus $(ST)' = T'S'$.
+
 
 ### 3.121 Definition: annihilator
+For $U \subseteq V$, the annihilator of $U$, denoted by $U^0$, is defined by
+
+$$U^0 = \\{\phi \in V': \phi(u) = 0 for all u \in U\\}$$
 
 ### 3.124
+Suppose $U \subseteq V$. Then $U^0$ is a subspace of $V'$.
+
+Proof:
+
+Note that $0 \in U^0$ (here 0 is the zero linear functional on $V$) because the zero linearl functional applied to every vector in $U$ equals $0 \in F$.
+
+Suppose $\phi, \psi \in U^0$. Thus $\phi, \psi \in V'$ and $\phi(u) = \psi(u) = 0$ for every $u \in U$. If $u \in U$, then 
+
+$$(\phi + \psi)(u) = \phi(u) + \psi(u) = 0 + 0 = 0$$
+
+Thus $\phi + \psi \in U^0$.
+
+Similarly, $U^0$ is closed under scalar multiplication. Thus 1.34 implies that $U^0$ is a subspace of $V'$.
+
 
 ### 3.125
+Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Then 
+
+$$dim U^0 = dim V - dim U$$
+
+Proof:
+
+Let $i \in L(U,V)$ be the inclusion map defined by $i(u) = u$ for each $u \in U$. Thus $i'$ is a linear map from $V'$ to $U'$. The fundamental theorem of linear maps applied to $i'$ shows that 
+
+$$dim V' = dim null i' + dim range i'$$
+
+However, $null i' = U^0$ (since $null i' = \\{\phi \in V': i'(\phi) = \phi \circ i = 0\\}$), and $dim V' = dim V$. So we can rewrite the equation above as
+
+$$dim V = dim U^0 + dim range i'$$
+
+If $\phi \in U'$, then $\phi$ can be extended to a linear functional $\psi$ on $V$. The definition of $i'$ shows that $i'(\psi) = \phi$. Thus $\phi \in range i'$, which implies that $range i' = U'$. Hence 
+
+$$dim range i' = dim U' = dim U$$
+
+and we have
+
+$$dim V = dim U^0 + dim U$$
+
+as desired.
+
 
 ### 3.127
+Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Then
+
+(a) $U^0 = \\{0\\} \iff U = V$
+
+(b) $U^0 = V' \iff U = \\{0\\}$
 
 ### 3.128
+Suppose $V$ and $W$ are finite-dimensional and $T \in L(V,W)$. THen
+
+(a) $null T' = (range T)^0$
+
+(b) $dim null T' = dim null T + dim W - dim V$
 
 ### 3.129
 
@@ -1202,4 +1314,8 @@ Suppose $V$ is finite-dimensional. Then $V'$ is also finite-dimensional and $dim
 ### 3.131
 
 ### 3.132
+Suppose $V$ and $W$ are finite-dimensional and $T \in L(V,W)$. Then 
+
+$$M(T') = (M(T))^t$$
+
 
