@@ -673,6 +673,166 @@ $$U^{\perp} = \\{v \in V: <u,v>=0 for every u \in U\\}$$
 ### 6.48
 (a) If $U$ is a subset of $V$, then $U^{\perp}$ is a subspace of $V$.
 
+(b) $\\{0\\}^{\perp} = V$.
+
+(c) $V^{\perp} = \\{0\\}$.
+
+(d) If $U$ is a subset of $V$, then $U \cap U^{\perp} \subseteq \\{0\\}$.
+
+(e) If $G$ and $H$ are subsets of $V$ and $G \subseteq H$, then $H^{\perp} \subseteq G^{\perp}$.
+
+Proof:
+
+(a) Suppose $U$ is a subset of $V$. Then $<u, 0> = 0$ for every $u \in U$; thus $0 \in U^{\perp}$. 
+
+Suppose $v, w \in U^{\perp}$. If $u \in U$, then 
+
+$$<u, v+w> = <u,v> + <u,w> = 0 + 0 = 0$$
+
+Thus $v + w \in U^{\perp}$, which shows that $U^{\perp}$ is closed under addition.
+
+Similarly, suppose $\lambda \in F$ and $v \in U^{\perp}$. If $u \in U$, then 
+
+$$<u, \lambda v> = \overline{\lambda} <u, v> = \overline{\lambda} 0 = 0$$
+
+Thus $\lambda v \in U^{\perp}$, which shows that $U^{\perp}$ is closed under scalar multiplication. 
+
+Thus $U^{\perp}$ is a subspace of $V$.
+
+(b) Suppose $v \in V$. Then $<0, v> = 0$, which implies that $v \in \\{0\\}^{\perp}$. Thus $\\{0\\}^{\perp} = V$.
+
+(c) Suppose $v \in V^{\perp}$. Then $<v, v> = 0$, which implies that $v = 0$. Thus $V^{\perp} = \\{0\\}$.
+
+(d) Suppose $U$ is a subset of $V$ and $u \in U \cap U^{\perp}$. Then $<u, u> = 0$, which implies that $u = 0$. Thus $U \cap U^{\perp} \subseteq \\{0\\}$. 
+
+(e) Suppose $G$ and $H$ are subsets of $V$ and $G \subseteq H$. Suppose $v \in H^{\perp}$. Then $<u, v> = 0$ for every $u \in H$, which implies that $<u, v> = 0$ for every $u \in G$. Hence $v \in G^{\perp}$. Thus $H^{\perp} \subseteq G^{\perp}$.
+
+
+### 6.49
+Suppose $U$ is a finite-dimensional subspace of $V$. Then 
+
+$$V = U \oplus U^{\perp}$$
+
+Proof:
+
+First we will show that $V = U + U^{\perp}$. To do this, suppose that $v \in V$. Let $e_1,...,e_m$ be an orthonormal basis of $U$. 
+
+We want to write $v$ as the sum of a vector in $U$ and a vector orthogonal to $U$. We have
+
+$$v = (<v, e_1> e_1 + ... + <v, e_m> e_m) + (v - <v, e_1> e_1 - ... - <v, e_m> e_m)$$
+
+Let $u = <v, e_1> e_1 + ... + <v, e_m> e_m$ and $w = v - <v, e_1> e_1 - ... - <v, e_m> e_m$. Because each $e_k \in U$, we see that $u \in U$. Because $e_1,...,e_m$ is an orthonormal list, for each $k=1,...,m$, we have 
+
+$$<w, e_k> = <v, e_k> - < <v, e_k> e_k, e_k> = <v, e_k> - <v, e_k> <e_k, e_k> = 0$$
+
+Thus $w$ is orthogonal to every vector in $span(e_1,...,e_m)$, which shows that $w \in U^{\perp}$. 
+
+Hence we have written $v = u + w$, where $u \in U, w, \in U^{\perp}$, completing the proof that $V = U + U^{\perp}$. 
+
+From 6.48, we know that $U \cap U^{\perp} = \\{0\\}$. This implies that $V = U \oplus U^{\perp}$ by 1.46.
+
+
+### 6.51
+Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Then
+
+$$dim U^{\perp} = dim V - dim U$$
+
+Proof: 
+
+The formula for $dim U^{\perp}$ follows from 6.49 and 3.94.
+
+
+### 6.52
+Suppose $U$ is a finite-dimensional subspace of $V$. Then
+
+$$U = (U^{\perp})^{\perp}$$
+
+Proof:
+
+$\subseteq$ Suppose $u \in U$. Then $<u, w> = 0$ for every $w \in U^{\perp}$. Because $u$ is orthogonal to every vector in $U^{\perp}$, we have $u \in (U^{\perp})^{\perp}$.
+
+$\supseteq$ Suppose $v \in (U^{\perp})^{\perp}$. By 6.49, we can write $v = u + w$, where $u \in U$ and $w \in U^{\perp}$. 
+
+We have $v - u = w \in U^{\perp}$. Because $v \in (U^{\perp})^{\perp}$ and $u \in (U^{\perp})^{\perp}$ (first paragraph), we have $v - u \in (U^{\perp})^{\perp}$. 
+
+Thus $v - u \in U^{\perp} \cap (U^{\perp})^{\perp}$, which implies that $v - u = 0$ by 6.48, which implies that $v - u$, which implies that $v \in U$.
+
+Thus $(U^{\perp})^{\perp} \subseteq U$.
+
+
+### 6.54
+Suppose $U$ is a finite-dimensional subspace of $V$. Then
+
+$$U^{\perp} = \\{0\\} \iff U = V$$
+
+Proof:
+
+First suppose $U^{\perp} = \\{0\\}. Then by 6.52, $U = (U^{\perp})^{\perp} = \\{0\\}^{\perp} = V$, as desired.
+
+Conversely, if $U = V$, then $U^{\perp} = V^{\perp} = \\{0\\}$ by 6.48.
+
+
+### 6.55 Definition: orthogonal projection
+Suppose $U$ is a finite-dimensional subspace of $V$. The orthogonal projection of $V$ onto $U$ is the operator $P_U \in L(V)$ defined as follows: For each $v \in V$, write $v = u + w$, where $u \in U$ and $w \in U^{\perp}$. Then let $P_U v = u$.
+
+### 6.57
+Suppose $U$ is a finite-dimensional subspace of $V$. Then
+
+(a) $P_U \in L(V)$;
+
+(b) $P_U u = u$ for every $u \in U$;
+
+(c) $P_U w = 0$ for every $w \in U^{\perp}$;
+
+(d) $range P_U = U$;
+
+(e) $null P_U = U^{\perp}$;
+
+(f) $v - P_U v \in U^{\perp}$ for every $v \in V$;
+
+(g) $P_U^2 = P_U$;
+
+(h) $||P_U v|| \leq ||v||$ for every $v \in V$;
+
+(i) if $e_1,...,e_m$ is an orthonormal basis of $U$ and $v \in V$, then
+
+$$P_U v = <v, e_1> e_1 + ... + <v, e_m> e_m.$$
+
+Proof:
+
+(a) To show that $P_U$ is a linear map on $V$, suppose $v_1, v_2 \in V$. Write $v_1 = u_1 + w_1$ and $v_2 = u_2 + w_2$ with $u_1, u_2 \in U$ and $w_1, w_2 \in U^{\perp}$. Thus $P_U v_1 = u_1$ and $P_U v_2 = u_2$. 
+
+Now $v_1 + v_2 = (u_1 + u_2) + (w_1 + w_2)$ where $(u_1 + u_2) \in U$ and $w_1 + w_2 \in U^{\perp}$. Thus $P_U (v_1 + v_2) = u_1 + u_2 = P_U v_1 + P_U v_2$.
+
+Similarly, suppose $\lambda \in F$ and $v \in V$. Write $v = u + w$, where $u \in U$ and $w \in U^{\perp}$. Then $\lambda v = \lambda u + \lambda w$ with $\lambda u \in U$ and $\lambda w \in U^{\perp}$. Thus $P_U (\lambda v) = \lambda u = \lambda P_U v$. 
+
+Hence $P_U$ is a linear map from $V to V$.
+
+(b) Suppose $u \in U$. We can write $u = u + 0$, where $u \in U$ and $0 \in U^{\perp}$. Thus $P_U u = u$.
+
+(c) Suppose $w \in U^{\perp}$. We can write $w = 0 + w$, where $0 \in U$ and $w \in U^{\perp}$. Thus $P_U w = 0$. 
+
+(d) The definition of $P_U$ implies that $range P_U \subseteq U$. Furthermore, (b) implies that $U \subseteq range P_U$. Thus $range P_U = U$.
+
+(e) The inclusion $U^{\perp} \subseteq null P_U$ follows from (c). To prove the inclusion in the other direction, note that if $v \in null P_U$ then the decomposition must be $v = 0 + v$, where $0 \in U$ and $v \in U^{\perp}$. Thus $null P_U \subseteq U^{\perp}$.
+
+(f) If $v \in V$ and $v = u + w$ with $u \in U$ and $w \in U^{\perp}$, then 
+
+$$v - P_U v = v - u = w \in U^{\perp}$$
+
+(g) If $v \in V$ and $v = u + w$ with $u \in U$ and $w \in U^{\perp}$, then 
+
+$$P_U^2 v = P_U (P_U v) = P_U u = u = P_U v$$
+
+If $v \in V$ and $v = u + w$ with $u \in U$ and $w \in U^{\perp}$, then
+
+$$||P_U v||^2 = ||u||^2 \leq ||u||^2 + ||w||^2 = ||v||^2$$
+
+where the last equality comes from the Pythagorean theorem.
+
+(i) The formula for $P_U v$ comes from the proof of 6.49.
+
+
 ### 6.58
 Suppose $V$ is finite-dimensional. For each $v \in V$, define $\phi_v \in V'$ by 
 
@@ -709,6 +869,27 @@ The term in parentheses above is in $null \phi$ and hence is orthogonal to $v$. 
 $$<u,v> = \frac{\phi(u)}{||v||^2} <v,v> = \phi(u)$$
 
 Thus $\phi = \phi_v$, showing that $v \rightarrow \phi_v$ is surjective, as desired.
+
+
+### 6.59
+Suppose $U$ is a finite-dimensional subspace of $V$, $v \in V$, and $u \in U$. Then
+
+$$||v - P_U v|| \leq ||v - u||$$
+
+Furthermore, the inequality above is an equality if and only if $u = P_U v$.
+
+Proof:
+
+We have 
+
+$$||v - P_U v||^2 \leq ||v - P_U v||^2 + ||P_U v - u||^2 = ||(v - P_U v) + (P_Uv - u)||^2 = ||v-u||^2$$
+
+where the first inequality holds because $0 \leq ||P_U v - u||^2$, the second inequality comes from the Pythagorean theorem (which applies because $v - P_U v \in U^{\perp}$ by 6.57 and $P_U v - u \in U$). 
+
+Taking square roots gives the desired inequality.
+
+The inequality proved is an equality if and only if $||v - P_U v||^2 = ||v - P_U v||^2 + ||P_U v - u||^2$, which happens if and only if $||P_U v - u|| = 0$, which happens if and only if $u = P_U v$.
+
 
 
 ## Exercises
