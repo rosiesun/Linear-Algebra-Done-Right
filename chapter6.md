@@ -52,7 +52,9 @@ Two vectors $u, v \in V$ are called orthogonal if $<u,v>=0$.
 ### 6.12 Pythagorean theorem
 Suppose $u,v \in V$. If $u$ and $v$ are orthogonal, then $||u+v||^2 = ||u||^2 + ||v||^2$.
 
-Proof: Suppose $<u,v>=0$. Then 
+Proof: 
+
+Suppose $<u,v>=0$. Then 
 
 $$||u+v||^2 = <u+v, u+v> = <u,u> + <u,v> + <v,u> + <v,v> = ||u||^2 + ||v||^2$$
 
@@ -62,7 +64,9 @@ Suppose $u,v \in V$, with $v \neq 0$. Set $c = \frac{<u,v>}{||v||^2}$ and $w = u
 ### 6.14 Cauchy-Schwartz inequality
 Suppose $u,v \in V$. Then $|<u,v>| \leq ||u|| ||v||$. This inequality is an equality if and only if one of $u, v$ is a scalar multiple of the other.
 
-Proof: If $v = 0$, then both sides of the desired inequality equal 0. Thus we can assume that $v \neq 0$. Consider the orthogonal decomposition 
+Proof: 
+
+If $v = 0$, then both sides of the desired inequality equal 0. Thus we can assume that $v \neq 0$. Consider the orthogonal decomposition 
 
 $$u = \frac{<u,v>}{||v||^2} v + w$$
 
@@ -77,7 +81,9 @@ The proof above shows that the Cauchy-Schwartz inequality is an equality if and 
 ### 6.17 Triangule inequality
 Suppose $u,v \in V$. Then $||u+v|| \leq ||u|| + ||v||$. This inequality is an equality if and only if one of $u, v$ is a nonnegative real multiple of the other.
 
-Proof: We have
+Proof: 
+
+We have
 
 $$||u+v||^2 = <u+v, u+v> = <u,u> + <v,v> + <u,v> + <v,u> = ||u||^2 + ||v||^2 + <u,v> + \overline{<u,v>}$$
 
@@ -319,6 +325,31 @@ By Cauchy-Schwartz inequality,
 $$(a_1 /n + ... + a_n /n)^2 \leq 1/n (a_1^2 + ... + a_n^2)$$
 
 
+#### (17) Prove that $(\sum_{k=1}^n a_k b_k)^2 \leq (\sum_{k=1}^n k a_k^2)(\sum_{k=1}^n b_k^2 / k)$ for all real numbers $a_1,...,a_n$ and $b_1,...,b_n$.
+Consider 
+
+$$u = (a_1, \sqrt{2} a_2, ..., \sqrt{n} a_n)$$
+
+$$v = (b_1, \frac{b_2}{sqrt{2}}, ..., \frac{b_n}{sqrt{n}}$$
+
+Then 
+
+$$|<u,v>|^2 = (\sum_{k=1}^n a_k b_k)^2$$
+
+$$||u||^2 = \sum_{k=1}^n k a_k^2$$
+
+$$||v||^2 = \sum_{k=1}^n b_k^2 / k$$
+
+By the Cauchy-Schwartz inequality, we have $|<u, v>|^2 \leq ||u||^2 ||v||^2$. Thus 
+
+$$(\sum_{k=1}^n a_k b_k)^2 \leq (\sum_{k=1}^n k a_k^2)(\sum_{k=1}^n b_k^2 / k)$$
+
+
+#### (19) Suppose $v_1,...,v_n$ is a basis of $V$ and $T \in L(V)$. Prove that if $\lambda$ is an eigenvalue of $T$, then $|\lambda|^2 \leq \sum_{j=1}^n \sum_{k=1}^n |M(T)_{j,k}|^2$, where $M(T)_{kl}$ denotes the entry in row j, k of the matrix of $T$ with respect to the basis $v_1,...,v_n$.
+
+
+
+
 
 # 6B Orthonormal Bases
 
@@ -361,7 +392,9 @@ An orthonormal basis of $V$ is an orthonormal list of vectors in $V$ that is als
 ### 6.28
 Suppose $V$ is finite-dimensional. Then every orthonormal list of vectors in $V$ of length $dim V$ is an orthonormal basis of $V$.
 
-Proof: By 6.25, every orthonormal list of vectors in $V$ is linearly independent. Thus every such list of the right length is a basis by 2.38.
+Proof: 
+
+By 6.25, every orthonormal list of vectors in $V$ is linearly independent. Thus every such list of the right length is a basis by 2.38.
 
 ### 6.30
 Suppose $e_1,...,e_n$ is an orthonormal basis of $V$ and $u,v \in V$. Then
@@ -591,6 +624,42 @@ Therefore $|a_1|^2 + ... + |a_n|^2 = 0$, hence $a_1=...=a_n = 0$. We conclude $v
 (b) Show that there exist $v_1,...,v_n \in V$ such that $||e_k - v_k|| \leq 1/\sqrt{n}$ for each $k$, but $v_1,...,v_n$ is not linearly independent.
 
 
+#### (18) Suppose $u_1,...,u_m$ is a linearly independent list in $V$. Show that there exists $v \in V$ such that $<u_k, v> = 1$ for all $k \in \\{1,...,m\\}$.
+Suppose $V$ is finite-dimensional. Since $u_1,...,u_m$ is a lineary independent list, we can extend it to a basis of $V$, $u_1,...,u_m, v_1,...,v_n$ by 2.32. 
+
+Define a linear functional on $V$ such that $\phi(u_k) = 1, k=1,...,m$ and $\phi(v_j) = 0, j=1,...n$. This is well-defined by 3.4. 
+
+By the Riesz representation theorem 6.42, there exists a unique $v \in V$ such that $\phi(u) = <u, v>$ for all $u \in V$. 
+
+Thus there exists $v \in V$ such that $<u_k, v> = 1$ for $k=1,...,m$. 
+
+
+#### (19) Suppose $v_1,...,v_n$ is a basis of $V$. Prove that there exists a basis $u_1,...,u_n$ of $V$ such that $<v_j, u_k> = 0$ if $j \neq k$, and $<v_j, u_k> = 1$ if $j = k$.
+Define $n$ linear functionals on $V$ such that $\phi_k(v_j)=1$ if $k=j$, $\phi_k(v_j) = 0$ if $k \neq j$, for $k=1,...,n$. This is well-defined by 3.4.
+
+By the Riesz representation theorem 6.42, there exists unique $u_k \in V$ such that $\phi_k(v)=<v, u_k>$ for all $v \in V$, for $k=1,...,n$.
+
+Since the length of the list $u_1,...,u_n$ is $n$, we need to show that $u_1,...,u_n$ is linearly independent. 
+
+Suppose $a_1 u_1 + ... + a_n u_n = 0$ for some $a_1,...,a_n \in F$.
+
+For each $j=1,...,n$, we have
+
+$$0 = <v_j, a_1 u_1 + ... + a_n u_n> = a_j <v_j, u_j> = a_j \phi_j(v_j) = a_j$$
+
+since the cross terms disappear. 
+
+Thus $u_1,...,u_n$ is linearly independent, and we conclude it is a basis of $V$.
+
+
+#### (22) Suppose $C[-1, 1]$ is the vector space of continuous real-valued functions on the interval [-1, 1] with inner product given by $<f,g> = \int^1_{-1} fg$ for all $f,g \in C[-1,1]$. Let $\phi$ be the linear functional on $C[-1, 1]$ defined by $\phi(f) = f(0)$. Show that there does not exist $g \in C[-1, 1]$ such that $\phi(f) = <f,g>$ for every $f \in C[-1, 1]$.
+Assume towards contradiction that there exists $g \in C[-1, 1]$ such that $\phi(f) = <f,g>$ for every $f \in C[-1, 1]$.
+
+Consider the tent function, for some $0< \epsilon < 1$, $f(x) = 1 - \frac{|x|}{\epsilon}$ for $|x| <= \epsilon$, $f(x) = 0$ for $|x| > \epsilon$.
+
+
+
+
 
 
 
@@ -600,5 +669,104 @@ Therefore $|a_1|^2 + ... + |a_n|^2 = 0$, hence $a_1=...=a_n = 0$. We conclude $v
 If $U$ is a subset of $V$, then the orthogonal complement of $U$, denoted by $U^{\perp}$, is the set of all vectors in $V$ that are orthogonal to every vector in $U$:
 
 $$U^{\perp} = \\{v \in V: <u,v>=0 for every u \in U\\}$$
+
+### 6.48
+(a) If $U$ is a subset of $V$, then $U^{\perp}$ is a subspace of $V$.
+
+### 6.58
+Suppose $V$ is finite-dimensional. For each $v \in V$, define $\phi_v \in V'$ by 
+
+$$\phi_v(u) = <u,v>$$
+
+for each $u \in V$. Then $v \rightarrow \phi_v$ is a one-to-one function from $V$ to $V'$.
+
+Proof:
+
+To show that $v \rightarrow \phi_v$ is surjective, suppose $\phi \in V'$. 
+
+If $\phi = 0$, then $\phi = \phi_0$. Thus assume $\phi \neq 0$. Hence $null \phi \neq V$, which implies that $(null \phi)^{\perp} \neq \\{0\\}$ by 6.49.
+
+Let $w \in (null \phi)^{\perp}$ be such that $w \neq 0$. Let 
+
+$$(6.59)  v = \frac{\overline{\phi(w)}}{||w||^2} w$$
+
+Then $v \in (null \phi)^{\perp}$. Also $v \neq 0$ (because $w \neq null \phi$).
+
+Taking the norm of both sides gives
+
+$$||v|| = \frac{|\phi(w)|}{||w||}$$
+
+Applying $\phi$ to both sides of 6.59 and then using 6.60, we have
+
+$$\phi(v) = \frac{|\phi(w)|^2}{||w||^2} = ||v||^2$$
+
+Now suppose $u \in V$. Using the equation above, we have
+
+$$u = u - \frac{\phi(u)}{\phi(v)} v + \frac{\phi(u)}{\phi(v)} v = (u - \frac{\phi(u)}{\phi(v)} v) + \frac{\phi(u)}{||v||^2} v$$
+
+The term in parentheses above is in $null \phi$ and hence is orthogonal to $v$. Thus taking the inner product of both sides of the equation above with $v$ shows that 
+
+$$<u,v> = \frac{\phi(u)}{||v||^2} <v,v> = \phi(u)$$
+
+Thus $\phi = \phi_v$, showing that $v \rightarrow \phi_v$ is surjective, as desired.
+
+
+## Exercises
+
+#### (1)
+
+
+#### (2)
+
+
+#### (3)
+
+
+#### (4)
+
+
+#### (5)
+
+
+#### (8)
+
+
+#### (12)
+
+
+#### (13) Suppose $F=R$ and $V$ is finite-dimensional. For each $v \in V$, let $\phi_v$ denote the linear functional on $V$ defined by $\phi_v(u) = <u,v>$ for all $u \in V$.
+(a) Show that $v \rightarrow \phi_v$ is an injective linear map from $V$ to $V'$.
+
+Define $T \in L(V, V')$, where $Tv = \phi_v$ where $\phi_v(u) = <u,v>$.
+
+First we want to show that $T$ is linear. 
+
+Let $v, w \in V$. Then $T(v+w) = \phi_{v+w}$. 
+
+$$\phi_{v+w} (u) = <u, v+w> = <u, v> + <u, w> = \phi_v(u) + \phi_w(u)$$
+
+Therefore $T(v+w) = Tv + Tw$.
+
+Let $\lambda \in R, v \in V$. Then $T(\lambda v) = \phi_{\lambda v}$.
+
+$$\phi_{\lambda v} (u) = <u, \lambda v> = \lambda <u, v> = \lambda \phi_v(u)$$
+
+where the second equality follows from the fact that $F = R$ so $\lambda = \overline{\lambda}$.
+
+Therefore $T(\lambda v) = \lambda Tv$. Thus $T$ is a linear map.
+
+To show that $T$ is injective, suppose $Tv = 0$. Then $\phi_v = 0$, and $\phi(u) = <u, v>= 0$ for all $u \in V$. Taking $u = v$, we have $<v, v> = 0$. Hence $v = 0$. Therefore $null T = \\{0\\}$, and $T$ is injective.
+
+
+(b) Use (a) and a dimension-counting argument to show that $v \rightarrow \phi_v$ is an isomorphism from $V$ to $V'$.
+
+By 3.111, $dim V = dim V'$. From part (a), $T$ is injective, therefore $T$ is surjective by 3.65. Thus it is an isomorphism.
+
+
+#### (14)
+
+
+#### (15)
+
 
 
