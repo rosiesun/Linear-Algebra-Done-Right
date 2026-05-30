@@ -1319,3 +1319,36 @@ Suppose $V$ and $W$ are finite-dimensional and $T \in L(V,W)$. Then
 $$M(T') = (M(T))^t$$
 
 
+
+## Exercises
+
+#### (2) Give three distinct examples of linear functionals on $R^{[0,1]}$.
+
+
+#### (12) Suppose $S, T \in L(V,W)$. 
+
+(a) Prove that $(S+T)' = S' + T'$.
+
+(b) Prove that $(\lambda T)' = \lambda T'$ for all $\lambda \in F$.
+
+
+#### (14) Define $T: R^3 \rightarrow R^2$ by $T(x,y,z) = (4x + 5y + 6z, 7x + 8y + 9z)$. Suppose $\phi_1,\phi_2$ denotes the dual basis of the standard basis of $R^2$ and $\psi_1,\psi_2,\psi_3$ denotes the dual basis of the standard basis of $R^3$.
+
+(a) Describe the linear functionals $T'(\phi_1)$ and $T'(\phi_2)$.
+
+(b) Write $T'(\phi_1)$ and $T'(\phi_2)$ as linear combinations of $\psi_1,\psi_2,\psi_3$.
+
+
+#### (15) Define $T: P(R) \rightarrow P(R)$ by $(Tp)(x) = x^2 p(x) + p''(x)$ for each $x \in R$. 
+
+(a) Suppose $\phi \in P(R)'$ is defined by $\phi(p) = p'(4)$. Describe the linear functional $T'(\phi)$ on $P(R)$.
+
+(b) Suppose $\phi \in P(R)'$ is defined by $\phi(p) = \int^1_0 p$. Evaluate $(T'(\phi)) (x^3)$.
+
+
+#### (16)
+
+
+#### (17)
+
+#### (18)
