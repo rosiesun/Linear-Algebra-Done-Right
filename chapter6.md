@@ -894,7 +894,20 @@ The inequality proved is an equality if and only if $||v - P_U v||^2 = ||v - P_U
 
 ## Exercises
 
-#### (1)
+#### (1) Suppose $v_1,...,v_m \in V$. Prove that $\\{v_1,...,v_m\\}^{\perp} = (span(v_1,...,v_m))^{\perp}$.
+$\subseteq$ Suppose $v \in \\{v_1,...,v_m\\}^{\perp}$. Then $<v_k, v> = 0$ for $k = 1,...,m$. 
+
+Let $a_1,...,a_m \in F$. Then 
+
+$$0 = a_1 <v_1, v> + ... + a_m <v_m, v> = <a_1 v_1, v> + ... + <a_m v_m, v> = <a_1 v_1 + ... + a_m v_m, v>$$
+
+Since $a_1,...,a_m$ is arbitrary, $v \in (span(v_1,...,v_m))^{\perp}$.
+
+$\supseteq$ Suppose $v \in (span(v_1,...,v_m))^{\perp}$. Then $<a_1 v_1 + ... + a_m v_m, v> = 0$ for any $a_1,...,a_m \in F$. 
+
+Since $v_k \in span(v_1,...,v_m)$ for $k=1,...,m$, we have $<v_k, v> = 0$ for $k=1,...,m$. 
+
+Hence $v \in \\{v_1,...,v_m\\}^{\perp}$.
 
 
 #### (2)
@@ -906,10 +919,56 @@ The inequality proved is an equality if and only if $||v - P_U v||^2 = ||v - P_U
 #### (4)
 
 
-#### (5)
+#### (5) Suppose that $V$ is finite-dimensional and $U$ is a subspace of $V$. Show that $P_{U^{\perp}} = I - P_U$, where $I$ is the identity operator on $V$.
+Suppose $v \in V$. We can uniquely write $v = u + w$ where $u \in U$ and $w \in U^{\perp}$ by 6.49. Hence 
+
+$$P_{U^{\perp}} v = w = v - u = Iv - P_U v = (I - P_U) v$$
 
 
-#### (8)
+#### (6) Suppose $V$ is finite-dimensional and $T \in L(V,W)$. Show that $T = TP_{(null T)^{\perp}} = P_{range T} T$.
+First we want to show $T = TP_{(null T)^{\perp}}$.
+
+Suppose $v \in V$. We have $V = null T \oplus (null T)^{\perp}$. We can write $v = v_1 + v_2$, where $v_1 \in null T$ and $v_2 \in (null T)^{\perp}$. Then $P_{(null T)^{\perp}} v = v_2$. We have
+
+$$Tv = T(v_1 + v_2) = Tv_1 + Tv_2 = Tv_2 = T (P_{(null T)^{\perp}} v)$$
+
+Hence $T = TP_{(null T)^{\perp}}$.
+
+Next we want to show $T = P_{range T} T$. 
+
+Since $Tv \in range T, $, by 6.57(b), we have $P_{range T} (Tv) = Tv = (P_{range T} T) v$ for all $v \in V$.
+
+Hence $T = P_{range T} T$.
+
+
+#### (7) Suppose $X$ and $Y$ are finite-dimensional subspaces of $V$. Prove that $P_X P_Y = 0$ if and only if $<x, y>=0$ for all $x \in X$ and all $y \in Y$.
+$\Rightarrow$
+Suppose $P_X P_Y = 0$. Suppose $y \in Y$. Then $P_Y y = y$ by 6.57(b), and 
+
+$$P_X y = P_X (P_Y y) = (P_X P_Y) y = 0$$ 
+
+By 6.57(c), $y \in X^{\perp}$. Thus $Y \subseteq X^{\perp}$. 
+
+Therefore $<x, y> = 0$ for every $x \in X, y \in Y$.
+
+$\Leftarrow$
+Suppose $<x, y> = 0$ for all $x \in X$ and $y \in Y$. Then $Y \subseteq X^{\perp}$. 
+
+Suppose $v \in V$. We can write $v = y + w$ where $y \in Y$ and $w \in Y^{\perp}$. Then $P_Y v = y$. 
+
+$$0 = P_X y = P_X (P_Y v) = (P_X P_Y) v$$ 
+
+Therefore $P_X P_Y = 0$.
+
+
+#### (8) Suppose $U$ is a finite-dimensional subspace of $V$ and $v \in V$. Define a linear functional $\phi: U \rightarrow F$ by $\phi(u) = <u, v>$ for all $u \in U$. By the Riesz representation theorem, there exists a unique vector $w \in U$ such that $\phi(u) = <u, w>$ for all $u \in U$. Show that $w = P_U v$.
+Since $\phi(u) = <u, v> = <u, w>$ for all $u \in U$, we have $<u, v> - <u, w> = <u, v-w> = 0$ for all $u \in U$. 
+
+Hence $v - w \in U^{\perp}$. 
+
+Because $w \in U$, we can write $v = (v - w) + w$ where $v - w \in U^{\perp}$ and $w \in U$. Therefore we have
+
+$$P_U v = P_U (v-w+w) = P_U (v-w) + P_U w = 0 + w = w$$
 
 
 #### (12)
@@ -944,10 +1003,15 @@ To show that $T$ is injective, suppose $Tv = 0$. Then $\phi_v = 0$, and $\phi(u)
 By 3.111, $dim V = dim V'$. From part (a), $T$ is injective, therefore $T$ is surjective by 3.65. Thus it is an isomorphism.
 
 
-#### (14)
+#### (14) Suppose that $e_1,...,e_n$ is an orthonormal basis of $V$. Explain why the dual basis (3.112) of $e_1,...,e_n$ is $e_1,...,e_n$ under the identification of $V'$ with $V$ provided by the Riesz representation theorem 6.58.
+Define $\phi_k(u) = <u, e_k>$ for $k=1,...,n$, for all $u \in V$. 
+
+Since $e_1,...,e_n$ is an orthonormal basis of $V$, $\phi_k(e_j) = <e_j, e_k> = \delta_{jk}$. Therefore $\phi_1,...,\phi_n$ satisfies the condition in 3.112 and is the dual basis of $e_1,...,e_n$.
+
+By the Riesz representation, we can associate each $\phi_k$ with $e_k$. Thus the dual basis $\phi_1,...,\phi_n$ corresponds to $e_1,...,e_n$.
 
 
-#### (15)
+#### (15) In $R^4$, let $U = span((1,1,0,0), (1,1,1,2))$. Find $u \in U$ such that $||u - (1,2,3,4)||$ is as small as possible.
 
 
 
