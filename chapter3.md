@@ -803,6 +803,13 @@ Suppose m and n are positive integers. With addition and scalar multiplication d
 ### 3.43
 If $T \in L(U,V)$ and $S \in L(V,W)$, then $M(ST) = M(S)M(T)$.
 
+### 3.52 Definition: column rank, row rank
+Suppose $A$ is an m-by-n matrix with entries in $F$. 
+
+- The column rank of $A$ is the dimension of the span of the columns of $A$ in $F^{m, 1}$.
+- The row rank of $A$ is the dimension of the span of the rows of $A$ in $F^{1, n}$.
+
+
 
 
 
@@ -981,6 +988,20 @@ $$Tv = b_1 Tv_1 + ... + b_n Tv_n$$
 Hence 
 
 $$M(Tv) = b_1 M(Tv_1) + ... + b_n M(Tv_n) = b_1 M(T)_{.,1} + ... + b_n M(T)_{.,n} = M(T)M(v)$$
+
+
+### 3.78
+Suppose $V$ and $W$ are finite-dimensional and $T \in L(V, W)$. Then $dim range T$ equals the column rank of $M(T)$.
+
+Proof:
+
+Suppose $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_m$ is a basis of $W$. 
+
+The linear map that takes $w \in W$ to $M(w)$ is an isomorphism from $W$ onto the space $F^{m,1}$ of m-by-1 column vectors.
+
+The restriction of this isomorphism to $range T$ (which equals $span (Tv_1,...,Tv_n)$) is an isomorphism from $range T$ onto $span(M(Tv_1),..., M(Tv_n))$. For each $k \in \\{1,...,n\\}$, the m-by-1 matrix $M(Tv_k)$ equals column $k$ of $M(T)$. 
+
+Thus $dim range T = $ the column rank of $M(T)$.
 
 
 ### 3.82
@@ -1278,7 +1299,17 @@ Let $i \in L(U,V)$ be the inclusion map defined by $i(u) = u$ for each $u \in U$
 
 $$dim V' = dim null i' + dim range i'$$
 
-However, $null i' = U^0$ (since $null i' = \\{\phi \in V': i'(\phi) = \phi \circ i = 0\\}$), and $dim V' = dim V$. So we can rewrite the equation above as
+Since 
+
+$$null i' = \\{\phi \in V': i'(\phi) = \phi \circ i = 0\\}$$ 
+
+and 
+
+$$U^0 = \\{\phi \in V': \phi(u) = 0 \forall u \in U\\}$$
+
+$null i' = U^0$. And we have $dim V' = dim V$. 
+
+So we can rewrite the dimension equation above as
 
 $$dim V = dim U^0 + dim range i'$$
 
@@ -1300,6 +1331,21 @@ Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Then
 
 (b) $U^0 = V' \iff U = \\{0\\}$
 
+Proof:
+
+(a) We have
+
+$$U^0 = \\{0\\} \iff dim U^0 = 0 \iff dim U = dim V \iff U = V$$
+
+where the second equivalence follows from 3.125 and the third equivalence follows from 2.39.
+
+(b) Similarly, we have
+
+$$U^0 = V' \iff dim U^0 = dim V' \iff dim U^0 = dim V \iff dim U = 0 \iff U = \\{0\\}$$
+
+where one direction of the first equivalence follows from 2.39, the second equivalence follows from 3.111, and the third equivalence follows from 3.125.
+
+
 ### 3.128
 Suppose $V$ and $W$ are finite-dimensional and $T \in L(V,W)$. THen
 
@@ -1307,16 +1353,113 @@ Suppose $V$ and $W$ are finite-dimensional and $T \in L(V,W)$. THen
 
 (b) $dim null T' = dim null T + dim W - dim V$
 
+Proof:
+
+(a) $\subseteq$
+Suppose $\phi \in null T'$. Thus $T'(\phi) = \phi \circ T = 0$. Hence
+
+$$0 = (\phi \circ T) v = \phi(Tv)$$ 
+
+for every $v \in V$. Thus $\phi \in (range T)^0$. This implies that $null T' \subseteq (range T)^0$.
+
+$\supseteq$
+Suppose $\phi \in (range T)^0$. Thus $\phi(Tv) = 0$ for every $v \in V$. Hence $0 = \phi \circ T = T'(\phi)$. In other words, $\phi \in null T'$, which shows that $(range T)^0 \subseteq null T'$, completing the proof.
+
+(b) We have
+
+$$dim null T' = dim (range T)^0 = dim W - dim range T = dim W - (dim V - dim null T) = dim null T + dim W - dim V$$
+
+where the first equality comes from (a), the second equality comes from 3.125, and the third equality comes from the fundamental theorem of linear maps.
+
+
 ### 3.129
+Suppose $V$ and $W$ are finite-dimensional and $T \in L(V, W)$. Then $T$ is surjective $\iff$ $T'$ is injective.
+
+Proof:
+
+$T$ is surjective $\iff$ $range T = W \iff (range T)^0 = \\{0\\} \iff null T' = \\{0\\} \iff$ $T'$ is injective
+
+where the second equivalence comes from 3.127(a) and the third equivalence comes from 3.128(a).
+
 
 ### 3.130
+Suppose $V$ and $W$ are finite-dimensional and $T \in L(V, W)$. Then
+
+(a) $dim range T' = dim range T$
+
+(b) $range T' = (null T)^0$
+
+Proof:
+
+(a) We have
+
+$$dim range T' = dim W' - dim null T' = dim W - dim (range T)^0 = dim range T$$
+
+where the first equality comes from 3.21, the second equality comes from 3.111 and 3.128(a), and the third equality comes from 3.125.
+
+(b) Suppose $\phi \in range T'$. Thus there exists $\psi \in W'$ such that $\phi = T'(\psi)$. If $v \in null T$, then 
+
+$$\phi(v) = (T'(\psi)) v = (\psi \circ T) v = \psi (Tv) = \psi (0) = 0$$
+
+Hence $\phi \in (null T)^0$. This implies that $range T' \subseteq (null T)^0$.
+
+We will complete the proof by showing that $range T'$ and $(null T)^0$ have the same dimension. 
+
+$$dim range T' = dim range T = dim V - dim null T = dim (null T)^0$$
+
+where the first equality comes from (a), the second equality comes from 3.21, and the third equality comes from 3.125.
+
 
 ### 3.131
+Suppose $V$ and $W$ are finite-dimensional and $T \in L(V, W)$. Then 
+
+$T$ is injective $\iff$ $T'$ is surjective.
+
+Proof:
+
+We have
+
+$$T injective \iff null T = \\{0\\} \iff (null T)^0 = V' \iff range T' = V'$$
+
+where the second equivalence follows from 3.127(b) and the third equivalence follows from 3.130(b).
+
 
 ### 3.132
 Suppose $V$ and $W$ are finite-dimensional and $T \in L(V,W)$. Then 
 
 $$M(T') = (M(T))^t$$
+
+Proof:
+
+Let $A = M(T)$ and $C = M(T')$. Suppose $1 \leq j \leq m$ and $1 \leq k \leq n$. 
+
+From the definition of $M(T')$ we have  
+
+$$T'(\psi_j) = \sum_{r=1}^n C_{r, j} \phi_r$$
+
+The left side of the equation above equals $\psi_j \circ T$. Thus applying both sides of the equation above to $v_k$ gives
+
+$$(\psi_j \circ T) (v_k) = \sum_{r=1}^n C_{r, j} \phi_r (v_k) = C_{k, j}$$
+
+We also have
+
+$$(\psi_j \circ T) (v_k) = \psi_j (Tv_k) = \psi_j (\sum_{r=1}^m A_{r, k} w_r) = \sum_{r=1}^m A_{r, k} \psi_j (w_r) = A_{j, k}$$
+
+Comparing the last line of the two sets of equations, we have $C_{k, j} = A_{j, k}$. Thus $C = A^t$. In other words, $M(T') = (M(T))^t$, as desired.
+
+
+### 3.133
+Suppose $A \in F^{m, n}$. Then the column rank of $A$ equals the row rank of $A$.
+
+Proof:
+
+Define $T: F^{n, 1} \rightarrow F^{m,1}$ by $Tx = Ax$. Thus $M(T) = A$, where $M(T)$ is computed with respect to the standard bases of $F^{n,1}$ and $F^{m,1}$. Now
+
+column rank of $A$ = column rank of $M(T)$ = dim range $T$ 
+
+= dim range $T'$ = column rank of $M(T')$ = column rank of $A^t$ = row rank of $A$
+
+where the second equality comes from 3.78, the third equality comes from 3.130(a), the fourth equality comes from 3.78, the fifth equality comes from 3.132, and the last equality follows from the definitions of row and column rank.
 
 
 
@@ -1324,12 +1467,73 @@ $$M(T') = (M(T))^t$$
 
 #### (2) Give three distinct examples of linear functionals on $R^{[0,1]}$.
 
+#### (3) Suppose $V$ is finite-dimensional and $v \in V$ with $v \neq 0$. Prove that there exists $\phi \in V'$ such that $\phi(v) = 1$.
+Since $v \neq 0$, we can extend it to a basis $v, v_2,..., v_n$ of $V$. 
+
+Define $\phi(v) = 1, \phi(v_i) = 0$ for $i = 2,...,n$. The linear functional $\phi$ is well-defined by 3.4.
+
+
+#### (4) Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$ such that $U \neq V$. Prove that there exists $\phi \in V'$ such that $\phi(u) = 0$ for every $u \in U$ but $\phi \neq 0$.
+Let $u_1,...,u_m$ be a basis of $U$. Since $U \neq V$, $dim U < dim V$. We can extend to a basis $u_1,...,u_m, v_1,...,v_n$ of $V$.
+
+Define $\phi(u_i) = 0$ for $i = 1,...,m$ and $\phi(v_j) = 1$ for $j = 1,...,n$. The linear functional $\phi$ is well-defined by 3.4. Thus $\phi(u) = 0$ for every $u \in U$ but $\phi \neq 0$.
+
+
+#### (5) Suppose $T \in L(V, W)$ and $w_1,...,w_m$ is a basis of $range T$. Hence for each $v \in V$, there exist unique numbers $\phi_1(v),...,\phi_m(v)$ such that $Tv = \phi_1(v) w_1 + ... + \phi_m(v) w_m$, thus defining functions $\phi_1,...,\phi_m$ from $V$ to $F$. Show that each of the functions $\phi_1,...,\phi_m$ is a linear functional on $V$.
+Suppose $u, v \in V$. We have 
+
+$$T(v + u) = \phi_1(v+u) w_1 + ... + \phi_m(v+u) w_m$$
+
+$$Tv + Tu = \phi_1(v) w_1 + ... + \phi_m(v) w_m + \phi_1(u) w_1 + ... + \phi_m(u) w_m = (\phi_1(v) + \phi_1(u)) w_1 + ... + (\phi_m(v) + \phi_m(u)) w_m$$
+
+Since $T(v+u) = Tv + Tu$, and $w_1,...,w_m$ is a basis, we have $\phi_i(v+u) = \phi_i(v) + \phi_i(u)$ for $i=1,...,m$. Thus $\phi_i$ satisfies additivity. 
+
+Similary, suppose $\lambda \in F, v \in V$. We have
+
+$$T(\lambda v) = \phi_1 (\lambda v) w_1 + ... + \phi_m (\lambda v) w_m$$
+
+$$\lambda Tv = \lambda (\phi_1(v) w_1 + ... + \phi_m(v) w_m) = \lambda \phi_1(v) w_1 + ... + \lambda \phi_m(v) w_m$$
+
+Since $T(\lambda v) = \lambda Tv$ and $w_1,...,w_m$ is a basis, we have $\phi_i(\lambda v) = \lambda \phi_i(v)$ for $i=1,...,m$. Thus $\phi_i$ satisfies homogeneity.
+
+Thus each $\phi_1,..., \phi_m$ is a linear functional on $V$.
+
+
+#### (11) Suppose $v_1,...,v_n$ is a basis of $V$ and $\phi_1,...,\phi_n$ is the corresponding dual basis of $V'$. Suppose $\psi \in V'$. Prove that $\psi = \psi(v_1) \phi_1 + ... + \psi(v_n) \phi_n$.
+We can write $v = \phi_1(v) v_1 + ... + \phi_n(v) v_n$ by 3.116. Applying $\psi$ to both sides, we have
+
+$$\psi(v) = \psi(v_1) \phi_1(v) + ... \psi(v_n) \phi_n(v) = (\psi(v_1) \phi_1 + ... + \psi(v_n) \phi_n) (v)$$
+
+for all $v \in V$. Thus $\psi = \psi(v_1) \phi_1 + ... + \psi(v_n) \phi_n$.
+
 
 #### (12) Suppose $S, T \in L(V,W)$. 
 
 (a) Prove that $(S+T)' = S' + T'$.
 
+Suppose $\phi \in W', v \in V$. 
+
+$$(S+T)'(\phi)(v) = (\phi \circ (S+T))(v) = \phi ((S+T)v) = \phi(Sv + Tv) = \phi(Sv) + \phi(Tv) = (\phi \circ S)(v) + (\phi \circ T)(v) = S'(\phi)(v) + T'(\phi)(v)$$
+
+for all $\phi \in W', v \in V$. Thus $(S+T)' = S' + T'$.
+
 (b) Prove that $(\lambda T)' = \lambda T'$ for all $\lambda \in F$.
+
+Suppose $\phi \in W', v \in V, \lambda \in F$.
+
+$$(\lambda T)'(\phi)(v) = (\phi \circ (\lambda T))(v) = \phi( (\lambda T) v) = \lambda \phi(Tv) = \lambda (\phi \circ T)(v) = \lambda T'(\phi)(v)$$
+
+for all $\phi \in W', v \in V$. Thus $(\lambda T)' = \lambda T'$.
+
+
+#### (13) Show that the dual map of the identity operator on $V$ is the identity operator on $V'$.
+Suppose $\phi \in V', v \in V$. We have $I': V' \rightarrow V'$ such that 
+
+$$I'(\phi)(v) = (\phi \circ I)(v) = \phi(Iv) = \phi(v)$$
+
+for all $v \in V$. 
+
+Thus $I'(\phi) = \phi$ for all $\phi \in V'$ and $I'$ is the identity operator on $V'$. 
 
 
 #### (14) Define $T: R^3 \rightarrow R^2$ by $T(x,y,z) = (4x + 5y + 6z, 7x + 8y + 9z)$. Suppose $\phi_1,\phi_2$ denotes the dual basis of the standard basis of $R^2$ and $\psi_1,\psi_2,\psi_3$ denotes the dual basis of the standard basis of $R^3$.
@@ -1346,9 +1550,38 @@ $$M(T') = (M(T))^t$$
 (b) Suppose $\phi \in P(R)'$ is defined by $\phi(p) = \int^1_0 p$. Evaluate $(T'(\phi)) (x^3)$.
 
 
-#### (16)
+#### (16) Suppose $W$ is finite-dimensional and $T \in L(V, W)$. Prove that $T' = 0 \iff T = 0$.
+Suppose $\phi \in W'$.
+
+$\Rightarrow$
+Suppose $T' = 0$. Then $T'(\phi) = 0$ for all $\phi \in W'$. We have 
+
+$$0 = T'(\phi)(v) = (\phi \circ T)(v) = \phi(Tv)$$
+
+for all $\phi \in W'$. Hence $Tv = 0$. Since the equation holds for all $v \in V$, $T = 0$. 
+
+$\Leftarrow$
+Suppose $T = 0$. Then $Tv = 0$ for all $v \in V$. We have
+
+$$0 = \phi(Tv) = (\phi \circ T) (v) = T'(\phi)(v)$$
+
+for all $v \in V$. Thus $T'(\phi) = 0$. Since the equation holds for all $\phi \in W'$, $T' = 0$.
 
 
-#### (17)
+#### (17) Suppose $V$ and $W$ are finite-dimensional and $T \in L(V, W)$. Prove that $T$ is invertible if and only if $T' \in L(W', V')$ is invertible.
+Suppose $T$ is invertible. Then $T$ is injective and surjective by 3.63. By 3.129 and 3.131, $T'$ is injective and surjective. Hence $T'$ is invertible by 3.63. 
 
-#### (18)
+The other direction can be shown by applying the same reasoning with $T'$ in place of $T$.
+
+
+#### (18) Suppose $V$ and $W$ are finite-dimensional. Prove that the map that takes $T \in L(V, W)$ to $T' \in L(W', V')$ is an isomorphism of $L(V, W)$ onto $L(W', V')$.
+Define $F: T \rightarrow T'$. First $F$ is linear by 3.120.
+
+Exercise 16 showed that $T' = 0 \iff T = 0$, hence $F$ is injective. We have $dim L(V, W) = dim L(W', V')$ because $dim L(V, W) = (dim V)(dim W)$ and $dim L(W', V') = (dim W') (dim V') = (dim W) (dim V)$ by 3.111 and 3.72. Thus $F$ is surjective and invertible by 3.65. We conclude that $F$ is an isomorphism.
+
+
+#### (24)
+
+#### (25)
+
+#### (30)
