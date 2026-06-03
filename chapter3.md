@@ -254,16 +254,15 @@ $$Tu = T(a_1 u_1 + ... a_m u_m) = T(a_1 u_1) + ... + T(a_m u_m) = a_1 Tu_1 + ...
 
 
 #### (15) Suppose $v_1,...,v_m$ is a linearly dependent list of vectors in $V$. Suppose also that $W \neq \\{0\\}$. Prove that there exist $w_1,...,w_m \in W$ such that no $T \in L(V,W)$ satisfies $Tv_k = w_k$ for each $k=1,...,m$.  
-
-Assume towards contradiction that there exist $T$ such that $Tv_k = w_k$ for each $k$.
+Suppose $v_1,...,v_m$ be a list of linearly dependent list of vectors in $V$. $Assume towards contradiction that there exist $T \in L(V, W)$ such that $Tv_k = w_k$ for each $k=1,...,m$.
 
 Since $v_1,...,v_m$ is a linearly dependent list of vectors, there exist scalars $a_1,...,a_m$, not all 0, such that $a_1 v_1 + ... + a_m v_m = 0$. Let $j$ be an index such that $a_j \neq 0$. 
 
-Let $w_j = w \neq 0$, and $w_i=0$ for all $i \neq j$.
+Let $w_1,...,w_m \in W$ such that $w_j = w \neq 0$, and $w_i=0$ for all $i \neq j$.
 
 Applying $T$, we have $T(0) = 0$, but
 
-$$T(a_1 v_1 + ... a_m v_m) = a_1 Tv_1 + ... a_m Tv_m = a_j w \neq 0$$
+$$0 = T(a_1 v_1 + ... + a_m v_m) = a_1 Tv_1 + ... a_m Tv_m = a_j w \neq 0$$
 
 which is a contradiction. 
 
@@ -1580,8 +1579,68 @@ Define $F: T \rightarrow T'$. First $F$ is linear by 3.120.
 Exercise 16 showed that $T' = 0 \iff T = 0$, hence $F$ is injective. We have $dim L(V, W) = dim L(W', V')$ because $dim L(V, W) = (dim V)(dim W)$ and $dim L(W', V') = (dim W') (dim V') = (dim W) (dim V)$ by 3.111 and 3.72. Thus $F$ is surjective and invertible by 3.65. We conclude that $F$ is an isomorphism.
 
 
-#### (24)
+#### (22) Suppose $V$ is finite-dimensional and $U$ and $W$ are subspaces of $V$.
+#### (a) Show that $(U+W)^0 = U^0 \cap W^0$.
+Suppose $\phi \in (U+W)^0$. Let $u+w \in U+W$. Then $\phi(u+w) = 0$. We have $u = u+0$ where $u \in U, 0 \in W$, and $\phi(u) = \phi(u+0) = 0$. Similarly, We have $w = w + 0$ where $w \in W, 0 \in U$, and $\phi(w) = \phi(w + 0) = 0$. Since $\phi \in U^0$ and $\phi \in W^0$, $\phi \in U^0 \cap W^0$.
 
-#### (25)
+Suppose $\phi \in U^0 \cap W^0$. Then $\phi(u) = 0$ for all $u \in U$ and $\phi(w) = 0$ for all $w \in W$. We have $0 = \phi(u) + \phi(w) = \phi(u+w)$ for all $u+w \in U+W$. Hence $\phi \in (U+W)^0$.
 
-#### (30)
+#### (b) Show that $(U \cap W)^0 = U^0 + W^0$.
+
+
+
+#### (24) Suppose $V$ is finite-dimensional and $v_1,...,v_m \in V$. Define a linear map $\Gamma: V' \rightarrow F^m$ by $\Gamma(\phi) = (\phi(v_1),...,\phi(v_m))$.
+
+#### (a) Prove that $v_1,...,v_m$ spans $V$ if and only if $\Gamma$ is injective.
+
+$\Rightarrow$
+Suppose $v_1,...,v_m$ spans $V$. We want to show that $\Gamma$ is injective. 
+
+Suppose $\Gamma(\phi) = (\phi(v_1),...,\phi(v_m)) = 0$. Then $\phi(v_1) = ... = \phi(v_m) = 0$, $v_1, ..., v_m \in null \phi$. 
+
+Since $null \phi$ is a subspace and $v_1,....,v_m \in null \phi$, $span(v_1,...,v_m) \subseteq null \phi$. Since $V = span(v_1,...,v_m)$, $V = null \phi$. Thus $\phi (v) = 0$ for all $v \in V$. Hence $\phi = 0$. 
+
+By 3.15, we conclude that $\Gamma$ is injective.
+
+$\Leftarrow$
+Suppose $\Gamma$ is injective. We want to show that $v_1,...,v_m$ spans $V$.
+
+Since $\Gamma$ is injective, $null \Gamma = \\{0\\}$. Let $W = span(v_1,...,v_m)$. 
+
+Assume towards contradiction that $v_1,...,v_m$ do not span $V$. Then there exists a subspace $U \subset V$, $U \neq \\{0\\}$ such that $V = W \oplus U$ by 2.33. Let $u_1,...,u_n$ be a basis of $U$. Define a linear functional on $W$ by $\phi(v_j) = 0$ for $j = 1,...,m$. We can extend it to a linear functional on $V$ (from 3A Exercise 13). Define $\psi(w) = 0, w \in W$, and $\psi(u_k) = 1$ for $k = 1,...,n$. Then $\psi(v_1)=...=\psi(v_m)=0$, so $\Gamma(\psi) = 0$, but $\psi \neq 0$ because $\psi(u_k) = 1$ for $k=1,...,n$. This contradicts the injectivity of $\Gamma$. 
+
+We conclude that $v_1,...,v_m$ spans $V$.
+
+#### (b) Prove that $v_1,...,v_m$ is linearly independent if and only if $\Gamma$ is surjective.
+
+$\Rightarrow$
+Suppose $v_1,...,v_m$ is linearly independent. We want to show that $\Gamma$ is surjective.
+
+Let $W = span(v_1,...,v_m)$ be a subspace of $V$. Then $v_1,...,v_m$ is a basis of the subspace $W$. We can extend it to a basis of $V$, $v_1,...,v_m, u_1,...,u_n$.
+
+Suppose $(x_1,...,x_m) \in F^m$. We can define a linear functional on $V$ by $\phi(v_j) = x_j, j = 1,...,m$, $\phi(u_k) = 0, k=1,...,n$. By 3.4 $\phi$ is well-defined. Since $(x_1,...,x_m)$ is arbitrary, $range \Gamma = F^m$. We conclude that $\Gamma$ is surjective.
+
+$\Leftarrow$
+Suppose $\Gamma$ is surjective. We want to show that $v_1,...,v_m$ is linearly independent.
+
+Assume towards contradiction that $v_1,...,v_m$ is not linearly independent. Then there exists $l \in \\{1,...,m\\}$ such that $v_l = a_1 v_1 + ... + a_{l-1} v_{l-1}$ by 2.19. Applying $\phi$, we have
+
+$$\phi(v_l) = a_1 \phi(v_1) + ... + a_{l-1} \phi(v_{l-1})$$
+
+Consider $(0,..0,1,0,...0) \in F^m$ where the lth coordinate is 1 and all other coordinates are 0. Since $\Gamma$ is surjective, there exists $\phi \in V'$ such that $\Gamma(\phi) = (0,..0,1,0,...0)$. Then $\phi(v_1) = ... = \phi(v_{l-1}) = 0$ and $\phi(v_l) = 1$. However, 
+
+$$1 = \phi(v_l) = a_1 \phi(v_1) + ... + a_{l-1} \phi(v_{l-1}) = 0$$
+
+which is a contradiction. 
+
+We conclude that $v_1,...,v_m$ is linearly independent.
+
+
+#### (25) Suppose $V$ is finite-dimensional and $\phi_1,...,\phi_m \in V'$. Define a linear map $\Gamma: V \rightarrow F^m$ by $\Gamma(v) = (\phi_1(v), ..., \phi_m(v))$.
+
+(a) Prove that $\phi_1,...,\phi_m$ spans $V'$ if and only if $\Gamma$ is injective.
+
+(b) Prove that $\phi_1,...,\phi_m$ is linearly independent if and only if $\Gamma$ is surjective.
+
+
+#### (30) Suppose $V$ is finite-dimensional and $\phi_1,...,\phi_n$ is a basis of $V'$. Show that there exists a basis of $V$ whose dual basis is $\phi_1,...,\phi_n$.
