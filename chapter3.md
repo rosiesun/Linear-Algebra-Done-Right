@@ -427,6 +427,13 @@ A system of linear equations with more equations than variables has no solution 
 
 ## Exercises
 
+#### (2)
+
+#### (3)
+
+#### (5)
+
+
 #### (7) Suppose $V$ and $W$ are finite-dimensional with $2 \leq dim V \leq dim W$. Show that $\\{T \in L(V,W): T is not injective \\}$ is not a subspace of $L(V,W)$.
 Let $v_1,...,v_n$ be a basis of $V$. Let $w_1,...,w_n$ be a list of linearly independent vectors in $W$. We know that there are at least n linearly independent vectors because $dim W >= dim V$.
 
@@ -614,6 +621,12 @@ for $i=1,...,n$. Since Since $TS$ is linear and agrees with the identity operato
 $$\leftarrow$$
 
 Assume that there exists $S \in L(W,V)$ such that $TS$ is the identity operator on $W$. Let $w \in W$. $TS(w) = T(Sw)=w$. Therefore $w \in range T$. Therefore $range T = W$, and $T$ is surjective.
+
+#### (21)
+
+#### (22)
+
+#### (23)
 
 
 #### (25) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S \subseteq null T$ if and only if there exists $E \in L(W)$ such that $T=ES$.
@@ -1036,6 +1049,9 @@ $$(T^{-1} S^{-1})(ST) = T^{-1} (S^{-1} S) T  = T^{-1} I T = T^{-1} T = I$$
 
 Therefore $ST$ is invertible and $T^{-1} S^{-1}$ is the inverse of $ST$.
 
+#### (3)
+
+#### (5)
 
 #### (6) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S = null T$ if and only if there exists an invertible $E \in L(W)$ such that $S=ET$.
 $\Leftarrow$
@@ -1127,10 +1143,12 @@ On $U$, $E$ is a composition of two bijective maps, $(T|_{U'})^{-1}$ and $S|_{U}
 
 Since any vector in $V$ decomposes uniquely as a sum from $null S$ and $U$, and $E$ is bijective on both pieces, $E$ is bijective on $V$. Therefore $E$ is invertible.
 
+#### (8)
+
+#### (9)
 
 #### (11) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ is invertible $\iff S$ and $T$ are invertible.
 $\Leftarrow$
-
 Suppose $ST$ is invertible. Then $ST$ is injective and surjective. 
 
 We have $range ST = V$. Thus $range S = V$, and $S$ is surjective. 
@@ -1142,7 +1160,6 @@ Then the restriction $S|_{range T}: range T \rightarrow V$ is not surjective by 
 By 3.65, $S,T$ are invertible.
 
 $\Rightarrow$
-
 Suppose $S,T$ are invertible. Then 
 
 $$ST T^{-1} S^{-1} = I = T^{-1} S^{-1} ST$$
@@ -1180,6 +1197,9 @@ Therefore we conclude $S$ is injective.
 Let $v \in V$. Since $Tv_1,...,Tv_m$ spans $V$, we can write $v = a_1 Tv_1 + ... + a_m Tv_m$ for some $a_1,...,a_m$. Then $v \in range T$. Therefore $T$ is surjective. By 3.65, $T$ is injective and invertible. 
 
 Since $V = span(Tv_1,...,Tv_m)$, $V = T(span(v_1,...,v_m))$ by linearity. Because $T$ is invertible, $span(v_1,...,v_m) = V$. 
+
+#### (18)
+
 
 
 
@@ -1627,7 +1647,7 @@ Assume towards contradiction that $v_1,...,v_m$ is not linearly independent. The
 
 $$\phi(v_l) = a_1 \phi(v_1) + ... + a_{l-1} \phi(v_{l-1})$$
 
-Consider $(0,..0,1,0,...0) \in F^m$ where the lth coordinate is 1 and all other coordinates are 0. Since $\Gamma$ is surjective, there exists $\phi \in V'$ such that $\Gamma(\phi) = (0,..0,1,0,...0)$. Then $\phi(v_1) = ... = \phi(v_{l-1}) = 0$ and $\phi(v_l) = 1$. However, 
+Consider $(0,..0,1,0,...0) \in F^m$ where the lth coordinate is 1 and all other coordinates are 0. Since $\Gamma$ is surjective, there exists $\phi \in V'$ such that $\Gamma(\phi) = (0,..0,1,0,...0)$. Then $\phi(v_1) = ... = \phi(v_{l-1}) = 0$ and $\phi(v_l) = 1$. However
 
 $$1 = \phi(v_l) = a_1 \phi(v_1) + ... + a_{l-1} \phi(v_{l-1}) = 0$$
 
@@ -1638,9 +1658,11 @@ We conclude that $v_1,...,v_m$ is linearly independent.
 
 #### (25) Suppose $V$ is finite-dimensional and $\phi_1,...,\phi_m \in V'$. Define a linear map $\Gamma: V \rightarrow F^m$ by $\Gamma(v) = (\phi_1(v), ..., \phi_m(v))$.
 
-(a) Prove that $\phi_1,...,\phi_m$ spans $V'$ if and only if $\Gamma$ is injective.
+#### (a) Prove that $\phi_1,...,\phi_m$ spans $V'$ if and only if $\Gamma$ is injective.
 
-(b) Prove that $\phi_1,...,\phi_m$ is linearly independent if and only if $\Gamma$ is surjective.
+
+
+#### (b) Prove that $\phi_1,...,\phi_m$ is linearly independent if and only if $\Gamma$ is surjective.
 
 
 #### (30) Suppose $V$ is finite-dimensional and $\phi_1,...,\phi_n$ is a basis of $V'$. Show that there exists a basis of $V$ whose dual basis is $\phi_1,...,\phi_n$.
