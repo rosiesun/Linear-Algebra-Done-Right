@@ -1647,11 +1647,9 @@ Assume towards contradiction that $v_1,...,v_m$ is not linearly independent. The
 
 $$\phi(v_i) = a_1 \phi(v_1) + ... + a_{i-1} \phi(v_{i-1})$$
 
-Consider $(0,..0,1,0,...0) \in F^m$ where the ith coordinate is 1 and all other coordinates are 0. Since $\Gamma$ is surjective, there exists $\phi \in V'$ such that $\Gamma(\phi) = (0,..0,1,0,...0)$. Then $\phi(v_1) = ... = \phi(v_{i-1}) = 0$ and $\phi(v_i) = 1$. However,
+Consider $(0,..0,1,0,...0) \in F^m$ where the ith coordinate is 1 and all other coordinates are 0. 
 
-$$\phi(v_i) = a_1 \phi(v_1) + ... + a_{i-1} \phi(v_{i-1}) = 0$$
-
-which is a contradiction. 
+Since $\Gamma$ is surjective, there exists $\phi \in V'$ such that $\Gamma(\phi) = (0,..0,1,0,...0)$. Then $\phi(v_1) = ... = \phi(v_{i-1}) = 0$ and $\phi(v_i) = 1$. However, $\phi(v_i) = a_1 \phi(v_1) + ... + a_{i-1} \phi(v_{i-1}) = 0$ which is a contradiction. 
 
 We conclude that $v_1,...,v_m$ is linearly independent.
 
