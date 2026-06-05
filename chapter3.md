@@ -1643,13 +1643,13 @@ Suppose $(x_1,...,x_m) \in F^m$. We can define a linear functional on $V$ by $\p
 $\Leftarrow$
 Suppose $\Gamma$ is surjective. We want to show that $v_1,...,v_m$ is linearly independent.
 
-Assume towards contradiction that $v_1,...,v_m$ is not linearly independent. Then there exists $l \in \\{1,...,m\\}$ such that $v_l = a_1 v_1 + ... + a_{l-1} v_{l-1}$ by 2.19. Applying $\phi$, we have
+Assume towards contradiction that $v_1,...,v_m$ is not linearly independent. Then there exists $i \in \\{1,...,m\\}$ such that $v_i = a_1 v_1 + ... + a_{i-1} v_{i-1}$ by 2.19. Applying $\phi$, we have
 
-$$\phi(v_l) = a_1 \phi(v_1) + ... + a_{l-1} \phi(v_{l-1})$$
+$$\phi(v_i) = a_1 \phi(v_1) + ... + a_{i-1} \phi(v_{i-1})$$
 
-Consider $(0,..0,1,0,...0) \in F^m$ where the lth coordinate is 1 and all other coordinates are 0. Since $\Gamma$ is surjective, there exists $\phi \in V'$ such that $\Gamma(\phi) = (0,..0,1,0,...0)$. Then $\phi(v_1) = ... = \phi(v_{l-1}) = 0$ and $\phi(v_l) = 1$. However
+Consider $(0,..0,1,0,...0) \in F^m$ where the ith coordinate is 1 and all other coordinates are 0. Since $\Gamma$ is surjective, there exists $\phi \in V'$ such that $\Gamma(\phi) = (0,..0,1,0,...0)$. Then $\phi(v_1) = ... = \phi(v_{i-1}) = 0$ and $\phi(v_i) = 1$. However,
 
-$$1 = \phi(v_l) = a_1 \phi(v_1) + ... + a_{l-1} \phi(v_{l-1}) = 0$$
+$$1 = \phi(v_i) = a_1 \phi(v_1) + ... + a_{i-1} \phi(v_{i-1}) = 0$$
 
 which is a contradiction. 
 
@@ -1663,6 +1663,45 @@ We conclude that $v_1,...,v_m$ is linearly independent.
 
 
 #### (b) Prove that $\phi_1,...,\phi_m$ is linearly independent if and only if $\Gamma$ is surjective.
+
+
+#### (29) Suppose $V$ and $W$ are finite-dimensional and $T \in L(V, W)$. 
+
+#### (a) Prove that if $\phi \in W'$ and $null T' = span(\phi)$, then $range T = null \phi$.
+First consider $\phi = 0$. Then $\null \phi = W$. Since $span(0) = \\{0\\}$, $null T' = \\{0\\}$. Then $T'$ is injective by 3.15, and $T$ is surjective by 3.129, and $range T = W$. Thus $W = range T = null \phi$.
+
+For the rest of the proof suppose $\phi \neq 0$.
+
+Since $null T' = span(\phi)$, $T'(\phi) = 0$. Then $\phi(Tv) = 0$ for all $v \in V$. Thus $range T \subseteq null \phi$.
+
+To complete the proof, we will show that $null \phi$ and $range T$ have the same dimension. 
+
+Suppose $dim W = m$.
+
+Since $null T' = span(\phi)$, $dim null T' = 1$. We have $null T' = (range T)^0$ by 3.128, so $dim (range T)^0 = 1$. Then $dim range T = dim W - dim (range T)^0 = m - 1$ by 3.125.
+
+Since $dim W = dim null \phi + dim range \phi$ by 3.21, and $dim range \phi = 1$, we have $dim null \phi = m-1$.
+
+Thus $dim null \phi = dim range T = m-1$ and together with the fact that $range T \subseteq null \phi$, we conclude that $range T = null \phi$.
+
+#### (b) Prove that if $\psi \in V'$ and $range T' = span(\psi)$, then $null T = null \psi$.
+First consider $\psi = 0$. Then $null \psi = V$. Since $span(0) = \\{0\\}$, $range T' = \\{0\\}$. $T'(\phi) = 0$ for all $\phi \in W'$. Hence $T'=0$, and $T=0$ (from exercise 16). Thus $V = null T = null \psi$.
+
+For the rest of the proof suppose $\psi \neq 0$.
+
+Suppose $v \in null T$. Then $Tv = 0$. Since $\psi \in range T'$, there exists $\phi \in W'$ such that $T'(\phi) = \psi$. Then
+
+$$0 = \phi(0) = \phi(Tv) = (T'(\phi))(v) = \psi(v).$$
+
+Thus $v \in null \psi$. We conclude that $null T \subseteq null \psi$.
+
+To complete the proof, we will show that $null T$ and $null \psi$ have the same dimension.
+
+Suppose $dim V = n$.
+
+Since $range T' = span(\psi)$, $dim range T' = 1$. By 3.130, $dim range T = dim range T' = 1$. Then $dim null T = dim V - dim range T = n - 1$. We also have $dim null \psi = dim V - dim range \psi = n - 1$. 
+
+Thus $dim null \psi = dim null T = n-1$ and together with the fact that $null T \subseteq null \psi$, we conclude that $null T = null \psi$.
 
 
 #### (30) Suppose $V$ is finite-dimensional and $\phi_1,...,\phi_n$ is a basis of $V'$. Show that there exists a basis of $V$ whose dual basis is $\phi_1,...,\phi_n$.
