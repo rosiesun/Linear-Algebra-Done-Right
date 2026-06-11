@@ -88,39 +88,146 @@ Proof:
 ### 7.23
 
 
+
+
+
 ## Exercises
 
-#### (1)
+### (1) Suppose $n$ is a positive integer. Define $T \in L(V)$ by $T(z_1, ..., z_n) = (0, z_1, ..., z_{n-1}$. Find a formula for $T^* (z_1, ..., z_n)$.
 
-#### (2)
+Suppose $(z_1, ..., z_n), (w_1, ..., w_n) \in F^n$. We have 
 
-#### (3)
+$$
+\begin{aligned}
+\langle T(z_1, ..., z_n), (w_1, ..., w_n) \rangle 
+    &= \langle (0, z_1, ..., z_{n-1}), (w_1, ..., w_n) \rangle \\
+    &= 0 + z_1 \overline{w_2} + ... + z_{n-1} \overline{w_n} \\
+    &= \langle (z_1, ..., z_n), (w_2, ..., w_n, 0) \rangle
+\end{aligned}
+$$
 
-#### (4)
+Thus the adjoint of $T$ is the forward shift
 
-#### (5)
+$$T^* (w_1, ..., w_n) = (w_2, ..., w_n, 0).$$
 
-#### (6)
 
-#### (7)
+### (2) Suppose $T \in L(V, W)$. Prove that $T = 0 \iff T^* = 0 \iff T^* T = 0 \iff T T^* = 0$.
 
-#### (10)
+$T = 0 \rightarrow T^* = 0$
 
-#### (15)
+Suppose $T = 0$. Then $Tv = 0$ for all $v \in V$, and $\langle Tv, w \rangle = 0$ for all $v \in V, w \in W$. Then $\langle v, T^* w \rangle = 0$ for all $v \in V, w \in W$. Taking $v = T^* w$, $T^* w = 0$ for all $w \in W$. Thus $T^* = 0$.
 
-#### (17)
+$T^* = 0 \rightarrow T^* T = 0$
 
-#### (18)
+Suppose $T^* = 0$. Then $T^* T = 0$. 
 
-#### (20)
+$T^* T = 0 \rightarrow T = 0$
 
-#### (22)
+Suppose $T^* T = 0$. Then $T^* T v = 0$ for all $v \in V$, and $\langle T^* T v, v \rangle = 0$ for all $v \in V$. Then $\langle Tv, Tv \rangle = 0$ for all $v \in V$. Hence $Tv = 0$ for all $v \in V$, and $T = 0$.  
 
-#### (29)
+$T T^* = 0 \rightarrow T^* = 0$
 
-#### (30)
+Suppose $T T^* = 0$. Then $T T^* w = 0$ for all $w \in W$, and $\langle T T^* w, w \rangle = 0$ for all $w \in W$. Then $\langle T^* w, T^* w \rangle = 0$ for all $w \in W$. Hence $T^* w = 0$ for all $w \in W$, and $T^* = 0$.
 
-#### (32) Suppose $T: V \rightarrow W$ is a linear map. Show that under the standard identification of $V$ with $V'$ and the corresponding identification of $W$ and $W'$, the adjoint map $T*: W \rightarrow V$ corresponds to the dual map $T': W' \rightarrow V'$. More precisely, show that $T'(\phi_w) = \phi_{T* w}$. 
+
+### (3) Suppose $T \in L(V)$ and $\lambda \in F$. Prove that $\lambda$ is an eigenvalue of $T$ $\iff$ $\overline{\lambda}$ is an eigenvalue of $T^*$.
+
+Suppose $\lambda$ is an eigenvalue of $T$. Then $T - \lambda I$ is not injective, i.e. $null (T - \lambda I) \neq \\{0\\}$. 
+
+From 3.21, we have 
+
+$$dim V = dim null (T - \lambda I) + dim range (T - \lambda I).$$
+
+Since $dim null (T - \lambda I) \geq 1$, $range (T - \lambda I) \subset V$.
+
+From 7.6, we have 
+
+$$null (T - \lambda)^* = (range (T - \lambda I))^\perp.$$
+
+Since 
+
+$$V = range (T - \lambda I) \oplus (range (T - \lambda I))^\perp $$
+
+by 6.49, $(range (T - \lambda I))^\perp \neq \\{0\\}$. So $range (T - \lambda I)$ is a proper subspace, and its orthogonal complement is nonzero.
+
+Thus $null (T - \lambda)^* \neq \\{0\\}$. 
+
+Note that 
+
+$$(T - \lambda)^* = T^* - \overline{\lambda} I.$$
+
+We conclude that $T^* - \overline{\lambda} I$ is not injective. Hence $\overline{\lambda}$ is an eigenvalue of $T^*$.
+
+The opposite direction follows from symmetry and the fact that $(T^* - \overline{\lambda} I)^* = T - \lambda I$.
+
+
+### (4) Suppose $T \in L(V)$ and $U$ is a subspace of $V$. Prove that $U$ is invariant under $T$ $\iff$ $U^\perp$ is invariant under $T^*$.
+
+Suppose $U$ is invariant under $T$. Suppose $u \in U$ and $w \in U^\perp$. Then $Tu \in U$. We have 
+
+$$0 = \langle Tu, w \rangle = \langle u, T^* w \rangle$$
+
+So $T^* w$ is orthogonal to $U$. Hence $T^* w \in U^\perp$ and $U^\perp$ is invariant under $T^*$.
+
+The opposite direction follows from symmetry and the fact that $(U^\perp)^\perp = U$.
+
+
+### (5) Suppose $T \in L(V, W)$. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ and $f_1, ..., f_m$ is an orthonormal basis of $W$. Prove that $\lVert Te_1 \rVert^2 + ... + \lVert Te_n \rVert^2 = \lVert T^* f_1 \rVert^2 + ... + \lVert T^* f_m \rVert^2$.
+
+From the proof of 7.9, we have 
+
+$$Te_k = \langle Te_k, f_1 \rangle f_1 + ... + \langle Te_k, f_m \rangle f_m.$$
+
+From 6.24, we have
+
+$$\lVert Te_k \rVert^2 = |\langle Te_k, f_1 \rangle|^2 + ... + |\langle Te_k, f_m \rangle|^2.$$
+
+Therefore 
+
+$$\sum_{k=1}^n \lVert Te_k \rVert^2 = \sum_{k=1}^n \sum_{j=1}^m |\langle Te_k, f_j \rangle|^2.$$
+
+Similarly, we have
+
+$$T^* f_j = \langle T^* f_j, e_1 \rangle e_1 + ... + \langle T^* f_j, e_n \rangle e_n.$$
+
+Therefore 
+
+$$
+\begin{aligned}
+\sum_{j=1}^m \lVert T^* f_j \rVert^2 
+    &= \sum_{j=1}^m \sum_{k=1}^n |\langle T^* f_j, e_k \rangle|^2 \\
+    &= \sum_{j=1}^m \sum_{k=1}^n |\langle f_j, T e_k \rangle|^2 \\
+    &= \sum_{j=1}^m \sum_{k=1}^n |\overline{\langle Te_k, f_j \rangle} |^2 \\
+    &= \sum_{j=1}^m \sum_{k=1}^n |\langle Te_k, f_j \rangle|^2
+\end{aligned}
+$$
+
+Hence 
+
+$$\lVert Te_1 \rVert^2 + ... + \lVert Te_n \rVert^2 = \lVert T^* f_1 \rVert^2 + ... + \lVert T^* f_m \rVert^2.$$
+
+
+### (6)
+
+### (7)
+
+### (10)
+
+### (15)
+
+### (17)
+
+### (18)
+
+### (20)
+
+### (22)
+
+### (29)
+
+### (30)
+
+### (32) Suppose $T: V \rightarrow W$ is a linear map. Show that under the standard identification of $V$ with $V'$ and the corresponding identification of $W$ and $W'$, the adjoint map $T*: W \rightarrow V$ corresponds to the dual map $T': W' \rightarrow V'$. More precisely, show that $T'(\phi_w) = \phi_{T* w}$. 
 
 Suppose $v \in V, w \in W$. Then 
 
@@ -273,9 +380,9 @@ $$A = B D C^*.$$
 # 7F Consequences of Singular Value Decomposition
 
 ### 7.86 Definition: norm of a linear map
-Suppose $T \in L(V, W)$. Then the norm of $T$, denoted by $||T||$, is defined by
+Suppose $T \in L(V, W)$. Then the norm of $T$, denoted by $\lVert T \rVert$, is defined by
 
-$$||T|| = max \\{||Tv||: v \in V, ||v|| \leq 1 \\}.$$ 
+$$\lVert T \rVert = max \\{\lVert Tv \rVert: v \in V, \lVert v \rVert \leq 1 \\}.$$ 
 
 
 ## Exercises
