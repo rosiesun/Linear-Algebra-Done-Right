@@ -1,7 +1,7 @@
-Linear Algebra Done Right - Chapter 7 <br>
+Linear Algebra Done Right - Chapter 7 \langlebr\rangle 
 Operators on Inner Product Spaces
 ================
-Rosie Sun <br>
+Rosie Sun \langlebr\rangle 
 2026-06-01
 
 
@@ -10,7 +10,7 @@ Rosie Sun <br>
 ### 7.1 Definition: adjoint
 Suppose $T \in L(V, W)$. The adjoint of $T$ is the function $T^*: W \rightarrow V$ such that 
 
-$$<Tv, w> = <v, T^* w>$$
+$$\langle Tv, w\rangle  = \langle v, T^* w\rangle $$
 
 for every $v \in V$ and every $w \in W$.
 
@@ -68,7 +68,7 @@ Proof:
 ### 7.13
 Suppose $V$ is a complex inner product space and $T \in L(V)$. Then
 
-$<Tv, v> = 0$ for every $v \in V$ $\iff T = 0$.
+$\langle Tv, v\rangle  = 0$ for every $v \in V$ $\iff T = 0$.
 
 Proof:
 
@@ -128,8 +128,8 @@ $$
 \begin{aligned}
 T'(\phi_w) (v) &= (\phi_w \circ T) (v) \\
     &= \phi_w (Tv) \\
-    &= <Tv, w> \\
-    &= <v, T^* w> \\
+    &= \langle Tv, w \rangle \\
+    &= \langle v, T^* w \rangle \\
     &= \phi_{T^* w} (v)
 \end{aligned}
 $$
@@ -155,7 +155,7 @@ Thus $T'(\phi_w) = \phi_{T^* w}$.
 ### 7.34 Definition: positive operator
 An operator $T \in L(V)$ is called positive if $T$ is self-adjoint and 
 
-$$<Tv, v> = 0$$
+$$\langle Tv, v\rangle  = 0$$
 
 for all $v \in V$.
 
@@ -184,7 +184,7 @@ Every positive operator on $V$ has a unique positive square root.
 For $T$ a positive operator, $\sqrt{T}$ denotes the unique positive square root of $T$.
 
 ### 7.43
-Suppose $T$ is a positive operator on $V$ and $v \in V$ is such that $<Tv, v> = 0$. Then $Tv = 0$.
+Suppose $T$ is a positive operator on $V$ and $v \in V$ is such that $\langle Tv, v\rangle  = 0$. Then $Tv = 0$.
 
 
 
@@ -207,7 +207,7 @@ Suppose $S \in L(V, W)$. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ 
 
 (b) $S^* S = I$.
 
-(c) $<Su, Sv> = <u, v>$ for all $u, v \in V$.
+(c) $\langle Su, Sv\rangle  = \langle u, v\rangle $ for all $u, v \in V$.
 
 (d) $Se_1, ..., Se_n$ is an orthonormal list in $W$.
 
@@ -256,12 +256,12 @@ Suppose $T \in L(V, W)$. The singular values of $T$ are teh nonnegative square r
 ### 7.70 Singular value decomposition
 Suppose $T \in L(V, W)$ and the positive singular values of $T$ are $s_1,...,s_m$. Then there exist orthonormal lists $e_1,...,e_m$ in $V$ and $f_1,...,f_m$ in $W$ such that 
 
-$$Tv = s_1 <v, e_1> f_1 + ... + s_m <v, e_m> f_m$$
+$$Tv = s_1 \langle v, e_1\rangle  f_1 + ... + s_m \langle v, e_m\rangle  f_m$$
 
 for every $v \in V$.
 
 ### 7.80 Matrix version of SVD
-Suppose $A$ is a p-by-n matrix of rank m >= 1. Then there exist a p-by-m matrix $B$ with orthonormal columns, an m-by-m diagonal matrix $D$ with positive numbers on the diagonal, and an n-by-m matrix $C$ with orthonormal columns such that 
+Suppose $A$ is a p-by-n matrix of rank m \rangle = 1. Then there exist a p-by-m matrix $B$ with orthonormal columns, an m-by-m diagonal matrix $D$ with positive numbers on the diagonal, and an n-by-m matrix $C$ with orthonormal columns such that 
 
 $$A = B D C^*.$$
 
