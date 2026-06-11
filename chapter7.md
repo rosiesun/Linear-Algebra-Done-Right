@@ -1,4 +1,4 @@
-Linear Algebra Done Right - Chapter 7 \langlebr\rangle 
+Linear Algebra Done Right - Chapter 7 <br> 
 Operators on Inner Product Spaces
 ================
 Rosie Sun \langlebr\rangle 
