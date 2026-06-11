@@ -596,9 +596,9 @@ Suppose $\lVert v \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \r
 
 Based on 6.26, we can decompose 
 
-$$v = \langle v,e_1 \ranglee_1 + ... + \langle v,e_m \ranglee_m + v - \langle v,e_1 \ranglee_1 - ... - \langle v,e_m \ranglee_m$$
+$$v = \langle v,e_1 \rangle e_1 + ... + \langle v,e_m \rangle e_m + v - \langle v,e_1 \rangle e_1 - ... - \langle v,e_m \rangle e_m$$
 
-Let $u = \langle v,e_1 \ranglee_1 + ... + \langle v,e_m \ranglee_m$ and $w = v - \langle v,e_1 \ranglee_1 - ... - \langle v,e_m \ranglee_m$.
+Let $u = \langle v,e_1 \rangle e_1 + ... + \langle v,e_m \rangle e_m$ and $w = v - \langle v,e_1 \rangle e_1 - ... - \langle v,e_m \rangle e_m$.
 
 Then $\langle w,u \rangle = 0$. By the Pythagorean theorem, 
 
@@ -610,7 +610,7 @@ By hypothesis, $\lVert v \rVert^2 = \lVert u \rVert^2$, which implies $\lVert w 
 
 Thus $w = 0$, and we conclude 
 
-$$v = \langle v,e_1 \ranglee_1 + ... + \langle v,e_m \ranglee_m \in span(e_1,...,e_m)$$
+$$v = \langle v,e_1 \rangle e_1 + ... + \langle v,e_m \rangle e_m \in span(e_1,...,e_m)$$
 
 $\Leftarrow$
 Suppose $v \in span(e_1,...,e_m)$. Then $v = a_1 e_1 + ... + a_m e_m$ for some $a_1,...,a_m$.
@@ -685,7 +685,7 @@ Thus $u_1,...,u_n$ is linearly independent, and we conclude it is a basis of $V$
 #### (22) Suppose $C[-1, 1]$ is the vector space of continuous real-valued functions on the interval [-1, 1] with inner product given by $\langle f,g \rangle = \int^1_{-1} fg$ for all $f,g \in C[-1,1]$. Let $\phi$ be the linear functional on $C[-1, 1]$ defined by $\phi(f) = f(0)$. Show that there does not exist $g \in C[-1, 1]$ such that $\phi(f) = \langle f,g \rangle$ for every $f \in C[-1, 1]$.
 Assume towards contradiction that there exists $g \in C[-1, 1]$ such that $\phi(f) = \langle f,g \rangle$ for every $f \in C[-1, 1]$.
 
-Consider the tent function, for some $0\langle  \epsilon \langle  1$, $f(x) = 1 - \frac{|x|}{\epsilon}$ for $|x| \langle = \epsilon$, $f(x) = 0$ for $|x|  \rangle \epsilon$.
+Consider the tent function, for some $0 < \epsilon < 1$, $f(x) = 1 - \frac{|x|}{\epsilon}$ for $|x| \langle = \epsilon$, $f(x) = 0$ for $|x| < \epsilon$.
 
 
 
@@ -912,7 +912,14 @@ Proof:
 
 We have 
 
-$$\lVert v - P_U v \rVert^2 \leq \lVert v - P_U v \rVert^2 + \lVert P_U v - u \rVert^2 = \lVert (v - P_U v) + (P_Uv - u) \rVert^2 = \lVert v-u \rVert^2$$
+$$
+\begin{aligned}
+\lVert v - P_U v \rVert^2 &\leq 
+    \lVert v - P_U v \rVert^2 + \lVert P_U v - u \rVert^2 \\
+    &= \lVert (v - P_U v) + (P_Uv - u) \rVert^2 \\
+    &= \lVert v-u \rVert^2
+\end{aligned}
+$$
 
 where the first inequality holds because $0 \leq \lVert P_U v - u \rVert^2$, the second inequality comes from the Pythagorean theorem (which applies because $v - P_U v \in U^{\perp}$ by 6.57 and $P_U v - u \in U$). 
 
