@@ -212,7 +212,7 @@ Suppose $T \in L(V)$. Suppose $u_1,...,u_n$ and $v_1,...,v_n$ are bases of $V$. 
 
 ## Exercises
 
-#### (2) Suppose $T \in L(U,V)$ and $S \in L(V,W)$ are both invertible linear maps. Prove that $ST \in L(U,W)$ is invertible and that $(ST)^{-1} = T^{-1} S^{-1}$.
+### (2) Suppose $T \in L(U,V)$ and $S \in L(V,W)$ are both invertible linear maps. Prove that $ST \in L(U,W)$ is invertible and that $(ST)^{-1} = T^{-1} S^{-1}$.
 Since $S, T$ are invertible, we have 
 
 $$S S^{-1} = S^{-1} S = I$$ 
@@ -229,11 +229,11 @@ $$(T^{-1} S^{-1})(ST) = T^{-1} (S^{-1} S) T  = T^{-1} I T = T^{-1} T = I$$
 
 Therefore $ST$ is invertible and $T^{-1} S^{-1}$ is the inverse of $ST$.
 
-#### (3)
+### (3)
 
-#### (5)
+### (5)
 
-#### (6) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S = null T$ if and only if there exists an invertible $E \in L(W)$ such that $S=ET$.
+### (6) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S = null T$ if and only if there exists an invertible $E \in L(W)$ such that $S=ET$.
 $\Leftarrow$
 
 Suppose there exists invertible $E \in L(W)$ such that $S=ET$. 
@@ -280,7 +280,7 @@ $$ETv = ET(a_1 v_1 + ... + a_n v_n) = a_1 Ew_1 + ... + a_n Ew_n = a_1 Sv_1 + ...
 By design, $range E = W$. By 3.65, $E$ is invertible.
 
 
-#### (7) Suppose that $V$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $range S = range T$ if and only if there exists an invertible $E \in L(V)$ such that $S=TE$.
+### (7) Suppose that $V$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $range S = range T$ if and only if there exists an invertible $E \in L(V)$ such that $S=TE$.
 $\Leftarrow$
 Suppose there exists an invertible $E \in L(V)$ such that $S=TE$. 
 
@@ -323,11 +323,11 @@ On $U$, $E$ is a composition of two bijective maps, $(T|_{U'})^{-1}$ and $S|_{U}
 
 Since any vector in $V$ decomposes uniquely as a sum from $null S$ and $U$, and $E$ is bijective on both pieces, $E$ is bijective on $V$. Therefore $E$ is invertible.
 
-#### (8)
+### (8)
 
-#### (9)
+### (9)
 
-#### (11) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ is invertible $\iff S$ and $T$ are invertible.
+### (11) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ is invertible $\iff S$ and $T$ are invertible.
 $\Leftarrow$
 Suppose $ST$ is invertible. Then $ST$ is injective and surjective. 
 
@@ -347,7 +347,7 @@ $$ST T^{-1} S^{-1} = I = T^{-1} S^{-1} ST$$
 Therefore $ST$ is invertible.
 
 
-#### (12) Suppose $V$ is finite-dimensional and $S,T,U \in L(V)$ and $STU=I$. Show that $T$ is invertible and that $T^{-1} = US$.
+### (12) Suppose $V$ is finite-dimensional and $S,T,U \in L(V)$ and $STU=I$. Show that $T$ is invertible and that $T^{-1} = US$.
 By 3.68,
 
 $$STU = S(TU) = I \Rightarrow (TU)S = T(US) = I$$
@@ -357,7 +357,7 @@ $$STU = (ST)U = I \Rightarrow U(ST) = (US)T = I$$
 Thus $T$ is invertible and $T^{-1} = US$.
 
 
-#### (14) Prove or give a counterexample: If $V$ is a finite-dimensional vector space and $R,S,T \in L(V)$ are such that $RST$ is surjective, then $S$ is injective.
+### (14) Prove or give a counterexample: If $V$ is a finite-dimensional vector space and $R,S,T \in L(V)$ are such that $RST$ is surjective, then $S$ is injective.
 By 3.65, $RST$ being surjective implies it is injective and invertible.
 
 Then 
@@ -373,18 +373,65 @@ Since $dim range S < dim V$, and $dim range ST \leq dim S$, we have $dim range S
 Therefore we conclude $S$ is injective.
 
 
-#### (15) Suppose $T \in L(V)$ and $v_1,...,v_m$ is a list in $V$ such that $Tv_1,...,Tv_m$ spans $V$. Show that $v_1,...,v_m$ spans $V$.
+### (15) Suppose $T \in L(V)$ and $v_1,...,v_m$ is a list in $V$ such that $Tv_1,...,Tv_m$ spans $V$. Show that $v_1,...,v_m$ spans $V$.
 Let $v \in V$. Since $Tv_1,...,Tv_m$ spans $V$, we can write $v = a_1 Tv_1 + ... + a_m Tv_m$ for some $a_1,...,a_m$. Then $v \in range T$. Therefore $T$ is surjective. By 3.65, $T$ is injective and invertible. 
 
 Since $V = span(Tv_1,...,Tv_m)$, $V = T(span(v_1,...,v_m))$ by linearity. Because $T$ is invertible, $span(v_1,...,v_m) = V$. 
 
-#### (18)
+### (18)
 
 
 
 
 
-# 3E Duality
+# 3E Products and Quotients of Vector Spaces
+
+### 3.87
+
+### 3.89
+
+### 3.92
+
+### 3.93
+
+### 3.94
+Suppose $V$ is finite-dimensional and $V_1, ..., V_m$ are subspaces of $V$. 
+
+### 3.95
+
+### 3.97
+
+### 3.99
+
+### 3.101
+
+### 3.102
+
+### 3.103
+
+### 3.104
+
+### 3.105 
+Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Then 
+
+$$dim V/U = dim V - dim U.$$
+
+Proof:
+
+Let $\pi$ denote the quotient map from $V$ to $V/U$. If $v \in V$, then $v + U = 0 + U$ if and only if $v \in U$ by 3.101, which implies that $null \pi = U$. The definition of $\pi$ implies $range \pi = V/U$. The fundamental theorem of linera maps (3.21) now implies $dim V = dim U + dim V/U$, which gives the desired result. 
+
+
+### 3.106
+
+### 3.107
+
+
+
+
+
+
+
+# 3F Duality
 
 ### 3.108 Definition: linear functional
 A linear functional on $V$ is a linear map from $V$ to $F$. In other words, a linear functional is an element of $L(V, F)$.
@@ -664,21 +711,21 @@ where the second equality comes from 3.78, the third equality comes from 3.130(a
 
 ## Exercises
 
-#### (2) Give three distinct examples of linear functionals on $R^{[0,1]}$.
+### (2) Give three distinct examples of linear functionals on $R^{[0,1]}$.
 
-#### (3) Suppose $V$ is finite-dimensional and $v \in V$ with $v \neq 0$. Prove that there exists $\phi \in V'$ such that $\phi(v) = 1$.
+### (3) Suppose $V$ is finite-dimensional and $v \in V$ with $v \neq 0$. Prove that there exists $\phi \in V'$ such that $\phi(v) = 1$.
 Since $v \neq 0$, we can extend it to a basis $v, v_2,..., v_n$ of $V$. 
 
 Define $\phi(v) = 1, \phi(v_i) = 0$ for $i = 2,...,n$. The linear functional $\phi$ is well-defined by 3.4.
 
 
-#### (4) Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$ such that $U \neq V$. Prove that there exists $\phi \in V'$ such that $\phi(u) = 0$ for every $u \in U$ but $\phi \neq 0$.
+### (4) Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$ such that $U \neq V$. Prove that there exists $\phi \in V'$ such that $\phi(u) = 0$ for every $u \in U$ but $\phi \neq 0$.
 Let $u_1,...,u_m$ be a basis of $U$. Since $U \neq V$, $dim U < dim V$. We can extend to a basis $u_1,...,u_m, v_1,...,v_n$ of $V$.
 
 Define $\phi(u_i) = 0$ for $i = 1,...,m$ and $\phi(v_j) = 1$ for $j = 1,...,n$. The linear functional $\phi$ is well-defined by 3.4. Thus $\phi(u) = 0$ for every $u \in U$ but $\phi \neq 0$.
 
 
-#### (5) Suppose $T \in L(V, W)$ and $w_1,...,w_m$ is a basis of $range T$. Hence for each $v \in V$, there exist unique numbers $\phi_1(v),...,\phi_m(v)$ such that $Tv = \phi_1(v) w_1 + ... + \phi_m(v) w_m$, thus defining functions $\phi_1,...,\phi_m$ from $V$ to $F$. Show that each of the functions $\phi_1,...,\phi_m$ is a linear functional on $V$.
+### (5) Suppose $T \in L(V, W)$ and $w_1,...,w_m$ is a basis of $range T$. Hence for each $v \in V$, there exist unique numbers $\phi_1(v),...,\phi_m(v)$ such that $Tv = \phi_1(v) w_1 + ... + \phi_m(v) w_m$, thus defining functions $\phi_1,...,\phi_m$ from $V$ to $F$. Show that each of the functions $\phi_1,...,\phi_m$ is a linear functional on $V$.
 Suppose $u, v \in V$. We have 
 
 $$T(v + u) = \phi_1(v+u) w_1 + ... + \phi_m(v+u) w_m$$
@@ -698,7 +745,7 @@ Since $T(\lambda v) = \lambda Tv$ and $w_1,...,w_m$ is a basis, we have $\phi_i(
 Thus each $\phi_1,..., \phi_m$ is a linear functional on $V$.
 
 
-#### (11) Suppose $v_1,...,v_n$ is a basis of $V$ and $\phi_1,...,\phi_n$ is the corresponding dual basis of $V'$. Suppose $\psi \in V'$. Prove that $\psi = \psi(v_1) \phi_1 + ... + \psi(v_n) \phi_n$.
+### (11) Suppose $v_1,...,v_n$ is a basis of $V$ and $\phi_1,...,\phi_n$ is the corresponding dual basis of $V'$. Suppose $\psi \in V'$. Prove that $\psi = \psi(v_1) \phi_1 + ... + \psi(v_n) \phi_n$.
 We can write $v = \phi_1(v) v_1 + ... + \phi_n(v) v_n$ by 3.116. Applying $\psi$ to both sides, we have
 
 $$\psi(v) = \psi(v_1) \phi_1(v) + ... \psi(v_n) \phi_n(v) = (\psi(v_1) \phi_1 + ... + \psi(v_n) \phi_n) (v)$$
@@ -706,7 +753,7 @@ $$\psi(v) = \psi(v_1) \phi_1(v) + ... \psi(v_n) \phi_n(v) = (\psi(v_1) \phi_1 + 
 for all $v \in V$. Thus $\psi = \psi(v_1) \phi_1 + ... + \psi(v_n) \phi_n$.
 
 
-#### (12) Suppose $S, T \in L(V,W)$. 
+### (12) Suppose $S, T \in L(V,W)$. 
 
 (a) Prove that $(S+T)' = S' + T'$.
 
@@ -725,7 +772,7 @@ $$(\lambda T)'(\phi)(v) = (\phi \circ (\lambda T))(v) = \phi( (\lambda T) v) = \
 for all $\phi \in W', v \in V$. Thus $(\lambda T)' = \lambda T'$.
 
 
-#### (13) Show that the dual map of the identity operator on $V$ is the identity operator on $V'$.
+### (13) Show that the dual map of the identity operator on $V$ is the identity operator on $V'$.
 Suppose $\phi \in V', v \in V$. We have $I': V' \rightarrow V'$ such that 
 
 $$I'(\phi)(v) = (\phi \circ I)(v) = \phi(Iv) = \phi(v)$$
@@ -735,21 +782,21 @@ for all $v \in V$.
 Thus $I'(\phi) = \phi$ for all $\phi \in V'$ and $I'$ is the identity operator on $V'$. 
 
 
-#### (14) Define $T: R^3 \rightarrow R^2$ by $T(x,y,z) = (4x + 5y + 6z, 7x + 8y + 9z)$. Suppose $\phi_1,\phi_2$ denotes the dual basis of the standard basis of $R^2$ and $\psi_1,\psi_2,\psi_3$ denotes the dual basis of the standard basis of $R^3$.
+### (14) Define $T: R^3 \rightarrow R^2$ by $T(x,y,z) = (4x + 5y + 6z, 7x + 8y + 9z)$. Suppose $\phi_1,\phi_2$ denotes the dual basis of the standard basis of $R^2$ and $\psi_1,\psi_2,\psi_3$ denotes the dual basis of the standard basis of $R^3$.
 
 (a) Describe the linear functionals $T'(\phi_1)$ and $T'(\phi_2)$.
 
 (b) Write $T'(\phi_1)$ and $T'(\phi_2)$ as linear combinations of $\psi_1,\psi_2,\psi_3$.
 
 
-#### (15) Define $T: P(R) \rightarrow P(R)$ by $(Tp)(x) = x^2 p(x) + p''(x)$ for each $x \in R$. 
+### (15) Define $T: P(R) \rightarrow P(R)$ by $(Tp)(x) = x^2 p(x) + p''(x)$ for each $x \in R$. 
 
 (a) Suppose $\phi \in P(R)'$ is defined by $\phi(p) = p'(4)$. Describe the linear functional $T'(\phi)$ on $P(R)$.
 
 (b) Suppose $\phi \in P(R)'$ is defined by $\phi(p) = \int^1_0 p$. Evaluate $(T'(\phi)) (x^3)$.
 
 
-#### (16) Suppose $W$ is finite-dimensional and $T \in L(V, W)$. Prove that $T' = 0 \iff T = 0$.
+### (16) Suppose $W$ is finite-dimensional and $T \in L(V, W)$. Prove that $T' = 0 \iff T = 0$.
 Suppose $\phi \in W'$.
 
 $\Rightarrow$
@@ -767,31 +814,31 @@ $$0 = \phi(Tv) = (\phi \circ T) (v) = T'(\phi)(v)$$
 for all $v \in V$. Thus $T'(\phi) = 0$. Since the equation holds for all $\phi \in W'$, $T' = 0$.
 
 
-#### (17) Suppose $V$ and $W$ are finite-dimensional and $T \in L(V, W)$. Prove that $T$ is invertible if and only if $T' \in L(W', V')$ is invertible.
+### (17) Suppose $V$ and $W$ are finite-dimensional and $T \in L(V, W)$. Prove that $T$ is invertible if and only if $T' \in L(W', V')$ is invertible.
 Suppose $T$ is invertible. Then $T$ is injective and surjective by 3.63. By 3.129 and 3.131, $T'$ is injective and surjective. Hence $T'$ is invertible by 3.63. 
 
 The other direction can be shown by applying the same reasoning with $T'$ in place of $T$.
 
 
-#### (18) Suppose $V$ and $W$ are finite-dimensional. Prove that the map that takes $T \in L(V, W)$ to $T' \in L(W', V')$ is an isomorphism of $L(V, W)$ onto $L(W', V')$.
+### (18) Suppose $V$ and $W$ are finite-dimensional. Prove that the map that takes $T \in L(V, W)$ to $T' \in L(W', V')$ is an isomorphism of $L(V, W)$ onto $L(W', V')$.
 Define $F: T \rightarrow T'$. First $F$ is linear by 3.120.
 
 Exercise 16 showed that $T' = 0 \iff T = 0$, hence $F$ is injective. We have $dim L(V, W) = dim L(W', V')$ because $dim L(V, W) = (dim V)(dim W)$ and $dim L(W', V') = (dim W') (dim V') = (dim W) (dim V)$ by 3.111 and 3.72. Thus $F$ is surjective and invertible by 3.65. We conclude that $F$ is an isomorphism.
 
 
-#### (22) Suppose $V$ is finite-dimensional and $U$ and $W$ are subspaces of $V$.
-#### (a) Show that $(U+W)^0 = U^0 \cap W^0$.
+### (22) Suppose $V$ is finite-dimensional and $U$ and $W$ are subspaces of $V$.
+### (a) Show that $(U+W)^0 = U^0 \cap W^0$.
 Suppose $\phi \in (U+W)^0$. Let $u+w \in U+W$. Then $\phi(u+w) = 0$. We have $u = u+0$ where $u \in U, 0 \in W$, and $\phi(u) = \phi(u+0) = 0$. Similarly, We have $w = w + 0$ where $w \in W, 0 \in U$, and $\phi(w) = \phi(w + 0) = 0$. Since $\phi \in U^0$ and $\phi \in W^0$, $\phi \in U^0 \cap W^0$.
 
 Suppose $\phi \in U^0 \cap W^0$. Then $\phi(u) = 0$ for all $u \in U$ and $\phi(w) = 0$ for all $w \in W$. We have $0 = \phi(u) + \phi(w) = \phi(u+w)$ for all $u+w \in U+W$. Hence $\phi \in (U+W)^0$.
 
-#### (b) Show that $(U \cap W)^0 = U^0 + W^0$.
+### (b) Show that $(U \cap W)^0 = U^0 + W^0$.
 
 
 
-#### (24) Suppose $V$ is finite-dimensional and $v_1,...,v_m \in V$. Define a linear map $\Gamma: V' \rightarrow F^m$ by $\Gamma(\phi) = (\phi(v_1),...,\phi(v_m))$.
+### (24) Suppose $V$ is finite-dimensional and $v_1,...,v_m \in V$. Define a linear map $\Gamma: V' \rightarrow F^m$ by $\Gamma(\phi) = (\phi(v_1),...,\phi(v_m))$.
 
-#### (a) Prove that $v_1,...,v_m$ spans $V$ if and only if $\Gamma$ is injective.
+### (a) Prove that $v_1,...,v_m$ spans $V$ if and only if $\Gamma$ is injective.
 
 $\Rightarrow$
 Suppose $v_1,...,v_m$ spans $V$. We want to show that $\Gamma$ is injective. 
@@ -811,7 +858,7 @@ Assume towards contradiction that $v_1,...,v_m$ do not span $V$. Then there exis
 
 We conclude that $v_1,...,v_m$ spans $V$.
 
-#### (b) Prove that $v_1,...,v_m$ is linearly independent if and only if $\Gamma$ is surjective.
+### (b) Prove that $v_1,...,v_m$ is linearly independent if and only if $\Gamma$ is surjective.
 
 $\Rightarrow$
 Suppose $v_1,...,v_m$ is linearly independent. We want to show that $\Gamma$ is surjective.
@@ -834,19 +881,19 @@ Since $\Gamma$ is surjective, there exists $\phi \in V'$ such that $\Gamma(\phi)
 We conclude that $v_1,...,v_m$ is linearly independent.
 
 
-#### (25) Suppose $V$ is finite-dimensional and $\phi_1,...,\phi_m \in V'$. Define a linear map $\Gamma: V \rightarrow F^m$ by $\Gamma(v) = (\phi_1(v), ..., \phi_m(v))$.
+### (25) Suppose $V$ is finite-dimensional and $\phi_1,...,\phi_m \in V'$. Define a linear map $\Gamma: V \rightarrow F^m$ by $\Gamma(v) = (\phi_1(v), ..., \phi_m(v))$.
 
-#### (a) Prove that $\phi_1,...,\phi_m$ spans $V'$ if and only if $\Gamma$ is injective.
-
-
-
-#### (b) Prove that $\phi_1,...,\phi_m$ is linearly independent if and only if $\Gamma$ is surjective.
+### (a) Prove that $\phi_1,...,\phi_m$ spans $V'$ if and only if $\Gamma$ is injective.
 
 
-#### (29) Suppose $V$ and $W$ are finite-dimensional and $T \in L(V, W)$. 
 
-#### (a) Prove that if $\phi \in W'$ and $null T' = span(\phi)$, then $range T = null \phi$.
-First consider $\phi = 0$. Then $\null \phi = W$. Since $span(0) = \\{0\\}$, $null T' = \\{0\\}$. Then $T'$ is injective by 3.15, and $T$ is surjective by 3.129, and $range T = W$. Thus $W = range T = null \phi$.
+### (b) Prove that $\phi_1,...,\phi_m$ is linearly independent if and only if $\Gamma$ is surjective.
+
+
+### (29) Suppose $V$ and $W$ are finite-dimensional and $T \in L(V, W)$. 
+
+### (a) Prove that if $\phi \in W'$ and $null T' = span(\phi)$, then $range T = null \phi$.
+First consider $\phi = 0$. Then $null \phi = W$. Since $span(0) = \\{0\\}$, $null T' = \\{0\\}$. Then $T'$ is injective by 3.15, and $T$ is surjective by 3.129, and $range T = W$. Thus $W = range T = null \phi$.
 
 For the rest of the proof suppose $\phi \neq 0$.
 
@@ -862,7 +909,7 @@ Since $dim W = dim null \phi + dim range \phi$ by 3.21, and $dim range \phi = 1$
 
 Thus $dim null \phi = dim range T = m-1$ and together with the fact that $range T \subseteq null \phi$, we conclude that $range T = null \phi$.
 
-#### (b) Prove that if $\psi \in V'$ and $range T' = span(\psi)$, then $null T = null \psi$.
+### (b) Prove that if $\psi \in V'$ and $range T' = span(\psi)$, then $null T = null \psi$.
 First consider $\psi = 0$. Then $null \psi = V$. Since $span(0) = \\{0\\}$, $range T' = \\{0\\}$. $T'(\phi) = 0$ for all $\phi \in W'$. Hence $T'=0$, and $T=0$ (from exercise 16). Thus $V = null T = null \psi$.
 
 For the rest of the proof suppose $\psi \neq 0$.
@@ -882,4 +929,4 @@ Since $range T' = span(\psi)$, $dim range T' = 1$. By 3.130, $dim range T = dim 
 Thus $dim null \psi = dim null T = n-1$ and together with the fact that $null T \subseteq null \psi$, we conclude that $null T = null \psi$.
 
 
-#### (30) Suppose $V$ is finite-dimensional and $\phi_1,...,\phi_n$ is a basis of $V'$. Show that there exists a basis of $V$ whose dual basis is $\phi_1,...,\phi_n$.
+### (30) Suppose $V$ is finite-dimensional and $\phi_1,...,\phi_n$ is a basis of $V'$. Show that there exists a basis of $V$ whose dual basis is $\phi_1,...,\phi_n$.
