@@ -96,7 +96,7 @@ Hence $Tu \in range p(T)$. Thus $range p(T)$ is invariant under $T$, as desired.
 
 ## Exercises
 
-#### (1) Suppose $T \in L(V)$ and $U$ is a subspace of $V$. 
+### (1) Suppose $T \in L(V)$ and $U$ is a subspace of $V$. 
 (a) Prove that if $U \subseteq null T$, then $U$ is invariant under $T$.
 
 Let $u \in U$. Then $u \in U \subseteq null T$. Thus $Tu=0$. Since $0$ is in any subspace, $Tu \in U$. Therefore $U$ is invariant under $T$.
@@ -106,11 +106,11 @@ Let $u \in U$. Then $u \in U \subseteq null T$. Thus $Tu=0$. Since $0$ is in any
 Let $u \in U$. Then $Tu \in range T \subseteq U$. Therefore $U$ is invariant under $T$.
 
 
-#### (2) Suppose that $T \in L(V)$ and $V_1,...,V_m$ are subspaces of $V$ invariant under $T$. Prove that $V_1 + ... + V_m$ is invariant under $T$.
+### (2) Suppose that $T \in L(V)$ and $V_1,...,V_m$ are subspaces of $V$ invariant under $T$. Prove that $V_1 + ... + V_m$ is invariant under $T$.
 Let $v \in V_1 + ... + V_m$. Then we can write $v = v_1 + ... + v_m$ for some $v_1 \in V_1, ..., v_m \in V_m$. Then $Tv = T(v_1 + ... + v_m) = Tv_1 + ... + Tv_m$. By assumption, $V_1,...,V_m$ are invariant under $T$, so $Tv_1 \in V_1, ..., Tv_m \in V_m$. Thus $Tv \in V_1 + ... + V_m$, and we conclude that $V_1 + ... + V_m$ is invariant under $T$.
 
 
-#### (4) Prove or give a counterexample: If $V$ is finite-dimensional and $U$ is a subspace of $V$ that is invariant under every operator on $V$, then $U=\\{0\\}$ or $U=V$.
+### (4) Prove or give a counterexample: If $V$ is finite-dimensional and $U$ is a subspace of $V$ that is invariant under every operator on $V$, then $U=\\{0\\}$ or $U=V$.
 Suppose $U \neq \\{0\\}$. Let $u \in U, u \neq 0$. We can decompose $V$ such that $V = span(u) \oplus W$. 
 
 For any $v \in V$, define the linear operator $T$ such that 
@@ -122,21 +122,21 @@ $$Tw = 0, w \in W$$
 By assumption, $u \in U$ implies $Tu \in U$. Since $Tu = v$, $v \in U$. But $v \in V$ was arbitrary, so we conclude $U = V$.
 
 
-#### (5) Suppose $T \in L(R^2)$ is defined by $T(x,y) = (-3y, x)$. Find the eigenvalues of $T$.
+### (5) Suppose $T \in L(R^2)$ is defined by $T(x,y) = (-3y, x)$. Find the eigenvalues of $T$.
 There are no real eigenvalues.
 
 
-#### (6) Define $T \in L(F^2)$ by $T(w,z) = (z,w)$. Find all eigenvalues and eigenvectors of $T$.
+### (6) Define $T \in L(F^2)$ by $T(w,z) = (z,w)$. Find all eigenvalues and eigenvectors of $T$.
 Eigenvalue 1, eigenvectors $\\{(w,z) \in R^2: w=z\\}$
 Eigenvalue -1, eigenvectors $\\{(w,z) in R^2: w = -z\\}$.
 
 
-#### (7) Define $T \in L(F^3)$ by $T(z_1,z_2,z_3) = (2z_2, 0, 5z_3)$. Find all eigenvalues and eigenvectors of $T$.
+### (7) Define $T \in L(F^3)$ by $T(z_1,z_2,z_3) = (2z_2, 0, 5z_3)$. Find all eigenvalues and eigenvectors of $T$.
 Eigenvalue 5, eigenvectors $span(z_3)$.
 Eigenvalue 0, eigenvectors $span(z_1)$.
 
 
-#### (8) Suppose $P \in L(V)$ is such that $P^2 = P$. Prove that if $\lambda$ is an eigenvalue of $P$, then $\lambda = 0$ or $\lambda = 1$.
+### (8) Suppose $P \in L(V)$ is such that $P^2 = P$. Prove that if $\lambda$ is an eigenvalue of $P$, then $\lambda = 0$ or $\lambda = 1$.
 Suppose $\lambda$ is an eigenvalue of $P$. Then $Pv = \lambda v$ for some nonzero $v \in V$. Applying $P$ to both sides, we have 
 
 $$PPv = P lambda v = \lambda Pv = \lambda (\lambda v) = \lambda^2 v$$
@@ -153,13 +153,18 @@ $$\lambda (\lambda - 1) v = 0$$
 
 Since $v \neq 0$, we must have $\lambda (\lambda - 1) = 0$. Thus $\lambda = 1$ or $\lambda = 0$.
 
+### (9)
 
-#### (12) Suppose $V = U \oplus W$, where $U$ and $W$ are nonzero subspaces of $V$. Define $P \in L(V)$ by $P(u+w) = u$ for each $u \in U, w \in W$. Find all eigenvalues and eigenvectors of $P$.
+### (10)
+
+### (11)
+
+### (12) Suppose $V = U \oplus W$, where $U$ and $W$ are nonzero subspaces of $V$. Define $P \in L(V)$ by $P(u+w) = u$ for each $u \in U, w \in W$. Find all eigenvalues and eigenvectors of $P$.
 Eigenvalue 1, eigenvectors $u \in U, u \neq 0$.
 Eigenvalue 0, eigenvectors $w \in W, w \neq 0$.
 
 
-#### (13) Suppose $T \in L(V)$. Suppose $S \in L(V)$ is invertible.
+### (13) Suppose $T \in L(V)$. Suppose $S \in L(V)$ is invertible.
 (a) Prove that $T$ and $S^{-1} T S$ have the same eigenvalues.
 
 Suppose $\lambda$ is an eigenvalue of $T$ corresponding to some eigenvector $v \in V$. Then $Tv = \lambda v$. 
@@ -175,14 +180,15 @@ Therefore $\lambda$ is an eigenvalue of $S^{-1} T S$.
 If $v$ is an eigenvector of $T$, then $S^{-1}v$ is an eigenvector of $S^{-1} T S$.
 
 
-#### (14) Give an example of an operator on $R^4$ that has no (real) eigenvalues.
+### (14) Give an example of an operator on $R^4$ that has no (real) eigenvalues.
 $$T(x_1, x_2, x_3, x_4) = (-x_2, x_1, -x_4, x_3)$$
 
 
-#### (15) Suppose $V$ is finite-dimensional, $T \in L(V)$, and $\lambda \in F$. Show that $\lambda$ is an eigenvalue of $T$ if and only if $\lambda$ is an eigenvalue of the dual operator $T' \in L(V')$.
+### (15) Suppose $V$ is finite-dimensional, $T \in L(V)$, and $\lambda \in F$. Show that $\lambda$ is an eigenvalue of $T$ if and only if $\lambda$ is an eigenvalue of the dual operator $T' \in L(V')$.
 
+### (16)
 
-#### (21) Suppose $T \in L(V)$ is invertible.
+### (21) Suppose $T \in L(V)$ is invertible.
 (a) Suppose $\lambda \in F$ with $\lambda \neq 0$. Prove that $\lambda$ is an eigenvalue of $T$ if and only if $1/\lambda$ is an eigenvalue of $T^{-1}$.
 
 $\Rightarrow$
@@ -213,8 +219,9 @@ Thus $\lambda$ is an eigenvalue of $T$.
 
 From the equations from (a), they have the same eigenvectors.
 
+### (22)
 
-#### (23) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ and $TS$ have the same eigenvalues.
+### (23) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ and $TS$ have the same eigenvalues.
 Let $\lambda$ be an eigenvalue of $ST$ corresponding to some $v \in V, v \neq 0$. Then 
 
 $$STv = \lambda v$$. 
@@ -234,7 +241,7 @@ If $\lambda \neq 0$, then $TS(Tv) = \lambda (Tv)$ implies that $Tv$ is an eigenv
 The other direction follows by switching the order of $S$ and $T$.
 
 
-#### (25) Suppose $T \in L(V)$ and $u, w$ are eigenvectors of $T$ such that $u+w$ is also an eigenvector of $T$. Prove that $u$ and $w$ are eigenvectors of $T$ corresponding to the same eigenvalue.
+### (25) Suppose $T \in L(V)$ and $u, w$ are eigenvectors of $T$ such that $u+w$ is also an eigenvector of $T$. Prove that $u$ and $w$ are eigenvectors of $T$ corresponding to the same eigenvalue.
 Since $u, w$ are eigenvectors of $T$, there is some $\lambda_1, \lambda_2 \in F$ such that $Tu = \lambda_1 u$ and $Tw = \lambda_2 w$.
 
 Since $u+w$ is an eigenvector of $T$, some is some $\lambda_3 \in F$ such that $T(u+w) = \lambda_3 (u+w)$.
@@ -252,7 +259,7 @@ By 5.11, every list of eigenvectors of $T$ corresponding to distinct eigenvalues
 Therefore we conclude that $\lambda_1 = \lambda_2$.
 
 
-#### (26) Suppose $T \in L(V)$ is such that every nonzero vector in $V$ is an eigenvector of $T$. Prove that $T$ is a scalar multiple of the identity operator.
+### (26) Suppose $T \in L(V)$ is such that every nonzero vector in $V$ is an eigenvector of $T$. Prove that $T$ is a scalar multiple of the identity operator.
 Let $u, w \in V, u, w \neq 0$. Then $u, w$ are eigenvectors of $T$. 
 
 $Tu = \lambda_1 u$ and $Tw = \lambda_2 w$.
@@ -264,7 +271,7 @@ If $u+w = 0$, $w = -u$. We have $Tw = -Tu = -\lambda_1 u$. We also have $Tw = \l
 Therefore every vector in $V$ has the same eigenvalue. We conclude that $T = \lambda I$.
 
 
-#### (27) Suppose that $V$ is finite-dimensional and $k \in \\{1,...,dimV - 1\\}$. Suppose $T \in L(V)$ is such that every subspace of $V$ of dimension $k$ is invariant under $T$. Prove that $T$ is a scalar multiple of the identity operator.
+### (27) Suppose that $V$ is finite-dimensional and $k \in \\{1,...,dimV - 1\\}$. Suppose $T \in L(V)$ is such that every subspace of $V$ of dimension $k$ is invariant under $T$. Prove that $T$ is a scalar multiple of the identity operator.
 
 Suppose $dim V = n$.
 
@@ -281,7 +288,7 @@ such that $Tv \notin U_2$. This is possible because $k < n$.
 By hypothesis, $U_1$ and $U_2$ are invariant under $T$. Since $v \in U_2$, $Tv \in U_2$. But this is a contradiction. Therefore we conclude that every 1-dimensional subspace is invariant under $T$. We can apply exercise (26) and conclude $T$ is a scalar multiple of the identity operator.
 
 
-#### (28) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that $T$ has at most $1 + dim range T$ distinct eigenvalues.
+### (28) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that $T$ has at most $1 + dim range T$ distinct eigenvalues.
 By 5.12, $T$ has at most $dim V$ distinct eigenvalues. 
 
 If $dim null T = 0$, then $dim V = dim range T$, so $T$ has at most $dim range T$ eigenvalues.
@@ -289,15 +296,15 @@ If $dim null T = 0$, then $dim V = dim range T$, so $T$ has at most $dim range T
 If $dim null T \neq 0$, then 0 is an eigenvalue of $T$. $range T$ is invariant under $T$ by 5.4. Applying 5.12 to the restriction $T:range T \rightarrow range T$, $T|_{range T}$ has at most $dim range T$ distinct eigenvaluges. Therefore $T$ has at most $1 + dim range T$ eigenvalues.
 
 
-#### (31) Give an example of $T \in L(R^2)$ such that $T^4 = -I$.
+### (31) Give an example of $T \in L(R^2)$ such that $T^4 = -I$.
 
 
-#### (32) Suppose $T \in L(V)$ has no eigenvalues and $T^4 = I$. Prove that $T^2 = -I$.
+### (32) Suppose $T \in L(V)$ has no eigenvalues and $T^4 = I$. Prove that $T^2 = -I$.
 
 
-#### (33) Suppose $T \in L(V)$ and $m$ is a positive integer.
+### (33) Suppose $T \in L(V)$ and $m$ is a positive integer.
 
-#### (a) Prove that $T$ is injective if and only if $T^m$ is injective.
+### (a) Prove that $T$ is injective if and only if $T^m$ is injective.
 $\Rightarrow$
 Suppose $T$ is injective. 
 
@@ -310,7 +317,7 @@ Suppose $T^m$ is injective. Then $null T^m = \\{0\\}$.
 
 Suppose $Tv = 0$. Applying $T$ m times, we have $T^m v = 0$. Since $T^m$ is injective, $v = 0$. Thus $T$ is injective.
 
-#### (b) Prove that $T$ is surjective if and only if $T^m$ is surjective.
+### (b) Prove that $T$ is surjective if and only if $T^m$ is surjective.
 $\Rightarrow$
 Suppose $T$ is surjective.
 
@@ -324,13 +331,14 @@ Suppose $T^m$ is surjective. Then $range T^m = V$.
 Let $v \in V$. Then there exists some $u \in V$ such that $T^m u = v$. We can write $T (T^{m-1} u) = v$. Thus $v \in range T$. We conclude that $T$ is surjective.
 
 
-#### (34) Suppose $V$ is finite-dimensional and $v_1,...,v_m \in V$. Prove that the list $v_1,...,v_m$ is linearly independent if and only if there exists $T \in L(V)$ such that $v_1,...,v_m$ are eigenvectors of $T$ corresponding to distinct eigenvalues.
+### (34) Suppose $V$ is finite-dimensional and $v_1,...,v_m \in V$. Prove that the list $v_1,...,v_m$ is linearly independent if and only if there exists $T \in L(V)$ such that $v_1,...,v_m$ are eigenvectors of $T$ corresponding to distinct eigenvalues.
 $\Leftarrow$
 Suppose there exists $T \in L(V)$ such that $v_1,...,v_m$ are eigenvectors of $T$ corresponding to distinct eigenvalues. Then by 5.11, $v_1,...,v_m$ are linearly independent. 
 
 $\Rightarrow$
 Suppose $v_1,...,v_m$ is linearly independent. Extend to a basis $v_1,...,v_m, w_1,...,w_n$ of $V$. Define $T \in L(V)$ such that $Tv_i = \lambda_i v_i, i=1,...,m$, $\lambda_i$ all distinct. $Tw_j = 0, j = 1,...,n$. 
 
+### (39)
 
 
 
@@ -562,7 +570,7 @@ Hence $range (T^2 + bT + cI)$ is a subspace of $V$ that is invariant under $T$ b
 
 ## Exercises
 
-#### (10) Suppose $V is finite-dimensional, $T \in L(V)$, and $v \in V$. Prove that $span(v, Tv, ..., T^m v) = span(v, Tv, ..., T^{dim V -1} v)$ for all integers $m \geq dim V - 1$.
+### (10) Suppose $V is finite-dimensional, $T \in L(V)$, and $v \in V$. Prove that $span(v, Tv, ..., T^m v) = span(v, Tv, ..., T^{dim V -1} v)$ for all integers $m \geq dim V - 1$.
 
 Let $dim V = n$. If $m = n-1$ then the case is trivial. Consider $m = n$.
 
@@ -853,7 +861,7 @@ Suppose $T \in L(V)$ and $v_1,...,v_n$ is a basis of $V$. Then each eigenvalue o
 
 ## Exercises
 
-#### (1) Suppose $V$ is a finite-dimensional complex vector space and $T \in L(V)$.
+### (1) Suppose $V$ is a finite-dimensional complex vector space and $T \in L(V)$.
 
 (a) Prove that if $T^4 = I$, then $T$ is diagonalizable.
 
@@ -876,7 +884,7 @@ We verify that $T^4 = T^2 = 0$.
 0 is the only eigenvalue, and $E(0, T) = span(0,1)$. $dim E(0,T) < dim V = 2$. Hence $T$ is not diagonalizable by 5.55.
 
 
-#### (2) Suppose $T \in L(V)$ has a diagonal matrix $A$ with respect to some basis of $V$. Prove that if $\lambda \in F$, then $\lambda$ appears on the diagonal of $A$ precisely $dim E(\lambda, T)$ times.
+### (2) Suppose $T \in L(V)$ has a diagonal matrix $A$ with respect to some basis of $V$. Prove that if $\lambda \in F$, then $\lambda$ appears on the diagonal of $A$ precisely $dim E(\lambda, T)$ times.
 
 Suppose $dim V = n$. Let $v_1,...,v_n$ be the basis with respect to which $T$ has a diagonal matrix. 
 
@@ -905,7 +913,7 @@ Thus $\\{v_i: i \in I_\lambda \\}$ is a basis of $E(\lambda, T)$.
 $dim E(\lambda, T) = d$, and $\lambda$ appears on the diagonal $d$ times.
 
 
-#### (3) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that if the operator $T$ is diagonalizable, then $V = null T \oplus range T$.
+### (3) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that if the operator $T$ is diagonalizable, then $V = null T \oplus range T$.
 Let $v_1,...,v_n$ be a basis of eigenvectors with respect to which $T$ has a diagonal matrix. Let $\lambda_1,...,\lambda_n$ be the corresponding diagonal entries (eigenvalues with possible repetitions). 
 
 Let $u \in null T \cap range T$. Then $Tu = 0$ and $Tv = u$ for some $v \in V$. 
@@ -931,7 +939,7 @@ $$dim (null T \oplus range T) = dim null T + dim range T = dim V$$
 by 3.94 and 3.21. Therefore $V = null T + range T$ by 2.39.
 
 
-#### (4) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that the following are equivalent. (a) $V = null T \oplus range T$. (b) $V = null T + range T$. (c) $null T \cap range T = \\{0\\}$.
+### (4) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that the following are equivalent. (a) $V = null T \oplus range T$. (b) $V = null T + range T$. (c) $null T \cap range T = \\{0\\}$.
 
 If (a) holds, then (c) holds from 1.46.
 
@@ -948,7 +956,7 @@ $$dim V = dim (null T + range T) = dim null T + dim range T - dim (null T \cap r
 Therefore $dim (null T \cap range T) = 0$, and (c) holds. (b) and (c) together implies that (a) holds.
 
 
-#### (5) Suppose $V$ is a finite-dimensional complex vector space and $T \in L(V)$. Prove that $T$ is diagonalizable if and only if $V = null (T-\lambda I) \oplus range (T-\lambda I)$ for every $\lambda \in C$.
+### (5) Suppose $V$ is a finite-dimensional complex vector space and $T \in L(V)$. Prove that $T$ is diagonalizable if and only if $V = null (T-\lambda I) \oplus range (T-\lambda I)$ for every $\lambda \in C$.
 $\Rightarrow$
 Suppose $T$ is diagonalizable. Then $V = E(\lambda_1,T) \oplus ... \oplus E(\lambda_m,T)$ for some distinct eigenvalues $\lambda_1,...,\lambda_m$.
 
@@ -1008,7 +1016,7 @@ $T|_W = E(\lambda_2,T) \oplus ... \oplus E(\lambda_m,T)$ for some distinct $\lam
 Therefore $V = E(\lambda_1, T) \oplus E(\lambda_2, T) \oplus ... \oplus E(\lambda_m, T)$. By 5.55 $T$ is diagonalizable.
 
 
-#### (6) Suppose $T \in L(F^5)$ and $dim E(8,T) = 4$. Prove that $T-2I$ or $T-6I$ is invertible.
+### (6) Suppose $T \in L(F^5)$ and $dim E(8,T) = 4$. Prove that $T-2I$ or $T-6I$ is invertible.
 Assume towards contradiction that both $T-2I$ and $T-6I$ are not invertible. 
 
 Then $T-2I$ and $T-6I$ are not injective, by 3.65. $null (T-2I) \neq \\{0\\}, null (T-6I) \neq \\{0\\}$. There exists some $u, w \in V$ such that $(T-2I)u = 0$ and $(T-6I)w = 0$. Therefore $u$ is an eigenvector corresponding to eigenvalue 2, and $w$ is an eigenvector corresponding to eigenvalue 6. 
@@ -1022,7 +1030,7 @@ $$dim E(2,T) + dim E(6,T) + dim E(8,T) \geq 1 + 1 + 4 = 6$$
 which is a contradiction. Thus we conclude $T-2I$ or $T-6I$ is invertible.
 
 
-#### (8)
+### (8)
 
 
 # 5E Commuting Operators
