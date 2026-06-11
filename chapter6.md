@@ -108,7 +108,6 @@ $$
     &= \lVert u \rVert^2 + \lVert v \rVert^2 + \langle u,v \rangle + \overline{\langle u,v \rangle} \\
     &= \lVert u \rVert^2 + \lVert v \rVert^2 + 2 Re(\langle u,v \rangle) \\
     &\leq \lVert u \rVert^2 + \lVert v \rVert^2 + 2 |\langle u,v \rangle| \\
-    &= \lVert u \rVert^2 + \lVert v \rVert^2 + 2 |\langle u,v \rangle| \\
     &\leq \lVert u \rVert^2 + \lVert v \rVert^2 + 2 \lVert u \rVert \lVert v \rVert \\
     &= (\lVert u \rVert + \lVert v \rVert)^2
 \end{aligned}
@@ -422,7 +421,7 @@ By 6.25, every orthonormal list of vectors in $V$ is linearly independent. Thus 
 ### 6.30
 Suppose $e_1,...,e_n$ is an orthonormal basis of $V$ and $u,v \in V$. Then
 
-- $v = \langle v, e_1 \ranglee_1 + ... \langle v,e_n \ranglee_n$
+- $v = \langle v, e_1 \rangle e_1 + ... \langle v,e_n \rangle e_n$
 - $\lVert v \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_n \rangle|^2$
 - $\langle u,v \rangle = \langle u,e_1 \rangle\overline{\langle v,e_1 \rangle} + ... + \langle u,e_n \rangle\overline{\langle v,e_n \rangle}$
 
@@ -457,13 +456,15 @@ Dividing a vector by its norm produces a new vector with norm 1; thus $\lVert e_
 
 Let $j \in \\{1,...,k-1\\}$. Then 
 
-$$\langle e_k, e_j \rangle = \frac{1}{\lVert f_k \rVert \lVert f_j \rVert} \langle f_k, f_j \rangle $$
-
-$$= \frac{1}{\lVert f_k \rVert \lVert f_j \rVert} \langle v_k - \frac{\langle v_k, f_1 \rangle}{\lVert f_1 \rVert^2} f_1 - ... - \frac{\langle v_k, f_{k-1} \rangle}{\lVert f_{k-1} \rVert^2} f_{k-1}, f_j \rangle$$
-
-$$= \frac{1}{\lVert f_k \rVert \lVert f_j \rVert}  (\langle v_k, f_j \rangle - \langle \frac{\langle v_k, f_j \rangle}{\lVert f_j \rVert^2} f_j, f_j \rangle)$$
-
-$$= \frac{1}{\lVert f_k \rVert \lVert f_j \rVert} (\langle v_k, f_j \rangle - \langle v_k, f_j \rangle) = 0$$
+$$
+\begin{aligned}
+\langle e_k, e_j \rangle 
+    &= \frac{1}{\lVert f_k \rVert \lVert f_j \rVert} \langle f_k, f_j \rangle \\
+    &= \frac{1}{\lVert f_k \rVert \lVert f_j \rVert} \langle v_k - \frac{\langle v_k, f_1 \rangle}{\lVert f_1 \rVert^2} f_1 - ... - \frac{\langle v_k, f_{k-1} \rangle}{\lVert f_{k-1} \rVert^2} f_{k-1}, f_j \rangle \\
+    &= \frac{1}{\lVert f_k \rVert \lVert f_j \rVert}  (\langle v_k, f_j \rangle - \langle \frac{\langle v_k, f_j \rangle}{\lVert f_j \rVert^2} f_j, f_j \rangle) \\
+    &= \frac{1}{\lVert f_k \rVert \lVert f_j \rVert} (\langle v_k, f_j \rangle - \langle v_k, f_j \rangle) = 0
+\end{aligned}
+$$
 
 Thus $e_1,...,e_k$ is an orthonormal list.
 
