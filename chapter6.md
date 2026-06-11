@@ -500,7 +500,13 @@ First we show that there exists a vector $v \in V$ such that $\phi(u) = \langle 
 
 Let $e_1,...,e_n$ be an orthonormal basis of $V$. Then 
 
-$$\phi(u) = \phi(\langle u,e_1 \ranglee_1 + ... \langle u,e_n \ranglee_n) = \langle u,e_1 \rangle \phi(e_1) + ... + \langle u,e_n \rangle \phi(e_n) = \langle u, \overline{\phi(e_1)} e_1 + ... \overline{\phi(e_n)} e_n \rangle$$
+$$
+\begin{aligned}
+\phi(u) &= \phi(\langle u,e_1 \rangle e_1 + ... + \langle u,e_n \rangle e_n) \\
+    &= \langle u, e_1 \rangle \phi(e_1) + ... + \langle u,e_n \rangle \phi(e_n) \\
+    &= \langle u, \overline{\phi(e_1)} e_1 + ... \overline{\phi(e_n)} e_n \rangle
+\end{aligned}
+$$
 
 for every $u \in V$, where the first equality comes from 6.30. 
 
