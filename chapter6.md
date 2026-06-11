@@ -34,13 +34,13 @@ An inner product space is a vector space $V$ along with an inner product on $V$.
 - $\langle u, \lambda v \rangle = \overline{\lambda} \langle u, v \rangle$ for all $\lambda \in F$ and all $u, v \in V$.
 
 ### 6.7 Definition: norm
-For $v \in V$, the norm of $v$, denoted by $||v||$, is defined by $||v|| = \sqrt{\langle v,v \rangle}$.
+For $v \in V$, the norm of $v$, denoted by $\lVert v \rVert$, is defined by $\lVert v \rVert = \sqrt{\langle v,v \rangle}$.
 
 ### 6.8
 Suppose $v \in V$.
 
-- $||v||=0$ if and only if $v=0$.
-- $||\lambda v|| = |\lambda| ||v||$ for all $\lambda \in F$.
+- $\lVert v \rVert=0$ if and only if $v=0$.
+- $\lVert \lambda v \rVert = |\lambda| \lVert v \rVert$ for all $\lambda \in F$.
 
 ### 6.10 Definition: orthogonal
 Two vectors $u, v \in V$ are called orthogonal if $\langle u,v \rangle=0$.
@@ -50,55 +50,55 @@ Two vectors $u, v \in V$ are called orthogonal if $\langle u,v \rangle=0$.
 - 0 is the only vector in $V$ that is orthogonal to itself.
 
 ### 6.12 Pythagorean theorem
-Suppose $u,v \in V$. If $u$ and $v$ are orthogonal, then $||u+v||^2 = ||u||^2 + ||v||^2$.
+Suppose $u,v \in V$. If $u$ and $v$ are orthogonal, then $\lVert u+v \rVert^2 = \lVert u \rVert^2 + \lVert v \rVert^2$.
 
 Proof: 
 
 Suppose $\langle u,v \rangle=0$. Then 
 
-$$||u+v||^2 = \langle u+v, u+v \rangle = \langle u,u \rangle + \langle u,v \rangle + \langle v,u \rangle + \langle v,v \rangle = ||u||^2 + ||v||^2$$
+$$\lVert u+v \rVert^2 = \langle u+v, u+v \rangle = \langle u,u \rangle + \langle u,v \rangle + \langle v,u \rangle + \langle v,v \rangle = \lVert u \rVert^2 + \lVert v \rVert^2$$
 
 ### 6.13
-Suppose $u,v \in V$, with $v \neq 0$. Set $c = \frac{\langle u,v \rangle}{||v||^2}$ and $w = u - \frac{\langle u,v \rangle}{||v||^2} v$. Then $u = cv + w$ and $\langle w,v \rangle=0$.
+Suppose $u,v \in V$, with $v \neq 0$. Set $c = \frac{\langle u,v \rangle}{\lVert v \rVert^2}$ and $w = u - \frac{\langle u,v \rangle}{\lVert v \rVert^2} v$. Then $u = cv + w$ and $\langle w,v \rangle=0$.
 
 ### 6.14 Cauchy-Schwartz inequality
-Suppose $u,v \in V$. Then $|\langle u,v \rangle| \leq ||u|| ||v||$. This inequality is an equality if and only if one of $u, v$ is a scalar multiple of the other.
+Suppose $u,v \in V$. Then $|\langle u,v \rangle| \leq \lVert u \rVert \lVert v \rVert$. This inequality is an equality if and only if one of $u, v$ is a scalar multiple of the other.
 
 Proof: 
 
 If $v = 0$, then both sides of the desired inequality equal 0. Thus we can assume that $v \neq 0$. Consider the orthogonal decomposition 
 
-$$u = \frac{\langle u,v \rangle}{||v||^2} v + w$$
+$$u = \frac{\langle u,v \rangle}{\lVert v \rVert^2} v + w$$
 
 where $w$ is orthogonal to $v$. By the Pythagorean theorem,
 
-$$||u||^2 = ||\frac{\langle u,v \rangle}{||v||^2} v||^2 + ||w||^2 = \frac{|\langle u,v \rangle|^2}{||v||^2} + ||w||^2 \geq \frac{|\langle u,v \rangle|^2}{||v||^2}$$
+$$\lVert u \rVert^2 = \lVert \frac{\langle u,v \rangle}{ \rVertv\lVert ^2} v \rVert^2 + \lVert w \rVert^2 = \frac{|\langle u,v \rangle|^2}{\lVert v \rVert^2} + \lVert w \rVert^2 \geq \frac{|\langle u,v \rangle|^2}{\lVert v \rVert^2}$$
 
-Multiplying both sides of this inequality by $||v||^2$ and then taking square roots gives the desired inequality.
+Multiplying both sides of this inequality by $\lVert v \rVert^2$ and then taking square roots gives the desired inequality.
 
 The proof above shows that the Cauchy-Schwartz inequality is an equality if and only if $w = 0$. But $w = 0$ if and only if $u$ is a multiple of $v$. Thus the Cauchy-Schwartz inequality is an equality if and only if $u$ is a scalar multiple of $v$ or $v$ is a scalar multiple of $u$.
 
 ### 6.17 Triangule inequality
-Suppose $u,v \in V$. Then $||u+v|| \leq ||u|| + ||v||$. This inequality is an equality if and only if one of $u, v$ is a nonnegative real multiple of the other.
+Suppose $u,v \in V$. Then $\lVert u+v \rVert \leq \lVert u \rVert + \lVert v \rVert$. This inequality is an equality if and only if one of $u, v$ is a nonnegative real multiple of the other.
 
 Proof: 
 
 We have
 
-$$||u+v||^2 = \langle u+v, u+v \rangle = \langle u,u \rangle + \langle v,v \rangle + \langle u,v \rangle + \langle v,u \rangle = ||u||^2 + ||v||^2 + \langle u,v \rangle + \overline{\langle u,v \rangle}$$
+$$\lVert u+v \rVert^2 = \langle u+v, u+v \rangle = \langle u,u \rangle + \langle v,v \rangle + \langle u,v \rangle + \langle v,u \rangle = \lVert u \rVert^2 + \lVert v \rVert^2 + \langle u,v \rangle + \overline{\langle u,v \rangle}$$
 
-$$||u||^2 + ||v||^2 + \langle u,v \rangle + \overline{\langle u,v \rangle} = ||u||^2 + ||v||^2 + 2 Re(\langle u,v \rangle) \leq ||u||^2 + ||v||^2 + 2 |\langle u,v \rangle| $$
+$$\lVert u \rVert^2 + \lVert v \rVert^2 + \langle u,v \rangle + \overline{\langle u,v \rangle} = \lVert u \rVert^2 + \lVert v \rVert^2 + 2 Re(\langle u,v \rangle) \leq \lVert u \rVert^2 + \lVert v \rVert^2 + 2 |\langle u,v \rangle| $$
 
 by 4.4
 
-$$||u||^2 + ||v||^2 + 2 |\langle u,v \rangle|  \leq ||u||^2 + ||v||^2 + 2 ||u|| ||v|| = (||u|| + ||v||)^2$$
+$$\lVert u \rVert^2 + \lVert v \rVert^2 + 2 |\langle u,v \rangle|  \leq \lVert u \rVert^2 + \lVert v \rVert^2 + 2 \lVert u \rVert \lVert v \rVert = (\lVert u \rVert + \lVert v \rVert)^2$$
 
 by Cauchy-Schwartz inequality.
 
 Taking square roots of both sides of the inequality above gives the desired inequality.
 
 ### 6.21 Parallelogram equality
-Suppose $u, v \in V$. Then $||u+v||^2 + ||u-v||^2 = 2 (||u||^2 + ||v||^2)$
+Suppose $u, v \in V$. Then $\lVert u+v \rVert^2 + \lVert u-v \rVert^2 = 2 (\lVert u \rVert^2 + \lVert v \rVert^2)$
 
 
 
@@ -159,120 +159,120 @@ by the triangle inequality on absolute values.
 The function violates definiteness. $\langle (0,1,0), (0,1,0) \rangle = 0$ but $(0,1,0) \neq 0$.
 
 
-#### (4) Suppose $T \in L(V)$ is such that $||Tv|| \leq ||v||$ for every $v \in V$. Prove that $T - \sqrt{2} I$ is injective.
-Assume towards contradiction that $T-\sqrt{2} I$ is not injective. Then $null (T-\sqrt{2} I) \neq \\{0\\}$, and $(T-\sqrt{2}I)v = 0$ for some $v \neq 0, v \in V$. We have $Tv = \sqrt{2} v$. $||Tv|| = || \sqrt{2} v|| = \sqrt{2} ||v||$. However, by hypothesis, $||Tv|| \leq ||v||$, which is a contradiction. Therefore we conclude $T - \sqrt{2} I$ is injective.
+#### (4) Suppose $T \in L(V)$ is such that $\lVert Tv \rVert \leq \lVert v \rVert$ for every $v \in V$. Prove that $T - \sqrt{2} I$ is injective.
+Assume towards contradiction that $T-\sqrt{2} I$ is not injective. Then $null (T-\sqrt{2} I) \neq \\{0\\}$, and $(T-\sqrt{2}I)v = 0$ for some $v \neq 0, v \in V$. We have $Tv = \sqrt{2} v$. $\lVert Tv \rVert = \lVert  \sqrt{2} v \rVert = \sqrt{2} \lVert v \rVert$. However, by hypothesis, $\lVert Tv \rVert \leq \lVert v \rVert$, which is a contradiction. Therefore we conclude $T - \sqrt{2} I$ is injective.
 
 
 #### (5) Suppose $V$ is a real inner product space. 
-(a) Show that $\langle u+v, u-v \rangle = ||u||^2 - ||v||^2$ for every $u,v \in V$.
+(a) Show that $\langle u+v, u-v \rangle = \lVert u \rVert^2 - \lVert v \rVert^2$ for every $u,v \in V$.
 
-$$\langle u+v,u-v \rangle = \langle u,u-v \rangle + \langle v,u-v \rangle = \langle u,u \rangle - \langle u,v \rangle + \langle v,u \rangle - \langle v,v \rangle = \langle u,u \rangle - \langle u,v \rangle + \overline{\langle u,v \rangle} - \langle v,v \rangle = ||u||^2 - ||v||^2$$
+$$\langle u+v,u-v \rangle = \langle u,u-v \rangle + \langle v,u-v \rangle = \langle u,u \rangle - \langle u,v \rangle + \langle v,u \rangle - \langle v,v \rangle = \langle u,u \rangle - \langle u,v \rangle + \overline{\langle u,v \rangle} - \langle v,v \rangle = \lVert u \rVert^2 - \lVert v \rVert^2$$
 
 (b) Show that $u,v \in V$ have the same norm, then $u+v$ is orthogonal to $u-v$.
 
-From (a), if $||u||=||v||$, then $\langle u+v, u-v \rangle = 0$.
+From (a), if $\lVert u \rVert=\lVert v \rVert$, then $\langle u+v, u-v \rangle = 0$.
 
 (c) Use (b) to show that the diagonals of a rhombus are perpendicular to each other.
 
-The diagonals of the rhombus are $u+v, u-v$, with $||u||=||v||$. Therefore by (b), the diagonals are perpendicular to each other.
+The diagonals of the rhombus are $u+v, u-v$, with $\lVert u \rVert=\lVert v \rVert$. Therefore by (b), the diagonals are perpendicular to each other.
 
 
-#### (6) Suppose $u,v \in V$. Prove that $\langle u,v \rangle=0 \iff ||u|| \leq ||u+av||$ for all $a \in F$.
+#### (6) Suppose $u,v \in V$. Prove that $\langle u,v \rangle=0 \iff \lVert u \rVert \leq \lVert u+av \rVert$ for all $a \in F$.
 $\Rightarrow$
-Suppose $\langle u,v \rangle=0$. Then $\langle u,av \rangle=\overline{a}\langle u,v \rangle=0$. By the Pythagorean theorem, $||u+av||^2 = ||u||^2 + ||av||^2$. Thus $||u||^2 \leq ||u + av||^2$. Taking square root, we have the desired inequality.
+Suppose $\langle u,v \rangle=0$. Then $\langle u,av \rangle=\overline{a}\langle u,v \rangle=0$. By the Pythagorean theorem, $\lVert u+av \rVert^2 = \lVert u \rVert^2 + \lVert av \rVert^2$. Thus $\lVert u \rVert^2 \leq \lVert u + av \rVert^2$. Taking square root, we have the desired inequality.
 
 $\Leftarrow$
-Suppose $||u|| \leq ||u+av||$ for all $a \in F$. Then $||u||^2 \leq ||u+av||^2$.
+Suppose $\lVert u \rVert \leq \lVert u+av \rVert$ for all $a \in F$. Then $\lVert u \rVert^2 \leq \lVert u+av \rVert^2$.
 
-$$||u+av||^2 = \langle u+av,u+av \rangle = ||u||^2 + \overline{a}\langle u,v \rangle + a \overline{\langle u,v \rangle} + |a|^2 ||v||^2$$
+$$\lVert u+av \rVert^2 = \langle u+av,u+av \rangle = \lVert u \rVert^2 + \overline{a}\langle u,v \rangle + a \overline{\langle u,v \rangle} + |a|^2 \lVert v \rVert^2$$
 
 Let $\lambda = \langle u,v \rangle$.
 
-$$0 \leq \overline{a} \lambda + a \overline{\lambda} + |a|^2 ||v||^2$$
+$$0 \leq \overline{a} \lambda + a \overline{\lambda} + |a|^2 \lVert v \rVert^2$$
 
-$$0 \leq 2 Re(a \overline{\lambda}) + |a|^2 ||v||^2$$
+$$0 \leq 2 Re(a \overline{\lambda}) + |a|^2 \lVert v \rVert^2$$
 
 Let $a = -t \lambda, t \in R, t  \rangle 0$. Note that $a \overline{\lambda} = -t |\lambda|^2$ which is real. Then the equation above becomes
 
-$$0 \leq -2 t |\lambda|^2 + t^2 |\lambda|^2 ||v||^2$$
+$$0 \leq -2 t |\lambda|^2 + t^2 |\lambda|^2 \lVert v \rVert^2$$
 
 Dividing both sides by $t$,
 
-$$0 \leq -2 |\lambda|^2 + t |\lambda|^2 ||v||^2$$
+$$0 \leq -2 |\lambda|^2 + t |\lambda|^2 \lVert v \rVert^2$$
 
 For small $t$, $t \rightarrow 0^+$, we have $0 \leq -2 |\lambda|^2$, which forces $|\lambda|^2 = 0$. Thus $\lambda = \langle u,v \rangle=0$.
 
 
-#### (7) Suppose $u,v \in V$. Prove that $||au + bv|| = ||bu + av||$ for all $a,b \in R$ if and only if $||u|| = ||v||$.
+#### (7) Suppose $u,v \in V$. Prove that $\lVert au + bv \rVert = \lVert bu + av \rVert$ for all $a,b \in R$ if and only if $\lVert u \rVert = \lVert v \rVert$.
 $\Leftarrow$
-Suppose $||u||=||v|| = \lambda$. Then 
+Suppose $\lVert u \rVert=\lVert v \rVert = \lambda$. Then 
 
-$$||au + bv||^2 = \langle au+bv, au+bv \rangle = a^2 ||u||^2 + b^2 ||v||^2 + 2ab Re(\langle u,v \rangle)$$
+$$\lVert au + bv \rVert^2 = \langle au+bv, au+bv \rangle = a^2 \lVert u \rVert^2 + b^2 \lVert v \rVert^2 + 2ab Re(\langle u,v \rangle)$$
 
-$$||bu + av||^2 = \langle bu+av, bu+av \rangle = b^2 ||u||^2 + a^2 ||v||^2 + 2ab Re(\langle u,v \rangle)$$
+$$\lVert bu + av \rVert^2 = \langle bu+av, bu+av \rangle = b^2 \lVert u \rVert^2 + a^2 \lVert v \rVert^2 + 2ab Re(\langle u,v \rangle)$$
 
-Since $||au + bv||^2 = ||bu + av||^2$, $||au + bv|| = ||bu + av||$.
+Since $\lVert au + bv \rVert^2 = \lVert bu + av \rVert^2$, $\lVert au + bv \rVert = \lVert bu + av \rVert$.
 
 $\Rightarrow$
-Suppose $||au + bv|| = ||bu + av||$. Then $||au + bv||^2 = ||bu + av||^2$.
+Suppose $\lVert au + bv \rVert = \lVert bu + av \rVert$. Then $\lVert au + bv \rVert^2 = \lVert bu + av \rVert^2$.
 
-$$||au + bv||^2 - ||bu + av||^2 = a^2 (||u||^2 - ||v||^2) + b^2 (||v||^2 - ||u||^2) = (a^2 - b^2) (||u||^2 - ||v||^2)$$
+$$\lVert au + bv \rVert^2 - \lVert bu + av \rVert^2 = a^2 (\lVert u \rVert^2 - \lVert v \rVert^2) + b^2 (\lVert v \rVert^2 - \lVert u \rVert^2) = (a^2 - b^2) (\lVert u \rVert^2 - \lVert v \rVert^2)$$
 
-Let $a=1, b=0$, then $a^2 - b^2 = 1 \neq 0$, so $||u||^2 - ||v||^2$ must be 0.
+Let $a=1, b=0$, then $a^2 - b^2 = 1 \neq 0$, so $\lVert u \rVert^2 - \lVert v \rVert^2$ must be 0.
 
-Therefore $||u||^2 = ||v||^2$, and $||u|| = ||v||$.
+Therefore $\lVert u \rVert^2 = \lVert v \rVert^2$, and $\lVert u \rVert = \lVert v \rVert$.
 
 
 #### (8) Suppose $a,b,c,x,y \in R$ and $a^2 + b^2 + c^2 + x^2 + y^2 \leq 1$. Prove that $a+b+c+4x+9y \leq 10$.
-We have $||(a,b,c,x,y)||^2 \leq 1$. Then $||(a,b,c,x,y)|| \leq 1$.
+We have $\lVert (a,b,c,x,y) \rVert^2 \leq 1$. Then $\lVert (a,b,c,x,y) \rVert \leq 1$.
 
 $$a + b + c + 4x + 9y = \langle (a,b,c,x,y),(1,1,1,4,9) \rangle \leq |\langle (a,b,c,x,y),(1,1,1,4,9) \rangle|$$
 
 By Cauchy-Schwartz inequality, 
 
-$$|\langle (a,b,c,x,y),(1,1,1,4,9) \rangle| \leq ||(a,b,c,x,y)|| ||(1,1,1,4,9)|| \leq 1 \sqrt{100} = 10$$
+$$|\langle (a,b,c,x,y),(1,1,1,4,9) \rangle| \leq \lVert (a,b,c,x,y) \rVert \lVert (1,1,1,4,9) \rVert \leq 1 \sqrt{100} = 10$$
 
 Thus $a+b+c+4x+9y \leq 10$.
 
 
-#### (9) Suppose $u,v \in V$ and $||u||= ||v|| = 1$ and $\langle u,v \rangle=1$. Prove that $u=v$.
+#### (9) Suppose $u,v \in V$ and $\lVert u \rVert= \lVert v \rVert = 1$ and $\langle u,v \rangle=1$. Prove that $u=v$.
 $$\langle u-v, u-v \rangle = \langle u,u \rangle - \langle u,v \rangle - \langle v,u \rangle - \langle v,v \rangle = \langle u,u \rangle + \langle u,v \rangle - \overline{\langle u,v \rangle} + \langle v,v \rangle = 1-1-1+1=0$$
 
 Therefore $u-v=0$, and $u=v$.
 
 
-#### (10) Suppose $u,v \in V$ and $||u|| \leq 1$ and $||v|| \leq 1$. Prove that $\sqrt{1-||u||^2} \sqrt{1-||v||^2} \leq 1 - |\langle u,v \rangle|$.
+#### (10) Suppose $u,v \in V$ and $\lVert u \rVert \leq 1$ and $\lVert v \rVert \leq 1$. Prove that $\sqrt{1-\lVert u \rVert^2} \sqrt{1-\lVert v \rVert^2} \leq 1 - |\langle u,v \rangle|$.
 Squaring both sides of the desired inequality, we have
 
-$$(1-||u||^2)(1-||v||^2) \leq (1 - |\langle u,v \rangle|)^2$$
+$$(1-\lVert u \rVert^2)(1-\lVert v \rVert^2) \leq (1 - |\langle u,v \rangle|)^2$$
 
 Note that 
 
-$$(1 - ||u|| ||v||)^2 \leq (1 - |\langle u,v \rangle|)^2$$
+$$(1 - \lVert u \rVert \lVert v \rVert)^2 \leq (1 - |\langle u,v \rangle|)^2$$
 
 by Cauchy-Schwartz inequality.
 
 We want to show
 
-$$(1-||u||^2)(1-||v||^2) \leq (1 - ||u|| ||v||)^2$$
+$$(1-\lVert u \rVert^2)(1-\lVert v \rVert^2) \leq (1 - \lVert u \rVert \lVert v \rVert)^2$$
 
 Expanding LHS
 
-$$(1-||u||^2)(1-||v||^2) = 1 - ||u||^2 - ||v||^2 + ||u||^2 ||v||^2$$
+$$(1-\lVert u \rVert^2)(1-\lVert v \rVert^2) = 1 - \lVert u \rVert^2 - \lVert v \rVert^2 + \lVert u \rVert^2 \lVert v \rVert^2$$
 
 Expanding RHS
 
-$$(1 - ||u|| ||v||)^2 = 1 + ||u||^2 ||v||^2 - 2 ||u|| ||v||$$
+$$(1 - \lVert u \rVert \lVert v \rVert)^2 = 1 + \lVert u \rVert^2 \lVert v \rVert^2 - 2 \lVert u \rVert \lVert v \rVert$$
 
-Subtracting $ ||u||^2 ||v||^2$,
+Subtracting $ \lVert u \rVert^2 \lVert v \rVert^2$,
 
 We want to show 
 
-$$1 - ||u||^2 - ||v||^2 \leq 1 - 2 ||u|| ||v||$$
+$$1 - \lVert u \rVert^2 - \lVert v \rVert^2 \leq 1 - 2 \lVert u \rVert \lVert v \rVert$$
 
 Rearranging, we have
 
-$$||u||^2 + ||v||^2 - 2 ||u|| ||v|| = (||u||-||v||)^2 \geq 0$$
+$$\lVert u \rVert^2 + \lVert v \rVert^2 - 2 \lVert u \rVert \lVert v \rVert = (\lVert u \rVert-\lVert v \rVert)^2 \geq 0$$
 
 which holds. Taking square root of both sides, we have the desired inequality.
 
@@ -294,9 +294,9 @@ $u = (7/10, 21/10), v = (3/10, -1/10)$.
 
 $$|\langle (\sqrt{a}, \sqrt{b}, \sqrt{c}, \sqrt{d}), (1/sqrt{a}, 1/sqrt{b}, 1/sqrt{c}, 1/sqrt{d}) \rangle|^2 = (1+1+1+1)^2 = 16$$
 
-$$||(\sqrt{a}, \sqrt{b}, \sqrt{c}, \sqrt{d})||^2 = = a+b+c+d$$
+$$\lVert (\sqrt{a}, \sqrt{b}, \sqrt{c}, \sqrt{d}) \rVert^2 = = a+b+c+d$$
 
-$$||(\sqrt{1/a}, \sqrt{1/b}, \sqrt{1/c}, \sqrt{1/d})||^2 = = 1/a + 1/b + 1/c + 1/d$$
+$$\lVert (\sqrt{1/a}, \sqrt{1/b}, \sqrt{1/c}, \sqrt{1/d}) \rVert^2 = = 1/a + 1/b + 1/c + 1/d$$
 
 By Cauchy-Schwartz inequality, 
 
@@ -316,9 +316,9 @@ Hence $a=b=c=d$.
 #### (13) Show that the square of an average is less than or equal to the average of the squares. More precisely, show that if $a_1,...,a_n \in R$, then the square of the average of $a_1,...,a_n$ is less than or equal to the average of $a_1^2,...,a_n^2$.
 $$|\langle (1/n,...,1/n), (a_1,...,a_n) \rangle|^2 = (a_1 /n + ... + a_n /n)^2$$
 
-$$||(1/n, ..., 1/n)||^2 = 1/n^2 + ... + 1/n^2 = 1/n$$
+$$\lVert (1/n, ..., 1/n) \rVert^2 = 1/n^2 + ... + 1/n^2 = 1/n$$
 
-$$||(a_1,...,a_n)||^2 = a_1^2 + ... + a_n^2$$
+$$\lVert (a_1,...,a_n) \rVert^2 = a_1^2 + ... + a_n^2$$
 
 By Cauchy-Schwartz inequality, 
 
@@ -336,11 +336,11 @@ Then
 
 $$|\langle u,v \rangle|^2 = (\sum_{k=1}^n a_k b_k)^2$$
 
-$$||u||^2 = \sum_{k=1}^n k a_k^2$$
+$$\lVert u \rVert^2 = \sum_{k=1}^n k a_k^2$$
 
-$$||v||^2 = \sum_{k=1}^n b_k^2 / k$$
+$$\lVert v \rVert^2 = \sum_{k=1}^n b_k^2 / k$$
 
-By the Cauchy-Schwartz inequality, we have $|\langle u, v \rangle|^2 \leq ||u||^2 ||v||^2$. Thus 
+By the Cauchy-Schwartz inequality, we have $|\langle u, v \rangle|^2 \leq \lVert u \rVert^2 \lVert v \rVert^2$. Thus 
 
 $$(\sum_{k=1}^n a_k b_k)^2 \leq (\sum_{k=1}^n k a_k^2)(\sum_{k=1}^n b_k^2 / k)$$
 
@@ -360,7 +360,7 @@ $$(\sum_{k=1}^n a_k b_k)^2 \leq (\sum_{k=1}^n k a_k^2)(\sum_{k=1}^n b_k^2 / k)$$
 ### 6.24
 Suppose $e_1,...,e_m$ is an orthonormal list of vectors in $V$. Then 
 
-$$||a_1 e_1 + ... + a_m e_m||^2 = |a_1|^2 + ... + |a_m|^2$$
+$$\lVert a_1 e_1 + ... + a_m e_m \rVert^2 = |a_1|^2 + ... + |a_m|^2$$
 
 for all $a_1,...,a_m \in F$.
 
@@ -372,7 +372,7 @@ Proof: Suppose $e_1,...,e_m$ is an orthonormal list of vectors in $V$ and $a_1,.
 ### 6.26 Bessel's inequality
 Suppose $e_1,...,e_m$ is an orthonormal list of vectors in $V$. If $v \in V$ then 
 
-$$|\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2 \leq ||v||^2$$
+$$|\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2 \leq \lVert v \rVert^2$$
 
 Proof: Suppose $v \in V$. Then 
 
@@ -382,7 +382,7 @@ Let $u = \langle v,e_1 \rangle e_1 + ... + \langle v,e_m \rangle e_m$, $w = v - 
 
 If $k \in \\{1,...,m\\}$, then $\langle w,e_k \rangle = \langle v,e_k \rangle - \langle v,e_k \rangle \langle e_k, e_k \rangle = 0$. This implies that $\langle w, u \rangle = 0$. The Pythagorean theorem implies that 
 
-$$||v||^2 = ||u||^2 + ||w||^2 \geq ||u||^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2$$
+$$\lVert v \rVert^2 = \lVert u \rVert^2 + \lVert w \rVert^2 \geq \lVert u \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2$$
 
 where the last equality comes from 6.24.
 
@@ -400,15 +400,15 @@ By 6.25, every orthonormal list of vectors in $V$ is linearly independent. Thus 
 Suppose $e_1,...,e_n$ is an orthonormal basis of $V$ and $u,v \in V$. Then
 
 - $v = \langle v, e_1 \ranglee_1 + ... \langle v,e_n \ranglee_n$
-- $||v||^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_n \rangle|^2$
+- $\lVert v \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_n \rangle|^2$
 - $\langle u,v \rangle = \langle u,e_1 \rangle\overline{\langle v,e_1 \rangle} + ... + \langle u,e_n \rangle\overline{\langle v,e_n \rangle}$
 
 ### 6.32 Gram-Schmidt procedure
 Suppose $v_1,...,v_m$ is a linearly independent list of vectors in $V$. Let $f_1 = v_1$. For $k = 2,...,m$, define $f_k$ inductively by 
 
-$$f_k = v_k - \frac{\langle v_k, f_1 \rangle}{||f_1||^2} f_1 - ... - \frac{\langle v_k, f_{k-1} \rangle}{||f_{k-1}||^2} f_{k-1}$$
+$$f_k = v_k - \frac{\langle v_k, f_1 \rangle}{\lVert f_1 \rVert^2} f_1 - ... - \frac{\langle v_k, f_{k-1} \rangle}{\lVert f_{k-1} \rVert^2} f_{k-1}$$
 
-For each $k=1,...,m$, let $e_k = \frac{f_k}{||f_k||}$. Then $e_1,...,e_m$ is an orthonormal list of vectors in $V$ such that
+For each $k=1,...,m$, let $e_k = \frac{f_k}{\lVert f_k \rVert}$. Then $e_1,...,e_m$ is an orthonormal list of vectors in $V$ such that
 
 $$span(v_1,...,v_k) = span(e_1,...,e_k)$$
 
@@ -418,7 +418,7 @@ Proof:
 
 We will show by induction on $k$ that the desired conclusion holds.
 
-To get started with $k=1$, note that because $e_1 = \frac{f_1}{||f_1||}$, we have $||e_1||=1$; also, $span(v_1) = span(e_1)$ because $e_1$ is a nonzero multiple of $v_1$.
+To get started with $k=1$, note that because $e_1 = \frac{f_1}{\lVert f_1 \rVert}$, we have $\lVert e_1 \rVert=1$; also, $span(v_1) = span(e_1)$ because $e_1$ is a nonzero multiple of $v_1$.
 
 Suppose $1 \langle  k \leq m$, and the list $e_1,...,e_{k-1}$ generated by the procedure is an orthonormal list such that 
 
@@ -430,17 +430,17 @@ $$v_k \notin span(e_1,...,e_{k-1}) = span(f_1,...,f_{k-1})$$
 
 which implies that $f_k \neq 0$. Hence we are not dividing by 0 in the definition of $e_k$. 
 
-Dividing a vector by its norm produces a new vector with norm 1; thus $||e_k|| = 1$.
+Dividing a vector by its norm produces a new vector with norm 1; thus $\lVert e_k \rVert = 1$.
 
 Let $j \in \\{1,...,k-1\\}$. Then 
 
-$$\langle e_k, e_j \rangle = \frac{1}{||f_k|| ||f_j||} \langle f_k, f_j \rangle $$
+$$\langle e_k, e_j \rangle = \frac{1}{\lVert f_k \rVert \lVert f_j \rVert} \langle f_k, f_j \rangle $$
 
-$$= \frac{1}{||f_k|| ||f_j||} \langle v_k - \frac{\langle v_k, f_1 \rangle}{||f_1||^2} f_1 - ... - \frac{\langle v_k, f_{k-1} \rangle}{||f_{k-1}||^2} f_{k-1}, f_j \rangle$$
+$$= \frac{1}{\lVert f_k \rVert \lVert f_j \rVert} \langle v_k - \frac{\langle v_k, f_1 \rangle}{\lVert f_1 \rVert^2} f_1 - ... - \frac{\langle v_k, f_{k-1} \rangle}{\lVert f_{k-1} \rVert^2} f_{k-1}, f_j \rangle$$
 
-$$= \frac{1}{||f_k|| ||f_j||}  (\langle v_k, f_j \rangle - \langle \frac{\langle v_k, f_j \rangle}{||f_j||^2} f_j, f_j \rangle)$$
+$$= \frac{1}{\lVert f_k \rVert \lVert f_j \rVert}  (\langle v_k, f_j \rangle - \langle \frac{\langle v_k, f_j \rangle}{\lVert f_j \rVert^2} f_j, f_j \rangle)$$
 
-$$= \frac{1}{||f_k|| ||f_j||} (\langle v_k, f_j \rangle - \langle v_k, f_j \rangle) = 0$$
+$$= \frac{1}{\lVert f_k \rVert \lVert f_j \rVert} (\langle v_k, f_j \rangle - \langle v_k, f_j \rangle) = 0$$
 
 Thus $e_1,...,e_k$ is an orthonormal list.
 
@@ -501,21 +501,21 @@ for every $u \in V$. Taking $u = v_1 - v_2$ shows that $v_1 - v_2 = 0$. Thus $v_
 
 ## Exercises
 
-#### (1) Suppose $e_1,...,e_m$ is a list of vectors in $V$ such that $||a_1 e_1 + ... + a_m e_m||^2 = |a_1|^2 + ... + |a_m|^2$ for all $a_1,...,a_m \in F$. Show that $e_1,...,e_m$ is an orthonormal list.
+#### (1) Suppose $e_1,...,e_m$ is a list of vectors in $V$ such that $\lVert a_1 e_1 + ... + a_m e_m \rVert^2 = |a_1|^2 + ... + |a_m|^2$ for all $a_1,...,a_m \in F$. Show that $e_1,...,e_m$ is an orthonormal list.
 
 First we want to show that the norms of each $e_i, i=1,...,m$ is 1.
 
 Let $a_k=1$, $a_i = 0, i \neq k$. Then 
 
-$$||a_k e_k||^2 = |a_k|^2 ||e_k||^2 = |a_k|^2$$
+$$\lVert a_k e_k \rVert^2 = |a_k|^2 \lVert e_k \rVert^2 = |a_k|^2$$
 
-Therefore $||e_k|| = 1$. Since $k$ was arbitrary, all the $e_i, i=1,...,m$ has unit norm.
+Therefore $\lVert e_k \rVert = 1$. Since $k$ was arbitrary, all the $e_i, i=1,...,m$ has unit norm.
 
 Next we want to show that the inner product of $e_k, e_l$ is 0 for $k \neq l$.
 
 Let $a_k, a_l \in F$, $a_i = 0, i \neq k, i \neq l$. Then 
 
-$$||a_k e_k a_l e_l||^2 = |a_k|^2 + |a_l|^2 + a_k \overline{a_l} \langle e_k, e_l \rangle + a_l \overline{a_k} \langle e_l, e_k \rangle = |a_k|^2 + |a_l|^2$$
+$$\lVert a_k e_k a_l e_l \rVert^2 = |a_k|^2 + |a_l|^2 + a_k \overline{a_l} \langle e_k, e_l \rangle + a_l \overline{a_k} \langle e_l, e_k \rangle = |a_k|^2 + |a_l|^2$$
 
 Thus 
 
@@ -541,15 +541,15 @@ Therefore $\langle e_k, e_l \rangle = 0$ for $k \neq l$.
 #### (2) 
 (a) Suppose $\theta \in R$. Show that both $(cos \theta, sin \theta), (-sin \theta, cos \theta)$ and $(cos \theta, sin \theta), (sin \theta, -cos \theta)$ are orthonormal bases of $R^2$.
 
-$$||(cos\theta, sin\theta)||^2 = cos^2 \theta + sin^2 \theta = 1$$
+$$\lVert (cos\theta, sin\theta) \rVert^2 = cos^2 \theta + sin^2 \theta = 1$$
 
-$$||(-sin\theta, cos\theta)||^2 = (-sin\theta)^2 + cos^2 \theta = 1$$
+$$\lVert (-sin\theta, cos\theta) \rVert^2 = (-sin\theta)^2 + cos^2 \theta = 1$$
 
 $$\langle (cos\theta, sin\theta), (-sin\theta, cos\theta) \rangle = - cos\theta sin\theta + sin\theta cos\theta = 0$$
 
 Similarly,
 
-$$||(sin\theta, -cos\theta)||^2 = sin^2\theta + (-cos \theta)^2 = 1$$
+$$\lVert (sin\theta, -cos\theta) \rVert^2 = sin^2\theta + (-cos \theta)^2 = 1$$
 
 $$\langle (cos\theta, sin\theta), (sin\theta, -cos\theta) \rangle = cos\theta sin\theta - sin\theta cos\theta = 0$$
 
@@ -560,9 +560,9 @@ Let $e_1, e_2$ be an orthonormal basis of $R^2$. Suppose $e_1 = (x_1, y_1)$. The
 Suppose $e_2 = (x_2, y_2)$. Then $\langle e_1,e_2 \rangle = x_2 cos\theta + y_2 \sin\theta = 0$. So $x_2 = -sin\theta, y_2=cos\theta$ or $x_2 = sin\theta, y_2=-cos\theta$.
 
 
-#### (3) Suppose $e_1,...,e_m$ is an orthonormal list in $V$ and $v \in V$. Prove that $||v||^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2 \iff v \in span (e_1,...,e_m)$.
+#### (3) Suppose $e_1,...,e_m$ is an orthonormal list in $V$ and $v \in V$. Prove that $\lVert v \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2 \iff v \in span (e_1,...,e_m)$.
 $\Rightarrow$
-Suppose $||v||^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2$.
+Suppose $\lVert v \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2$.
 
 Based on 6.26, we can decompose 
 
@@ -572,11 +572,11 @@ Let $u = \langle v,e_1 \ranglee_1 + ... + \langle v,e_m \ranglee_m$ and $w = v -
 
 Then $\langle w,u \rangle = 0$. By the Pythagorean theorem, 
 
-$$||v||^2 = ||u||^2 + ||w||^2$$
+$$\lVert v \rVert^2 = \lVert u \rVert^2 + \lVert w \rVert^2$$
 
-By 6.24, $||u||^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2$.
+By 6.24, $\lVert u \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2$.
 
-By hypothesis, $||v||^2 = ||u||^2$, which implies $||w||^2 = 0$. 
+By hypothesis, $\lVert v \rVert^2 = \lVert u \rVert^2$, which implies $\lVert w \rVert^2 = 0$. 
 
 Thus $w = 0$, and we conclude 
 
@@ -585,18 +585,18 @@ $$v = \langle v,e_1 \ranglee_1 + ... + \langle v,e_m \ranglee_m \in span(e_1,...
 $\Leftarrow$
 Suppose $v \in span(e_1,...,e_m)$. Then $v = a_1 e_1 + ... + a_m e_m$ for some $a_1,...,a_m$.
 
-$$||v||^2 = \langle a_1 e_1 + ... + a_m e_m, a_1 e_1 + ... + a_m e_m \rangle = |a_1|^2 + ... + |a_m|^2$$
+$$\lVert v \rVert^2 = \langle a_1 e_1 + ... + a_m e_m, a_1 e_1 + ... + a_m e_m \rangle = |a_1|^2 + ... + |a_m|^2$$
 
 For $k=1,...,m$, $\langle v,e_k \rangle = a_k \langle e_k,e_k \rangle = a_k$. Therefore 
 
-$$||v||^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2$$
+$$\lVert v \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2$$
 
 
 #### (4) Suppose $n$ is a positive integer. Prove ethat $1/\sqrt{2\pi}, cos x / sqrt{\pi}$
 
 
 #### (6) Suppose $e_1,...,e_n$ is an orthonormal basis of $V$. 
-(a) Prove that if $v_1,...,v_n$ are vectors in $V$ such that $||e_k - v_k|| \langle  1/\sqrt{n}$ for each $k$, then $v_1,...,v_n$ is a basis of $V$.
+(a) Prove that if $v_1,...,v_n$ are vectors in $V$ such that $\lVert e_k - v_k \rVert \langle  1/\sqrt{n}$ for each $k$, then $v_1,...,v_n$ is a basis of $V$.
 
 Suppose $a_1 v_1 + ... + a_n v_n = 0$ for some $a_1,...,a_n \in F$. We can rewrite
 
@@ -606,22 +606,22 @@ $$a_1 e_1 + ... + a_n e_n = - (a_1 (v_1-e_1) + ... + a_n(v_n-e_n))$$
 
 Taking the norm of both sides,
 
-$$||a_1 e_1 + ... + a_n e_n||^2 = |a_1|^2 + ... + |a_n|^2$$
+$$\lVert a_1 e_1 + ... + a_n e_n \rVert^2 = |a_1|^2 + ... + |a_n|^2$$
 
-$$||a_1 (v_1-e_1) + ... + a_n (v_n-e_n)||^2 \leq |a_1|^2 ||v_1-e_1||^2 + ... + |a_n|^2 ||v_n-e_n||^2 \leq (|a_1|^2+...+|a_n|^2) (||v_1-e_1||^2+...+||v_n-e_n||^2)$$
+$$\lVert a_1 (v_1-e_1) + ... + a_n (v_n-e_n) \rVert^2 \leq |a_1|^2 \lVert v_1-e_1 \rVert^2 + ... + |a_n|^2 \lVert v_n-e_n \rVert^2 \leq (|a_1|^2+...+|a_n|^2) (\lVert v_1-e_1 \rVert^2+...+\lVert v_n-e_n \rVert^2)$$
 
 where the first inequality follows from the triangle inequality, and the second inequality follows from the Cauchy-Schwartz inequality.
 
-$$(|a_1|^2+...+|a_n|^2) (||v_1-e_1||^2+...+||v_n-e_n||^2) \langle  (|a_1|^2+...+|a_n|^2) (1/n+...+1/n) = (|a_1|^2+...+|a_n|^2)$$
+$$(|a_1|^2+...+|a_n|^2) (\lVert v_1-e_1 \rVert^2+...+\lVert v_n-e_n \rVert^2) \langle  (|a_1|^2+...+|a_n|^2) (1/n+...+1/n) = (|a_1|^2+...+|a_n|^2)$$
 
-$$||a_1 (v_1-e_1) + ... + a_n (v_n-e_n)||^2 \langle  |a_1|^2 + ... + |a_n|^2$$
+$$\lVert a_1 (v_1-e_1) + ... + a_n (v_n-e_n) \rVert^2 \langle  |a_1|^2 + ... + |a_n|^2$$
 
 which is a contradiction.
 
 Therefore $|a_1|^2 + ... + |a_n|^2 = 0$, hence $a_1=...=a_n = 0$. We conclude $v_1,...,v_n$ is a linearly independent list of vectors of the right length, therefore it is a basis of $V$.
 
 
-(b) Show that there exist $v_1,...,v_n \in V$ such that $||e_k - v_k|| \leq 1/\sqrt{n}$ for each $k$, but $v_1,...,v_n$ is not linearly independent.
+(b) Show that there exist $v_1,...,v_n \in V$ such that $\lVert e_k - v_k \rVert \leq 1/\sqrt{n}$ for each $k$, but $v_1,...,v_n$ is not linearly independent.
 
 
 #### (18) Suppose $u_1,...,u_m$ is a linearly independent list in $V$. Show that there exists $v \in V$ such that $\langle u_k, v \rangle = 1$ for all $k \in \\{1,...,m\\}$.
@@ -792,7 +792,7 @@ Suppose $U$ is a finite-dimensional subspace of $V$. Then
 
 (g) $P_U^2 = P_U$;
 
-(h) $||P_U v|| \leq ||v||$ for every $v \in V$;
+(h) $\lVert P_U v \rVert \leq \lVert v \rVert$ for every $v \in V$;
 
 (i) if $e_1,...,e_m$ is an orthonormal basis of $U$ and $v \in V$, then
 
@@ -826,7 +826,7 @@ $$P_U^2 v = P_U (P_U v) = P_U u = u = P_U v$$
 
 If $v \in V$ and $v = u + w$ with $u \in U$ and $w \in U^{\perp}$, then
 
-$$||P_U v||^2 = ||u||^2 \leq ||u||^2 + ||w||^2 = ||v||^2$$
+$$\lVert P_U v \rVert^2 = \lVert u \rVert^2 \leq \lVert u \rVert^2 + \lVert w \rVert^2 = \lVert v \rVert^2$$
 
 where the last equality comes from the Pythagorean theorem.
 
@@ -848,25 +848,25 @@ If $\phi = 0$, then $\phi = \phi_0$. Thus assume $\phi \neq 0$. Hence $null \phi
 
 Let $w \in (null \phi)^{\perp}$ be such that $w \neq 0$. Let 
 
-$$(6.59)  v = \frac{\overline{\phi(w)}}{||w||^2} w$$
+$$(6.59)  v = \frac{\overline{\phi(w)}}{\lVert w \rVert^2} w$$
 
 Then $v \in (null \phi)^{\perp}$. Also $v \neq 0$ (because $w \neq null \phi$).
 
 Taking the norm of both sides gives
 
-$$||v|| = \frac{|\phi(w)|}{||w||}$$
+$$\lVert v \rVert = \frac{|\phi(w)|}{\lVert w \rVert}$$
 
 Applying $\phi$ to both sides of 6.59 and then using 6.60, we have
 
-$$\phi(v) = \frac{|\phi(w)|^2}{||w||^2} = ||v||^2$$
+$$\phi(v) = \frac{|\phi(w)|^2}{\lVert w \rVert^2} = \lVert v \rVert^2$$
 
 Now suppose $u \in V$. Using the equation above, we have
 
-$$u = u - \frac{\phi(u)}{\phi(v)} v + \frac{\phi(u)}{\phi(v)} v = (u - \frac{\phi(u)}{\phi(v)} v) + \frac{\phi(u)}{||v||^2} v$$
+$$u = u - \frac{\phi(u)}{\phi(v)} v + \frac{\phi(u)}{\phi(v)} v = (u - \frac{\phi(u)}{\phi(v)} v) + \frac{\phi(u)}{\lVert v \rVert^2} v$$
 
 The term in parentheses above is in $null \phi$ and hence is orthogonal to $v$. Thus taking the inner product of both sides of the equation above with $v$ shows that 
 
-$$\langle u,v \rangle = \frac{\phi(u)}{||v||^2} \langle v,v \rangle = \phi(u)$$
+$$\langle u,v \rangle = \frac{\phi(u)}{\lVert v \rVert^2} \langle v,v \rangle = \phi(u)$$
 
 Thus $\phi = \phi_v$, showing that $v \rightarrow \phi_v$ is surjective, as desired.
 
@@ -874,7 +874,7 @@ Thus $\phi = \phi_v$, showing that $v \rightarrow \phi_v$ is surjective, as desi
 ### 6.59
 Suppose $U$ is a finite-dimensional subspace of $V$, $v \in V$, and $u \in U$. Then
 
-$$||v - P_U v|| \leq ||v - u||$$
+$$\lVert v - P_U v \rVert \leq \lVert v - u \rVert$$
 
 Furthermore, the inequality above is an equality if and only if $u = P_U v$.
 
@@ -882,13 +882,13 @@ Proof:
 
 We have 
 
-$$||v - P_U v||^2 \leq ||v - P_U v||^2 + ||P_U v - u||^2 = ||(v - P_U v) + (P_Uv - u)||^2 = ||v-u||^2$$
+$$\lVert v - P_U v \rVert^2 \leq \lVert v - P_U v \rVert^2 + \lVert P_U v - u \rVert^2 = \lVert (v - P_U v) + (P_Uv - u) \rVert^2 = \lVert v-u \rVert^2$$
 
-where the first inequality holds because $0 \leq ||P_U v - u||^2$, the second inequality comes from the Pythagorean theorem (which applies because $v - P_U v \in U^{\perp}$ by 6.57 and $P_U v - u \in U$). 
+where the first inequality holds because $0 \leq \lVert P_U v - u \rVert^2$, the second inequality comes from the Pythagorean theorem (which applies because $v - P_U v \in U^{\perp}$ by 6.57 and $P_U v - u \in U$). 
 
 Taking square roots gives the desired inequality.
 
-The inequality proved is an equality if and only if $||v - P_U v||^2 = ||v - P_U v||^2 + ||P_U v - u||^2$, which happens if and only if $||P_U v - u|| = 0$, which happens if and only if $u = P_U v$.
+The inequality proved is an equality if and only if $\lVert v - P_U v \rVert^2 = \lVert v - P_U v \rVert^2 + \lVert P_U v - u \rVert^2$, which happens if and only if $\lVert P_U v - u \rVert = 0$, which happens if and only if $u = P_U v$.
 
 
 ### 6.67
@@ -1014,7 +1014,7 @@ Since $e_1,...,e_n$ is an orthonormal basis of $V$, $\phi_k(e_j) = \langle e_j, 
 By the Riesz representation, we can associate each $\phi_k$ with $e_k$. Thus the dual basis $\phi_1,...,\phi_n$ corresponds to $e_1,...,e_n$.
 
 
-#### (15) In $R^4$, let $U = span((1,1,0,0), (1,1,1,2))$. Find $u \in U$ such that $||u - (1,2,3,4)||$ is as small as possible.
+#### (15) In $R^4$, let $U = span((1,1,0,0), (1,1,1,2))$. Find $u \in U$ such that $\lVert u - (1,2,3,4) \rVert$ is as small as possible.
 
 
 
