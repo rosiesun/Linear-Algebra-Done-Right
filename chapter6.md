@@ -1,4 +1,4 @@
-Linear Algebra Done Right - Chapter 6 \langle br \rangle
+Linear Algebra Done Right - Chapter 6 <br>
 Inner Product Spaces
 ================
 Rosie Sun \langle br \rangle
