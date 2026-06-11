@@ -59,7 +59,15 @@ Suppose $\langle u,v \rangle=0$. Then
 $$\lVert u+v \rVert^2 = \langle u+v, u+v \rangle = \langle u,u \rangle + \langle u,v \rangle + \langle v,u \rangle + \langle v,v \rangle = \lVert u \rVert^2 + \lVert v \rVert^2$$
 
 ### 6.13
-Suppose $u,v \in V$, with $v \neq 0$. Set $c = \frac{\langle u,v \rangle}{\lVert v \rVert^2}$ and $w = u - \frac{\langle u,v \rangle}{\lVert v \rVert^2} v$. Then $u = cv + w$ and $\langle w,v \rangle=0$.
+Suppose $u,v \in V$, with $v \neq 0$. Set 
+
+$$c = \frac{\langle u,v \rangle}{\lVert v \rVert^2}$$ 
+
+and 
+
+$$w = u - \frac{\langle u,v \rangle}{\lVert v \rVert^2} v.$$ 
+
+Then $u = cv + w$ and $\langle w,v \rangle=0$.
 
 ### 6.14 Cauchy-Schwartz inequality
 Suppose $u,v \in V$. Then $|\langle u,v \rangle| \leq \lVert u \rVert \lVert v \rVert$. This inequality is an equality if and only if one of $u, v$ is a scalar multiple of the other.
@@ -72,7 +80,14 @@ $$u = \frac{\langle u,v \rangle}{\lVert v \rVert^2} v + w$$
 
 where $w$ is orthogonal to $v$. By the Pythagorean theorem,
 
-$$\lVert u \rVert^2 = \lVert \frac{\langle u,v \rangle}{ \rVertv\lVert ^2} v \rVert^2 + \lVert w \rVert^2 = \frac{|\langle u,v \rangle|^2}{\lVert v \rVert^2} + \lVert w \rVert^2 \geq \frac{|\langle u,v \rangle|^2}{\lVert v \rVert^2}$$
+$$
+\begin{aligned}
+\lVert u \rVert^2 
+    &= \lVert \frac{\langle u,v \rangle}{ \rVert v \lVert ^2} v \rVert^2 + \lVert w \rVert^2 \\
+    &= \frac{|\langle u,v \rangle|^2}{\lVert v \rVert^2} + \lVert w \rVert^2 \\
+    &\geq \frac{|\langle u,v \rangle|^2}{\lVert v \rVert^2}
+\end{aligned}
+$$
 
 Multiplying both sides of this inequality by $\lVert v \rVert^2$ and then taking square roots gives the desired inequality.
 
@@ -85,20 +100,28 @@ Proof:
 
 We have
 
-$$\lVert u+v \rVert^2 = \langle u+v, u+v \rangle = \langle u,u \rangle + \langle v,v \rangle + \langle u,v \rangle + \langle v,u \rangle = \lVert u \rVert^2 + \lVert v \rVert^2 + \langle u,v \rangle + \overline{\langle u,v \rangle}$$
+$$
+\begin{aligned}
+\lVert u+v \rVert^2 &= \langle u+v, u+v \rangle \\
+    &= \langle u,u \rangle + \langle v,v \rangle + \langle u,v \rangle + \langle v,u \rangle \\
+    &= \lVert u \rVert^2 + \lVert v \rVert^2 + \langle u,v \rangle + \overline{\langle u,v \rangle} \\
+    &= \lVert u \rVert^2 + \lVert v \rVert^2 + \langle u,v \rangle + \overline{\langle u,v \rangle} \\
+    &= \lVert u \rVert^2 + \lVert v \rVert^2 + 2 Re(\langle u,v \rangle) \\
+    &\leq \lVert u \rVert^2 + \lVert v \rVert^2 + 2 |\langle u,v \rangle| \\
+    &= \lVert u \rVert^2 + \lVert v \rVert^2 + 2 |\langle u,v \rangle| \\
+    &\leq \lVert u \rVert^2 + \lVert v \rVert^2 + 2 \lVert u \rVert \lVert v \rVert \\
+    &= (\lVert u \rVert + \lVert v \rVert)^2
+\end{aligned}
+$$
 
-$$\lVert u \rVert^2 + \lVert v \rVert^2 + \langle u,v \rangle + \overline{\langle u,v \rangle} = \lVert u \rVert^2 + \lVert v \rVert^2 + 2 Re(\langle u,v \rangle) \leq \lVert u \rVert^2 + \lVert v \rVert^2 + 2 |\langle u,v \rangle| $$
+where the second inequality follows from the Cauchy-Schwartz inequality. Taking square roots of both sides of the inequality above gives the desired inequality.
 
-by 4.4
-
-$$\lVert u \rVert^2 + \lVert v \rVert^2 + 2 |\langle u,v \rangle|  \leq \lVert u \rVert^2 + \lVert v \rVert^2 + 2 \lVert u \rVert \lVert v \rVert = (\lVert u \rVert + \lVert v \rVert)^2$$
-
-by Cauchy-Schwartz inequality.
-
-Taking square roots of both sides of the inequality above gives the desired inequality.
 
 ### 6.21 Parallelogram equality
-Suppose $u, v \in V$. Then $\lVert u+v \rVert^2 + \lVert u-v \rVert^2 = 2 (\lVert u \rVert^2 + \lVert v \rVert^2)$
+Suppose $u, v \in V$. Then 
+
+$$\lVert u+v \rVert^2 + \lVert u-v \rVert^2 = 2 (\lVert u \rVert^2 + \lVert v \rVert^2).$$
+
 
 
 
