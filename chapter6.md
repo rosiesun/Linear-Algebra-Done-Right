@@ -125,7 +125,7 @@ $$\lVert u+v \rVert^2 + \lVert u-v \rVert^2 = 2 (\lVert u \rVert^2 + \lVert v \r
 
 
 ## Exercises
-#### (1) Prove or give a counterexample: If $v_1,...,v_m \in V$, then $\sum^m_{j=1} \sum^m_{k=1} \langle v_j,v_k \rangle \geq 0$.
+### (1) Prove or give a counterexample: If $v_1,...,v_m \in V$, then $\sum^m_{j=1} \sum^m_{k=1} \langle v_j,v_k \rangle \geq 0$.
 Note that 
 
 $$\sum^m_{j=1} \sum^m_{k=1} \langle v_j,v_k \rangle = \langle v_1+...+v_m, v_1+...v_m \rangle \geq 0$$
@@ -133,7 +133,7 @@ $$\sum^m_{j=1} \sum^m_{k=1} \langle v_j,v_k \rangle = \langle v_1+...+v_m, v_1+.
 from the bilinearity of the inner product.
 
 
-#### (2) Suppose $S \in L(V)$. Define $\langle .,. \rangle_1$ by $\langle u,v \rangle_1 = \langle Su,Sv \rangle$ for all $u,v \in V$. Show that $\langle .,. \rangle_1$ is an inner product on $V$ if and only if $S$ is injective.
+### (2) Suppose $S \in L(V)$. Define $\langle .,. \rangle_1$ by $\langle u,v \rangle_1 = \langle Su,Sv \rangle$ for all $u,v \in V$. Show that $\langle .,. \rangle_1$ is an inner product on $V$ if and only if $S$ is injective.
 $\Rightarrow$
 Suppose $\langle .,. \rangle_1$ is an inner product. Assume towards contradiction that $S$ is not injective. Then $null S \neq \\{0\\}$, and there exists some $v \in V, v \neq 0$ such that $Sv = 0$. We have $\langle v,v \rangle_1 = \langle Sv, Sv \rangle = \langle 0,0 \rangle = 0$. This violates the definiteness of the inner product, hence a contradiction.
 
@@ -163,7 +163,7 @@ $$\langle u,v \rangle_1 = \langle Su,Sv \rangle = \overline{\langle Sv,Su \rangl
 for all $u,v \in V$.
 
 
-#### (3)
+### (3)
 (3a) Show that the function taking an ordered pair $(x_1,x_2), (y_1,y_2)$ of elements of $R^2$ to $|x_1 y_1| + |x_2 y_2|$ is not an inner product of $R^2$.
 
 The function violates the additivity in the first slot. Suppose $(x_1,x_2), (y_1,y_2), (z_1,z_2) \in R^2$. 
@@ -181,11 +181,11 @@ by the triangle inequality on absolute values.
 The function violates definiteness. $\langle (0,1,0), (0,1,0) \rangle = 0$ but $(0,1,0) \neq 0$.
 
 
-#### (4) Suppose $T \in L(V)$ is such that $\lVert Tv \rVert \leq \lVert v \rVert$ for every $v \in V$. Prove that $T - \sqrt{2} I$ is injective.
+### (4) Suppose $T \in L(V)$ is such that $\lVert Tv \rVert \leq \lVert v \rVert$ for every $v \in V$. Prove that $T - \sqrt{2} I$ is injective.
 Assume towards contradiction that $T-\sqrt{2} I$ is not injective. Then $null (T-\sqrt{2} I) \neq \\{0\\}$, and $(T-\sqrt{2}I)v = 0$ for some $v \neq 0, v \in V$. We have $Tv = \sqrt{2} v$. $\lVert Tv \rVert = \lVert  \sqrt{2} v \rVert = \sqrt{2} \lVert v \rVert$. However, by hypothesis, $\lVert Tv \rVert \leq \lVert v \rVert$, which is a contradiction. Therefore we conclude $T - \sqrt{2} I$ is injective.
 
 
-#### (5) Suppose $V$ is a real inner product space. 
+### (5) Suppose $V$ is a real inner product space. 
 (a) Show that $\langle u+v, u-v \rangle = \lVert u \rVert^2 - \lVert v \rVert^2$ for every $u,v \in V$.
 
 $$\langle u+v,u-v \rangle = \langle u,u-v \rangle + \langle v,u-v \rangle = \langle u,u \rangle - \langle u,v \rangle + \langle v,u \rangle - \langle v,v \rangle = \langle u,u \rangle - \langle u,v \rangle + \overline{\langle u,v \rangle} - \langle v,v \rangle = \lVert u \rVert^2 - \lVert v \rVert^2$$
@@ -199,7 +199,7 @@ From (a), if $\lVert u \rVert=\lVert v \rVert$, then $\langle u+v, u-v \rangle =
 The diagonals of the rhombus are $u+v, u-v$, with $\lVert u \rVert=\lVert v \rVert$. Therefore by (b), the diagonals are perpendicular to each other.
 
 
-#### (6) Suppose $u,v \in V$. Prove that $\langle u,v \rangle=0 \iff \lVert u \rVert \leq \lVert u+av \rVert$ for all $a \in F$.
+### (6) Suppose $u,v \in V$. Prove that $\langle u,v \rangle=0 \iff \lVert u \rVert \leq \lVert u+av \rVert$ for all $a \in F$.
 $\Rightarrow$
 Suppose $\langle u,v \rangle=0$. Then $\langle u,av \rangle=\overline{a}\langle u,v \rangle=0$. By the Pythagorean theorem, $\lVert u+av \rVert^2 = \lVert u \rVert^2 + \lVert av \rVert^2$. Thus $\lVert u \rVert^2 \leq \lVert u + av \rVert^2$. Taking square root, we have the desired inequality.
 
@@ -225,7 +225,7 @@ $$0 \leq -2 |\lambda|^2 + t |\lambda|^2 \lVert v \rVert^2$$
 For small $t$, $t \rightarrow 0^+$, we have $0 \leq -2 |\lambda|^2$, which forces $|\lambda|^2 = 0$. Thus $\lambda = \langle u,v \rangle=0$.
 
 
-#### (7) Suppose $u,v \in V$. Prove that $\lVert au + bv \rVert = \lVert bu + av \rVert$ for all $a,b \in R$ if and only if $\lVert u \rVert = \lVert v \rVert$.
+### (7) Suppose $u,v \in V$. Prove that $\lVert au + bv \rVert = \lVert bu + av \rVert$ for all $a,b \in R$ if and only if $\lVert u \rVert = \lVert v \rVert$.
 $\Leftarrow$
 Suppose $\lVert u \rVert=\lVert v \rVert = \lambda$. Then 
 
@@ -245,7 +245,7 @@ Let $a=1, b=0$, then $a^2 - b^2 = 1 \neq 0$, so $\lVert u \rVert^2 - \lVert v \r
 Therefore $\lVert u \rVert^2 = \lVert v \rVert^2$, and $\lVert u \rVert = \lVert v \rVert$.
 
 
-#### (8) Suppose $a,b,c,x,y \in R$ and $a^2 + b^2 + c^2 + x^2 + y^2 \leq 1$. Prove that $a+b+c+4x+9y \leq 10$.
+### (8) Suppose $a,b,c,x,y \in R$ and $a^2 + b^2 + c^2 + x^2 + y^2 \leq 1$. Prove that $a+b+c+4x+9y \leq 10$.
 We have $\lVert (a,b,c,x,y) \rVert^2 \leq 1$. Then $\lVert (a,b,c,x,y) \rVert \leq 1$.
 
 $$a + b + c + 4x + 9y = \langle (a,b,c,x,y),(1,1,1,4,9) \rangle \leq |\langle (a,b,c,x,y),(1,1,1,4,9) \rangle|$$
@@ -257,13 +257,13 @@ $$|\langle (a,b,c,x,y),(1,1,1,4,9) \rangle| \leq \lVert (a,b,c,x,y) \rVert \lVer
 Thus $a+b+c+4x+9y \leq 10$.
 
 
-#### (9) Suppose $u,v \in V$ and $\lVert u \rVert= \lVert v \rVert = 1$ and $\langle u,v \rangle=1$. Prove that $u=v$.
+### (9) Suppose $u,v \in V$ and $\lVert u \rVert= \lVert v \rVert = 1$ and $\langle u,v \rangle=1$. Prove that $u=v$.
 $$\langle u-v, u-v \rangle = \langle u,u \rangle - \langle u,v \rangle - \langle v,u \rangle - \langle v,v \rangle = \langle u,u \rangle + \langle u,v \rangle - \overline{\langle u,v \rangle} + \langle v,v \rangle = 1-1-1+1=0$$
 
 Therefore $u-v=0$, and $u=v$.
 
 
-#### (10) Suppose $u,v \in V$ and $\lVert u \rVert \leq 1$ and $\lVert v \rVert \leq 1$. Prove that $\sqrt{1-\lVert u \rVert^2} \sqrt{1-\lVert v \rVert^2} \leq 1 - |\langle u,v \rangle|$.
+### (10) Suppose $u,v \in V$ and $\lVert u \rVert \leq 1$ and $\lVert v \rVert \leq 1$. Prove that $\sqrt{1-\lVert u \rVert^2} \sqrt{1-\lVert v \rVert^2} \leq 1 - |\langle u,v \rangle|$.
 Squaring both sides of the desired inequality, we have
 
 $$(1-\lVert u \rVert^2)(1-\lVert v \rVert^2) \leq (1 - |\langle u,v \rangle|)^2$$
@@ -299,7 +299,7 @@ $$\lVert u \rVert^2 + \lVert v \rVert^2 - 2 \lVert u \rVert \lVert v \rVert = (\
 which holds. Taking square root of both sides, we have the desired inequality.
 
 
-#### (11) Find vectors $u, v \in R^2$ such that $u$ is a scalar multiple of $(1,3)$, $v$ is orthogonal to $(1,3)$, and $(1,2)=u+v$.
+### (11) Find vectors $u, v \in R^2$ such that $u$ is a scalar multiple of $(1,3)$, $v$ is orthogonal to $(1,3)$, and $(1,2)=u+v$.
 By hypothesis, $u = a(1,3)$. 
 
 Let $v=(x,y)$. $\langle (x,y), (1,3) \rangle = x+3y = 0$. $y = -1/3 x$.
@@ -311,7 +311,7 @@ Solving the two equations, we have
 $u = (7/10, 21/10), v = (3/10, -1/10)$.
 
 
-#### (12) Suppose $a,b,c,d$ are positive numbers.
+### (12) Suppose $a,b,c,d$ are positive numbers.
 (a) Prove that $(a+b+c+d)(1/a + 1/b + 1/c + 1/d) \geq 16$.
 
 $$|\langle (\sqrt{a}, \sqrt{b}, \sqrt{c}, \sqrt{d}), (1/sqrt{a}, 1/sqrt{b}, 1/sqrt{c}, 1/sqrt{d}) \rangle|^2 = (1+1+1+1)^2 = 16$$
@@ -335,7 +335,7 @@ Then $\sqrt{a}=\lambda / \sqrt{a}$, $a=\lambda$. Similarly, $b=c=d=\lambda$.
 Hence $a=b=c=d$.
 
 
-#### (13) Show that the square of an average is less than or equal to the average of the squares. More precisely, show that if $a_1,...,a_n \in R$, then the square of the average of $a_1,...,a_n$ is less than or equal to the average of $a_1^2,...,a_n^2$.
+### (13) Show that the square of an average is less than or equal to the average of the squares. More precisely, show that if $a_1,...,a_n \in R$, then the square of the average of $a_1,...,a_n$ is less than or equal to the average of $a_1^2,...,a_n^2$.
 $$|\langle (1/n,...,1/n), (a_1,...,a_n) \rangle|^2 = (a_1 /n + ... + a_n /n)^2$$
 
 $$\lVert (1/n, ..., 1/n) \rVert^2 = 1/n^2 + ... + 1/n^2 = 1/n$$
@@ -347,7 +347,7 @@ By Cauchy-Schwartz inequality,
 $$(a_1 /n + ... + a_n /n)^2 \leq 1/n (a_1^2 + ... + a_n^2)$$
 
 
-#### (17) Prove that $(\sum_{k=1}^n a_k b_k)^2 \leq (\sum_{k=1}^n k a_k^2)(\sum_{k=1}^n b_k^2 / k)$ for all real numbers $a_1,...,a_n$ and $b_1,...,b_n$.
+### (17) Prove that $(\sum_{k=1}^n a_k b_k)^2 \leq (\sum_{k=1}^n k a_k^2)(\sum_{k=1}^n b_k^2 / k)$ for all real numbers $a_1,...,a_n$ and $b_1,...,b_n$.
 Consider 
 
 $$u = (a_1, \sqrt{2} a_2, ..., \sqrt{n} a_n)$$
@@ -367,7 +367,7 @@ By the Cauchy-Schwartz inequality, we have $|\langle u, v \rangle|^2 \leq \lVert
 $$(\sum_{k=1}^n a_k b_k)^2 \leq (\sum_{k=1}^n k a_k^2)(\sum_{k=1}^n b_k^2 / k)$$
 
 
-#### (19) Suppose $v_1,...,v_n$ is a basis of $V$ and $T \in L(V)$. Prove that if $\lambda$ is an eigenvalue of $T$, then $|\lambda|^2 \leq \sum_{j=1}^n \sum_{k=1}^n |M(T)_{j,k}|^2$, where $M(T)_{kl}$ denotes the entry in row j, k of the matrix of $T$ with respect to the basis $v_1,...,v_n$.
+### (19) Suppose $v_1,...,v_n$ is a basis of $V$ and $T \in L(V)$. Prove that if $\lambda$ is an eigenvalue of $T$, then $|\lambda|^2 \leq \sum_{j=1}^n \sum_{k=1}^n |M(T)_{j,k}|^2$, where $M(T)_{kl}$ denotes the entry in row j, k of the matrix of $T$ with respect to the basis $v_1,...,v_n$.
 
 
 
@@ -531,7 +531,7 @@ for every $u \in V$. Taking $u = v_1 - v_2$ shows that $v_1 - v_2 = 0$. Thus $v_
 
 ## Exercises
 
-#### (1) Suppose $e_1,...,e_m$ is a list of vectors in $V$ such that $\lVert a_1 e_1 + ... + a_m e_m \rVert^2 = |a_1|^2 + ... + |a_m|^2$ for all $a_1,...,a_m \in F$. Show that $e_1,...,e_m$ is an orthonormal list.
+### (1) Suppose $e_1,...,e_m$ is a list of vectors in $V$ such that $\lVert a_1 e_1 + ... + a_m e_m \rVert^2 = |a_1|^2 + ... + |a_m|^2$ for all $a_1,...,a_m \in F$. Show that $e_1,...,e_m$ is an orthonormal list.
 
 First we want to show that the norms of each $e_i, i=1,...,m$ is 1.
 
@@ -568,7 +568,7 @@ Thus $Im(\langle e_k, e_l \rangle) = 0$.
 Therefore $\langle e_k, e_l \rangle = 0$ for $k \neq l$.
 
 
-#### (2) 
+### (2) 
 (a) Suppose $\theta \in R$. Show that both $(cos \theta, sin \theta), (-sin \theta, cos \theta)$ and $(cos \theta, sin \theta), (sin \theta, -cos \theta)$ are orthonormal bases of $R^2$.
 
 $$\lVert (cos\theta, sin\theta) \rVert^2 = cos^2 \theta + sin^2 \theta = 1$$
@@ -590,7 +590,7 @@ Let $e_1, e_2$ be an orthonormal basis of $R^2$. Suppose $e_1 = (x_1, y_1)$. The
 Suppose $e_2 = (x_2, y_2)$. Then $\langle e_1,e_2 \rangle = x_2 cos\theta + y_2 \sin\theta = 0$. So $x_2 = -sin\theta, y_2=cos\theta$ or $x_2 = sin\theta, y_2=-cos\theta$.
 
 
-#### (3) Suppose $e_1,...,e_m$ is an orthonormal list in $V$ and $v \in V$. Prove that $\lVert v \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2 \iff v \in span (e_1,...,e_m)$.
+### (3) Suppose $e_1,...,e_m$ is an orthonormal list in $V$ and $v \in V$. Prove that $\lVert v \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2 \iff v \in span (e_1,...,e_m)$.
 $\Rightarrow$
 Suppose $\lVert v \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2$.
 
@@ -622,10 +622,10 @@ For $k=1,...,m$, $\langle v,e_k \rangle = a_k \langle e_k,e_k \rangle = a_k$. Th
 $$\lVert v \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^2$$
 
 
-#### (4) Suppose $n$ is a positive integer. Prove ethat $1/\sqrt{2\pi}, cos x / sqrt{\pi}$
+### (4) Suppose $n$ is a positive integer. Prove ethat $1/\sqrt{2\pi}, cos x / sqrt{\pi}$
 
 
-#### (6) Suppose $e_1,...,e_n$ is an orthonormal basis of $V$. 
+### (6) Suppose $e_1,...,e_n$ is an orthonormal basis of $V$. 
 (a) Prove that if $v_1,...,v_n$ are vectors in $V$ such that $\lVert e_k - v_k \rVert \langle  1/\sqrt{n}$ for each $k$, then $v_1,...,v_n$ is a basis of $V$.
 
 Suppose $a_1 v_1 + ... + a_n v_n = 0$ for some $a_1,...,a_n \in F$. We can rewrite
@@ -654,7 +654,7 @@ Therefore $|a_1|^2 + ... + |a_n|^2 = 0$, hence $a_1=...=a_n = 0$. We conclude $v
 (b) Show that there exist $v_1,...,v_n \in V$ such that $\lVert e_k - v_k \rVert \leq 1/\sqrt{n}$ for each $k$, but $v_1,...,v_n$ is not linearly independent.
 
 
-#### (18) Suppose $u_1,...,u_m$ is a linearly independent list in $V$. Show that there exists $v \in V$ such that $\langle u_k, v \rangle = 1$ for all $k \in \\{1,...,m\\}$.
+### (18) Suppose $u_1,...,u_m$ is a linearly independent list in $V$. Show that there exists $v \in V$ such that $\langle u_k, v \rangle = 1$ for all $k \in \\{1,...,m\\}$.
 Suppose $V$ is finite-dimensional. Since $u_1,...,u_m$ is a lineary independent list, we can extend it to a basis of $V$, $u_1,...,u_m, v_1,...,v_n$ by 2.32. 
 
 Define a linear functional on $V$ such that $\phi(u_k) = 1, k=1,...,m$ and $\phi(v_j) = 0, j=1,...n$. This is well-defined by 3.4. 
@@ -664,7 +664,7 @@ By the Riesz representation theorem 6.42, there exists a unique $v \in V$ such t
 Thus there exists $v \in V$ such that $\langle u_k, v \rangle = 1$ for $k=1,...,m$. 
 
 
-#### (19) Suppose $v_1,...,v_n$ is a basis of $V$. Prove that there exists a basis $u_1,...,u_n$ of $V$ such that $\langle v_j, u_k \rangle = 0$ if $j \neq k$, and $\langle v_j, u_k \rangle = 1$ if $j = k$.
+### (19) Suppose $v_1,...,v_n$ is a basis of $V$. Prove that there exists a basis $u_1,...,u_n$ of $V$ such that $\langle v_j, u_k \rangle = 0$ if $j \neq k$, and $\langle v_j, u_k \rangle = 1$ if $j = k$.
 Define $n$ linear functionals on $V$ such that $\phi_k(v_j)=1$ if $k=j$, $\phi_k(v_j) = 0$ if $k \neq j$, for $k=1,...,n$. This is well-defined by 3.4.
 
 By the Riesz representation theorem 6.42, there exists unique $u_k \in V$ such that $\phi_k(v)=\langle v, u_k \rangle$ for all $v \in V$, for $k=1,...,n$.
@@ -682,7 +682,7 @@ since the cross terms disappear.
 Thus $u_1,...,u_n$ is linearly independent, and we conclude it is a basis of $V$.
 
 
-#### (22) Suppose $C[-1, 1]$ is the vector space of continuous real-valued functions on the interval [-1, 1] with inner product given by $\langle f,g \rangle = \int^1_{-1} fg$ for all $f,g \in C[-1,1]$. Let $\phi$ be the linear functional on $C[-1, 1]$ defined by $\phi(f) = f(0)$. Show that there does not exist $g \in C[-1, 1]$ such that $\phi(f) = \langle f,g \rangle$ for every $f \in C[-1, 1]$.
+### (22) Suppose $C[-1, 1]$ is the vector space of continuous real-valued functions on the interval [-1, 1] with inner product given by $\langle f,g \rangle = \int^1_{-1} fg$ for all $f,g \in C[-1,1]$. Let $\phi$ be the linear functional on $C[-1, 1]$ defined by $\phi(f) = f(0)$. Show that there does not exist $g \in C[-1, 1]$ such that $\phi(f) = \langle f,g \rangle$ for every $f \in C[-1, 1]$.
 Assume towards contradiction that there exists $g \in C[-1, 1]$ such that $\phi(f) = \langle f,g \rangle$ for every $f \in C[-1, 1]$.
 
 Consider the tent function, for some $0 < \epsilon < 1$, $f(x) = 1 - \frac{|x|}{\epsilon}$ for $|x| \langle = \epsilon$, $f(x) = 0$ for $|x| < \epsilon$.
@@ -934,7 +934,7 @@ The inequality proved is an equality if and only if $\lVert v - P_U v \rVert^2 =
 
 ## Exercises
 
-#### (1) Suppose $v_1,...,v_m \in V$. Prove that $\\{v_1,...,v_m\\}^{\perp} = (span(v_1,...,v_m))^{\perp}$.
+### (1) Suppose $v_1,...,v_m \in V$. Prove that $\\{v_1,...,v_m\\}^{\perp} = (span(v_1,...,v_m))^{\perp}$.
 $\subseteq$ Suppose $v \in \\{v_1,...,v_m\\}^{\perp}$. Then $\langle v_k, v \rangle = 0$ for $k = 1,...,m$. 
 
 Let $a_1,...,a_m \in F$. Then 
@@ -950,22 +950,22 @@ Since $v_k \in span(v_1,...,v_m)$ for $k=1,...,m$, we have $\langle v_k, v \rang
 Hence $v \in \\{v_1,...,v_m\\}^{\perp}$.
 
 
-#### (2)
+### (2)
 
 
-#### (3)
+### (3)
 
 
-#### (4)
+### (4)
 
 
-#### (5) Suppose that $V$ is finite-dimensional and $U$ is a subspace of $V$. Show that $P_{U^{\perp}} = I - P_U$, where $I$ is the identity operator on $V$.
+### (5) Suppose that $V$ is finite-dimensional and $U$ is a subspace of $V$. Show that $P_{U^{\perp}} = I - P_U$, where $I$ is the identity operator on $V$.
 Suppose $v \in V$. We can uniquely write $v = u + w$ where $u \in U$ and $w \in U^{\perp}$ by 6.49. Hence 
 
 $$P_{U^{\perp}} v = w = v - u = Iv - P_U v = (I - P_U) v$$
 
 
-#### (6) Suppose $V$ is finite-dimensional and $T \in L(V,W)$. Show that $T = TP_{(null T)^{\perp}} = P_{range T} T$.
+### (6) Suppose $V$ is finite-dimensional and $T \in L(V,W)$. Show that $T = TP_{(null T)^{\perp}} = P_{range T} T$.
 First we want to show $T = TP_{(null T)^{\perp}}$.
 
 Suppose $v \in V$. We have $V = null T \oplus (null T)^{\perp}$. We can write $v = v_1 + v_2$, where $v_1 \in null T$ and $v_2 \in (null T)^{\perp}$. Then $P_{(null T)^{\perp}} v = v_2$. We have
@@ -981,7 +981,7 @@ Since $Tv \in range T, $, by 6.57(b), we have $P_{range T} (Tv) = Tv = (P_{range
 Hence $T = P_{range T} T$.
 
 
-#### (7) Suppose $X$ and $Y$ are finite-dimensional subspaces of $V$. Prove that $P_X P_Y = 0$ if and only if $\langle x, y \rangle=0$ for all $x \in X$ and all $y \in Y$.
+### (7) Suppose $X$ and $Y$ are finite-dimensional subspaces of $V$. Prove that $P_X P_Y = 0$ if and only if $\langle x, y \rangle=0$ for all $x \in X$ and all $y \in Y$.
 $\Rightarrow$
 Suppose $P_X P_Y = 0$. Suppose $y \in Y$. Then $P_Y y = y$ by 6.57(b), and 
 
@@ -1001,7 +1001,7 @@ $$0 = P_X y = P_X (P_Y v) = (P_X P_Y) v$$
 Therefore $P_X P_Y = 0$.
 
 
-#### (8) Suppose $U$ is a finite-dimensional subspace of $V$ and $v \in V$. Define a linear functional $\phi: U \rightarrow F$ by $\phi(u) = \langle u, v \rangle$ for all $u \in U$. By the Riesz representation theorem, there exists a unique vector $w \in U$ such that $\phi(u) = \langle u, w \rangle$ for all $u \in U$. Show that $w = P_U v$.
+### (8) Suppose $U$ is a finite-dimensional subspace of $V$ and $v \in V$. Define a linear functional $\phi: U \rightarrow F$ by $\phi(u) = \langle u, v \rangle$ for all $u \in U$. By the Riesz representation theorem, there exists a unique vector $w \in U$ such that $\phi(u) = \langle u, w \rangle$ for all $u \in U$. Show that $w = P_U v$.
 Since $\phi(u) = \langle u, v \rangle = \langle u, w \rangle$ for all $u \in U$, we have $\langle u, v \rangle - \langle u, w \rangle = \langle u, v-w \rangle = 0$ for all $u \in U$. 
 
 Hence $v - w \in U^{\perp}$. 
@@ -1011,10 +1011,10 @@ Because $w \in U$, we can write $v = (v - w) + w$ where $v - w \in U^{\perp}$ an
 $$P_U v = P_U (v-w+w) = P_U (v-w) + P_U w = 0 + w = w$$
 
 
-#### (12)
+### (12)
 
 
-#### (13) Suppose $F=R$ and $V$ is finite-dimensional. For each $v \in V$, let $\phi_v$ denote the linear functional on $V$ defined by $\phi_v(u) = \langle u,v \rangle$ for all $u \in V$.
+### (13) Suppose $F=R$ and $V$ is finite-dimensional. For each $v \in V$, let $\phi_v$ denote the linear functional on $V$ defined by $\phi_v(u) = \langle u,v \rangle$ for all $u \in V$.
 (a) Show that $v \rightarrow \phi_v$ is an injective linear map from $V$ to $V'$.
 
 Define $T \in L(V, V')$, where $Tv = \phi_v$ where $\phi_v(u) = \langle u,v \rangle$.
@@ -1043,7 +1043,7 @@ To show that $T$ is injective, suppose $Tv = 0$. Then $\phi_v = 0$, and $\phi(u)
 By 3.111, $dim V = dim V'$. From part (a), $T$ is injective, therefore $T$ is surjective by 3.65. Thus it is an isomorphism.
 
 
-#### (14) Suppose that $e_1,...,e_n$ is an orthonormal basis of $V$. Explain why the dual basis (3.112) of $e_1,...,e_n$ is $e_1,...,e_n$ under the identification of $V'$ with $V$ provided by the Riesz representation theorem 6.58.
+### (14) Suppose that $e_1,...,e_n$ is an orthonormal basis of $V$. Explain why the dual basis (3.112) of $e_1,...,e_n$ is $e_1,...,e_n$ under the identification of $V'$ with $V$ provided by the Riesz representation theorem 6.58.
 Define $\phi_k(u) = \langle u, e_k \rangle$ for $k=1,...,n$, for all $u \in V$. 
 
 Since $e_1,...,e_n$ is an orthonormal basis of $V$, $\phi_k(e_j) = \langle e_j, e_k \rangle = \delta_{jk}$. Therefore $\phi_1,...,\phi_n$ satisfies the condition in 3.112 and is the dual basis of $e_1,...,e_n$.
@@ -1051,7 +1051,7 @@ Since $e_1,...,e_n$ is an orthonormal basis of $V$, $\phi_k(e_j) = \langle e_j, 
 By the Riesz representation, we can associate each $\phi_k$ with $e_k$. Thus the dual basis $\phi_1,...,\phi_n$ corresponds to $e_1,...,e_n$.
 
 
-#### (15) In $R^4$, let $U = span((1,1,0,0), (1,1,1,2))$. Find $u \in U$ such that $\lVert u - (1,2,3,4) \rVert$ is as small as possible.
+### (15) In $R^4$, let $U = span((1,1,0,0), (1,1,1,2))$. Find $u \in U$ such that $\lVert u - (1,2,3,4) \rVert$ is as small as possible.
 
 
 
