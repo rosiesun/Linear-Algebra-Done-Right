@@ -104,7 +104,7 @@ $$
 \begin{aligned}
 \lVert u+v \rVert^2 &= \langle u+v, u+v \rangle \\
     &= \langle u,u \rangle + \langle v,v \rangle + \langle u,v \rangle + \langle v,u \rangle \\
-    &= \lVert u \rVert^2 + \lVert v \rVert^2 + \langle u,v \rangle + \overline{\langle u,v \rangle} \\
+    &= \langle u,u \rangle + \langle v,v \rangle + \langle u,v \rangle + \overline{\langle u,v \rangle} \\
     &= \lVert u \rVert^2 + \lVert v \rVert^2 + \langle u,v \rangle + \overline{\langle u,v \rangle} \\
     &= \lVert u \rVert^2 + \lVert v \rVert^2 + 2 Re(\langle u,v \rangle) \\
     &\leq \lVert u \rVert^2 + \lVert v \rVert^2 + 2 |\langle u,v \rangle| \\
