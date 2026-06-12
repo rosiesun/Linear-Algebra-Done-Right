@@ -175,13 +175,15 @@ Thus $w \in span(v_1, ..., v_m)$, and $span(w_1, ..., w_m) \subseteq span(v_1, .
 Equality is established as desired.
 
 
-### (7a) Show that if we think of $C$ as a vector space over $R$, then the list $1+i, 1-i$ is linearly independent.
+### (7) 
+
+#### (a) Show that if we think of $C$ as a vector space over $R$, then the list $1+i, 1-i$ is linearly independent.
 
 Suppose $a(1+i)+b(1-i)=0, a,b \in R$. Then $(a+b) + (a-b)i = 0$. We have $a+b=a-b=0$, which implies $a=b=0$. 
 
 Thus by (2.15) they are linearly independent.
 
-### (7b) Show that if we think of $C$ as a vector space over $C$, then the list $1+i, 1-i$ is linearly dependent.
+#### (b) Show that if we think of $C$ as a vector space over $C$, then the list $1+i, 1-i$ is linearly dependent.
 Suppose $(a+bi)(1+i)+(c+di)(1-i)=0, a,b,c,d \in R$. Then $(a-b+c+d)+(a+b-c+d)i=0$. This holds if $a=d=0, b=c=1$. 
 
 Thus by (2.17) they are linearly dependent.
@@ -412,26 +414,31 @@ Thus $v = 0$, completing the proof that $U \cap W = \\{0\\}$.
 ## Exercises
 
 ### (3) 
-(a) Let $U$ be the subspace of $R^5$ defined by $U=\\{(x_1,x_2,x_3,x_4,x_5) \in R^5: x_1=3x_2, x_3=7x_4\\}$. Find a basis of $U$. <br>
+
+#### (a) Let $U$ be the subspace of $R^5$ defined by $U=\\{(x_1,x_2,x_3,x_4,x_5) \in R^5: x_1=3x_2, x_3=7x_4\\}$. Find a basis of $U$.
+
 $(3,1,0,0,0), (0,0,7,1,0), (0,0,0,0,1)$.
 
-(b) Extend the basis in (a) to a basis in $R^5$. <br>
+#### (b) Extend the basis in (a) to a basis in $R^5$.
+
 $(3,1,0,0,0), (0,0,7,1,0), (0,0,0,0,1), (0,1,0,0,0), (0,0,0,1,0)$.
  
-(c) Find a subspace $W$ of $R^5$ such that $R^5 = U \oplus W$. <br>
+#### (c) Find a subspace $W$ of $R^5$ such that $R^5 = U \oplus W$.
+
 $W = span((0,1,0,0,0), (0,0,0,1,0))$.
 
 
 ### (4) 
-(a) Let $U$ be the subspace of $C^5$ defined by $U=\\{(z_1,z_2,z_3,z_4,z_5) \in C^5: 6z_1=z_2, z_3+2z_4+3z_5 = 0 \\}$. Find a basis of $U$.
+
+#### (a) Let $U$ be the subspace of $C^5$ defined by $U=\\{(z_1,z_2,z_3,z_4,z_5) \in C^5: 6z_1=z_2, z_3+2z_4+3z_5 = 0 \\}$. Find a basis of $U$.
 
 $$(1,6,0,0,0), (0,0,-2,1,0), (0,0,-3,0,1)$$
 
-(b) Extend the basis in (a) to a basis in $C^5$.
+#### (b) Extend the basis in (a) to a basis in $C^5$.
 
 $$(0,1,0,0,0), (0,0,1,0,0)$$
 
-(c) Find a subspace $W$ of $C^5$ such that $C^5 = U \oplus W$.
+#### (c) Find a subspace $W$ of $C^5$ such that $C^5 = U \oplus W$.
 
 $$W=span((0,1,0,0,0), (0,0,1,0,0))$$
 
