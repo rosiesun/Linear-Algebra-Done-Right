@@ -295,7 +295,7 @@ To complete the proof, we only need to show that $u=w=0$ by 1.45. The equation a
 
 ### (1) For each of the following subsets of $F^3$, determine whether it is a subsapce of $F^3$.
 
-### (a) $U = \\{(x_1, x_2, x_3) \in F^3: x_1 + 2x_2 + 3x_3 = 0\\}$
+#### (a) $U = \\{(x_1, x_2, x_3) \in F^3: x_1 + 2x_2 + 3x_3 = 0\\}$
 
 $(0, 0, 0) \in U$.
 
@@ -314,19 +314,19 @@ $$(ax_1) + 2(ax_2) + 3(ax_3) = a(x_1+2x_2+3x_3) = a0 = 0$$
 Hence $U$ is closed under scalar multiplication. By (1.34) $U$ is a subspace.
 
 
-### (b) $U = \\{(x_1, x_2, x_3) \in F^3: x_1 + 2x_2 + 3x_3 = 4\\}$
+#### (b) $U = \\{(x_1, x_2, x_3) \in F^3: x_1 + 2x_2 + 3x_3 = 4\\}$
 
 It is not a subspace because $(0,0,0) \notin U$.
 
 
-### (c) $U = \\{(x_1, x_2, x_3) \in F^3: x_1 x_2 x_3 = 0\\}$
+#### (c) $U = \\{(x_1, x_2, x_3) \in F^3: x_1 x_2 x_3 = 0\\}$
 
 It is not a subspace because it is not closed under addition.
 
 Counterexample: let $u=(1,0,0) \in U, w=(0,1,1) \in U$. $u+w=(1,1,1) \notin U$.
 
 
-### (d) $U = \\{(x_1, x_2, x_3) \in F^3: x_1 = 5x_3\\}$
+#### (d) $U = \\{(x_1, x_2, x_3) \in F^3: x_1 = 5x_3\\}$
 
 $(0, 0, 0) \in U$.
 
@@ -352,7 +352,8 @@ $R^2$ is a subspace of the complex vector space $C^2$ because it is not closed u
 $i (1,1) = (i, i) \notin R^2$.
 
 
-### 6(a) Is $U=\\{(a,b,c) \in R^3: a^3=b^3\\}$ a subspace of $R^3$?
+### (6) 
+#### (a) Is $U=\\{(a,b,c) \in R^3: a^3=b^3\\}$ a subspace of $R^3$?
 
 $$a^3 = b^3 \iff a=b$$
 
@@ -366,7 +367,8 @@ $U$ is closed under addition.
 Let $u=(a,a,c), \lambda \in F$. Then $\lambda u = (\lambda a, \lambda a, \lambda c) \in U$. Hence $U$ is
 closed under scalar multiplication. By (1.34) $U$ is a subspace.
 
-### 6(b) Is $U=\\{(a,b,c) \in C^3: a^3=b^3\\}$ a subspace of $C^3$?
+
+#### (b) Is $U=\\{(a,b,c) \in C^3: a^3=b^3\\}$ a subspace of $C^3$?
 
 Counterexample: let $u=(1, 1, 0), w=(1, (-1+\sqrt(3)i)/2, 0)$. Then
 $u+w=(2, (1+\sqrt(3)i)/2, 0)$.
