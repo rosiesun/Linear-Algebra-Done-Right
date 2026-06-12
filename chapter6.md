@@ -187,7 +187,11 @@ The function violates definiteness. $\langle (0,1,0), (0,1,0) \rangle = 0$ but $
 
 ### (4) Suppose $T \in L(V)$ is such that $\lVert Tv \rVert \leq \lVert v \rVert$ for every $v \in V$. Prove that $T - \sqrt{2} I$ is injective.
 
-Assume towards contradiction that $T-\sqrt{2} I$ is not injective. Then $null (T-\sqrt{2} I) \neq \\{0\\}$, and $(T-\sqrt{2}I)v = 0$ for some $v \neq 0, v \in V$. We have $Tv = \sqrt{2} v$. $\lVert Tv \rVert = \lVert  \sqrt{2} v \rVert = \sqrt{2} \lVert v \rVert$. However, by hypothesis, $\lVert Tv \rVert \leq \lVert v \rVert$, which is a contradiction. Therefore we conclude $T - \sqrt{2} I$ is injective.
+Assume towards contradiction that $T-\sqrt{2} I$ is not injective. 
+
+Then $null (T-\sqrt{2} I) \neq \\{0\\}$, and $(T-\sqrt{2}I)v = 0$ for some $v \neq 0, v \in V$. We have $Tv = \sqrt{2} v$. $\lVert Tv \rVert = \lVert  \sqrt{2} v \rVert = \sqrt{2} \lVert v \rVert$. However, by hypothesis, $\lVert Tv \rVert \leq \lVert v \rVert$, which is a contradiction. 
+
+Therefore we conclude $T - \sqrt{2} I$ is injective.
 
 
 ### (5) Suppose $V$ is a real inner product space. 
@@ -282,7 +286,8 @@ $$
 \begin{aligned}
 |\langle (a,b,c,x,y),(1,1,1,4,9) \rangle| 
     &\leq \lVert (a,b,c,x,y) \rVert \lVert (1,1,1,4,9) \rVert \\
-    &\leq 1 \sqrt{100} = 10
+    &\leq 1 \sqrt{100} \\
+    &= 10
 \end{aligned}
 $$
 
@@ -353,20 +358,27 @@ Solving the two equations, we have
 $u = (7/10, 21/10), v = (3/10, -1/10)$.
 
 
-### (12) Suppose $a,b,c,d$ are positive numbers.
-(a) Prove that $(a+b+c+d)(1/a + 1/b + 1/c + 1/d) \geq 16$.
+### (12) Suppose $a, b, c, d$ are positive numbers.
 
-$$|\langle (\sqrt{a}, \sqrt{b}, \sqrt{c}, \sqrt{d}), (1/sqrt{a}, 1/sqrt{b}, 1/sqrt{c}, 1/sqrt{d}) \rangle|^2 = (1+1+1+1)^2 = 16$$
+#### (a) Prove that $(a+b+c+d)(\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}) \geq 16$.
+
+$$
+\begin{aligned}
+|\langle (\sqrt{a}, \sqrt{b}, \sqrt{c}, \sqrt{d}), (\frac{1}{sqrt{a}}, \frac{1}{sqrt{b}}, \frac{1}{sqrt{c}}, \frac{1}{sqrt{d}}) \rangle|^2 
+    &= (1+1+1+1)^2 \\
+    &= 16
+\end{aligned}
+$$
 
 $$\lVert (\sqrt{a}, \sqrt{b}, \sqrt{c}, \sqrt{d}) \rVert^2 = = a+b+c+d$$
 
-$$\lVert (\sqrt{1/a}, \sqrt{1/b}, \sqrt{1/c}, \sqrt{1/d}) \rVert^2 = = 1/a + 1/b + 1/c + 1/d$$
+$$\lVert (\sqrt{\frac{1}{a}}, \sqrt{\frac{1}{b}}, \sqrt{frac{1}{c}}, \sqrt{\frac{1}{d}}) \rVert^2 = = \frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}$$
 
 By Cauchy-Schwartz inequality, 
 
 $$16 \leq (a+b+c+d)(1/a + 1/b + 1/c + 1/d)$$
 
-(b) For which numbers $a,b,c,d$ is the inequality above an equality?
+#### (b) For which numbers $a,b,c,d$ is the inequality above an equality?
 
 Equality holds when one vector is a scalar multiple of the other. 
 
@@ -378,6 +390,7 @@ Hence $a=b=c=d$.
 
 
 ### (13) Show that the square of an average is less than or equal to the average of the squares. More precisely, show that if $a_1,...,a_n \in R$, then the square of the average of $a_1,...,a_n$ is less than or equal to the average of $a_1^2,...,a_n^2$.
+
 $$|\langle (1/n,...,1/n), (a_1,...,a_n) \rangle|^2 = (a_1 /n + ... + a_n /n)^2$$
 
 $$\lVert (1/n, ..., 1/n) \rVert^2 = 1/n^2 + ... + 1/n^2 = 1/n$$
@@ -390,6 +403,7 @@ $$(a_1 /n + ... + a_n /n)^2 \leq 1/n (a_1^2 + ... + a_n^2)$$
 
 
 ### (17) Prove that $(\sum_{k=1}^n a_k b_k)^2 \leq (\sum_{k=1}^n k a_k^2)(\sum_{k=1}^n b_k^2 / k)$ for all real numbers $a_1,...,a_n$ and $b_1,...,b_n$.
+
 Consider 
 
 $$u = (a_1, \sqrt{2} a_2, ..., \sqrt{n} a_n)$$
