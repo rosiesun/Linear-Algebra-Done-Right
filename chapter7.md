@@ -1,7 +1,7 @@
 Linear Algebra Done Right - Chapter 7 <br> 
 Operators on Inner Product Spaces
 ================
-Rosie Sun \langlebr\rangle 
+Rosie Sun <br> 
 2026-06-01
 
 
@@ -207,9 +207,81 @@ Hence
 $$\lVert Te_1 \rVert^2 + ... + \lVert Te_n \rVert^2 = \lVert T^* f_1 \rVert^2 + ... + \lVert T^* f_m \rVert^2.$$
 
 
-### (6)
+### (6) Suppose $T \in L(V, W)$. Prove that 
 
-### (7)
+#### (a) $T$ is injective $\iff$ $T^*$ is surjective.
+
+$\Rightarrow$
+Suppose $T$ is injective. Then $null T = \\{0\\}$ by 3.15. We have 
+
+$$V = range T^* \oplus (range T^*)^\perp.$$
+
+From 7.6 we have 
+
+$$null T = (range T^*)^\perp = \\{0\\}.$$
+
+Then $range T^* = V$. Hence we conclude $T^*$ is surjective.
+
+$\Leftarrow$
+Suppose $T^*$ is surjective. Then $range T^* = V$. We have 
+
+$$V = null T \oplus (null T)^\perp.$$
+
+From 7.6 we have 
+
+$$range T^* = (null T)^\perp = V.$$
+
+Then $null T = \\{0\\}$. Hence we conclude $T$ is injective.
+
+
+#### (b) $T$ is surjective $\iff$ $T^*$ is injective.
+
+$\Rightarrow$
+Suppose $T$ is surjective. Then $range T = W$. We have 
+
+$$W = null T^* \oplus (null T^*)^\perp.$$
+
+From 7.6 we have
+
+$$range T = (null T^*)^\perp = W.$$
+
+Then $null T^* = \\{0\\}$. Hence we conclude $T^*$ is injective.
+
+$\Leftarrow$
+Suppose $T^*$ is injective. Then $null T^* = \\{0\\}$. We have 
+
+$$W = range T \oplus (range T)^\perp.$$
+
+From 7.6 we have
+
+$$null T^* = (range T)^\perp = \\{0\\}.$$
+
+Then $range T = W$. Hence we conclude $T$ is surjective.
+
+
+### (7) Prove that if $T \in L(V, W)$, then 
+
+#### (a) $dim null T^* = dim null T + dim W - dim V$.
+
+$$
+\begin{aligned}
+dim null T^* &= dim (range T)^\perp \\
+    &= dim W - dim range T \\
+    &= dim W - (dim V - dim null T) \\
+    &= dim null T + dim W - dim V
+\end{aligned}
+$$
+
+#### (b) $dim range T^* = dim range T$.
+
+$$
+\begin{aligned}
+dim range T^* &= dim W - dim null T^* \\
+    &= dim W - dim (range T)^\perp \\
+    &= dim range T
+\end{aligned}
+$$
+
 
 ### (10)
 
