@@ -140,19 +140,19 @@ where $c, \lambda_1, ..., \lambda_m, b_1,...,b_M, c_1,...,c_M \in R$, with $b_k^
 Suppose $z = a + bi$ and $w = c + di$.
 
 
-### (a) $z + \overline{z} = 2 Re z$
+#### (a) $z + \overline{z} = 2 Re z$
 
 $$z + \overline{z} = (a + bi) + (a - bi) = 2a = 2 Re z$$
 
-### (b) $z - \overline{z} = 2 (Im z) i$
+#### (b) $z - \overline{z} = 2 (Im z) i$
 
 $$z - \overline{z} = (a + bi) - (a - bi) = 2 bi = 2 (Im z) i$$
 
-### (c) $z \overline{z} = |z|^2$
+#### (c) $z \overline{z} = |z|^2$
 
 $$z \overline{z} = (a + bi) (a - bi) = a^2 - (bi)^2 = a^2 + b^2 = (Re z)^2 + (Im z)^2 = |z|^2$$
 
-### (d) $\overline{w + z} = \overline{w} + \overline{z}$ and $\overline{wz} = \overline{w} \overline{z}$
+#### (d) $\overline{w + z} = \overline{w} + \overline{z}$ and $\overline{wz} = \overline{w} \overline{z}$
 
 $$w + z = (c + di) + (a + bi) = (c+a) + (d+b)i$$
 
@@ -162,13 +162,13 @@ $$wz = (c + di) (a + bi) = (ca - db) + (da + cb)i$$
 
 $$\overline{wz} = (ca - db) - (da + cb)i = (c - di) (a - bi) = \overline{w} \overline{z}$$
 
-### (e) $\overline{\overline{z}} = z$
+#### (e) $\overline{\overline{z}} = z$
 
 $$\overline{z} = a - bi = a + (-bi)$$
 
 $$\overline{\overline{z}} = a - (-bi) = a+bi = z$$
 
-### (f) $|Re z| \leq |z|$ and $|Im z| \leq |z|$
+#### (f) $|Re z| \leq |z|$ and $|Im z| \leq |z|$
 
 $$|Re z|^2 = |a|^2 = a^2 \leq a^2 + b^2 = (Re z)^2 + (Im z)^2 = |z|^2$$
 
@@ -180,11 +180,11 @@ Similarly,
 
 $$|Im z| \leq |z|.$$
 
-### (g) $|\overline{z}| = |z|$
+#### (g) $|\overline{z}| = |z|$
 
 $$|\overline{z}| = |a - bi| = \sqrt{a^2 + (-b)^2} = \sqrt{a^2 + b^2} = |z|$$
 
-### (h) $|wz| = |w| |z|$
+#### (h) $|wz| = |w| |z|$
 
 $$wz = (c + di) (a + bi) = (ca - db) + (da + cb)i$$
 
