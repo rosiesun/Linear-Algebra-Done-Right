@@ -283,9 +283,105 @@ dim range T^* &= dim W - dim null T^* \\
 $$
 
 
-### (10)
+### (10) Suppose $F = C$ and $T \in L(V)$. Prove that $T$ is self-adjoint if and only if $\langle Tv, v \rangle = \langle T^* v, v \rangle$ for all $v \in V$.
 
-### (15)
+$\Rightarrow$
+Suppose $T$ is self-adjoint. 
+
+Then $T = T^*$. Thus it follows immediately that $\langle Tv, v \rangle = \langle T^* v, v \rangle$ for all $v \in V$.
+
+$\Leftarrow$
+Suppose $\langle Tv, v \rangle = \langle T^* v, v \rangle$ for all $v \in V$. 
+
+Then we have for all $v \in V$,
+
+$$
+\begin{aligned}
+\langle Tv, v \rangle - \langle T^* v, v \rangle &= 0 \\
+\langle Tv - T^* v, v \rangle = 0 \\
+\langle (T - T^*) v, v \rangle = 0
+\end{aligned}
+$$
+
+Since $F= C$ and $T - T^* \in L(V)$, it follows by 7.13 that $T - T^* = 0$. 
+
+We conclude $T = T^*$, and $T$ is self-adjoint.
+
+
+### (11) Define an operator $S: F^2 \rightarrow F^2$ by $S(w, z) = (-z, w)$. 
+
+Suppose $(z_1, z_2) \in F^2$.
+
+#### (a) Find a formula for $S^*$.
+
+$$
+\begin{aligned}
+\langle S(z_1, z_2), (w_1, w_2) \rangle &= \langle (-z_2, z_1), (w_1, w_2) \rangle \\
+    &= -z_2 \overline{w_1} + z_1 \overline{w_2} \\
+    &= z_1 \overline{w_2} + z_2 (-\overline{w_1}) \\
+    &= \langle (z_1, z_2), (w_2, -w_1) \rangle
+\end{aligned}
+$$
+
+Thus we have 
+
+$$S^* (z_1, z_2) = (z_2, - z_1).$$
+
+#### (b) Show that $S$ is normal but not self-adjoint.
+
+Since $S (z_1, z_2) = (-z_2, z_1)$ and $S^* (z_1, z_2) = (z_2, - z_1)$, $S \neq S^*$. 
+
+Thus $S$ is not self-adjoint.
+
+We have 
+
+$$S^* S (z_1, z_2) = S^* (-z_2, z_1) = (z_1, z_2)$$
+
+which is equal to 
+
+$$S S^* (z_1, z_2) = S(z_2, -z_1) = (z_1, z_2)$$
+
+Thus $S$ is normal.
+
+#### (c) Find all eigenvalues of $S$.
+
+We want to find $\lambda \in F$ such that $S(z_1, z_2) = \lambda (z_1, z_2)$ for some nonzero $z_1, z_2 \in V$. Then $\lambda z_1 = -z_2$ and $\lambda z_2 = z_1$. 
+
+We have $\lambda^2 z_2 = -z_2$, and $\lambda^2 = -1$. 
+
+When $F = R$, $S$ has no eigenvalues. 
+
+When $F = C$, $S$ has two eigenvalues, $i$ and $-i$. 
+
+
+### (15) Suppose $T \in L(V)$ is invertible. Prove that 
+
+#### (a) $T$ is self-adjoint $\iff$ $T^{-1}$ is self-adjoint.
+
+Suppose $T$ is self-adjoint. Then $T = T^*$. We have
+
+$$T^{-1} = (T^*)^{-1} = (T^{-1})^*$$
+
+Hence $T^{-1}$ is self-adjoint. 
+
+The opposite direction follows from symmetry and the fact that $(T^{-1})^{-1} = T$.
+
+
+#### (b) $T$ is normal $\iff$ $T^{-1}$ is normal.
+
+Suppose $T$ is normal. Then $T T^* = T^* T$ and $(T T^*)^{-1} = (T^* T)^{-1}$. We have
+
+$$(T T^*)^{-1} = (T^*)^{-1} T^{-1} = (T^{-1})^* T^{-1}$$
+
+where the second equality follows from 7.5. Similarly,
+
+$$(T^* T)^{-1} = T^{-1} (T^*)^{-1} = T^{-1} (T^{-1})^*$$
+
+Hence $T^{-1}$ commutes with its adjoint, and it is normal.
+
+The opposite direction follows from symmetry and the fact that $(T^{-1})^{-1} = T$.
+
+### (16)
 
 ### (17)
 
