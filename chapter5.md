@@ -97,11 +97,12 @@ Hence $Tu \in range p(T)$. Thus $range p(T)$ is invariant under $T$, as desired.
 ## Exercises
 
 ### (1) Suppose $T \in L(V)$ and $U$ is a subspace of $V$. 
-(a) Prove that if $U \subseteq null T$, then $U$ is invariant under $T$.
+
+#### (a) Prove that if $U \subseteq null T$, then $U$ is invariant under $T$.
 
 Let $u \in U$. Then $u \in U \subseteq null T$. Thus $Tu=0$. Since $0$ is in any subspace, $Tu \in U$. Therefore $U$ is invariant under $T$.
 
-(b) Prove that if $range T \subseteq U$, thten $U$ is invariant under $T$.
+#### (b) Prove that if $range T \subseteq U$, thten $U$ is invariant under $T$.
 
 Let $u \in U$. Then $Tu \in range T \subseteq U$. Therefore $U$ is invariant under $T$.
 
@@ -165,7 +166,8 @@ Eigenvalue 0, eigenvectors $w \in W, w \neq 0$.
 
 
 ### (13) Suppose $T \in L(V)$. Suppose $S \in L(V)$ is invertible.
-(a) Prove that $T$ and $S^{-1} T S$ have the same eigenvalues.
+
+#### (a) Prove that $T$ and $S^{-1} T S$ have the same eigenvalues.
 
 Suppose $\lambda$ is an eigenvalue of $T$ corresponding to some eigenvector $v \in V$. Then $Tv = \lambda v$. 
 
@@ -175,7 +177,7 @@ $$S^{-1} T Su = S^{-1} T v = S^{-1} (\lambda v) = \lambda S^{-1} v = \lambda u$$
 
 Therefore $\lambda$ is an eigenvalue of $S^{-1} T S$.
 
-(b) What is the relationship between the eigenvectors of $T$ and the eigenvectors of $S^{-1} T S$?
+#### (b) What is the relationship between the eigenvectors of $T$ and the eigenvectors of $S^{-1} T S$?
 
 If $v$ is an eigenvector of $T$, then $S^{-1}v$ is an eigenvector of $S^{-1} T S$.
 
@@ -189,7 +191,8 @@ $$T(x_1, x_2, x_3, x_4) = (-x_2, x_1, -x_4, x_3)$$
 ### (16)
 
 ### (21) Suppose $T \in L(V)$ is invertible.
-(a) Suppose $\lambda \in F$ with $\lambda \neq 0$. Prove that $\lambda$ is an eigenvalue of $T$ if and only if $1/\lambda$ is an eigenvalue of $T^{-1}$.
+
+#### (a) Suppose $\lambda \in F$ with $\lambda \neq 0$. Prove that $\lambda$ is an eigenvalue of $T$ if and only if $1/\lambda$ is an eigenvalue of $T^{-1}$.
 
 $\Rightarrow$
 
@@ -215,9 +218,10 @@ $$T v = \lambda v$$
 
 Thus $\lambda$ is an eigenvalue of $T$.
 
-(b) Prove that $T$ and $T^{-1}$ have the same eigenvectors.
+#### (b) Prove that $T$ and $T^{-1}$ have the same eigenvectors.
 
 From the equations from (a), they have the same eigenvectors.
+
 
 ### (22)
 
@@ -304,7 +308,7 @@ If $dim null T \neq 0$, then 0 is an eigenvalue of $T$. $range T$ is invariant u
 
 ### (33) Suppose $T \in L(V)$ and $m$ is a positive integer.
 
-### (a) Prove that $T$ is injective if and only if $T^m$ is injective.
+#### (a) Prove that $T$ is injective if and only if $T^m$ is injective.
 $\Rightarrow$
 Suppose $T$ is injective. 
 
@@ -317,7 +321,7 @@ Suppose $T^m$ is injective. Then $null T^m = \\{0\\}$.
 
 Suppose $Tv = 0$. Applying $T$ m times, we have $T^m v = 0$. Since $T^m$ is injective, $v = 0$. Thus $T$ is injective.
 
-### (b) Prove that $T$ is surjective if and only if $T^m$ is surjective.
+#### (b) Prove that $T$ is surjective if and only if $T^m$ is surjective.
 $\Rightarrow$
 Suppose $T$ is surjective.
 
@@ -863,15 +867,15 @@ Suppose $T \in L(V)$ and $v_1,...,v_n$ is a basis of $V$. Then each eigenvalue o
 
 ### (1) Suppose $V$ is a finite-dimensional complex vector space and $T \in L(V)$.
 
-(a) Prove that if $T^4 = I$, then $T$ is diagonalizable.
+#### (a) Prove that if $T^4 = I$, then $T$ is diagonalizable.
 
 If $T^4 = I$, we have $T^4 - I = 0$. Then $p(z)=(z^4 - 1)$ is a polynomial multiple of the minimal polynomial of $T$ by 5.29. We can factor $p(z) = (z + i) (z - i) (z + 1) (z - 1)$. By 5.62, $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m$. Since $p$ is a polynomial multiple of the minimal polynomial, the minimal polynomial satisfies the condition of 5.62. Thus $T$ is diagonalizable. 
 
-(b) Prove that if $T^4 = T$, then $T$ is diagonalizable.
+#### (b) Prove that if $T^4 = T$, then $T$ is diagonalizable.
 
 If $T^4 = T$, we have $T^4 - T = 0$. Then $p(z)=(z^4 - z)$ is a polynomial multiple of the minimal polynomial of $T$ by 5.29. We can factor $p(z) = (z - 0) (z - 1) (z- ( (-1+i \sqrt{3})/2)) (z- ( (-1-i \sqrt{3})/2))$. By 5.62, $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m$. Since $p$ is a polynomial multiple of the minimal polynomial, the minimal polynomial satisfies the condition of 5.62. Thus $T$ is diagonalizable. 
 
-(c) Give an example of an operator $T \in L(C^2)$ such that $T^4 = T^2$ and $T$ is not diagonalizable.
+#### (c) Give an example of an operator $T \in L(C^2)$ such that $T^4 = T^2$ and $T$ is not diagonalizable.
 
 $$
 \begin{pmatrix} 
