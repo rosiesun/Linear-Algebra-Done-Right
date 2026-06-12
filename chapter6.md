@@ -1,7 +1,7 @@
 Linear Algebra Done Right - Chapter 6 <br>
 Inner Product Spaces
 ================
-Rosie Sun \langle br \rangle
+Rosie Sun <br>
 2026-05-15
 
 
@@ -135,10 +135,14 @@ from the bilinearity of the inner product.
 
 ### (2) Suppose $S \in L(V)$. Define $\langle .,. \rangle_1$ by $\langle u,v \rangle_1 = \langle Su,Sv \rangle$ for all $u,v \in V$. Show that $\langle .,. \rangle_1$ is an inner product on $V$ if and only if $S$ is injective.
 $\Rightarrow$
-Suppose $\langle .,. \rangle_1$ is an inner product. Assume towards contradiction that $S$ is not injective. Then $null S \neq \\{0\\}$, and there exists some $v \in V, v \neq 0$ such that $Sv = 0$. We have $\langle v,v \rangle_1 = \langle Sv, Sv \rangle = \langle 0,0 \rangle = 0$. This violates the definiteness of the inner product, hence a contradiction.
+Suppose $\langle .,. \rangle_1$ is an inner product. 
+
+Assume towards contradiction that $S$ is not injective. Then $null S \neq \\{0\\}$, and there exists some $v \in V, v \neq 0$ such that $Sv = 0$. We have $\langle v,v \rangle_1 = \langle Sv, Sv \rangle = \langle 0,0 \rangle = 0$. This violates the definiteness of the inner product, hence a contradiction.
 
 $\Leftarrow$
-Suppose $S$ is injective. We verify each property in the inner product definition 6.2
+Suppose $S$ is injective. 
+
+We verify each property in the inner product definition 6.2
 
 Positivity: $\langle v,v \rangle_1 = \langle Sv, Sv \rangle \geq 0$ for all $v \in V$, by the property of the inner product.
 
@@ -164,7 +168,7 @@ for all $u,v \in V$.
 
 
 ### (3)
-(3a) Show that the function taking an ordered pair $(x_1,x_2), (y_1,y_2)$ of elements of $R^2$ to $|x_1 y_1| + |x_2 y_2|$ is not an inner product of $R^2$.
+#### (a) Show that the function taking an ordered pair $(x_1,x_2), (y_1,y_2)$ of elements of $R^2$ to $|x_1 y_1| + |x_2 y_2|$ is not an inner product of $R^2$.
 
 The function violates the additivity in the first slot. Suppose $(x_1,x_2), (y_1,y_2), (z_1,z_2) \in R^2$. 
 
@@ -176,35 +180,49 @@ $$\langle (x_1, x_2), (z_1, z_2) \rangle + \langle (y_1,y_2), (z_1,z_2) \rangle 
 
 by the triangle inequality on absolute values.
 
-(3b) Show that the function taking an ordered pair $(x_1,x_2,x_3), (y_1,y_2,y_3)$ of elements of $R^3$ to $x_1 y_1 + x_3 y_3$ is not an inner product on $R^3$.
+#### (b) Show that the function taking an ordered pair $(x_1,x_2,x_3), (y_1,y_2,y_3)$ of elements of $R^3$ to $x_1 y_1 + x_3 y_3$ is not an inner product on $R^3$.
 
 The function violates definiteness. $\langle (0,1,0), (0,1,0) \rangle = 0$ but $(0,1,0) \neq 0$.
 
 
 ### (4) Suppose $T \in L(V)$ is such that $\lVert Tv \rVert \leq \lVert v \rVert$ for every $v \in V$. Prove that $T - \sqrt{2} I$ is injective.
+
 Assume towards contradiction that $T-\sqrt{2} I$ is not injective. Then $null (T-\sqrt{2} I) \neq \\{0\\}$, and $(T-\sqrt{2}I)v = 0$ for some $v \neq 0, v \in V$. We have $Tv = \sqrt{2} v$. $\lVert Tv \rVert = \lVert  \sqrt{2} v \rVert = \sqrt{2} \lVert v \rVert$. However, by hypothesis, $\lVert Tv \rVert \leq \lVert v \rVert$, which is a contradiction. Therefore we conclude $T - \sqrt{2} I$ is injective.
 
 
 ### (5) Suppose $V$ is a real inner product space. 
-(a) Show that $\langle u+v, u-v \rangle = \lVert u \rVert^2 - \lVert v \rVert^2$ for every $u,v \in V$.
 
-$$\langle u+v,u-v \rangle = \langle u,u-v \rangle + \langle v,u-v \rangle = \langle u,u \rangle - \langle u,v \rangle + \langle v,u \rangle - \langle v,v \rangle = \langle u,u \rangle - \langle u,v \rangle + \overline{\langle u,v \rangle} - \langle v,v \rangle = \lVert u \rVert^2 - \lVert v \rVert^2$$
+#### (a) Show that $\langle u+v, u-v \rangle = \lVert u \rVert^2 - \lVert v \rVert^2$ for every $u,v \in V$.
 
-(b) Show that $u,v \in V$ have the same norm, then $u+v$ is orthogonal to $u-v$.
+$$
+\begin{aligned}
+\langle u+v,u-v \rangle 
+    &= \langle u,u-v \rangle + \langle v,u-v \rangle \\
+    &= \langle u,u \rangle - \langle u,v \rangle + \langle v,u \rangle - \langle v,v \rangle \\
+    &= \langle u,u \rangle - \langle u,v \rangle + \overline{\langle u,v \rangle} - \langle v,v \rangle \\
+    &= \lVert u \rVert^2 - \lVert v \rVert^2
+\end{aligned}
+$$
+
+#### (b) Show that $u,v \in V$ have the same norm, then $u+v$ is orthogonal to $u-v$.
 
 From (a), if $\lVert u \rVert=\lVert v \rVert$, then $\langle u+v, u-v \rangle = 0$.
 
-(c) Use (b) to show that the diagonals of a rhombus are perpendicular to each other.
+#### (c) Use (b) to show that the diagonals of a rhombus are perpendicular to each other.
 
 The diagonals of the rhombus are $u+v, u-v$, with $\lVert u \rVert=\lVert v \rVert$. Therefore by (b), the diagonals are perpendicular to each other.
 
 
 ### (6) Suppose $u,v \in V$. Prove that $\langle u,v \rangle=0 \iff \lVert u \rVert \leq \lVert u+av \rVert$ for all $a \in F$.
 $\Rightarrow$
-Suppose $\langle u,v \rangle=0$. Then $\langle u,av \rangle=\overline{a}\langle u,v \rangle=0$. By the Pythagorean theorem, $\lVert u+av \rVert^2 = \lVert u \rVert^2 + \lVert av \rVert^2$. Thus $\lVert u \rVert^2 \leq \lVert u + av \rVert^2$. Taking square root, we have the desired inequality.
+Suppose $\langle u,v \rangle=0$. 
+
+Then $\langle u,av \rangle=\overline{a}\langle u,v \rangle=0$. By the Pythagorean theorem, $\lVert u+av \rVert^2 = \lVert u \rVert^2 + \lVert av \rVert^2$. Thus $\lVert u \rVert^2 \leq \lVert u + av \rVert^2$. Taking square root, we have the desired inequality.
 
 $\Leftarrow$
-Suppose $\lVert u \rVert \leq \lVert u+av \rVert$ for all $a \in F$. Then $\lVert u \rVert^2 \leq \lVert u+av \rVert^2$.
+Suppose $\lVert u \rVert \leq \lVert u+av \rVert$ for all $a \in F$. 
+
+Then $\lVert u \rVert^2 \leq \lVert u+av \rVert^2$.
 
 $$\lVert u+av \rVert^2 = \langle u+av,u+av \rangle = \lVert u \rVert^2 + \overline{a}\langle u,v \rangle + a \overline{\langle u,v \rangle} + |a|^2 \lVert v \rVert^2$$
 
@@ -226,6 +244,7 @@ For small $t$, $t \rightarrow 0^+$, we have $0 \leq -2 |\lambda|^2$, which force
 
 
 ### (7) Suppose $u,v \in V$. Prove that $\lVert au + bv \rVert = \lVert bu + av \rVert$ for all $a,b \in R$ if and only if $\lVert u \rVert = \lVert v \rVert$.
+
 $\Leftarrow$
 Suppose $\lVert u \rVert=\lVert v \rVert = \lambda$. Then 
 
@@ -246,24 +265,47 @@ Therefore $\lVert u \rVert^2 = \lVert v \rVert^2$, and $\lVert u \rVert = \lVert
 
 
 ### (8) Suppose $a,b,c,x,y \in R$ and $a^2 + b^2 + c^2 + x^2 + y^2 \leq 1$. Prove that $a+b+c+4x+9y \leq 10$.
+
 We have $\lVert (a,b,c,x,y) \rVert^2 \leq 1$. Then $\lVert (a,b,c,x,y) \rVert \leq 1$.
 
-$$a + b + c + 4x + 9y = \langle (a,b,c,x,y),(1,1,1,4,9) \rangle \leq |\langle (a,b,c,x,y),(1,1,1,4,9) \rangle|$$
+$$
+\begin{aligned}
+a + b + c + 4x + 9y 
+    &= \langle (a,b,c,x,y), (1,1,1,4,9) \rangle \\
+    &\leq |\langle (a,b,c,x,y), (1,1,1,4,9) \rangle|
+\end{aligned}
+$$
 
 By Cauchy-Schwartz inequality, 
 
-$$|\langle (a,b,c,x,y),(1,1,1,4,9) \rangle| \leq \lVert (a,b,c,x,y) \rVert \lVert (1,1,1,4,9) \rVert \leq 1 \sqrt{100} = 10$$
+$$
+\begin{aligned}
+|\langle (a,b,c,x,y),(1,1,1,4,9) \rangle| 
+    &\leq \lVert (a,b,c,x,y) \rVert \lVert (1,1,1,4,9) \rVert \\
+    &\leq 1 \sqrt{100} = 10
+\end{aligned}
+$$
 
 Thus $a+b+c+4x+9y \leq 10$.
 
 
 ### (9) Suppose $u,v \in V$ and $\lVert u \rVert= \lVert v \rVert = 1$ and $\langle u,v \rangle=1$. Prove that $u=v$.
-$$\langle u-v, u-v \rangle = \langle u,u \rangle - \langle u,v \rangle - \langle v,u \rangle - \langle v,v \rangle = \langle u,u \rangle + \langle u,v \rangle - \overline{\langle u,v \rangle} + \langle v,v \rangle = 1-1-1+1=0$$
+
+$$
+\begin{aligned}
+\langle u-v, u-v \rangle 
+    &= \langle u,u \rangle - \langle u,v \rangle - \langle v,u \rangle - \langle v,v \rangle \\
+    &= \langle u,u \rangle + \langle u,v \rangle - \overline{\langle u,v \rangle} + \langle v,v \rangle \\
+    &= 1-1-1+1 \\
+    &=0
+\end{aligned}
+$$
 
 Therefore $u-v=0$, and $u=v$.
 
 
 ### (10) Suppose $u,v \in V$ and $\lVert u \rVert \leq 1$ and $\lVert v \rVert \leq 1$. Prove that $\sqrt{1-\lVert u \rVert^2} \sqrt{1-\lVert v \rVert^2} \leq 1 - |\langle u,v \rangle|$.
+
 Squaring both sides of the desired inequality, we have
 
 $$(1-\lVert u \rVert^2)(1-\lVert v \rVert^2) \leq (1 - |\langle u,v \rangle|)^2$$
