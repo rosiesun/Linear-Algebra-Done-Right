@@ -755,7 +755,7 @@ for all $v \in V$. Thus $\psi = \psi(v_1) \phi_1 + ... + \psi(v_n) \phi_n$.
 
 ### (12) Suppose $S, T \in L(V,W)$. 
 
-(a) Prove that $(S+T)' = S' + T'$.
+#### (a) Prove that $(S+T)' = S' + T'$.
 
 Suppose $\phi \in W', v \in V$. 
 
@@ -763,7 +763,7 @@ $$(S+T)'(\phi)(v) = (\phi \circ (S+T))(v) = \phi ((S+T)v) = \phi(Sv + Tv) = \phi
 
 for all $\phi \in W', v \in V$. Thus $(S+T)' = S' + T'$.
 
-(b) Prove that $(\lambda T)' = \lambda T'$ for all $\lambda \in F$.
+#### (b) Prove that $(\lambda T)' = \lambda T'$ for all $\lambda \in F$.
 
 Suppose $\phi \in W', v \in V, \lambda \in F$.
 
@@ -784,16 +784,16 @@ Thus $I'(\phi) = \phi$ for all $\phi \in V'$ and $I'$ is the identity operator o
 
 ### (14) Define $T: R^3 \rightarrow R^2$ by $T(x,y,z) = (4x + 5y + 6z, 7x + 8y + 9z)$. Suppose $\phi_1,\phi_2$ denotes the dual basis of the standard basis of $R^2$ and $\psi_1,\psi_2,\psi_3$ denotes the dual basis of the standard basis of $R^3$.
 
-(a) Describe the linear functionals $T'(\phi_1)$ and $T'(\phi_2)$.
+#### (a) Describe the linear functionals $T'(\phi_1)$ and $T'(\phi_2)$.
 
-(b) Write $T'(\phi_1)$ and $T'(\phi_2)$ as linear combinations of $\psi_1,\psi_2,\psi_3$.
+#### (b) Write $T'(\phi_1)$ and $T'(\phi_2)$ as linear combinations of $\psi_1,\psi_2,\psi_3$.
 
 
 ### (15) Define $T: P(R) \rightarrow P(R)$ by $(Tp)(x) = x^2 p(x) + p''(x)$ for each $x \in R$. 
 
-(a) Suppose $\phi \in P(R)'$ is defined by $\phi(p) = p'(4)$. Describe the linear functional $T'(\phi)$ on $P(R)$.
+#### (a) Suppose $\phi \in P(R)'$ is defined by $\phi(p) = p'(4)$. Describe the linear functional $T'(\phi)$ on $P(R)$.
 
-(b) Suppose $\phi \in P(R)'$ is defined by $\phi(p) = \int^1_0 p$. Evaluate $(T'(\phi)) (x^3)$.
+#### (b) Suppose $\phi \in P(R)'$ is defined by $\phi(p) = \int^1_0 p$. Evaluate $(T'(\phi)) (x^3)$.
 
 
 ### (16) Suppose $W$ is finite-dimensional and $T \in L(V, W)$. Prove that $T' = 0 \iff T = 0$.
@@ -827,18 +827,19 @@ Exercise 16 showed that $T' = 0 \iff T = 0$, hence $F$ is injective. We have $di
 
 
 ### (22) Suppose $V$ is finite-dimensional and $U$ and $W$ are subspaces of $V$.
-### (a) Show that $(U+W)^0 = U^0 \cap W^0$.
+
+#### (a) Show that $(U+W)^0 = U^0 \cap W^0$.
 Suppose $\phi \in (U+W)^0$. Let $u+w \in U+W$. Then $\phi(u+w) = 0$. We have $u = u+0$ where $u \in U, 0 \in W$, and $\phi(u) = \phi(u+0) = 0$. Similarly, We have $w = w + 0$ where $w \in W, 0 \in U$, and $\phi(w) = \phi(w + 0) = 0$. Since $\phi \in U^0$ and $\phi \in W^0$, $\phi \in U^0 \cap W^0$.
 
 Suppose $\phi \in U^0 \cap W^0$. Then $\phi(u) = 0$ for all $u \in U$ and $\phi(w) = 0$ for all $w \in W$. We have $0 = \phi(u) + \phi(w) = \phi(u+w)$ for all $u+w \in U+W$. Hence $\phi \in (U+W)^0$.
 
-### (b) Show that $(U \cap W)^0 = U^0 + W^0$.
+#### (b) Show that $(U \cap W)^0 = U^0 + W^0$.
 
 
 
 ### (24) Suppose $V$ is finite-dimensional and $v_1,...,v_m \in V$. Define a linear map $\Gamma: V' \rightarrow F^m$ by $\Gamma(\phi) = (\phi(v_1),...,\phi(v_m))$.
 
-### (a) Prove that $v_1,...,v_m$ spans $V$ if and only if $\Gamma$ is injective.
+#### (a) Prove that $v_1,...,v_m$ spans $V$ if and only if $\Gamma$ is injective.
 
 $\Rightarrow$
 Suppose $v_1,...,v_m$ spans $V$. We want to show that $\Gamma$ is injective. 
@@ -858,7 +859,7 @@ Assume towards contradiction that $v_1,...,v_m$ do not span $V$. Then there exis
 
 We conclude that $v_1,...,v_m$ spans $V$.
 
-### (b) Prove that $v_1,...,v_m$ is linearly independent if and only if $\Gamma$ is surjective.
+#### (b) Prove that $v_1,...,v_m$ is linearly independent if and only if $\Gamma$ is surjective.
 
 $\Rightarrow$
 Suppose $v_1,...,v_m$ is linearly independent. We want to show that $\Gamma$ is surjective.
@@ -883,16 +884,16 @@ We conclude that $v_1,...,v_m$ is linearly independent.
 
 ### (25) Suppose $V$ is finite-dimensional and $\phi_1,...,\phi_m \in V'$. Define a linear map $\Gamma: V \rightarrow F^m$ by $\Gamma(v) = (\phi_1(v), ..., \phi_m(v))$.
 
-### (a) Prove that $\phi_1,...,\phi_m$ spans $V'$ if and only if $\Gamma$ is injective.
+#### (a) Prove that $\phi_1,...,\phi_m$ spans $V'$ if and only if $\Gamma$ is injective.
 
 
 
-### (b) Prove that $\phi_1,...,\phi_m$ is linearly independent if and only if $\Gamma$ is surjective.
+#### (b) Prove that $\phi_1,...,\phi_m$ is linearly independent if and only if $\Gamma$ is surjective.
 
 
 ### (29) Suppose $V$ and $W$ are finite-dimensional and $T \in L(V, W)$. 
 
-### (a) Prove that if $\phi \in W'$ and $null T' = span(\phi)$, then $range T = null \phi$.
+#### (a) Prove that if $\phi \in W'$ and $null T' = span(\phi)$, then $range T = null \phi$.
 First consider $\phi = 0$. Then $null \phi = W$. Since $span(0) = \\{0\\}$, $null T' = \\{0\\}$. Then $T'$ is injective by 3.15, and $T$ is surjective by 3.129, and $range T = W$. Thus $W = range T = null \phi$.
 
 For the rest of the proof suppose $\phi \neq 0$.
@@ -909,7 +910,7 @@ Since $dim W = dim null \phi + dim range \phi$ by 3.21, and $dim range \phi = 1$
 
 Thus $dim null \phi = dim range T = m-1$ and together with the fact that $range T \subseteq null \phi$, we conclude that $range T = null \phi$.
 
-### (b) Prove that if $\psi \in V'$ and $range T' = span(\psi)$, then $null T = null \psi$.
+#### (b) Prove that if $\psi \in V'$ and $range T' = span(\psi)$, then $null T = null \psi$.
 First consider $\psi = 0$. Then $null \psi = V$. Since $span(0) = \\{0\\}$, $range T' = \\{0\\}$. $T'(\phi) = 0$ for all $\phi \in W'$. Hence $T'=0$, and $T=0$ (from exercise 16). Thus $V = null T = null \psi$.
 
 For the rest of the proof suppose $\psi \neq 0$.
