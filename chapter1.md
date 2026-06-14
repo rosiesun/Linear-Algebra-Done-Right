@@ -11,6 +11,7 @@ Rosie Sun <br>
 - An addition on a set $V$ is a function that assigns an element $u+v \in V$ to each pair of elements $u,v \in V$.
 - A scalar multiplication on a set $V$ is a function that assigns an element $\lambda v \in V$ to each $\lambda \in F$ and each $v \in V$.
 
+
 ### 1.20 Definition: vector space
 A vector space is a set $V$ along with an addition on $V$ and a scalar multiplcation on $V$ such that the following properties hold.
 
@@ -20,6 +21,7 @@ A vector space is a set $V$ along with an addition on $V$ and a scalar multiplca
 - additive inverse: For every $v \in V$, there exists $w \in V$ such that $v+w=0$.
 - multiplicative identity: $1v=v$ for all $v \in V$.
 - distributive properties: $a(u+v)=au+av$ and $(a+b)v=av+bv$ for all $a,b \in F$ and all $u,v \in V$.
+
 
 ### 1.26 Unique additive identity
 A vector space has a unique additive identity.
@@ -82,6 +84,7 @@ This equation says that $(-1)v$, when added to $v$, gives 0. Thus $(-1)v is the 
 
 
 
+
 ## Exercises
 
 ### (1) Prove that $-(-v)=v$ for every $v \in V$.
@@ -91,6 +94,7 @@ From (1.32) which states $(-1)v=-v$ for every $v \in V$,
 $$-(-v) = (-1)(-v) = (-1)(-1)v = 1v = v$$
 
 The last equality comes from multiplicative identity.
+
 
 
 ### (2) Suppose $a \in F, v \in V$, and $av=0$. Prove that $a=0$ or $v=0$.
@@ -104,9 +108,11 @@ $$1v = 0$$
 by associativity on the left side, (1.31) on the right side. Hence $v=0$ as desired.
 
 
+
 ### (4) The empty set is not a vector space. The empty set fails to satisfy only one of the requirements listed in the definition of a vector space (1.20). Which one?
 
 The empty set it does not satisfy the additive identity condition because it’s an existence statement. The empty set satisfies the other conditions vacuously.
+
 
 
 ### (5) Show that in the definition of a vector space (1.20), the additive inverse condition can be replaced with the condition that $0v=0$ for all $v \in V$.
@@ -135,6 +141,7 @@ $$0=0v=(1+(-1))v = 1v + (-1)v = v+(-v)$$
 The second equality comes from distributive properties. The third
 equality comes from multiplicative inverse and (1.32). Since $v+(-v)=0$,
 $(-v)$ must be the additive inverse of $v$.
+
 
 
 ### (6)
@@ -175,6 +182,7 @@ $$t + (\infty + (-\infty)) = t + 0 = t$$
 $$(t + \infty) + (-\infty) \neq t + (\infty + (-\infty))$$
 
 Associativity is not satisfied.
+
 
 
 ### (7) Suppose $S$ is a nonempty set. Let $V^S$ denote the set of functions from $S$ to $V$. Define a natural addition and scalar multiplication on $V^S$, and show that $V^S$ is a vector space with these definitions.
@@ -220,10 +228,13 @@ $$((a+b)f)(x) = (a+b)f(x) = af(x) + bf(x) = (af)(x) + (bf)(x)$$
 
 
 
+
+--------------------------------------------------------------------------------
 # 1C Subspaces
 
 ### 1.33 Definition: subspace
 A subset $U$ of $V$ is called a subspace of $V$ if $U$ is also a vector space with the same additive identity, addition, and scalar multiplication as on $V$.
+
 
 ### 1.34 Conditions for a subspace
 A subset $U$ of $V$ is a subspace of $V$ if and only if $U$ satisfies the following three conditions.
@@ -232,10 +243,12 @@ A subset $U$ of $V$ is a subspace of $V$ if and only if $U$ satisfies the follow
 - closed under addition: $u, w \in U$ implies $u + w \in U$.
 - closed under scalar multiplication: $a \in F$ and $u \in U$ implies $au \in U$.
 
+
 ### 1.36 Definition: Sum of subspaces
 Suppose $V_1, ..., V_m$ are subspaces of $V$. The sum of $V_1, ..., V_m$ denoted by $V_1 + ... + V_m$, is the set of all possible sums of elements of $V_1, ..., V_m$. More precisely,
 
 $$V_1 + ... +V_m = \\{v_1 + ... + v_m: v1 \in V_1, ..., v_m \in V_m\\}$$
+
 
 ### 1.40 Sum of subspaces is the smallest containing subspace
 Suppose $V_1, ..., V_m$ are subspaces of $V$. Then $V_1 + ... + V_m$ is the smallest subspace of $V$ containing $V_1, ..., V_m$.
@@ -249,6 +262,7 @@ The subspaces $V_1, ..., V_m$ are all contained in $V_1 + ... + V_m$ (to see thi
 
 ### 1.41 Definition: Direct sum $\oplus$
 Suppose $V_1, ..., V_m$ are subspaces of $V$. The sum $V_1 + ... V_m$ is called a direct sum if each element of $V_1 + ... V_m$ can be written in only one way as a sum $v_1 + ... + v_m$, where each $v_k \in V_k$.
+
 
 ### 1.45 Conditions for a direct sum
 Suppose $V_1, ..., V_m$ are subspaces of $V$. Then $V_1 + ... + V_m$ is a direct if and only if the only way to write 0 as a sum $v_1 + ... + v_m$, where each $v_k \in V_k$, is by taking each $v_k$ equal to 0.
@@ -288,6 +302,7 @@ Now suppose $U \cap W = \\{0\\}$.
 To prove that $U + W$ is a direct sum, suppose $u \in U, w \in W$, and $0 = u + w$. 
 
 To complete the proof, we only need to show that $u=w=0$ by 1.45. The equation above implies that $u = -w \in W$. Thus $u \in U \cap W$. Hence $u = 0$, which by the equation above implies that $w = 0$, completing the proof.
+
 
 
 
@@ -345,11 +360,13 @@ $$ax_1 - 5ax_3 = a(x_1 - 5x_3) = a0 = 0$$
 Hence $U$ is closed under scalar multiplication. By (1.34) $U$ is a subspace.
 
 
+
 ### (5) Is $R^2$ a subspace of the complex vector space $C^2$?
 
 $R^2$ is a subspace of the complex vector space $C^2$ because it is not closed under complex scalar multiplication.
 
 $i (1,1) = (i, i) \notin R^2$.
+
 
 
 ### (6) 
@@ -377,14 +394,17 @@ $((1+\sqrt(3)i)/2)^3 = -1 \neq 8$, therefore $U$ is not closed under
 addition.
 
 
+
 ### (7) Prove or give a counterexample: If $U$ is a nonempty subset of $R^2$ such that $U$ is closed under addition and under taking additive inverses, then $U$ is a subspace of $R^2$.
 
 Counterexample: $U=Z^2$. $(0,0) \in U$ and for each $(a,b), a,b\in Z$, $(-a,-b) \in Z$ by the definition of integers. It is not closed under scalar multiplication, e.g. $0.5 (1, 1) \notin Z^2$.
 
 
+
 ### (8) Give an example of a nonempty subset $U$ of $R^2$ such that $U$ is closed under scalar multiplication, but $U$ is not a subspace of $R^2$.
 
 Counterexample: $U= \\{(x,0): x \in R\\} \cup \\{(0,y): y \in R\\}$, i.e. the two axis lines. It is closed under scalar multiplication. It is not closed under addition, e.g. $(1,0) + (0,1) = (1,1) \notin U$.
+
 
 
 ### (10) Suppose $V_1$ and $V_2$ are subspaces of $V$. Prove that the intersection $V_1 \cap V_2$ is a subspace of $V$.
@@ -400,6 +420,7 @@ Let $u \in V_1 \cap V_2, a \in F$. We have $u \in V_1, au \in V_1$,
 $u \in V_2, au \in V_2$. Therefore $au \in V_1 \cap V_2$.
 
 By (1.34) $V_1 \cap V_2$ is a subspace.
+
 
 
 ### (12) Prove that the union of two subspaces of $V$ is a subspace of $V$ if and only if one of the subspaces is contained in the other.
@@ -425,6 +446,7 @@ contradiction.
 Therefore one subspace has to be contained in the other.
 
 
+
 ### (15) Suppose $U$ is a subspace of $V$. What is $U+U$?
 
 $U+U = \\{u_1 + u_2: u_1 \in U, u_2 \in U\\}$. By definition $u_1 + u_2 \in U$ because $U$ is closed under addition. 
@@ -432,6 +454,7 @@ $U+U = \\{u_1 + u_2: u_1 \in U, u_2 \in U\\}$. By definition $u_1 + u_2 \in U$ b
 Therefore $U+U \subset U$.
 
 Let $u \in U$. $u=u+0$, since $u \in U$ and $0 \in U$, $U \subset U+U$ trivially. Thus $U=U+U$ as desired.
+
 
 
 ### (16) Is the operation of addition on the subspaces of $V$ commutative? In other words, if $U$ and $W$ are subspaces of $V$, is $U+W=W+U$?
@@ -442,6 +465,7 @@ $W+U= \\{(w+u): w \in W, u \in U\\}$. Since $u+w=w+u$ for all $u,w \in V$,
 every element of $U+W$ is an element of $W_U$ and vice versa, hence $U+W=W+U$.
 
 
+
 ### (17) Is the operation of addition on the subspaces of $V$ associative? In other words, if $V_1$, $V_2$, $V_3$ are subspaces of $V$, is $(V_1+V_2)+V_3 = V_1+(V_2+V_3)$?
 
 The operation is associative, which comes from the fact that $V$ is a
@@ -450,6 +474,7 @@ vector space. Same argument as Ex.16.
 $(V_1 + V_2) + V_3 = \\{(v_1+v_2)+v_3: v_1 \in V_1, v_2 \in V_2, v_3 \in V_3\\}$.
 
 $V_1 + (V_2 + V_3) = \\{v_1+(v_2+v_3): v_1 \in V_1, v_2 \in V_2, v_3 \in V_3\\}$.
+
 
 
 ### (18) Does the operation of addition on the subspaces of $V$ have an additive identity? Which subspaces have additive inverses?
@@ -463,6 +488,7 @@ We have $U \subseteq U+W$, since for any $u \in U$, $u=u+0 \in U+W$. Then
 $U+W \supseteq U \neq \\{0\\}$.
 
 
+
 ### (19) Prove or give a counterexample: If $V_1$, $V_2$, $U$ are subspaces of $V$ such that $V_1+U=V_2+U$, then $V_1=V_2$.
 
 Counterexample: $V_1=\\{(x,0): x \in R\\}$, 
@@ -472,14 +498,17 @@ $V_2=\\{(0,y): y \in R\\}$,
 $U=R^2$.
 
 
+
 ### (20) Suppose $U=\\{(x,x,y,y) \in F^4: x,y\in F\\}$. Find a subspace $W$ of $F^4$ such that $F^4=U \oplus W$.
 
 $W=\\{(0,x,0,y): x,y \in F\\}$.
 
 
+
 ### (21) Suppose $U=\\{(x,y,x+y,x-y, 2x) \in F^5: x,y\in F \\}$. Find a subspace $W$ of $F^5$ such that $F^5=U \oplus W$.
 
 $W=\\{(0,0,x,y,z): x,y,z \in F\\}$.
+
 
 
 ### (22) Suppose $U=\\{(x,y,x+y,x-y, 2x) \in F^5: x,y\in F \\}$. Find three subspaces $W_1, W_2, W_3$ of $F^5$, none of which equals $\\{0\\}$, such that $F^5=U \oplus W_1 \oplus W_2 \oplus W_3$.
@@ -489,6 +518,7 @@ $$W_1=\\{(0,0,x,0,0): x \in F\\}$$
 $$W_2=\\{(0,0,0,x,0): x \in F\\}$$
 
 $$W_3=\\{(0,0,0,0,x): x \in F\\}$$
+
 
 
 ### (23) Prove or give a counterexample: If $V_1, V_2, U$ are subspaces of $V$ such that $V=V_1 \oplus U$ and $V=V_2 \oplus U$, then $V_1=V_2$.
