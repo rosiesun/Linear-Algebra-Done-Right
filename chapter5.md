@@ -346,6 +346,9 @@ Suppose $v_1,...,v_m$ is linearly independent. Extend to a basis $v_1,...,v_m, w
 
 
 
+
+
+--------------------------------------------------------------------------------
 # 5B The Minimal Polynomial
 
 ### 5.19
@@ -593,6 +596,9 @@ Therefore $span(v, Tv, ..., T^m v) = span(v, Tv, ..., T^{dim V -1} v)$ for all i
 
 
 
+
+
+--------------------------------------------------------------------------------
 # 5C Upper-Triangular Matrices
 
 ### 5.39
@@ -729,6 +735,9 @@ The desired result follows from 5.44 and the second version of the fundamental t
 
 
 
+
+
+--------------------------------------------------------------------------------
 # 5D Diagonalizable Operators
 
 ### 5.48 Definition: diagonal matrix
@@ -1037,6 +1046,10 @@ which is a contradiction. Thus we conclude $T-2I$ or $T-6I$ is invertible.
 ### (8)
 
 
+
+
+
+--------------------------------------------------------------------------------
 # 5E Commuting Operators
 
 
