@@ -9,10 +9,12 @@ Rosie Sun <br>
 ### 2.2 Definition: linear combination
 A linear combination of a list $v_1, ..., v_m$ of vectors in $V$ is a vector of the form $a_1 v_1 + ... + a_m v_m$, where $a_1, ..., a_m \in F$.
 
+
 ### 2.4 Definition: span
 The set of all linear combinations of a list of vectors $v_1, ..., v_m$ in $V$ is called the span of $v_1, ..., v_m$, denoted by $span(v_1, ..., v_m)$. In other words, $span(v_1, ..., v_m) = \\{ a_v v_1 + ... + a_m v_m: a_1, ..., a_m \in F \\}$. 
 
 The span of the empty list () is defined to be $\\{0\\}$
+
 
 ### 2.6 Span is the smallest containing subspace
 The span of a list of vectors in $V$ is the smallest subspace of $V$ containing all vectors in the list.
@@ -43,17 +45,22 @@ Conversely, because subspaces are closed under addition and scalar multiplicatio
 ### 2.7 Definition: spans
 If $span(v_1,...,v_m)$ equals $V$, we say that the list $v_1,...,v_m$ spans V.
 
+
 ### 2.9 Definition: finite-dimensional vector space
 A vector space is called finite-dimensional if some list of vectors in it spans the space.
+
 
 ### 2.10 Definition: polynomial
 A function $p: F \rightarrow F$ is called a polynomial with coefficients in $F$ if there exist $a_0, ..., a_m \in F$ such that $p(z) = a_0 + a_1 z + a_2 z^2 + ... a_m z^m$ for all $z \in F$. $P(F)$ is the set of all polynomials with coefficients in $F$.
 
+
 ### 2.15 Definition: linearly independent
 A list $v_1, ..., v_m$ of vectors in $V$ is called linearly independent if the only choice of $a_1,...,a_m \in F$ that makes $a_1 v_1 + ... + a_m v_m = 0$ is $a_1 = ... = a_m = 0$.
 
+
 ### 2.17 Definition: linearly dependent
 A list of vectors in $V$ is called linearly dependent if it is not linearly independent. In other words, a list $v_1,..., v_m$ of vectors in $V$ is linearly dependent if there exist $a_1,...,a_m \in F$, not all 0, such that $a_1 v_1 + ... + v_m v_m = 0$.
+
 
 ### 2.19 Linear dependence lemma
 Suppose $v_1,...,v_m$ is a linearly dependent list in $V$. Then there exists $k \in \\{1,2,...,m\\}$ such that $v_k \in span(v_1,...,v_{k-1})$. Furthermore, if $k$ satisfies the condition above and the kth term is removed from $v_1,...,v_m$, then the span of the remaining list equals $span(v_1,...,v_m)$.
@@ -122,11 +129,13 @@ After each step, as long as the process continues, we have constructed a list of
 
 
 
+
 ## Exercises
 
 ### (1) Find a list of four distinct vectors in $F^3$ whose span equals $\\{(x,y,z) \in F^3: x+y+z=0 \\}$.
 
 $(1,-1,0), (1,0,-1), (0,1,-1), (1,-2,1)$. 
+
 
 
 ### (2) Prove or give a counterexample: If $v_1, v_2, v_3, v_4$ spans $V$, then the list $v_1 - v_2, v_2 - v_3, v_3 - v_4, v_4$ also spans $V$.
@@ -154,6 +163,7 @@ Thus $v_1 - v_2, v_2 - v_3, v_3 - v_4, v_4 \in V$.
 Since $V$ is closed under addition and scalar multiplication, $span(v_1 - v_2, v_2 - v_3, v_3 - v_4, v_4) \subseteq V$.
 
 
+
 ### (3) Suppose $v_1, ..., v_m$ is a list of vectors in $V$. For $k \in \\{1,...,m\\}$, let $w_k=v_1+...v_k$. Show that $span(v_1, ..., v_m) = span(w_1, ..., w_m)$.
 
 Let $v \in span(v_1, ..., v_m)$. Then $v=a_1 v_1 + ... +a_m v_m, a_1, ..., a_m \in F$. 
@@ -175,6 +185,7 @@ Thus $w \in span(v_1, ..., v_m)$, and $span(w_1, ..., w_m) \subseteq span(v_1, .
 Equality is established as desired.
 
 
+
 ### (7) 
 
 #### (a) Show that if we think of $C$ as a vector space over $R$, then the list $1+i, 1-i$ is linearly independent.
@@ -183,10 +194,12 @@ Suppose $a(1+i)+b(1-i)=0, a,b \in R$. Then $(a+b) + (a-b)i = 0$. We have $a+b=a-
 
 Thus by (2.15) they are linearly independent.
 
+
 #### (b) Show that if we think of $C$ as a vector space over $C$, then the list $1+i, 1-i$ is linearly dependent.
 Suppose $(a+bi)(1+i)+(c+di)(1-i)=0, a,b,c,d \in R$. Then $(a-b+c+d)+(a+b-c+d)i=0$. This holds if $a=d=0, b=c=1$. 
 
 Thus by (2.17) they are linearly dependent.
+
 
 
 ### (8) Suppose $v_1, v_2, v_3, v_4$ is linearly independent in $V$. Prove that the list $v_1-v_2, v_2-v_3, v_3-v_4, v_4$ is also linearly independent.
@@ -203,6 +216,7 @@ Given that $v_1, v_2, v_3, v_4$ are linearly independent, we have $a=b-a=c-b=d-c
 Thus $v_1-v_2, v_2-v_3, v_3-v_4, v_4$ are linearly independent as desired.
 
 
+
 ### (9) Prove or give a counterexample: If $v_1, ..., v_m$ is a linearly independent list of vectors in $V$, then $5v_1-4v_2, v_2, v_3, ..., v_m$ is linearly independent.
 Suppose $a_1 (5v_1 -4v_2) + a_2 v_2 + ... + a_m v_m = 0$. 
 
@@ -215,6 +229,7 @@ $$(5a_1)v_1 + (a_2-4a_1) v_2 + a_3 v_3 + ... + a_m v_m = 0$$.
 Given that $v_1, ..., v_m$ are linearly independent, $5a_1 = a_2-4a_1=a_3=...=a_m=0$, which implies that $a_1=0, a_2=0$. 
 
 Thus $5v_1-4v_2, v_2, ..., v_m$ are linearly independent as desired.
+
 
 
 ### (10) Prove or give a counterexample: If $v_1, v_2, ..., v_m$ is a linearly independent list of vectors in $V$ and $\lambda \in F$ with $\lambda \neq 0$, then $\lambda v_1, \lambda v_2, ..., \lambda v_m$ is linearly independent.
@@ -231,8 +246,10 @@ Given that $v_1, ..., v_m$ are linearly independent, $a_1 \lambda =...=a_m \lamb
 Thus $\lambda v_1, \lambda v_2, ..., \lambda v_m$ are linearly independent as desired.
 
 
+
 ### (11) Prove or give a counterexample: If $v_1, ..., v_m$ and $w_1,...,w_m$ are linearly independent lists of vectors in $V$, then the list $v_1+w_1, ..., v_m+w_m$ is linearly independent.
 Counterexample: $(1,0), (0,1) \in R^2$ is linearly independent. $(-1,0), (0,-1) \in R^2$ is also linearly independent. But $(0,0), (0,0)$ is not linearly independent.
+
 
 
 ### (12) Suppose $v_1,...,v_m$ is linearly independent in $V$ and $w \in V$. Prove that if $v_1+w, ..., v_m+w$ is linearly dependent, then $w \in span(v_1,...,v_m)$.
@@ -261,6 +278,7 @@ Since $v_1,...,v_m$ is linearly independent, $a_1=...=a_{k-1}=0$.
 So $1-a_1-...-a_{k-1}=1$, which is a contradiction, showing that this case is not possible.
 
 
+
 ### (13) Suppose $v_1,...,v_m$ is linearly independent in $V$ and $w \in V$. Show that $v_1,...,v_m,w$ is linearly independent $iff w \notin span(v_1,...,v_m)$.
 $$\Rightarrow$$
 Assume towards contradiction that $w \in span(v_1,...,v_m)$. 
@@ -283,6 +301,7 @@ Since $w \notin span(v_1,...,v_m)$, it is not a linear combination of any of the
 Then there exist $k \in \\{1,...,m\\}$ such that $v_k \in span(v_1,...,v_{k-1})$. However this violates the fact that $v_1,...,v_m$ is linearly independent. 
 
 Therefore $v_1,...,v_m,w$ is linearly independent.
+
 
 
 ### (14) Suppose $v_1,...,v_m$ is a list of vectors in $V$. For $k \in \\{1,...,m\\}$, let $w_k=v_1+...+v_k$. Show that the list $v_1,...,v_m$ is linearly independent if and only if the list $w_1,...,w_m$ is linearly independent.
@@ -315,10 +334,13 @@ Thus $v_1,...,v_m$ is linearly independent.
 
 
 
+
+--------------------------------------------------------------------------------
 # 2B Bases
 
 ### 2.26 Definition: basis
 A basis of $V$ is a list of vectors in $V$ that is linearly independent and spans $V$.
+
 
 ### 2.28 Criterion for basis
 A list $v_1,...,v_n$ of vectors in $V$ is a basis of $V$ if and only if every $v \in V$ can be written uniquely in the form 
@@ -411,6 +433,7 @@ Thus $v = 0$, completing the proof that $U \cap W = \\{0\\}$.
 
 
 
+
 ## Exercises
 
 ### (3) 
@@ -428,6 +451,7 @@ $(3,1,0,0,0), (0,0,7,1,0), (0,0,0,0,1), (0,1,0,0,0), (0,0,0,1,0)$.
 $W = span((0,1,0,0,0), (0,0,0,1,0))$.
 
 
+
 ### (4) 
 
 #### (a) Let $U$ be the subspace of $C^5$ defined by $U=\\{(z_1,z_2,z_3,z_4,z_5) \in C^5: 6z_1=z_2, z_3+2z_4+3z_5 = 0 \\}$. Find a basis of $U$.
@@ -441,6 +465,7 @@ $$(0,1,0,0,0), (0,0,1,0,0)$$
 #### (c) Find a subspace $W$ of $C^5$ such that $C^5 = U \oplus W$.
 
 $$W=span((0,1,0,0,0), (0,0,1,0,0))$$
+
 
 
 ### (5) Suppose $V$ is a finite-dimensional and $U, W$ are subspaces of $V$ such that $V=U+W$. Prove that there exists a basis of $V$ consisting of vectors in $U \cup W$.
@@ -461,12 +486,14 @@ By 2.30, every spanning list of a vector space contains a basis of the vector sp
 Thus there exists a basis of $V$ contained in $\\{u_1,...,u_m,w_1,...,w_n\\} \subset U \cup W$.
 
 
+
 ### (8) Prove or give a counterexample: If $v_1,v_2,v_3,v_4$ is a basis of $V$ and $U$ is a subspace of $V$ such that $v_1, v_2 \in U$, and $v_3 \notin U$, $v_4 \notin U$, then $v_1,v_2$ is a basis of $U$.
 Counterexample: 
 
 Let $V=R^4$ with $v_1,v_2,v_3,v_4$ being the standard basis. 
 
 Let $U = span(v_1, v_2, v_3+v_4)$. Then $v_1,v_2$ does not span $U$.
+
 
 
 ### (10) Suppose $U$ and $W$ are subspaces of $V$ such that $V=U \oplus W$. Suppose also that $u_1,...,u_m$ is a basis of $U$ and $w_1,...,w_n$ is a basis of $W$. Prove that $u_1,...,u_m,w_1,...,w_n$ is a basis of $V$.
@@ -493,6 +520,8 @@ By 2.26 we conclude $u_1,...,u_m,w_1,...,w_n$ is a basis of $V$.
 
 
 
+
+--------------------------------------------------------------------------------
 # 2C Dimension
 
 ### 2.34 Basis length does not depend on basis
@@ -505,6 +534,7 @@ Suppose $V$ is finite-dimensional. Let $B_1$ and $B_2$ be two bases of $V$. Then
 
 ### 2.35 Definition: dimension
 The dimension of a finite-dimensional vector space is the length of any basis of the vector space. The dimension of a finite-dimensional vector space is denoted by $dim V$.
+
 
 ### 2.37 Dimension of a subspace
 If $V$ is finite-dimensional and $U$ is a subspace of $V$, then $dim U \leq dim V$.
@@ -579,6 +609,7 @@ Because the list $v_1,...,v_m, u_1,...u_j$ is linearly independent, this equatio
 
 
 
+
 ## Exercises
 
 ### (8) Suppose $v_1,...,v_m$ is linearly independent in $V$ and $w \in V$. Prove that $dim span(v_1+w,...,v_m+w) \geq m-1$.
@@ -615,10 +646,12 @@ By 2.37,
 $$m-1=dim span((v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)) \leq dim span(v_1+w,...,v_m+w)$$. 
 
 
+
 ### (13) Suppose $U$ and $W$ are both five-dimensional subspaces of $R^9$. Prove that $U \cap W \neq \\{0\\}$.
 $dim U = dim W = 5$, $dim(U + W) <= 9$. 
 
 By 2.43, $5+5-dim(U \cap W) <= 9$. Thus $dim(U \cap W) >= 1$. 
+
 
 
 ### (18) Suppose $V$ is finite-dimensional, with $dim V=n \geq 1$. Prove that there exist one-dimensional subspaces $V_1, ..., V_n$ of $V$ such that $V=V_1 \oplus ... \oplus V_n$.
