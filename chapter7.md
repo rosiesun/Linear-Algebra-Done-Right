@@ -14,10 +14,12 @@ $$\langle Tv, w\rangle  = \langle v, T^* w\rangle $$
 
 for every $v \in V$ and every $w \in W$.
 
+
 ### 7.4
 If $T \in L(V, W)$, then $T^* \in L(W, V)$.
 
 Proof:
+
 
 ### 7.5
 Suppose $T \in L(V, W)$. Then
@@ -36,6 +38,7 @@ Suppose $T \in L(V, W)$. Then
 
 Proof:
 
+
 ### 7.6
 Suppose $T \in L(V, W)$. Then 
 
@@ -49,10 +52,12 @@ Suppose $T \in L(V, W)$. Then
 
 Proof:
 
+
 ### 7.7 Definition: conjugate transpose
 The conjugate transpose of an m-by-n matrix $A$ is the n-by-m matrix $A^*$ obtained by interchanging the rows and columns and then taking the complex conjugate of each entry. In other words, if $j \in \\{1,...,n\\}$ and $k \in \\{1,...,m\\}$, then 
 
 $$(A^*)_{j, k} = \overline{A_{k, j}}$$
+
 
 ### 7.9
 
@@ -60,10 +65,12 @@ $$(A^*)_{j, k} = \overline{A_{k, j}}$$
 ### 7.10 Definition: self-adjoint
 An operator $T \in L(V)$ is called self-adjoint if $T = T^*$.
 
+
 ### 7.12
 Every eigenvalue of a self-adjoint operator is real.
 
 Proof:
+
 
 ### 7.13
 Suppose $V$ is a complex inner product space and $T \in L(V)$. Then
@@ -71,6 +78,7 @@ Suppose $V$ is a complex inner product space and $T \in L(V)$. Then
 $\langle Tv, v\rangle  = 0$ for every $v \in V$ $\iff T = 0$.
 
 Proof:
+
 
 ### 7.14
 
@@ -111,6 +119,7 @@ Thus the adjoint of $T$ is the forward shift
 $$T^* (w_1, ..., w_n) = (w_2, ..., w_n, 0).$$
 
 
+
 ### (2) Suppose $T \in L(V, W)$. Prove that $T = 0 \iff T^* = 0 \iff T^* T = 0 \iff T T^* = 0$.
 
 $T = 0 \rightarrow T^* = 0$
@@ -128,6 +137,7 @@ Suppose $T^* T = 0$. Then $T^* T v = 0$ for all $v \in V$, and $\langle T^* T v,
 $T T^* = 0 \rightarrow T^* = 0$
 
 Suppose $T T^* = 0$. Then $T T^* w = 0$ for all $w \in W$, and $\langle T T^* w, w \rangle = 0$ for all $w \in W$. Then $\langle T^* w, T^* w \rangle = 0$ for all $w \in W$. Hence $T^* w = 0$ for all $w \in W$, and $T^* = 0$.
+
 
 
 ### (3) Suppose $T \in L(V)$ and $\lambda \in F$. Prove that $\lambda$ is an eigenvalue of $T$ $\iff$ $\overline{\lambda}$ is an eigenvalue of $T^*$.
@@ -161,6 +171,7 @@ We conclude that $T^* - \overline{\lambda} I$ is not injective. Hence $\overline
 The opposite direction follows from symmetry and the fact that $(T^* - \overline{\lambda} I)^* = T - \lambda I$.
 
 
+
 ### (4) Suppose $T \in L(V)$ and $U$ is a subspace of $V$. Prove that $U$ is invariant under $T$ $\iff$ $U^\perp$ is invariant under $T^*$.
 
 Suppose $U$ is invariant under $T$. Suppose $u \in U$ and $w \in U^\perp$. Then $Tu \in U$. We have 
@@ -170,6 +181,7 @@ $$0 = \langle Tu, w \rangle = \langle u, T^* w \rangle$$
 So $T^* w$ is orthogonal to $U$. Hence $T^* w \in U^\perp$ and $U^\perp$ is invariant under $T^*$.
 
 The opposite direction follows from symmetry and the fact that $(U^\perp)^\perp = U$.
+
 
 
 ### (5) Suppose $T \in L(V, W)$. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ and $f_1, ..., f_m$ is an orthonormal basis of $W$. Prove that $\lVert Te_1 \rVert^2 + ... + \lVert Te_n \rVert^2 = \lVert T^* f_1 \rVert^2 + ... + \lVert T^* f_m \rVert^2$.
@@ -205,6 +217,7 @@ $$
 Hence 
 
 $$\lVert Te_1 \rVert^2 + ... + \lVert Te_n \rVert^2 = \lVert T^* f_1 \rVert^2 + ... + \lVert T^* f_m \rVert^2.$$
+
 
 
 ### (6) Suppose $T \in L(V, W)$. Prove that 
@@ -259,6 +272,7 @@ $$null T^* = (range T)^\perp = \\{0\\}.$$
 Then $range T = W$. Hence we conclude $T$ is surjective.
 
 
+
 ### (7) Prove that if $T \in L(V, W)$, then 
 
 #### (a) $dim null T^* = dim null T + dim W - dim V$.
@@ -281,6 +295,7 @@ dim range T^* &= dim W - dim null T^* \\
     &= dim range T
 \end{aligned}
 $$
+
 
 
 ### (10) Suppose $F = C$ and $T \in L(V)$. Prove that $T$ is self-adjoint if and only if $\langle Tv, v \rangle = \langle T^* v, v \rangle$ for all $v \in V$.
@@ -308,6 +323,7 @@ Since $F= C$ and $T - T^* \in L(V)$, it follows by 7.13 that $T - T^* = 0$.
 We conclude $T = T^*$, and $T$ is self-adjoint.
 
 
+
 ### (11) Define an operator $S: F^2 \rightarrow F^2$ by $S(w, z) = (-z, w)$. 
 
 Suppose $(z_1, z_2) \in F^2$.
@@ -327,6 +343,7 @@ Thus we have
 
 $$S^* (z_1, z_2) = (z_2, - z_1).$$
 
+
 #### (b) Show that $S$ is normal but not self-adjoint.
 
 Since $S (z_1, z_2) = (-z_2, z_1)$ and $S^* (z_1, z_2) = (z_2, - z_1)$, $S \neq S^*$. 
@@ -343,6 +360,7 @@ $$S S^* (z_1, z_2) = S(z_2, -z_1) = (z_1, z_2)$$
 
 Thus $S$ is normal.
 
+
 #### (c) Find all eigenvalues of $S$.
 
 We want to find $\lambda \in F$ such that $S(z_1, z_2) = \lambda (z_1, z_2)$ for some nonzero $z_1, z_2 \in V$. Then $\lambda z_1 = -z_2$ and $\lambda z_2 = z_1$. 
@@ -352,6 +370,45 @@ We have $\lambda^2 z_2 = -z_2$, and $\lambda^2 = -1$.
 When $F = R$, $S$ has no eigenvalues. 
 
 When $F = C$, $S$ has two eigenvalues, $i$ and $-i$. 
+
+
+
+### (12) An operator $B \in L(V)$ is called skew if $B^* = -B$. Suppose that $T \in L(V)$. Prove that $T$ is normal if and only if there exist commuting operators $A$ and $B$ such that $A$ is self-adjoint, $B$ is a skew operator, and $T = A + B$.
+
+$\Rightarrow$
+Suppose $T$ is normal. Then $T T^* = T^* T$. Let 
+
+$$A = \frac{T + T^*}{2}$$
+
+$$B = \frac{T - T^*}{2}$$
+
+Then $A + B = T$. We have 
+
+$$A^* = \frac{T^* + T}{2} = A$$
+
+hence $A$ is self-adjoint. We have 
+
+$$-B = - \frac{T - T^*}{2} = \frac{T^* - T}{2} = B^*$$
+
+hence $B$ is skew. We have
+
+$$AB = \frac{TT - T T^* + T^* T - T^* T^*}{4} = \frac{1}{4} (TT - T^* T^*)$$
+
+$$BA = \frac{TT + T T^* - T^* T - T^* T^*}{4} = \frac{1}{4} (TT - T^* T^*)$$
+
+hence $A$ and $B$ commute. 
+
+$\Leftarrow$
+Suppose there exist commuting operators $A$ and $B$ such that $A$ is self-adjoint, $B$ is skew, and $T = A+B$. 
+
+Then $T^* = A^* + B^*$. We have 
+
+$$(A+B) (A+B)^* = A A^* + A B^* + B A^* + B B^* = A A - AB + BA - BB = AA - BB$$
+
+$$(A+B)^* (A+B) = A^* A + A^* B + B^* A + B^* B = A A + AB - BA - BB = AA - BB$$
+
+Hence $T T^* = T^* T$, and $T$ is normal.
+
 
 
 ### (15) Suppose $T \in L(V)$ is invertible. Prove that 
@@ -375,19 +432,223 @@ $$(T T^*)^{-1} = (T^*)^{-1} T^{-1} = (T^{-1})^* T^{-1}$$
 
 where the second equality follows from 7.5. Similarly,
 
-$$(T^* T)^{-1} = T^{-1} (T^*)^{-1} = T^{-1} (T^{-1})^*$$
+$$(T^* T)^{-1} = T^{-1} (T^*)^{-1} = T^{-1} (T^{-1})^* $$
 
 Hence $T^{-1}$ commutes with its adjoint, and it is normal.
 
 The opposite direction follows from symmetry and the fact that $(T^{-1})^{-1} = T$.
 
-### (16)
 
-### (17)
 
-### (18)
+### (16) Suppose $F = R$.
 
-### (20)
+#### (a) Show that the set of self-adjoint operators on $V$ is a subspace of $L(V)$.
+
+Let $U$ be the set of self-adjoint operators. We want to show that it contains the zero operator, it is closed under addition and closed under scalar multiplication.
+
+Consider $0 \in L(V)$. $0v = 0$ for all $v \in V$. We have
+
+$$\langle 0v, w \rangle = \langle v, 0^* w \rangle = 0$$
+
+for all $v, w \in V$. Then $0^* = 0$. Hence the zero operator is self-adjoint.
+
+Suppose $S, T \in L(V)$ are self-adjoint operators. Then 
+
+$$(S+T)^* = S^* + T^* = S + T$$
+
+Hence $S+T$ is self-adjoint. 
+
+Suppose $T \in L(V)$ and $\lambda \in R$. Then
+
+$$(\lambda T)^* = \overline{\lambda} T^* = \lambda T$$
+
+where the second equality follows from the fact that $\lambda \in R$.
+
+Thus $U$ is a subspace of $L(V)$ by 1.34.
+
+
+#### (b) What is the dimension of the subspace of $L(V)$ in (a) [in terms of $dim V$]?
+
+Suppose $dim V = n$. From 3.72 we have $dim L(V) = (dim V) (dim V) = n^2$. 
+
+Because $L(V)$ is isomorphic with $F^{n, n}$, we can consider $M(T)$ and $M(T^*)$. 
+
+If $T = T^*$, then $M(T^*) = (M(T))^* = M(T)$ from 7.9. And since $F = R$, the conjugate transpose becomes the transpose. Thus the matrix is symmetric. The $n$ diagonal elements and the $\frac{n^2 - n}{2}$ off-diagonal elements are free. Thus there are $\frac{n^2 + n}{2}$ free elements. $dim U = \frac{n^2 + n}{2}$.
+
+
+
+### (17) Suppose $F = C$. Show that the set of self-adjoint operators on $V$ is not a subspace of $L(V)$.
+
+Suppose $T \in L(V), T \neq 0$ is self-adjoint. Then $(iT)^* = -iT^* \neq iT$. Hence the set is not closed under scalar multiplication, and therefore is not a subspace of $L(V)$.
+
+
+
+### (18) Suppose $dim V \geq 2$. Show that the set of normal operators on $V$ is not a subspace of $L(V)$.
+
+We want to show that the set is not closed under addition.
+
+Suppose $S, T \in L(F^2)$ such that 
+
+$$
+M(S) = 
+\frac{1}{2}
+\begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}
+$$
+
+$$
+M(T) = 
+\frac{1}{2}
+\begin{pmatrix}
+0 & 1 \\
+-1 & 0
+\end{pmatrix}
+$$
+
+By hypothesis, $S$ is self-adjoint therefore normal. $T$ is normal.
+
+$$T T^* = 
+\frac{1}{4}
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}
+$$
+
+Then we have 
+
+$$
+A = M(S + T) = 
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}
+$$
+
+$$
+A^* = (M(S + T))^* = 
+\begin{pmatrix}
+0 & 0 \\
+1 & 0
+\end{pmatrix}
+$$
+
+Thus 
+
+$$
+A A^* = 
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+$$
+
+which is not equal to 
+
+$$
+A^* A = 
+\begin{pmatrix}
+0 & 0 \\
+0 & 1
+\end{pmatrix}
+$$
+
+Note that the assumption that $dim V \geq 2$ is needed. If $dim V = 1$, then every $T \in L(V)$ is a scalar multiple of the identity operator, i.e. $\lambda I$. Then its adjoint is $\overline{\lambda} I$. 
+
+$$(\lambda I) (\lambda I)^* = |\lambda|^2 I = (\lambda I)^* (\lambda I)$$
+
+Every operator on $V$ is normal.
+
+
+
+### (19) Suppose $T \in L(V)$ and $\lVert T^* v \rVert \leq \lVert Tv \rVert$ for every $v \in V$. Prove that $T$ is normal.
+
+Applying the hypothesis to $T^* \in L(V)$, we have
+
+$$\lVert T^* v \rVert \leq \lVert (T^*)^* v \rVert = \lVert T v \rVert$$
+
+for all $v \in V$. Combined with the hypothesis, we have 
+
+$$\lVert T v \rVert = \lVert T^* v \rVert.$$
+
+By 7.20 $T$ is normal.
+
+
+### (20) Suppose $P \in L(V)$ is such that $P^2 = P$. Prove that the following are equivalent: (a) $P$ is self-adjoint. (b) $P$ is normal. (c) There is a subspace $U$ of $V$ such that $P = P_U$.
+
+$(a) \rightarrow (b)$
+
+Suppose $P$ is self-adjoint. Then it follows immediately that $P$ is normal.
+
+$(b) \rightarrow (c)$
+
+Suppose $P$ is normal. Then by 7.6 and 7.21, $V = null P \oplus range P$, $null P = null P^* = (range P)^\perp$. 
+
+Hence we have $V = range P \oplus (range P)^\perp$.
+
+Consider $U = range P$. For every $v \in V$, we can write $v = Pv + (v - Pv)$.
+
+We have $Pv \in range P = U$ by definition. 
+
+Since $P^2 = P$ by hypothesis, $P(v - Pv) = Pv - PPv =0$. Hence $(v - Pv) \in null P = U^\perp$.
+
+Thus $v = Pv + (v - Pv)$ where $Pv \in U$ and $(v - Pv) \in U^\perp$. We conclude that $P = P_U$ where $U = range P$.
+
+$(c) \rightarrow (a)$
+
+Suppose there is a subspace $U$ of $V$ such that $P = P_U$. 
+
+Suppose $v \in V$ and $v = u + w$ for $u \in U, w \in U^\perp$. Suppose $x \in V$ such that $x = u' + w'$ where $u' \in U, w' \in U^\perp$. We have
+
+$$
+\begin{aligned}
+\langle Pv, x \rangle 
+    &= \langle u, u'+w' \rangle \\
+    &= \langle u, u' \rangle + \langle u, w' \rangle \\
+    &= \langle u, u' \rangle 
+\end{aligned}    
+$$
+
+Since $u \in U, w' \in U^\perp$, $\langle u, w' \rangle = 0$.
+
+Similarly we have
+
+$$
+\begin{aligned}
+\langle v, Px \rangle 
+    &= \langle u+w, u' \rangle \\
+    &= \langle u, u' \rangle + \langle w, u' \rangle \\
+    &= \langle u, u' \rangle 
+\end{aligned}    
+$$
+
+Since $u' \in U, w \in U^\perp$, $\langle w, u' \rangle = 0$.
+
+Then 
+
+$$\langle Pv, x \rangle = \langle v, Px \rangle$$
+
+for all $v, x \in V$.
+
+By definition, 
+
+$$\langle Pv, x \rangle = \langle v, P^* x \rangle$$
+
+for all $v, x \in V$. Then 
+
+$$\langle v, Px \rangle = \langle v, P^* x \rangle$$
+
+for all $v, x \in V$. Therefore
+
+$$0 = \langle v, Px \rangle - \langle v, P^* x \rangle = \langle v, Px - P^* x \rangle = \langle v, (P - P^*) x \rangle$$
+
+for all $v, x \in V$. Taking $v = (P - P^*)x$, we have $\langle (P - P^*) x, (P - P^*) x \rangle = 0$ for all $x \in V$. Hence $(P - P^*) x = 0$ for all $x \in V$, and $P - P^* = 0$. 
+
+Thus we conclude $P^* = P$ and $P$ is self-adjoint.
+
+
 
 ### (22)
 
@@ -416,16 +677,49 @@ Thus $T'(\phi_w) = \phi_{T^* w}$.
 
 
 
+--------------------------------------------------------------------------------
 # 7B Spectral Theorem
 
 
 
+## Exercises
+
+### (1) Prove that a normal operator on a complex inner product space is self-adjoint if and only if all its eigenvalues are real.
+
+
+### (2) Suppose $F = C$. Suppose $T \in L(V)$ is normal and has only one eigenvalue. Prove that $T$ is a scalar multiple of the identity operator.
+
+
+### (3) Suppose $F = C$ and $T \in L(V)$ is normal. Prove that the set of eigenvalues of $T$ is contained in $\\{0, 1\\}$ if and only if there is a subspace $U$ of $V$ such that $T = P_U$.
+
+
+### (4) Prove that a normal operator on a complex inner product space is skew (meaning it equals the negative of its adjoint) if and only if all its eigenvalues are purely imaginary (meaning that they have real part equal to 0).
+
+
+### (5)
+
+
+### (13)
+
+
+### (14)
+
+
+### (15)
+
+
+### (19)
+
+
+### (20)
 
 
 
 
 
+--------------------------------------------------------------------------------
 # 7C Positive Operators
+
 
 ### 7.34 Definition: positive operator
 An operator $T \in L(V)$ is called positive if $T$ is self-adjoint and 
@@ -434,8 +728,10 @@ $$\langle Tv, v\rangle  = 0$$
 
 for all $v \in V$.
 
+
 ### 7.36 Definition: square root
 An operator $R$ is called a square root of an operator $T$ if $R^2 = T$.
+
 
 ### 7.38
 Let $T \in L(V)$. Then the following are equivalent.
@@ -452,11 +748,14 @@ Let $T \in L(V)$. Then the following are equivalent.
 
 (f) $T = R^* R$ for some $R \in L(V)$.
 
+
 ### 7.39
 Every positive operator on $V$ has a unique positive square root.
 
+
 ### 7.40 Notation
 For $T$ a positive operator, $\sqrt{T}$ denotes the unique positive square root of $T$.
+
 
 ### 7.43
 Suppose $T$ is a positive operator on $V$ and $v \in V$ is such that $\langle Tv, v\rangle  = 0$. Then $Tv = 0$.
@@ -465,8 +764,9 @@ Suppose $T$ is a positive operator on $V$ and $v \in V$ is such that $\langle Tv
 
 
 
-
+--------------------------------------------------------------------------------
 # 7D Isometries, Unitary Operators, and Matrix Factorization
+
 
 ### 7.44 Definition: isometry
 A linear map $S \in L(V, W)$ is called an isometry if 
@@ -474,6 +774,7 @@ A linear map $S \in L(V, W)$ is called an isometry if
 $$||Sv|| = ||v||$$
 
 for every $v \in V$. In other words, a linear map is an isometry if it preserves norms.
+
 
 ### 7.49
 Suppose $S \in L(V, W)$. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ and $f_1, ..., f_m$ is an orthonormal basis of $W$. Then the following are equivalent. 
@@ -488,15 +789,19 @@ Suppose $S \in L(V, W)$. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ 
 
 (e) The columns of $M(S, (e_1, ..., e_n), (f_1, ..., f_m))$ form an orthonormal list in $F^m$ with respect to the Euclidean inner product.
 
+
 ### 7.51 Definition: unitary operator
 An operator $S \in L(V)$ is called unitary if $S$ is an invertible isometry.
 
+
 ### 7.53
+
 
 ### 7.58 QR factorization
 Suppose $A$ is a square matrix with linearly independent columns. Then there exist unique matrices $Q$ and $R$ such that $Q$ is unitary, $R$ is upper triangular with only positive numbers on its diagonal, and 
 
 $$A = QR.$$
+
 
 ### 7.63 Cholesky factorization
 Suppose $B$ is a positive definite matrix. Then there exists a unique upper-triangular matrix $R$ with only positive numbers on its diagonal such that 
@@ -508,9 +813,9 @@ $$B = R^* R.$$
 
 
 
-
-
+--------------------------------------------------------------------------------
 # 7E Singular Value Decomposition
+
 
 ### 7.64
 Suppose $T \in L(V, W)$. Then
@@ -544,8 +849,9 @@ $$A = B D C^*.$$
 
 
 
-
+--------------------------------------------------------------------------------
 # 7F Consequences of Singular Value Decomposition
+
 
 ### 7.86 Definition: norm of a linear map
 Suppose $T \in L(V, W)$. Then the norm of $T$, denoted by $\lVert T \rVert$, is defined by
