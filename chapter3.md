@@ -13,9 +13,11 @@ Additivity: $T(u+v) = Tu+Tv$ for all $u,v \in V$.
 
 Homogeneity: $T(\lambda v) = \lambda (Tv)$ for all $\lambda in F$ and all $v \in V$.
 
+
 ### 3.2 Notation
 - The set of linear maps from $V$ to $W$ is denoted by $L(V,W)$.
 - THe set of linear maps from $V$ to $V$ is denoted by $L(V)$. In other words, $L(V,V)=L(V)$.
+
 
 ### 3.4 Linear map lemma
 Suppose $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_n \in W$. Then there exists a unique linear map $T:V \rightarrow W$ such taht $T v_k = w_k$ for each $k = 1,...,n$.
@@ -50,11 +52,14 @@ Thus $T$ is uniquely determined on $span(v_1,...,v_n)$ by the equation above. Be
 ### 3.5 Definition: addition and scalar multiplication on $L(V,W)$
 Suppose $S, T \in L(V,W)$ and $\lambda \in F$. The sum $S+T$ and the product $\lambda T$ are the linear maps from $V$ to $W$ defined by $(S+T)(v) = Sv + Tv$ and $(\lambda T)(v) = \lambda (Tv)$ for all $v \in V$.
 
+
 ### 3.6 $L(V,W)$ is a vector space
 With the operations of addition and scalar multiplication as defined above, $L(V,W)$ is a vector space.
 
+
 ### 3.7 Definition: product of linear maps
 If $T \in L(U,V)$ and $S \in L(V,W)$ then the product $ST \in L(U,W)$ is defined by $(ST)(u) = S(Tu)$ for all $u \in U$.
+
 
 ### 3.8 Algebraic properties of products of linear maps
 Associativity: $(T_1 T_2)T_3 = T_1 (T_2 T_3)$ whenever $T_1, T_2, T_3$ are linear maps such that the products make sense (meaning $T_3$ maps into the domain of $T_2$ and $T_2$ maps into the domain of $T_1$).
@@ -76,6 +81,7 @@ Add the additive inverse of $T(0)$ to each side of the equation above to conclud
 
 
 
+
 ## Exercises
 
 ### (4) Suppose $T \in L(V,W)$ and $v_1,...,v_m$ is a list of vectors in $V$ such that $Tv_1,...,Tv_m$ is a linearly independent list in $W$. Prove that $v_1,...,v_m$ is linearly independent.
@@ -90,6 +96,7 @@ By linearity,
 $$a_1 Tv_1 + ... + a_m Tv_m = 0$$
 
 Since $Tv_1,...,Tv_m$ is linearly independent, $a_1 = ... = a_m = 0$. Therefore $v_1,...,v_m$ is linearly independent in $V$.
+
 
 
 ### (5) Prove that $L(V,W)$ is a vector space, as was asserted in 3.6.
@@ -126,6 +133,7 @@ And
 $$((a+b)T)(v) = (a+b)(Tv) = a(Tv) + b(Tv) = (aT)(v) + (bT)(v)$$
 
 
+
 ### (6) Prove that multiplication of linear maps has the associative, identity, and distributive properties asserted in 3.8.
 
 Associativity: Let $T_3 \in L(U,V), T_2 \in L(V, W), T_1 \in L(W,Z)$. Then 
@@ -159,6 +167,7 @@ And
 $$((S_1+S_2)T)(u) = (S_1+S_2)(Tu) = S_1(Tu) + S_2(Tu) = (S_1 T)(u) + (S_2 T)(u)$$
 
 
+
 ### (7) Show that every linear map from a one-dimensional vector space to itself is multiplication by some scalar. More precisely, prove that if $dim V = 1$ and $T \in L(V)$, then there exists $\lambda \in F$ such that $Tv=\lambda v$ for all $v \in V$.
 Let $v \in V$. Let $e$ be a basis of $V$. 
 
@@ -171,6 +180,7 @@ We have
 $$Tv = T(ae) = aTe = a (\lambda e) = \lambda(ae) = \lambda v$$ 
 
 Therefore $T$ is multiplication by $\lambda$.
+
 
 
 ### (8) Give an example of a function $\phi: R^2 \rightarrow R$ such that $\phi (av) = a \phi(v)$ for all $a \in R$ and $v \in R^2$, but $\phi$ is not linear.
@@ -195,6 +205,7 @@ $$\phi(x_1,y_1) + \phi(x_2, y_2) = x_1^2 / y_1 + x_2^2 / y_2 $$
 which is not equal to each other.
 
 
+
 ### (9) Give an example of a function $\phi: C \rightarrow C$ such that $\phi(w+z) = \phi(w) + \phi(z)$ for all $w, z \in C$ but $\phi$ is not linear. 
 Let $\phi(z)=Re(z)$. First we show that it satisfies linearity. 
 
@@ -209,6 +220,7 @@ $$\phi(iw) = Re(-b+ai) = -b$$
 $$i \phi(w) = i Re(a+bi) = ai$$
 
 Therefore $\phi$ is not linear.
+
 
 
 ### (11) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that $T$ is a scalar multiple of the identity if and only if $ST=TS$ for every $S \in L(V)$.
@@ -241,8 +253,10 @@ $$(TS)(v_j) = T(Sv_j) = T(v_i) = a_i v_i$$
 Then $a_i = a_j, i,j=1,...,n$. Hence $T = aI$.
 
 
+
 ### (12) Suppose $U$ is a subspace of $V$ with $U \neq V$. Suppose $S \in L(U,W)$ and $S \neq 0$. Define $T: V \rightarrow W$ by $Tv = Sv$ if $v \in U$ and $Tv = 0$ if $v \in V, v \notin U$. Prove that $T$ is not a linear map on $V$.
 Since $S \neq 0$, $Su \neq 0$ for some $u \in U$. Let $v \in V, v \notin U$. Then $v+u \notin U$. $T(v+u) = 0$. However, $Tu + Tv = Su + 0$. Then $T(v+u) \neq Tu + Tv$. Hence $T$ is not a linear map on $V$.
+
 
 
 ### (13) Suppose $V$ is finite-dimensional. Prove that every linear map on a subspace of $V$ can be extended to a linear map on $V$. In other words, show that if $U$ is a subspace of $V$ and $S \in L(U,W)$, then there exists $T \in L(V,W)$ such that $Tu = Su$ for all $u \in U$.
@@ -251,6 +265,7 @@ Let $u_1,...,u_m$ be a basis for $U$, and extend it to a basis $u_1,...,u_m, v_1
 Let $u \in U$. Then 
 
 $$Tu = T(a_1 u_1 + ... a_m u_m) = T(a_1 u_1) + ... + T(a_m u_m) = a_1 Tu_1 + ... + a_m Tu_m = a_1 Su_1 + ... a_m Su_m = S(a_1 u_1) + ... + S(a_m u_m) = S(a_1 u_1 + ... + a_m u_m) = S(u)$$. 
+
 
 
 ### (15) Suppose $v_1,...,v_m$ is a linearly dependent list of vectors in $V$. Suppose also that $W \neq \\{0\\}$. Prove that there exist $w_1,...,w_m \in W$ such that no $T \in L(V,W)$ satisfies $Tv_k = w_k$ for each $k=1,...,m$.  
@@ -267,6 +282,7 @@ $$0 = T(a_1 v_1 + ... + a_m v_m) = a_1 Tv_1 + ... a_m Tv_m = a_j w \neq 0$$
 which is a contradiction. 
 
 
+
 ### (16) Suppose $V$ is finite-dimensional with $dim V > 1$. Prove that there exist $S,T \in L(V)$ such that $ST \neq TS$.
 Let $V=P_3(F)$. Let $p(z) \in V$. 
 
@@ -281,10 +297,13 @@ Thus $DM \neq MD$.
 
 
 
+
+--------------------------------------------------------------------------------
 # 3B Null Spaces and Ranges
 
 ### 3.11 Definition: null space
 For $T \in L(V,W)$, the null space of $T$, denoted by $null T$, is the subset of $V$ consisting of those vectors that $T$ maps to 0: $null T = \\{v \in V: Tv = 0\\}$.
+
 
 ### 3.13 The null space is a subspace
 Suppose $T \in L(V,W)$. Then $null T$ is a subspace of $V$.
@@ -311,6 +330,7 @@ We have shown that $null T$ contains 0, and is closed under addition and scalar 
 ### 3.14 Definition: injective
 A function $T:V \rightarrow W$ is called injective if $Tv = Tu$ implies $u=v$.
 
+
 ### 3.15
 Let $T \in L(V,W)$. Then $T$ is injective if and only if $null T = \\{0\\}$. 
 
@@ -336,6 +356,7 @@ Hence $T$ is injective, as desired.
 ### 3.16 Definition: range
 For $T \in L(V,W)$, the range of $T$ is the subset of $W$ consisting of those vectors that are equal to $Tv$ for some $v \in V$: $range T = \\{Tv: v \in V\\}$.
 
+
 ### 3.18 The range is a subspace
 If $T \in L(V,W)$, then $range T$ is a subspace of $W$.
 
@@ -360,6 +381,7 @@ We have shown that $range T$ contains 0, and is closed under addition and scalar
 
 ### 3.19 Definition: surjective
 A function $T: V \rightarrow W$ is called surjective if its range equals $W$.
+
 
 ### 3.21 Fundamental theorem of linear maps
 Suppose $V$ is finite-dimensional and $T \in L(V,W)$. Then $range T$ is finite-dimensional and $dim V = dim null T + dim range T$.
@@ -420,21 +442,25 @@ where the first equality above comes from the fundamental theorem of linear maps
 ### 3.26 Homogeneous system of linear equations
 A homogeneous system of linear equations with more variables than equations has nonzero solutions.
 
+
 ### 3.28 System of linear equations with more equations than variables
 A system of linear equations with more equations than variables has no solution for some choice of the constant terms.
 
 
 
+
 ## Exercises
 
-### (2)
+### (2) Suppose $S, T \in L(V)$ are such that $range S \subseteq null T$. Prove that $(ST)^2 = 0$.
 
-### (3)
+
+### (3) 
 
 ### (5)
 
 
 ### (7) Suppose $V$ and $W$ are finite-dimensional with $2 \leq dim V \leq dim W$. Show that $\\{T \in L(V,W): T is not injective \\}$ is not a subspace of $L(V,W)$.
+
 Let $v_1,...,v_n$ be a basis of $V$. Let $w_1,...,w_n$ be a list of linearly independent vectors in $W$. We know that there are at least n linearly independent vectors because $dim W >= dim V$.
 
 Define linear maps $S, T \in L(V,W)$ such that
@@ -464,7 +490,9 @@ Since $w_1,...,w_n$ is linearly independent by design, $a_1 = a_2 = ... = a_n = 
 Hence $(S+T)$ is injective, while $S$ and $T$ are both non-injective. $\\{T \in L(V,W): T is not injective \\}$ is not closed under addition, therefore is not a subspace of $L(V,W)$.
 
 
+
 ### (8) Suppose $V$ and $W$ are finite-dimensional with $dim V \geq dim W \geq 2$. Show that $\\{T \in L(V,W): T is not surjective \\}$ is not a subspace of $L(V,W)$.
+
 Let $v_1,...,v_n$ be a basis of $V$ and $w_1,...,w_m$ be a basis of $W$. $n \geq m$.
 
 Define two linear maps $S, T \in L(V,W)$ such that
@@ -494,15 +522,29 @@ Thus $w \in range(S+T)$, and $W \subseteq range(S+T)$.
 Hence $(S+T)$ is surjective while $S, T$ are not surjective. $\\{T \in L(V,W): T is not surjective \\}$ is not closed under addition, therefore is not a subspace of $L(V,W)$.
 
 
+
 ### (9) Suppose $T \in L(V,W)$ is injective and $v_1,...,v_n$ is linearly independent in $V$. Prove that $Tv_1,...,Tv_n$ is linearly independent in $W$.
-Suppose $a_1 Tv_1 + ... + a_n Tv_n = 0$, for some $a_1,...,a_n \in F$. Rewriting, we have $T(a_1 v_1 + ... + a_n v_n) = 0$. Since $T$ is injective, $null T = \\{0\\}$. We conclude that $a_1 v_1 + ... + a_n v_n = 0$. Since $v_1,...,v_n$ is linearly independent, $a_1=...=a_n=0$. Thus $Tv_1,...,Tv_n$ is linearly independent in $W$.
+
+Suppose $a_1 Tv_1 + ... + a_n Tv_n = 0$, for some $a_1,...,a_n \in F$. Rewriting, we have $T(a_1 v_1 + ... + a_n v_n) = 0$. 
+
+Since $T$ is injective, $null T = \\{0\\}$. We conclude that $a_1 v_1 + ... + a_n v_n = 0$. Since $v_1,...,v_n$ is linearly independent, $a_1=...=a_n=0$. 
+
+Thus $Tv_1,...,Tv_n$ is linearly independent in $W$.
+
 
 
 ### (10) Suppose $v_1,...,v_n$ spans $V$ and $T \in L(V,W)$. Show that $Tv_1,...,Tv_n$ spans $range T$.
-Let $w \in range T$. Then there exist some $v \in V$ such that $Tv = w$. Since $v_1,...,v_n$ spans $V$, we can rewrite as $T(v) = T(a_1 v_1 + ... + a_n v_n) = a_1 T v_1 + ... + a_n T v_n$. Thus $w \in span(Tv_1,..., Tv_n)$. Therefore $Tv_1, ..., Tv_n$ spans $range T$.
+
+Let $w \in range T$. Then there exist some $v \in V$ such that $Tv = w$. 
+
+Since $v_1,...,v_n$ spans $V$, we can rewrite as $T(v) = T(a_1 v_1 + ... + a_n v_n) = a_1 T v_1 + ... + a_n T v_n$. Thus $w \in span(Tv_1,..., Tv_n)$. 
+
+Therefore $Tv_1, ..., Tv_n$ spans $range T$.
+
 
 
 ### (11) Suppose that $V$ is finite-dimensional and that $T \in L(V,W)$. Prove that there exists a subspace $U$ of $V$ such that $U \cap null T = \\{0\\}$ and $range T = \\{Tu: u \in U\\}$.
+
 Let $v_1,...,v_n$ be a basis of $null T$. Since $dim V \geq dim null T$, we can extend it to a basis of $V$, $v_1,...,v_n, u_1,...,u_m$. 
 
 Let $U = span(u_1,...,u_m)$. Since $u_1,...,u_m$ is linearly independent, $u_1,...,u_m$ is a basis of $U$. It follows that $U + null T$ is a direct sum. Thus $U \cap null T = \\{0\\}$ by 1.46.
@@ -518,7 +560,9 @@ which establishes that $range T \subseteq \\{Tu: u \in U\\}$. The reverse inclus
 Therefore $range T = \\{Tu: u \in U\\}$.
 
 
+
 ### (12) Suppose $T$ is a linear map from $F^4$ to $F^2$ such that $null T = \\{(x_1,x_2,x_3,x_4) \in F^4: x_1=5x_2, x_3=7x_4\\}$. Prove that $T$ is surjective.
+
 Given the definition of $null T$, a basis of $null T$ is $(5,1,0,0), (0,0,7,1)$, which implies that $dim null T = 2$. Thus by 3.21,
 
 $$dim range T = dim (F^4) - dim null T = 4-2=2$$
@@ -528,15 +572,15 @@ Since $T: F^4 \rightarrow F^2$ and $dim range T = dim F^2 = 2$, we have $range T
 By definition, $range T$ is surjective.
 
 
-### (16) Suppose $V$ and $W$ are both finite-dimensional. Prove that there exists an injective linear map from $V$ to $W$ if and only if $dim V \leq dim W$.
-$$\rightarrow$$
 
+### (16) Suppose $V$ and $W$ are both finite-dimensional. Prove that there exists an injective linear map from $V$ to $W$ if and only if $dim V \leq dim W$.
+
+$\rightarrow$
 Let $T \in L(V,w)$. Assume $T$ is injective. Then $null T = \\{0\\}$ and $dim null T = 0$.
 
 Therefore $$dim V = dim null T + dim range T = dim range T \leq dim W$$
 
-$$\leftarrow$$
-
+$\leftarrow$
 Assume $dim V \leq dim W$. 
 
 Let $v_1,...,v_n$ be a basis of $V$. Let $w_1,...,w_m$ be a basis of $W$. Since $dim V \leq dim W$, $n \leq m$. 
@@ -556,16 +600,18 @@ Since $w_1,...,w_n$ are linearly independent, $a_1,...,a_n = 0$.
 Thus $v=0$, so $null T = \\{0\\}$. Therefore $T$ is injective.
 
 
-### (17) Suppose $V$ and $W$ are both finite-dimensional. Prove that there exists an surjective linear map from $V$ to $W$ if and only if $dim V \geq dim W$.
-$$\rightarrow$$
 
+### (17) Suppose $V$ and $W$ are both finite-dimensional. Prove that there exists an surjective linear map from $V$ to $W$ if and only if $dim V \geq dim W$.
+
+$\Rightarrow$
 Let $T \in L(V,W)$. Assume $T$ is surjective. Then $range T = W$.
 
 $$dim V = dim null T + dim range T = dim null T + dim W \geq dim W$$
 
-$$\leftarrow$$
+$\Leftarrow$
+Assume $dim V \geq dim W$. 
 
-Assume $dim V \geq dim W$. Let $v_1,...,v_n$ be a basis of $V$, $w_1,...,w_m$ be a basis of $W$. $n \geq m$.
+Let $v_1,...,v_n$ be a basis of $V$, $w_1,...,w_m$ be a basis of $W$. $n \geq m$.
 
 Define $T \in L(V,W)$ such that 
 
@@ -578,11 +624,13 @@ $$w = a_1 w_1 + ... + a_m w_m = a_1 Tv_1 + ... + a_m Tv_m = T(a_1 v_1 + ... + a_
 Therefore $w \in range T$. Thus $range T = W$ and we conclude that $T$ is surjective.
 
 
+
 ### (19) Suppose $W$ is finite-dimensional and $T \in L(V,W)$. Prove that $T$ is injective if and only if there exists $S \in L(W,V)$ such that $ST$ is the identity operator on $V$.
 
-$$\rightarrow$$
+$\Rightarrow$
+Assume $T$ is injective. 
 
-Assume $T$ is injective. Let $v_1,...,v_n$ be a basis for $V$. Since $T is injective, $Tv_1,...,Tv_n$ is linearly independent in $W$ and spans $range T$ (exercise 9, 10). Then $Tv_1, ..., Tv_n$ is a basis of $range T$. We can extend it to a basis of $W$, $Tv_1,...,Tv_n, u_1,...,u_m$. 
+Let $v_1,...,v_n$ be a basis for $V$. Since $T is injective, $Tv_1,...,Tv_n$ is linearly independent in $W$ and spans $range T$ (exercise 9, 10). Then $Tv_1, ..., Tv_n$ is a basis of $range T$. We can extend it to a basis of $W$, $Tv_1,...,Tv_n, u_1,...,u_m$. 
 
 Define $S \in L(W,V)$ such that 
 
@@ -594,9 +642,10 @@ Then $ST(v_i)=v_i$.
 
 Since $ST$ is linear and agrees with the identity operator on the basis vectors $v_1,..., v_n$ of $V$, it must be the identity operator on all of $V$.
 
-$$\leftarrow$$
+$\Leftarrow$
+Assume there exists $S \in L(W,V)$ such that $ST$ is the identity operator on $V$. 
 
-Assume there exists $S \in L(W,V)$ such that $ST$ is the identity operator on $V$. Assume towards contradiction that $T$ is not injective, i.e. $null T \neq \\{0\\}$. Let $v \in null T, v \neq 0$. Then we have 
+Assume towards contradiction that $T$ is not injective, i.e. $null T \neq \\{0\\}$. Let $v \in null T, v \neq 0$. Then we have 
 
 $$S(Tv)= S(0)=0$$
 
@@ -605,9 +654,10 @@ $$(ST)(v)=v \neq 0$$
 which is a contradiction. Therefore we conclude that $T$ is injective.
 
 
-### (20) Suppose $W$ is finite-dimensional and $T \in L(V,W)$. Prove that $T$ is surjective if and only if there exists $S \in L(W,V)$ such that $TS$ is the identity operator on $W$.
-$$\rightarrow$$
 
+### (20) Suppose $W$ is finite-dimensional and $T \in L(V,W)$. Prove that $T$ is surjective if and only if there exists $S \in L(W,V)$ such that $TS$ is the identity operator on $W$.
+
+$\Rightarrow$
 Assume $T$ is surjective, i.e. $range T = W$. Let $w_1,...,w_n$ be a basis of $W$. Since $w_1,...,w_n \in range T$, there exist $v_1,...,v_n$ such that $Tv_1=w_1,...,Tv_n=w_n$. Define $S \in L(W,V)$ such that 
 
 $$S(w_i)=v_i, i=1,...,n$$
@@ -618,9 +668,9 @@ $$TS(w_i) = T(Sw_i)=Tv_i=w_i$$
 
 for $i=1,...,n$. Since Since $TS$ is linear and agrees with the identity operator on the basis vectors $w_1,..., w_n$ of $w$, it must be the identity operator on all of $W$.
 
-$$\leftarrow$$
-
+$\Leftarrow$
 Assume that there exists $S \in L(W,V)$ such that $TS$ is the identity operator on $W$. Let $w \in W$. $TS(w) = T(Sw)=w$. Therefore $w \in range T$. Therefore $range T = W$, and $T$ is surjective.
+
 
 ### (21)
 
@@ -630,8 +680,8 @@ Assume that there exists $S \in L(W,V)$ such that $TS$ is the identity operator 
 
 
 ### (25) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S \subseteq null T$ if and only if there exists $E \in L(W)$ such that $T=ES$.
-$$\leftarrow$$
 
+$\Leftarrow$
 Assume there exists $E \in L(W)$ such that $T=ES$. We want to show that $null S \subseteq null T$. 
 
 Let $v \in null S$. Then $Sv = 0$. 
@@ -640,8 +690,7 @@ $$Tv=(ES)(v)=E(Sv)=E(0)=0$$
 
 Hence $v \in null T$. Thus $null S \subseteq null T$ as desired.
 
-$$\rightarrow$$
-
+$\Rightarrow$
 Assume $null S \subseteq null T$. Let $w_1,...,w_n$ be a basis of $range S$. Then there exist some $v_1,...,v_n \in V$ such that $Sv_1=w_1,...,Sv_n=w_n$. 
 
 Define $E$ such that 
@@ -683,17 +732,20 @@ Hence we conclude
 $$ES(v) = E(Sv) = E(a_1 w_1 + ... + a_n w_n) = a_1 Tv_1 + ... + a_n Tv_n = Tv$$
 
 
-### (26) Suppose that $V$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $range S \subseteq range T$ if and only if there exists $E \in L(V)$ such that $S = TE$.
-$$\leftarrow$$
 
-Assume there exists $E \in L(V)$ such that $S=TE$. Let $w \in range S$. We want to show that $w \in range T$.
+### (26) Suppose that $V$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $range S \subseteq range T$ if and only if there exists $E \in L(V)$ such that $S = TE$.
+
+$\Leftarrow$
+Assume there exists $E \in L(V)$ such that $S=TE$. 
+
+Let $w \in range S$. We want to show that $w \in range T$.
 Since $w \in range S$, there exist some $v \in V$ such that $Sv = w$. By assumption, we have 
 
 $$Sv = TEv = T(Ev) = w$$
 
 Therefore $w \in range T$. Hence $range S \subseteq range T$.
 
-$$\rightarrow$$
+$\Rightarrow$
 Assume $range S \subseteq range T$. We will construct $E \in L(V)$.
 
 Let $v_1,...,v_n$ be a basis of $V$. Then $Sv_i=w_i$ for some $w_i, i=1,...,n$. By assumption, since $w_i \in range S$, $w_i \in range T$. Then there exist some $u_i$ such that $Tu_i=w_i$. 
@@ -719,30 +771,31 @@ $$Sv = \sum_{i=1}^{n} a_i Sv_i = \sum_{i=1}^{n} a_i w_i = \sum_{i=1}^{n} a_i Tu_
 Thus $S=TE$.
 
 
+
 ### (27) Suppose $P \in L(V)$ and $P^2 = P$. Prove that $V = null P \oplus range P$.
-First we want to show that $null P \cap range P = \\{0\\}$.
+
+First we want to show that $V = null P + range P$.
+
+Suppose $v \in V$. We can write $v = Pv + (v - Pv)$. Since $P^2 = P$, we have 
+
+$$P(v - Pv) = Pv - PPv = 0,$$ 
+
+therefore $(v - Pv) \in null P$. By definition, We also have $Pv \in range P$. 
+
+Therefore we can write $v = Pv + (v - Pv)$, where $Pv \in range P$ and $(v - Pv) \in null P$. Thus $V = null P + range P$. 
+
+Next we want to show that $null P \cap range P = \\{0\\}$.
 
 Assume $v \in null P \cap range P$. Then $Pv = 0$ and $Px = v$ for some $x \in V$. 
 
-Applying $P$, we have 
-
-$$PPx=Pv=0$$
-
-Therefore $Px \in null P$. Then $Px = 0 = v$. Thus $null P \cap range P = \\{0\\}$ as desired.
-
-Next we want to show that $V = null P + range P$.
-
-Let $v \in V$. We can rewrite as $v = (v - Pv) + Pv$. 
-
-Note that $P(v - Pv) = Pv - PPv = 0$, therefore $v-Pv \in null P$. 
-
-And $Pv \in range P$ by definition. Therefore $V = null P + range P$. 
+Applying $P$, we have $PPx = Pv = 0$. But also $PPx = Px = v$. Combining the two equations, we can see that $v = 0$. Thus $null P \cap range P = \\{0\\}$.
 
 Hence we conclude $V = null P \oplus range P$.
 
 
 
 ### (30) Suppose $\phi \in L(V,F)$ and $\phi \neq 0$. Suppose $u \in V$ is not in $null \phi$. Prove that $V = null \phi \oplus \\{au: a \in F\\}$.
+
 First we want to show that $null \phi \cap \\{au: a \in F\\} = \\{0\\}$. 
 
 Assume $v \in null \phi \cap \\{au: a \in F\\}$. Then $\phi v = 0$ and $v = au$ for some $a \in F$.
@@ -776,9 +829,12 @@ Thus $V = null \phi \oplus \\{au: a \in F\\}$.
 
 
 
+
+--------------------------------------------------------------------------------
 # 3C Matrices
 
 We know that if $v_1,...,v_n$ is a basis of $V$ and $T: V \rightarrow W$ is linear, then the values of $Tv_1,...,Tv_n$ determine the values of $T$ on arbitrary vectors in $V$ - see the linear map lemma 3.4. As we will soon see, matrices provided an efficient method of recording the values of the $Tv_k$'s in terms of a basis of $W$.
+
 
 ### 3.29 Definition: matrix
 Supppose $m, n$ are nonnegative integers. An m-by-n matrix $A$ is a rectangular array of elements of $F$ with m rows and n columns:
@@ -793,6 +849,7 @@ $$
 
 The notation $A_{j,k}$ denotes the entry on row j, column k of $A$.
 
+
 ### 3.31 Definition: matrix of a linear map
 Suppose $T \in L(V,W)$ and $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_m$ is a basis of $W$. The matrix of $T$ with respect to these bases is the m-by-n matrix $M(T)$ whose entries $A_{j,k}$ are defined by
 
@@ -800,20 +857,26 @@ $$Tv_k = A_{1,k} w_1 + ... + A_{m,k} w_m$$
 
 If the bases $v_1,...,v_n$ and $w_1,...,w_m$ are not clear from the context, then the notation $M(T, (v_1,...,v_n), (w_1,...,w_m))$ is used.
 
+
 ### 3.35 
 Suppose $S, T \in L(V,W)$. Then $M(S+T) = M(S) + M(T)$.
+
 
 ### 3.38
 Suppose $\lambda \in F$ and $T \in L(V,W)$. Then $M(\lambda T) = \lambda M(T)$.
 
+
 ### 3.39 Notation
 For m and n positive integers, the set of all m-by-n matrices with entries in $F$ is denoted by $F^{m,n}$. 
+
 
 ### 3.40
 Suppose m and n are positive integers. With addition and scalar multiplication defined as above, $F^{m,n}$ is a vector space of dimension mn. 
 
+
 ### 3.43
 If $T \in L(U,V)$ and $S \in L(V,W)$, then $M(ST) = M(S)M(T)$.
+
 
 ### 3.52 Definition: column rank, row rank
 Suppose $A$ is an m-by-n matrix with entries in $F$. 
