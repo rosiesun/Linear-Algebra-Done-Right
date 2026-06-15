@@ -150,13 +150,13 @@ Thus $v \in span(v_1 - v_2, v_2 - v_3, v_3 - v_4, v_4)$, and $V \subseteq span(v
 
 The new vectors are linear combinations of the old vectors. 
 
-$$v_1-v_2=1v_1 + (-1)v_2 + 0v_3 + 0v_4$$, 
+$$v_1-v_2=1v_1 + (-1)v_2 + 0v_3 + 0v_4$$
 
-$$v_2-v_3=0v_1 + 1v_2 + (-1)v_3 + 0v_4$$, 
+$$v_2-v_3=0v_1 + 1v_2 + (-1)v_3 + 0v_4$$
 
-$$v_3-v_4=0v_1 + 0v_2 + 1v_3 + (-1)v_4$$, 
+$$v_3-v_4=0v_1 + 0v_2 + 1v_3 + (-1)v_4$$
 
-$$v_4=0v_1 + 0v_2 + 0v_3 + 1v_4$$. 
+$$v_4=0v_1 + 0v_2 + 0v_3 + 1v_4$$
 
 Thus $v_1 - v_2, v_2 - v_3, v_3 - v_4, v_4 \in V$. 
 
@@ -203,6 +203,7 @@ Thus by (2.17) they are linearly dependent.
 
 
 ### (8) Suppose $v_1, v_2, v_3, v_4$ is linearly independent in $V$. Prove that the list $v_1-v_2, v_2-v_3, v_3-v_4, v_4$ is also linearly independent.
+
 Suppose $a(v_1-v_2) + b(v_2-v_3) + c(v_3-v_4) + dv_4 =0$. 
 
 We want to show that $a=b=c=d=0$. 
@@ -218,6 +219,7 @@ Thus $v_1-v_2, v_2-v_3, v_3-v_4, v_4$ are linearly independent as desired.
 
 
 ### (9) Prove or give a counterexample: If $v_1, ..., v_m$ is a linearly independent list of vectors in $V$, then $5v_1-4v_2, v_2, v_3, ..., v_m$ is linearly independent.
+
 Suppose $a_1 (5v_1 -4v_2) + a_2 v_2 + ... + a_m v_m = 0$. 
 
 We want to show that $a_1=a_2=...=a_m=0$. 
@@ -233,6 +235,7 @@ Thus $5v_1-4v_2, v_2, ..., v_m$ are linearly independent as desired.
 
 
 ### (10) Prove or give a counterexample: If $v_1, v_2, ..., v_m$ is a linearly independent list of vectors in $V$ and $\lambda \in F$ with $\lambda \neq 0$, then $\lambda v_1, \lambda v_2, ..., \lambda v_m$ is linearly independent.
+
 Suppose $a_1 (\lambda v_1) + ... + a_m (\lambda v_m) = 0$. 
 
 We want to show that $a_1=a_2=...=a_m=0$. 
@@ -248,11 +251,13 @@ Thus $\lambda v_1, \lambda v_2, ..., \lambda v_m$ are linearly independent as de
 
 
 ### (11) Prove or give a counterexample: If $v_1, ..., v_m$ and $w_1,...,w_m$ are linearly independent lists of vectors in $V$, then the list $v_1+w_1, ..., v_m+w_m$ is linearly independent.
+
 Counterexample: $(1,0), (0,1) \in R^2$ is linearly independent. $(-1,0), (0,-1) \in R^2$ is also linearly independent. But $(0,0), (0,0)$ is not linearly independent.
 
 
 
 ### (12) Suppose $v_1,...,v_m$ is linearly independent in $V$ and $w \in V$. Prove that if $v_1+w, ..., v_m+w$ is linearly dependent, then $w \in span(v_1,...,v_m)$.
+
 By (2.19), if $v_1+w,...,v_m+w$ is linearly dependent, there exist $v_k+w$ such that 
 
 $$v_k+w \in span(v_1+w,...,v_{k-1}+w), k \in \\{1,...,m\\}$$. 
@@ -265,13 +270,13 @@ $$(1-a_1-...-a_{k-1}) w = a_1 v_1 + ... + a_{k-1} v_{k-1}$$.
 
 If $1-a_1-...-a_{k-1} \neq 0$, then 
 
-$$w = 1/(1-a_1-...-a_{k-1}) (a_1 v_1 + ... + a_{k-1} v_{k-1})$$, 
+$$w = 1/(1-a_1-...-a_{k-1}) (a_1 v_1 + ... + a_{k-1} v_{k-1}),$$
 
 thus $w \in span(v_1,...,v_m)$. 
 
 If $1-a_1-...-a_{k-1} = 0$, then we have 
 
-$$0 = a_1 v_1 + ... + a_{k-1} v_{k-1}$$. 
+$$0 = a_1 v_1 + ... + a_{k-1} v_{k-1} .$$
 
 Since $v_1,...,v_m$ is linearly independent, $a_1=...=a_{k-1}=0$. 
 
@@ -280,18 +285,19 @@ So $1-a_1-...-a_{k-1}=1$, which is a contradiction, showing that this case is no
 
 
 ### (13) Suppose $v_1,...,v_m$ is linearly independent in $V$ and $w \in V$. Show that $v_1,...,v_m,w$ is linearly independent $iff w \notin span(v_1,...,v_m)$.
-$$\Rightarrow$$
+
+$\Rightarrow$
 Assume towards contradiction that $w \in span(v_1,...,v_m)$. 
 
 Then $w=a_1 v_1 + ... + a_m v_m, a_1, ..., a_m \in F$. We have 
 
-$$a_1 v_1 + ... + a_m v_m + (-1)w = 0$$, 
+$$a_1 v_1 + ... + a_m v_m + (-1)w = 0$$
 
 which violates (2.15). 
 
 Therefore $w \notin span(v_1,...,v_m)$.
 
-$$\Leftarrow$$
+$\Leftarrow$
 Assume towards contradiction that $v_1,...,v_m,w$ is linearly dependent. 
 
 By (2.21), there exist a vector in $v_1,...,v_m,w$ which is a linear combination of the previous vectors. 
@@ -305,27 +311,28 @@ Therefore $v_1,...,v_m,w$ is linearly independent.
 
 
 ### (14) Suppose $v_1,...,v_m$ is a list of vectors in $V$. For $k \in \\{1,...,m\\}$, let $w_k=v_1+...+v_k$. Show that the list $v_1,...,v_m$ is linearly independent if and only if the list $w_1,...,w_m$ is linearly independent.
-$$\Rightarrow$$
+
+$\Rightarrow$
 Suppose $a_1 w_1 + ... a_m w_m = 0$. 
 
 We can rewrite it as 
 
-$$a_1 v_1 + a_2 (v_1+v_2) + ... + a_m (v_1+...v_m)=0$$, 
+$$a_1 v_1 + a_2 (v_1+v_2) + ... + a_m (v_1+...v_m)=0,$$
 
-$$(a_1+...+a_m) v_1 + (a_2+...a_m)v_2 + ... + a_m v_m=0$$. 
+$$(a_1+...+a_m) v_1 + (a_2+...a_m)v_2 + ... + a_m v_m=0.$$
 
 Given that $v_1,...,v_m$ is linearly independent, we have $a_1+...+a_m=0, a_2+...+a_m=0,..., a_m=0$, which implies that $a_1=a_2=...=a_m=0$. 
 
 Thus $w_1,...,w_m$ is linearly independent.
 
-$$\Leftarrow$$
+$\Leftarrow$
 Suppose $b_1 v_1 + ... b_m v_m = 0$. 
 
 We can rewrite it as 
 
-$$b_1 w_1 + b_2 (w_2-w_1) + ... + b_m (w_m-w_{m-1})=0$$, 
+$$b_1 w_1 + b_2 (w_2-w_1) + ... + b_m (w_m-w_{m-1})=0,$$
 
-$$(b_1-b_2) w_1 + (b_2-b_3)w_2 + ... + b_m w_m=0$$. 
+$$(b_1-b_2) w_1 + (b_2-b_3)w_2 + ... + b_m w_m=0.$$
 
 Given that $w_1,...,w_m$ is linearly independent, we have $b_1-b_2=0, b_2-b_3=0,..., b_m=0$, which implies that $b_1=b_2=...=b_m=0$. 
 
@@ -613,21 +620,22 @@ Because the list $v_1,...,v_m, u_1,...u_j$ is linearly independent, this equatio
 ## Exercises
 
 ### (8) Suppose $v_1,...,v_m$ is linearly independent in $V$ and $w \in V$. Prove that $dim span(v_1+w,...,v_m+w) \geq m-1$.
+
 Consider the list of vectors of length $m-1$ formed by taking the differences 
 
-$$(v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)$$. 
+$$(v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w) .$$ 
 
 We can re-write it as 
 
-$$v_1-v_2, ..., v_{m-1} - v_m$$. 
+$$v_1-v_2, ..., v_{m-1} - v_m.$$
 
 We want to show that this list is linearly independent. Suppose 
 
-$$a_1 (v_1-v_2) +  ... + a_{m-1} (v_{m-1} - v_m) = 0$$. 
+$$a_1 (v_1-v_2) +  ... + a_{m-1} (v_{m-1} - v_m) = 0.$$ 
 
 Then 
 
-$$a_1 v_1 + (a_2-a_1) v_2 + ... - a_{m-1} v_m = 0$$. 
+$$a_1 v_1 + (a_2-a_1) v_2 + ... - a_{m-1} v_m = 0.$$
 
 Since $v_1,...,v_m$ is linearly independent, $a_1 = 0, (a_2-a_1)= 0, ..., -a_{m-1}=0$, we can conclude $a_1, ..., a_{m-1}=0$. Thus 
 
@@ -635,19 +643,20 @@ $$(v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)$$
 
 is linearly independent. We can see that 
 
-$$(v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w) \in span(v_1+w,...,v_m+w)$$. 
+$$(v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w) \in span(v_1+w,...,v_m+w).$$
 
 Then 
 
-$$span((v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)) \subset span(v_1+w,...,v_m+w)$$. 
+$$span((v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)) \subset span(v_1+w,...,v_m+w).$$ 
 
 By 2.37, 
 
-$$m-1=dim span((v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)) \leq dim span(v_1+w,...,v_m+w)$$. 
+$$m-1=dim span((v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)) \leq dim span(v_1+w,...,v_m+w).$$
 
 
 
 ### (13) Suppose $U$ and $W$ are both five-dimensional subspaces of $R^9$. Prove that $U \cap W \neq \\{0\\}$.
+
 $dim U = dim W = 5$, $dim(U + W) <= 9$. 
 
 By 2.43, $5+5-dim(U \cap W) <= 9$. Thus $dim(U \cap W) >= 1$. 
@@ -655,6 +664,7 @@ By 2.43, $5+5-dim(U \cap W) <= 9$. Thus $dim(U \cap W) >= 1$.
 
 
 ### (18) Suppose $V$ is finite-dimensional, with $dim V=n \geq 1$. Prove that there exist one-dimensional subspaces $V_1, ..., V_n$ of $V$ such that $V=V_1 \oplus ... \oplus V_n$.
+
 Let $v_1, ..., v_n$ be a basis of $V$. 
 
 Let $V_1 = span(v1), ..., V_n = span(v_n)$, each space being one-dimensional. 
