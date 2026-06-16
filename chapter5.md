@@ -37,7 +37,11 @@ Suppose $T \in L(V)$. Then every list of eigenvectors of $T$ corresponding to di
 
 Proof: 
 
-Suppose the desired result is false. Then there exists a smallest positive integer $m$ such that there exists a linearly dependent list $v_1,...,v_m$ of eigenvectors of $T$ corresponding to distinct eigenvalues $\lambda_1,...,\lambda_m$ of $T$ (note that $m \geq 2$ because an eigenvector is by definition nonzero). Thus there exist $a_1,...,a_m \in F$ none of which are 0 (because of the minimality of $m$), such that 
+Suppose the desired result is false. 
+
+Then there exists a smallest positive integer $m$ such that there exists a linearly dependent list $v_1,...,v_m$ of eigenvectors of $T$ corresponding to distinct eigenvalues $\lambda_1,...,\lambda_m$ of $T$ (note that $m \geq 2$ because an eigenvector is by definition nonzero). 
+
+Thus there exist $a_1,...,a_m \in F$, none of which are 0 (because of the minimality of $m$), such that 
 
 $$a_1 v_1 + ... + a_m v_m = 0$$
 
@@ -45,11 +49,17 @@ Applying $T - \lambda_m I$ to both sides of the equation, getting
 
 $$a_1 (\lambda_1 - \lambda_m) v_1 + ... + a_{m-1} (\lambda_{m-1} - \lambda_m) v_{m-1} = 0$$
 
-Because the eigenvalues $\lambda_1,...,\lambda_m$ are distinct, none of the coefficients above equal 0. Thus $v_1,...,v_{m-1}$ is a linearly dependent list of $m-1$ eigenvectors of $T$ corresponding to distinct eigenvalues, contradicting the minimality of $m$. This contradiction completes the proof.
+Because the eigenvalues $\lambda_1,...,\lambda_m$ are distinct, none of the coefficients above equal 0. Thus $v_1,...,v_{m-1}$ is a linearly dependent list of $m-1$ eigenvectors of $T$ corresponding to distinct eigenvalues, contradicting the minimality of $m$. 
+
+This contradiction completes the proof.
 
 
 ### 5.12
 Suppose $V$ is finite-dimensional. Then each operator on $V$ has at most $dim V$ distinct eigenvalues.
+
+Proof:
+
+Let $T \in L(V)$. Suppose $\lambda_1, ..., \lambda_m$ are distinct eigenvalues of $T$. Let $v_1, ..., v_m$ be corresponding eigenvectors. Then 5.11 implies that the list $v_1, ..., v_m$ is linearly independent. Thus $m \leq dim V$ (by 2.22), as desired.
 
 
 ### 5.13 Notation
@@ -83,6 +93,7 @@ Suppose $p, q \in P(F)$ and $T \in L(V)$. Then
 
 - $(pq)(T) = p(T) q(T)$
 - $p(T) q(T) = q(T) p(T)$
+
 
 
 ### 5.18
@@ -148,6 +159,7 @@ There are no real eigenvalues.
 ### (6) Define $T \in L(F^2)$ by $T(w,z) = (z,w)$. Find all eigenvalues and eigenvectors of $T$.
 
 Eigenvalue 1, eigenvectors $\\{(w,z) \in R^2: w=z\\}$
+
 Eigenvalue -1, eigenvectors $\\{(w,z) in R^2: w = -z\\}$.
 
 
@@ -155,6 +167,7 @@ Eigenvalue -1, eigenvectors $\\{(w,z) in R^2: w = -z\\}$.
 ### (7) Define $T \in L(F^3)$ by $T(z_1,z_2,z_3) = (2z_2, 0, 5z_3)$. Find all eigenvalues and eigenvectors of $T$.
 
 Eigenvalue 5, eigenvectors $span(z_3)$.
+
 Eigenvalue 0, eigenvectors $span(z_1)$.
 
 
@@ -188,6 +201,7 @@ Since $v \neq 0$, we must have $\lambda (\lambda - 1) = 0$. Thus $\lambda = 1$ o
 ### (12) Suppose $V = U \oplus W$, where $U$ and $W$ are nonzero subspaces of $V$. Define $P \in L(V)$ by $P(u+w) = u$ for each $u \in U, w \in W$. Find all eigenvalues and eigenvectors of $P$.
 
 Eigenvalue 1, eigenvectors $u \in U, u \neq 0$.
+
 Eigenvalue 0, eigenvectors $w \in W, w \neq 0$.
 
 
@@ -219,7 +233,75 @@ $$T(x_1, x_2, x_3, x_4) = (-x_2, x_1, -x_4, x_3)$$
 
 ### (15) Suppose $V$ is finite-dimensional, $T \in L(V)$, and $\lambda \in F$. Show that $\lambda$ is an eigenvalue of $T$ if and only if $\lambda$ is an eigenvalue of the dual operator $T' \in L(V')$.
 
-### (16)
+$\Rightarrow$
+Suppose $\lambda \in F$ is an eigenvalue of $T$. Then $T - \lambda I$ is not surjective by 5.7. From 3.129, we have $T' - \lambda I'$ is not injective. Thus $\lambda$ is an eigenvalue of $T'$.
+
+$\Leftarrow$
+Suppose $\lambda \in F$ is an eigenvalue of $T'$. Then $T' - \lambda I'$ is not surjective by 5.7. From 3.131, we have $T - \lambda I$ is not injective. Thus $\lambda$ is an eigenvalue of $T$.
+
+
+
+### (16) Suppose $v_1, ..., v_n$ is a basis of $V$ and $T \in L(V)$. Prove that if $\lambda$ is an eigenvalue of $T$, then $|\lambda| \leq n max { |M(T)_{j,k} }$ where $1 \leq 1, j \leq n$, $M(T)_{j,k}$ denotes the entry in row j, column k of the matrix of $T$ with respect to the basis $v_1, ..., v_n$.
+
+Suppose $\lambda \in F$ is an eigenvalue of $T$. Suppose $v \in V, v \neq 0$ is the corresponding eigenvector of $T$. Then $Tv = \lambda v$. Since $v_1, ..., v_n$ is a basis of $V$, we can write $v = a_1 v_1 + ... + a_n v_n$ for some $a_1, ..., a_n \in F$. Then 
+
+$$Tv = a_1 Tv_1 + ... + a_n Tv_n$$
+
+and 
+
+$$\lambda v = \lambda a_1 v_1 + ... + \lambda a_n v_n.$$
+
+From 3.31, the definition of $M(T)$, we have
+
+$$Tv_k = M_{1,k} v_1 + ... + M_{n,k} v_n$$
+
+So we have 
+
+$$
+\begin{aligned}
+Tv &= a_1 (M_{1,1} v_1 + ... + M_{n,1} v_n) + ... + a_n (M_{1,n} v_1 + ... + M_{n,n} v_n) \\
+&= a_1 M_{1,1} v_1 + ... + a_n M_{1,n} v_1 + ... + a_1 M_{n,1} v_n + ... + a_n M_{n,n} v_n \\
+&= (\sum_{k=1}^n a_k M_{1,k}) v_1 + ... + (\sum_{k=1}^n a_k M_{n,k}) v_n
+\end{aligned}
+$$
+
+Because $v_1, ..., v_n$ is a basis, the linear combination is unique. 
+
+Therefore, for each row j, where $j = 1,...,n$,
+
+$$a_j \lambda = \sum_{k=1}^n a_k M_{j,k}$$
+
+Since $v$ is an eigenvector, $v \neq 0$. Therefore at least one coefficient is nonzero. Pick $a_{j'}$ such that 
+
+$$|a_{j'}| = max_{j} |a_j| .$$
+
+Consider the equation
+
+$$a_{j'} \lambda = \sum_{k=1}^n a_k M_{j', k}$$
+
+Using the triangle inequality, we have
+$$
+\begin{aligned}
+|a_{j'}| |\lambda| 
+    &= |a_{j'} \lambda| \\
+    &= | \sum_{k=1}^n a_k M_{j', k} | \\
+    &\leq \sum_{k=1}^n |a_k| |M_{j', k}|
+\end{aligned}
+$$
+
+Let $M'$ be such that $|M'| = max_{j,k} |M_{j,k}|$. Then 
+
+$$\sum_{k=1}^n |a_k| |M_{j', k}| \leq \sum_{k=1}^n |a_{j'}| |M'| = n |a_{j'}| |M'|$$
+
+Combining the two inequalities, we have
+
+$$|a_{j'}| |\lambda| \leq n |a_{j'}| |M'| .$$
+
+Since we showed earlier $|a_{j'}| \neq 0$, we can divide it from both sides. Thus we have
+
+$$|\lambda| \leq n |M'| .$$
+
+
 
 ### (21) Suppose $T \in L(V)$ is invertible.
 
