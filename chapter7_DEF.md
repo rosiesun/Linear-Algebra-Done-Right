@@ -2,7 +2,7 @@ Linear Algebra Done Right - Chapter 7 <br>
 Operators on Inner Product Spaces
 ================
 Rosie Sun <br> 
-2026-06-01
+2026-06-15
 
 
 
@@ -11,7 +11,7 @@ Rosie Sun <br>
 ### 7.44 Definition: isometry
 A linear map $S \in L(V, W)$ is called an isometry if 
 
-$$||Sv|| = ||v||$$
+$$\lVert Sv \rVert = \lVert v \rVert$$
 
 for every $v \in V$. In other words, a linear map is an isometry if it preserves norms.
 
@@ -75,7 +75,6 @@ $$B = R^* R.$$
 --------------------------------------------------------------------------------
 # 7E Singular Value Decomposition
 
-
 ### 7.64
 Suppose $T \in L(V, W)$. Then
 
@@ -88,9 +87,9 @@ Suppose $T \in L(V, W)$. Then
 (d) $dim range T = dim range T^* = dim range T^* T$.
 
 
-
 ### 7.65 Definition: singular values
 Suppose $T \in L(V, W)$. The singular values of $T$ are teh nonnegative square roots of the eigenvalues of $T^* T$, listed in decreasing order, each included as many times as the dimension of the corresponding eigenspace of $T^* T$.
+
 
 ### 7.70 Singular value decomposition
 Suppose $T \in L(V, W)$ and the positive singular values of $T$ are $s_1,...,s_m$. Then there exist orthonormal lists $e_1,...,e_m$ in $V$ and $f_1,...,f_m$ in $W$ such that 
@@ -98,6 +97,7 @@ Suppose $T \in L(V, W)$ and the positive singular values of $T$ are $s_1,...,s_m
 $$Tv = s_1 \langle v, e_1\rangle  f_1 + ... + s_m \langle v, e_m\rangle  f_m$$
 
 for every $v \in V$.
+
 
 ### 7.80 Matrix version of SVD
 Suppose $A$ is a p-by-n matrix of rank m \rangle = 1. Then there exist a p-by-m matrix $B$ with orthonormal columns, an m-by-m diagonal matrix $D$ with positive numbers on the diagonal, and an n-by-m matrix $C$ with orthonormal columns such that 
@@ -135,7 +135,6 @@ $$A = B D C^*.$$
 
 --------------------------------------------------------------------------------
 # 7F Consequences of Singular Value Decomposition
-
 
 ### 7.86 Definition: norm of a linear map
 Suppose $T \in L(V, W)$. Then the norm of $T$, denoted by $\lVert T \rVert$, is defined by
