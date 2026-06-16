@@ -280,6 +280,7 @@ Consider the equation
 $$a_{j'} \lambda = \sum_{k=1}^n a_k M_{j', k}$$
 
 Using the triangle inequality, we have
+
 $$
 \begin{aligned}
 |a_{j'}| |\lambda| 
