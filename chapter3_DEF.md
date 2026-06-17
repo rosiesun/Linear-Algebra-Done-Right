@@ -588,12 +588,41 @@ which gives the desired result.
 
 
 ### 3.106 Notation
-Suppose $T \in L(V, W)$. 
+Suppose $T \in L(V, W)$. Define $\tilde{T}: V/(null T) \rightarrow W$ by
+
+$$\tilde{T} (v + null T) = Tv.$$
+
+To show that the definition of $\tilde{T}$ makes sense, suppose $u, v \in V$ are such that $u + null T = v + null T$. By 3.101, we have $u - v \in null T$. Thus $T(u - v) = 0$. Hence $Tu = Tv$. Thus the definition of $\tilde{T}$ indeed makes sense.
 
 
 ### 3.107
+Suppose $T \in L(V, W)$. Then 
 
+(a) $\tilde{T} \circ \pi = T$, where $\pi$ is the quotient map of $V$ onto $V/(null T)$;
 
+(b) $\tilde{T}$ is injective;
+
+(c) $range \tilde{T} = range T$;
+
+(d) $V/(null T)$ and $range T$ are isomorphic vector spaces.
+
+Proof:
+
+(a) If $v \in V$, then 
+
+$$(\tilde{T} \circ \pi)(v) = \tilde{T} (\pi(v)) = \tilde{T} (v + null T) = Tv$$
+
+as desired.
+
+(b) Suppose $v \in V$ and $\tilde{T}(v + null T) = 0$. Then $Tv = 0$. Thus $v \in null T$.  Hence 3.101 implies that 
+
+$$v + null T = 0 + null T.$$ 
+
+This implies that $null \tilde{T} = \\{0 + null T \\}$. Hence $\tilde{T}$ is injective, as desired.
+
+(c) The definition of $\tilde{T}$ shows that $range \tilde{T} = range T$.
+
+(d) Now (b) and (c) imply that if we think of $\tilde{T}$ as mapping into $range T$, then $\tilde{T}$ is an isomorphism from $V/(null T)$ onto $range T$.
 
 
 
