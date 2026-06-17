@@ -337,7 +337,25 @@ From the equations from (a), they have the same eigenvectors.
 
 
 
-### (22)
+### (22) Suppose $T \in L(V)$ and there exist nonzero vectors $u$ and $w$ in $V$ such that $Tu = 3w$ and $Tw = 3u$. Prove that 3 or -3 is an eigenvalue of $T$.
+
+Suppose $u, w \in V$ and $u, w \neq 0$. We have
+
+$$T(u + w) = Tu + Tw = 3w + 3u = 3(u + w) .$$
+
+If $u + w \neq 0$, then 3 is an eigenvalue of $T$ and the corresponding eigenvector is $u+w$.
+
+If $u + w = 0$, then $u = -w$ and $w = -u$. We have 
+
+$$Tu = 3(-u) = -3u$$ 
+
+and
+
+$$Tw = 3(-w) = -3w .$$
+
+Thus -3 is an eigenvalue of $T$ and the corresponding eigenvectors are $u$ and $w$.
+
+
 
 ### (23) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ and $TS$ have the same eigenvalues.
 
@@ -358,6 +376,46 @@ If $\lambda = 0$, then $null ST \neq \\{0\\}$. We have $TS(Tv) = 0$. Then $Tv \i
 If $\lambda \neq 0$, then $TS(Tv) = \lambda (Tv)$ implies that $Tv$ is an eigenvector of $TS$ with eigenvalue of $\lambda$.
 
 The other direction follows by switching the order of $S$ and $T$.
+
+
+
+### (24) Suppose $A$ is an n-by-n matrix with entries in $F$. Define $T \in L(F^n)$ by $Tx = Ax$, where elements of $F^n$ are thought of as n-by-1 column vectors.
+
+#### (a) Suppose the sum of the entries in each row of $A$ equals 1. Prove that 1 is an eigenvalue of $T$.
+
+Suppose $e_1, ..., e_n$ is the standard basis of $F^n$. Consider $x = e_1 + ... + e_n, x \neq 0$. Then using matrix multiplication, we have
+
+$$
+A  
+\begin{pmatrix}
+1 \\
+.. \\
+1 
+\end{pmatrix}
+= 
+\begin{pmatrix}
+\sum_{k=1}^n A_{1,k} * 1\\
+... \\
+\sum_{k=1}^n A_{n,k} * 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 \\
+... \\
+1
+\end{pmatrix}
+$$
+
+Hence 1 is an eigenvalue and $x = e_1 + ... + e_n$ is the corresponding eigenvector.
+
+
+#### (b) Suppose the sum of the entries in each column of $A$ equals 1. Prove that 1 is an eigenvalue of $T$.
+
+From 3.132 we have $M(T') = (M(T))^t$. Consider $A^t = M(T')$. Then the sum of the entries of each row of $A^t$ equals 1. 
+
+Then 1 is an eigenvalue of $T'$ from part (a).
+
+From exercise 15, we showed that $\lambda$ is an eigenvalue of $T$ if and only if $\lambda$ is an eigenvalue of $T'$. Thus we conclude 1 is an eigenvalue of $T$.
 
 
 
@@ -447,6 +505,7 @@ Suppose $Tv = 0$. Applying $T$ m times, we have $T^m v = 0$. Since $T^m$ is inje
 
 
 #### (b) Prove that $T$ is surjective if and only if $T^m$ is surjective.
+
 $\Rightarrow$
 Suppose $T$ is surjective.
 
@@ -474,7 +533,8 @@ Suppose $v_1,...,v_m$ is linearly independent.
 Extend to a basis $v_1,...,v_m, w_1,...,w_n$ of $V$. Define $T \in L(V)$ such that $Tv_i = \lambda_i v_i, i=1,...,m$, $\lambda_i$ all distinct. $Tw_j = 0, j = 1,...,n$. 
 
 
-### (39)
+### (39) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that $T$ has an eigenvalue if and only if there exists a subspace of $V$ of dimension $dim V - 1$ that is invariant under $T$.
+
 
 
 
