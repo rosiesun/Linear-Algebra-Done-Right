@@ -622,7 +622,26 @@ This implies that $null \tilde{T} = \\{0 + null T \\}$. Hence $\tilde{T}$ is inj
 
 (c) The definition of $\tilde{T}$ shows that $range \tilde{T} = range T$.
 
-(d) Now (b) and (c) imply that if we think of $\tilde{T}$ as mapping into $range T$, then $\tilde{T}$ is an isomorphism from $V/(null T)$ onto $range T$.
+(d) Now (b) and (c) imply that if we think of $\tilde{T}$ as mapping into $range T$, then $\tilde{T}$ is an isomorphism from $V/ (null T)$ onto $range T$.
+
+
+
+
+## Exercises
+
+### (6) Suppose that $v, x$ are vectors in $V$ and that $U, W$ are subspaces of $V$ such that $v + U = x + W$. Prove that $U = W$.
+
+Suppose $u \in U$. Then $v + u \in v + U$. 
+
+Since $v + U = x + W$, $v + u \in x + W$. Then $v + u = x + w$ for some $w \in W$. We have
+
+$$u = (x - v) + w.$$
+
+We also have $v + 0 \in v + U$ and $v + 0 \in x + W$. So $v + 0 = x + w_1$ for some $w_1 \in W$. Thus $v = x + w_1$, and $v - x = w_1$. Hence $x - v \in W$. 
+
+Since $W$ is a subspace, $u = (x - v) + w \in W$, showing $U \subseteq W$.
+
+Similarly, $W \subseteq U$ (by switching $v$ and $x$). Hence we conclude $U = W$.
 
 
 
