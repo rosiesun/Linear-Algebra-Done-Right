@@ -644,6 +644,70 @@ Since $W$ is a subspace, $u = (x - v) + w \in W$, showing $U \subseteq W$.
 Similarly, $W \subseteq U$ (by switching $v$ and $x$). Hence we conclude $U = W$.
 
 
+### (7) Let $U = \\{(x, y, z) \in R^3: 2x + 3y + 5z = 0\\}$. Suppose $A \subseteq R^3$. Prove that $A$ is a translate of $U$ if and only if there exists $c \in R$ such that $A = \\{(x, y, z) \in R^3: 2x + 3y + 5z = c\\}$.
+
+$\Rightarrow$
+Suppose $A$ is a translate of $U$. 
+
+Then $A = a + U$ for some $a = (a_1, a_2, a_3) \in R^3$. Consider $c = 2a_1 + 3a_2 + 5a_3$.
+
+$$
+\begin{aligned}
+A &= a + U \\
+    &= \\{(x, y, z) \in R^3: (x - a_1, y - a_2, z - a_3) \in U\\} \\
+    &= \\{(x, y, z) \in R^3: 2(x-a_1) + 3(y-a_2) + 5(z-a_3) = 0 \\} \\
+    &= \\{(x, y, z) \in R^3: 2x + 3y + 5z = c \\}
+\end{aligned}
+$$
+
+$\Leftarrow$
+Suppose there exists $c \in R$ such that $A = \\{(x, y, z) \in R^3: 2x + 3y + 5z = c\\}$.
+
+Consider $a = \frac{1}{10} (c, c, c) \in R^3$.
+
+$$
+\begin{aligned}
+A &= \\{(x, y, z) \in R^3: 2x + 3y + 5z - c = 0 \\} \\
+    &= \\{(x, y, z) \in R^3: 2(x - \frac{1}{10} c) + 3(y - \frac{1}{10} c) + 5(z - \frac{1}{10} c) = 0 \\} \\
+    &= \\{(x, y, z) \in R^3: (x - \frac{1}{10} c, y - \frac{1}{10} c, z - \frac{1}{10} c) \in U \\} \\
+    &= a + U
+\end{aligned}
+$$
+
+Thus $A$ is a translate of $U$.
+
+
+
+### (8) 
+#### (a) Suppose $T \in L(V, W)$ and $c \in W$. Prove that $\\{x \in V: Tx = c\\}$ is either the empty set or is a translate of $null T$.
+
+We have 
+
+$$
+\begin{aligned}
+v + null T 
+    &= \\{x \in V: (x - v) \in null T \\} \\
+    &= \\{x \in V: T(x - v) = 0 \\} \\
+    &= \\{x \in V: Tx = Tv \\}
+\end{aligned}
+$$
+
+If there exists $v \in V$ such that $Tv = c$, then $\\{x \in V: Tx = c\\}$ is a translate of $null T$. Otherwise it is the empty set.
+
+
+#### (b) Explain why the set of solutions to a system of linear equations such as 3.27 is either the empty set or is a translate of some subspace of $F^n$.
+
+A system of linear equations is a linear map $T$ from $F^n$ to $F^m$, applied to a vector $x \in F^n$, with some fixed $c \in F^m$. By (a), the solution set is either the empty set or $null T$ (which is a subspace of $F^n$).
+
+
+
+### (9)
+
+
+### (10)
+
+
+
 
 
 
