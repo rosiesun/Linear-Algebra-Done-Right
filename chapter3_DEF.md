@@ -701,9 +701,54 @@ A system of linear equations is a linear map $T$ from $F^n$ to $F^m$, applied to
 
 
 
-### (9)
+### (9) Prove that a nonempty subset $A$ of $V$ is a translate of some subspace of $V$ if and only if $\lambda v + (1 - \lambda) w \in A$ for all $v, w \in A$ and all $\lambda \in F$.
+
+$\Rightarrow$
+Suppose $U$ is a subspace of $V$ and suppose $A$ is a translate of $U$. 
+
+Then $A = a + U$ for some $a \in V$. Suppose $v, w \in A$. Then $v = a + u_1$ and $w = a + u_2$ for some $u_1, u_2 \in U$. 
+
+Since $U$ is a subspace, $\lambda u_1 + (1 - \lambda) u_2 \in U$. We have
+
+$$
+\begin{aligned}
+a + (\lambda u_1 + (1 - \lambda) u_2) &\in a + U \\
+\lambda (a + u_1) + (1-\lambda) (a + u_2) &\in a + U \\
+\lambda v + (1 - \lambda) w &\in A
+\end{aligned}
+$$
+
+$\Leftarrow$
+Suppose $\lambda v + (1 - \lambda) w \in A$ for all $v, w \in A$ and all $\lambda \in F$.
+
+Define $U = \\{v - a: v \in A\\}$. We want to show that $U$ is a subspace of $V$.
+
+First, $0 \in U$ beacuse $0 = a - a \in U$. 
+
+Next we want to show that $U$ is closed under scalar multiplication. 
+
+Suppose $u \in U, \lambda \in F$. Then $u = v - a$ for some $v \in A$. Apply the hypothesis to our choice of $\lambda, v, and w=a$. We have
+
+$$\lambda v + (1 - \lambda) a = \lambda (u + a) + (1 - \lambda)a = \lambda u + a \in A$$
+
+Hence $\lambda u = \lambda u + a - a \in U$.
+
+Finally we want to show that $U$ is closed under addition.
+
+Suppose $u_1, u_2 \in U$. Then $u_1 = v_1 - a, u_2 = v_2 - a$ for some $v_1, v_2 \in A$. Apply the hypothesis to $\lambda = 1/2, v_1, v_2$. We have
+
+$$\frac{1}{2} v_1 + \frac{1}{2} v_2 \in A$$ 
+
+Thus 
+
+$$\frac{1}{2} v_1 + \frac{1}{2} v_2 - a = \frac{1}{2} (u_1 + u_2 + 2a) - a = \frac{1}{2} (u_1 + u_2) \in U$$
+
+Since $U$ is closed under scalar multiplication, $u_1 + u_2 \in U$.
+
+We have shown that $U$ is a subspace of $V$ and $A = \\{a + U\\}$, thus $A$ is a translate of $U$.
 
 
+ 
 ### (10)
 
 
