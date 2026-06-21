@@ -748,8 +748,51 @@ Since $U$ is closed under scalar multiplication, $u_1 + u_2 \in U$.
 We have shown that $U$ is a subspace of $V$ and $A = \\{a + U\\}$, thus $A$ is a translate of $U$.
 
 
- 
-### (10)
+
+### (10) Suppose $A_1 = v + U_1$ and $A_2 = w + U_2$ for some $v, w \in V$ and some subspaces $U_1, U_2$ of $V$. Prove that the intersection $A_1 \cap A_2$ is either a translate of some subspace of $V$ or is the empty set.
+
+If $A_1 \cap A_2$ is an empty set then we are done. 
+
+Thus suppose $A_1 \cap A_2$ is not empty and $y \in A_1 \cap A_2$. Then $y = v + u_1$ for some $u_1 \in U_1$ and $y = w + u_2$ for some $u_2 \in U_2$. We want to show that 
+
+$$A_1 \cap A_2 = y + (U_1 \cap U_2).$$ 
+
+Note that $U_1 \cap U_2$ is a subspace of $V$ (Chapter 1C, exercise 10).
+
+First suppose $x \in y + (U_1 \cap U_2)$. Then $x = y + u_3$ where $u_3 \in U_1 \cap U_2$. Since $y = v + u_1$, we have 
+
+$$x = y + u_3 = v + u_1 + u_3 = v + (u_1 + u_3) \in v + U_1 = A_1.$$
+
+Similarly, since $y = w + u_2$, we have
+
+$$x = y + u_3 = w + u_2 + u_3 = w + (u_2 + u_3) \in w + U_2 = A_2.$$
+
+Hence $x \in A_1 \cap A_2$.
+
+Next suppose $x \in A_1 \cap A_2$. Then $x = v + u'_1$ for some $u'_1 \in U_1$ and $x = w + u'_2$ for some $u'_2 \in U_2$. We have
+
+$$x - y = (v + u'_1) - (v + u_1) = u'_1 - u_1 \in U_1,$$
+
+$$x - y = (v + u'_2) - (v + u_2) = u'_2 - u_2 \in U_2.$$
+
+Thus $x - y \in U_1 \cap U_2$. Hence 
+
+$$x = y + (x - y) \in y + (U_1 \cap U_2).$$
+
+We conclude that $A_1 \cap A_2$ is either an empty set or a translate of a subspace of $V$.
+
+
+
+### (14)
+
+
+### (15)
+
+
+### (16)
+
+
+### (17)
 
 
 
