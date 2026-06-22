@@ -783,16 +783,153 @@ We conclude that $A_1 \cap A_2$ is either an empty set or a translate of a subsp
 
 
 
-### (14)
+### (12) Suppose $v_1, ..., v_m \in V$. Let $A = \\{\lambda_1 v_1 + ... + \lambda_m v_m: \lambda_1, ..., \lambda_m \in F, \lambda_1 + ... + \lambda_m = 1\\}$.
+
+#### (a) Prove that $A$ is a translate of some subspace of $V$.
+
+Suppose $w \in A$. Then we have
+
+$$
+\begin{aligned}
+w &= \lambda_1 v_1 + ... + \lambda_m v_m \\
+    &= \lambda_1 v_1 + ... + \lambda_{m-1} v_{m-1} + (1 - \lambda_1 - ... - \lambda_{m-1}) v_m \\
+    &= \lambda_1 v_1 + ... + \lambda_{m-1} v_{m-1} + v_m - \lambda_1 v_m - ... - \lambda_{m-1} v_m \\
+    &= v_m + \lambda_1 v_1 - \lambda_1 v_m + ... + \lambda_{m-1} v_{m-1} - \lambda_{m-1} v_m \\
+    &= v_m + \lambda_1 (v_1 - v_m) + ... + \lambda_{m-1} (v_{m-1} - v_m)
+\end{aligned}
+$$
+
+Define 
+
+$$U = \\{\lambda_1 (v_1 - v_m) + ... + \lambda_{m-1} (v_{m-1} - v_m): \lambda_1, ..., \lambda_{m-1} \in F\\}.$$ 
+
+Since $U = span( (v_1 - v_m), ..., (v_{m-1} - v_m))$, by 2.6, $U$ is a subspace of $V$.
+
+Thus $A \subseteq v_m + U$.
+
+Suppose $w \in v_m + U$. Then for some $\lambda_1, ..., \lambda_{m-1} \in F$, we have
+
+$$
+\begin{aligned}
+w &= v_m + \lambda_1 (v_1 - v_m) + ... + \lambda_{m-1} (v_{m-1} - v_m) \\
+    &= \lambda_1 v_1 - \lambda_1 v_m + ... + \lambda_{m-1} v_{m-1} - \lambda_{m-1} v_m + v_m \\
+    &= \lambda_1 v_1 + ... + \lambda_{m-1} v_{m-1} + (1 - \lambda_1 - ... - \lambda_{m-1}) v_m \\
+    &= \lambda_1 v_1 + ... + \lambda_{m-1} v_{m-1} + \lambda_m v_m
+\end{aligned}
+$$
+
+Thus $&w \in A$ and $v_m + U \subseteq A$. 
+
+Hence we conclude $A = v_m + U$, i.e., $A$ is a translate of subspace $U$ of $V$. 
 
 
-### (15)
+#### (b) Prove that if $B$ is a translate of some subspace of $V$ and $\\{v_1, ..., v_m\\} \subseteq B$, then $A \subseteq B$.
+
+Suppose $w \in A$. Then $w \in v_m + U$, from part (a). 
+
+Suppose $B = b + Y$ for some $b \in V$ and some subspace $Y$ in $V$. Then $v_i \in B$ for $i = 1,...,m$ and $v_i = b + y_i$ for some $y_i \in Y$.
+
+Then for some $\lambda_1, ..., \lambda_{m-1} \in F$, we have 
+
+$$
+\begin{aligned}
+w &= v_m + \lambda_1 (v_1 - v_m) + ... + \lambda_{m-1} (v_{m-1} - v_m) \\
+    &= (b + y_m) + \lambda_1 (b + y_1 - b - y_m) + ... + \lambda_{m-1} (b + y_{m-1} - b - y_m) \\
+    &= b + y_m + \lambda_1 (y_1 - y_m) + ... + \lambda_{m-1} (y_{m-1} - y_m)
+\end{aligned}
+$$
+
+Since $Y$ is a subspace and is closed under addition and scalar multiplication, we have $y_m \in Y, \lambda_1 (y_1 - y_m) \in Y, ..., \lambda_{m-1} (y_{m-1} - y_m) \in Y$, and $y_m + \lambda_1 (y_1 - y_m) + ... + \lambda_{m-1} (y_{m-1} - y_m) \in Y$.
+
+Thus $w \in b + Y = B$.
+
+Hence we conclude $A \subseteq B$.
 
 
-### (16)
+#### (c) Prove that $A$ is a translate of some subspace of $V$ of dimension less than m.
+
+From part (a), we have $A = v_m + U$, where $U = span( (v_1 - v_m), ..., (v_{m-1} - v_m))$. 
+
+By definition $(v_1 - v_m), ..., (v_{m-1} - v_m)$ spans $U$. From 2.22, there are at most $m-1$ linearly independent vectors in this list. Thus $dim U \leq m-1 < m$.
 
 
-### (17)
+
+### (13) Suppose $U$ is a subspace of $V$ such that $V/U$ is finite-dimensional. Prove that $V$ is isomorphic to $U \times (V/U)$.
+
+
+
+### (14) Suppose $U$ and $W$ are subspaces of $V$ and $V = U \oplus W$. Suppose $w_1, ..., w_m$ is a basis of $W$. Prove that $w_1 + U, ..., w_m + U$ is a basis of $V/U$.
+
+We have 
+
+$$dim V/U = dim V - dim U = dim W = m$$ 
+
+from 3.105 and 3.94. 
+
+Since $w_1 + U, ..., w_m + U$ is a list of length $m$, we just need to show that the list is linearly independent in $V/U$, by 2.38.
+
+Suppose $a_1 (w_1 + U) + ... + a_m (w_m + U) = 0 + U$ for some $a_1, ..., a_m \in F$. Then 
+
+$$a_1 (w_1 + U) + ... + a_m (w_m + U) = (a_1 w_1 + ... + a_m w_m) + U = 0 + U.$$
+
+Thus $a_1 w_1 + ... + a_m w_m \in U$ by 3.101.
+
+Since $w_1, ..., w_m$ is a basis of $W$, $a_1 w_1 + ... + a_m w_m \in W$. 
+
+Thus $a_1 w_1 + ... + a_m w_m \in U \cap W$. Since $U$ and $W$ are direct sums, $U \cap W = \\{0\\}$, by 1.46. Thus $a_1 w_1 + ... + a_m w_m = 0$, implying $a_1 = ... = a_m = 0$.
+
+Hence $w_1 + U, ..., w_m + U$ is linearly independent and is a basis of $V/U$.
+
+
+
+### (15) Suppose $U$ is a subspace of $V$ and $v_1 + U, ..., v_m + U$ is a basis of $V/U$ and $u_1, ..., u_n$ is a basis of $U$. Prove that $v_1, ..., v_m, u_1, ..., u_n$ is a basis of $V$.
+
+Since $dim V = dim U + dim V/U = n + m$, and the length of the list $v_1, ..., v_m, u_1, ..., u_n$ equals $n + m$, we just need to show that $v_1, ..., v_m, u_1, ..., u_n$ is linearly independent in $V$, by 2.38.
+
+Suppose 
+
+$$a_1 v_1 + ... + a_m v_m + b_1 u_1 + ... + b_n u_n = 0$$
+
+for some $a_1, ..., a_m, b_1, ..., b_n \in F$. 
+
+Applying the quotient map $\pi: V \rightarrow V/U$ to both sides, we have
+
+$$
+\begin{aligned}
+\pi(a_1 v_1 + ... + a_m v_m + b_1 u_1 + ... + b_n u_n) &= \pi(0) \\
+(a_1 v_1 + ... + a_m v_m + b_1 u_1 + ... + b_n u_n) + U &= 0 + U \\
+(a_1 v_1 + U) + ... + (a_m v_m + U) + (b_1 u_1 + U) + ... + (b_n u_n + U) &= 0 + U \\
+a_1 (v_1 + U) + ... + a_m (v_m + U) + (0 + U) + ... + (0 + U) &= 0 + U \\
+a_1 (v_1 + U) + ... + a_m (v_m + U) &= 0 + U
+\end{aligned}
+$$
+
+Since $v_1 + U, ..., v_m + U$ is a basis of $V/U$, $a_1 = ... = a_m = 0$. Thus we have $b_1 u_1 + ... + b_n u_n = 0$. Since $u_1, ..., u_n$ is a basis of $U$, $b_1 = ... = b_n = 0$. 
+
+Hence $v_1, ..., v_m, u_1, ..., u_n$ is linearly independent, and we conclude that it is a basis of $V$.
+
+
+
+### (16) Suppose $\phi \in L(V, F)$ and $\phi \neq 0$. Prove that $dim (V / null \phi) = 1$.
+
+Since $\phi \neq 0$, there exists $v \in V$ such that $\phi(v) \neq 0$. Then $dim (range \phi) \geq 1$. Since $range \phi \subseteq F$, $dim (range \phi) \leq dim F = 1$. Thus $dim (range \phi) = 1$.
+
+From 3.21 the fundamental theorem of linear maps, we have
+
+$$dim V = dim (null \phi) + dim (range \phi) .$$
+
+Since $dim (range \phi) = 1$, we have
+
+$$dim (null \phi) = (dim V) - 1.$$
+
+From 3.105, we have
+
+$$dim (V / null \phi) = dim V - dim (null \phi) = dim V - (dim V - 1) = 1.$$
+
+
+
+### (17) Suppose $U$ is a subspace of $V$ such that $dim V/U = 1$. Prove that there exists $\phi \in L(V, F)$ such that $null \phi = U$.
+
 
 
 
@@ -1085,6 +1222,24 @@ where the second equality comes from 3.78, the third equality comes from 3.130(a
 
 
 ## Exercises
+
+### (1) Explain why each linear functional is surjective or is the zero map.
+
+Suppose $\phi \in L(V, F)$. If $\phi = 0$ then we are done. 
+
+Suppose $\phi \neq 0$. Then there exists $v \in V$ such that $\phi(v) \neq 0$. Suppose $\phi(v) = \lambda$. 
+
+Since $\lambda \neq 0$, for any $x \in F$, we can write 
+
+$$x = \frac{x}{\lambda} \lambda = a \lambda$$ 
+
+setting $a = \frac{x}{\lambda}$. Then 
+
+$$x = a \lambda = a \phi(v) = \phi(av).$$ 
+
+Thus $\phi$ is surjective.
+
+
 
 ### (2) Give three distinct examples of linear functionals on $R^{[0,1]}$.
 
