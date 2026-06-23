@@ -856,6 +856,50 @@ By definition $(v_1 - v_m), ..., (v_{m-1} - v_m)$ spans $U$. From 2.22, there ar
 
 ### (13) Suppose $U$ is a subspace of $V$ such that $V/U$ is finite-dimensional. Prove that $V$ is isomorphic to $U \times (V/U)$.
 
+Suppose $w_1 + U, ..., w_m + U$ is a basis of $V/U$. Define $W = span(w_1, ..., w_m)$. 
+
+We want to show that $V$ is equal to $U \oplus W$ which is isomorphic to $U \times W$ which is isomorphic to $U \times V/U$.
+
+First we want to show that $V = U \oplus W$. 
+
+Suppose $v \in V$. Then $v + U \in V/U$. We can write 
+
+$$v + U = a_1 (w_1 + U) + ... + a_m (w_m + U) = (a_1 w_1 + ... + a_m w_m) + U$$
+
+for some $a_1, ..., a_m \in F$. From 3.101, $v - (a_1 w_1 + ... + a_m w_m) \in U$. Thus 
+
+$$v = a_1 w_1 + ... + a_m w_m + (v - (a_1 w_1 + ... + a_m w_m))$$
+
+where $a_1 w_1 + ... + a_m w_m \in W$ and $v - (a_1 w_1 + ... + a_m w_m) \in U$. Therefore $V = U + W$. 
+
+Suppose $v \in U \cap W$. Then $v = b_1 w_1 + ... + b_m w_m$ for some $b_1, ..., b_m \in F$. Since $v \in U$, $v + U = 0 + U$ by 3.101. We have
+
+$$
+\begin{aligned}
+v + U &= (b_1 w_1 + ... + b_m w_m) + U \\
+    &= b_1 (w_1 + U) + ... + b_m (w_m + U) \\
+    &= 0 + U
+\end{aligned}
+$$
+
+Since $w_1 + U, ..., w_m + U$ is a basis of $V/U$, $b_1 = ... = b_m = 0$. Hence $v = 0$, and $U \cap W = \\{0\\}$.
+
+Since $V = U + W$ and $U \cap W = \\{0\\}$, $V = U \oplus W$ by 1.46.
+
+Consider the linear map $\Gamma: U \times W \rightarrow U + W$. 
+
+$\Gamma$ is surjective by definition. By 3.93, since $U + W$ is a direct sum, $\Gamma$ is injective. Thus $\Gamma$ is an isomorphism from $U \times W$ onto $U + W$. 
+
+Consider the linear map $\pi: W \rightarrow V/U$. Suppose $w + U \in V/U$. Then 
+
+$$w + U = c_1 (w_1 + U) + ... + c_m (w_m + U) = (c_1 w_1 + ... + c_m w_m) + U = \pi(c_1 w_1 + ... + c_m w_m)$$ 
+
+for some $c_1, ..., c_m \in F$, $c_1 w_1 + ... + c_m w_m \in W$. Thus $\pi$ is surjective. Since $null \pi = \\{0\\}$ (shown previously), $\pi$ is injective. Thus $\pi$ is an isomorphism from $W$ onto $V/U$. 
+
+Define map $T: U \times W \rightarrow U \times (V/U)$ by $T(u, w) = (u, \pi(w))$. Then $T$ is an isomorphism from $U \times W$ onto $U \times (V/U)$.
+
+Hence $V$ is isomorphic with $U \times V/U$.
+
 
 
 ### (14) Suppose $U$ and $W$ are subspaces of $V$ and $V = U \oplus W$. Suppose $w_1, ..., w_m$ is a basis of $W$. Prove that $w_1 + U, ..., w_m + U$ is a basis of $V/U$.
@@ -935,6 +979,16 @@ Let $w_1 + U$ be a basis of $V/U$ and let $u_1, ..., u_n$ be a basis of $U$. Fro
 Define $\phi \in L(V, F)$ such that $\phi(w_1) = 1$ and $\phi(u_i) = 0$ for $i = 1,...,n$. 
 
 Thus $null \phi = U$.
+
+
+
+### (18) Suppose that $U$ is a subspace of $V$ such that $V/U$ is finite-dimensional. 
+
+#### (a) Show that if $W$ is a finite-dimensional subspace of $V$ and $V = U + W$, then $dim W \geq dim V/U$.
+
+
+
+#### (b) Prove that there exists a finite-dimensional subspace $W$ of $V$ such that $dim W = dim V/U$ and $V = U \oplus W$.
 
 
 
@@ -1489,3 +1543,61 @@ Thus $dim null \psi = dim null T = n-1$ and together with the fact that $null T 
 
 
 ### (30) Suppose $V$ is finite-dimensional and $\phi_1,...,\phi_n$ is a basis of $V'$. Show that there exists a basis of $V$ whose dual basis is $\phi_1,...,\phi_n$.
+
+
+
+
+### (31) Suppose $U$ is a subspace of $V$. Let $i: U \rightarrow V$ be the inclusion map defined by $i(u) = u$. Thus $i' \in L(V', U')$. 
+
+#### (a) Show that $null i' = U^0$. 
+
+Suppose $\phi \in null i'$. Then $i'(\phi) = 0$. 
+
+We have $i'(\phi) (u) = 0$ for all $u \in U$. Then $\phi (i (u)) = \phi(u)= 0$ for all $u \in U$. Thus $\phi \in U^0$.
+
+Suppose $\phi \in U^0$. Then $\phi(u) = 0$ for all $u \in U$. 
+
+We have $\phi(u) = \phi(i(u)) = i'(\phi)(u) = 0$ for all $u \in U$. Thus $\phi \in null i'$.
+
+
+#### (b) Prove that if $V$ is finite-dimensional, then $range i' = U'$.
+
+Since $V$ is finite-dimensional, we have 
+
+$$dim range i' = dim V' - dim null i' .$$
+
+We also have
+
+$$
+\begin{aligned}
+dim U' &= dim U \\
+    &= dim V - dim U^0 \\
+    &= dim V' - dim null i'
+\end{aligned}
+$$
+
+where the first equality comes from 3.111, the second equality comes from 3.125, and the third equality comes from 3.111 and part (a). Thus $dim range i' = dim U'$. 
+
+Since $range i' \subseteq U'$, $range i' = U'$ by 2.39.
+
+
+#### (c) Prove that if $V$ is finite-dimensional, then $\tilde{i'}$ is an isomorphism from $V'/U^0$ onto $U'$.
+
+From 3.107, $i'$ is an isomorphism from $V' / (null i')$ onto $range i'$. Since $null i' = U^0$ and $range i' = U'$ from part (a) and (b), $\tilde{i'}$ is an isomorphism from $V'/U^0$ onto $U'$.
+
+
+
+### (33) Suppose $U$ is a subspace of $V$. Let $\pi: V \rightarrow V/U$ be the usual quotient map. Thus $\pi' \in L((V/U)', V')$.
+
+#### (a) Show that $\pi'$ is injective.
+
+
+
+#### (b) Show that $range \pi' = U^0$. 
+
+
+
+#### (c) Conclude that $\pi'$ is an isomorphism from $(V/U)'$ onto $U^0$.
+
+
+
