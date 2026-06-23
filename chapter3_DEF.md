@@ -958,25 +958,39 @@ Hence $v_1, ..., v_m, u_1, ..., u_n$ is linearly independent, and we conclude th
 
 Since $\phi \neq 0$, there exists $v \in V$ such that $\phi(v) \neq 0$. Then $dim (range \phi) \geq 1$. Since $range \phi \subseteq F$, $dim (range \phi) \leq dim F = 1$. Thus $dim (range \phi) = 1$.
 
-From 3.21 the fundamental theorem of linear maps, we have
+From 3.107, $V / (null \phi)$ and $range \phi$ are isomorphic. Thus 
 
-$$dim V = dim (null \phi) + dim (range \phi) .$$
-
-Since $dim (range \phi) = 1$, we have
-
-$$dim (null \phi) = (dim V) - 1.$$
-
-From 3.105, we have
-
-$$dim (V / null \phi) = dim V - dim (null \phi) = dim V - (dim V - 1) = 1.$$
+$$dim (V / (null \phi)) = dim range \phi = 1.$$
 
 
 
 ### (17) Suppose $U$ is a subspace of $V$ such that $dim V/U = 1$. Prove that there exists $\phi \in L(V, F)$ such that $null \phi = U$.
 
-Let $w_1 + U$ be a basis of $V/U$ and let $u_1, ..., u_n$ be a basis of $U$. From exercise 15, $w_1, u_1, ..., u_n$ is a basis of $V$. 
+Let $w_1 + U$ be a basis of $V/U$. Define $W = span(w_1)$. We want to show that $V = U \oplus W$ and construct a $\phi: V \rightarrow F$. 
 
-Define $\phi \in L(V, F)$ such that $\phi(w_1) = 1$ and $\phi(u_i) = 0$ for $i = 1,...,n$. 
+Suppose $v \in V$. Then $v + U \in V/U$, and we can write 
+
+$$v + U = a_1 (w_1 + U) = a_1 w_1 + U$$ 
+
+for some $a_1 \in F$. Then $v - a_1 w_1 \in U$ by 3.101. Thus 
+
+$$v = a_1 w_1 + (v - a_1 w_1)$$
+
+where $a_1 w_1 \in W$ and $v - a_1 w_1 \in U$. Hence $V = W + U$. 
+
+Suppose $v \in U \cap W$. Then $v \in W$ and $v = b_1 w_1$ for some $b_1 \in F$. Since $v \in U$, by 3.101 we have
+
+$$v + U = b_1 w_1 + U = b_1 (w_1 + U) = 0 + U.$$
+
+Since $w_1 + U$ is a basis of $V/U$, $b_1 = 0$. Thus $v = 0$, and $U \cap W = \\{0\\}$. 
+
+Since $V = U + W$ and $U \cap W = \\{0\\}$, $V = U \oplus W$ by 1.46.
+
+Define $\phi \in L(V, F)$ such that $\phi(w_1) = 1$ and $\phi(u) = 0$ for all $u \in U$. Every $v \in V$ can be uniquely written as $v = u + a_1 w_1$ for some $a_1 \in F$. Thus $\phi$ is well-defined and $\phi(v) = a_1$. 
+
+Suppose $v \in null \phi$. Then $\phi(v) = 0$. Since $v = u + a_1 w_1$ for some $a_1 \in F$, $\phi(v) = \phi(u + a_1 w_1) = \phi(u) + a_1 = 0 + a_1$, which implies that $a_1 = 0$. Then $v = u + 0w \in U$. 
+
+Suppose $v \in U$. Then $\phi(v) = \phi(u + 0w) = 0$. Thus $v \in null \phi$.
 
 Thus $null \phi = U$.
 
