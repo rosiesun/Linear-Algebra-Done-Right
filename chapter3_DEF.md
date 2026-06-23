@@ -930,6 +930,11 @@ $$dim (V / null \phi) = dim V - dim (null \phi) = dim V - (dim V - 1) = 1.$$
 
 ### (17) Suppose $U$ is a subspace of $V$ such that $dim V/U = 1$. Prove that there exists $\phi \in L(V, F)$ such that $null \phi = U$.
 
+Let $w_1 + U$ be a basis of $V/U$ and let $u_1, ..., u_n$ be a basis of $U$. From exercise 15, $w_1, u_1, ..., u_n$ is a basis of $V$. 
+
+Define $\phi \in L(V, F)$ such that $\phi(w_1) = 1$ and $\phi(u_i) = 0$ for $i = 1,...,n$. 
+
+Thus $null \phi = U$.
 
 
 
