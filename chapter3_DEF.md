@@ -1634,15 +1634,33 @@ for all $v \in V$.
 
 We want to show that $\phi$ is a linear map.
 
-Suppose $v_1 + U \in V/U, v_2 + U \in V/U$ and $v_1 + U = v_2 + U$. Then $v_1 - v_2 \in U$ by 3.101. Therefore $\psi(v_1 - v_2) = 0$, and $\phi(v_1 + U) = \psi(v_1) = \psi(v_2) = \phi(v_2 + U)$.
+Suppose $v_1 + U \in V/U, v_2 + U \in V/U$ and $v_1 + U = v_2 + U$. Then $v_1 - v_2 \in U$ by 3.101. Therefore $\psi(v_1 - v_2) = 0$, and 
+
+$$\phi(v_1 + U) = \psi(v_1) = \psi(v_2) = \phi(v_2 + U).$$
+
+Hence $\phi$ is well-defined.
 
 Suppose $v_1 + U, v_2 + U \in V/U$. Then we have
 
-$$\phi((v_1 + U) + (v_2 + U)) = \phi((v_1 + v_2) + U) = \psi(v_1 + v_2) = \psi(v_1) + \psi(v_2) = \phi(v_1 + U) + \phi(v_2 + U).$$
+$$
+\begin{aligned}
+\phi((v_1 + U) + (v_2 + U)) &= \phi((v_1 + v_2) + U) \\
+    &= \psi(v_1 + v_2) \\
+    &= \psi(v_1) + \psi(v_2) \\
+    &= \phi(v_1 + U) + \phi(v_2 + U)
+\end{aligned}
+$$
 
 Suppose $v + U \in V/U, \lambda \in F$. Then we have
 
-$$\phi(\lambda (v+U)) = \phi(\lambda v + U) = \psi(\lambda v) = \lambda \psi(v) = \lambda \phi(v + U).$$
+$$
+\begin{aligned}
+\phi(\lambda (v+U)) &= \phi(\lambda v + U) \\
+    &= \psi(\lambda v) \\
+    &= \lambda \psi(v) \\
+    &= \lambda \phi(v + U)
+\end{aligned}
+$$
 
 Thus $\phi$ is well-defined and satisfies additivity and homogeneity, and therefore is a linear map. 
 
