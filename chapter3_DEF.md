@@ -1605,13 +1605,57 @@ From 3.107, $i'$ is an isomorphism from $V' / (null i')$ onto $range i'$. Since 
 
 #### (a) Show that $\pi'$ is injective.
 
+Suppose $\phi \in (V/U)'$. Suppose $\pi'(\phi) = 0$. Then $(\pi'(\phi))(v) = 0$ for all $v \in V$. 
+
+$\phi(\pi(v)) = \phi(v + U) = 0$ for all $v + U \in V/U$. Thus $\phi = 0$. 
+
+Hence $\pi'$ is injective by 3.15.
 
 
 #### (b) Show that $range \pi' = U^0$. 
 
+First suppose $\psi \in range \pi'$. Then there exists $\phi \in (V/U)'$ such that $\pi' (\phi) = \psi$. 
+
+Suppose $\pi(v) = v + U = 0 + U$. Then $v \in U$. Thus $null \pi = U$.
+
+Suppose $u \in U$. Then 
+
+$$\psi(u) = \pi'(\phi)(u) = \phi(\pi(u)) = \phi(0 + U) = 0.$$
+
+Thus $\psi \in U^0$.
+
+For the other direction, suppose $\psi \in U^0$. Then $\psi(u) = 0$ for all $u \in U$.
+
+Define $\phi \in (V/U)'$ such that 
+
+$$\phi(v + U) = \psi(v)$$ 
+
+for all $v \in V$. 
+
+We want to show that $\phi$ is a linear map.
+
+Suppose $v_1 + U \in V/U, v_2 + U \in V/U$ and $v_1 + U = v_2 + U$. Then $v_1 - v_2 \in U$ by 3.101. Therefore $\psi(v_1 - v_2) = 0$, and $\phi(v_1 + U) = \psi(v_1) = \psi(v_2) = \phi(v_2 + U)$.
+
+Suppose $v_1 + U, v_2 + U \in V/U$. Then we have
+
+$$\phi((v_1 + U) + (v_2 + U)) = \phi((v_1 + v_2) + U) = \psi(v_1 + v_2) = \psi(v_1) + \psi(v_2) = \phi(v_1 + U) + \phi(v_2 + U).$$
+
+Suppose $v + U \in V/U, \lambda \in F$. Then we have
+
+$$\phi(\lambda (v+U)) = \phi(\lambda v + U) = \psi(\lambda v) = \lambda \psi(v) = \lambda \phi(v + U).$$
+
+Thus $\phi$ is well-defined and satisfies additivity and homogeneity, and therefore is a linear map. 
+
+Note that 
+
+$$\psi(v) = \phi(v + U) = \phi(\pi(v)) = \pi'(\phi)(v)$$
+
+for all $v \in V$.
+
+Hence $\psi = \pi'(\phi)$, and $\pi'$ is surjective.
 
 
 #### (c) Conclude that $\pi'$ is an isomorphism from $(V/U)'$ onto $U^0$.
 
-
+From part (a) and (b), $\pi': (V/U)' \rightarrow U^0$ is injective and surjective. We conclude that $\pi'$ is an isomorphism from $(V/U)'$ onto $U^0$.
 
