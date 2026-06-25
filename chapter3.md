@@ -527,7 +527,7 @@ Hence $(S+T)$ is surjective while $S, T$ are not surjective. $\\{T \in L(V,W): T
 
 Suppose $a_1 Tv_1 + ... + a_n Tv_n = 0$, for some $a_1,...,a_n \in F$. Rewriting, we have $T(a_1 v_1 + ... + a_n v_n) = 0$. 
 
-Since $T$ is injective, $null T = \\{0\\}$. We conclude that $a_1 v_1 + ... + a_n v_n = 0$. Since $v_1,...,v_n$ is linearly independent, $a_1=...=a_n=0$. 
+Since $T$ is injective, $null T = \\{0\\}$ by 3.15. Thus $a_1 v_1 + ... + a_n v_n = 0$. Since $v_1,...,v_n$ is linearly independent, $a_1 = ... = a_n = 0$. 
 
 Thus $Tv_1,...,Tv_n$ is linearly independent in $W$.
 
@@ -679,57 +679,70 @@ Assume that there exists $S \in L(W,V)$ such that $TS$ is the identity operator 
 ### (23)
 
 
-### (25) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S \subseteq null T$ if and only if there exists $E \in L(W)$ such that $T=ES$.
+### (25) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S \subseteq null T$ if and only if there exists $E \in L(W)$ such that $T = ES$.
 
 $\Leftarrow$
-Assume there exists $E \in L(W)$ such that $T=ES$. We want to show that $null S \subseteq null T$. 
+Suppose there exists $E \in L(W)$ such that $T = ES$. 
 
-Let $v \in null S$. Then $Sv = 0$. 
+Let $v \in null S$. Then $Sv = 0$. We have
 
-$$Tv=(ES)(v)=E(Sv)=E(0)=0$$
+$$Tv = (ES)(v) = E(Sv) = E(0) = 0.$$
 
-Hence $v \in null T$. Thus $null S \subseteq null T$ as desired.
+Thus $v \in null T$, and $null S \subseteq null T$.
 
 $\Rightarrow$
-Assume $null S \subseteq null T$. Let $w_1,...,w_n$ be a basis of $range S$. Then there exist some $v_1,...,v_n \in V$ such that $Sv_1=w_1,...,Sv_n=w_n$. 
+Suppose $null S \subseteq null T$. 
 
-Define $E$ such that 
+Let $y_1, ..., y_m$ be a basis of $range S$. We can extend to a basis $y_1, ..., y_m, u_1, ..., u_n$ of $W$. 
 
-$$E w_i = Tv_i$$
+Since $y_1, ..., y_m \in range S$, there exist some $v_1,...,v_m \in V$ such that $Sv_1 = y_1, ..., Sv_m = y_m$. 
 
-for $i=1,...,n$.
+Define $E \in L(W)$ such that 
 
-To show $E$ is well-defined, assume there is some $u_i \in V$ such that $Sv_i = Su_i$ for $i \in \\{1,...,n\\}$. 
+$$E y_j = Tv_j, j = 1,...,m$$
 
-$$S(u_i) - S(v_i) = S(u_i - v_i) = 0$$
+and
 
-Therefore $u_i - v_i \in null S$. 
+$$E u_i = 0, i = 1,...,n.$$
 
-Since $null S \subseteq null T$, $u_i - v_i \in null T$.
+For $j = 1,...,m$, if $y_j$ has multiple pre-image vectors $v_1, ..., v_n$, we could be potentially sending $y_j$ to different vectors $Tv_1, ..., Tv_n$. To show $E$ is well-defined, first we have to make sure that it does not matter which pre-image we choose. 
 
-$$T(u_i - v_i) = T(u_i) - T(v_i) = 0$$
+Suppose $v_1, v_2 \in V$ such that $Sv_1 = y_j$ and $Sv_2 = y_j$, for $j = 1, ..., m$. Then 
 
-Therefore $T(u_i) = T(v_i)$. 
+$$0 = Sv_1 - Sv_2 = S(v_1 - v_2).$$
 
-Thus it does matter if we had picked the pre-image $v_i$ or $u_i$, the linear map $E$ is well-defined. We can extend it to $range S$ by linearity. 
+Thus $v_1 - v_2 \in null S$. Since $null S \subseteq null T$, $v_1 - v_2 \in null T$. We have
 
-To extend from $range S$ to $W$, extend the basis vectors of $range S$ to $W$, $w_1,...,w_n, y_1,...,y_m$. Define $E(y_j) = 0, j=1,...,m$. 
+$$0 = T(v_1 - v_2) = Tv_1 - Tv_2.$$
 
-Let $v \in V$. Then $Sv = a_1 w_1 + ... + a_n w_n$ for some $a_1,...,a_n$. Since $w_i = Sv_i$, we have
+Thus $Tv_1 = Tv_2$. Hence it does not matter which vector we picked as the pre-image of each basis vector in $range S$. 
 
-$$Sv = a_1 Sv_1 + ... + a_n Sv_n = S(a_1 v_1 + ... + a_n v_n)$$
+Then $E \in L(W)$ is well-defined by 3.4.
 
-Therefore 
+Suppose $v \in V$. Then $Sv = a_1 y_1 + ... + a_m y_m$ for some $a_1,...,a_n \in F$. Since $y_j = Sv_j$ defined above, we have
 
-$$v - (a_1 v_1 + ... + a_n v_n) \in null S$$
+$$Sv = a_1 y_1 + ... + a_m y_m = a_1 Sv_1 + ... + a_m Sv_m = S(a_1 v_1 + ... + a_m v_m).$$
 
-By the hypothesis, $null S \in null T$, so 
+Therefore $Sv - S(a_1 v_1 + ... + a_m v_m) = 0$ and $v - (a_1 v_1 + ... + a_m v_m) \in null S$.
 
-$$Tv - T(a_1 v_1 + ... + a_n v_n) = 0$$
+By hypothesis, $null S \subseteq null T$, so $v - (a_1 v_1 + ... + a_m v_m) \in null T$, and
 
-Hence we conclude
+$$0 = T(v - (a_1 v_1 + ... + a_m v_m)) = Tv - T(a_1 v_1 + ... + a_n v_n).$$
 
-$$ES(v) = E(Sv) = E(a_1 w_1 + ... + a_n w_n) = a_1 Tv_1 + ... + a_n Tv_n = Tv$$
+Then we have
+
+$$
+\begin{aligned}
+ES(v) &= E(Sv) \\
+    &= E(a_1 y_1 + ... + a_m y_m) \\
+    &= a_1 Ey_1 + ... + a_m Ey_m \\
+    &= a_1 Tv_1 + ... + a_m Tv_m \\
+    &= T(a_1 v_1 + ... + a_n v_n) \\
+    &= Tv
+\end{aligned}
+$$
+
+Hence $ES = T$.
 
 
 
