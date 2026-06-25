@@ -533,7 +533,79 @@ Suppose $v_1,...,v_m$ is linearly independent.
 Extend to a basis $v_1,...,v_m, w_1,...,w_n$ of $V$. Define $T \in L(V)$ such that $Tv_i = \lambda_i v_i, i=1,...,m$, $\lambda_i$ all distinct. $Tw_j = 0, j = 1,...,n$. 
 
 
+
+### (37) Suppose $V$ is finite-dimensional and $T \in L(V)$. Define $A \in L(L(V))$ by $A(S) = TS$ for each $S \in L(V)$. Prove that the set of eigenvalues of $T$ equals the set of eigenvalues of $A$.
+
+
+### (38) Suppose $V$ is finite-dimensional, $T \in L(V)$, and $U$ is a subspace of $V$ invariant under $T$. The quotient operator $T/U \in L(V/U)$ is defined by $(T/U)(v + U) = Tv + U$ for each $v \in V$. 
+
+#### (a) Show that the definition of $T/U$ makes sense (which requires using the condition that $U$ is invariant under $T$) and show that $T/U$ is an operator on $V/U$.
+
+First we want to show that the definition of $T/U$ makes sense. 
+
+Suppose $v_1 + U, v_2 + U \in V/U$ and $v_1 + U = v_2 + U$. Then by 3.101 $v_1 - v_2 \in U$. Since $U$ is invariant under $T$, $T(v_1 - v_2) \in U$. Thus $Tv_1 - Tv_2 \in U$, and $Tv_1 + U = Tv_2 + U$ by 3.101. Then we have
+
+$$(T/U) (v_1 + U) = Tv_1 + U = Tv_2 + U = (T/U) (v_2 + U).$$
+
+Hence the definition makes sense.
+
+Next we want to show that $T/U$ is a linear map. 
+
+Suppose $v_1 + U, v_2 + U \in V/U$. Then 
+
+$$
+\begin{aligned}
+(T/U) ( (v_1 + U) + (v_2 + U) ) &= (T/U) ((v_1 + v_2) + U) \\
+    &= T(v_1 + v_2) + U \\
+    &= (Tv_1 + Tv_2) + U \\
+    &= (Tv_1 + U) + (Tv_2 + U) \\
+    &= (T/U)(v_1 + U) + (T/U)(v_2 + U)
+\end{aligned}
+$$
+
+Suppose $v + U \in V/U, \lambda \in F$. Then 
+
+$$
+\begin{aligned}
+(T/U) (\lambda (v+U)) &= (T/U) (\lambda v + U) \\
+    &= T(\lambda v) + U \\
+    &= (\lambda Tv) + U \\
+    &= \lambda (Tv + U) \\
+    &= \lambda ((T/U) (v + U))
+\end{aligned}
+$$
+
+Thus $T/U$ satisfies additivity and homogeneity. Since $(T/U): V/U \rightarrow V/U$, $T/U$ is an operator on $V/U$.
+
+
+#### (b) Show that each eigenvalue of $T/U$ is an eigenvalue of $T$.
+
+Suppose $\lambda \in F$ is an eigenvalue of $T/U$. Then there exists $v + U \in V/U$, $v + U \neq 0 + U$ such that 
+
+$$(T/U)(v + U) = \lambda (v+ U).$$
+
+Then we have
+
+$$Tv + U = \lambda v + U.$$
+
+Thus $v \notin U$ and 
+
+$$Tv - \lambda v = (T - \lambda I) v \in U.$$
+
+Assume towards contradiction that $\lambda$ is not an eigenvalue of $T$. Then $T - \lambda I$ is injective by 5.7.
+
+Note that $U$ is invariant under $T - \lambda I$ since for any $u \in U$, $(T - \lambda I) u = Tu - \lambda u \in U$. 
+
+Consider the restriction $(T - \lambda I)|_U: U \rightarrow U$. Then $(T - \lambda I)|_U$ is injective. Since $V$ is finite-dimensional, $U$ is finite-dimensional, and thus $(T - \lambda I)|_U$ is surjective from $U$ onto $U$. 
+
+Since $Tv - \lambda v \in U$, there exists some $w \in U$ such that $(T - \lambda I) w = (T - \lambda I) v$. Then $(T - \lambda I)|_U (v - w) = 0$. Since $T - \lambda I$ is injective, $v - w = 0$. However this is a contradiction since $v \notin U$.
+
+
+
 ### (39) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that $T$ has an eigenvalue if and only if there exists a subspace of $V$ of dimension $dim V - 1$ that is invariant under $T$.
+
+
+
 
 
 
