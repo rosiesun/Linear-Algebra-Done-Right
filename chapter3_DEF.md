@@ -11,6 +11,7 @@ Rosie Sun <br>
 - A linear map $T \in L(V,W)$ is called invertible if there exists a linear map $S \in L(W,V)$ such that $ST$ equals the identity operator on $V$ and $TS$ equals the identity operator on $W$.
 - A linear map $S \in L(W,V)$ satisfying $ST=I$ and $TS=I$ is called an inverse of $T$ (note that the first $I$ is the identity operator on $V$ and the second $I$ is the identity operator on $W$).
 
+
 ### 3.60 Inverse is unique
 An invertible linear map has a unique inverse.
 
@@ -25,6 +26,7 @@ Thus $S_1 = S_2$.
 
 ### 3.61 Notation
 If $T$ is invertible, then its inverse is denoted by $T^{-1}$. In other words, if $T \in L(V,W)$ is invertible, then $T^{-1}$ is the unique element of $L(W,V)$ such that $T^{-1} T = I$ and $T T^{-1} = I$.
+
 
 ### 3.63 invertibility $iff$ injectivity and surjectivity
 A linear map is invertible if and only if it is injective and surjective.
@@ -109,6 +111,7 @@ To prove the implication in the other direction, simply reverse the roles of $S$
 ### 3.69 Definition: isomorphism, isomorphic
 - An isomorphism is an invertible linear map.
 - Two vector spaces are called isomorphic if there is an isomorphism from one vector space onto the other one.
+
 
 ### 3.70
 Two finite-dimensional vector spaces over $F$ are isomorhpic if and only if they have the same dimension.
@@ -205,6 +208,7 @@ $$M(I, (v_1,...,v_n), (u_1,...,u_n))$$
 
 are invertible, and each is the inverse of the other.
 
+
 ### 3.84 Change-of-basis formula
 Suppose $T \in L(V)$. Suppose $u_1,...,u_n$ and $v_1,...,v_n$ are bases of $V$. Let $A = M(T, (u_1,...,u_n))$ and $B = M(T, (v_1,...,v_n))$, and $C = M(I, (u_1,...,u_n), (v_1,...,v_n))$. Then $A = C^{-1} B C$.
 
@@ -213,6 +217,14 @@ Suppose $T \in L(V)$. Suppose $u_1,...,u_n$ and $v_1,...,v_n$ are bases of $V$. 
 
 
 ## Exercises
+
+### (1) Suppose $T \in L(V, W)$ is invertible. Show that $T^{-1}$ is invertible and $(T^{-1})^{-1} = T$.
+
+Since $T$ is invertible, $T T^{-1} = T^{-1} T = I$. 
+
+Now exchange the role of $T$ and $T^{-1}$. Then $T^{-1}$ is invertible and $(T^{-1})^{-1} = T$, and $T$ is the unique inverse of $T^{-1}$ by 3.60.
+
+
 
 ### (2) Suppose $T \in L(U,V)$ and $S \in L(V,W)$ are both invertible linear maps. Prove that $ST \in L(U,W)$ is invertible and that $(ST)^{-1} = T^{-1} S^{-1}$.
 
@@ -234,57 +246,161 @@ Therefore $ST$ is invertible and $T^{-1} S^{-1}$ is the inverse of $ST$.
 
 
 
-### (3)
+### (3) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that the following are equivalent. (a) $T$ is invertible. (b) $Tv_1, ..., Tv_n$ is a basis of $V$ for every basis $v_1, ..., v_n$ of $V$. (c) $Tv_1, ..., Tv_n$ is a basis of $V$ for some basis $v_1, ..., v_n$ of $V$.
 
-### (4)
+(a) $\rightarrow$ (b)
+Suppose $T$ is invertible. Suppose $v_1, ..., v_n$ is a basis of $V$. Since $Tv_1, ..., Tv_n$ is a list of length $n = dim V$, we just need to show that $Tv_1, ..., Tv_n$ is linearly independent. 
 
-### (5)
+Suppose $a_1 Tv_1 + ... + a_n Tv_n = 0$ for some $a_1, ..., a_n \in F$. Then $T (a_1 v_1 + ... + a_n v_n) = 0$. 
+
+Since $T$ is invertible, $T$ is injective by 3.63, $null T = \\{0\\}$ by 3.15, thus $a_1 v_1 + ... + a_n v_n = 0$. 
+
+Since $v_1, ..., v_n$ is a basis of $V$, $a_1 = ... = a_n = 0$. Hence $Tv_1, ..., Tv_n$ is linearly independent in $V$. Thus (b) holds.
+
+(b) $\rightarrow$ (c) follows immediately.
+
+(c) $\rightarrow$ (a)
+Suppose $Tv_1, ..., Tv_n$ is a basis of $V$ for some basis $v_1, ..., v_n$ of $V$. 
+
+Suppose $Tv = 0$ for some $v \in V$. Since $v_1, ..., v_n$ is a basis, $v = b_1 v_1 + ... + b_n v_n$ for some $b_1, ..., b_n \in F$. Then 
+
+$$0 = Tv = T(b_1 v_1 + ... + b_n v_n) = b_1 Tv_1 + ... + b_n Tv_n.$$
+
+Since $Tv_1, ..., Tv_n$ is a basis of $V$, $b_1 = ... = b_n = 0$. Thus $v = 0$, and $T$ is injective by 3.15. Since $V$ is finite-dimensional, $T$ is invertible by 3.65. Thus (a) holds.
+
+
+
+### (4) Suppose $V$ is finite-dimensional and $dim V > 1$. Prove that the set of noninvertible linear maps from $V$ to itself is not a subspace of $L(V)$.
+
+We want to show that the set of noninvertible linear maps from $V$ to itself is not closed under addition, and thus not a subspace of $L(V)$.
+
+Suppose $v_1, ..., v_n$ is a basis of $V$, and $T_1, ..., T_n \in L(V)$ such that 
+
+$$T_i v_i = v_i$$
+
+for $i = 1,...,n$ and
+
+$$T_i v_j = 0, j \neq i.$$
+
+Then each $T_i$ is not injective, since $T_i v_j = 0$ and $v_j \neq 0$. Hence each $T_i$ is not invertible. We have
+
+$$(T_1 + ... + T_n) v_i = T_1 v_i + ... + T_n v_i = T_i v_i = v_i$$
+
+for $i = 1, ..., n$.
+
+Thus $T_1 + ... + T_n = I$ which is invertible. 
+
+
+
+### (5) Suppose $V$ is finite-dimensional, $U$ is a subspace of $V$, and $S \in L(U, V)$. Prove that there exists an invertible linear map $T$ from $V$ to itself such that $Tu = Su$ for every $u \in U$ if and only if $S$ is injective.
+
+$\Rightarrow$
+Suppose there exists an invertible linear map $T$ from $V$ to itself such that $Tu = Su$ for every $u \in U$. 
+
+Assume towards contradiction that $S$ is not injective. Then $Su = 0$ for some $u \neq 0$. By hypothesis $Tu = Su = 0$. Since $T$ is invertible, $T$ is injective by 3.65. Then $u = 0$ by 3.15, which is a contradiction. 
+
+$\Leftarrow$
+Suppose $S$ is injective. 
+
+Suppose $u_1, ..., u_m$ is a basis of $U$. We can extend to $u_1, ..., u_m, v_1, ..., v_n$ a basis of $V$ by 2.32. Then $dim V = m + n$. 
+
+Since $S$ is injective, it preserves linear independence (proven in Chapter 3B exercise 9). Thus $Su_1, ..., Su_m$ is linearly independent in $V$. We can extend to $Su_1, ..., Su_m, w_1, ..., w_n$ a basis of $V$, which is well-defined because the length of the list is also $m + n$.
+
+Define $T \in L(V, V)$ such that 
+
+$$Tu_j = Su_j, j = 1,...,m$$
+
+and
+
+$$Tv_i = w_i, i = 1,...,n. $$
+
+$T$ is well-defined by 3.4. Since $T$ and $S$ agree on the basis of $U$, $Tu = Su$ for all $u \in U$. 
+
+Suppose $Tv = 0$ for some $v \in V$. We can write $v = a_1 u_1 + ... + a_m u_m + b_1 v_1 + ... + b_n v_n$ for some $a_1, ..., a_m, b_1, ..., b_n \in F$. Then 
+
+$$0 = Tv = T(a_1 u_1 + ... + a_m u_m + b_1 v_1 + ... + b_n v_n) = a_1 Su_1 + ... + a_m Su_m + b_1 w_1 + ... + b_n w_n. $$
+
+Since $Su_1, ..., Su_m, w_1, ..., w_n$ is a basis of $V$, $a_1 = ... = a_m = b_1 = ... = b_n = 0$. Thus $v = 0$, $null T = \\{0\\}$, and $T$ is injective. 
+
+Since $V$ is finite-dimensional, $T$ is invertible by 3.65.
+
+
 
 ### (6) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S = null T$ if and only if there exists an invertible $E \in L(W)$ such that $S=ET$.
 
 $\Leftarrow$
-Suppose there exists invertible $E \in L(W)$ such that $S=ET$. 
+Suppose there exists invertible $E \in L(W)$ such that $S = ET$. 
 
-First let $v \in null S$. Then $Sv = 0$, $ETv = Sv= 0$. Applying $E^{-1}$ to both sides, we have 
+First suppose $v \in null S$. Then $Sv = 0$ and 
 
-$$E^{-1} E T v = E^{-1} 0$$
+$$(ET)v = Sv= 0.$$ 
 
-Thus $Tv = 0$, and $v \in null T$.
+Applying $E^{-1}$ to both sides, we have 
 
-Next let $v \in null T$. Then $Tv = 0$, $Sv = ETv = E0 = 0$. Thus $v \in null S$.
+$$
+\begin{aligned}
+E^{-1} E T v &= E^{-1} 0 \\
+Tv &= 0
+\end{aligned}
+$$
+
+Thus $v \in null T$, and $null S \subseteq null T$.
+
+Next suppose $v \in null T$. Then $Tv = 0$ and 
+
+$$Sv = (ET) v = E(Tv) = E0 = 0.$$ 
+
+Thus $v \in null S$, and $null T \subseteq null S$.
 
 Hence we conclude that $null S = null T$.
 
 $\Rightarrow$
-Let $w_1,...,w_n$ be a basis of $range T$, and let $Y$ be a complement subspace such that $W = range T \oplus Y$. Let $y_1,...,y_m$ be a basis of $Y$.
+Suppose $null S = null T$.
 
-Since $w_i \in range T, i=1,...,n$, there exists $v_i \in V$ such that $Tv_i=w_i, i=1,...,n$.
+Let $y_1, ..., y_m$ be a basis of $range T$ in $W$. We can extend to a basis $y_1, ..., y_m, u_1, ..., u_n$ basis of $W$ by 2.32.
+
+Since $y_j \in range T$ for $j = 1,...,m$, there exists $v_j \in V$ such that $Tv_j = y_j$ for $j = 1,...,m$.
 
 Define $E \in L(W)$ such that
 
-$$Ew_i = Tv_i = Sv_i, i=1,...,n$$
+$$Ey_j = E(Tv_j) = Sv_j, j=1,...,m$$
 
-$$Ey_j = y_j, j=1,...,m$$
+and
 
-To show that $E$ is well-defined on $range T$, we want to show that if $Tu_1 = Tu_2$, $u_1, u_2 \in V$, then $Su_1 = Su_2$. 
+$$Eu_i = u_i, i=1,...,n.$$
 
-Assume $Tu_1 = Tu_2$. Then $T(u_1 - u_2) = 0$. $u_1 - u_2 \in null T$. By hypothesis, $u_1 - u_2 \in null S$, and $S(u_1 - u_2) = 0$. Hence $Su_1 = Su_2$, and $E$ is well-defined on $range T$. 
+By 3.4 $E$ is well-defined.
 
-We want to show that $S=ET$.
+By design, $E$ is surjective, since  By 3.65, $E$ is invertible.
 
-Let $v \in V$. Then $Tv \in range T$, and we can write 
+We want to show that $S = ET$.
 
-$$Tv = a_1 w_1 + ... + a_n w_n$$ 
+Suppose $v \in V$. Then $Tv \in range T$, and we can write 
 
-for some $a_1,...,a_n$. Since $w_1 = Tv_1, ..., w_n = Tv_n$ for some $v_1,...,v_n$, 
+$$Tv = a_1 y_1 + ... + a_m y_m$$ 
 
-$$Tv = a_1 Tv_1 + ... + a_n Tv_n = T (a_1 v_1 + ... + a_n v_n)$$
+for some $a_1,...,a_n$. Since $y_1 = Tv_1, ..., y_m = Tv_m$, we have
 
-$T(v - (a_1 v_1 + ... + a_n v_n)) = 0$, therefore $v - (a_1 v_1 + ... + a_n v_n) \in null T$. By hypothesis, $v - (a_1 v_1 + ... + a_n v_n) \in null S$. So $S(v - (a_1 v_1 + ... + a_n v_n)) = 0$ and $Sv = S(a_1 v_1 + ... + a_n v_n)$. 
+$$
+\begin{aligned}
+Tv &= a_1 Tv_1 + ... + a_m Tv_m \\
+Tv &= T (a_1 v_1 + ... + a_m v_m) \\
+T(v - a_1 v_1 - ... - a_m v_m) &= 0
+\end{aligned}
+$$
 
-$$ETv = ET(a_1 v_1 + ... + a_n v_n) = a_1 Ew_1 + ... + a_n Ew_n = a_1 Sv_1 + ... + a_n Sv_n = Sv$$
+Therefore $v - a_1 v_1 - ... - a_m v_m \in null T$. 
 
-By design, $range E = W$. By 3.65, $E$ is invertible.
+By hypothesis, $v - a_1 v_1 - ... - a_m v_m \in null S$. Thus $S(v - a_1 v_1 - ... - a_m v_m) = 0$ and $Sv = S(a_1 v_1 + ... + a_n v_n)$. Then we have
+
+$$
+\begin{aligned}
+(ET)v &= E(Tv) \\
+    &= E(a_1 y_1 + ... + a_m y_m) \\
+    &= a_1 Sv_1 + ... + a_n Sv_m \\
+    &= Sv$$
+
+
 
 
 
@@ -336,9 +452,12 @@ Since any vector in $V$ decomposes uniquely as a sum from $null S$ and $U$, and 
 
 ### (8)
 
+
 ### (9)
 
+
 ### (10)
+
 
 ### (11) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ is invertible $\iff S$ and $T$ are invertible.
 
@@ -396,6 +515,7 @@ Therefore we conclude $S$ is injective.
 Let $v \in V$. Since $Tv_1,...,Tv_m$ spans $V$, we can write $v = a_1 Tv_1 + ... + a_m Tv_m$ for some $a_1,...,a_m$. Then $v \in range T$. Therefore $T$ is surjective. By 3.65, $T$ is injective and invertible. 
 
 Since $V = span(Tv_1,...,Tv_m)$, $V = T(span(v_1,...,v_m))$ by linearity. Because $T$ is invertible, $span(v_1,...,v_m) = V$. 
+
 
 
 ### (17)
