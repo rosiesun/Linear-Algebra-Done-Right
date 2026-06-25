@@ -210,9 +210,12 @@ Suppose $T \in L(V)$. Suppose $u_1,...,u_n$ and $v_1,...,v_n$ are bases of $V$. 
 
 
 
+
+
 ## Exercises
 
 ### (2) Suppose $T \in L(U,V)$ and $S \in L(V,W)$ are both invertible linear maps. Prove that $ST \in L(U,W)$ is invertible and that $(ST)^{-1} = T^{-1} S^{-1}$.
+
 Since $S, T$ are invertible, we have 
 
 $$S S^{-1} = S^{-1} S = I$$ 
@@ -229,13 +232,17 @@ $$(T^{-1} S^{-1})(ST) = T^{-1} (S^{-1} S) T  = T^{-1} I T = T^{-1} T = I$$
 
 Therefore $ST$ is invertible and $T^{-1} S^{-1}$ is the inverse of $ST$.
 
+
+
 ### (3)
+
+### (4)
 
 ### (5)
 
 ### (6) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S = null T$ if and only if there exists an invertible $E \in L(W)$ such that $S=ET$.
-$\Leftarrow$
 
+$\Leftarrow$
 Suppose there exists invertible $E \in L(W)$ such that $S=ET$. 
 
 First let $v \in null S$. Then $Sv = 0$, $ETv = Sv= 0$. Applying $E^{-1}$ to both sides, we have 
@@ -280,7 +287,9 @@ $$ETv = ET(a_1 v_1 + ... + a_n v_n) = a_1 Ew_1 + ... + a_n Ew_n = a_1 Sv_1 + ...
 By design, $range E = W$. By 3.65, $E$ is invertible.
 
 
+
 ### (7) Suppose that $V$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $range S = range T$ if and only if there exists an invertible $E \in L(V)$ such that $S=TE$.
+
 $\Leftarrow$
 Suppose there exists an invertible $E \in L(V)$ such that $S=TE$. 
 
@@ -323,11 +332,16 @@ On $U$, $E$ is a composition of two bijective maps, $(T|_{U'})^{-1}$ and $S|_{U}
 
 Since any vector in $V$ decomposes uniquely as a sum from $null S$ and $U$, and $E$ is bijective on both pieces, $E$ is bijective on $V$. Therefore $E$ is invertible.
 
+
+
 ### (8)
 
 ### (9)
 
+### (10)
+
 ### (11) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ is invertible $\iff S$ and $T$ are invertible.
+
 $\Leftarrow$
 Suppose $ST$ is invertible. Then $ST$ is injective and surjective. 
 
@@ -347,6 +361,7 @@ $$ST T^{-1} S^{-1} = I = T^{-1} S^{-1} ST$$
 Therefore $ST$ is invertible.
 
 
+
 ### (12) Suppose $V$ is finite-dimensional and $S,T,U \in L(V)$ and $STU=I$. Show that $T$ is invertible and that $T^{-1} = US$.
 By 3.68,
 
@@ -357,7 +372,9 @@ $$STU = (ST)U = I \Rightarrow U(ST) = (US)T = I$$
 Thus $T$ is invertible and $T^{-1} = US$.
 
 
+
 ### (14) Prove or give a counterexample: If $V$ is a finite-dimensional vector space and $R,S,T \in L(V)$ are such that $RST$ is surjective, then $S$ is injective.
+
 By 3.65, $RST$ being surjective implies it is injective and invertible.
 
 Then 
@@ -373,10 +390,16 @@ Since $dim range S < dim V$, and $dim range ST \leq dim S$, we have $dim range S
 Therefore we conclude $S$ is injective.
 
 
+
 ### (15) Suppose $T \in L(V)$ and $v_1,...,v_m$ is a list in $V$ such that $Tv_1,...,Tv_m$ spans $V$. Show that $v_1,...,v_m$ spans $V$.
+
 Let $v \in V$. Since $Tv_1,...,Tv_m$ spans $V$, we can write $v = a_1 Tv_1 + ... + a_m Tv_m$ for some $a_1,...,a_m$. Then $v \in range T$. Therefore $T$ is surjective. By 3.65, $T$ is injective and invertible. 
 
 Since $V = span(Tv_1,...,Tv_m)$, $V = T(span(v_1,...,v_m))$ by linearity. Because $T$ is invertible, $span(v_1,...,v_m) = V$. 
+
+
+### (17)
+
 
 ### (18)
 
