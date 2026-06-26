@@ -705,7 +705,7 @@ and
 
 $$E u_i = 0, i = 1,...,n.$$
 
-For $j = 1,...,m$, if $y_j$ has multiple pre-image vectors $v_1, ..., v_n$, we could be potentially sending $y_j$ to different vectors $Tv_1, ..., Tv_n$. To show $E$ is well-defined, first we have to make sure that it does not matter which pre-image we choose. 
+For $j = 1,...,m$, if $y_j$ has multiple pre-image vectors (e.g. $Sx_1 = Sx_2 = y_j$), we could be potentially sending $y_j$ to different vectors $Tx_1, Tx_2$. To show $E$ is well-defined, first we have to make sure that it does not matter which pre-image we choose. 
 
 Suppose $v_1, v_2 \in V$ such that $Sv_1 = y_j$ and $Sv_2 = y_j$, for $j = 1, ..., m$. Then 
 
