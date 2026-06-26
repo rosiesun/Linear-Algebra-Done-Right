@@ -357,58 +357,45 @@ Hence we conclude that $null S = null T$.
 $\Rightarrow$
 Suppose $null S = null T$.
 
-Let $y_1, ..., y_m$ be a basis of $range T$ in $W$. We can extend to a basis $y_1, ..., y_m, u_1, ..., u_n$ basis of $W$ by 2.32.
+Define $\Gamma: range T \rightarrow range S$ such that 
 
-Since $y_j \in range T$ for $j = 1,...,m$, there exists $v_j \in V$ such that $Tv_j = y_j$ for $j = 1,...,m$.
+$$\Gamma(Tv) = Sv.$$
 
-Define $E \in L(W)$ such that
+First we want to show that $\Gamma$ is well-defined.
 
-$$Ey_j = E(Tv_j) = Sv_j, j=1,...,m$$
+Suppose $Tv_1 = Tv_2 \in range T$. Then $Tv_1 - Tv_2 = 0$, $T(v_1 - v_2) = 0$. Since $null S = null T$, $S(v_1 - v_2) = 0$ and $Sv_1 = Sv_2$. Thus 
 
-and
+$$\Gamma(Tv_1) = Sv_1 = Sv_2 = \Gamma(Tv_2).$$
 
-$$Eu_i = u_i, i=1,...,n.$$
+Next we want to show that $\Gamma$ is a linear map. 
 
-For $j = 1,...,m$, if $y_j$ has multiple pre-image vectors (e.g. $Tx_1 = Tx_2 = y_j$), we could be potentially sending $y_j$ to different vectors $Sx_1, Sx_2$. To show $E$ is well-defined, first we have to make sure that it does not matter which pre-image we choose. 
-
-Suppose $v_1, v_2 \in V$ such that $Tv_1 = y_j$ and $Tv_2 = y_j$, for $j = 1, ..., m$. Then 
-
-$$0 = Tv_1 - Tv_2 = T(v_1 - v_2).$$
-
-Thus $v_1 - v_2 \in null T$. Since $null T = null S$, $v_1 - v_2 \in null S$. We have
-
-$$0 = S(v_1 - v_2) = Sv_1 - Sv_2.$$
-
-Thus $Sv_1 = Sv_2$. Hence it does not matter which vector we picked as the pre-image of the basis vectors in $range T$. 
-
-By 3.4 $E \in L(W)$ is a well-defined linear map.
-
-By design, $E$ is surjective, since  By 3.65, $E$ is invertible.
-
-We want to show that $S = ET$.
-
-Suppose $v \in V$. Then $Tv \in range T$, and we can write 
-
-$$Tv = a_1 y_1 + ... + a_m y_m$$ 
-
-for some $a_1,...,a_n$. Since $y_1 = Tv_1, ..., y_m = Tv_m$, we have
-
-$$Tv = a_1 Tv_1 + ... + a_m Tv_m = T (a_1 v_1 + ... + a_m v_m).$$
-
-Then $T(v - a_1 v_1 - ... - a_m v_m) = 0$, and $v - a_1 v_1 - ... - a_m v_m \in null T$. 
-
-By hypothesis, $v - a_1 v_1 - ... - a_m v_m \in null S$. Thus $S(v - a_1 v_1 - ... - a_m v_m) = 0$ and $Sv = S(a_1 v_1 + ... + a_n v_n)$. Then we have
+Suppose $Tv_1, Tv_2 \in range T$. Then 
 
 $$
 \begin{aligned}
-(ET)v &= E(Tv) \\
-    &= E(a_1 y_1 + ... + a_m y_m) \\
-    &= a_1 Sv_1 + ... + a_n Sv_m \\
-    &= Sv
+\Gamma(Tv_1 + Tv_2) &= \Gamma(T(v_1 + v_2)) \\
+    &= S(v_1 + v_2) \\
+    &= Sv_1 + Sv_2 \\
+    &= \Gamma(Tv_1) + \Gamma(Tv_2)
 \end{aligned}
 $$
 
+Suppose $Tv \in range T, \lambda \in F$. Then 
 
+$$
+\begin{aligned}
+\Gamma(\lambda (Tv)) &= \Gamma(T(\lambda v)) \\
+    &= S(\lambda v) \\
+    &= \lambda Sv \\
+    &= \lambda \Gamma(Tv)
+\end{aligned}
+$$
+
+Thus $\Gamma$ satisfies additivity and homogeneity; it is a linear map.
+
+Suppose $\Gamma(Tv) = 0$. Then $\Gamma(Tv) = Sv = 0$. $v \in null S$. Since $null S = null T$, $v \in null T$ and $Tv = 0$. Hence $\Gamma$ is injective.
+
+Since $W$ is finite-dimensional, $range T$ is a subspace of $W$, and $\Gamma \in L(range T, W)$ is injective, by exercise 5 above, there exists an invertible linear map $E \in L(W)$ such that $E(Tv) = \Gamma(Tv) = Sv$ for every $v \in V$. Hence $S = ET$.
 
 
 
