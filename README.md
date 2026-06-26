@@ -1,3 +1,6 @@
 # Linear Algebra Done Right
 
-Sheldon Axler textbook 4e
+Sheldon Axler LADR 4e
+
+Go through theorems and exercises.
+Prof Axler is the GOAT!
