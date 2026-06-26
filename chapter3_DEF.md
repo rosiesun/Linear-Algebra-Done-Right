@@ -369,7 +369,19 @@ and
 
 $$Eu_i = u_i, i=1,...,n.$$
 
-By 3.4 $E$ is well-defined.
+For $j = 1,...,m$, if $y_j$ has multiple pre-image vectors (e.g. $Tx_1 = Tx_2 = y_j$), we could be potentially sending $y_j$ to different vectors $Sx_1, Sx_2$. To show $E$ is well-defined, first we have to make sure that it does not matter which pre-image we choose. 
+
+Suppose $v_1, v_2 \in V$ such that $Tv_1 = y_j$ and $Tv_2 = y_j$, for $j = 1, ..., m$. Then 
+
+$$0 = Tv_1 - Tv_2 = T(v_1 - v_2).$$
+
+Thus $v_1 - v_2 \in null T$. Since $null T = null S$, $v_1 - v_2 \in null S$. We have
+
+$$0 = S(v_1 - v_2) = Sv_1 - Sv_2.$$
+
+Thus $Sv_1 = Sv_2$. Hence it does not matter which vector we picked as the pre-image of the basis vectors in $range T$. 
+
+By 3.4 $E \in L(W)$ is a well-defined linear map.
 
 By design, $E$ is surjective, since  By 3.65, $E$ is invertible.
 
@@ -381,15 +393,9 @@ $$Tv = a_1 y_1 + ... + a_m y_m$$
 
 for some $a_1,...,a_n$. Since $y_1 = Tv_1, ..., y_m = Tv_m$, we have
 
-$$
-\begin{aligned}
-Tv &= a_1 Tv_1 + ... + a_m Tv_m \\
-Tv &= T (a_1 v_1 + ... + a_m v_m) \\
-T(v - a_1 v_1 - ... - a_m v_m) &= 0
-\end{aligned}
-$$
+$$Tv = a_1 Tv_1 + ... + a_m Tv_m = T (a_1 v_1 + ... + a_m v_m).$$
 
-Therefore $v - a_1 v_1 - ... - a_m v_m \in null T$. 
+Then $T(v - a_1 v_1 - ... - a_m v_m) = 0$, and $v - a_1 v_1 - ... - a_m v_m \in null T$. 
 
 By hypothesis, $v - a_1 v_1 - ... - a_m v_m \in null S$. Thus $S(v - a_1 v_1 - ... - a_m v_m) = 0$ and $Sv = S(a_1 v_1 + ... + a_n v_n)$. Then we have
 
@@ -398,7 +404,9 @@ $$
 (ET)v &= E(Tv) \\
     &= E(a_1 y_1 + ... + a_m y_m) \\
     &= a_1 Sv_1 + ... + a_n Sv_m \\
-    &= Sv$$
+    &= Sv
+\end{aligned}
+$$
 
 
 
