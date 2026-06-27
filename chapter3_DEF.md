@@ -326,7 +326,7 @@ Since $V$ is finite-dimensional, $T$ is invertible by 3.65.
 
 
 
-### (6) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S = null T$ if and only if there exists an invertible $E \in L(W)$ such that $S=ET$.
+### (6) Suppose that $W$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $null S = null T$ if and only if there exists an invertible $E \in L(W)$ such that $S = ET$.
 
 $\Leftarrow$
 Suppose there exists invertible $E \in L(W)$ such that $S = ET$. 
@@ -399,56 +399,86 @@ Since $W$ is finite-dimensional, $range T$ is a subspace of $W$, and $\Gamma \in
 
 
 
-### (7) Suppose that $V$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $range S = range T$ if and only if there exists an invertible $E \in L(V)$ such that $S=TE$.
+### (7) Suppose that $V$ is finite-dimensional and $S,T \in L(V,W)$. Prove that $range S = range T$ if and only if there exists an invertible $E \in L(V)$ such that $S = TE$.
 
 $\Leftarrow$
-Suppose there exists an invertible $E \in L(V)$ such that $S=TE$. 
+Suppose there exists an invertible $E \in L(V)$ such that $S = TE$. 
 
-Let $w \in range S$. Then there exists $v \in V$ such that $Sv = w$. Since $TEv = T(Ev) = Sv = w$, $w \in range T$. 
+Suppose $w \in range S$. Then there exists $v \in V$ such that $Sv = w$. By hypothesis, 
 
-Let $w \in range T$. Then there exists $v \in V$ such that $Tv = w$. Since $TEv = Sv$, applying $E^{-1}$ gives us $TEE^{-1} v = S E^{-1} v$, $w = Tv = S (E^{-1} v)$. Therefore $w \in range S$. 
+$$T(Ev) = (TE)v = Sv = w.$$ 
+
+Thus $w \in range T$, and $range S \subseteq range T$. 
+
+Suppose $w \in range T$. Then there exists $v \in V$ such that $Tv = w$. By hypothesis, 
+
+$$S (E^{-1} v) = TE(E^{-1} v) = Tv = w.$$ 
+
+Thus $w \in range S$, and $range T \subseteq range S$.
 
 Hence we conclude that $range S = range T$.
 
 $\Rightarrow$
-Suppose $range S = range T$. Since 
+Suppose $range S = range T$. 
 
-$$dim V = dim null S + dim range S = dim null T + dim range T$$, 
+By 3.24 the fundamental theorem of linear maps, we have
 
-and $dim range S = dim range T$, $dim null S = dim null T$.
+$$dim V = dim null S + dim range S$$
 
-Let $s_1,...,s_n$ be a basis of $null S$, let $U$ be a complement subspace that $null S \oplus U = V$, and let $u_1,...,u_m$ be a basis of $U$.
+and 
 
-Let $t_1,...,t_n$ be a basis of $null T$, let $U'$ be a complement subspace that $null T \oplus U' = V$, and let $u'_1,...,u'_m$ be a basis of $U'$. 
+$$dim V = dim null T + dim range T.$$ 
 
-Since $Su_j \in range S = range T$, $Tx_j = Su_j, j=1,...,m$ for some $x_j \in V$.
+By hypothesis $dim range S = dim range T$, thus $dim null S = dim null T$. 
+
+Let $s_1, ..., s_m$ be a basis of $null S$. We can extend to a basis $s_1, ..., s_m, u_1,...,u_n$ of $V$ by 2.32. 
+
+Let $t_1, ..., t_m$ be a basis of $null T$. 
+
+Note that $Su_1, ..., Su_n$ is a basis of $range S$ (proof of 3.21). For $i = 1, ..., n$, since $Su_i \in range S = range T$, there exist $x_i \in V$ such that $Tx_i = Su_i$. Then $Tx_1, ..., Tx_n$ is a basis of $range T$. 
+
+Next we want to show that $t_1, ..., t_m, x_1, ..., x_n$ form a basis of $V$. We will use Chapter 2B exercise 10.
+
+Suppose $a_1 x_1 + ... + a_n x_n = 0$ for some $a_1, ..., a_n \in F$. We have 
+
+$$T(a_1 x_1 + ... + a_n x_n) = a_1 Tx_1 + ... + a_n Tx_n = 0.$$
+
+Then $a_1 = ... = a_n = 0$. Thus $x_1, ..., x_n$ is linearly independent in $V$. Let $X = span(x_1, ..., x_n)$. Then $x_1, ..., x_n$ is a basis of $X$.
+
+Suppose $v \in null T \cap X$. Then $v = b_1 x_1 + ... + b_n x_n$ for some $b_1, ..., b_n \in F$. We have
+
+$$0 = Tv = T(b_1 x_1 + ... + b_n x_n) = b_1 Tx_1 + ... + b_n Tx_n.$$ 
+
+Since $Tx_1, ..., Tx_n$ is a basis, $b_1 = ... = b_n = 0$. Thus $v = 0$ and $null T \cap X = \\{0\\}$. Hence $V = null T \oplus X$. 
+
+Since $t_1, ..., t_m$ is a basis of $null T$ and $x_1, ..., x_n$ is a basis of $X$, $t_1, ..., t_m, x_1, ..., x_n$ form a basis of $V$.
 
 Define $E \in L(V)$ such that 
 
-$$E s_i = t_i, i=1,...,n$$
+$$E s_j = t_j, j = 1, ..., m$$
 
-$$E u_j = x_j, j=1,...,m$$
+$$E u_i = x_i, i = 1, ..., n$$
 
-First we want to show that $S=TE$.
+By 3.4 $E$ is well-defined.
 
-$$(TE)(s_i) = T(Es_i) = Tt_i = 0 = S(s_i)$$
+$E$ is invertible since $E$ maps some basis to a basis (Chapter 3D exercise 3).
 
-$$(TE)(u_j) = T (T|_{U'})^{-1} Su_j = Su_j$$
+Finally we want to show that $S = TE$.
 
-Next we want to show that $E$ is invertible.
+$$(TE)(s_j) = T(Es_j) = Tt_j = 0 = S(s_j), j = 1,...,m,$$
 
-On $null S$, $E$ sends the basis $s_1,...,s_n$ bijectively to $t_1,...,t_n$.
+and 
 
-On $U$, $E$ is a composition of two bijective maps, $(T|_{U'})^{-1}$ and $S|_{U}$. Hence it is bijective. 
+$$(TE)(u_i) = T (Eu_i) = Tx_i = Su_i, i = 1,...,n.$$
 
-Since any vector in $V$ decomposes uniquely as a sum from $null S$ and $U$, and $E$ is bijective on both pieces, $E$ is bijective on $V$. Therefore $E$ is invertible.
-
-
-
-### (8)
+Since $TE$ and $S$ agree on each basis vector, $TE = S$.
 
 
-### (9)
+
+### (8) Suppose $V$ and $W$ are finite-dimensional and $S, T \in L(V, W)$. Prove that there exist invertible $E_1 \in L(V)$ and $E_2 \in L(W)$ such that $S = E_2 T E_1$ if and only if $dim null S = dim null T$.
+
+
+### (9) Suppose $V$ is finite-dimensional and $T: V \rightarrow W$ is a surjective linear map of $V$ onto $W$. Prove that there is a subspace $U$ of $V$ such that $T|_U$ is an isomorphism of $U$ onto $W$.
 
 
 ### (10)
