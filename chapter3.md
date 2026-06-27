@@ -388,31 +388,45 @@ Suppose $V$ is finite-dimensional and $T \in L(V,W)$. Then $range T$ is finite-d
 
 Proof:
 
-Let $u_1,...,u_m$ be a basis of $null T$; thus $dim null T = m$. The linearly independent list $u_1,...,u_m$ can be extended to a basis $u_1,...,u_m, v_1,...,v_n$ of $V$ by 2.32. Thus $dim V = m + n$. 
+Let $u_1, ..., u_m$ be a basis of $null T$; thus $dim null T = m$. The linearly independent list $u_1, ..., u_m$ can be extended to a basis 
 
-To complete the proof, we need to show that $range T$ is finite-dimensional and $dim range T = n$. We will do this by proving that $Tv_1,...,Tv_n$ is a basis of $range T$.
+$$u_1, ..., u_m, v_1, ..., v_n$$
+
+of $V$ by 2.32. Thus $dim V = m + n$. 
+
+To complete the proof, we need to show that $range T$ is finite-dimensional and $dim range T = n$. We will do this by proving that $Tv_1, ..., Tv_n$ is a basis of $range T$.
 
 Let $v \in V$. Because $u_1,...,u_m, v_1,...,v_n$ spans $V$, we can write 
 
-$$v = a_1 u_1 + ... + a_m u_m + b_1 v_1 + ... + b_n v_n$$
+$$v = a_1 u_1 + ... + a_m u_m + b_1 v_1 + ... + b_n v_n,$$
 
-where the $a$'s and $b$'s are in $F$. Applying $T$ to both sides of the equation, we get
+where the $a$'s and $b$'s are in $F$. 
 
-$$Tv = b_1 Tv_1 + ... + b_n Tv_n$$
+Applying $T$ to both sides of the equation, we get
 
-where the terms of the form $Tu_k$ disappeared because each $u_k$ is in $null T$. The last equation implies that the list $Tv_1,...,Tv_n$ spans $range T$. In particular, $range T$ is finite-dimensional.
+$$Tv = b_1 Tv_1 + ... + b_n Tv_n,$$
 
-To show $Tv_1,...,Tv_n$ is linearly independent, suppose $c_1,...,c_n \in F$ and
+where the terms of the form $Tu_k$ disappeared because each $u_k$ is in $null T$. The last equation implies that the list $Tv_1, ..., Tv_n$ spans $range T$. In particular, $range T$ is finite-dimensional.
 
-$$c_1 Tv_1 + ... + c_n Tv_n = 0$$
+To show $Tv_1, ..., Tv_n$ is linearly independent, suppose $c_1,...,c_n \in F$ and
 
-Then $T(c_1 v_1 + ... + c_n v_n) = 0$. Hence $c_1 v_1 + ... + c_n v_n \in null T$. 
+$$c_1 Tv_1 + ... + c_n Tv_n = 0.$$
 
-Because $u_1,...,u_m$ spans $null T$, we can write 
+Then 
 
-$$c_1 v_1 + ... + c_n v_n = d_1 u_1 + ... + d_m u_m$$
+$$T(c_1 v_1 + ... + c_n v_n) = 0.$$ 
 
-where the $d$'s are in $F$. This equation implies that all the $c$'s and $d$'s are 0 (because $u_1,...,u_m, v_1,...,v_n$ is linearly independent). Thus $Tv_1,...,Tv_n$ is linearly independent and hence is a basis of $range T$, as desired.
+Hence 
+
+$$c_1 v_1 + ... + c_n v_n \in null T.$$
+
+Because $u_1, ..., u_m$ spans $null T$, we can write 
+
+$$c_1 v_1 + ... + c_n v_n = d_1 u_1 + ... + d_m u_m,$$
+
+where the $d$'s are in $F$. This equation implies that all the $c$'s and $d$'s are 0 (because $u_1, ..., u_m, v_1, ..., v_n$ is linearly independent). 
+
+Thus $Tv_1, ..., Tv_n$ is linearly independent and hence is a basis of $range T$, as desired.
 
 
 ### 3.22 Linear map to a lower-dimensional space is not injective
@@ -751,37 +765,39 @@ Hence $ES = T$.
 $\Leftarrow$
 Assume there exists $E \in L(V)$ such that $S=TE$. 
 
-Let $w \in range S$. We want to show that $w \in range T$.
-Since $w \in range S$, there exist some $v \in V$ such that $Sv = w$. By assumption, we have 
+Suppose $w \in range S$. Then there exist some $v \in V$ such that $Sv = w$. By hypothesis, we have 
 
-$$Sv = TEv = T(Ev) = w$$
+$$w = Sv = (TE)v = T(Ev).$$
 
-Therefore $w \in range T$. Hence $range S \subseteq range T$.
+Thus $w \in range T$, and $range S \subseteq range T$.
 
 $\Rightarrow$
-Assume $range S \subseteq range T$. We will construct $E \in L(V)$.
+Assume $range S \subseteq range T$. 
 
-Let $v_1,...,v_n$ be a basis of $V$. Then $Sv_i=w_i$ for some $w_i, i=1,...,n$. By assumption, since $w_i \in range S$, $w_i \in range T$. Then there exist some $u_i$ such that $Tu_i=w_i$. 
+Let $v_1,...,v_n$ be a basis of $V$. Then $Sv_i = w_i$ for some $w_i \in W$, $i = 1,...,n$. 
+
+By hypothesis, since $w_i \in range S$, $w_i \in range T$, for $i = 1,...,n$. Then there exist some $u_i \in V$ such that $Tu_i = w_i$, for $i = 1,...,n$. 
 
 Define $E$ such that
 
-$$Ev_i = u_i$$
+$$Ev_i = u_i, i = 1,...,n.$$
 
-for $i = 1,...,n$.
+By 3.4 $E \in L(V)$ is well-defined.
 
-Then 
+Suppose $v \in V$. We can rewrite as $v = a_1 v_1 + ... + a_n v_n$ for some $a_1, ..., a_n \in F$. We have 
 
-$$Sv_i = w_i = Tu_i = T(Ev_i) = (TE)(v_i)$$
+$$
+\begin{aligned}
+Sv &= \sum_{i=1}^{n} a_i Sv_i \\
+    &= \sum_{i=1}^{n} a_i w_i \\
+    &= \sum_{i=1}^{n} a_i Tu_i \\
+    &= \sum_{i=1}^{n} a_i T(Ev_i) \\
+    &= \sum_{i=1}^{n} a_i TE(v_i) \\
+    &= TEv
+\end{aligned}    
+$$
 
-We can extend $E$ by linearity to the entire $V$.
-
-Let $v \in V$. We can rewrite as $v = a_1 v_1 + ... + a_n v_n$ for some $a_1,...,a_n$.
-
-We have 
-
-$$Sv = \sum_{i=1}^{n} a_i Sv_i = \sum_{i=1}^{n} a_i w_i = \sum_{i=1}^{n} a_i Tu_i = \sum_{i=1}^{n} a_i T(Ev_i) = \sum_{i=1}^{n} a_i TE(v_i) = (TE)(v)$$
-
-Thus $S=TE$.
+Thus $S = TE$.
 
 
 
