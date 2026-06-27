@@ -333,18 +333,13 @@ Suppose there exists invertible $E \in L(W)$ such that $S = ET$.
 
 First suppose $v \in null S$. Then $Sv = 0$ and 
 
-$$(ET)v = Sv= 0.$$ 
+$$(ET)v = Sv = 0.$$ 
 
 Applying $E^{-1}$ to both sides, we have 
 
-$$
-\begin{aligned}
-E^{-1} E T v &= E^{-1} 0 \\
-Tv &= 0
-\end{aligned}
-$$
+$$E^{-1} E T v = E^{-1} 0.$$
 
-Thus $v \in null T$, and $null S \subseteq null T$.
+Therefore $Tv = 0$. Thus $v \in null T$, and $null S \subseteq null T$.
 
 Next suppose $v \in null T$. Then $Tv = 0$ and 
 
