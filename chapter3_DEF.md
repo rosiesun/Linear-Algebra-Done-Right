@@ -472,6 +472,88 @@ Since $TE$ and $S$ agree on each basis vector, $TE = S$.
 
 ### (8) Suppose $V$ and $W$ are finite-dimensional and $S, T \in L(V, W)$. Prove that there exist invertible $E_1 \in L(V)$ and $E_2 \in L(W)$ such that $S = E_2 T E_1$ if and only if $dim null S = dim null T$.
 
+$\Rightarrow$
+Suppose there exist invertible $E_1 \in L(V)$ and $E_2 \in L(W)$ such that $S = E_2 T E_1$.
+
+Consider $E_1|_{null S}: null S \rightarrow null T$. We want to show that it is an isomorphism from $null S$ onto $null T$.
+
+Suppose $v \in null S$. Then 
+
+$$0 = Sv = E_2 T E_1 v.$$
+
+Since $E_2$ is invertible, it is injective. Then $T E_1 v = 0$, and $E_1 v \in null T$.
+
+The image of $E_1|_{null S}$ lands in $null T$, so $E_1|_{null S}: null S \rightarrow null T$ is well-defined.
+
+Since $E_1$ is invertible, it is injective. Thus the restriction $E_1|_{null S}$ is also injective.
+
+Suppose $w \in null T$. 
+
+Since $E_1: V \rightarrow V$ is surjective, there exists $v \in V$ such that $E_1 v = w$. We have
+
+$$E_2 T E_1 v = E_2 T (E_1 v) = E_2 T w = E_2 (0) = 0 = Sv.$$
+
+Thus $v \in null S$, and $E_1 v = w$. Hence $E_1|_{null S}$ is surjective onto $null T$. 
+
+Since $E_1|_{null S}: null S \rightarrow null T$ is injective and surjective, it is an isomorphism from $null S$ onto $null T$. Hence $null S$ and $null T$ are isomorphic, and $dim null S = dim null T$ by 3.70.
+
+$\Leftarrow$
+Suppose $dim null S = dim null T$.
+
+By 3.21 fundamental theorem of linear maps, we have
+
+$$dim V = dim null S + dim range S, $$
+
+$$dim V = dim null T + dim range T.$$
+
+Since $dim null S = dim null T$, $dim range S = dim range T$.
+
+Let $s_1, ..., s_m$ be a basis of $null S$. We can extend to a basis $s_1, ..., s_m, u_1, ..., u_n$ of $V$. Similarly, let $t_1, ..., t_m$ be a basis of $null T$. We can extend to a basis $t_1, ..., t_m, x_1, ..., x_n$ of $V$. 
+
+Define $E_1 \in L(V)$ such that 
+
+$$E_1 s_j = t_j, j = 1, ..., m$$
+
+and
+
+$$E_1 u_i = x_i, i = 1, ..., n.$$
+
+$E_1 \in L(V)$ is invertible since it maps a basis to another basis. 
+
+Note that $Tx_1, ..., Tx_n$ is a basis of $range T$ (proof of 3.21). We can extend to a basis $Tx_1, ..., Tx_n, z_1, ..., z_m$ of $W$. Similarly, $Su_1, ..., Su_n$ is a basis of $range S$. We can extend to a basis $Su_1, ..., Su_n, y_1, ..., y_m$ of $W$.
+
+Define $E_2 \in L(W)$ such that 
+
+$$E_2 Tx_i = Su_i, i = 1, ..., n$$
+
+and
+
+$$E_2 z_j = y_j, j = 1, ..., m.$$
+
+$E_2 \in L(W)$ is invertible since it maps a basis to another basis. 
+
+Suppose $v \in V$. We can write 
+
+$$v = a_1 s_1 + ... + a_m s_m + b_1 u_1 + ... + b_n u_n$$ 
+
+for some $a_1, ..., a_m, b_1, ..., b_n \in F$. Then 
+
+$$
+\begin{aligned}
+E_2 T E_1 v 
+    &= E_2 T E_1 (a_1 s_1 + ... + a_m s_m + b_1 u_1 + ... + b_n u_n) \\
+    &= E_2 T (a_1 t_1 + ... + a_m t_m + b_1 x_1 + ... + b_n x_n) \\
+    &= 0 + E_2 T(b_1 x_1) + ... + E_2 T(b_n x_n) \\
+    &= b_1 Su_1 + ... + b_n Su_n \\
+    &= 0 + S(b_1 u_1 + ... + b_n u_n) \\
+    &= S(a_1 s_1 + ... + a_m s_m + b_1 u_1 + ... + b_n u_n) \\
+    &= Sv
+\end{aligned}
+$$
+
+Thus $S = E_2 T E_1$.
+
+
 
 ### (9) Suppose $V$ is finite-dimensional and $T: V \rightarrow W$ is a surjective linear map of $V$ onto $W$. Prove that there is a subspace $U$ of $V$ such that $T|_U$ is an isomorphism of $U$ onto $W$.
 
