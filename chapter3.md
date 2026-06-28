@@ -467,8 +467,54 @@ A system of linear equations with more equations than variables has no solution 
 
 ### (2) Suppose $S, T \in L(V)$ are such that $range S \subseteq null T$. Prove that $(ST)^2 = 0$.
 
+Suppose $v \in V$. Since $Tv \in V$, $S(Tv) \in range S$. 
 
-### (3) 
+Since $range S \subseteq null T$, $S(Tv) \in null T$. We have $T(STv) = 0$. 
+
+Thus $S(TSTv) = S(0) = 0$. We conclude that $(ST)^2 = 0$.
+
+
+
+### (3) Suppose $v_1, ..., v_m$ is a list of vectors in $V$. Define $T \in L(F^m, V)$ by $T(z_1, ..., z_m) = z_1 v_1 + ... + z_m v_m$. 
+
+#### (a) What property of $T$ corresponds to $v_1, ..., v_m$ spanning $V$?
+
+Suppose $v_1, ..., v_m$ spans $V$.
+
+Suppose $v \in V$ and we can write $v = z_1 v_1 + ... + z_m v_m$ for some $z_1, ..., z_m \in F$. Then 
+
+$$v = z_1 v_1 + ... + z_m v_m = T(z_1, ..., z_m) \in range T.$$
+
+Thus $range T = V$, and $T$ is surjectvive.  
+
+Suppose $T$ is surjective. Then $range T = V$. Suppose $v \in V$. Then 
+
+$$v = T(z_1, ..., z_m) = z_1 v_1 + ... + z_m v_m$$
+
+for some $z_1, ..., z_m \in F$. Thus $v_1, ..., v_m$ spans $V$.
+
+Hence we conclude surjectivity of $T$ corresponds to $v_1, ..., v_m$ spanning $V$. 
+
+
+#### (b) What property of $T$ corresponds to the list $v_1, ..., v_m$ being linearly independent?
+
+Suppose $v_1, ..., v_m$ is linearly independent in $V$. Suppose $z_1 v_1 + ... + z_m v_m = 0$. We have
+
+$$T(z_1, ..., z_m) = z_1 v_1 + ... + z_m v_m = 0.$$ 
+
+Since $v_1, ..., v_m$ is linearly independent, $z_1 = ... = z_m = 0$. Thus $null T = \\{0\\}$ and $T$ is injective by 3.15.
+
+Suppose $T$ is injective. 
+
+Suppose $z_1 v_1 + ... + z_m v_m = 0$ for some $z_1, ..., z_m \in F$. Then 
+
+$$T(z_1, ..., z_m) = z_1 v_1 + ... + z_m v_m = 0.$$
+
+Since $T$ is injective, $z_1 = ... = z_m = 0$ by 3.15. Thus $v_1, ..., v_m$ is linearly independent.
+
+Hence we conclude injectivity of $T$ corresponds to $v_1, ..., v_m$ being linearly independent. 
+
+
 
 ### (5)
 
@@ -823,7 +869,7 @@ Hence we conclude $V = null P \oplus range P$.
 
 
 
-### (30) Suppose $\phi \in L(V,F)$ and $\phi \neq 0$. Suppose $u \in V$ is not in $null \phi$. Prove that $V = null \phi \oplus \\{au: a \in F\\}$.
+### (30) Suppose $\phi \in L(V,F)$ and $\phi \neq 0$. Suppose $u \in V$ is not in $null \phi$. Prove that $V = null \phi \oplus \\{au: a \in F \\}$.
 
 First we want to show that $null \phi \cap \\{au: a \in F\\} = \\{0\\}$. 
 
