@@ -557,6 +557,23 @@ Thus $S = E_2 T E_1$.
 
 ### (9) Suppose $V$ is finite-dimensional and $T: V \rightarrow W$ is a surjective linear map of $V$ onto $W$. Prove that there is a subspace $U$ of $V$ such that $T|_U$ is an isomorphism of $U$ onto $W$.
 
+Since $V$ is finite-dimensional, $range T$ is finite-dimensional. 
+
+Since $T$ is surjective, $range T = W$. Then $W$ is finite-dimensional had has a basis by 2.31. Let $w_1, ..., w_m$ be a basis of $W$.
+
+Since $T$ is surjective, there exist $v_1, ..., v_m \in V$ such that $Tv_1 = w_1, ..., Tv_m = w_m$.
+
+Suppose $a_1 v_1 + ... + a_m v_m = 0$. Then
+
+$$T(a_1 v_1 + ... + a_m v_m) = a_1 w_1 + ... + a_m w_m = 0.$$
+
+Since $w_1, ..., w_m$ is a basis of $W$ thus linearly independent, $a_1 = ... = a_m = 0$. Thus $v_1, ..., v_m$ is linearly independent in $V$.
+
+Consider $U = span(v_1, ..., v_m)$. $v_1, ..., v_m$ spans $U$ and is linearly independent, therefore it is a basis of $U$. 
+
+Since $T|_U$ maps one basis to another basis, it is an isomorphism of $U$ onto $W$.
+
+
 
 ### (10)
 
@@ -596,11 +613,11 @@ Thus $T$ is invertible and $T^{-1} = US$.
 
 ### (14) Prove or give a counterexample: If $V$ is a finite-dimensional vector space and $R,S,T \in L(V)$ are such that $RST$ is surjective, then $S$ is injective.
 
-By 3.65, $RST$ being surjective implies it is injective and invertible.
+Since $V$ is finite-dimensional, $RST \in L(V)$ being surjective implies it is injective and invertible by 3.65. $null RST = \\{0\\}$ by 3.15.
 
-Then 
+By 3.21 fundamental theorem of linear maps, we have
 
-$$dim V = dim null RST + dim range RST = dim range RST$$
+$$dim V = dim null RST + dim range RST = dim range RST.$$
 
 Assume towards contradiction that $S$ is not injective. Then $dim null S >= 1$. 
 
@@ -612,11 +629,21 @@ Therefore we conclude $S$ is injective.
 
 
 
-### (15) Suppose $T \in L(V)$ and $v_1,...,v_m$ is a list in $V$ such that $Tv_1,...,Tv_m$ spans $V$. Show that $v_1,...,v_m$ spans $V$.
+### (15) Suppose $T \in L(V)$ and $v_1, ..., v_m$ is a list in $V$ such that $Tv_1, ..., Tv_m$ spans $V$. Show that $v_1, ..., v_m$ spans $V$.
 
-Let $v \in V$. Since $Tv_1,...,Tv_m$ spans $V$, we can write $v = a_1 Tv_1 + ... + a_m Tv_m$ for some $a_1,...,a_m$. Then $v \in range T$. Therefore $T$ is surjective. By 3.65, $T$ is injective and invertible. 
+Suppose $v \in V$. Since $Tv_1, ..., Tv_m$ spans $V$, $V$ is finite-dimensional. We can write 
 
-Since $V = span(Tv_1,...,Tv_m)$, $V = T(span(v_1,...,v_m))$ by linearity. Because $T$ is invertible, $span(v_1,...,v_m) = V$. 
+$$v = a_1 Tv_1 + ... + a_m Tv_m$$ 
+
+for some $a_1, ..., a_m \in F$. We have 
+
+$$v = a_1 Tv_1 + ... + a_m Tv_m = T(a_1 v_1 + ... + a_m v_m).$$
+
+Thus $v \in range T$, and $V = range T$. Therefore $T$ is surjective. By 3.65, $T$ is injective and invertible. Applying $T^{-1}$, we have 
+
+$$v = (T^{-1} T)v = T^{-1}(a_1 Tv_1 + ... + a_m Tv_m) = a_1 v_1 + ... + a_m v_m.$$
+
+Hence $v_1, ..., v_m$ spans $V$. 
 
 
 
