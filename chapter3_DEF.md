@@ -580,23 +580,35 @@ Since $T|_U$ maps one basis to another basis, it is an isomorphism of $U$ onto $
 
 ### (11) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ is invertible $\iff S$ and $T$ are invertible.
 
-$\Leftarrow$
-Suppose $ST$ is invertible. Then $ST$ is injective and surjective. 
-
-We have $range ST = V$. Thus $range S = V$, and $S$ is surjective. 
-
-Assume towards contradiction that $T$ is not surjective. Then $dim range T < dim V$.
-
-Then the restriction $S|_{range T}: range T \rightarrow V$ is not surjective by 3.24. Thus $S(range T) \neq V$. But $range ST = S(range T)$, so $ST$ is not surjective, which is a contradiction. Thus $T$ is surjective.
-
-By 3.65, $S,T$ are invertible.
-
 $\Rightarrow$
-Suppose $S,T$ are invertible. Then 
+Suppose $ST$ is invertible. Then $ST$ is injective and surjective by 3.63.
 
-$$ST T^{-1} S^{-1} = I = T^{-1} S^{-1} ST$$
+Assume towards contradiction that $T$ is not injective. Then $null T \neq \\{0\\}$ and there exists $v \in V$, $v \neq 0$ such that $Tv = 0$ by 3.15. We have 
 
-Therefore $ST$ is invertible.
+$$(ST)v = S(Tv) = 0.$$ 
+
+Since $ST$ is injective, $v = 0$ by 3.15, which is a contradiction. 
+
+Thus $T$ is injective, and since $V$ is finite-dimensional, $T$ is surjective and invertible by 3.65.
+
+Assume towards contradiction that $S$ is not injective. Then $null S \neq \\{0\\}$ and there exists $v \in V$, $v \neq 0$ such that $Sv = 0$ by 3.15. Since $T$ is invertible, there exists $u \in V$ such that $Tu = v$. Then $Tu \neq 0$ and $u \neq 0$. We have 
+
+$$Sv = S(Tu) = (ST)u = 0.$$  
+
+Since $ST$ is injective, $u = 0$ by 3.15, which is a contradiction. 
+
+Thus $S$ is injective, and since $V$ is finite-dimensional, $S$ is surjective and invertible by 3.65.
+
+$\Leftarrow$
+Suppose $S, T \in L(V)$ are invertible. Then 
+
+$$ST T^{-1} S^{-1} = S S^{-1} = I$$
+
+and 
+
+$$T^{-1} S^{-1} ST = T^{-1} T = I$$
+
+Thus $T^{-1} S^{-1}$ is the inverse of $ST$. Hence $ST$ is invertible.
 
 
 
