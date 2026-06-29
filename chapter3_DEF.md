@@ -612,32 +612,31 @@ Thus $T^{-1} S^{-1}$ is the inverse of $ST$. Hence $ST$ is invertible.
 
 
 
-### (12) Suppose $V$ is finite-dimensional and $S,T,U \in L(V)$ and $STU=I$. Show that $T$ is invertible and that $T^{-1} = US$.
-By 3.68,
+### (12) Suppose $V$ is finite-dimensional and $S, T, U \in L(V)$ and $STU = I$. Show that $T$ is invertible and that $T^{-1} = US$.
 
-$$STU = S(TU) = I \Rightarrow (TU)S = T(US) = I$$
+We have $S(TU) = I$ and $(TU)S = I$ by 3.68.
 
-$$STU = (ST)U = I \Rightarrow U(ST) = (US)T = I$$
+We have $(ST)U = I$ and $U(ST) = I$ by 3.68.
 
-Thus $T$ is invertible and $T^{-1} = US$.
+Thus 
+
+$$(TU)S = T(US) = I$$ 
+
+and 
+
+$$U(ST) = (US)T = I.$$
+
+Hence $T$ is invertible and $US$ is the inverse of $T$.
 
 
 
 ### (14) Prove or give a counterexample: If $V$ is a finite-dimensional vector space and $R,S,T \in L(V)$ are such that $RST$ is surjective, then $S$ is injective.
 
-Since $V$ is finite-dimensional, $RST \in L(V)$ being surjective implies it is injective and invertible by 3.65. $null RST = \\{0\\}$ by 3.15.
+Since $V$ is finite-dimensional, $RST \in L(V)$ being surjective implies it is injective and invertible by 3.65. 
 
-By 3.21 fundamental theorem of linear maps, we have
+From exercise 11, $RST$ being invertible implies $R$ is invertible and $ST$ is invertible. And $ST$ being invertible implies $S$ being invertible. 
 
-$$dim V = dim null RST + dim range RST = dim range RST.$$
-
-Assume towards contradiction that $S$ is not injective. Then $dim null S >= 1$. 
-
-$$dim V = dim null S + dim range S > dim range S$$
-
-Since $dim range S < dim V$, and $dim range ST \leq dim S$, we have $dim range ST < dim V$. Similarly, $dim range RST < dim V$. This is a contradiction to the fact that $RST$ is surjective.
-
-Therefore we conclude $S$ is injective.
+Hence $S$ is injective.
 
 
 
