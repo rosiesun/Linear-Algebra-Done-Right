@@ -20,6 +20,58 @@ If $T \in L(V, W)$, then $T^* \in L(W, V)$.
 
 Proof:
 
+Suppose $T \in L(V, W)$. If $v \in V$ and $w_1, w_2 \in W$, then 
+
+$$\langle Tv, w_1 + w_2 \rangle = \langle v, T^* (w_1 + w_2) \rangle .$$
+
+and
+
+$$
+\begin{aligned}
+\langle Tv, w_1 + w_2 \rangle 
+    &= \langle Tv, w_1 \rangle + \langle Tv, w_2 \rangle \\
+    &= \langle v, T^* w_1 \rangle + \langle v, T^* w_2 \rangle \\
+    &= \langle v, T^* w_1 + T^* w_2 \rangle 
+\end{aligned}
+$$
+
+We have
+
+$$
+\begin{aligned}
+\langle v, T^* (w_1 + w_2) \rangle &= \langle v, T^* w_1 + T^* w_2 \rangle \\
+\langle v, T^* (w_1 + w_2) \rangle - \langle v, T^* w_1 + T^* w_2 \rangle &= 0 \\
+\langle v, T^* (w_1 + w_2) - (T^* w_1 + T^* w_2) \rangle &= 0
+\end{aligned}
+$$
+
+for all $v \in V$. 
+
+Take $v = T^* (w_1 + w_2) - T^* w_1 + T^* w_2$. Then by the positive definiteness of the inner product, $T^* (w_1 + w_2) - T^* w_1 + T^* w_2 = 0$. Thus
+
+$$T^* (w_1 + w_2) = T^* w_1 + T^* w_2.$$
+
+Similarly, if $v \in V$, $\lambda \in F$, and $w \in W$, then 
+
+$$\langle Tv, \lambda w \rangle = \langle v, T^* (\lambda w) \rangle $$
+
+and
+
+$$
+\begin{aligned}
+\langle Tv, \lambda w \rangle 
+    &= \overline{\lambda} \langle Tv, w \rangle \\
+    &= \overline{\lambda} \langle v, T^* w \rangle \\
+    &= \langle v, \lambda T^* w \rangle
+\end{aligned}
+$$
+
+for all $v \in V$. Applying the same positive-definiteness argument, we have
+
+$$T^* (\lambda w) = \lambda T^* w.$$
+
+Thus $T^*$ satisfies additivity and homogeneity, therefore is a linear map.
+
 
 ### 7.5
 Suppose $T \in L(V, W)$. Then
@@ -38,6 +90,118 @@ Suppose $T \in L(V, W)$. Then
 
 Proof:
 
+Suppose $v \in V$ and $w \in W$.
+
+(a) 
+
+If $S \in L(V, W)$, then
+
+$$\langle (S + T)v, w \rangle = \langle v, (S + T)^* w \rangle .$$
+
+and 
+
+$$
+\begin{aligned}
+\langle (S + T)v, w \rangle 
+    &= \langle Sv, w \rangle + \langle Tv, w \rangle \\
+    &= \langle v, S^* w \rangle + \langle v, T^* w \rangle \\
+    &= \langle v, S^* w + T^* w \rangle 
+\end{aligned}
+$$
+
+for all $v \in V$, all $w \in W$. Thus
+
+$$(S + T)^* w = S^* w + T^* .$$
+
+(b) 
+
+If $\lambda \in F$, then 
+
+$$\langle (\lambda T) v, w \rangle &= \langle v, (\lambda T)^* w \rangle$$
+
+and
+
+$$
+\begin{aligned}
+\langle (\lambda T) v, w \rangle 
+    &= \lambda \langle Tv, w \rangle \\
+    &= \lambda \langle v, T^* w \rangle \\
+    &= \langle v, \overline{\lambda} T^* w \rangle
+\end{aligned}
+$$
+
+for all $v \in V$, all $w \in W$. Thus 
+
+$$(\lambda T)^* w = \overline{\lambda} T^* w .$$
+
+(c)
+
+We have
+
+$$\langle T^* w, v \rangle = \langle w, (T^*)^* v \rangle$$
+
+and
+
+$$
+\begin{aligned}
+\langle T^* w, v \rangle 
+    &= \overline{\langle v, T^* w \rangle} \\
+    &= \overline{\langle Tv, w \rangle} \\
+    &= \langle w, Tv \rangle 
+\end{aligned}
+$$
+
+for all $v \in V$. Thus 
+
+$$(T^*)^* v = Tv.$$
+
+(d)
+
+Suppose $S \in L(W, U)$ and $u \in U$. Then 
+
+$$\langle (ST)v, u \rangle = \langle v, (ST)^* u \rangle$$
+
+and
+
+$$
+\begin{aligned}
+\langle (ST)v, u \rangle 
+    &= \langle S(Tv), u \rangle \\
+    &= \langle Tv, S^* u \rangle \\
+    &= \langle v, T^* (S^* u) \rangle 
+\end{aligned}
+$$
+
+for all $v \in V$, all $u \in U$. Thus 
+
+$$(ST)^* u = T^* (S^* u).$$
+
+(e)
+
+Suppose $u \in V$. Then 
+
+$$\langle Iu, v \rangle = \langle u, I^* v \rangle$$
+
+and
+
+$$\langle Iu, v \rangle = \langle u, v \rangle$$
+
+for all $u, v \in V$. Thus
+
+$$I^* v = v.$$
+
+(f)
+
+Suppose $T$ is invertible. We have $T^{-1} T = I$. Taking adjoints of both sides of the equation, we have
+
+$$(T^{-1} T)^* = T^* (T^{-1})^* = I^* = I.$$
+
+Similarly, taking adjoints of both sides of the equation $T T^{-1} = I$, we have 
+
+$$(T T^{-1})^* = (T^{-1})^* T^* = I^* = I.$$
+
+Thus $(T^{-1})^*$ is the inverse of $T^*$.
+
 
 ### 7.6
 Suppose $T \in L(V, W)$. Then 
@@ -52,6 +216,41 @@ Suppose $T \in L(V, W)$. Then
 
 Proof:
 
+(a) Let $w \in W$. Then 
+
+$$
+\begin{aligned}
+w \in null T^* \iff T^* = 0 \\
+    &\iff \langle v, T^* w \rangle = 0 \forall v \in V \\
+    &\iff \langle Tv, w \rangle = 0 \forall v \in V \\
+    &\iff w \in (range T)^\perp
+\end{aligned}
+$$
+
+Thus 
+
+$$null T^* = (range T)^\perp .$$
+
+(d)
+
+Taking the orthogonal complement of both sides of (a), we have
+
+$$(null T^*)^\perp = ((range T)^\perp)^\perp = range T$$
+
+where the second equality follows from 6.52.
+
+(c)
+
+Replacing $T$ with $T^*$ in (a), we have
+
+$$null (T^*)^* = null T = (range T^*)^\perp$$
+
+where the first equality follows from 7.5.
+
+(b)
+
+Replacing $T$ with $T^*$ in (d) gives (b).
+
 
 ### 7.7 Definition: conjugate transpose
 The conjugate transpose of an m-by-n matrix $A$ is the n-by-m matrix $A^*$ obtained by interchanging the rows and columns and then taking the complex conjugate of each entry. In other words, if $j \in \\{1,...,n\\}$ and $k \in \\{1,...,m\\}$, then 
@@ -60,6 +259,25 @@ $$(A^*)_{j, k} = \overline{A_{k, j}}$$
 
 
 ### 7.9
+Let $T \in L(V, W)$. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ and $f_1, ..., f_m$ is an orthonormal basis of $W$. Then $M(T^*, (f_1, ..., f_m), (e_1, ..., e_n))$ is the conjugate transpose of $M(T, (e_1, ..., e_n), (f_1, ..., f_m))$. In other words, 
+
+$$M(T^*) = (M(T))^* .$$
+
+Proof:
+
+Recall that we obtain the kth column of $M(T)$ by writing $Te_k$ as a linear combination of the $f_j$'s; the scalars used in this linear combination then become the kth column of $M(T)$. 
+
+Because $f_1, ..., f_m$ is an orthonormal basis of $W$, we know how to write $Te_k$ as a linear combination of the $f_j$'s by 6.30:
+
+$$Te_k = \langle Te_k, f_1 \rangle f_1 + ... + \langle Te_k, f_m \rangle f_m .$$
+
+Thus the entry in row j, column k, of $M(T)$ is $\langle Te_k, f_j \rangle$.
+
+In the statement above, replace $T$ with $T^*$ and interchange $e_1, ..., e_n$ and $f_1, ..., f_m$. 
+
+This shows that the entry in row j, column k, of $M(T^*)$ is $\langle T^* f_k, e_j \rangle$, which equals $\langle f_k, Te_j \rangle$, which equals $\overline{\langle Te_j, f_k \rangle}$, which equals the complex conjugate of the entry in row k, column j, of $M(T)$.
+
+Thus $M(T^*) = (M(T))^*$.
 
 
 ### 7.10 Definition: self-adjoint
@@ -71,29 +289,242 @@ Every eigenvalue of a self-adjoint operator is real.
 
 Proof:
 
+Suppose $T$ is a self-adjoint operator on $V$. Let $\lambda$ be an eigenvalue of $T$, and let $v$ and a nonzero vector in $V$ such that $Tv = \lambda v$. Then 
+
+$$
+\begin{aligned}
+\lambda \lvert v \rvert^2 &= \langle \lambda v, v \rangle \\
+    &= \langle Tv, v \rangle \\
+    &= \langle v, T^* v \rangle \\
+    &= \langle v, Tv \rangle \\
+    &= \langle v, \lambda v \rangle \\
+    &= \overline{\lambda} \lvert v \rvert^2 
+\end{aligned}
+$$
+
+Since $\lvert v \rvert \neq 0$, $\lambda = \overline{\lambda}$, which means that $\lambda$ is real.
+
 
 ### 7.13
 Suppose $V$ is a complex inner product space and $T \in L(V)$. Then
 
-$\langle Tv, v\rangle  = 0$ for every $v \in V$ $\iff T = 0$.
+$$\langle Tv, v \rangle  = 0 \forall v \in V \iff T = 0.$$
 
 Proof:
 
+If $u, w \in V$, then 
+
+$$\langle Tu, w \rangle = \frac{\langle T(u + w), u + w \rangle - \langle T(u - w), u - w \rangle}{4} + \frac{\langle T(u + iw), u + iw \rangle - \langle T(u - iw), u - iw \rangle}{4} i .$$
+
+Note that each term on the right side is of the form $\langle Tv, v \rangle$ for appropriate $v \in V$.
+
+Now suppose $\langle Tv, v \rangle = 0$ for all $v \in V$. Then the equation above implies that $\langle Tu, w \rangle = 0$ for all $u, w \in V$. Take $w = Tu$. Then $\langle Tu, Tu \rangle = 0$ for all $u \in V$. Thus $Tu = 0$ for all $u \in V$. Hence $T = 0$.
+
 
 ### 7.14
+Suppose $V$ is a complex inner product space and $T \in L(V)$. Then 
+
+$$T = T^* \iff \langle Tv, v \rangle \in R \forall v \in V.$$
+
+Proof:
+
+If $v \in V$, then 
+
+$$\langle T^* v, v \rangle = \overline{\langle v, T^* v \rangle} = \overline{\langle Tv, v \rangle}.$$
+
+Now
+
+$$
+\begin{aligned}
+T = T^* &\iff T - T^* = 0 \\
+    &\iff \langle (T - T^*) v, v \rangle = 0 \forall v \in V \\
+    &\iff \langle Tv, v \rangle - \langle T^* v, v \rangle = 0 \forall v \in V \\
+    &\iff \langle Tv, v \rangle - \overline{\langle Tv, v \rangle} = 0 \forall v \in V \\
+    &\iff \langle Tv, v \rangle \in R \forall v \in V
+\end{aligned}
+$$
+
+where the second equivalence follows from 7.13.
 
 
 ### 7.16
+Suppose $T$ is a self-adjoint operator on $V$. Then 
 
-### 7.18
+$$\langle Tv, v \rangle = 0 \forall v \in V \iff T = 0.$$
 
-### 7.20
+Proof:
+
+We have already proved this without the hypothesis that $T$ is self-adjoint when $V$ is a complex inner product space (7.13). Thus we can assume that $V$ is a real inner product space. 
+
+If $u, w \in V$, we have
+
+$$\langle Tw, u \rangle = \langle w, T^* u \rangle = \langle w, Tu \rangle = \overline{\langle w, Tu \rangle} = \langle w, Tu \rangle .$$
+
+where the second equality holds because $T$ is self-adjoint, and the fourth equality holds because we are working in a real inner product space.
+
+We have
+
+$$\langle Tu, w \rangle = \frac{\langle T(u + w), u + w \rangle - \langle T(u - w), u - w \rangle}{4} .$$
+
+Now suppose $\langle Tv, v \rangle = 0$ for every $v \in V$. Because each term on the right side of the equation is of the form $\langle Tv, v \rangle$ for appropriate $v$, this implies that $\langle Tu, w \rangle = 0$ for all $u, w \in V$. Take $w = Tu$. Then $\langle Tu, Tu \rangle = 0$. Thus $Tu = 0$ for every $u \in V$. Hence $T = 0$.
+
+
+### 7.18 Definition: normal
+- An operator on an inner product space is called normal if it commutes with its adjoint.
+- In other words, $T \in L(V)$ is normal $T T^* = T^* T$.
+
+Every self-adjoint operator is normal, because if $T$ is self-adjoint then $T^* = T$ and hence $T$ commutes with $T^*$.
+
+
+### 7.20 
+Suppose $T \in L(V)$. Then 
+
+$$T \text{is normal} \iff \lvert Tv \rvert = \lvert T^* v \rvert \forall v \in V .$$
+
+Proof:
+
+Note that $T^* T - T T^*$ is self-adjoint. We have
+
+$$
+\begin{aligned}
+T \text{is normal} &\iff T^* T - T T^* = 0 \\
+    &\iff \langle (T^* T - T T^*)v, v \rangle = 0 \forall v \in V \\
+    &\iff \langle T^* T v, v \rangle = \langle T T^* v, v \rangle \forall v \in V \\
+    &\iff \langle Tv, Tv \rangle = \langle T^* v, T^* v \rangle \forall v \in V \\
+    &\iff \lvert Tv \rvert^2 = \lvert T^* v \rvert^2 \forall v \in V \\
+    &\iff lvert Tv \rvert = \lvert T^* v \rvert \forall v \in V
+\end{aligned}
+$$
+
+where the second equivalence follows from 7.16.
+
 
 ### 7.21
+Suppose $T \in L(V)$ is normal. Then 
+
+(a) $null T = null T^*$;
+
+(b) $range T = range T^*$;
+
+(c) $V = null T \oplus range T$;
+
+(d) $T - \lambda I$ is normal for every $\lambda \in F$;
+
+(e) if $v \in V$ and $\lambda \in F$, then $Tv = \lambda$ if and only if $T^* v = \overline{\lambda} v$.
+
+Proof:
+
+(a)
+
+Suppose $v \in V$. Then
+
+$$
+\begin{aligned}
+v \in null T &\iff Tv = 0 \\
+    &\iff \lvert Tv \rvert = 0 \\
+    &\iff \lvert T^* v \rvert = 0 \\
+    &\iff T^* v = 0 \\
+    &\iff v \in null T^*
+\end{aligned}
+$$
+
+where the third equivalence follows from 7.20. Thus $null T = null T^*$.
+
+(b)
+
+We have
+
+$$
+\begin{aligned}
+range T 
+    &= (null T^*)\perp \\
+    &= (null T)^\perp \\
+    &= range T^*
+\end{aligned}
+$$
+
+where the first equality comes from 7.6(d), the second equality comes from part (a), and the third equality comes from 7.6(b).
+
+(c)
+
+We have
+
+$$
+\begin{aligned}
+V &= (null T) \oplus (null T)^\perp \\
+    &= null T \oplus range T^* \\
+    &= null T \oplus range T
+\end{aligned}
+$$
+
+where the first equality comes from 6.49, the second equality comes from 7.6, and the third equality comes from part (b).
+
+(d)
+
+Suppose $\lambda \in F$. Then
+
+$$
+\begin{aligned}
+(T - \lambda I) (T - \lambda I)^* 
+    &= (T - \lambda I) (T^* - \overline{\lambda} I) \\
+    &= T T^* - \overline{\lambda} T - \lambda T^* + |\lambda|^2 I \\
+    &= T^* T - \overline{\lambda} T - \lambda T^* + |\lambda|^2 I \\ 
+    &= (T^* - \overline{\lambda} I) (T - \lambda I) \\
+    &= (T - \lambda I)^* (T - \lambda I)
+\end{aligned}
+$$
+
+Thus $T - \lambda I$ commutes with its adjoint. Hence $T - \lambda I$ is normal.
+
+(e)
+
+Suppose $v \in V$ and $\lambda \in F$. Then (d) and 7.20 imply that 
+
+$$\lvert (T - \lambda I) v \rvert = \lvert (T - \lambda I)^* v \rvert = \lvert (T^* - \overline{\lambda} I) v \rvert .$$
+
+Thus 
+
+$$
+\begin{aligned}
+Tv = \lambda v 
+    &\iff (T - \lambda I) v = 0 \\
+    &\iff \lvert (T - \lambda I) v \rvert = 0 \\
+    &\iff \lvert (T^* - \overline{\lambda} I) v \rvert = 0 \\
+    &\iff (T^* - \overline{\lambda} I) v = 0 \\
+    &\iff T^* v = \overline{\lambda} v
+\end{aligned}    
+$$
+
+Hence $Tv = \lambda v$ if and only if $T^* v = \overline{\lambda} v$.
+
 
 ### 7.22
+Suppose $T \in L(V)$ is normal. Then eigenvectors of $T$ corresponding to distinct eigenvalues are orthogonal.
+
+Because every self-adjoint operator is normal, the result applies in particular to self-adjoint operators.
+
+Proof:
+
+Suppose $\alpha, \beta$ are distinct eigenvalues of $T$, with corresponding eigenvectors $u, v$. Thus $Tu = \alpha u$ and $Tv = \beta v$. 
+
+From 7.21 we have $T^* v = \overline{\beta} v$. Thus
+
+$$
+\begin{aligned}
+(\alpha - \beta) \langle u, v \rangle 
+    &= \alpha \langle u, v \rangle - \beta \langle u, v \rangle \\
+    &= \langle \alpha u, v \rangle - \langle u, \overline{\beta} v \rangle \\
+    &= \langle Tu, v \rangle - \langle u, T^* v \rangle \\
+    &= \langle Tu, v \rangle - \langle Tu, v \rangle \\
+    0
+\end{aligned}
+$$
+
+Because $\alpha \neq \beta$, the equation above implies that $\langle u, v \rangle = 0$. Thus $u, v$ are orthogonal.
+
 
 ### 7.23
+Suppose $F = C$ and $T \in L(V)$. Then $T$ is normal if and only if there exist commuting self-adjoint operators $A$ and $B$ such that $T = A + iB$.
 
 
 
@@ -101,7 +532,7 @@ Proof:
 
 ## Exercises
 
-### (1) Suppose $n$ is a positive integer. Define $T \in L(V)$ by $T(z_1, ..., z_n) = (0, z_1, ..., z_{n-1}$. Find a formula for $T^* (z_1, ..., z_n)$.
+### (1) Suppose $n$ is a positive integer. Define $T \in L(V)$ by $T(z_1, ..., z_n) = (0, z_1, ..., z_{n-1})$. Find a formula for $T^* (z_1, ..., z_n)$.
 
 Suppose $(z_1, ..., z_n), (w_1, ..., w_n) \in F^n$. We have 
 
@@ -677,8 +1108,56 @@ Thus $T'(\phi_w) = \phi_{T^* w}$.
 
 
 
+
 --------------------------------------------------------------------------------
 # 7B Spectral Theorem
+
+### 7.26
+Suppose $T \in L(V)$ is self-adjoint and $b, c \in R$ are such that $b^2 < 4c$. Then
+
+$$T^2 + bT + cI$$
+
+is an invertible operator.
+
+Proof:
+
+Let $v$ be a nonzero vector in $V$. Then
+
+$$
+\begin{aligned}
+\langle (T^2 + bT + cI) v, v \rangle 
+    &= \langle TT v, v \rangle + b \langle Tv, v \rangle + c \langle v, v \rangle \\
+    &= \langle Tv, T^* v \rangle + b \langle Tv, v \rangle + c \lvert v \rvert^2 \\
+    &= \langle Tv, Tv \rangle + b \langle Tv, v \rangle + c \lvert v \rvert^2 \\
+    &\geq \lvert Tv \rvert^2 - |b| \lvert Tv \rvert \lvert v \rvert + c \lvert v \rvert^2 \\
+    &= (\lvert Tv \rvert - \frac{|b| \lvert v \rvert}{2})^2 + (c - \frac{b^2}{4}) \lvert v \rvert^2 \\
+    &> 0
+\end{aligned}
+$$
+
+The first inequality follows from Cauchy-Schwartz inequality (6.14).
+
+$$b \langle Tv, v \rangle \leq |b| |\langle Tv, v \rangle| \leq |b| \lvert Tv \rvert \lvert v \rvert .$$
+
+Thus
+
+$$-|b| \lvert Tv \rvert \lvert v \rvert \leq b \langle Tv, v \rangle .$$
+
+The last inequality implies that $(T^2 + bT + cI) v \neq 0$. Thus $T^2 + bT + cI$ is injective. 
+
+Since $V$ is finite-dimensional (standing assumption of this chapter), $T^2 + bT + cI$ is invertible by 3.65.
+
+
+### 7.27
+Suppose $T \in L(V)$ is self-adjoint.
+
+
+
+### 7.29
+
+
+### 7.31
+
 
 
 
