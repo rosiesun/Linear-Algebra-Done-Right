@@ -1149,14 +1149,98 @@ Since $V$ is finite-dimensional (standing assumption of this chapter), $T^2 + bT
 
 
 ### 7.27
-Suppose $T \in L(V)$ is self-adjoint.
+Suppose $T \in L(V)$ is self-adjoint. Then the minimal polynomial of $T$ equals $(z - \lambda_1) ... (z - \lambda_m)$ for some $\lambda_1, ..., \lambda_m \in R$.
+
+Proof:
+
+First suppose $F = C$. The zeros of the minimal polynomial of $T$ are the eigenvalues of $T$ by 5.27. All eigenvalues of $T$ are real by 7.12. Thus the second version of thd fundamental theorem of algebra tells us that the minimal polynomial of $T$ has the desired form.
+
+Now suppose $F = R$. By the factorization of a polynomial over $R$ (4.16), there exist $\lambda_1, ..., \lambda_m \in R$, and $b_1, ..., b_N, c_1, ..., c_N \in R$ with $b_k^2 < 4c_k$ for each $k$ such that the minimal polynomial of $T$ equals 
+
+$$(7.28) (z - \lambda_1) ... (z - \lambda_m) (z^2 + b_1 z+ c_1) ... (z^2 + b_N z + c_N) ;$$
+
+here either $m$ or $N$ might equal 0, meaning that there are no terms of the corresponding form. Now
+
+$$(T - \lambda_1 I) ... (T - \lambda_m I) (T^2 + b_1 T + c_1 I) ... (T^2 + b_N T + c_N I) = 0 .$$
+
+If $N > 0$, then we could multiply both sides of the equation above on the right by the inverse of $T^2 + b_N T + c_N I$ (which is an invertible operator by 7.26) to obtain a polynomial expression of $T$ that equals 0. The corresponding polynomial would have degree two less than the degree of 7.28, violating the minimality of the degree of the polynomial with this property. Thus we must have $N = 0$, which means that the minimal polynomial in 7.28 has the form $(z - \lambda_1) ... (z - \lambda_m)$, as desired.
 
 
+### 7.29 Real spectral theorem
+Suppose $F = R$ and $T \in L(V)$. Then the following are equivalent.
 
-### 7.29
+(a) $T$ is self-adjoint.
+
+(b) $T$ has a diagonal matrix with respect to some orthonormal basis of $V$.
+
+(c) $V$ has an orthonormal basis consisting of eigenvectors of $T$.
+
+Proof:
+
+First suppose (a) holds, so $T$ is self-adjoint. Our results on minimal polynomials, specifically 6.37 and 7.27, imply that $T$ has an upper-triangular matrix with respect to some orthonormal basis of $V$. With respect to this orthonormal basis, the matrix of $T^*$ is the transpose of the matrix of $T$. However, $T^* = T$. Thus the transpose of the matrix of $T$ equals the matrix of $T$. Because the matrix of $T$ is upper-triangular, this means that all entries of the matrix above and below the diagonal are 0. Hence the matrix of $T$ is a diagonal matrix with respect to the orthonormal basis. Thus (a) implies (b).
+
+Conversely, now suppose (b) holds, so $T$ has a diagonal matrix with respect to some orthonormal basis of $V$. That diagonal matrix equals its transpose. Thus with respect to this basis, the matrix of $T^*$ equals the matrix of $T$. Hence $T^* = T$, proving that (b) implies (a). 
+
+The equivalence of (b) and (c) follows from the definitions (or see 5.55).
 
 
-### 7.31
+### 7.31 Complex spectral theorem
+Suppose $F = C$ and $T \in L(V)$. Then the following are equivalent.
+
+(a) $T$ is normal.
+
+(b) $T$ has a diagonal matrix with respect to some orthonormal basis of $V$.
+
+(c) $V$ has an orthonormal basis consisting of eigenvectors of $T$.
+
+Proof:
+
+First suppose (a) holds, so $T$ is normal. By Schur's theorem (6.38), there is an orthonormal basis $e_1, ..., e_n$ of $V$ with respect to which $T$ has an upper-triangular matrix. Thus we can write 
+
+$$
+M(T, (e_1, ..., e_n)) = 
+\begin{pmatrix}
+a_{1, 1} & ... & a_{1, n} \\
+... \\
+0 & ... & a_{n, n}
+\end{pmatrix}
+$$
+
+The matrix of $T^*$ (with respect to the same basis) is obtained by taking the conjugate transpose of the matrix of $T$.
+
+$$
+M^* (T, (e_1, ..., e_n)) = 
+\begin{pmatrix}
+\overline{a_{1, 1}} & 0 & ... \\
+\overline{a_{1, 2}} & \overline{a_{2, 2}} & ... \\
+... \\
+\overline{a_{1, n}} & \overline{a_{2, n}} & ... \\
+\end{pmatrix}
+$$
+
+We will show that $M$ is actually a diagonal matrix.
+
+We see from the matrix $M$ and $M^*$ that
+
+$$\lvert Te_1 \rvert^2 = \lvert a_{1, 1} e_1 \rvert^2 = |a_{11}|^2 ,$$
+
+$$\lvert T^* e_1 = \overline{a_{1, 1}} e_1 + ... + \overline{a_{1, n}} e_n \rvert^2 = |a_{1, 1}|^2 + ... + |a_{1, n}|^2 .$$
+
+Because $T$ is normal, $\lvert Te_1 \rvert = \lvert T^* e_1 \rvert$ by 7.20. Thus the two equations above imply that all entries in the first row of $M$, except possibly the first entry $a_{1, 1}$, equal 0.
+
+$$\lvert Te_2 \rvert^2 = \lvert a_{1, 2} e_1 + a_{2, 2} e_2 \rvert^2 = \lvert a_{2, 2} e_2 \rvert^2 = |a_{2, 2}|^2$$
+
+(because $a_{1, 2} = 0$ shown earlier), and 
+
+$$\lvert T^* e_2 = \overline{a_{2, 2}} e_2 + ... + \overline{a_{2, n}} e_n \rvert^2 = |a_{2, 2}|^2 + ... + |a_{2, n}|^2 .$$
+
+Because $T$ is normal, $\lvert Te_2 \rvert = \lvert T^* e_2 \rvert$. Thus the two equations above imply that all entries in the second row of $M$, except possibly the diagonal entry $a_{2, 2}$, equal 0.
+
+Continuing in this fashion, we see that all nondiagonal entries in the matrix $M$ equal 0. Thus (b) holds, completing the proof that (a) implies (b).
+
+Now suppose (b) holds, so $T$ has a diagonal matrix with respect to some orthonormal basis of $V$. The matrix of $T^*$ (with respect to the same basis) is obtained by taking the conjugate transpose of the matrix of $T$; hence $T^*$ also has a diagonal matrix. Any two diagonal matrices commute; thus $T$ commutes with $T^*$, which means $T$ is normal. Thus (a) holds, completing the proof that (b) implies (a).
+
+The equivalence of (b) and (c) follows from the definitions (also see 5.55).
 
 
 
