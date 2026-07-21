@@ -800,6 +800,7 @@ Thus $u_1,...,u_n$ is linearly independent, and we conclude it is a basis of $V$
 
 
 ### (22) Suppose $C[-1, 1]$ is the vector space of continuous real-valued functions on the interval [-1, 1] with inner product given by $\langle f,g \rangle = \int^1_{-1} fg$ for all $f,g \in C[-1,1]$. Let $\phi$ be the linear functional on $C[-1, 1]$ defined by $\phi(f) = f(0)$. Show that there does not exist $g \in C[-1, 1]$ such that $\phi(f) = \langle f,g \rangle$ for every $f \in C[-1, 1]$.
+
 Assume towards contradiction that there exists $g \in C[-1, 1]$ such that $\phi(f) = \langle f,g \rangle$ for every $f \in C[-1, 1]$.
 
 Consider the tent function, for some $0 < \epsilon < 1$, $f(x) = 1 - \frac{|x|}{\epsilon}$ for $|x| \langle = \epsilon$, $f(x) = 0$ for $|x| < \epsilon$.
