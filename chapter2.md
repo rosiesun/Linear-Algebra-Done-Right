@@ -677,5 +677,5 @@ From Definition 1.41, $V$ is a direct sum of $V_1,...,V_n$ iff $v=u_1+...+u_n, u
 
 Since the representation of $v$ using a given basis is unique, i.e. $a_1,...,a_n$ is unique, $u_1=a_1 v_1, ..., u_n=a_n v_n$ is unique. 
 
-Thus $V = V_1 \oplus ... \oplus V_n$. $
+Thus $V = V_1 \oplus ... \oplus V_n$.
 
