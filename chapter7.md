@@ -1311,6 +1311,40 @@ Let $T \in L(V)$. Then the following are equivalent.
 
 (f) $T = R^* R$ for some $R \in L(V)$.
 
+Proof:
+
+We will prove that (a) $\Leftarrow$ (b) $\Leftarrow$ (c) $\Leftarrow$ (d) $\Leftarrow$ (e) $\Leftarrow$ (f) $\Leftarrow$ (a).
+
+First suppose (a) holds, so that $T$ is positive, which implies that $T$ is self-adjoint (by the definition of positive operator). 
+
+To prove the other condition in (b), suppose $\lambda$ is an eigenvalue of $T$. Let $v$ be an eigenvector of $T$ corresponding to $\lambda$. Then 
+
+$$0 \leq \langle Tv, v \rangle = \langle \lambda v, v \rangle = \lambda \langle v, v \rangle .$$
+
+Since $\langle v, v \rangle \geq 0$, $\lambda$ is a nonnegative number. Hence (b) holds, showing that (a) implies (b).
+
+Now suppose (b) holds, so that $T$ is self-adjoint and all eigenvalues of $T$ are nonnegative. By the spectral theorem (7.29, 7.31), there is an orthonormal basis $e_1, ..., e_n$ of $V$ consisting of eigenvectors of $T$. Let $\lambda_1, ..., \lambda_n$ be the eigenvalues of $T$ corresponding to $e_1, ..., e_n$; thus each $\lambda_k$ is a nonnegative number. The matrix of $T$ with respect to $e_1, ..., e_n$ is the diagonal matrix with $\lambda_1, ..., \lambda_n$ on the diagonal, which shows that (b) implies (c).
+
+Now suppose (c) holds. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ such that the matrix of $T$ with respect to this basis is a diagonal matrix with nonnegative numbers $\lambda_1, ..., \lambda_n$ on the diagonal. The linear map lemma (3.4) implies that there exists $R \in L(V)$ such that 
+
+$$R e_k = \sqrt{\lambda_k} e_k$$
+
+for each $k = 1, ..., n$. For any $v \in V$, $v = \langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n$. 
+
+$$
+\begin{aligned}
+\langle Rv, v \rangle &= 
+    \langle R(\langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n), \langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n \rangle \\
+    &= \langle v, e_1 \rangle \\
+    
+\end{aligned}$$
+
+Furthermore, $R^2 e_k = \lambda_k e_k = T e_k$ for each $k$, which implies that $R^2 = T$. Thus $R$ is a positive square root of $T$. Hence (d) holds, which shows that (c) implies (d).
+
+Every positive operator is self-adjoint (by definition of positive operator). Thus (d) implies (e).
+
+
+
 
 ### 7.39
 Every positive operator on $V$ has a unique positive square root.
