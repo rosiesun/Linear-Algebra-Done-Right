@@ -117,17 +117,30 @@ $$A = B D C^*.$$
 
 ### (5)
 
+### (7) Suppose that $T \in L(V)$ is self-adjoint or that $F = C$ and $T \in L(V)$ is normal. Let $\lambda_1, ..., \lambda_n$ be the eigenvalues of $T$, each included in this list as many times as the dimension of the corresponding eigenspace. Show that the singular values of $T$ are $|\lambda_1|, ..., |\lambda_n|$, after these numbers have been sorted into descending order.
+
+
+
 ### (8)
 
-### (9)
+### (9) Suppose $T \in L(V, W)$. Show that $T$ and $T^*$ have the same positive singular values.
 
-### (10)
+
+
+### (10) Suppose $T \in L(V, W)$ has singular values $s_1, ..., s_n$. Prove that if $T$ is an invertible linear map, then $T^{-1}$ has singular values $\frac{1}{s_n}, ..., \frac{1}{s_1}$.
+
+
 
 ### (11)
 
 ### (13)
 
-### (15)
+### (14) Suppose $T \in L(V, W)$. Let $s_n$ denote the smallest singular value of $T$. Prove that $s_n \lvert v \rvert \leq \lvert Tv \rvert$ for every $v \in V$.
+
+
+### (15) Suppose $T \in L(V)$ and $s_1 \geq ... \geq s_n$ are the singular values of $T$. Prove that if $\lambda$ is an eigenvalue of $T$, then $s_1 \geq |\lambda| \geq s_n$.
+
+
 
 
 
