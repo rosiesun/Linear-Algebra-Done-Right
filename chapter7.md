@@ -1334,8 +1334,9 @@ for each $k = 1, ..., n$. We verify that $R$ is a positive operator. For any $v 
 $$
 \begin{aligned}
 \langle Rv, v \rangle &= 
-    \langle R(\langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n), \langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n \rangle \\
-    &= \langle \langle v, e_1 \rangle R e_1 + ... + \langle v, e_n \rangle R e_n, \langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n \rangle \\
+    \langle R(\langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n), v \rangle \\
+    &= \langle \langle v, e_1 \rangle R e_1 + ... + \langle v, e_n \rangle R e_n, v \rangle \\
+    &= \langle \langle v, e_1 \rangle \sqrt{\lambda_1} e_1 + ... + \langle v, e_n \rangle \sqrt{\lambda_n} e_n, v \rangle \\
     &= \langle v, e_1 \rangle 
 \end{aligned}$$
 
