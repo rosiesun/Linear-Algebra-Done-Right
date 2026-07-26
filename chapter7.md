@@ -1335,8 +1335,7 @@ $$
 \begin{aligned}
 \langle Rv, v \rangle &= 
     \langle R(\langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n), \langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n \rangle \\
-    &= \langle v, e_1 \rangle \\
-    
+    &= \langle v, e_1 \rangle 
 \end{aligned}$$
 
 Furthermore, $R^2 e_k = \lambda_k e_k = T e_k$ for each $k$, which implies that $R^2 = T$. Thus $R$ is a positive square root of $T$. Hence (d) holds, which shows that (c) implies (d).
