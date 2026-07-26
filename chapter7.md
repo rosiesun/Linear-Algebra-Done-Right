@@ -1329,7 +1329,7 @@ Now suppose (c) holds. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ su
 
 $$R e_k = \sqrt{\lambda_k} e_k$$
 
-for each $k = 1, ..., n$. For any $v \in V$, $v = \langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n$. 
+for each $k = 1, ..., n$. We verify that $R$ is a positive operator. For any $v \in V$, $v = \langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n$. 
 
 $$
 \begin{aligned}
