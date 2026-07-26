@@ -1336,19 +1336,66 @@ $$
 \langle Rv, v \rangle &= 
     \langle R(\langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n), v \rangle \\
     &= \langle \langle v, e_1 \rangle R e_1 + ... + \langle v, e_n \rangle R e_n, v \rangle \\
-    &= \langle \langle v, e_1 \rangle \sqrt{\lambda_1} e_1 + ... + \langle v, e_n \rangle \sqrt{\lambda_n} e_n, v \rangle \\
-    &= \langle v, e_1 \rangle 
+    &= \langle \langle v, e_1 \rangle \sqrt{\lambda_1} e_1 + ... + \langle v, e_n \rangle \sqrt{\lambda_n} e_n, \langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n \rangle \\
+    &= |\langle v, e_1 \rangle|^2 \sqrt{\lambda_1} + ... + |\langle v, e_n \rangle|^2 \sqrt{\lambda_n} \\
+    &\geq 0
 \end{aligned}$$
+
+If $F = C$, $\langle Rv, v \rangle \in R \forall v \in V$. By 7.14 $R$ is self-adjoint. If $F = R$, by definition $V$ has an orthonormal basis consisting of eigenvectors of $R$. By the real spectral theorem (7.29), $R$ is self-adjoint.   
 
 Furthermore, $R^2 e_k = \lambda_k e_k = T e_k$ for each $k$, which implies that $R^2 = T$. Thus $R$ is a positive square root of $T$. Hence (d) holds, which shows that (c) implies (d).
 
 Every positive operator is self-adjoint (by definition of positive operator). Thus (d) implies (e).
 
+Now suppose (e) holds, meaning that there exists a self-adjoint operator $R$ on $V$ such that $T = R^2$. Then $T = R^* R$ (because $R^* = R$). Hence (e) implies (f).
 
+Finally, suppose (f) holds. Let $R \in L(V)$ be such that $T = R^* R$. Then 
+
+$$T^* = (R^* R)^* = R^* (R^*)^* = R^* R = T.$$
+
+Hence $T$ is self-adjoint. To complete the proof that (a) holds, note that 
+
+$$\langle Tv, v \rangle = \langle R^* Rv, v \rangle = \langle Rv, Rv \rangle \geq 0$$
+
+for every $v \in V$. Thus $T$ is positive, showing that (f) implies (a).
 
 
 ### 7.39
 Every positive operator on $V$ has a unique positive square root.
+
+Proof:
+
+Suppose $T \in L(V)$ is positive. Suppose $v \in V$ is an eigenvector of $T$. Hence there exists a real number $\lambda >= 0$ such that $Tv = \lambda v$. 
+
+Let $R$ be a positive square root of $T$. We will prove that $Rv = \sqrt{\lambda} v$. This will imply that the behavior of $R$ on the eigenvectors of $T$ is uniquely determined. Because there is a basis of $V$ consisting of eigenvectors of $T$ (by the spectral theorem), this will imply that $R$ is uniquely determined.
+
+To prove that $Rv = \sqrt{\lambda} v$, note that the spectral theorem asserts that there is an orthonormal basis $e_1, ..., e_n$ of $V$ consisting of eigenvectors of $R$. Because $R$ is a positive operator, all its eigenvalues are nonnegative. Thus there exist nonnegative numbers $\lambda_1, ..., \lambda_n$ such that $R e_k = sqrt{\lambda_k} e_k$ for each $k = 1, ..., n$.
+
+Because $e_1, ..., e_n$ is a basis of $V$, we can write 
+
+$$v = a_1 e_1 + ... + a_n e_n$$
+
+for some numbers $a_1, ..., a_n \in F$. Thus
+
+$$Rv = a_1 \sqrt{\lambda_1} e_1 + ... a_n \sqrt{\lambda_n} e_n.$$
+
+Hence 
+
+$$\lambda v = Tv = R^2 v = a_1 \lambda_1 e_1 + ... + a_n \lambda_n e_n.$$
+
+The equation above implies that 
+
+$$a_1 \lambda e_1 + ... + a_n \lambda e_n = a_1 \lambda_1 e_1 + ... + a_n \lambda_n e_n.$$
+
+Thus $a_k (\lambda - \lambda_k) = 0$ for each $k = 1, ..., n$. Hence
+
+$$v = \sum_{k: \lambda_k = \lambda} a_k e_k.$$
+
+Thus 
+
+$$Rv = \sum_{k: \lambda_k = \lambda} a_k \sqrt{\lambda} e_k = \sqrt{\lambda} v$$
+
+as desired.
 
 
 ### 7.40 Notation
