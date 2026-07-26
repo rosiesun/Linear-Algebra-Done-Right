@@ -1335,6 +1335,7 @@ $$
 \begin{aligned}
 \langle Rv, v \rangle &= 
     \langle R(\langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n), \langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n \rangle \\
+    &= \langle \langle v, e_1 \rangle R e_1 + ... + \langle v, e_n \rangle R e_n, \langle v, e_1 \rangle e_1 + ... + \langle v, e_n \rangle e_n \rangle \\
     &= \langle v, e_1 \rangle 
 \end{aligned}$$
 
