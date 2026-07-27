@@ -128,7 +128,7 @@ $$(\lambda T)^* w = \overline{\lambda} T^* w .$$
 
 We have
 
-$$\langle T^* w, v \rangle = \langle w, (T^*)^* v \rangle$$
+$$\langle T^* w, v \rangle = \langle w, (T^*)^{*} v \rangle$$
 
 and
 
