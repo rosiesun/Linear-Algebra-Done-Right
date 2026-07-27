@@ -543,33 +543,48 @@ $$T^{\ast} (w_1, ..., w_n) = (w_2, ..., w_n, 0).$$
 
 ### (2) Suppose $T \in L(V, W)$. Prove that $T = 0 \iff T^{\ast} = 0 \iff T^{\ast} T = 0 \iff T T^{\ast} = 0$.
 
-$(1) T = 0 \Rightarrow T^{\ast} = 0$
+(1) $T = 0 \Rightarrow T^{\ast} = 0$
 
-Suppose $T = 0$. Then $Tv = 0$ for all $v \in V$, and $\langle Tv, w \rangle = 0$ for all $v \in V, w \in W$. Then $\langle v, T^{\ast} w \rangle = 0$ for all $v \in V, w \in W$. Taking $v = T^{\ast} w$, $T^{\ast} w = 0$ for all $w \in W$. Thus $T^{\ast} = 0$.
-
-$T^{\ast} = 0 \Rightarrow T^{\ast} T = 0$
-
-Suppose $T^{\ast} = 0$. Then $T^{\ast} T = 0$. 
-
-$T^{\ast} T = 0 \Rightarrow T = 0$
-
-Suppose $T^{\ast} T = 0$. 
-
-Since $T^{\ast} T$ is self-adjoint, by 7.16, $\langle T^{\ast} T v, v \rangle = 0$ for every $v \in V$. Then 
+Suppose $T = 0$. Then $Tv = 0$ for every $v \in V$.
 
 $$
 \begin{aligned}
-\langle T^{\ast} T v, v \rangle = 0 
-    &\Rightarrow \langle Tv, Tv = 0 \forall v \in V \\
+\langle Tv, w \rangle = 0 \forall v \in V, w \in W 
+    &\Rightarrow \langle v, T^{\ast} w \rangle = 0 \forall v \in V, w \in W \\
+    &\Rightarrow T^{\ast} w = 0 \forall w \in W \\
+    &\Rightarrow T^{\ast} = 0
+\end{aligned}
+$$
+
+(2) $T^{\ast} = 0 \Rightarrow T = 0$
+
+The result follows from (1) and the fact that $(T^{\ast})^{\ast} = T$.
+
+(3) $T = 0 \Rightarrow T^{\ast} T = 0$
+
+Suppose $T = 0$. Then $T^{\ast} T = 0$ follows immediately.
+
+(4) $T = 0 \Rightarrow T T^{\ast} = 0$
+
+Suppose $T = 0$. Then $T T^{\ast} = 0$ follows immediately.
+
+(5) $T^{\ast} T = 0 \Rightarrow T = 0$
+
+Suppose $T^{\ast} T = 0$. Then $T^{\ast} T v = 0$ for every $v \in V$.
+
+$$
+\begin{aligned}
+\langle T^{\ast} T v, v \rangle = 0 \forall v \in V
+    &\Rightarrow \langle Tv, Tv \rangle = 0 \forall v \in V \\
     &\Rightarrow \lvert Tv \rvert^2 = 0 \forall v \in V \\
-    &\Rightarrow Tv = 0 \\
+    &\Rightarrow Tv = 0 \forall v \in V \\
     &\Rightarrow T = 0
 \end{aligned}
 $$  
 
-$T T^{\ast} = 0 \Rightarrow T^{\ast} = 0$
+(6) $T T^{\ast} = 0 \Rightarrow T^{\ast} = 0$
 
-Suppose $T T^{\ast} = 0$. Then $T T^{\ast} w = 0$ for all $w \in W$, and $\langle T T^{\ast} w, w \rangle = 0$ for all $w \in W$. Then $\langle T^{\ast} w, T^{\ast} w \rangle = 0$ for all $w \in W$. Hence $T^{\ast} w = 0$ for all $w \in W$, and $T^{\ast} = 0$.
+Suppose $T T^{\ast} = 0$. The result follows from applying the same argument as (5) using $T^{\ast}$ instead of $T$.
 
 
 
