@@ -1385,15 +1385,30 @@ $$\lambda v = Tv = R^2 v = a_1 \lambda_1 e_1 + ... + a_n \lambda_n e_n.$$
 
 The equation above implies that 
 
-$$a_1 \lambda e_1 + ... + a_n \lambda e_n = a_1 \lambda_1 e_1 + ... + a_n \lambda_n e_n.$$
+$$
+\begin{aligned}
+\lambda v &= a_1 \lambda e_1 + ... + a_n \lambda e_n \\
+\lambda v &= a_1 \lambda_1 e_1 + ... + a_n \lambda_n e_n \\
+(a_1 \lambda e_1 + ... + a_n \lambda e_n) - (a_1 \lambda_1 e_1 + ... + a_n \lambda_n e_n) &= 0 \\
+a_1 (\lambda - \lambda_1) e_1 + ... + a_n (\lambda - \lambda_n) e_n &= 0
+\end{aligned}
+$$
 
-Thus $a_k (\lambda - \lambda_k) = 0$ for each $k = 1, ..., n$. Hence
+Since $e_1, ..., e_n$ is a basis, $a_1 (\lambda - \lambda_1) = ... = a_n (\lambda - \lambda_n) = 0$. Thus $a_k (\lambda - \lambda_k) = 0$ for each $k = 1, ..., n$. If $\lambda - \lambda_k = 0$, then $a_k$ could be zero or nonzero. If $\lambda - \lambda_k \neq 0$, then $a_k = 0$. Therefore, we can remove the indices where we know for sure $a_k = 0$, or equivalently, $\lambda \neq \lambda_k$, from the sum:
 
 $$v = \sum_{k: \lambda_k = \lambda} a_k e_k.$$
 
 Thus 
 
-$$Rv = \sum_{k: \lambda_k = \lambda} a_k \sqrt{\lambda} e_k = \sqrt{\lambda} v$$
+$$
+\begin{aligned}
+Rv &= \sum_{k: \lambda_k = \lambda} a_k R e_k \\
+    &= \sum_{k: \lambda_k = \lambda} a_k \sqrt{\lambda_k} \\
+    &= \sum_{k: \lambda_k = \lambda} a_k \sqrt{\lambda} e_k \\
+    &= \sqrt{\lambda} \sum_{k: \lambda_k = \lambda} a_k e_k \\
+    &= \sqrt{\lambda} v
+\end{aligned}
+$$
 
 as desired.
 
