@@ -543,19 +543,31 @@ $$T^{\ast} (w_1, ..., w_n) = (w_2, ..., w_n, 0).$$
 
 ### (2) Suppose $T \in L(V, W)$. Prove that $T = 0 \iff T^{\ast} = 0 \iff T^{\ast} T = 0 \iff T T^{\ast} = 0$.
 
-$T = 0 \rightarrow T^{\ast} = 0$
+$(1) T = 0 \Rightarrow T^{\ast} = 0$
 
 Suppose $T = 0$. Then $Tv = 0$ for all $v \in V$, and $\langle Tv, w \rangle = 0$ for all $v \in V, w \in W$. Then $\langle v, T^{\ast} w \rangle = 0$ for all $v \in V, w \in W$. Taking $v = T^{\ast} w$, $T^{\ast} w = 0$ for all $w \in W$. Thus $T^{\ast} = 0$.
 
-$T^{\ast} = 0 \rightarrow T^{\ast} T = 0$
+$T^{\ast} = 0 \Rightarrow T^{\ast} T = 0$
 
 Suppose $T^{\ast} = 0$. Then $T^{\ast} T = 0$. 
 
-$T^{\ast} T = 0 \rightarrow T = 0$
+$T^{\ast} T = 0 \Rightarrow T = 0$
 
-Suppose $T^{\ast} T = 0$. Then $T^{\ast} T v = 0$ for all $v \in V$, and $\langle T^{\ast} T v, v \rangle = 0$ for all $v \in V$. Then $\langle Tv, Tv \rangle = 0$ for all $v \in V$. Hence $Tv = 0$ for all $v \in V$, and $T = 0$.  
+Suppose $T^{\ast} T = 0$. 
 
-$T T^{\ast} = 0 \rightarrow T^{\ast} = 0$
+Since $T^{\ast} T$ is self-adjoint, by 7.16, $\langle T^{\ast} T v, v \rangle = 0$ for every $v \in V$. Then 
+
+$$
+\begin{aligned}
+\langle T^{\ast} T v, v \rangle = 0 
+    &\Rightarrow \langle Tv, Tv = 0 \forall v \in V \\
+    &\Rightarrow \lvert Tv \rvert^2 = 0 \forall v \in V \\
+    &\Rightarrow Tv = 0 \\
+    &\Rightarrow T = 0
+\end{aligned}
+$$  
+
+$T T^{\ast} = 0 \Rightarrow T^{\ast} = 0$
 
 Suppose $T T^{\ast} = 0$. Then $T T^{\ast} w = 0$ for all $w \in W$, and $\langle T T^{\ast} w, w \rangle = 0$ for all $w \in W$. Then $\langle T^{\ast} w, T^{\ast} w \rangle = 0$ for all $w \in W$. Hence $T^{\ast} w = 0$ for all $w \in W$, and $T^{\ast} = 0$.
 
@@ -1410,6 +1422,20 @@ For $T$ a positive operator, $\sqrt{T}$ denotes the unique positive square root 
 ### 7.43
 Suppose $T$ is a positive operator on $V$ and $v \in V$ is such that $\langle Tv, v\rangle  = 0$. Then $Tv = 0$.
 
+Proof:
+
+We have
+
+$$
+\begin{aligned}
+0 &= \langle Tv, v \rangle \\
+    &= \langle \sqrt{T} \sqrt{T} v, v \rangle \\
+    &= \langle \sqrt{T} v, \sqrt{T} v \rangle \\
+    &= \lvert \sqrt{T} v \rvert^2 
+\end{aligned}
+$$
+
+Hence $\sqrt{T} v = 0$. Thus $Tv = \sqrt{T} (\sqrt{T} v) = 0$, as desired.
 
 
 
