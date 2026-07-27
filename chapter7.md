@@ -22,9 +22,9 @@ Proof:
 
 Suppose $T \in L(V, W)$. If $v \in V$ and $w_1, w_2 \in W$, then 
 
-$$\langle Tv, w_1 + w_2 \rangle = \langle v, T^* (w_1 + w_2) \rangle .$$
+$$\langle Tv, w_1 + w_2 \rangle = \langle v, T^* (w_1 + w_2) \rangle$$
 
-and
+for all $v \in V$ and
 
 $$
 \begin{aligned}
@@ -35,19 +35,9 @@ $$
 \end{aligned}
 $$
 
-We have
+for all $v \in V$.
 
-$$
-\begin{aligned}
-\langle v, T^* (w_1 + w_2) \rangle &= \langle v, T^* w_1 + T^* w_2 \rangle \\
-\langle v, T^* (w_1 + w_2) \rangle - \langle v, T^* w_1 + T^* w_2 \rangle &= 0 \\
-\langle v, T^* (w_1 + w_2) - (T^* w_1 + T^* w_2) \rangle &= 0
-\end{aligned}
-$$
-
-for all $v \in V$. 
-
-Take $v = T^* (w_1 + w_2) - T^* w_1 + T^* w_2$. Then by the positive definiteness of the inner product, $T^* (w_1 + w_2) - T^* w_1 + T^* w_2 = 0$. Thus
+Since the inner product equality holds for all $v \in V$,  
 
 $$T^* (w_1 + w_2) = T^* w_1 + T^* w_2.$$
 
@@ -55,7 +45,7 @@ Similarly, if $v \in V$, $\lambda \in F$, and $w \in W$, then
 
 $$\langle Tv, \lambda w \rangle = \langle v, T^* (\lambda w) \rangle $$
 
-and
+for all $v \in V$ and
 
 $$
 \begin{aligned}
@@ -66,11 +56,11 @@ $$
 \end{aligned}
 $$
 
-for all $v \in V$. Applying the same positive-definiteness argument, we have
+for all $v \in V$. Hence
 
 $$T^* (\lambda w) = \lambda T^* w.$$
 
-Thus $T^*$ satisfies additivity and homogeneity, therefore is a linear map.
+Thus $T^*$ satisfies additivity and homogeneity, and therefore is a linear map.
 
 
 ### 7.5
@@ -117,7 +107,7 @@ $$(S + T)^* w = S^* w + T^* .$$
 
 If $\lambda \in F$, then 
 
-$$\langle (\lambda T) v, w \rangle &= \langle v, (\lambda T)^* w \rangle$$
+$$\langle (\lambda T) v, w \rangle s= \langle v, (\lambda T)^* w \rangle$$
 
 and
 
