@@ -382,7 +382,7 @@ T \text{is normal} &\iff T^\ast T - T T^\ast = 0 \\
     &\iff \langle T^\ast T v, v \rangle = \langle T T^\ast v, v \rangle \forall v \in V \\
     &\iff \langle Tv, Tv \rangle = \langle T^\ast v, T^\ast v \rangle \forall v \in V \\
     &\iff \lvert Tv \rvert^2 = \lvert T^\ast v \rvert^2 \forall v \in V \\
-    &\iff lvert Tv \rvert = \lvert T^\ast v \rvert \forall v \in V
+    &\iff \lvert Tv \rvert = \lvert T^\ast v \rvert \forall v \in V
 \end{aligned}
 $$
 
@@ -786,7 +786,7 @@ Thus $ST$ is self-adjoint.
 $\Rightarrow$
 Suppose $T$ is self-adjoint. 
 
-Then $T = T^\ast$. Thus it follows immediately that $\langle Tv, v \rangle = \langle T^\ast v, v \rangle$ for all $v \in V$.
+Then $T = T^\ast$. Thus it follows immediately that $Tv = T^\ast v$ for all $v \in V$, and $\langle Tv, v \rangle = \langle T^\ast v, v \rangle$ for all $v \in V$.
 
 $\Leftarrow$
 Suppose $\langle Tv, v \rangle = \langle T^\ast v, v \rangle$ for all $v \in V$. 
@@ -801,7 +801,7 @@ $$
 \end{aligned}
 $$
 
-Since $F= C$ and $T - T^\ast \in L(V)$, it follows by 7.13 that $T - T^\ast = 0$. 
+Since $F= C$ and $T - T^\ast \in L(V)$, $T - T^\ast = 0$ by 7.13. 
 
 We conclude $T = T^\ast$, and $T$ is self-adjoint.
 
@@ -809,7 +809,7 @@ We conclude $T = T^\ast$, and $T$ is self-adjoint.
 
 ### (11) Define an operator $S: F^2 \rightarrow F^2$ by $S(w, z) = (-z, w)$. 
 
-Suppose $(z_1, z_2) \in F^2$.
+Suppose $(z_1, z_2), (w_1, w_2) \in F^2$.
 
 #### (a) Find a formula for $S^\ast$.
 
@@ -825,6 +825,8 @@ $$
 Thus we have 
 
 $$S^\ast (z_1, z_2) = (z_2, - z_1).$$
+
+Note that if $F = R$, then $S^\ast$ is the clockwise rotation by 90 degrees.
 
 
 #### (b) Show that $S$ is normal but not self-adjoint.
@@ -846,7 +848,13 @@ Thus $S$ is normal.
 
 #### (c) Find all eigenvalues of $S$.
 
-We want to find $\lambda \in F$ such that $S(z_1, z_2) = \lambda (z_1, z_2)$ for some nonzero $z_1, z_2 \in V$. Then $\lambda z_1 = -z_2$ and $\lambda z_2 = z_1$. 
+We want to find $\lambda \in F$ such that 
+
+$$S(z_1, z_2) = (-z_2, z_1) = \lambda (z_1, z_2)$$ 
+
+for some nonzero $(z_1, z_2) \in F^2$. 
+
+Then $\lambda z_1 = -z_2$ and $\lambda z_2 = z_1$. 
 
 We have $\lambda^2 z_2 = -z_2$, and $\lambda^2 = -1$. 
 
