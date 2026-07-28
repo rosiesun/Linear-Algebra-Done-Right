@@ -21,7 +21,7 @@ Suppose $S \in L(V, W)$. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ 
 
 (a) $S$ is an isometry.
 
-(b) $S^{\ast} S = I$.
+(b) $S^\ast S = I$.
 
 (c) $\langle Su, Sv\rangle  = \langle u, v\rangle $ for all $u, v \in V$.
 
@@ -31,14 +31,14 @@ Suppose $S \in L(V, W)$. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ 
 
 Proof:
 
-First suppose (a) holds, so $S$ is an isometry. Note that $I - S^{\ast} S$ is self-adjoint.
+First suppose (a) holds, so $S$ is an isometry. Note that $I - S^\ast S$ is self-adjoint.
 
 If $v \in V$ then 
 
 $$
 \begin{aligned}
-\langle (I - S^{\ast} S) v, v \rangle 
-    &= \langle v, v \rangle - \langle S^{\ast} S v, v \rangle \\
+\langle (I - S^\ast S) v, v \rangle 
+    &= \langle v, v \rangle - \langle S^\ast S v, v \rangle \\
     &= \lvert v \rvert^2 - \langle Sv, Sv \rangle \\
     &= \lvert v \rvert^2 - \lvert Sv \rvert^2 \\
     &= \lvert v \rvert^2 - \lvert v \rvert^2 \\
@@ -46,11 +46,11 @@ $$
 \end{aligned}
 $$
 
-By 7.16, the self-adjoint operator $I - S^{\ast} S$ equals 0. Thus $S^{\ast} S = I$, proving that (a) implies (b).
+By 7.16, the self-adjoint operator $I - S^\ast S$ equals 0. Thus $S^\ast S = I$, proving that (a) implies (b).
 
-Now suppose (b) holds, so $S^{\ast} S = I$. If $u, v \in V$, then 
+Now suppose (b) holds, so $S^\ast S = I$. If $u, v \in V$, then 
 
-$$\langle Su, Sv \rangle = \langle S^{\ast} S u, v \rangle = \langle Iu, v \rangle = \langle u, v \rangle ,$$
+$$\langle Su, Sv \rangle = \langle S^\ast S u, v \rangle = \langle Iu, v \rangle = \langle u, v \rangle ,$$
 
 proving that (b) implies (c).
 
@@ -77,7 +77,7 @@ $$A = QR.$$
 ### 7.63 Cholesky factorization
 Suppose $B$ is a positive definite matrix. Then there exists a unique upper-triangular matrix $R$ with only positive numbers on its diagonal such that 
 
-$$B = R^{\ast} R.$$
+$$B = R^\ast R.$$
 
 
 
@@ -109,17 +109,17 @@ $$B = R^{\ast} R.$$
 ### 7.64
 Suppose $T \in L(V, W)$. Then
 
-(a) $T^{\ast} T$ is a positive operator on $V$;
+(a) $T^\ast T$ is a positive operator on $V$;
 
-(b) $null T^{\ast} T = null T$;
+(b) $null T^\ast T = null T$;
 
-(c) $range T^{\ast} T = range T^{\ast}$;
+(c) $range T^\ast T = range T^\ast$;
 
-(d) $dim range T = dim range T^{\ast} = dim range T^{\ast} T$.
+(d) $dim range T = dim range T^\ast = dim range T^\ast T$.
 
 
 ### 7.65 Definition: singular values
-Suppose $T \in L(V, W)$. The singular values of $T$ are teh nonnegative square roots of the eigenvalues of $T^{\ast} T$, listed in decreasing order, each included as many times as the dimension of the corresponding eigenspace of $T^{\ast} T$.
+Suppose $T \in L(V, W)$. The singular values of $T$ are teh nonnegative square roots of the eigenvalues of $T^\ast T$, listed in decreasing order, each included as many times as the dimension of the corresponding eigenspace of $T^\ast T$.
 
 
 ### 7.70 Singular value decomposition
@@ -133,7 +133,7 @@ for every $v \in V$.
 ### 7.80 Matrix version of SVD
 Suppose $A$ is a p-by-n matrix of rank m \rangle = 1. Then there exist a p-by-m matrix $B$ with orthonormal columns, an m-by-m diagonal matrix $D$ with positive numbers on the diagonal, and an n-by-m matrix $C$ with orthonormal columns such that 
 
-$$A = B D C^{\ast}.$$
+$$A = B D C^\ast.$$
 
 
 
@@ -154,7 +154,7 @@ $$A = B D C^{\ast}.$$
 
 ### (8)
 
-### (9) Suppose $T \in L(V, W)$. Show that $T$ and $T^{\ast}$ have the same positive singular values.
+### (9) Suppose $T \in L(V, W)$. Show that $T$ and $T^\ast$ have the same positive singular values.
 
 
 
