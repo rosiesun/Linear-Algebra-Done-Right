@@ -1098,25 +1098,23 @@ By 7.20 $T$ is normal.
 
 ### (20) Suppose $P \in L(V)$ is such that $P^2 = P$. Prove that the following are equivalent: (a) $P$ is self-adjoint. (b) $P$ is normal. (c) There is a subspace $U$ of $V$ such that $P = P_U$.
 
-$(a) \rightarrow (b)$
+$(a) \Rightarrow (b)$
 
 Suppose $P$ is self-adjoint. Then it follows immediately that $P$ is normal.
 
-$(b) \rightarrow (c)$
+$(b) \Rightarrow (c)$
 
-Suppose $P$ is normal. Then by 7.6 and 7.21, $V = null P \oplus range P$, $null P = null P^\ast = (range P)^\perp$. 
+Suppose $P$ is normal. By 7.21, $V = null P \oplus range P$. Thus $null P = (range P)^\perp$.
 
-Hence we have $V = range P \oplus (range P)^\perp$.
+Consider $U = range P$. For every $v \in V$, we can write $v = Pv + (v - Pv)$. We have $Pv \in range P = U$ by definition. We have
 
-Consider $U = range P$. For every $v \in V$, we can write $v = Pv + (v - Pv)$.
+$$P(v - Pv) = Pv - PPv = Pv - Pv = 0.$$ 
 
-We have $Pv \in range P = U$ by definition. 
+Hence $(v - Pv) \in null P$, $(v - Pv) \in U^\perp$.
 
-Since $P^2 = P$ by hypothesis, $P(v - Pv) = Pv - PPv =0$. Hence $(v - Pv) \in null P = U^\perp$.
+Thus we decomposed $v = Pv + (v - Pv)$ where $Pv \in U$ and $(v - Pv) \in U^\perp$. We conclude that $P = P_U$ where $U = range P$.
 
-Thus $v = Pv + (v - Pv)$ where $Pv \in U$ and $(v - Pv) \in U^\perp$. We conclude that $P = P_U$ where $U = range P$.
-
-$(c) \rightarrow (a)$
+$(c) \Rightarrow (a)$
 
 Suppose there is a subspace $U$ of $V$ such that $P = P_U$. 
 
