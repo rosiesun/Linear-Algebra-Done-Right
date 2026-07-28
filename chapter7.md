@@ -1100,11 +1100,15 @@ By 7.20 $T$ is normal.
 
 $(a) \Rightarrow (b)$
 
-Suppose $P$ is self-adjoint. Then it follows immediately that $P$ is normal.
+Suppose $P$ is self-adjoint. 
+
+It follows immediately that $P$ is normal.
 
 $(b) \Rightarrow (c)$
 
-Suppose $P$ is normal. By 7.21, $V = null P \oplus range P$. Thus $null P = (range P)^\perp$.
+Suppose $P$ is normal. 
+
+By 7.21, $V = null P \oplus range P$. By 7.21 and 7.6, and $null P = null P^\ast = (range P)^\perp$. 
 
 Consider $U = range P$. For every $v \in V$, we can write $v = Pv + (v - Pv)$. We have $Pv \in range P = U$ by definition. We have
 
@@ -1118,31 +1122,27 @@ $(c) \Rightarrow (a)$
 
 Suppose there is a subspace $U$ of $V$ such that $P = P_U$. 
 
-Suppose $v \in V$ and $v = u + w$ for $u \in U, w \in U^\perp$. Suppose $x \in V$ such that $x = u' + w'$ where $u' \in U, w' \in U^\perp$. We have
+Suppose $v \in V$ and $v = u + w$ for $u \in U, w \in U^\perp$, and $Pv = u$. Suppose $x \in V$ such that $x = u' + w'$ where $u' \in U, w' \in U^\perp$, and $Px = u'$. We have
 
 $$
 \begin{aligned}
 \langle Pv, x \rangle 
-    &= \langle u, u'+w' \rangle \\
+    &= \langle u, u' + w' \rangle \\
     &= \langle u, u' \rangle + \langle u, w' \rangle \\
     &= \langle u, u' \rangle 
 \end{aligned}    
 $$
-
-Since $u \in U, w' \in U^\perp$, $\langle u, w' \rangle = 0$.
 
 Similarly we have
 
 $$
 \begin{aligned}
 \langle v, Px \rangle 
-    &= \langle u+w, u' \rangle \\
+    &= \langle u + w, u' \rangle \\
     &= \langle u, u' \rangle + \langle w, u' \rangle \\
     &= \langle u, u' \rangle 
 \end{aligned}    
 $$
-
-Since $u' \in U, w \in U^\perp$, $\langle w, u' \rangle = 0$.
 
 Then 
 
@@ -1150,25 +1150,58 @@ $$\langle Pv, x \rangle = \langle v, Px \rangle$$
 
 for all $v, x \in V$.
 
-By definition, 
-
-$$\langle Pv, x \rangle = \langle v, P^\ast x \rangle$$
-
-for all $v, x \in V$. Then 
-
-$$\langle v, Px \rangle = \langle v, P^\ast x \rangle$$
-
-for all $v, x \in V$. Therefore
-
-$$0 = \langle v, Px \rangle - \langle v, P^\ast x \rangle = \langle v, Px - P^\ast x \rangle = \langle v, (P - P^\ast) x \rangle$$
-
-for all $v, x \in V$. Taking $v = (P - P^\ast)x$, we have $\langle (P - P^\ast) x, (P - P^\ast) x \rangle = 0$ for all $x \in V$. Hence $(P - P^\ast) x = 0$ for all $x \in V$, and $P - P^\ast = 0$. 
-
-Thus we conclude $P^\ast = P$ and $P$ is self-adjoint.
+Thus we conclude $P$ is self-adjoint.
 
 
 
 ### (22)
+
+
+### (27) Suppose $T \in L(V)$ is normal. Prove that $null T^k = null T$ and $range T^k = range T$ for every positive integer $k$.
+
+Note that if $k = 1$ then the statement is vacuously true, so we assume $k \geq 2$.
+
+First we want to show that $null T = null T^k$.
+
+Suppose $v \in null T$. 
+
+Then $Tv = 0$ and $T^k v = T^{k-1} Tv = 0$. Thus $v \in null T^k$. 
+
+Suppose $v \in null T^k$.
+
+Then $T^k v = 0 = T (T^{k-1} v) = 0$. Thus $T^{k-1} v \in null T$. 
+
+Note that $T^{k-1} v = T (T^{k-2} v)$. Thus $T^{k-1} v \in range T$. We have $T^{k-1} v \in null T \cap range T$.
+
+Since $T$ is normal, by 7.21 $V = null T \oplus range T$, so $T^{k-1} v = 0$ by 1.46. 
+
+If we apply induction (decreasing $k$ each step), we will get $Tv = 0$. Thus $v \in null T$.
+
+Hence we conclude $null T = null T^k$.
+
+Next we want to show that $range T = range T^k$.
+
+Suppose $w \in range T^k$. 
+
+Then $T^k v = w$ for some $v \in V$. We have $T (T^{k-1} v) = w$. Thus $w \in range T$, and $range T^k \subseteq range T$.
+
+We have
+
+$$
+\begin{aligned}
+dim V &= dim null T + dim range T \\
+    &= dim null T^k + dim range T \\
+    &= dim null T^k + dim range T^k
+\end{aligned}
+$$
+
+where the first and third equality follow from the fundamental theorem of linear maps (3.21), and the second equality follows from the first part. 
+
+Thus $dim range T = dim range T^k$.
+
+Hence we conclude $range T = range T^k$.
+
+
 
 ### (29)
 
