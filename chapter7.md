@@ -1157,6 +1157,42 @@ Thus we conclude $P$ is self-adjoint.
 ### (22)
 
 
+### (23) Suppose $T$ is a normal operator on $V$. Suppose also that $v, w \in V$ satisfy the equations $\lvert v \rvert = \lvert w \rvert = 2$, $Tv = 3v$, $Tw = 4w$. Show that $\lvert T (v + w) \rvert = 10$.
+
+Since $\lvert v \rvert, \lvert w \rvert \neq 0$, $v, w \neq 0$. And since $Tv = 3v$ and $Tw = 4w$, $v$ and $w$ are two eigenvectors of $T$ with corresponding eigenvalues 3, 4. 
+
+Since $T$ is normal, by 7.21, $v$ and $w$ are two eigenvectors of $T^\ast$ with corresponding eigenvalues 3, 4. Thus $T^\ast v = 3v$ and $T^\ast w = 4w$.
+
+We have 
+
+$$
+\begin{aligned}
+3 \langle v, w \rangle 
+    &= \langle 3v, w \rangle \\
+    &= \langle Tv, w \rangle \\
+    &= \langle v, T^\ast w \rangle \\
+    &= \langle v, 4w \rangle \\
+    &= 4 \langle v, w \rangle
+\end{aligned}
+$$
+
+Hence $\langle v, w \rangle = 0$. We have
+
+$$
+\begin{aligned}
+\lvert T (v + w) \rvert^2 &= \langle T (v + w), T (v + w) \rangle \\
+    &= \langle Tv, Tv \rangle + \langle Tw, Tw \rangle + \langle Tv, Tw \rangle + \langle Tw, Tv \rangle \\
+    &= \lvert Tv \rvert^2 + \lvert Tw \rvert^2 + \langle 3v, 4w \rangle + \langle 4w, 3v \rangle \\
+    &= \lvert 3v \rvert^2 + \lvert 4w \rvert^2 \\
+    &= 36 + 64 \\
+    &= 100
+\end{aligned}
+$$
+
+Thus $\lvert T (v + w) \rvert = 10$.
+
+
+
 ### (27) Suppose $T \in L(V)$ is normal. Prove that $null T^k = null T$ and $range T^k = range T$ for every positive integer $k$.
 
 Note that if $k = 1$ then the statement is vacuously true, so we assume $k \geq 2$.
