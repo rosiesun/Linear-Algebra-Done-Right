@@ -927,9 +927,9 @@ Since the eigenvalues are the zeros of the minimal polynomial by 5.27, $p(x) = (
 
 Suppose $T$ is self-adjoint. Then $T = T^\ast$. We have
 
-$$T^{-1} = (T^\ast)^{-1} = (T^{-1})^\ast$$
+$$T^{-1} = (T^\ast)^{-1} = (T^{-1})^\ast $$
 
-Hence $T^{-1}$ is self-adjoint. 
+where the second equality follows from 7.5. Hence $T^{-1}$ is self-adjoint. 
 
 The opposite direction follows from symmetry and the fact that $(T^{-1})^{-1} = T$.
 
@@ -944,7 +944,11 @@ where the second equality follows from 7.5. Similarly,
 
 $$(T^\ast T)^{-1} = T^{-1} (T^\ast)^{-1} = T^{-1} (T^{-1})^\ast $$
 
-Hence $T^{-1}$ commutes with its adjoint, and it is normal.
+Thus 
+
+$$(T^{-1})^\ast T^{-1} = T^{-1} (T^{-1})^\ast$$
+
+and we conclude $T^{-1}$ is normal.
 
 The opposite direction follows from symmetry and the fact that $(T^{-1})^{-1} = T$.
 
@@ -954,7 +958,7 @@ The opposite direction follows from symmetry and the fact that $(T^{-1})^{-1} = 
 
 #### (a) Show that the set of self-adjoint operators on $V$ is a subspace of $L(V)$.
 
-Let $U$ be the set of self-adjoint operators. We want to show that it contains the zero operator, it is closed under addition and closed under scalar multiplication.
+Let $U$ be the set of self-adjoint operators on $V$. We want to show that it contains the zero operator, it is closed under addition and closed under scalar multiplication.
 
 Consider $0 \in L(V)$. $0v = 0$ for all $v \in V$. We have
 
@@ -983,13 +987,19 @@ Suppose $dim V = n$. From 3.72 we have $dim L(V) = (dim V) (dim V) = n^2$.
 
 Because $L(V)$ is isomorphic with $F^{n, n}$, we can consider $M(T)$ and $M(T^\ast)$. 
 
-If $T = T^\ast$, then $M(T^\ast) = (M(T))^\ast = M(T)$ from 7.9. And since $F = R$, the conjugate transpose becomes the transpose. Thus the matrix is symmetric. The $n$ diagonal elements and the $\frac{n^2 - n}{2}$ off-diagonal elements are free. Thus there are $\frac{n^2 + n}{2}$ free elements. $dim U = \frac{n^2 + n}{2}$.
+If $T = T^\ast$, then $M(T^\ast) = (M(T))^\ast = M(T)$ from 7.9. And since $F = R$, the conjugate transpose becomes the transpose. Thus the matrix is symmetric. The $n$ diagonal elements and the $\frac{n^2 - n}{2}$ off-diagonal elements are free. We conclude
+
+$$dim U = \frac{n^2 + n}{2} .$$
 
 
 
 ### (17) Suppose $F = C$. Show that the set of self-adjoint operators on $V$ is not a subspace of $L(V)$.
 
-Suppose $T \in L(V), T \neq 0$ is self-adjoint. Then $(iT)^\ast = -iT^\ast \neq iT$. Hence the set is not closed under scalar multiplication, and therefore is not a subspace of $L(V)$.
+Suppose $T \in L(V), T \neq 0$ is self-adjoint. Then 
+
+$$(iT)^\ast = -iT^\ast = -i T \neq iT .$$ 
+
+Hence the set is not closed under scalar multiplication, and therefore is not a subspace of $L(V)$.
 
 
 
