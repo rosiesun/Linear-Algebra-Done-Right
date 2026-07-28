@@ -8,7 +8,7 @@ Rosie Sun <br>
 # 7A Self-Adjoint and Normal Operators
 
 ### 7.1 Definition: adjoint
-Suppose $T \in L(V, W)$. The adjoint of $T$ is the function $T^{\ast}: W \rightarrow V$ such that 
+Suppose $T \in L(V, W)$. The adjoint of $T$ is the function $T^\ast: W \rightarrow V$ such that 
 
 $$\langle Tv, w\rangle  = \langle v, T^{\ast} w\rangle $$
 
@@ -621,7 +621,9 @@ The opposite direction follows from symmetry and the fact that $(T^{\ast} - \ove
 
 ### (4) Suppose $T \in L(V)$ and $U$ is a subspace of $V$. Prove that $U$ is invariant under $T$ $\iff$ $U^\perp$ is invariant under $T^{\ast}$.
 
-Suppose $U$ is invariant under $T$. Suppose $u \in U$ and $w \in U^\perp$. Then $Tu \in U$. We have 
+Suppose $u \in U$ and $U$ is invariant under $T$. Then $Tu \in U$.
+
+Suppose $w \in U^\perp$. We have 
 
 $$0 = \langle Tu, w \rangle = \langle u, T^{\ast} w \rangle$$
 
@@ -633,7 +635,7 @@ The opposite direction follows from symmetry and the fact that $(U^\perp)^\perp 
 
 ### (5) Suppose $T \in L(V, W)$. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ and $f_1, ..., f_m$ is an orthonormal basis of $W$. Prove that $\lVert Te_1 \rVert^2 + ... + \lVert Te_n \rVert^2 = \lVert T^{\ast} f_1 \rVert^2 + ... + \lVert T^{\ast} f_m \rVert^2$.
 
-From the proof of 7.9, we have 
+Since $f_1, ... f_m$ is an orthonormal basis of $W$, we have
 
 $$Te_k = \langle Te_k, f_1 \rangle f_1 + ... + \langle Te_k, f_m \rangle f_m.$$
 
@@ -645,7 +647,7 @@ Therefore
 
 $$\sum_{k=1}^n \lVert Te_k \rVert^2 = \sum_{k=1}^n \sum_{j=1}^m |\langle Te_k, f_j \rangle|^2.$$
 
-Similarly, we have
+Similarly, since $e_1, ..., e_n$ is an orthonormal basis of $V$, we have
 
 $$T^{\ast} f_j = \langle T^{\ast} f_j, e_1 \rangle e_1 + ... + \langle T^{\ast} f_j, e_n \rangle e_n.$$
 
@@ -672,13 +674,17 @@ $$\lVert Te_1 \rVert^2 + ... + \lVert Te_n \rVert^2 = \lVert T^{\ast} f_1 \rVert
 #### (a) $T$ is injective $\iff$ $T^{\ast}$ is surjective.
 
 $\Rightarrow$
-Suppose $T$ is injective. Then $null T = \\{0\\}$ by 3.15. We have 
+Suppose $T$ is injective. Then $null T = \\{0\\}$ by 3.15. 
+
+By 7.6,
+
+$$null T = (range T^{\ast})^\perp = \\{0\\}.$$
+
+By 6.49,
 
 $$V = range T^{\ast} \oplus (range T^{\ast})^\perp.$$
 
-From 7.6 we have 
 
-$$null T = (range T^{\ast})^\perp = \\{0\\}.$$
 
 Then $range T^{\ast} = V$. Hence we conclude $T^{\ast}$ is surjective.
 
