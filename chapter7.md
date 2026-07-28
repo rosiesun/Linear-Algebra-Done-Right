@@ -902,6 +902,25 @@ Hence $T T^\ast = T^\ast T$, and $T$ is normal.
 
 
 
+### (13) Suppose $F = R$. Define $A \in L(L(V))$ by $AT = T^\ast$ for all $T \in L(V)$.
+
+#### (a) Find all eigenvalues of $A$.
+
+Suppose $AT = T^\ast = \lambda T$ for some $\lambda \in R$ and $T \neq 0$. 
+
+Taking the adjoint of both sides, we have
+
+$$T = \lambda T^\ast = \lambda^2 T.$$
+
+Then $\lambda = 1$ (which corresponds to $T$ being self-adjoint) or $\lambda = -1$ (which corresponds to $T$ being skew).
+
+
+#### (b) Find the minimal polynomial of $A$.
+
+Since the eigenvalues are the zeros of the minimal polynomial by 5.27, $p(x) = (x + 1)(x - 1)$.
+
+
+
 ### (15) Suppose $T \in L(V)$ is invertible. Prove that 
 
 #### (a) $T$ is self-adjoint $\iff$ $T^{-1}$ is self-adjoint.
