@@ -590,33 +590,32 @@ Suppose $T T^{\ast} = 0$. The result follows from applying the same argument as 
 
 ### (3) Suppose $T \in L(V)$ and $\lambda \in F$. Prove that $\lambda$ is an eigenvalue of $T$ $\iff$ $\overline{\lambda}$ is an eigenvalue of $T^{\ast}$.
 
-Suppose $\lambda$ is an eigenvalue of $T$. Then $T - \lambda I$ is not injective, i.e. $null (T - \lambda I) \neq \\{0\\}$. 
+Suppose $\lambda$ is an eigenvalue of $T$. Then $T - \lambda I$ is not injective, i.e. $null (T - \lambda I) \neq \\{0\\}$.
 
-From 3.21, we have 
+$$
+\begin{aligned}
+dim null (T - \lambda I) \geq 1 
+    &\Rightarrow dim (range (T^{\ast} - \overline{\lambda} I))^\perp \geq 1 \\
+    &\Rightarrow dim range (T^{\ast} - \overline{\lambda} I) \leq n - 1 \\
+    &\Rightarrow dim null (T^{\ast} - \overline{\lambda} I) \geq 1
+\end{aligned}
+$$
 
-$$dim V = dim null (T - \lambda I) + dim range (T - \lambda I).$$
+where the first step follows from 7.6, 
 
-Since $dim null (T - \lambda I) \geq 1$, $range (T - \lambda I) \subset V$.
+$$null (T - \lambda I) = (range (T^{\ast} - \overline{\lambda} I))^\perp ,$$ 
 
-From 7.6, we have 
+the second step follows from 6.49, 
 
-$$null (T - \lambda)^{\ast} = (range (T - \lambda I))^\perp.$$
+$$V = range (T^{\ast} - \overline{\lambda} I) \oplus (range (T^{\ast} - \overline{\lambda} I))^\perp ,$$
 
-Since 
+the third step follows from the fundamental theorem of linear map 3.21,
 
-$$V = range (T - \lambda I) \oplus (range (T - \lambda I))^\perp $$
-
-by 6.49, $(range (T - \lambda I))^\perp \neq \\{0\\}$. So $range (T - \lambda I)$ is a proper subspace, and its orthogonal complement is nonzero.
-
-Thus $null (T - \lambda)^{\ast} \neq \\{0\\}$. 
-
-Note that 
-
-$$(T - \lambda)^{\ast} = T^{\ast} - \overline{\lambda} I.$$
+$$dim V = dim null (T^{\ast} - \overline{\lambda} I) + dim range (T^{\ast} - \overline{\lambda} I).$$
 
 We conclude that $T^{\ast} - \overline{\lambda} I$ is not injective. Hence $\overline{\lambda}$ is an eigenvalue of $T^{\ast}$.
 
-The opposite direction follows from symmetry and the fact that $(T^{\ast} - \overline{\lambda} I)^{\ast} = T - \lambda I$.
+The opposite direction follows from symmetry and the fact that $(T^{\ast} - \overline{\lambda} I)^{\ast} = T - \lambda I$, and $\overline{\overline{\lambda}} = \lambda$.
 
 
 
