@@ -1239,6 +1239,20 @@ Hence we conclude $range T = range T^k$.
 
 
 
+### (28) Suppose $T \in L(V)$ is normal. Prove that if $\lambda \in F$, then the minimal polynomial of $T$ is not a polynomial multiple of $(x - \lambda)^2$.
+
+Assume towards contradiction that the minimal polynomial of $T$ is a polynomial multiple of $(x - \lambda)^2$. Then $p(x) = (x - \lambda)^2 q(x)$ for some $q \in P(F)$.
+
+Let $S = T - \lambda I$. Then $p(T) = (T - \lambda I)^2 q(T) = S^2 q(T)$. 
+
+We have $(S^2 q(T)) v = 0$ for all $v \in V$. Thus $q(T)v \in null S^2$. 
+
+By 7.21, $S$ is normal. From exercise 27 above, we proved that $null S = null S^2$ for a normal operator. We have $q(T)v \in null S$. Then $(S q(T)) v = 0$ for all $v \in V$, which has degree one less than $p(T)$. This contradicts the minimality of $p(T)$.
+
+(Observation: 5.62 states that $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(x - \lambda_1) ... (x - \lambda_m)$ for some list of distinct numbers $\lambda_1, ..., \lambda_m \in F$. This exercise nicely sets up the stage for the next chapter where the spectral theorem states normal operators are diagonalizable.)
+
+
+
 ### (29)
 
 ### (30)
