@@ -744,6 +744,9 @@ dim null T^\ast &= dim (range T)^\perp \\
 \end{aligned}
 $$
 
+where the first equality follows from 7.6, the second equality follows from 6.51, and the third equality follows from the fundamental theorem of linear maps (3.21).
+
+
 #### (b) $dim range T^\ast = dim range T$.
 
 $$
@@ -753,6 +756,28 @@ dim range T^\ast &= dim W - dim null T^\ast \\
     &= dim range T
 \end{aligned}
 $$
+
+where the first equality follows from the fundamental theorem of linear maps (3.21), the second equality follows from 7.6, and the third equality follows from 6.51.
+
+
+
+### (9) Prove that the product of two self-adjoint operators on $V$ is self-adjoint if and only if the two operators commute.
+
+Suppose $S, T \in L(V)$ are self-adjoint.
+
+$\Rightarrow$
+Suppose $ST$ is self-adjoint. Then $(ST)^\ast = ST$. We have
+
+$$(ST)^\ast = T^\ast S^\ast = TS.$$
+
+Thus $ST = TS$.
+
+$\Leftarrow$
+Suppose $ST = TS$. We have
+
+$$(ST)^\ast = T^\ast S^\ast = TS = ST.$$
+
+Thus $ST$ is self-adjoint.
 
 
 
