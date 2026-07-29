@@ -1245,7 +1245,11 @@ Assume towards contradiction that the minimal polynomial of $T$ is a polynomial 
 
 Let $S = T - \lambda I$. Then $p(T) = (T - \lambda I)^2 q(T) = S^2 q(T)$. 
 
-We have $(S^2 q(T)) v = 0$ for all $v \in V$. Thus $q(T)v \in null S^2$. 
+We have 
+
+$$(S^2 q(T)) v = 0 = S^2 (q(T)v)$$ 
+
+for all $v \in V$. Thus $q(T)v \in null S^2$. 
 
 By 7.21, $S$ is normal. From exercise 27 above, we proved that $null S = null S^2$ for a normal operator. We have $q(T)v \in null S$. Then $(S q(T)) v = 0$ for all $v \in V$, which has degree one less than $p(T)$. This contradicts the minimality of $p(T)$.
 
@@ -1419,11 +1423,67 @@ The equivalence of (b) and (c) follows from the definitions (also see 5.55).
 
 ### (1) Prove that a normal operator on a complex inner product space is self-adjoint if and only if all its eigenvalues are real.
 
+Suppose $T \in L(V)$ and $F = C$.
+
+$\Rightarrow$
+Suppose $T$ is a self-adjoint operator. 
+
+Then all its eigenvalues are real by 7.12.
+
+$\Leftarrow$
+Suppose $T$ is a normal operator with all real eigenvalues. 
+
+By the spectral theorem (7.31), $V$ has an orthonormal basis consisting of eigenvectors of $T$. Let $e_1, ..., e_n$ be the orthonormal basis consisting of eigenvectors. Let $\lambda_1, ..., \lambda_n$ be the corresponding eigenvalues.
+
+For any $v \in V$, we can write $v = a_1 e_1 + ... + a_n e_n$ for some $a_1, ..., a_n \in F$. We have
+
+$$
+\begin{aligned}
+\langle Tv, v \rangle 
+    &= \langle T(a_1 e_1 + ... + a_n e_n), a_1 e_1 + ... + a_n e_n \rangle \\
+    &= \langle a_1 \lambda_1 e_1 + ... + a_n \lambda_n e_n, a_1 e_1 + ... + a_n e_n \rangle \\
+    &= \lambda_1 a_1 \overline{a_1} \langle e_1, e_1 \rangle + ... + \lambda_n a_n \overline{a_n} \langle e_n, e_n \rangle \\
+    &= \lambda_1 |a_1|^2 + ... + \lambda_n |a_n|^2 \\
+    &\in R
+\end{aligned}
+$$
+
+By 7.14, $T$ is self-adjoint.
+
+
 
 ### (2) Suppose $F = C$. Suppose $T \in L(V)$ is normal and has only one eigenvalue. Prove that $T$ is a scalar multiple of the identity operator.
 
+Let $\lambda$ be the (only) eigenvalue of $T$.
+
+By the spectral theorem 7.31, $V$ has an orthonormal basis consisting of eigenvectors of $T$. Let $e_1, ..., e_n$ be the orthonormal basis consisting of eigenvectors of $T$. 
+
+We have $Te_k = \lambda e_k, k = 1, ..., n$. Since $Te_k$ is a scalar multiple of each basis vector, by linearity, $T$ is a scalar multiple of the identity operator.
+
+
 
 ### (3) Suppose $F = C$ and $T \in L(V)$ is normal. Prove that the set of eigenvalues of $T$ is contained in $\\{0, 1\\}$ if and only if there is a subspace $U$ of $V$ such that $T = P_U$.
+
+$\Rightarrow$
+Suppose the eigenvalues of $T$ are 0 and 1. 
+
+By the spectral theorem (7.31), $T$ is diagonalizable. 
+
+By 5.55, $V = E(1, T) \oplus E(0, T)$. 
+
+By 7.22, eigenvectors of $T$ corresponding to distinct eigenvalues are orthogonal, so $E(0, T) = E(1, T)^\perp$. 
+
+For any $v \in V$, we can write $v = u + w$, where $u \in E(1, T)$ and $w \in E(0, T)$. Let $U = E(1, T)$. We have 
+
+$$Tv = T(u + w) = Tu + Tw = u + 0$$ 
+
+thus $T = P_U$.
+
+$\Leftarrow$
+Suppose there is a subspace $U$ of $V$ such that $T = P_U$.
+
+Let $e_1, ..., e_n$ be the orthonormal basis of $U$ and $f_1, ..., f_m$ be the orthonormal basis of $U^\perp$ such that they are the eigenvectors of $T$. Then $Te_k = e_k, k = 1, ..., n$ and $Tf_j = 0, j = 1, ..., m$. Thus the eigenvalues of $T$ are 1 and 0.
+
 
 
 ### (4) Prove that a normal operator on a complex inner product space is skew (meaning it equals the negative of its adjoint) if and only if all its eigenvalues are purely imaginary (meaning that they have real part equal to 0).
