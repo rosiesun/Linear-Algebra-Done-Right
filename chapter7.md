@@ -1161,22 +1161,7 @@ Thus we conclude $P$ is self-adjoint.
 
 Since $\lvert v \rvert, \lvert w \rvert \neq 0$, $v, w \neq 0$. And since $Tv = 3v$ and $Tw = 4w$, $v$ and $w$ are two eigenvectors of $T$ with corresponding eigenvalues 3, 4. 
 
-Since $T$ is normal, by 7.21, $v$ and $w$ are two eigenvectors of $T^\ast$ with corresponding eigenvalues 3, 4. Thus $T^\ast v = 3v$ and $T^\ast w = 4w$.
-
-We have 
-
-$$
-\begin{aligned}
-3 \langle v, w \rangle 
-    &= \langle 3v, w \rangle \\
-    &= \langle Tv, w \rangle \\
-    &= \langle v, T^\ast w \rangle \\
-    &= \langle v, 4w \rangle \\
-    &= 4 \langle v, w \rangle
-\end{aligned}
-$$
-
-Hence $\langle v, w \rangle = 0$. We have
+Since $T$ is normal, by 7.22, $v$ and $w$ are orthogonal.
 
 $$
 \begin{aligned}
@@ -1465,31 +1450,74 @@ We have $Te_k = \lambda e_k, k = 1, ..., n$. Since $Te_k$ is a scalar multiple o
 ### (3) Suppose $F = C$ and $T \in L(V)$ is normal. Prove that the set of eigenvalues of $T$ is contained in $\\{0, 1\\}$ if and only if there is a subspace $U$ of $V$ such that $T = P_U$.
 
 $\Rightarrow$
-Suppose the eigenvalues of $T$ are 0 and 1. 
+Suppose the eigenvalues of $T$ are contained in {0, 1}. 
 
-By the spectral theorem (7.31), $T$ is diagonalizable. 
+By the spectral theorem (7.31), $T$ is diagonalizable. By 5.55, $V = E(1, T) \oplus E(0, T)$. 
 
-By 5.55, $V = E(1, T) \oplus E(0, T)$. 
+By 7.22, eigenvectors of $T$ corresponding to distinct eigenvalues are orthogonal, so $E(0, T) = E(1, T)^\perp$. Let $U = E(1, T)$, $U^\perp = (E(1, T))^\perp = E(0, T)$.
 
-By 7.22, eigenvectors of $T$ corresponding to distinct eigenvalues are orthogonal, so $E(0, T) = E(1, T)^\perp$. 
+For any $v \in V$, we can write $v = u + w$, where $u \in U$ and $w \in U^\perp$.  We have 
 
-For any $v \in V$, we can write $v = u + w$, where $u \in E(1, T)$ and $w \in E(0, T)$. Let $U = E(1, T)$. We have 
+$$Tv = T(u + w) = Tu + Tw = 1u + 0w = u.$$ 
 
-$$Tv = T(u + w) = Tu + Tw = u + 0$$ 
-
-thus $T = P_U$.
+Thus $T = P_U$.
 
 $\Leftarrow$
-Suppose there is a subspace $U$ of $V$ such that $T = P_U$.
+Suppose there is a subspace $U$ of $V$ such that $T = P_U$. We have $V = U \oplus U^\perp$.
 
-Let $e_1, ..., e_n$ be the orthonormal basis of $U$ and $f_1, ..., f_m$ be the orthonormal basis of $U^\perp$ such that they are the eigenvectors of $T$. Then $Te_k = e_k, k = 1, ..., n$ and $Tf_j = 0, j = 1, ..., m$. Thus the eigenvalues of $T$ are 1 and 0.
+Let $e_1, ..., e_n$ be the orthonormal basis of $U$ and $f_1, ..., f_m$ be the orthonormal basis of $U^\perp$. 
+
+$$Te_k = = P_U e_k = e_k = 1 e_k, k = 1, ..., n$$ 
+
+and 
+
+$$Tf_j = P_U f_j = 0 = 0 f_j, j = 1, ..., m.$$ 
+
+The behavior of $T$ is completely determined by its action on the basis. Thus the eigenvalues of $T$ are contained in {0, 1}.
 
 
 
 ### (4) Prove that a normal operator on a complex inner product space is skew (meaning it equals the negative of its adjoint) if and only if all its eigenvalues are purely imaginary (meaning that they have real part equal to 0).
 
+Suppose $T \in L(V)$ and $F = C$.
+
+$\Rightarrow$
+Suppose $T$ is a normal operator and $T$ skew ($T = - T^\ast$). 
+
+Suppose $\lambda$ is an eigenvalue of $T$, and suppose $v \in V$ is the corresponding eigenvector. Then $Tv = \lambda v$. 
+
+By 7.21 $T^\ast v = \overline{\lambda} v$. By hypothesis $T$ is skew so $Tv = T^\ast v$. Combining the equations, we have 
+
+$$\lambda v = - \overline{\lambda} v .$$
+
+Since $v \neq 0$, $\lambda = -\overline{\lambda}$. 
+
+Suppose $\lambda = a + bi$ for some $a, b \in R$. Then $a + bi = - (a - bi) = bi - a$. Thus $a = 0$. 
+
+We conclude the eigenvalues are purely imaginary.
+
+$\Leftarrow$
+Suppose $T$ is a normal operator and all its eigenvalues are purely imaginary. 
+
+By 7.31, $V$ has an orthonormal basis consisting of eigenvectors of $T$. Let $e_1, ..., e_n$ be the orthonormal basis consisting of eigenvectors of $T$. Let $\lambda_1, ..., \lambda_n$ be the corresponding eigenvalues. 
+
+Since the eigenvalues are purely imaginary, $\lambda_k = b_k i, b_k \in R, k = 1, ..., n$.
+
+By 7.21, 
+
+$$T^\ast e_k = \overline{\lambda_k} e_k = (-b_k i) e_k = - \lambda_k e_k = - T e_k.$$
+
+Since this equality applies to each basis, by linearity, $T^\ast v = - Tv$ for all $v \in V$.
+
+Hence $T^\ast = - T$ and $T$ is skew.
+
+
 
 ### (5)
+
+
+### (8) Suppose $F = C$ and $T \in L(V)$. Prove that $T$ is normal if and only if every eigenvector of $T$ is also an eigenvector of $T^\ast$.
+
 
 
 ### (13)
