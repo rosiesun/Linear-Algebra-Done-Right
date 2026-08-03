@@ -1518,15 +1518,130 @@ Hence $T^\ast = - T$ and $T$ is skew.
 
 ### (8) Suppose $F = C$ and $T \in L(V)$. Prove that $T$ is normal if and only if every eigenvector of $T$ is also an eigenvector of $T^\ast$.
 
+$\Rightarrow$
+Suppose $T$ is normal. 
+
+Suppose $v \in V, v \neq 0$ is an eigenvector of $T$. By 7.21, $v$ is an eigenvector of $T^\ast$.
+
+$\Leftarrow$
+Suppose every eigenvector of $T$ is also an eigenvector of $T^\ast$.
+
+Suppose $v \in V, v \neq 0$ is an eigenvector of $T$. Then $Tv = \lambda v$ for some $\lambda \in F$, and $T^\ast v = \alpha v$ for some $\alpha \in F$. We have
+
+$$
+\begin{aligned}
+\langle Tv, v \rangle 
+    &= \langle \lambda v, v \rangle \\
+    &= \lambda \langle v, v \rangle \\
+    &= \lambda \lvert v \rvert^2
+\end{aligned}
+$$
+
+We also have
+
+$$
+\begin{aligned}
+\langle Tv, v \rangle 
+    &= \langle v, T^\ast v \rangle \\
+    &= \langle v, \alpha v \rangle \\
+    &= \overline{\alpha} \langle v, v \rangle \\
+    &= \overline{\alpha} \lvert v \rvert^2
+\end{aligned}
+$$
+
+We have 
+
+$$\lambda \lvert v \rvert^2 = \overline{\alpha} \lvert v \rvert^2 .$$
+
+Since $v \neq 0$, $\lvert v \rvert^2 \neq 0$. Thus $\overline{\alpha} = \lambda$, or $\alpha = \overline{\lambda}$.
+
+By Schur's theorem (6.38), $T$ has an upper-triangular matrix with respect to some orthonormal basis $e_1, ..., e_n$. By 5.41, The eigenvalues of $T$ are the entries on the diagonal of the matrix. Thus we have 
+
+$$
+M(T, (e_1, ..., e_n)) = 
+\begin{pmatrix}
+\lambda_1 & a_{12} & ... & ... & a_{1n} \\
+0 & \lambda_2 & a_{23} & ... & a_{2n} \\
+... \\
+0 & ... & ... & ... & \lambda_n 
+\end{pmatrix}
+$$
+
+From the matrix, we have
+
+$$T e_1 = \lambda e_1$$
+
+and 
+
+$$T^\ast e_1 = \overline{\lambda_1} e_1 + \overline{a_{12}} e_2 + ... + \overline{a_{1n}} e_n .$$
+
+We also have 
+
+$$T^\ast e_1 = \overline{\lambda_1} e_1$$
+
+since $e_1$ is an eigenvector of $T$ and $T^\ast$. 
+
+Since $e_1, ..., e_n$ is a basis, the equations imply that all entries in the first row of $M(T)$, except possibly $\lambda_1$, equal 0.
+
+From the matrix, we have
+
+$$T e_2 = \lambda_2 e_2$$
+
+since $a_{12} = 0$ shown above, and 
+
+$$T^\ast e_2 = \overline{\lambda_2} e_2 + \overline{a_{23}} e_3 + ... + \overline{a_{2n}} e_n .$$
+
+We also have
+
+$$T^\ast e_2 = \overline{\lambda_2} e_2 $$
+
+since $e_2$ is an eigenvector of $T$ and thus an eigenvector of $T^\ast$.
+
+The equations imply that in the second row of the matrix, except possibly $\lambda_2$, equal 0.
+
+Continuing in this fashion, we see that all nondiagonal entries in the matrix equal 0. 
+
+Hence $T$ has a diagonal matrix with respect to an orthonormal basis in $V$. By the spectral theorem (7.31), $T$ is normal.
+
 
 
 ### (13)
 
 
-### (14)
+### (14) Suppose $F = R$ and $T \in L(V)$. Prove that $T$ is self-adjoint if and only if all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$, where $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$.
+
+$\Rightarrow$
+Suppose $T$ is self-adjoint. It follows that $T$ is normal.
+
+By 7.22, eigenvectors of $T$ corresponding to distinct eigenvalues of $T$ are orthogonal.
+
+By the spectral theorem (7.29), $V$ has an orthonormal basis consisting of eigenvectors of $T$. By 5.55, $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$.
+
+$\Leftarrow$
+Suppose all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$, where $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$.
+
+For $j = 1, ..., m$, suppose $dim E (\lambda_j, T) = k_j$. Let $v_{j, 1}, ..., v_{j, k_j}$ be a basis of $E (\lambda_j, T)$. Apply the Gram-Schmidt procedure to each eigenspace to obtain an orthonormal basis $e_{j, 1}, ..., e_{j, k_j}$. Within each eigenspace, $e_{j, 1}, ..., e_{j, k_j}$ is an orthonormal basis. Since we applied the Gram-Schmidt procedure inside each eigenspace, $e_{j, 1}, ..., e_{j, k_j}$ are eigenvectors corresponding to eigenvalue $\lambda_j$. 
+
+Together, $e_{j, k}, j = 1, ..., m, k = 1, ..., k_j$ is an orthonormal basis of $V$ consisting of eigenvectors of $T$. By 7.29, $T$ is self-adjoint.
 
 
-### (15)
+
+### (15) Suppose $F = C$ and $T \in L(V)$. Prove that $T$ is normal if and only if all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$, where $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$.
+
+$\Rightarrow$
+Suppose $T$ is normal.
+
+By 7.22, eigenvectors of $T$ corresponding to distinct eigenvalues of $T$ are orthogonal.
+
+By the spectral theorem (7.31), $V$ has an orthonormal basis consisting of eigenvectors of $T$. By 5.55, $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$.
+
+$\Leftarrow$
+Suppose all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$, where $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$.
+
+For $j = 1, ..., m$, suppose $dim E (\lambda_j, T) = k_j$. Let $v_{j, 1}, ..., v_{j, k_j}$ be a basis of $E (\lambda_j, T)$. Apply the Gram-Schmidt procedure to each eigenspace to obtain an orthonormal basis $e_{j, 1}, ..., e_{j, k_j}$. Within each eigenspace, $e_{j, 1}, ..., e_{j, k_j}$ is an orthonormal basis. Since we applied the Gram-Schmidt procedure inside each eigenspace, $e_{j, 1}, ..., e_{j, k_j}$ are eigenvectors corresponding to eigenvalue $\lambda_j$. 
+
+Together, $e_{j, k}, j = 1, ..., m, k = 1, ..., k_j$ is an orthonormal basis of $V$ consisting of eigenvectors of $T$. By 7.31, $T$ is normal.
+
 
 
 ### (19)
