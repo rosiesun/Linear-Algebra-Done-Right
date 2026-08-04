@@ -627,6 +627,8 @@ Suppose $w \in U^\perp$. We have
 
 $$0 = \langle Tu, w \rangle = \langle u, T^\ast w \rangle$$
 
+for all $u \in U$. 
+
 So $T^\ast w$ is orthogonal to $U$. Hence $T^\ast w \in U^\perp$ and $U^\perp$ is invariant under $T^\ast$.
 
 The opposite direction follows from symmetry and the fact that $(U^\perp)^\perp = U$.
@@ -1549,7 +1551,7 @@ $$
 \end{aligned}
 $$
 
-We have 
+From the two equations above, we have 
 
 $$\lambda \lvert v \rvert^2 = \overline{\alpha} \lvert v \rvert^2 .$$
 
@@ -1644,10 +1646,31 @@ Together, $e_{j, k}, j = 1, ..., m, k = 1, ..., k_j$ is an orthonormal basis of 
 
 
 
-### (19)
+### (19) Suppose $T \in L(V)$ is self-adjoint and $U$ is a subspace of $V$ that is invariant under $T$.
+
+#### (a) Prove that $U^\perp$ is invariant under $T$.
+
+In 7A we proved that $U$ is invariant under $T$ $\iff$ $U^\perp$ is invariant under $T^\ast$. 
+
+Since $T$ is self-adjoint, $T = T^\ast$, so $U^\perp$ is invariant under $T$.
+
+
+#### (b) Prove that $T|_U \in L(U)$ is self-adjoint.
+
+By the spectral theorem (7.29, 7.31), $T$ has a diagonal matrix with respect to some orthonormal basis of $V$. 
+
+By 5.65, $T|_U$ is a diagonalizable operator on $U$. $T|_U$ has a diagonal matrix with respect to some basis of $U$.
+
+
+#### (c) Prove that $T|_{U^\perp} \in L(U^\perp)$ is self-adjoint.
+
+
+
 
 
 ### (20)
+
+
 
 
 
