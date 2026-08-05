@@ -1278,30 +1278,36 @@ Tu &= T(a_1 v_1 + ... + a_n v_n) \\
 \end{aligned}
 $$
 
-and
+Since $v_1, ..., v_n$ is a basis, $a_1 \lambda_1 = ... = a_n \lambda_n = 0$.
+
+We also have
 
 $$
 \begin{aligned}
 Tv &= T(b_1 v_1 + ... + b_n v_n) \\
     &= b_1 \lambda_1 v_1 + ... b_n \lambda_n v_n \\
-    &= u
+    &= u \\
     &= a_1 v_1 + ... a_n v_n
 \end{aligned}
 $$
 
-Since $v_1, ..., v_n$ is abasis, $b_i \lambda_i = a_i = 0, i=1, ..., n$.
+Since $v_1, ..., v_n$ is abasis, $b_i \lambda_i = a_i, i = 1, ..., n$.
 
 Assume towards contradiction that $a_i \neq 0$ for some $i \in \\{1,...,n\\}$. 
 
 Since $a_i \lambda_i = 0$, $\lambda_i = 0$. Then $b_i \lambda_i = 0$. But $b_i \lambda_i = a_i \neq 0$, which is a contradiction.
 
-Therefore $a_1=...=a_n = 0$, so $u = 0$, and $null T \cap range T = \\{0\\}$.
+Therefore we conclude $a_1 = ... = a_n = 0$, so $u = 0$. 
 
-Thus $null T + range T$ is a direct sum by 1.46. 
+Thus $null T \cap range T = \\{0\\}$. By 1.46, $null T + range T$ is a direct sum. 
+
+We have
 
 $$dim (null T \oplus range T) = dim null T + dim range T = dim V$$ 
 
-by 3.94 and 3.21. Therefore $V = null T + range T$ by 2.39.
+where the first equality follows from 3.94 and the second equality follows from the fundamental theorem of linear maps (3.21).
+
+Hence $V = null T \oplus range T$ by 2.39.
 
 
 
@@ -1311,13 +1317,26 @@ If (a) holds, then (c) holds from 1.46.
 
 Suppose (c) holds. We have 
 
-$$dim (null T + range T) = dim null T + dim range T - dim (null T \cap range T) = dim null T + dim range T - 0 = dim V$$
+$$
+\begin{aligned}
+dim (null T + range T) 
+    &= dim null T + dim range T - dim (null T \cap range T) \\
+    &= dim null T + dim range T - 0 \\
+    &= dim V
+\end{aligned}
+$$
 
 Therefore $null T + range T = V$ by 2.39, and (b) holds.
 
 Suppose (b) holds. Since $V = null T + range T$, 
 
-$$dim V = dim (null T + range T) = dim null T + dim range T - dim (null T \cap range T) = dim V - dim (null T \cap range T)$$
+$$
+\begin{aligned}
+dim V &= dim (null T + range T) \\
+    &= dim null T + dim range T - dim (null T \cap range T) \\
+    &= dim V - dim (null T \cap range T)
+\end{aligned}
+$$
 
 Therefore $dim (null T \cap range T) = 0$, and (c) holds. (b) and (c) together implies that (a) holds.
 
@@ -1326,27 +1345,52 @@ Therefore $dim (null T \cap range T) = 0$, and (c) holds. (b) and (c) together i
 ### (5) Suppose $V$ is a finite-dimensional complex vector space and $T \in L(V)$. Prove that $T$ is diagonalizable if and only if $V = null (T-\lambda I) \oplus range (T-\lambda I)$ for every $\lambda \in C$.
 
 $\Rightarrow$
-Suppose $T$ is diagonalizable. Then $V = E(\lambda_1,T) \oplus ... \oplus E(\lambda_m,T)$ for some distinct eigenvalues $\lambda_1,...,\lambda_m$.
+Suppose $T$ is diagonalizable. 
+
+By 5.55, $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$ for some distinct eigenvalues $\lambda_1, ..., \lambda_m$.
 
 Let $\lambda \in C$.
 
 Case 1: $\lambda$ is not an eigenvalue. 
 
-Then $T-\lambda I$ is invertible, by 5.7. Therefore $range (T-\lambda I) = V$ and $null (T-\lambda I) = \\{0\\}$, and $V = null (T-\lambda I) \oplus range (T-\lambda I)$.
+Then $T - \lambda I$ is invertible by 5.7. Thus $T$ is injective and surjective by 3.63. We have $range (T - \lambda I) = V$ and $null (T-\lambda I) = \\{0\\}$. 
+
+Therefore 
+
+$$V = null (T-\lambda I) \oplus range (T-\lambda I).$$
 
 Case 2: $\lambda$ is an eigenvalue.
 
-Suppose $\lambda = \lambda_i, i \in \\{1,...,m\\}$. Then $null (T-\lambda I) = E(\lambda_i, T)$. 
+Suppose $\lambda = \lambda_i$ for some $i \in \\{1, ..., m\\}$. Then $null (T - \lambda I) = E(\lambda_i, T)$. 
 
-Let $w \in range (T-\lambda I)$. Then $(T-\lambda I)v=w$, for some $v \in V$. Since $V = E(\lambda_1,T) \oplus ... \oplus E(\lambda_m,T)$, we can write $v = e_1 + ... + e_m, e_k \in E(\lambda_k,T), k=1,...,m$. 
+Let $w \in range (T - \lambda I)$. Then $w = (T - \lambda I) v$ for some $v \in V$. 
 
-$$w = (T-\lambda I)(e_1 + ... + e_m) = \sum_k^m (\lambda_k - \lambda) e_k = sum_{k \neq i} (\lambda_k - \lambda) e_k$$
+Since $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$, we can write $v = e_1 + ... + e_m$, where $e_k \in E(\lambda_k,T), k = 1, ..., m$. 
 
-Therefore $w$ is the direct sum of all the other eigenspaces except $E(\lambda_i, T)$. We have 
+$$
+\begin{aligned}
+w &= (T - \lambda I) v \\
+    &= (T - \lambda I)(e_1 + ... + e_m) \\
+    &= (T - \lambda I) e_1 + ... + (T - \lambda I) e_m \\
+    &= (\lambda_1 e_1 - \lambda e_1) + ... + (\lambda_m e_m - \lambda e_m) \\
+    &= \sum_{k=1}^m (\lambda_k - \lambda) e_k \\
+    &= sum_{k \neq i} (\lambda_k - \lambda) e_k
+\end{aligned}
+$$
+
+Therefore $w$ can be written as a sum of all the other eigenspaces except $E(\lambda_i, T)$. Thus
 
 $$range (T-\lambda I) = E(\lambda_1,T) \oplus ... \oplus E(\lambda_{i-1}, T) \oplus E(\lambda_{i+1}, T) \oplus ... \oplus E(\lambda_m, T)$$
 
-By 5.54 and 5.55, $null (T-\lambda I) \oplus range (T-\lambda I) = V$.
+Putting everything together, we conclude
+
+$$
+\begin{aligned}
+V &= E (\lambda_i, T) \oplus range (T - \lambda I) \\
+    &= null (T - \lambda_i I) \oplus range (T - \lambda I) \\
+    &= null (T - \lambda I) \oplus range (T - \lambda I)
+\end{aligned}
+$$
 
 $\Leftarrow$
 Suppose $V = null (T-\lambda I) \oplus range (T-\lambda I)$ for every $\lambda \in C$. We want to show that $T$ is diagonalizable.
