@@ -1058,19 +1058,27 @@ The inequality proved is an equality if and only if $\lVert v - P_U v \rVert^2 =
 
 ### (1) Suppose $v_1,...,v_m \in V$. Prove that $\\{v_1,...,v_m\\}^{\perp} = (span(v_1,...,v_m))^{\perp}$.
 
-$\subseteq$ Suppose $v \in \\{v_1,...,v_m\\}^{\perp}$. Then $\langle v_k, v \rangle = 0$ for $k = 1,...,m$. 
+$\subseteq$ 
+Suppose $v \in \\{v_1, ..., v_m\\}^{\perp}$. Then $\langle v_k, v \rangle = 0$ for $k = 1, ... ,m$. 
 
-Let $a_1,...,a_m \in F$. Then 
+Let $a_1, ..., a_m \in F$. Then 
 
-$$0 = a_1 \langle v_1, v \rangle + ... + a_m \langle v_m, v \rangle = \langle a_1 v_1, v \rangle + ... + \langle a_m v_m, v \rangle = \langle a_1 v_1 + ... + a_m v_m, v \rangle$$
+$$
+\begin{aligned}
+0 &= a_1 \langle v_1, v \rangle + ... + a_m \langle v_m, v \rangle \\
+    &= \langle a_1 v_1, v \rangle + ... + \langle a_m v_m, v \rangle \\
+    &= \langle a_1 v_1 + ... + a_m v_m, v \rangle
+\end{aligned}
+$$
 
 Since $a_1,...,a_m$ is arbitrary, $v \in (span(v_1,...,v_m))^{\perp}$.
 
-$\supseteq$ Suppose $v \in (span(v_1,...,v_m))^{\perp}$. Then $\langle a_1 v_1 + ... + a_m v_m, v \rangle = 0$ for any $a_1,...,a_m \in F$. 
+$\supseteq$ 
+Suppose $v \in (span(v_1, ..., v_m))^{\perp}$. Then $\langle a_1 v_1 + ... + a_m v_m, v \rangle = 0$ for any $a_1, ..., a_m \in F$. 
 
-Since $v_k \in span(v_1,...,v_m)$ for $k=1,...,m$, we have $\langle v_k, v \rangle = 0$ for $k=1,...,m$. 
+Since $v_k \in span(v_1, ..., v_m)$ for $k=1, ..., m$, we have $\langle v_k, v \rangle = 0$ for $k=1,...,m$. 
 
-Hence $v \in \\{v_1,...,v_m\\}^{\perp}$.
+Hence $v \in \\{v_1, ..., v_m\\}^{\perp}$.
 
 
 
@@ -1167,8 +1175,98 @@ From 6.47 the decomposition is unique, hence $P = P_U$.
 
 ### (11) Suppose $T \in L(V)$ and $U$ is a finite-dimensional subspace of $V$. Prove that $U$ is invariant under $T$ $\iff$ $P_U T P_U = T P_U$.
 
+$\Rightarrow$
+Suppose $U$ is invariant under $T$.
+
+Suppose $v \in V$ and $v = u + w, u \in U, w \in U^\perp$. Suppose $Tu = y$. Since $U$ is invariant under $T$, $y \in U$.
+
+Note that since $y \in U$, $P_U y \in U$ by 6.57.
+
+We have
+
+$$
+\begin{aligned}
+(P_U T P_U)(v) 
+    &= P_U T (P_U v) \\
+    &= (P_U T) (u) \\
+    &= P_U (Tu) \\
+    &= P_U y \\
+    &= y
+\end{aligned}
+$$
+
+and
+
+$$(T P_U) (v) = T (P_U v) = Tu = y.$$
+
+Hence $P_U T P_U = T P_U$.
+
+$\Leftarrow$
+Suppose $P_U T P_U = T P_U$.
+
+Suppose $u \in U$ and $Tu = y$. 
+
+We have
+
+$$(P_U T P_U) u = (P_U T) u =  P_U y$$
+
+and 
+
+$$(T P_U) u = Tu = y.$$
+
+By hypothesis, $(P_U T P_U) u = (T P_U) u$. Thus $P_U y = y$, which implies that $y \in U$ by 6.57. 
+
+Hence $U$ is invariant under $T$.
+
+
 
 ### (12) Suppose $V$ is finite-dimensional, $T \in L(V)$, and $U$ is a subspace of $V$. Prove that $U$ and $U^\perp$ are both invariant under $T$ $\iff$ $P_U T = T P_U$.
+
+$\Rightarrow$
+Suppose $U$ and $U^\perp$ are both invariant under $T$.
+
+Suppose $v \in V$ and $v = u + w, u \in U, w \in U^\perp$. Since $U$ is invariant under $T$, $Tu \in U$; since $U^\perp$ is invariant under $T$, $Tw \in U^\perp$.
+
+We have
+
+$$
+\begin{aligned}
+(P_U T)v &= P_U (Tv) \\
+    &= P_U (Tu + Tw) \\
+    &= P_U (Tu) + P_U (Tw) \\
+    &= Tu
+\end{aligned}
+$$
+
+and 
+
+$$(T P_U)v = T (P_U v) = Tu.$$
+
+Thus $(P_U T)v = (T P_U)v$ for all $v \in V$. Hence $P_U T = T P_U$.
+
+$\Leftarrow$
+Suppose $P_U T = T P_U$.
+
+Suppose $u \in U, w \in U^\perp$. We have
+
+$$(P_U T) u = P_U (Tu)$$
+
+and 
+
+$$(T P_U) u = Tu.$$
+
+By hypothesis $P_U (Tu) = Tu$, thus $Tu \in U$ by 6.57. Hence $U$ is invariant under $T$.
+
+Similarly, we have
+
+$$(P_U T) w = P_U (Tw)$$
+
+and 
+
+$$(T P_U) w = T0 = 0.$$
+
+By hypothesis $P_U (Tw) = 0$, thus $Tw \in U^\perp$ by 6.57. Hence $U^\perp$ is invariant under $T$.
+
 
 
 ### (13) Suppose $F=R$ and $V$ is finite-dimensional. For each $v \in V$, let $\phi_v$ denote the linear functional on $V$ defined by $\phi_v(u) = \langle u,v \rangle$ for all $u \in V$.
