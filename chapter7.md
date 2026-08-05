@@ -1657,20 +1657,139 @@ Since $T$ is self-adjoint, $T = T^\ast$, so $U^\perp$ is invariant under $T$.
 
 #### (b) Prove that $T|_U \in L(U)$ is self-adjoint.
 
-By the spectral theorem (7.29, 7.31), $T$ has a diagonal matrix with respect to some orthonormal basis of $V$. 
+Suppose $u, w \in U$. We have 
 
-By 5.65, $T|_U$ is a diagonalizable operator on $U$. $T|_U$ has a diagonal matrix with respect to some basis of $U$.
+$$
+\begin{aligned}
+\langle T|_U u, w \rangle 
+    &= \langle Tu, w \rangle \\
+    &= \langle u, T^\ast w \rangle \\
+    &= \langle u, Tw \rangle \\
+    &= \langle u, T|_U w
+\end{aligned}
+$$
+
+for all $u, w \in U$. The first and last equality follow because $U$ is $T$-invariant so we can interchange $T$ and $T|_U$; the third equality follows because $T$ is self-adjoint. 
+
+Hence $T|_U \in L(U)$ is self-adjoint.
 
 
 #### (c) Prove that $T|_{U^\perp} \in L(U^\perp)$ is self-adjoint.
 
+Since $U^\perp$ is invariant under $T$ (shown in part a), we can use the same argument as part b to show that $T|_{U^\perp} \in L(U^\perp)$ is self-adjoint.
 
 
 
+### (20) Suppose $T \in L(V)$ is normal and $U$ is a subspace of $V$ that is invariant under $T$. Note: This exercise can be used to give yet another proof of the complex spectral theorem (use induction on $dim V$ and the result that $T$ has an eigenvector).
 
-### (20)
+#### (b) Prove that $U$ is invariant under $T^\ast$.
+
+We will prove (b) first then use (b) to show (a).
+
+Suppose $e_1, ..., e_m$ is an orthonormal basis of $U$. We can extend to an orthonormal basis $e_1, ..., e_m, e_{m+1}, ..., e_{n}$ of $V$ by 6.36. 
+
+We have 
+
+$$
+M(T, (e_1, ..., e_m, e_{m+1}, ..., e_n))
+=
+\begin{pmatrix}
+a_{1,1} & ... & a_{1,m} & a_{1, m+1} & ... & b_{1,n} \\
+a_{2,1} & ... \\
+... \\
+a_{m,1} & ... & a_{m,m} & ... \\
+... \\
+0 & ... & ... 
+\end{pmatrix}
+$$
+
+Since $U$ is invariant under $T$, $Te_k$ has no terms in $e_{m+1}, ..., e_n$. We can write
+
+$$Te_k = a_{1,k} e_1 + ... a_{m,k} e_m .$$
+
+Similarly, we can write 
+
+$$T^\ast e_k = \overline{a_{k,1}} e_1 + ... + \overline{a_{k,m}} e_m + \overline{a_{k, m+1}} e_{m+1} + ... + \overline{a_{k, n}} e_n .$$
+
+Since $T$ is normal, 
+
+$$\lvert Te_k \rvert^2 = \lvert T^\ast e_k \rvert^2$$
+
+and 
+
+$$\sum_{k=1}^m \lvert Te_k \rvert^2 = \sum_{k=1}^m \lvert T^\ast e_k \rvert^2 .$$
+
+We have
+
+$$LHS = \sum_{k=1}^m \sum_{j=1}^m |a_{j, k}|^2$$
+
+and
+
+$$
+\begin{aligned}
+RHS 
+    &= \sum_{k=1}^m (\sum_{j=1}^m |a_{k, j}|^2 + \sum_{j=m+1}^n |a_{k, j}|^2 ) \\
+    &= (\sum_{k=1}^m \sum_{j=1}^m |a_{k, j}|^2) + (\sum_{k=1}^m \sum_{j=m+1}^n |a_{k, j}|^2 )
+\end{aligned}
+$$
+
+Note that the first half of the RHS is just a relabeling of the LHS. We have
+
+$$LHS = LHS + \sum_{k=1}^m \sum_{j=m+1}^n |a_{k, j}|^2.$$
+
+Thus the nonnegative double sum $\sum_{k=1}^m \sum_{j=m+1}^n |a_{k, j}|^2$ equals 0, forcing each $a_{k, m+1}, ..., a_{k, n}$ to be 0. Hence
+
+$$T^\ast e_k = \overline{a_{k,1}} e_1 + ... + \overline{a_{k,m}} e_m,$$
+
+and we conclude that $U$ is invariant under $T^\ast$.
 
 
+#### (a) Prove that $U^\perp$ is invariant under $T$.
+
+Suppose $v \in U^\perp, u \in U$. We have
+
+$$\langle Tv, u \rangle = \langle v, T^\ast u \rangle = 0$$
+
+where the second equality follows from part b above (i.e. $U$ is invariant under $T^\ast$).
+
+Thus $Tv$ is orthogonal to $U$, and $Tv \in U^\perp$. Hence $U^\perp$ is invariant under $T$.
+
+
+#### (c) Prove that $(T|_U)^\ast = (T^\ast)|_U$.
+
+Suppose $u, w \in U$. We have, for all $u \in U$, 
+
+$$
+\begin{aligned}
+\langle T|_U u, w \rangle 
+    &= \langle Tu, w \rangle \\
+    &= \langle u, T^\ast w \rangle \\
+    &= \langle u, (T^\ast)|_U w \rangle
+\end{aligned}
+$$
+
+where the third equality follows from the fact that $U$ is invariant under $T^\ast$.
+
+Hence $(T|_U)^\ast = (T^\ast)|_U$.
+
+
+#### (d) Prove that $T|_U \in L(U)$ and $T|{U^\ast} \in L(U^\perp)$ are normal operators.
+
+Suppose $v \in U$. 
+
+Since $T \in L(V)$ is normal, $T T^\ast v = T^\ast T v$. We have
+
+$$(T|_U) (T|_U)^\ast v = (T|_U) (T^\ast)|_U v = T T^\ast v$$
+
+where the first equality follows form part (c) and the second equality follows from the fact that $U$ is invariant under $T$ and $T^\ast$,
+
+and similarly
+
+$$(T|_U)^\ast (T|_U) v = (T^\ast)|_U (T|_U) v = T^\ast T v.$$
+
+Thus $(T|_U) (T|_U)^\ast v = (T|_U)^\ast (T|_U) v$, and $T|_U \in L(U)$ is normal.
+
+We can use the same argument to show that $T|{U^\ast} \in L(U^\perp)$ is normal.
 
 
 
