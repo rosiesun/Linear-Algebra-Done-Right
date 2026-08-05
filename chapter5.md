@@ -1178,19 +1178,44 @@ Suppose $T \in L(V)$ and $v_1,...,v_n$ is a basis of $V$. Then each eigenvalue o
 
 #### (a) Prove that if $T^4 = I$, then $T$ is diagonalizable.
 
-If $T^4 = I$, we have $T^4 - I = 0$. Then $p(z)=(z^4 - 1)$ is a polynomial multiple of the minimal polynomial of $T$ by 5.29. We can factor $p(z) = (z + i) (z - i) (z + 1) (z - 1)$. By 5.62, $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m$. Since $p$ is a polynomial multiple of the minimal polynomial, the minimal polynomial satisfies the condition of 5.62. Thus $T$ is diagonalizable. 
+Suppose $T^4 = I$. Then we have $T^4 - I = 0$. 
+
+Thus $p(z) = z^4 - 1$ is a polynomial multiple of the minimal polynomial of $T$ by 5.29. 
+
+We can factor 
+
+$$p(z) = (z + i) (z - i) (z + 1) (z - 1).$$
+
+By 5.62, $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(z - \lambda_1) ... (z - \lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m$. 
+
+Since $p(z)$ is a polynomial multiple of the minimal polynomial, the minimal polynomial satisfies the condition of 5.62. 
+
+Hence $T$ is diagonalizable. 
 
 
 #### (b) Prove that if $T^4 = T$, then $T$ is diagonalizable.
 
-If $T^4 = T$, we have $T^4 - T = 0$. Then $p(z)=(z^4 - z)$ is a polynomial multiple of the minimal polynomial of $T$ by 5.29. We can factor $p(z) = (z - 0) (z - 1) (z- ( (-1+i \sqrt{3})/2)) (z- ( (-1-i \sqrt{3})/2))$. By 5.62, $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m$. Since $p$ is a polynomial multiple of the minimal polynomial, the minimal polynomial satisfies the condition of 5.62. Thus $T$ is diagonalizable. 
+Suppose $T^4 = T$. Then we have $T^4 - T = 0$. 
+
+Thus $p(z) = z^4 - z$ is a polynomial multiple of the minimal polynomial of $T$ by 5.29. 
+
+We can factor 
+
+$$p(z) = (z - 0) (z - 1) (z- ( (-1+i \sqrt{3})/2)) (z- ( (-1-i \sqrt{3})/2)) .$$ 
+
+By 5.62, $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m$. 
+
+Since $p(z)$ is a polynomial multiple of the minimal polynomial, the minimal polynomial satisfies the condition of 5.62. 
+
+Hence $T$ is diagonalizable. 
 
 
 #### (c) Give an example of an operator $T \in L(C^2)$ such that $T^4 = T^2$ and $T$ is not diagonalizable.
 
 $$
 \begin{pmatrix} 
-0 & 1 \\ 0 & 0 
+0 & 1 \\ 
+0 & 0 
 \end{pmatrix}
 $$
 
@@ -1232,17 +1257,39 @@ $dim E(\lambda, T) = d$, and $\lambda$ appears on the diagonal $d$ times.
 
 ### (3) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that if the operator $T$ is diagonalizable, then $V = null T \oplus range T$.
 
-Let $v_1,...,v_n$ be a basis of eigenvectors with respect to which $T$ has a diagonal matrix. Let $\lambda_1,...,\lambda_n$ be the corresponding diagonal entries (eigenvalues with possible repetitions). 
+Suppose $T \in L(V)$ is diagonalizable. We want to show that $V = null T \oplus range T$. 
 
-Let $u \in null T \cap range T$. Then $Tu = 0$ and $Tv = u$ for some $v \in V$. 
+First we will show that $null T + range T$ is a direct sum, and then we will show that it is equal to $V$.
 
-We can write $u = a_1 v_1 + ... + a_n v_n$ for some $a_1,...,a_n \in F$, $v = b_1 v_1 + ... + b_n v_n$ for some $b_1,...,b_n \in F$. We have
+Suppose $v_1, ..., v_n$ is a basis of $V$ with respect to which $T$ has a diagonal matrix. Let $\lambda_1, ..., \lambda_n$ be the corresponding eigenvalues. 
 
-$$Tu = a_1 \lambda_1 v_1 + ... a_n \lambda_n v_n = 0$$
+Suppose $u \in null T \cap range T$. Then $Tu = 0$ and $Tv = u$ for some $v \in V$. 
 
-$$Tv = b_1 \lambda_1 v_1 + ... b_n \lambda_n v_n = a_1 v_1 + ... a_n v_n$$
+We can write $u = a_1 v_1 + ... + a_n v_n$ for some $a_1, ..., a_n \in F$, and $v = b_1 v_1 + ... + b_n v_n$ for some $b_1, ..., b_n \in F$. 
 
-Thus $b_i \lambda_i = a_i = 0, i=1,...,n$.
+We have
+
+$$
+\begin{aligned}
+Tu &= T(a_1 v_1 + ... + a_n v_n) \\
+    &= a_1 Tv_1 + ... + a_n Tv_n \\
+    &= a_1 \lambda_1 v_1 + ... a_n \lambda_n v_n \\
+    &= 0
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+Tv &= T(b_1 v_1 + ... + b_n v_n) \\
+    &= b_1 \lambda_1 v_1 + ... b_n \lambda_n v_n \\
+    &= u
+    &= a_1 v_1 + ... a_n v_n
+\end{aligned}
+$$
+
+Since $v_1, ..., v_n$ is abasis, $b_i \lambda_i = a_i = 0, i=1, ..., n$.
 
 Assume towards contradiction that $a_i \neq 0$ for some $i \in \\{1,...,n\\}$. 
 
@@ -1358,7 +1405,9 @@ which is a contradiction. Thus we conclude $T-2I$ or $T-6I$ is invertible.
 
 ### (13)
 
-### (16)
+### (16) Suppose that $T \in L(V)$ is diagonalizable. Let $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$. Prove that a subspace $U$ of $V$ is invariant under $T$ if and only if there exist subspaces $U_1, ..., U_m$ of $V$ such that $U_k \subseteq E(\lambda_k, T)$ for each $k$ and $U = U_1 \oplus ... \oplus U_m$.
+
+
 
 ### (17)
 
