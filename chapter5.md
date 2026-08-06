@@ -1378,7 +1378,22 @@ w &= (T - \lambda I) v \\
 \end{aligned}
 $$
 
-Therefore $w$ can be written as a sum of all the other eigenspaces except $E(\lambda_i, T)$. Thus
+Therefore $w$ can be written as a sum of all the other eigenspaces except $E(\lambda_i, T)$, and
+
+$$range (T-\lambda I) \subseteq E(\lambda_1, T) \oplus ... \oplus E(\lambda_{i-1}, T) \oplus E(\lambda_{i+1}, T) \oplus ... \oplus E(\lambda_m, T) .$$
+
+Note that 
+
+$$
+\begin{aligned}
+dim range (T-\lambda I) 
+    &= dim V - dim null (T - \lambda I) \\
+    &= dim V - dim E(\lambda, T) \\
+    &= dim E(\lambda_1, T) \oplus ... \oplus E(\lambda_{i-1}, T) \oplus E(\lambda_{i+1}, T) \oplus ... \oplus E(\lambda_m, T)
+\end{aligned}
+$$
+
+Hence we have
 
 $$range (T-\lambda I) = E(\lambda_1,T) \oplus ... \oplus E(\lambda_{i-1}, T) \oplus E(\lambda_{i+1}, T) \oplus ... \oplus E(\lambda_m, T)$$
 
@@ -1393,39 +1408,53 @@ V &= E (\lambda_i, T) \oplus range (T - \lambda I) \\
 $$
 
 $\Leftarrow$
-Suppose $V = null (T-\lambda I) \oplus range (T-\lambda I)$ for every $\lambda \in C$. We want to show that $T$ is diagonalizable.
+Suppose $V = null (T-\lambda I) \oplus range (T-\lambda I)$ for every $\lambda \in C$. 
 
-We use induction on $dim V$.
+We want to show that $T$ is diagonalizable. We use induction on $dim V$.
 
-Base case: $dim V = 0$. $V = \\{0\\}$, so $T$ is trivially diagonalizable.
+Base case: $dim V = 1$. Every vector in $V$ is an eigenvector, so $T$ is trivially diagonalizable.
 
-Inductive step: suppose $dim V > 0$ and the desired result holds for all vector spaces of smaller dimension.
+Inductive step: suppose $dim V > 1$ and the desired result holds for all vector spaces of smaller dimension.
 
-$T$ has at least one eigenvalue by 5.19. Let $\lambda_1$ be an eigenvalue of $T$.
+Note that $T$ has at least one eigenvalue by 5.19. Let $\lambda$ be an eigenvalue of $T$.
 
-Let $W = range (T-\lambda_1 I)$. By hypothesis, 
+Let $U = range (T - \lambda I)$. Note that $U$ is invariant under $T$ by 5.18.
 
-$$V = null (T-\lambda_1 I) \oplus W = E(lambda_1, T) \oplus W$$
+We want to show that for every $\mu \in C$, 
 
-First note that $W$ is invariant under $T$ by 5.18.
+$$U = null (T|_U - \mu I) \oplus range (T|_U - \mu I).$$
 
-Next note that $\lambda_1$ is not an eigenvalue of $W$ due to the disjointness of $null (T-\lambda_1 I)$ and $W$.
+By hypothesis, we have
 
-Let $\mu \in C$. We want to show that $W = null (T|_W - \mu I) \oplus range (T|_W - \mu I)$.
+$$V = null (T - \mu I) \oplus range (T - \mu I)$$
 
-First note that $T|_W - \mu I: W \rightarrow W$. If $w \in W$, $(T-\lambda_1)u = w$ for some $u \in V$. 
+Note that 
 
-$$(T|_W - \mu I)w = (T|_W - \mu I)(T-\lambda_1 I)u = (T-\lambda_1 I)(T|_W - \mu I)u = (T-\lambda_1 I)(Tu - \mu u) $$
+$$null (T|_U - \mu I) = null (T - \mu I) \cap U$$
 
-$null (T|_W - \mu I)$ and $range (T|_W - \mu I)$ are disjoint due to the disjointness of $null (T - \mu I)$ and $range (T - \mu I)$.
+and
 
-Therefore $W = null (T|_W - \mu I) \oplus range (T|_W - \mu I)$ from the disjointness and 3.21.
+$$range (T|_U - \mu I) = (T - \mu I) (U) \subseteq range (T - \mu I).$$
 
-Thus $T|_W$ is diagonalizable by the inductive hypothesis.
+We can see that 
 
-$T|_W = E(\lambda_2,T) \oplus ... \oplus E(\lambda_m,T)$ for some distinct $\lambda_2,...,\lambda_m \in F$.
+$$null (T|_U - \mu I) \cap range (T|_U - \mu I) = \\{0\\} .$$
 
-Therefore $V = E(\lambda_1, T) \oplus E(\lambda_2, T) \oplus ... \oplus E(\lambda_m, T)$. By 5.55 $T$ is diagonalizable.
+By the fundamental theorem of linear maps (3.21),
+
+$$dim U = dim null (T|_U - \mu I) + dim range (T|_U - \mu I).$$
+
+Thus 
+
+$$U = null (T|_U - \mu I) \oplus range (T|_U - \mu I).$$
+
+Since $dim U < dim V$ and $U$ satisfies the condition in the hypothesis, $T|_U$ is diagonalizable. 
+
+By hypothesis we have
+
+$$V = null (T - \lambda I) \oplus range (T - \lambda I) = E(\lambda, T) \oplus U.$$
+
+Adding the eigenvector in $E(\lambda, T)$ to the eigenbasis in $U$ gives us a basis of $V$ which are the eigenvectors of $T$. Hence $T$ is diagonalizable.
 
 
 
