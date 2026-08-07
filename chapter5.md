@@ -1478,8 +1478,88 @@ which is a contradiction. Thus we conclude $T-2I$ or $T-6I$ is invertible.
 
 ### (13)
 
+
 ### (16) Suppose that $T \in L(V)$ is diagonalizable. Let $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$. Prove that a subspace $U$ of $V$ is invariant under $T$ if and only if there exist subspaces $U_1, ..., U_m$ of $V$ such that $U_k \subseteq E(\lambda_k, T)$ for each $k$ and $U = U_1 \oplus ... \oplus U_m$.
 
+$\Leftarrow$
+Suppose there exist subspaces $U_1, ..., U_m$ of $V$ such that $U_k \subseteq E(\lambda_k, T)$ for each $k$ and $U = U_1 \oplus ... \oplus U_m$.
+
+Suppose $u \in U$. Then $u = u_1 + ... + u_m \in U_1 \oplus ... \oplus U_m$. 
+
+$$
+\begin{aligned}
+Tu &= T(u_1 + ... + u_m) \\
+    &= Tu_1 + ... + Tu_m \\
+    &= \lambda_1 u_1 + ... + \lambda_m u_m \\
+    &\in U_1 \oplus ... \oplus U_m \\
+    &= U
+\end{aligned}    
+$$
+
+where the third equality follows because $u_k \in U_k \subseteq E(\lambda_k, T)$ is an eigenvector.
+
+Hence $U$ is invariant under $T$.
+
+$\Rightarrow$
+Suppose $U$ is invariant under $T$.
+
+Define $U_k = U \cap E(\lambda_k, T)$ for $k = 1, ..., m$. The intersection of two subspaces is a subspace.
+
+By 5.11 eigenvectors corresponding to distinct eigenvalues are linearly independent, thus $U_1 + ... + U_m$ is a direct sum. 
+
+By construction, $U_k \subseteq U$, thus $U_1 \oplus ... \oplus U_m \subseteq U$. 
+
+Now we want to show that $U \subseteq U_1 \oplus ... \oplus U_m$.
+
+Suppose $u \in U$. Since $T$ is diagonalizable, $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m)$ by 5.55. We can write 
+
+$$u = u_1 + ... + u_m, u_k \in E(\lambda_k, T), k = 1, ..., m.$$
+
+For each $k = 1, ..., m$, define a polynomial 
+
+$$p_k(z) = \frac{q_k(z)}{s}$$
+
+where 
+
+$$q_k(z) = \prod_{j \neq k} (z - \lambda_j) $$
+
+and
+
+$$s_k = \prod_{j \neq k} (\lambda_k - \lambda_j) .$$
+
+By 5.17, the order does not matter in taking products of polynomials of a single operator. Since $u_k \in E(\lambda_k, T)$, $(T - \lambda_k) u_k = 0$. Thus $q_k(T)$ is used to eliminate the $u_j$ terms where $j \neq k$.
+
+$$
+\begin{aligned}
+q_k(T) u 
+    &= q_k(T) (u_1 + ... + u_m) \\
+    &= q_k(T) u_1 + ... + q_k(T) u_m \\
+    &= \sum_{k=1}^m \prod_{j \neq k} (T - \lambda_j) u_k \\
+    &= q_k(T) u_k
+\end{aligned}
+$$
+
+Once we isolate $u_k$, we see that 
+
+$$q_k(T) u_k = \prod_{j \neq k} (z - \lambda_j) v_k = \prod_{j \neq k} (\lambda_k - \lambda_j) u_k$$
+
+thus the definition of $q_k(z)$ and $s_k(z)$ make sense and
+
+$$p_k(T) u = u_k.$$
+
+Since $U$ is invariant, $Tu \in U$. We claim that $U$ is invariant under $p(T)$ for any polynomial $p$. Note that $U$ is invariant under powers of $T$ ($T^a$ for positive interger $a$). Since $U$ is a subspace, it is closed under addition and scalar multiplication. 
+
+Thus $p_k(T) u \in U$. Thus $u_k \in U$. 
+
+Since $u_k \in E(\lambda_k, T)$ and $u_k \in U$, $u_k \in U_k$. 
+
+Hence $u = u_1 + ... + u_m$ where $u_k \in U_k$, $k = 1, ..., m$. 
+
+We have $U \subseteq U_1 \oplus ... \oplus U_m$, and we conclude 
+
+$$U = U_1 \oplus ... \oplus U_m$$
+
+where $U_k \subseteq E(\lambda_k, T)$.
 
 
 ### (17)
