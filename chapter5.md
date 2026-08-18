@@ -1511,13 +1511,17 @@ By construction, $U_k \subseteq U$, thus $U_1 \oplus ... \oplus U_m \subseteq U$
 
 Now we want to show that $U \subseteq U_1 \oplus ... \oplus U_m$.
 
-Suppose $u \in U$. Since $T$ is diagonalizable, $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m)$ by 5.55. We can write 
+Suppose $u \in U$. Since $T$ is diagonalizable, $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$ by 5.55. We can write 
 
-$$u = u_1 + ... + u_m, u_k \in E(\lambda_k, T), k = 1, ..., m.$$
+$$u = u_1 + ... + u_m$$
+
+where
+
+$$u_k \in E(\lambda_k, T), k = 1, ..., m.$$
 
 For each $k = 1, ..., m$, define a polynomial 
 
-$$p_k(z) = \frac{q_k(z)}{s}$$
+$$p_k(z) = \frac{q_k(z)}{s_k}$$
 
 where 
 
@@ -1527,6 +1531,8 @@ and
 
 $$s_k = \prod_{j \neq k} (\lambda_k - \lambda_j) .$$
 
+Since $\lambda_1, ..., \lambda_k$ are distinct eigenvalues, $s_k \neq 0$.
+
 By 5.17, the order does not matter in taking products of polynomials of a single operator. Since $u_k \in E(\lambda_k, T)$, $(T - \lambda_k) u_k = 0$. Thus $q_k(T)$ is used to eliminate the $u_j$ terms where $j \neq k$.
 
 $$
@@ -1535,25 +1541,28 @@ q_k(T) u
     &= q_k(T) (u_1 + ... + u_m) \\
     &= q_k(T) u_1 + ... + q_k(T) u_m \\
     &= \sum_{k=1}^m \prod_{j \neq k} (T - \lambda_j) u_k \\
+    &= \prod_{j \neq k} (T - \lambda_j) u_k
     &= q_k(T) u_k
 \end{aligned}
 $$
 
 Once we isolate $u_k$, we see that 
 
-$$q_k(T) u_k = \prod_{j \neq k} (z - \lambda_j) v_k = \prod_{j \neq k} (\lambda_k - \lambda_j) u_k$$
+$$q_k(T) u_k = \prod_{j \neq k} (T - \lambda_j) v_k = \prod_{j \neq k} (\lambda_k - \lambda_j) u_k$$
 
-thus the definition of $q_k(z)$ and $s_k(z)$ make sense and
+thus the definition of $q_k(z)$ and $s_k$ make sense and
 
 $$p_k(T) u = u_k.$$
 
-Since $U$ is invariant, $Tu \in U$. We claim that $U$ is invariant under $p(T)$ for any polynomial $p$. Note that $U$ is invariant under powers of $T$ ($T^a$ for positive interger $a$). Since $U$ is a subspace, it is closed under addition and scalar multiplication. 
+Since $U$ is invariant, $Tu \in U$. We claim that $U$ is invariant under $p(T)$ for any polynomial $p$. Note that $U$ is invariant under powers of $T$ ($T^a$ for positive interger $a$). Since $U$ is a subspace, it is closed under addition and scalar multiplication. Thus 
 
-Thus $p_k(T) u \in U$. Thus $u_k \in U$. 
+$$u_k = p_k(T) u \in U.$$ 
 
-Since $u_k \in E(\lambda_k, T)$ and $u_k \in U$, $u_k \in U_k$. 
+Since $u_k \in E(\lambda_k, T)$ and $u_k \in U$, 
 
-Hence $u = u_1 + ... + u_m$ where $u_k \in U_k$, $k = 1, ..., m$. 
+$$u_k \in U \cap E(\lambda_k, T) = U_k.$$
+
+Hence we have written $u = u_1 + ... + u_m$ where $u_k \in U_k$, $k = 1, ..., m$. 
 
 We have $U \subseteq U_1 \oplus ... \oplus U_m$, and we conclude 
 
@@ -1574,5 +1583,23 @@ where $U_k \subseteq E(\lambda_k, T)$.
 --------------------------------------------------------------------------------
 # 5E Commuting Operators
 
+
+
+### 5.74
+
+
+### 5.75
+
+
+### 5.76
+
+
+### 5.78
+
+
+### 5.80
+
+
+### 5.81
 
 
