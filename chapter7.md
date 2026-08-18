@@ -1955,9 +1955,85 @@ Hence $\sqrt{T} v = 0$. Thus $Tv = \sqrt{T} (\sqrt{T} v) = 0$, as desired.
 
 ## Exercises
 
-### (1)
+### (1) Suppose $T \in L(V)$. Prove that if both $T$ and $-T$ are positive operators, then $T = 0$.
 
-### (2)
+Suppose $T$ and $-T$ are positive operators. Then 
+
+$$\langle Tv, v \rangle \geq 0$$
+
+and
+
+$$\langle (-T)v, v \rangle = - \langle Tv, v \rangle \geq 0$$
+
+for all $v \in V$. 
+
+From the two inequalities we conclude
+
+$$\langle Tv, v \rangle = 0$$
+
+for all $v \in V$.
+
+Since $T$ is positive, hence self-adjoint (by definition), $T = 0$ by 7.16.
+
+
+
+### (2) Suppose $T \in L(F^4)$ is the operator whose matrix (with respect to the standard basis) is $M$ (below). Show that $T$ is an invertible positive operator.
+
+$$
+M =
+\begin{pmatrix}
+    2 & -1 & 0 & 0 \\
+    -1 & 2 & -1 & 0 \\
+    0 & -1 & 2 & -1 \\
+    0 & 0 & -1 & 2
+\end{pmatrix}
+$$
+
+First note that the matrix is real symmetric, thus $T$ is self-adjoint.
+
+Suppose $(z_1, z_2, z_3, z_4) \in F^4$. We have
+
+$$
+\begin{aligned}
+\langle T(z_1, z_2, z_3, z_4), (z_1, z_2, z_3, z_4) \rangle 
+    &= 
+    \langle 
+        \begin{pmatrix}
+            2 z_1 - z_2 \\
+            -z_1 + 2z_2 - z_3 \\
+            -z_2 + 2z_3 - z_4 \\
+            -z_3 + 2z_4
+        \end{pmatrix}
+        ,
+        \begin{pmatrix}
+            z_1 \\
+            z_2 \\
+            z_3 \\
+            z_4
+        \end{aligned}
+    \rangle 
+    \\
+    &= (2z_1 - z_2) \overline{z_1} + (-z_1 + 2z_2 - z_3) \overline{z_2} + (-z_2 + 2z_3 - z_4) \overline{z_3} + (-z_3 + 2z_4) \overline{z_4} \\
+    &= 2 |z_1|^2 - 2 Re(\overline{z_1} z_2) + 2 |z_2|^2 - 2 Re(\overline{z_2} z_3) + 2 |z_3|^2 - 2 Re(\overline{z_3} z_4) + 2 |z_4|^2 \\
+    &= |z_1 - z_2|^2 + |z_2 - z_3|^2 + |z_3 - z_4|^2 + |z_1|^2 + |z_4|^2 \\
+    &\geq 0
+\end{aligned}
+$$
+
+Hence $T$ is a positive operator.
+
+Next we want to show that $T$ is invertible.
+
+Suppose $Tv = 0$ for some $v = (z_1, z_2, z_3, z_4) \in F^4$. 
+
+Then $\langle Tv, v \rangle = 0$, and 
+
+$$|z_1 - z_2|^2 + |z_2 - z_3|^2 + |z_3 - z_4|^2 + |z_1|^2 + |z_4|^2 = 0.$$
+
+Then $z_1 = 0$, $z_4 = 0$, which implies $z_2 = z_3 = 0$. Thus $v = 0$. 
+
+Therefore $T$ is injective. By 3.65, $T$ is invertible.
+
 
 ### (3)
 
