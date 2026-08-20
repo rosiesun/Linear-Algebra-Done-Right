@@ -2035,20 +2035,198 @@ Then $z_1 = 0$, $z_4 = 0$, which implies $z_2 = z_3 = 0$. Thus $v = 0$.
 Therefore $T$ is injective. By 3.65, $T$ is invertible.
 
 
-### (3)
 
-### (4)
+### (3) Suppose $n$ is a positive integer and $T \in L(F^n)$ is the operator whose matrix (with respect to the standard basis) consists of all 1's. Show that $T$ is a positive operator.
 
-### (5)
+First note that $T$ is self-adjoint because the matrix is real symmetric.
 
-### (6)
+Suppose $z = (z_1, ..., z_n) \in F^n$. We have
 
-### (7)
+$$
+\begin{aligned}
+\langle Tz, z \rangle 
+&= 
+\langle
+    \begin{pmatrix}
+    z_1 + ... + z_n \\
+    ... \\
+    z_1 + ... + z_n 
+    \end{pmatrix}
+    ,
+    \begin{pmatrix}
+    z_1 \\
+    ... \\
+    z_n 
+    \end{pmatrix}
+\rangle 
+\\
+&= \overline{z_1} (z_1 + ... + z_n) + ... + \overline{z_n} (z_1 + ... + z_n) \\
+&= \overline{z_1 + ... + z_n} (z_1 + ... + z_n) \\
+&= |z_1 + ... + z_n|^2 \\
+&\geq 0
+\end{aligned}
+$$
 
-### (9)
-
-### (10)
+Hence $T$ is a positive operator.
 
 
 
+### (4) Suppose $n$ is an integer with $n > 1$. Show that there exists an n-by-n matrix $A$ such that all of the entries of $A$ are positive numbers and $A = A^\ast$, but the operator on $F^n$ whose matrix (with respect to the standard basis) equals $A$ is not a positive operator.
+
+Consider the 2-by-2 matrix
+
+$$
+A = 
+\begin{pmatrix}
+1 & 2 \\
+2 & 1
+\end{pmatrix}
+$$
+
+
+
+### (5) Suppose $T$ is self-adjoint. Prove that $T$ is a positive operator if and only if for every orthonormal basis $e_1, ..., e_n$ of $V$, all entries on the diagonal of $M(T, (e_1, ..., e_n))$ are nonnegative numbers.
+
+$\Rightarrow$
+Suppose $T$ is a positive operator. Then $\langle Tv, v \rangle \geq 0$ for all $v \in V$.
+
+For $k = 1, ..., n$, we have 
+
+$$T e_k = \langle Te_k, e_1 \rangle e_1 + ... + \langle Te_k, e_n \rangle e_n$$
+
+by the definition of the matrix 3.31 and 6.30.
+
+The diagonal entries of $M(T, (e_1, ..., e_n))$ are $\langle Te_k, e_k \rangle$ for $k = 1, ..., n$. 
+
+Since $\langle Tv, v \rangle \geq 0$ for all $v \in V$, the diagonal entries of $M(T, (e_1, ..., e_n))$ are nonnegative. 
+
+$\Leftarrow$
+Suppose for every orthonormal basis $e_1, ..., e_n$ of $V$, all entries on the diagonal of $M(T, (e_1, ..., e_n))$ are nonnegative numbers.
+
+Since $T$ is self-adjoint, by the spectral theorem (7.31) $T$ has a diagonal matrix with respect to some orthonormal basis of $V$. 
+
+By assumption, the diagonal entries of this matrix are nonnegative. Note that the diagonal entries of this matrix are the eigenvalues of $T$. Thus we conclude that the eigenvalues of $T$ are nonnegative. 
+
+By 7.38(b), $T$ is a positive operator.
+
+
+
+### (6) Prove that the sum of two positive operators on $V$ is a positive operator.
+
+Suppose $S, T \in L(V)$ are positive operators. Then $S, T$ are self-adjoint.
+
+We have 
+
+$$(S + T)^\ast = S^\ast + T^\ast = S + T.$$
+
+Thus $S + T$ is self-adjoint.
+
+By execise (5) applied to $S$ and $T$, for every orthonormal basis $e_1, ..., e_n$ of $V$, all entries on the diagonal of $M(T, (e_1, ..., e_n))$ and $M(S, (e_1, ..., e_n))$ are nonnegative numbers.
+
+Then for any orthonormal basis $e_1, ..., e_n$ of $V$, we have
+
+$$M(S+T, (e_1, ..., e_n)) = M(S, (e_1, ..., e_n)) + M(T, (e_1, ..., e_n)).$$
+
+The diagonal entries of $M(S+T)$ are equal to the sum of diagonal entries of $M(S)$ and the diagonal entries of $M(T)$. Thus the diagonal entries of $M(S+T)$ are nonnegative. 
+
+Since $S + T$ is self-adjoint, and for all orthonormal basis of $V$, the diagonal entries of $M(S+T)$ are nonnegative, exercise (5) implies that $S+T$ is a positive operator.
+
+
+
+### (7) Suppose $S \in L(V)$ is an invertible positive operator and $T \in L(V)$ is a positive operator. Prove that $S + T$ is invertible.
+
+Since $S, T$ are positive operators, $\langle Sv, v \rangle \geq 0$ and $\langle Tv, v \rangle \geq 0$ for all $v \in V$.
+
+Suppose $(S + T)v = 0$ for some $v \in V$. 
+
+We have 
+
+$$
+\begin{aligned}
+0 &= \langle (S + T)v, v \rangle \\
+    &= \langle Sv + Tv, v \rangle \\
+    &= \langle Sv, v \rangle + \langle Tv, v \rangle
+\end{aligned}
+$$
+
+Thus $\langle Sv, v \rangle = 0$ and $\langle Tv, v \rangle = 0$.
+
+By 7.43, $Sv = 0$. Since $S$ is invertible, it is injective by 3.65. Thus $v = 0$. 
+
+Therefore $S + T$ is injective. By 3.65, it is invertible.
+
+
+
+### (9) Suppose $T \in L(V)$ is a positive operator and $S \in L(W, V)$. Prove that $S^\ast TS$ is a positive operator on $W$.
+
+Since $T$ is positive, $T$ is self-adjoint. We have 
+
+$$(S^\ast TS)^\ast = S^\ast T^\ast (S^\ast)^\last = S^\ast T S.$$
+
+Thus $S^\ast TS$ is self-adjoint.
+
+Since $T$ is positive, $\langle Tv, v \rangle \geq 0$ for all $v \in V$.
+
+Suppose $w \in W$. We have
+
+$$
+\begin{aligned}
+\langle (S^\ast TS)w, w \rangle 
+    &= \langle S^\ast (TSw), w \rangle \\
+    &= \langle (TS)w, Sw \rangle \\
+    &= \langle T(Sw), (Sw) \rangle \\
+    &\geq 0
+\end{aligned}
+$$
+
+where the inequality follows because $Sw \in V$ so the assumption that $T$ being a positive operator applies.
+
+Hence $S^\ast TS$ is a positive operator.
+
+
+
+### (10) Suppose $T$ is a positive operator on $V$. Suppose $v, w \in V$ are such that $Tv = w$ and $Tw = v$. Prove that $v = w$.
+
+Since $T$ is a positive operator, by 7.38 all eigenvalues of $T$ are nonnegative.
+
+We have
+
+$$T(v - w) = Tv - Tw = w - v = -1 (v - w).$$
+
+If $v - w \neq 0$, then -1 would be an eigenvalue of $T$ which contradicts the fact that $T$ is positive. Thus $v - w = 0$. 
+
+
+
+### (11) Suppose $T$ is a positive operator on $V$ and $U$ is a subspace of $V$ invariant under $T$. Prove that $T|_U \in L(U)$ is a positive operator on $U$.
+
+Since $T$ is a positive operator on $V$, $T$ is self-adjoint. 
+
+By exercise (19) from Section 7B, $T|_U \in L(U)$ is self-adjoint.
+
+We have
+
+$$\langle T|_U u, u \rangle = \langle Tu, u \rangle \geq 0$$
+
+for all $u \in U$.
+
+Hence $T|_U$ is a positive operator on $U$.
+
+
+
+### (13)
+
+
+### (16)
+
+
+### (18)
+
+
+### (20)
+
+
+### (22)
+
+
+### (24)
 
