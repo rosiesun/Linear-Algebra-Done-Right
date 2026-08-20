@@ -2010,7 +2010,7 @@ $$
             z_2 \\
             z_3 \\
             z_4
-        \end{aligned}
+        \end{pmatrix}
     \rangle 
     \\
     &= (2z_1 - z_2) \overline{z_1} + (-z_1 + 2z_2 - z_3) \overline{z_2} + (-z_2 + 2z_3 - z_4) \overline{z_3} + (-z_3 + 2z_4) \overline{z_4} \\
@@ -2161,7 +2161,7 @@ Therefore $S + T$ is injective. By 3.65, it is invertible.
 
 Since $T$ is positive, $T$ is self-adjoint. We have 
 
-$$(S^\ast TS)^\ast = S^\ast T^\ast (S^\ast)^\last = S^\ast T S.$$
+$$(S^\ast TS)^\ast = S^\ast T^\ast (S^\ast)^\ast = S^\ast T S.$$
 
 Thus $S^\ast TS$ is self-adjoint.
 
