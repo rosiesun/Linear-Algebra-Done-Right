@@ -1691,8 +1691,7 @@ Suppose $e_1, ..., e_m$ is an orthonormal basis of $U$. We can extend to an orth
 We have 
 
 $$
-M(T, (e_1, ..., e_m, e_{m+1}, ..., e_n))
-=
+M(T, (e_1, ..., e_m, e_{m+1}, ..., e_n)) =
 \begin{pmatrix}
 a_{1,1} & ... & a_{1,m} & a_{1, m+1} & ... & b_{1,n} \\
 a_{2,1} & ... \\
