@@ -949,8 +949,32 @@ For m and n positive integers, the set of all m-by-n matrices with entries in $F
 Suppose m and n are positive integers. With addition and scalar multiplication defined as above, $F^{m,n}$ is a vector space of dimension mn. 
 
 
+### 3.41 Definition: matrix multiplication
+Suppose $A$ is a m-by-n matrix and $B$ is an n-by-p matrix. Then $AB$ is defined to be the m-by-p matrix whose entry in row j, column k is given by the equation 
+
+$$(AB)_{j, k} = \sum_{r=1}^n A_{j, r} B_{r, k} .$$
+
+Thus the entry in row j, column k, of $AB$ is computed taking row j of $A$ and column k of $B$, multiplying together corresponding entries, and then summing.
+
+
 ### 3.43
 If $T \in L(U,V)$ and $S \in L(V,W)$, then $M(ST) = M(S)M(T)$.
+
+
+### 3.48
+Suppose $A$ is an m-by-n matrix and $B$ is an n-by-p matrix. Then
+
+$$(AB)_{., k} = A B_{., k}$$
+
+if $1 \leq k \leq p$. In other words, column k of $AB$ equals $A$ times column k of $B$.
+
+
+### 3.50
+Suppose $A$ is an m-by-n matrix and $b = (b_1, ..., b_n)$ is an n-by-1 matrix. Then 
+
+$$Ab = b_1 A_{., 1} + ... + b_n A_{., n} .$$
+
+In other words, $Ab$ is a linear combination of the columns of $A$, with the scalars that multiply the columns coming from $b$.
 
 
 ### 3.52 Definition: column rank, row rank
