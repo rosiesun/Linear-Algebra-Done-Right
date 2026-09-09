@@ -1,5 +1,5 @@
 Linear Algebra Done Right - Chapter 5 Eigenvalues and Eigenvectors <br>
-Section C, D, E
+5C, 5D, 5E
 ================
 Rosie Sun <br>
 2026-04-21
