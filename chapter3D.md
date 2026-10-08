@@ -246,7 +246,7 @@ Therefore $ST$ is invertible and $T^{-1} S^{-1}$ is the inverse of $ST$.
 
 ### (3) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that the following are equivalent. (a) $T$ is invertible. (b) $Tv_1, ..., Tv_n$ is a basis of $V$ for every basis $v_1, ..., v_n$ of $V$. (c) $Tv_1, ..., Tv_n$ is a basis of $V$ for some basis $v_1, ..., v_n$ of $V$.
 
-(a) $\rightarrow$ (b)
+(a) $\to$ (b)
 Suppose $T$ is invertible. Suppose $v_1, ..., v_n$ is a basis of $V$. Since $Tv_1, ..., Tv_n$ is a list of length $n = dim V$, we just need to show that $Tv_1, ..., Tv_n$ is linearly independent. 
 
 Suppose $a_1 Tv_1 + ... + a_n Tv_n = 0$ for some $a_1, ..., a_n \in F$. Then $T (a_1 v_1 + ... + a_n v_n) = 0$. 
@@ -255,9 +255,9 @@ Since $T$ is invertible, $T$ is injective by 3.63, $null T = \\{0\\}$ by 3.15, t
 
 Since $v_1, ..., v_n$ is a basis of $V$, $a_1 = ... = a_n = 0$. Hence $Tv_1, ..., Tv_n$ is linearly independent in $V$. Thus (b) holds.
 
-(b) $\rightarrow$ (c) follows immediately.
+(b) $\to$ (c) follows immediately.
 
-(c) $\rightarrow$ (a)
+(c) $\to$ (a)
 Suppose $Tv_1, ..., Tv_n$ is a basis of $V$ for some basis $v_1, ..., v_n$ of $V$. 
 
 Suppose $Tv = 0$ for some $v \in V$. Since $v_1, ..., v_n$ is a basis, $v = b_1 v_1 + ... + b_n v_n$ for some $b_1, ..., b_n \in F$. Then 
@@ -350,7 +350,7 @@ Hence we conclude that $null S = null T$.
 $\Rightarrow$
 Suppose $null S = null T$.
 
-Define $\Gamma: range T \rightarrow range S$ such that 
+Define $\Gamma: range T \to range S$ such that 
 
 $$\Gamma(Tv) = Sv.$$
 
@@ -473,7 +473,7 @@ Since $TE$ and $S$ agree on each basis vector, $TE = S$.
 $\Rightarrow$
 Suppose there exist invertible $E_1 \in L(V)$ and $E_2 \in L(W)$ such that $S = E_2 T E_1$.
 
-Consider $E_1|_{null S}: null S \rightarrow null T$. We want to show that it is an isomorphism from $null S$ onto $null T$.
+Consider $E_1|_{null S}: null S \to null T$. We want to show that it is an isomorphism from $null S$ onto $null T$.
 
 Suppose $v \in null S$. Then 
 
@@ -481,19 +481,19 @@ $$0 = Sv = E_2 T E_1 v.$$
 
 Since $E_2$ is invertible, it is injective. Then $T E_1 v = 0$, and $E_1 v \in null T$.
 
-The image of $E_1|_{null S}$ lands in $null T$, so $E_1|_{null S}: null S \rightarrow null T$ is well-defined.
+The image of $E_1|_{null S}$ lands in $null T$, so $E_1|_{null S}: null S \to null T$ is well-defined.
 
 Since $E_1$ is invertible, it is injective. Thus the restriction $E_1|_{null S}$ is also injective.
 
 Suppose $w \in null T$. 
 
-Since $E_1: V \rightarrow V$ is surjective, there exists $v \in V$ such that $E_1 v = w$. We have
+Since $E_1: V \to V$ is surjective, there exists $v \in V$ such that $E_1 v = w$. We have
 
 $$E_2 T E_1 v = E_2 T (E_1 v) = E_2 T w = E_2 (0) = 0 = Sv.$$
 
 Thus $v \in null S$, and $E_1 v = w$. Hence $E_1|_{null S}$ is surjective onto $null T$. 
 
-Since $E_1|_{null S}: null S \rightarrow null T$ is injective and surjective, it is an isomorphism from $null S$ onto $null T$. Hence $null S$ and $null T$ are isomorphic, and $dim null S = dim null T$ by 3.70.
+Since $E_1|_{null S}: null S \to null T$ is injective and surjective, it is an isomorphism from $null S$ onto $null T$. Hence $null S$ and $null T$ are isomorphic, and $dim null S = dim null T$ by 3.70.
 
 $\Leftarrow$
 Suppose $dim null S = dim null T$.
@@ -553,7 +553,7 @@ Thus $S = E_2 T E_1$.
 
 
 
-### (9) Suppose $V$ is finite-dimensional and $T: V \rightarrow W$ is a surjective linear map of $V$ onto $W$. Prove that there is a subspace $U$ of $V$ such that $T|_U$ is an isomorphism of $U$ onto $W$.
+### (9) Suppose $V$ is finite-dimensional and $T: V \to W$ is a surjective linear map of $V$ onto $W$. Prove that there is a subspace $U$ of $V$ such that $T|_U$ is an isomorphism of $U$ onto $W$.
 
 Since $V$ is finite-dimensional, $range T$ is finite-dimensional. 
 

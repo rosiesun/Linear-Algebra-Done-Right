@@ -261,7 +261,7 @@ Dividing both sides by $t$,
 
 $$0 \leq -2 |\lambda|^2 + t |\lambda|^2 \lVert v \rVert^2$$
 
-For small $t$, $t \rightarrow 0^+$, we have $0 \leq -2 |\lambda|^2$, which forces $|\lambda|^2 = 0$. Thus $\lambda = \langle u,v \rangle=0$.
+For small $t$, $t \to 0^+$, we have $0 \leq -2 |\lambda|^2$, which forces $|\lambda|^2 = 0$. Thus $\lambda = \langle u,v \rangle=0$.
 
 
 

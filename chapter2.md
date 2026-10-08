@@ -51,7 +51,7 @@ A vector space is called finite-dimensional if some list of vectors in it spans 
 
 
 ### 2.10 Definition: polynomial
-A function $p: F \rightarrow F$ is called a polynomial with coefficients in $F$ if there exist $a_0, ..., a_m \in F$ such that $p(z) = a_0 + a_1 z + a_2 z^2 + ... a_m z^m$ for all $z \in F$. $P(F)$ is the set of all polynomials with coefficients in $F$.
+A function $p: F \to F$ is called a polynomial with coefficients in $F$ if there exist $a_0, ..., a_m \in F$ such that $p(z) = a_0 + a_1 z + a_2 z^2 + ... a_m z^m$ for all $z \in F$. $P(F)$ is the set of all polynomials with coefficients in $F$.
 
 
 ### 2.15 Definition: linearly independent

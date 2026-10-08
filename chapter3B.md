@@ -32,7 +32,7 @@ We have shown that $null T$ contains 0, and is closed under addition and scalar 
 
 
 ### 3.14 Definition: injective
-A function $T:V \rightarrow W$ is called injective if $Tv = Tu$ implies $u=v$.
+A function $T:V \to W$ is called injective if $Tv = Tu$ implies $u=v$.
 
 
 ### 3.15
@@ -84,7 +84,7 @@ We have shown that $range T$ contains 0, and is closed under addition and scalar
 
 
 ### 3.19 Definition: surjective
-A function $T: V \rightarrow W$ is called surjective if its range equals $W$.
+A function $T: V \to W$ is called surjective if its range equals $W$.
 
 
 ### 3.21 Fundamental theorem of linear maps
@@ -331,7 +331,7 @@ Given the definition of $null T$, a basis of $null T$ is $(5,1,0,0), (0,0,7,1)$,
 
 $$dim range T = dim (F^4) - dim null T = 4-2=2$$
 
-Since $T: F^4 \rightarrow F^2$ and $dim range T = dim F^2 = 2$, we have $range T = F^2$.
+Since $T: F^4 \to F^2$ and $dim range T = dim F^2 = 2$, we have $range T = F^2$.
 
 By definition, $range T$ is surjective.
 
@@ -339,7 +339,7 @@ By definition, $range T$ is surjective.
 
 ### (16) Suppose $V$ and $W$ are both finite-dimensional. Prove that there exists an injective linear map from $V$ to $W$ if and only if $dim V \leq dim W$.
 
-$\rightarrow$
+$\to$
 Let $T \in L(V,w)$. Assume $T$ is injective. Then $null T = \\{0\\}$ and $dim null T = 0$.
 
 Therefore $$dim V = dim null T + dim range T = dim range T \leq dim W$$

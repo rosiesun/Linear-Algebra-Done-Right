@@ -5,7 +5,7 @@ Rosie Sun <br>
 2026-04-02
 
 
-We know that if $v_1,...,v_n$ is a basis of $V$ and $T: V \rightarrow W$ is linear, then the values of $Tv_1,...,Tv_n$ determine the values of $T$ on arbitrary vectors in $V$ - see the linear map lemma 3.4. As we will soon see, matrices provided an efficient method of recording the values of the $Tv_k$'s in terms of a basis of $W$.
+We know that if $v_1,...,v_n$ is a basis of $V$ and $T: V \to W$ is linear, then the values of $Tv_1,...,Tv_n$ determine the values of $T$ on arbitrary vectors in $V$ - see the linear map lemma 3.4. As we will soon see, matrices provided an efficient method of recording the values of the $Tv_k$'s in terms of a basis of $W$.
 
 
 ### 3.29 Definition: matrix

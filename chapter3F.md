@@ -276,7 +276,7 @@ Suppose $A \in F^{m, n}$. Then the column rank of $A$ equals the row rank of $A$
 
 Proof:
 
-Define $T: F^{n, 1} \rightarrow F^{m,1}$ by $Tx = Ax$. Thus $M(T) = A$, where $M(T)$ is computed with respect to the standard bases of $F^{n,1}$ and $F^{m,1}$. Now
+Define $T: F^{n, 1} \to F^{m,1}$ by $Tx = Ax$. Thus $M(T) = A$, where $M(T)$ is computed with respect to the standard bases of $F^{n,1}$ and $F^{m,1}$. Now
 
 column rank of $A$ = column rank of $M(T)$ = dim range $T$ 
 
@@ -380,7 +380,7 @@ for all $\phi \in W', v \in V$. Thus $(\lambda T)' = \lambda T'$.
 
 ### (13) Show that the dual map of the identity operator on $V$ is the identity operator on $V'$.
 
-Suppose $\phi \in V', v \in V$. We have $I': V' \rightarrow V'$ such that 
+Suppose $\phi \in V', v \in V$. We have $I': V' \to V'$ such that 
 
 $$I'(\phi)(v) = (\phi \circ I)(v) = \phi(Iv) = \phi(v)$$
 
@@ -390,14 +390,14 @@ Thus $I'(\phi) = \phi$ for all $\phi \in V'$ and $I'$ is the identity operator o
 
 
 
-### (14) Define $T: R^3 \rightarrow R^2$ by $T(x,y,z) = (4x + 5y + 6z, 7x + 8y + 9z)$. Suppose $\phi_1,\phi_2$ denotes the dual basis of the standard basis of $R^2$ and $\psi_1,\psi_2,\psi_3$ denotes the dual basis of the standard basis of $R^3$.
+### (14) Define $T: R^3 \to R^2$ by $T(x,y,z) = (4x + 5y + 6z, 7x + 8y + 9z)$. Suppose $\phi_1,\phi_2$ denotes the dual basis of the standard basis of $R^2$ and $\psi_1,\psi_2,\psi_3$ denotes the dual basis of the standard basis of $R^3$.
 
 #### (a) Describe the linear functionals $T'(\phi_1)$ and $T'(\phi_2)$.
 
 #### (b) Write $T'(\phi_1)$ and $T'(\phi_2)$ as linear combinations of $\psi_1,\psi_2,\psi_3$.
 
 
-### (15) Define $T: P(R) \rightarrow P(R)$ by $(Tp)(x) = x^2 p(x) + p''(x)$ for each $x \in R$. 
+### (15) Define $T: P(R) \to P(R)$ by $(Tp)(x) = x^2 p(x) + p''(x)$ for each $x \in R$. 
 
 #### (a) Suppose $\phi \in P(R)'$ is defined by $\phi(p) = p'(4)$. Describe the linear functional $T'(\phi)$ on $P(R)$.
 
@@ -433,7 +433,7 @@ The other direction can be shown by applying the same reasoning with $T'$ in pla
 
 ### (18) Suppose $V$ and $W$ are finite-dimensional. Prove that the map that takes $T \in L(V, W)$ to $T' \in L(W', V')$ is an isomorphism of $L(V, W)$ onto $L(W', V')$.
 
-Define $F: T \rightarrow T'$. First $F$ is linear by 3.120.
+Define $F: T \to T'$. First $F$ is linear by 3.120.
 
 Exercise 16 showed that $T' = 0 \iff T = 0$, hence $F$ is injective. We have $dim L(V, W) = dim L(W', V')$ because $dim L(V, W) = (dim V)(dim W)$ and $dim L(W', V') = (dim W') (dim V') = (dim W) (dim V)$ by 3.111 and 3.72. Thus $F$ is surjective and invertible by 3.65. We conclude that $F$ is an isomorphism.
 
@@ -451,7 +451,7 @@ Suppose $\phi \in U^0 \cap W^0$. Then $\phi(u) = 0$ for all $u \in U$ and $\phi(
 
 
 
-### (24) Suppose $V$ is finite-dimensional and $v_1,...,v_m \in V$. Define a linear map $\Gamma: V' \rightarrow F^m$ by $\Gamma(\phi) = (\phi(v_1),...,\phi(v_m))$.
+### (24) Suppose $V$ is finite-dimensional and $v_1,...,v_m \in V$. Define a linear map $\Gamma: V' \to F^m$ by $\Gamma(\phi) = (\phi(v_1),...,\phi(v_m))$.
 
 #### (a) Prove that $v_1,...,v_m$ spans $V$ if and only if $\Gamma$ is injective.
 
@@ -498,7 +498,7 @@ We conclude that $v_1,...,v_m$ is linearly independent.
 
 
 
-### (25) Suppose $V$ is finite-dimensional and $\phi_1,...,\phi_m \in V'$. Define a linear map $\Gamma: V \rightarrow F^m$ by $\Gamma(v) = (\phi_1(v), ..., \phi_m(v))$.
+### (25) Suppose $V$ is finite-dimensional and $\phi_1,...,\phi_m \in V'$. Define a linear map $\Gamma: V \to F^m$ by $\Gamma(v) = (\phi_1(v), ..., \phi_m(v))$.
 
 #### (a) Prove that $\phi_1,...,\phi_m$ spans $V'$ if and only if $\Gamma$ is injective.
 
@@ -554,7 +554,7 @@ Thus $dim null \psi = dim null T = n-1$ and together with the fact that $null T 
 
 
 
-### (31) Suppose $U$ is a subspace of $V$. Let $i: U \rightarrow V$ be the inclusion map defined by $i(u) = u$. Thus $i' \in L(V', U')$. 
+### (31) Suppose $U$ is a subspace of $V$. Let $i: U \to V$ be the inclusion map defined by $i(u) = u$. Thus $i' \in L(V', U')$. 
 
 #### (a) Show that $null i' = U^0$. 
 
@@ -594,7 +594,7 @@ From 3.107, $i'$ is an isomorphism from $V' / (null i')$ onto $range i'$. Since 
 
 
 
-### (33) Suppose $U$ is a subspace of $V$. Let $\pi: V \rightarrow V/U$ be the usual quotient map. Thus $\pi' \in L((V/U)', V')$.
+### (33) Suppose $U$ is a subspace of $V$. Let $\pi: V \to V/U$ be the usual quotient map. Thus $\pi' \in L((V/U)', V')$.
 
 #### (a) Show that $\pi'$ is injective.
 
@@ -668,5 +668,5 @@ Hence $\psi = \pi'(\phi)$, and $\pi'$ is surjective.
 
 #### (c) Conclude that $\pi'$ is an isomorphism from $(V/U)'$ onto $U^0$.
 
-From part (a) and (b), $\pi': (V/U)' \rightarrow U^0$ is injective and surjective. We conclude that $\pi'$ is an isomorphism from $(V/U)'$ onto $U^0$.
+From part (a) and (b), $\pi': (V/U)' \to U^0$ is injective and surjective. We conclude that $\pi'$ is an isomorphism from $(V/U)'$ onto $U^0$.
 

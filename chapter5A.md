@@ -475,7 +475,7 @@ By 5.12, $T$ has at most $dim V$ distinct eigenvalues.
 
 If $dim null T = 0$, then $dim V = dim range T$, so $T$ has at most $dim range T$ eigenvalues.
 
-If $dim null T \neq 0$, then 0 is an eigenvalue of $T$. $range T$ is invariant under $T$ by 5.4. Applying 5.12 to the restriction $T:range T \rightarrow range T$, $T|_{range T}$ has at most $dim range T$ distinct eigenvaluges. Therefore $T$ has at most $1 + dim range T$ eigenvalues.
+If $dim null T \neq 0$, then 0 is an eigenvalue of $T$. $range T$ is invariant under $T$ by 5.4. Applying 5.12 to the restriction $T:range T \to range T$, $T|_{range T}$ has at most $dim range T$ distinct eigenvaluges. Therefore $T$ has at most $1 + dim range T$ eigenvalues.
 
 
 
@@ -573,7 +573,7 @@ $$
 \end{aligned}
 $$
 
-Thus $T/U$ satisfies additivity and homogeneity. Since $(T/U): V/U \rightarrow V/U$, $T/U$ is an operator on $V/U$.
+Thus $T/U$ satisfies additivity and homogeneity. Since $(T/U): V/U \to V/U$, $T/U$ is an operator on $V/U$.
 
 
 #### (b) Show that each eigenvalue of $T/U$ is an eigenvalue of $T$.
@@ -594,7 +594,7 @@ Assume towards contradiction that $\lambda$ is not an eigenvalue of $T$. Then $T
 
 Note that $U$ is invariant under $T - \lambda I$ since for any $u \in U$, $(T - \lambda I) u = Tu - \lambda u \in U$. 
 
-Consider the restriction $(T - \lambda I)|_U: U \rightarrow U$. Then $(T - \lambda I)|_U$ is injective. Since $V$ is finite-dimensional, $U$ is finite-dimensional, and thus $(T - \lambda I)|_U$ is surjective from $U$ onto $U$. 
+Consider the restriction $(T - \lambda I)|_U: U \to U$. Then $(T - \lambda I)|_U$ is injective. Since $V$ is finite-dimensional, $U$ is finite-dimensional, and thus $(T - \lambda I)|_U$ is surjective from $U$ onto $U$. 
 
 Since $Tv - \lambda v \in U$, there exists some $w \in U$ such that $(T - \lambda I) w = (T - \lambda I) v$. Then $(T - \lambda I)|_U (v - w) = 0$. Since $T - \lambda I$ is injective, $v - w = 0$. However this is a contradiction since $v \notin U$.
 

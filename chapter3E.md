@@ -32,7 +32,7 @@ $$dim (V_1 \times ... \times V_m) = dim V_1 + ... + dim V_m .$$
 
 
 ### 3.93
-Suppose that $V_1, ..., V_m$ are subspaces of $V$. Define a linear map $\Gamma: V_1 \times ... \times V_m \rightarrow V_1 + ... + V_m$ by
+Suppose that $V_1, ..., V_m$ are subspaces of $V$. Define a linear map $\Gamma: V_1 \times ... \times V_m \to V_1 + ... + V_m$ by
 
 $$\Gamma(v_1, ..., v_m) = v_1 + ... + v_m .$$
 
@@ -178,7 +178,7 @@ Note that the additive identity of $V/U$ is $0 + U$ (which equals $U$) and that 
 
 
 ### 3.104 Definition: quotient map
-Suppose $U$ is a subspace of $V$. The quotient map $\pi: V \rightarrow V/U$ is the linear map defined by 
+Suppose $U$ is a subspace of $V$. The quotient map $\pi: V \to V/U$ is the linear map defined by 
 
 $$\pi(v) = v + U$$
 
@@ -206,7 +206,7 @@ which gives the desired result.
 
 
 ### 3.106 Notation
-Suppose $T \in L(V, W)$. Define $\tilde{T}: V/(null T) \rightarrow W$ by
+Suppose $T \in L(V, W)$. Define $\tilde{T}: V/(null T) \to W$ by
 
 $$\tilde{T} (v + null T) = Tv.$$
 
@@ -504,17 +504,17 @@ Since $w_1 + U, ..., w_m + U$ is a basis of $V/U$, $b_1 = ... = b_m = 0$. Hence 
 
 Since $V = U + W$ and $U \cap W = \\{0\\}$, $V = U \oplus W$ by 1.46.
 
-Consider the linear map $\Gamma: U \times W \rightarrow U + W$. 
+Consider the linear map $\Gamma: U \times W \to U + W$. 
 
 $\Gamma$ is surjective by definition. By 3.93, since $U + W$ is a direct sum, $\Gamma$ is injective. Thus $\Gamma$ is an isomorphism from $U \times W$ onto $U + W$. 
 
-Consider the linear map $\pi: W \rightarrow V/U$. Suppose $w + U \in V/U$. Then 
+Consider the linear map $\pi: W \to V/U$. Suppose $w + U \in V/U$. Then 
 
 $$w + U = c_1 (w_1 + U) + ... + c_m (w_m + U) = (c_1 w_1 + ... + c_m w_m) + U = \pi(c_1 w_1 + ... + c_m w_m)$$ 
 
 for some $c_1, ..., c_m \in F$, $c_1 w_1 + ... + c_m w_m \in W$. Thus $\pi$ is surjective. Since $null \pi = \\{0\\}$ (shown previously), $\pi$ is injective. Thus $\pi$ is an isomorphism from $W$ onto $V/U$. 
 
-Define map $T: U \times W \rightarrow U \times (V/U)$ by $T(u, w) = (u, \pi(w))$. Then $T$ is an isomorphism from $U \times W$ onto $U \times (V/U)$.
+Define map $T: U \times W \to U \times (V/U)$ by $T(u, w) = (u, \pi(w))$. Then $T$ is an isomorphism from $U \times W$ onto $U \times (V/U)$.
 
 Hence $V$ is isomorphic with $U \times V/U$.
 
@@ -554,7 +554,7 @@ $$a_1 v_1 + ... + a_m v_m + b_1 u_1 + ... + b_n u_n = 0$$
 
 for some $a_1, ..., a_m, b_1, ..., b_n \in F$. 
 
-Applying the quotient map $\pi: V \rightarrow V/U$ to both sides, we have
+Applying the quotient map $\pi: V \to V/U$ to both sides, we have
 
 $$
 \begin{aligned}
@@ -584,7 +584,7 @@ $$dim (V / (null \phi)) = dim range \phi = 1.$$
 
 ### (17) Suppose $U$ is a subspace of $V$ such that $dim V/U = 1$. Prove that there exists $\phi \in L(V, F)$ such that $null \phi = U$.
 
-Let $w_1 + U$ be a basis of $V/U$. Define $W = span(w_1)$. We want to show that $V = U \oplus W$ and construct a $\phi: V \rightarrow F$. 
+Let $w_1 + U$ be a basis of $V/U$. Define $W = span(w_1)$. We want to show that $V = U \oplus W$ and construct a $\phi: V \to F$. 
 
 Suppose $v \in V$. Then $v + U \in V/U$, and we can write 
 

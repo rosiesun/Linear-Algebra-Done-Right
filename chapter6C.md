@@ -180,11 +180,11 @@ Suppose $V$ is finite-dimensional. For each $v \in V$, define $\phi_v \in V'$ by
 
 $$\phi_v(u) = \langle u,v \rangle$$
 
-for each $u \in V$. Then $v \rightarrow \phi_v$ is a one-to-one function from $V$ to $V'$.
+for each $u \in V$. Then $v \to \phi_v$ is a one-to-one function from $V$ to $V'$.
 
 Proof:
 
-To show that $v \rightarrow \phi_v$ is surjective, suppose $\phi \in V'$. 
+To show that $v \to \phi_v$ is surjective, suppose $\phi \in V'$. 
 
 If $\phi = 0$, then $\phi = \phi_0$. Thus assume $\phi \neq 0$. Hence $null \phi \neq V$, which implies that $(null \phi)^{\perp} \neq \\{0\\}$ by 6.49.
 
@@ -210,7 +210,7 @@ The term in parentheses above is in $null \phi$ and hence is orthogonal to $v$. 
 
 $$\langle u,v \rangle = \frac{\phi(u)}{\lVert v \rVert^2} \langle v,v \rangle = \phi(u)$$
 
-Thus $\phi = \phi_v$, showing that $v \rightarrow \phi_v$ is surjective, as desired.
+Thus $\phi = \phi_v$, showing that $v \to \phi_v$ is surjective, as desired.
 
 
 ### 6.59
@@ -330,7 +330,7 @@ Therefore $P_X P_Y = 0$.
 
 
 
-### (8) Suppose $U$ is a finite-dimensional subspace of $V$ and $v \in V$. Define a linear functional $\phi: U \rightarrow F$ by $\phi(u) = \langle u, v \rangle$ for all $u \in U$. By the Riesz representation theorem, there exists a unique vector $w \in U$ such that $\phi(u) = \langle u, w \rangle$ for all $u \in U$. Show that $w = P_U v$.
+### (8) Suppose $U$ is a finite-dimensional subspace of $V$ and $v \in V$. Define a linear functional $\phi: U \to F$ by $\phi(u) = \langle u, v \rangle$ for all $u \in U$. By the Riesz representation theorem, there exists a unique vector $w \in U$ such that $\phi(u) = \langle u, w \rangle$ for all $u \in U$. Show that $w = P_U v$.
 
 Since $\phi(u) = \langle u, v \rangle = \langle u, w \rangle$ for all $u \in U$, we have $\langle u, v \rangle - \langle u, w \rangle = \langle u, v-w \rangle = 0$ for all $u \in U$. 
 
@@ -462,7 +462,7 @@ By hypothesis $P_U (Tw) = 0$, thus $Tw \in U^\perp$ by 6.57. Hence $U^\perp$ is 
 
 ### (13) Suppose $F=R$ and $V$ is finite-dimensional. For each $v \in V$, let $\phi_v$ denote the linear functional on $V$ defined by $\phi_v(u) = \langle u,v \rangle$ for all $u \in V$.
 
-#### (a) Show that $v \rightarrow \phi_v$ is an injective linear map from $V$ to $V'$.
+#### (a) Show that $v \to \phi_v$ is an injective linear map from $V$ to $V'$.
 
 Define $T \in L(V, V')$, where $Tv = \phi_v$ where $\phi_v(u) = \langle u,v \rangle$.
 
@@ -485,7 +485,7 @@ Therefore $T(\lambda v) = \lambda Tv$. Thus $T$ is a linear map.
 To show that $T$ is injective, suppose $Tv = 0$. Then $\phi_v = 0$, and $\phi(u) = \langle u, v \rangle= 0$ for all $u \in V$. Taking $u = v$, we have $\langle v, v \rangle = 0$. Hence $v = 0$. Therefore $null T = \\{0\\}$, and $T$ is injective.
 
 
-#### (b) Use (a) and a dimension-counting argument to show that $v \rightarrow \phi_v$ is an isomorphism from $V$ to $V'$.
+#### (b) Use (a) and a dimension-counting argument to show that $v \to \phi_v$ is an isomorphism from $V$ to $V'$.
 
 By 3.111, $dim V = dim V'$. From part (a), $T$ is injective, therefore $T$ is surjective by 3.65. Thus it is an isomorphism.
 

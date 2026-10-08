@@ -195,7 +195,7 @@ Taking square root of both sides,
 $$|wz| = |w| |z|.$$
 
 
-### (3) Suppose $V$ is a complex vector space and $\phi \in V'$. Define $\sigma: V \rightarrow R$ by $\sigma(v) = Re \phi(v)$ for each $v \in V$. Show that $\phi(v) = \sigma(v) - i \sigma(iv)$ for all $v \in V$.
+### (3) Suppose $V$ is a complex vector space and $\phi \in V'$. Define $\sigma: V \to R$ by $\sigma(v) = Re \phi(v)$ for each $v \in V$. Show that $\phi(v) = \sigma(v) - i \sigma(iv)$ for all $v \in V$.
 
 
 ### (4)

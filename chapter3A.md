@@ -6,7 +6,7 @@ Rosie Sun <br>
 
 
 ### 3.1 Definition: linear map
-A linear map from $V$ to $W$ is a function $T:V \rightarrow W$ with the following properties. 
+A linear map from $V$ to $W$ is a function $T:V \to W$ with the following properties. 
 
 Additivity: $T(u+v) = Tu+Tv$ for all $u,v \in V$.
 
@@ -19,11 +19,11 @@ Homogeneity: $T(\lambda v) = \lambda (Tv)$ for all $\lambda in F$ and all $v \in
 
 
 ### 3.4 Linear map lemma
-Suppose $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_n \in W$. Then there exists a unique linear map $T:V \rightarrow W$ such taht $T v_k = w_k$ for each $k = 1,...,n$.
+Suppose $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_n \in W$. Then there exists a unique linear map $T:V \to W$ such taht $T v_k = w_k$ for each $k = 1,...,n$.
 
 Proof:
 
-First we show the existence of a linear map $T$ with the desired property. Define $T: V \rightarrow W$ by
+First we show the existence of a linear map $T$ with the desired property. Define $T: V \to W$ by
 
 $$T(c_1 v_1 + ... + c_n v_n) = c_1 w_1 + ... + c_n w_n$$
 
@@ -182,7 +182,7 @@ Therefore $T$ is multiplication by $\lambda$.
 
 
 
-### (8) Give an example of a function $\phi: R^2 \rightarrow R$ such that $\phi (av) = a \phi(v)$ for all $a \in R$ and $v \in R^2$, but $\phi$ is not linear.
+### (8) Give an example of a function $\phi: R^2 \to R$ such that $\phi (av) = a \phi(v)$ for all $a \in R$ and $v \in R^2$, but $\phi$ is not linear.
 Let $\phi(x,y) = x^2 / y$ if $y \neq 0$, and $\phi(x,y) = 0$ if $y=0$.
 
 When $y \neq 0$, 
@@ -205,7 +205,7 @@ which is not equal to each other.
 
 
 
-### (9) Give an example of a function $\phi: C \rightarrow C$ such that $\phi(w+z) = \phi(w) + \phi(z)$ for all $w, z \in C$ but $\phi$ is not linear. 
+### (9) Give an example of a function $\phi: C \to C$ such that $\phi(w+z) = \phi(w) + \phi(z)$ for all $w, z \in C$ but $\phi$ is not linear. 
 Let $\phi(z)=Re(z)$. First we show that it satisfies linearity. 
 
 Let $w=a+bi, z=c+di$. We have 
@@ -223,7 +223,7 @@ Therefore $\phi$ is not linear.
 
 
 ### (11) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that $T$ is a scalar multiple of the identity if and only if $ST=TS$ for every $S \in L(V)$.
-$\rightarrow$
+$\to$
 
 Let $T = aI \in L(V), v \in V, S \in L(v)$. Then $Tv = (aI)v = a(Iv) = av$. We have 
 
@@ -253,13 +253,13 @@ Then $a_i = a_j, i,j=1,...,n$. Hence $T = aI$.
 
 
 
-### (12) Suppose $U$ is a subspace of $V$ with $U \neq V$. Suppose $S \in L(U,W)$ and $S \neq 0$. Define $T: V \rightarrow W$ by $Tv = Sv$ if $v \in U$ and $Tv = 0$ if $v \in V, v \notin U$. Prove that $T$ is not a linear map on $V$.
+### (12) Suppose $U$ is a subspace of $V$ with $U \neq V$. Suppose $S \in L(U,W)$ and $S \neq 0$. Define $T: V \to W$ by $Tv = Sv$ if $v \in U$ and $Tv = 0$ if $v \in V, v \notin U$. Prove that $T$ is not a linear map on $V$.
 Since $S \neq 0$, $Su \neq 0$ for some $u \in U$. Let $v \in V, v \notin U$. Then $v+u \notin U$. $T(v+u) = 0$. However, $Tu + Tv = Su + 0$. Then $T(v+u) \neq Tu + Tv$. Hence $T$ is not a linear map on $V$.
 
 
 
 ### (13) Suppose $V$ is finite-dimensional. Prove that every linear map on a subspace of $V$ can be extended to a linear map on $V$. In other words, show that if $U$ is a subspace of $V$ and $S \in L(U,W)$, then there exists $T \in L(V,W)$ such that $Tu = Su$ for all $u \in U$.
-Let $u_1,...,u_m$ be a basis for $U$, and extend it to a basis $u_1,...,u_m, v_1,...,v_n$ for $V$. By 3.4, there exists a unique linear map $T: V \rightarrow W$ such that $T u_k = S u_k$ for each $k = 1,...,m$ and $T v_j = 0$ for each $j = 1,...,n$.
+Let $u_1,...,u_m$ be a basis for $U$, and extend it to a basis $u_1,...,u_m, v_1,...,v_n$ for $V$. By 3.4, there exists a unique linear map $T: V \to W$ such that $T u_k = S u_k$ for each $k = 1,...,m$ and $T v_j = 0$ for each $j = 1,...,n$.
 
 Let $u \in U$. Then 
 

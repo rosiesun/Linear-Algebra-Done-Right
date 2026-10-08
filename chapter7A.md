@@ -6,7 +6,7 @@ Rosie Sun <br>
 
 
 ### 7.1 Definition: adjoint
-Suppose $T \in L(V, W)$. The adjoint of $T$ is the function $T^\ast: W \rightarrow V$ such that 
+Suppose $T \in L(V, W)$. The adjoint of $T$ is the function $T^\ast: W \to V$ such that 
 
 $$\langle Tv, w\rangle  = \langle v, T^\ast w\rangle $$
 
@@ -807,7 +807,7 @@ We conclude $T = T^\ast$, and $T$ is self-adjoint.
 
 
 
-### (11) Define an operator $S: F^2 \rightarrow F^2$ by $S(w, z) = (-z, w)$. 
+### (11) Define an operator $S: F^2 \to F^2$ by $S(w, z) = (-z, w)$. 
 
 Suppose $(z_1, z_2), (w_1, w_2) \in F^2$.
 
@@ -1246,7 +1246,7 @@ By 7.21, $S$ is normal. From exercise 27 above, we proved that $null S = null S^
 
 ### (30)
 
-### (32) Suppose $T: V \rightarrow W$ is a linear map. Show that under the standard identification of $V$ with $V'$ and the corresponding identification of $W$ and $W'$, the adjoint map $T{\ast}: W \rightarrow V$ corresponds to the dual map $T': W' \rightarrow V'$. More precisely, show that $T'(\phi_w) = \phi_{T{\ast} w}$. 
+### (32) Suppose $T: V \to W$ is a linear map. Show that under the standard identification of $V$ with $V'$ and the corresponding identification of $W$ and $W'$, the adjoint map $T{\ast}: W \to V$ corresponds to the dual map $T': W' \to V'$. More precisely, show that $T'(\phi_w) = \phi_{T{\ast} w}$. 
 
 Suppose $v \in V, w \in W$. Then 
 
