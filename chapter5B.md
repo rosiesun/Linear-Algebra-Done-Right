@@ -169,13 +169,13 @@ $\iff$ 0 is a zero of $p$ $\iff$ the constant term of $p$ is 0
 
 
 ### 5.33
-Suppose $F = R$ and $V$ is finite-dimensional. Suppose also that $T \in L(V)$ and $b, c \in R$ with $b^2 < 4c$. Then $dim null (T^2 + bT + cI)$ is an even number.
+Suppose $F = \mathbb{R}$ and $V$ is finite-dimensional. Suppose also that $T \in L(V)$ and $b, c \in \mathbb{R}$ with $b^2 < 4c$. Then $dim null (T^2 + bT + cI)$ is an even number.
 
 Proof:
 
 Recall that $null (T^2 + bT + cI)$ is invariant under $T$ by 5.18. By replacing $V$ with $null (T^2 + bT + cI)$ and replacing $T$ with $T$ restricted to $null (T^2 + bT + cI)$, we can assume that $T^2 + bT + cI = 0$; we now need to prove that $dim V$ is even.
 
-Suppose $\lambda \in R$ and $v \in V$ are such that $Tv = \lambda v$. Then 
+Suppose $\lambda \in \mathbb{R}$ and $v \in V$ are such that $Tv = \lambda v$. Then 
 
 $$0 = (T^2 + bT + cI)v = (\lambda^2 + b \lambda + c) v = ((\lambda+b/2)^2 + c - b^2/4)v$$
 
@@ -199,7 +199,7 @@ Every operator on an odd-dimensional vector space has an eigenvalue.
 
 Proof:
 
-Suppose $F=R$ and $V$ is finite-dimensional. Let $dim V = n$, and suppose $n$ is an odd number. Let $T \in L(V)$.
+Suppose $F=\mathbb{R}$ and $V$ is finite-dimensional. Let $dim V = n$, and suppose $n$ is an odd number. Let $T \in L(V)$.
 
 We will use induction on $n$ in steps of size two to show that $T$ has an eigenvalue. 
 
@@ -209,11 +209,11 @@ Now suppose $n \geq 3$ and the desired result holds for all operators on all odd
 
 Let $p$ denote the minimal polynomial of $T$. 
 
-If $p$ is a polynomial multiple of $(x-\lambda)$ for some $\lambda \in R$, then $\lambda$ is an eigenvalue of $T$ by 5.27, and we are done
+If $p$ is a polynomial multiple of $(x-\lambda)$ for some $\lambda \in \mathbb{R}$, then $\lambda$ is an eigenvalue of $T$ by 5.27, and we are done
 
-Thus we can assume that there exist $b, c \in R$ such that $b^2 < 4c$ and $p$ is a polynomial multiple of $x^2 + bx + c$ (4.16).
+Thus we can assume that there exist $b, c \in \mathbb{R}$ such that $b^2 < 4c$ and $p$ is a polynomial multiple of $x^2 + bx + c$ (4.16).
 
-There exists a monic polynomial $q \in P(R)$ such that $p(x) = q(x) (x^2 + bx + c)$ for all $x \in R$. Now 
+There exists a monic polynomial $q \in P(\mathbb{R})$ such that $p(x) = q(x) (x^2 + bx + c)$ for all $x \in \mathbb{R}$. Now 
 
 $$0 = p(T) = (q(T))(T^2 + bT + cI)$$
 

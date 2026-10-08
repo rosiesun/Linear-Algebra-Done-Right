@@ -307,7 +307,7 @@ Thus $\phi$ is surjective.
 
 
 
-### (2) Give three distinct examples of linear functionals on $R^{[0,1]}$.
+### (2) Give three distinct examples of linear functionals on $\mathbb{R}^{[0,1]}$.
 
 
 ### (3) Suppose $V$ is finite-dimensional and $v \in V$ with $v \neq 0$. Prove that there exists $\phi \in V'$ such that $\phi(v) = 1$.
@@ -390,18 +390,18 @@ Thus $I'(\phi) = \phi$ for all $\phi \in V'$ and $I'$ is the identity operator o
 
 
 
-### (14) Define $T: R^3 \to R^2$ by $T(x,y,z) = (4x + 5y + 6z, 7x + 8y + 9z)$. Suppose $\phi_1,\phi_2$ denotes the dual basis of the standard basis of $R^2$ and $\psi_1,\psi_2,\psi_3$ denotes the dual basis of the standard basis of $R^3$.
+### (14) Define $T: \mathbb{R}^3 \to \mathbb{R}^2$ by $T(x,y,z) = (4x + 5y + 6z, 7x + 8y + 9z)$. Suppose $\phi_1,\phi_2$ denotes the dual basis of the standard basis of $\mathbb{R}^2$ and $\psi_1,\psi_2,\psi_3$ denotes the dual basis of the standard basis of $\mathbb{R}^3$.
 
 #### (a) Describe the linear functionals $T'(\phi_1)$ and $T'(\phi_2)$.
 
 #### (b) Write $T'(\phi_1)$ and $T'(\phi_2)$ as linear combinations of $\psi_1,\psi_2,\psi_3$.
 
 
-### (15) Define $T: P(R) \to P(R)$ by $(Tp)(x) = x^2 p(x) + p''(x)$ for each $x \in R$. 
+### (15) Define $T: P(\mathbb{R}) \to P(\mathbb{R})$ by $(Tp)(x) = x^2 p(x) + p''(x)$ for each $x \in \mathbb{R}$. 
 
-#### (a) Suppose $\phi \in P(R)'$ is defined by $\phi(p) = p'(4)$. Describe the linear functional $T'(\phi)$ on $P(R)$.
+#### (a) Suppose $\phi \in P(\mathbb{R})'$ is defined by $\phi(p) = p'(4)$. Describe the linear functional $T'(\phi)$ on $P(\mathbb{R})$.
 
-#### (b) Suppose $\phi \in P(R)'$ is defined by $\phi(p) = \int^1_0 p$. Evaluate $(T'(\phi)) (x^3)$.
+#### (b) Suppose $\phi \in P(\mathbb{R})'$ is defined by $\phi(p) = \int^1_0 p$. Evaluate $(T'(\phi)) (x^3)$.
 
 
 ### (16) Suppose $W$ is finite-dimensional and $T \in L(V, W)$. Prove that $T' = 0 \iff T = 0$.

@@ -312,7 +312,7 @@ Now suppose $\langle Tv, v \rangle = 0$ for all $v \in V$. Then the equation abo
 ### 7.14
 Suppose $V$ is a complex inner product space and $T \in L(V)$. Then 
 
-$$T = T^\ast \iff \langle Tv, v \rangle \in R \forall v \in V.$$
+$$T = T^\ast \iff \langle Tv, v \rangle \in \mathbb{R} \forall v \in V.$$
 
 Proof:
 
@@ -328,7 +328,7 @@ T = T^\ast &\iff T - T^\ast = 0 \\
     &\iff \langle (T - T^\ast) v, v \rangle = 0 \forall v \in V \\
     &\iff \langle Tv, v \rangle - \langle T^\ast v, v \rangle = 0 \forall v \in V \\
     &\iff \langle Tv, v \rangle - \overline{\langle Tv, v \rangle} = 0 \forall v \in V \\
-    &\iff \langle Tv, v \rangle \in R \forall v \in V
+    &\iff \langle Tv, v \rangle \in \mathbb{R} \forall v \in V
 \end{aligned}
 $$
 
@@ -826,7 +826,7 @@ Thus we have
 
 $$S^\ast (z_1, z_2) = (z_2, - z_1).$$
 
-Note that if $F = R$, then $S^\ast$ is the clockwise rotation by 90 degrees.
+Note that if $F = \mathbb{R}$, then $S^\ast$ is the clockwise rotation by 90 degrees.
 
 
 #### (b) Show that $S$ is normal but not self-adjoint.
@@ -858,7 +858,7 @@ Then $\lambda z_1 = -z_2$ and $\lambda z_2 = z_1$.
 
 We have $\lambda^2 z_2 = -z_2$, and $\lambda^2 = -1$. 
 
-When $F = R$, $S$ has no eigenvalues. 
+When $F = \mathbb{R}$, $S$ has no eigenvalues. 
 
 When $F = C$, $S$ has two eigenvalues, $i$ and $-i$. 
 
@@ -902,11 +902,11 @@ Hence $T T^\ast = T^\ast T$, and $T$ is normal.
 
 
 
-### (13) Suppose $F = R$. Define $A \in L(L(V))$ by $AT = T^\ast$ for all $T \in L(V)$.
+### (13) Suppose $F = \mathbb{R}$. Define $A \in L(L(V))$ by $AT = T^\ast$ for all $T \in L(V)$.
 
 #### (a) Find all eigenvalues of $A$.
 
-Suppose $AT = T^\ast = \lambda T$ for some $\lambda \in R$ and $T \neq 0$. 
+Suppose $AT = T^\ast = \lambda T$ for some $\lambda \in \mathbb{R}$ and $T \neq 0$. 
 
 Taking the adjoint of both sides, we have
 
@@ -954,7 +954,7 @@ The opposite direction follows from symmetry and the fact that $(T^{-1})^{-1} = 
 
 
 
-### (16) Suppose $F = R$.
+### (16) Suppose $F = \mathbb{R}$.
 
 #### (a) Show that the set of self-adjoint operators on $V$ is a subspace of $L(V)$.
 
@@ -972,11 +972,11 @@ $$(S+T)^\ast = S^\ast + T^\ast = S + T$$
 
 Hence $S+T$ is self-adjoint. 
 
-Suppose $T \in L(V)$ and $\lambda \in R$. Then
+Suppose $T \in L(V)$ and $\lambda \in \mathbb{R}$. Then
 
 $$(\lambda T)^\ast = \overline{\lambda} T^\ast = \lambda T$$
 
-where the second equality follows from the fact that $\lambda \in R$.
+where the second equality follows from the fact that $\lambda \in \mathbb{R}$.
 
 Thus $U$ is a subspace of $L(V)$ by 1.34.
 
@@ -987,7 +987,7 @@ Suppose $dim V = n$. From 3.72 we have $dim L(V) = (dim V) (dim V) = n^2$.
 
 Because $L(V)$ is isomorphic with $F^{n, n}$, we can consider $M(T)$ and $M(T^\ast)$. 
 
-If $T = T^\ast$, then $M(T^\ast) = (M(T))^\ast = M(T)$ from 7.9. And since $F = R$, the conjugate transpose becomes the transpose. Thus the matrix is symmetric. The $n$ diagonal elements and the $\frac{n^2 - n}{2}$ off-diagonal elements are free. We conclude
+If $T = T^\ast$, then $M(T^\ast) = (M(T))^\ast = M(T)$ from 7.9. And since $F = \mathbb{R}$, the conjugate transpose becomes the transpose. Thus the matrix is symmetric. The $n$ diagonal elements and the $\frac{n^2 - n}{2}$ off-diagonal elements are free. We conclude
 
 $$dim U = \frac{n^2 + n}{2} .$$
 

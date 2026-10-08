@@ -262,32 +262,32 @@ Since $W$ is a subspace, $u = (x - v) + w \in W$, showing $U \subseteq W$.
 Similarly, $W \subseteq U$ (by switching $v$ and $x$). Hence we conclude $U = W$.
 
 
-### (7) Let $U = \\{(x, y, z) \in R^3: 2x + 3y + 5z = 0\\}$. Suppose $A \subseteq R^3$. Prove that $A$ is a translate of $U$ if and only if there exists $c \in R$ such that $A = \\{(x, y, z) \in R^3: 2x + 3y + 5z = c\\}$.
+### (7) Let $U = \\{(x, y, z) \in \mathbb{R}^3: 2x + 3y + 5z = 0\\}$. Suppose $A \subseteq \mathbb{R}^3$. Prove that $A$ is a translate of $U$ if and only if there exists $c \in \mathbb{R}$ such that $A = \\{(x, y, z) \in \mathbb{R}^3: 2x + 3y + 5z = c\\}$.
 
 $\Rightarrow$
 Suppose $A$ is a translate of $U$. 
 
-Then $A = a + U$ for some $a = (a_1, a_2, a_3) \in R^3$. Consider $c = 2a_1 + 3a_2 + 5a_3$.
+Then $A = a + U$ for some $a = (a_1, a_2, a_3) \in \mathbb{R}^3$. Consider $c = 2a_1 + 3a_2 + 5a_3$.
 
 $$
 \begin{aligned}
 A &= a + U \\
-    &= \\{(x, y, z) \in R^3: (x - a_1, y - a_2, z - a_3) \in U\\} \\
-    &= \\{(x, y, z) \in R^3: 2(x-a_1) + 3(y-a_2) + 5(z-a_3) = 0 \\} \\
-    &= \\{(x, y, z) \in R^3: 2x + 3y + 5z = c \\}
+    &= \\{(x, y, z) \in \mathbb{R}^3: (x - a_1, y - a_2, z - a_3) \in U\\} \\
+    &= \\{(x, y, z) \in \mathbb{R}^3: 2(x-a_1) + 3(y-a_2) + 5(z-a_3) = 0 \\} \\
+    &= \\{(x, y, z) \in \mathbb{R}^3: 2x + 3y + 5z = c \\}
 \end{aligned}
 $$
 
 $\Leftarrow$
-Suppose there exists $c \in R$ such that $A = \\{(x, y, z) \in R^3: 2x + 3y + 5z = c\\}$.
+Suppose there exists $c \in \mathbb{R}$ such that $A = \\{(x, y, z) \in \mathbb{R}^3: 2x + 3y + 5z = c\\}$.
 
-Consider $a = \frac{1}{10} (c, c, c) \in R^3$.
+Consider $a = \frac{1}{10} (c, c, c) \in \mathbb{R}^3$.
 
 $$
 \begin{aligned}
-A &= \\{(x, y, z) \in R^3: 2x + 3y + 5z - c = 0 \\} \\
-    &= \\{(x, y, z) \in R^3: 2(x - \frac{1}{10} c) + 3(y - \frac{1}{10} c) + 5(z - \frac{1}{10} c) = 0 \\} \\
-    &= \\{(x, y, z) \in R^3: (x - \frac{1}{10} c, y - \frac{1}{10} c, z - \frac{1}{10} c) \in U \\} \\
+A &= \\{(x, y, z) \in \mathbb{R}^3: 2x + 3y + 5z - c = 0 \\} \\
+    &= \\{(x, y, z) \in \mathbb{R}^3: 2(x - \frac{1}{10} c) + 3(y - \frac{1}{10} c) + 5(z - \frac{1}{10} c) = 0 \\} \\
+    &= \\{(x, y, z) \in \mathbb{R}^3: (x - \frac{1}{10} c, y - \frac{1}{10} c, z - \frac{1}{10} c) \in U \\} \\
     &= a + U
 \end{aligned}
 $$

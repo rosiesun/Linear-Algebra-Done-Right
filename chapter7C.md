@@ -62,7 +62,7 @@ $$
     &\geq 0
 \end{aligned}$$
 
-If $F = C$, $\langle Rv, v \rangle \in R \forall v \in V$. By 7.14 $R$ is self-adjoint. If $F = R$, by definition $V$ has an orthonormal basis consisting of eigenvectors of $R$. By the real spectral theorem (7.29), $R$ is self-adjoint.   
+If $F = C$, $\langle Rv, v \rangle \in \mathbb{R} \forall v \in V$. By 7.14 $R$ is self-adjoint. If $F = \mathbb{R}$, by definition $V$ has an orthonormal basis consisting of eigenvectors of $R$. By the real spectral theorem (7.29), $R$ is self-adjoint.   
 
 Furthermore, $R^2 e_k = \lambda_k e_k = T e_k$ for each $k$, which implies that $R^2 = T$. Thus $R$ is a positive square root of $T$. Hence (d) holds, which shows that (c) implies (d).
 

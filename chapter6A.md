@@ -6,7 +6,7 @@ Rosie Sun <br>
 
 
 ### 6.1 Definition: dot product
-For $x, y \in R^n$, the dot product of $x$ and $y$, denoted by $x \dot y$, is defined by 
+For $x, y \in \mathbb{R}^n$, the dot product of $x$ and $y$, denoted by $x \dot y$, is defined by 
 
 $$x \dot y = x_1 y_1 + ... + x_n y_n$$
 
@@ -179,9 +179,9 @@ for all $u,v \in V$.
 
 
 ### (3)
-#### (a) Show that the function taking an ordered pair $(x_1,x_2), (y_1,y_2)$ of elements of $R^2$ to $|x_1 y_1| + |x_2 y_2|$ is not an inner product of $R^2$.
+#### (a) Show that the function taking an ordered pair $(x_1,x_2), (y_1,y_2)$ of elements of $\mathbb{R}^2$ to $|x_1 y_1| + |x_2 y_2|$ is not an inner product of $\mathbb{R}^2$.
 
-The function violates the additivity in the first slot. Suppose $(x_1,x_2), (y_1,y_2), (z_1,z_2) \in R^2$. 
+The function violates the additivity in the first slot. Suppose $(x_1,x_2), (y_1,y_2), (z_1,z_2) \in \mathbb{R}^2$. 
 
 $$\langle (x_1 + y_1, x_2 + y_2), (z_1, z_2) \rangle = |(x_1 + y_1)z_1| + |(x_2 + y_2)z_2|$$
 
@@ -192,7 +192,7 @@ $$\langle (x_1, x_2), (z_1, z_2) \rangle + \langle (y_1,y_2), (z_1,z_2) \rangle 
 by the triangle inequality on absolute values.
 
 
-#### (b) Show that the function taking an ordered pair $(x_1,x_2,x_3), (y_1,y_2,y_3)$ of elements of $R^3$ to $x_1 y_1 + x_3 y_3$ is not an inner product on $R^3$.
+#### (b) Show that the function taking an ordered pair $(x_1,x_2,x_3), (y_1,y_2,y_3)$ of elements of $\mathbb{R}^3$ to $x_1 y_1 + x_3 y_3$ is not an inner product on $\mathbb{R}^3$.
 
 The function violates definiteness. $\langle (0,1,0), (0,1,0) \rangle = 0$ but $(0,1,0) \neq 0$.
 
@@ -253,7 +253,7 @@ $$0 \leq \overline{a} \lambda + a \overline{\lambda} + |a|^2 \lVert v \rVert^2$$
 
 $$0 \leq 2 Re(a \overline{\lambda}) + |a|^2 \lVert v \rVert^2$$
 
-Let $a = -t \lambda, t \in R, t  \rangle 0$. Note that $a \overline{\lambda} = -t |\lambda|^2$ which is real. Then the equation above becomes
+Let $a = -t \lambda, t \in \mathbb{R}, t  \rangle 0$. Note that $a \overline{\lambda} = -t |\lambda|^2$ which is real. Then the equation above becomes
 
 $$0 \leq -2 t |\lambda|^2 + t^2 |\lambda|^2 \lVert v \rVert^2$$
 
@@ -265,7 +265,7 @@ For small $t$, $t \to 0^+$, we have $0 \leq -2 |\lambda|^2$, which forces $|\lam
 
 
 
-### (7) Suppose $u,v \in V$. Prove that $\lVert au + bv \rVert = \lVert bu + av \rVert$ for all $a,b \in R$ if and only if $\lVert u \rVert = \lVert v \rVert$.
+### (7) Suppose $u,v \in V$. Prove that $\lVert au + bv \rVert = \lVert bu + av \rVert$ for all $a,b \in \mathbb{R}$ if and only if $\lVert u \rVert = \lVert v \rVert$.
 
 $\Leftarrow$
 Suppose $\lVert u \rVert=\lVert v \rVert = \lambda$. Then 
@@ -287,7 +287,7 @@ Therefore $\lVert u \rVert^2 = \lVert v \rVert^2$, and $\lVert u \rVert = \lVert
 
 
 
-### (8) Suppose $a,b,c,x,y \in R$ and $a^2 + b^2 + c^2 + x^2 + y^2 \leq 1$. Prove that $a+b+c+4x+9y \leq 10$.
+### (8) Suppose $a,b,c,x,y \in \mathbb{R}$ and $a^2 + b^2 + c^2 + x^2 + y^2 \leq 1$. Prove that $a+b+c+4x+9y \leq 10$.
 
 We have $\lVert (a,b,c,x,y) \rVert^2 \leq 1$. Then $\lVert (a,b,c,x,y) \rVert \leq 1$.
 
@@ -368,7 +368,7 @@ which holds. Taking square root of both sides, we have the desired inequality.
 
 
 
-### (11) Find vectors $u, v \in R^2$ such that $u$ is a scalar multiple of $(1,3)$, $v$ is orthogonal to $(1,3)$, and $(1,2)=u+v$.
+### (11) Find vectors $u, v \in \mathbb{R}^2$ such that $u$ is a scalar multiple of $(1,3)$, $v$ is orthogonal to $(1,3)$, and $(1,2)=u+v$.
 By hypothesis, $u = a(1,3)$. 
 
 Let $v=(x,y)$. $\langle (x,y), (1,3) \rangle = x+3y = 0$. $y = -1/3 x$.
@@ -413,7 +413,7 @@ Then $\sqrt{a}=\lambda / \sqrt{a}$, $a=\lambda$. Similarly, $b=c=d=\lambda$.
 Hence $a=b=c=d$.
 
 
-### (13) Show that the square of an average is less than or equal to the average of the squares. More precisely, show that if $a_1,...,a_n \in R$, then the square of the average of $a_1,...,a_n$ is less than or equal to the average of $a_1^2,...,a_n^2$.
+### (13) Show that the square of an average is less than or equal to the average of the squares. More precisely, show that if $a_1,...,a_n \in \mathbb{R}$, then the square of the average of $a_1,...,a_n$ is less than or equal to the average of $a_1^2,...,a_n^2$.
 
 $$|\langle (1/n,...,1/n), (a_1,...,a_n) \rangle|^2 = (a_1 /n + ... + a_n /n)^2$$
 

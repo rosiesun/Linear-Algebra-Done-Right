@@ -460,7 +460,7 @@ By hypothesis $P_U (Tw) = 0$, thus $Tw \in U^\perp$ by 6.57. Hence $U^\perp$ is 
 
 
 
-### (13) Suppose $F=R$ and $V$ is finite-dimensional. For each $v \in V$, let $\phi_v$ denote the linear functional on $V$ defined by $\phi_v(u) = \langle u,v \rangle$ for all $u \in V$.
+### (13) Suppose $F=\mathbb{R}$ and $V$ is finite-dimensional. For each $v \in V$, let $\phi_v$ denote the linear functional on $V$ defined by $\phi_v(u) = \langle u,v \rangle$ for all $u \in V$.
 
 #### (a) Show that $v \to \phi_v$ is an injective linear map from $V$ to $V'$.
 
@@ -474,11 +474,11 @@ $$\phi_{v+w} (u) = \langle u, v+w \rangle = \langle u, v \rangle + \langle u, w 
 
 Therefore $T(v+w) = Tv + Tw$.
 
-Let $\lambda \in R, v \in V$. Then $T(\lambda v) = \phi_{\lambda v}$.
+Let $\lambda \in \mathbb{R}, v \in V$. Then $T(\lambda v) = \phi_{\lambda v}$.
 
 $$\phi_{\lambda v} (u) = \langle u, \lambda v \rangle = \lambda \langle u, v \rangle = \lambda \phi_v(u)$$
 
-where the second equality follows from the fact that $F = R$ so $\lambda = \overline{\lambda}$.
+where the second equality follows from the fact that $F = \mathbb{R}$ so $\lambda = \overline{\lambda}$.
 
 Therefore $T(\lambda v) = \lambda Tv$. Thus $T$ is a linear map.
 
@@ -501,7 +501,7 @@ By the Riesz representation, we can associate each $\phi_k$ with $e_k$. Thus the
 
 
 
-### (15) In $R^4$, let $U = span((1,1,0,0), (1,1,1,2))$. Find $u \in U$ such that $\lVert u - (1,2,3,4) \rVert$ is as small as possible.
+### (15) In $\mathbb{R}^4$, let $U = span((1,1,0,0), (1,1,1,2))$. Find $u \in U$ such that $\lVert u - (1,2,3,4) \rVert$ is as small as possible.
 
 
 

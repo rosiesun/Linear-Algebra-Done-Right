@@ -221,7 +221,7 @@ Therefore $\langle e_k, e_l \rangle = 0$ for $k \neq l$.
 
 
 ### (2) 
-#### (a) Suppose $\theta \in R$. Show that both $(cos \theta, sin \theta), (-sin \theta, cos \theta)$ and $(cos \theta, sin \theta), (sin \theta, -cos \theta)$ are orthonormal bases of $R^2$.
+#### (a) Suppose $\theta \in \mathbb{R}$. Show that both $(cos \theta, sin \theta), (-sin \theta, cos \theta)$ and $(cos \theta, sin \theta), (sin \theta, -cos \theta)$ are orthonormal bases of $\mathbb{R}^2$.
 
 $$\lVert (cos\theta, sin\theta) \rVert^2 = cos^2 \theta + sin^2 \theta = 1$$
 
@@ -236,9 +236,9 @@ $$\lVert (sin\theta, -cos\theta) \rVert^2 = sin^2\theta + (-cos \theta)^2 = 1$$
 $$\langle (cos\theta, sin\theta), (sin\theta, -cos\theta) \rangle = cos\theta sin\theta - sin\theta cos\theta = 0$$
 
 
-#### (b) Show that each orthonormal basis of $R^2$ is of the form given by one of the two possibilities in (a).
+#### (b) Show that each orthonormal basis of $\mathbb{R}^2$ is of the form given by one of the two possibilities in (a).
 
-Let $e_1, e_2$ be an orthonormal basis of $R^2$. Suppose $e_1 = (x_1, y_1)$. Then $x_1^2 + y_1^2 = 1$, we can rewrite as $e_1 = (cos\theta, sin\theta)$. 
+Let $e_1, e_2$ be an orthonormal basis of $\mathbb{R}^2$. Suppose $e_1 = (x_1, y_1)$. Then $x_1^2 + y_1^2 = 1$, we can rewrite as $e_1 = (cos\theta, sin\theta)$. 
 
 Suppose $e_2 = (x_2, y_2)$. Then $\langle e_1,e_2 \rangle = x_2 cos\theta + y_2 \sin\theta = 0$. So $x_2 = -sin\theta, y_2=cos\theta$ or $x_2 = sin\theta, y_2=-cos\theta$.
 

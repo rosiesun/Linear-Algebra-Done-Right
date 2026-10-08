@@ -145,10 +145,10 @@ $(-v)$ must be the additive inverse of $v$.
 
 
 ### (6)
-Let $\infty$ and $-\infty$ denote two distinct objects, neither of which is in $R$. Define an addition and scalar multiplication on
-$R \cup \\{\infty, -\infty \\}$ as you could guess from the notation.
+Let $\infty$ and $-\infty$ denote two distinct objects, neither of which is in $\mathbb{R}$. Define an addition and scalar multiplication on
+$\mathbb{R} \cup \\{\infty, -\infty \\}$ as you could guess from the notation.
 Specifically, the sum and product of two real numbers is as usual, and
-for $t \in R$ define
+for $t \in \mathbb{R}$ define
 
 $t \infty = -\infty$ if $t<0$
 
@@ -168,12 +168,12 @@ $$t + (-\infty) = (-\infty) + t = (-\infty) + (-\infty) = -\infty$$
 
 $$\infty + (-\infty) = (-\infty) + \infty = 0$$
 
-With these operations of addition and scalar multiplication, is $R \cup \\{-\infty, \infty \\}$ a vector space? Explain.
+With these operations of addition and scalar multiplication, is $\mathbb{R} \cup \\{-\infty, \infty \\}$ a vector space? Explain.
 
 It is not a vector space. Commutativity, additive inverse, additive identity, multiplicative identity are satisfied from the definitions. We
 give an counter-example for associativity.
 
-Let $t \in R$ and we have
+Let $t \in \mathbb{R}$ and we have
 
 $$(t + \infty) + (-\infty) = \infty + (-\infty)$$
 
@@ -361,20 +361,20 @@ Hence $U$ is closed under scalar multiplication. By (1.34) $U$ is a subspace.
 
 
 
-### (5) Is $R^2$ a subspace of the complex vector space $C^2$?
+### (5) Is $\mathbb{R}^2$ a subspace of the complex vector space $C^2$?
 
-$R^2$ is a subspace of the complex vector space $C^2$ because it is not closed under complex scalar multiplication.
+$\mathbb{R}^2$ is a subspace of the complex vector space $C^2$ because it is not closed under complex scalar multiplication.
 
-$i (1,1) = (i, i) \notin R^2$.
+$i (1,1) = (i, i) \notin \mathbb{R}^2$.
 
 
 
 ### (6) 
-#### (a) Is $U=\\{(a,b,c) \in R^3: a^3=b^3\\}$ a subspace of $R^3$?
+#### (a) Is $U=\\{(a,b,c) \in \mathbb{R}^3: a^3=b^3\\}$ a subspace of $\mathbb{R}^3$?
 
 $$a^3 = b^3 \iff a=b$$
 
-Another way to write $U$ is $U=\\{(a,a,c): a,c \in R\\}$.
+Another way to write $U$ is $U=\\{(a,a,c): a,c \in \mathbb{R}\\}$.
 
 $(0,0,0) \in U$.
 
@@ -395,15 +395,15 @@ addition.
 
 
 
-### (7) Prove or give a counterexample: If $U$ is a nonempty subset of $R^2$ such that $U$ is closed under addition and under taking additive inverses, then $U$ is a subspace of $R^2$.
+### (7) Prove or give a counterexample: If $U$ is a nonempty subset of $\mathbb{R}^2$ such that $U$ is closed under addition and under taking additive inverses, then $U$ is a subspace of $\mathbb{R}^2$.
 
 Counterexample: $U=Z^2$. $(0,0) \in U$ and for each $(a,b), a,b\in Z$, $(-a,-b) \in Z$ by the definition of integers. It is not closed under scalar multiplication, e.g. $0.5 (1, 1) \notin Z^2$.
 
 
 
-### (8) Give an example of a nonempty subset $U$ of $R^2$ such that $U$ is closed under scalar multiplication, but $U$ is not a subspace of $R^2$.
+### (8) Give an example of a nonempty subset $U$ of $\mathbb{R}^2$ such that $U$ is closed under scalar multiplication, but $U$ is not a subspace of $\mathbb{R}^2$.
 
-Counterexample: $U= \\{(x,0): x \in R\\} \cup \\{(0,y): y \in R\\}$, i.e. the two axis lines. It is closed under scalar multiplication. It is not closed under addition, e.g. $(1,0) + (0,1) = (1,1) \notin U$.
+Counterexample: $U= \\{(x,0): x \in \mathbb{R}\\} \cup \\{(0,y): y \in \mathbb{R}\\}$, i.e. the two axis lines. It is closed under scalar multiplication. It is not closed under addition, e.g. $(1,0) + (0,1) = (1,1) \notin U$.
 
 
 
@@ -491,11 +491,11 @@ $U+W \supseteq U \neq \\{0\\}$.
 
 ### (19) Prove or give a counterexample: If $V_1$, $V_2$, $U$ are subspaces of $V$ such that $V_1+U=V_2+U$, then $V_1=V_2$.
 
-Counterexample: $V_1=\\{(x,0): x \in R\\}$, 
+Counterexample: $V_1=\\{(x,0): x \in \mathbb{R}\\}$, 
 
-$V_2=\\{(0,y): y \in R\\}$, 
+$V_2=\\{(0,y): y \in \mathbb{R}\\}$, 
 
-$U=R^2$.
+$U=\mathbb{R}^2$.
 
 
 

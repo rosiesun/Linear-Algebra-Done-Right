@@ -188,15 +188,15 @@ Equality is established as desired.
 
 ### (7) 
 
-#### (a) Show that if we think of $C$ as a vector space over $R$, then the list $1+i, 1-i$ is linearly independent.
+#### (a) Show that if we think of $C$ as a vector space over $\mathbb{R}$, then the list $1+i, 1-i$ is linearly independent.
 
-Suppose $a(1+i)+b(1-i)=0, a,b \in R$. Then $(a+b) + (a-b)i = 0$. We have $a+b=a-b=0$, which implies $a=b=0$. 
+Suppose $a(1+i)+b(1-i)=0, a,b \in \mathbb{R}$. Then $(a+b) + (a-b)i = 0$. We have $a+b=a-b=0$, which implies $a=b=0$. 
 
 Thus by (2.15) they are linearly independent.
 
 
 #### (b) Show that if we think of $C$ as a vector space over $C$, then the list $1+i, 1-i$ is linearly dependent.
-Suppose $(a+bi)(1+i)+(c+di)(1-i)=0, a,b,c,d \in R$. Then $(a-b+c+d)+(a+b-c+d)i=0$. This holds if $a=d=0, b=c=1$. 
+Suppose $(a+bi)(1+i)+(c+di)(1-i)=0, a,b,c,d \in \mathbb{R}$. Then $(a-b+c+d)+(a+b-c+d)i=0$. This holds if $a=d=0, b=c=1$. 
 
 Thus by (2.17) they are linearly dependent.
 
@@ -252,7 +252,7 @@ Thus $\lambda v_1, \lambda v_2, ..., \lambda v_m$ are linearly independent as de
 
 ### (11) Prove or give a counterexample: If $v_1, ..., v_m$ and $w_1,...,w_m$ are linearly independent lists of vectors in $V$, then the list $v_1+w_1, ..., v_m+w_m$ is linearly independent.
 
-Counterexample: $(1,0), (0,1) \in R^2$ is linearly independent. $(-1,0), (0,-1) \in R^2$ is also linearly independent. But $(0,0), (0,0)$ is not linearly independent.
+Counterexample: $(1,0), (0,1) \in \mathbb{R}^2$ is linearly independent. $(-1,0), (0,-1) \in \mathbb{R}^2$ is also linearly independent. But $(0,0), (0,0)$ is not linearly independent.
 
 
 
@@ -445,15 +445,15 @@ Thus $v = 0$, completing the proof that $U \cap W = \\{0\\}$.
 
 ### (3) 
 
-#### (a) Let $U$ be the subspace of $R^5$ defined by $U=\\{(x_1,x_2,x_3,x_4,x_5) \in R^5: x_1=3x_2, x_3=7x_4\\}$. Find a basis of $U$.
+#### (a) Let $U$ be the subspace of $\mathbb{R}^5$ defined by $U=\\{(x_1,x_2,x_3,x_4,x_5) \in \mathbb{R}^5: x_1=3x_2, x_3=7x_4\\}$. Find a basis of $U$.
 
 $(3,1,0,0,0), (0,0,7,1,0), (0,0,0,0,1)$.
 
-#### (b) Extend the basis in (a) to a basis in $R^5$.
+#### (b) Extend the basis in (a) to a basis in $\mathbb{R}^5$.
 
 $(3,1,0,0,0), (0,0,7,1,0), (0,0,0,0,1), (0,1,0,0,0), (0,0,0,1,0)$.
  
-#### (c) Find a subspace $W$ of $R^5$ such that $R^5 = U \oplus W$.
+#### (c) Find a subspace $W$ of $\mathbb{R}^5$ such that $\mathbb{R}^5 = U \oplus W$.
 
 $W = span((0,1,0,0,0), (0,0,0,1,0))$.
 
@@ -497,7 +497,7 @@ Thus there exists a basis of $V$ contained in $\\{u_1,...,u_m,w_1,...,w_n\\} \su
 ### (8) Prove or give a counterexample: If $v_1,v_2,v_3,v_4$ is a basis of $V$ and $U$ is a subspace of $V$ such that $v_1, v_2 \in U$, and $v_3 \notin U$, $v_4 \notin U$, then $v_1,v_2$ is a basis of $U$.
 Counterexample: 
 
-Let $V=R^4$ with $v_1,v_2,v_3,v_4$ being the standard basis. 
+Let $V=\mathbb{R}^4$ with $v_1,v_2,v_3,v_4$ being the standard basis. 
 
 Let $U = span(v_1, v_2, v_3+v_4)$. Then $v_1,v_2$ does not span $U$.
 
@@ -655,7 +655,7 @@ $$m-1=dim span((v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)) \leq dim span(v_1
 
 
 
-### (13) Suppose $U$ and $W$ are both five-dimensional subspaces of $R^9$. Prove that $U \cap W \neq \\{0\\}$.
+### (13) Suppose $U$ and $W$ are both five-dimensional subspaces of $\mathbb{R}^9$. Prove that $U \cap W \neq \\{0\\}$.
 
 $dim U = dim W = 5$, $dim(U + W) <= 9$. 
 

@@ -118,19 +118,19 @@ Suppose $p \in P(C)$ is a polynomial with real coefficients. If $\lambda \in C$ 
 
 
 ### 4.15
-Suppose $b, c \in R$. Then there is a polynomial factorization of the form 
+Suppose $b, c \in \mathbb{R}$. Then there is a polynomial factorization of the form 
 
 $$x^2 + bx + c = (x - \lambda_1) (x - \lambda_2)$$
 
-with $\lambda_1, \lambda_2 \in R$ if and only if $b^2 \geq 4c$.
+with $\lambda_1, \lambda_2 \in \mathbb{R}$ if and only if $b^2 \geq 4c$.
 
 
 ### 4.16
-Suppose $p \in P(R)$ is a nonconstant polynomial. Then $p$ has a unique factorization (except for the order of the factors) of the form
+Suppose $p \in P(\mathbb{R})$ is a nonconstant polynomial. Then $p$ has a unique factorization (except for the order of the factors) of the form
 
 $$p(x) = c(x - \lambda_1) ... (x - \lambda_m) (x^2 + b_1 x + c_1) ... (x^2 + b_M x + c_M)$$
 
-where $c, \lambda_1, ..., \lambda_m, b_1,...,b_M, c_1,...,c_M \in R$, with $b_k^2 < 4c_k$ for each $k$.
+where $c, \lambda_1, ..., \lambda_m, b_1,...,b_M, c_1,...,c_M \in \mathbb{R}$, with $b_k^2 < 4c_k$ for each $k$.
 
 
 ## Exercises
@@ -195,7 +195,7 @@ Taking square root of both sides,
 $$|wz| = |w| |z|.$$
 
 
-### (3) Suppose $V$ is a complex vector space and $\phi \in V'$. Define $\sigma: V \to R$ by $\sigma(v) = Re \phi(v)$ for each $v \in V$. Show that $\phi(v) = \sigma(v) - i \sigma(iv)$ for all $v \in V$.
+### (3) Suppose $V$ is a complex vector space and $\phi \in V'$. Define $\sigma: V \to \mathbb{R}$ by $\sigma(v) = Re \phi(v)$ for each $v \in V$. Show that $\phi(v) = \sigma(v) - i \sigma(iv)$ for all $v \in V$.
 
 
 ### (4)

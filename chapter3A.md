@@ -182,7 +182,7 @@ Therefore $T$ is multiplication by $\lambda$.
 
 
 
-### (8) Give an example of a function $\phi: R^2 \to R$ such that $\phi (av) = a \phi(v)$ for all $a \in R$ and $v \in R^2$, but $\phi$ is not linear.
+### (8) Give an example of a function $\phi: \mathbb{R}^2 \to \mathbb{R}$ such that $\phi (av) = a \phi(v)$ for all $a \in \mathbb{R}$ and $v \in \mathbb{R}^2$, but $\phi$ is not linear.
 Let $\phi(x,y) = x^2 / y$ if $y \neq 0$, and $\phi(x,y) = 0$ if $y=0$.
 
 When $y \neq 0$, 

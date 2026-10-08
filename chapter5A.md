@@ -148,7 +148,7 @@ By assumption, $u \in U$ implies $Tu \in U$. Since $Tu = v$, $v \in U$. But $v \
 
 
 
-### (5) Suppose $T \in L(R^2)$ is defined by $T(x,y) = (-3y, x)$. Find the eigenvalues of $T$.
+### (5) Suppose $T \in L(\mathbb{R}^2)$ is defined by $T(x,y) = (-3y, x)$. Find the eigenvalues of $T$.
 
 There are no real eigenvalues.
 
@@ -156,9 +156,9 @@ There are no real eigenvalues.
 
 ### (6) Define $T \in L(F^2)$ by $T(w,z) = (z,w)$. Find all eigenvalues and eigenvectors of $T$.
 
-Eigenvalue 1, eigenvectors $\\{(w,z) \in R^2: w=z\\}$
+Eigenvalue 1, eigenvectors $\\{(w,z) \in \mathbb{R}^2: w=z\\}$
 
-Eigenvalue -1, eigenvectors $\\{(w,z) in R^2: w = -z\\}$.
+Eigenvalue -1, eigenvectors $\\{(w,z) in \mathbb{R}^2: w = -z\\}$.
 
 
 
@@ -223,7 +223,7 @@ If $v$ is an eigenvector of $T$, then $S^{-1}v$ is an eigenvector of $S^{-1} T S
 
 
 
-### (14) Give an example of an operator on $R^4$ that has no (real) eigenvalues.
+### (14) Give an example of an operator on $\mathbb{R}^4$ that has no (real) eigenvalues.
 
 $$T(x_1, x_2, x_3, x_4) = (-x_2, x_1, -x_4, x_3)$$
 
@@ -479,7 +479,7 @@ If $dim null T \neq 0$, then 0 is an eigenvalue of $T$. $range T$ is invariant u
 
 
 
-### (31) Give an example of $T \in L(R^2)$ such that $T^4 = -I$.
+### (31) Give an example of $T \in L(\mathbb{R}^2)$ such that $T^4 = -I$.
 
 
 ### (32) Suppose $T \in L(V)$ has no eigenvalues and $T^4 = I$. Prove that $T^2 = -I$.

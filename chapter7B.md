@@ -6,7 +6,7 @@ Rosie Sun <br>
 
 
 ### 7.26
-Suppose $T \in L(V)$ is self-adjoint and $b, c \in R$ are such that $b^2 < 4c$. Then
+Suppose $T \in L(V)$ is self-adjoint and $b, c \in \mathbb{R}$ are such that $b^2 < 4c$. Then
 
 $$T^2 + bT + cI$$
 
@@ -42,13 +42,13 @@ Since $V$ is finite-dimensional (standing assumption of this chapter), $T^2 + bT
 
 
 ### 7.27
-Suppose $T \in L(V)$ is self-adjoint. Then the minimal polynomial of $T$ equals $(z - \lambda_1) ... (z - \lambda_m)$ for some $\lambda_1, ..., \lambda_m \in R$.
+Suppose $T \in L(V)$ is self-adjoint. Then the minimal polynomial of $T$ equals $(z - \lambda_1) ... (z - \lambda_m)$ for some $\lambda_1, ..., \lambda_m \in \mathbb{R}$.
 
 Proof:
 
 First suppose $F = C$. The zeros of the minimal polynomial of $T$ are the eigenvalues of $T$ by 5.27. All eigenvalues of $T$ are real by 7.12. Thus the second version of thd fundamental theorem of algebra tells us that the minimal polynomial of $T$ has the desired form.
 
-Now suppose $F = R$. By the factorization of a polynomial over $R$ (4.16), there exist $\lambda_1, ..., \lambda_m \in R$, and $b_1, ..., b_N, c_1, ..., c_N \in R$ with $b_k^2 < 4c_k$ for each $k$ such that the minimal polynomial of $T$ equals 
+Now suppose $F = \mathbb{R}$. By the factorization of a polynomial over $\mathbb{R}$ (4.16), there exist $\lambda_1, ..., \lambda_m \in \mathbb{R}$, and $b_1, ..., b_N, c_1, ..., c_N \in \mathbb{R}$ with $b_k^2 < 4c_k$ for each $k$ such that the minimal polynomial of $T$ equals 
 
 $$(7.28) (z - \lambda_1) ... (z - \lambda_m) (z^2 + b_1 z+ c_1) ... (z^2 + b_N z + c_N) ;$$
 
@@ -60,7 +60,7 @@ If $N > 0$, then we could multiply both sides of the equation above on the right
 
 
 ### 7.29 Real spectral theorem
-Suppose $F = R$ and $T \in L(V)$. Then the following are equivalent.
+Suppose $F = \mathbb{R}$ and $T \in L(V)$. Then the following are equivalent.
 
 (a) $T$ is self-adjoint.
 
@@ -163,7 +163,7 @@ $$
     &= \langle a_1 \lambda_1 e_1 + ... + a_n \lambda_n e_n, a_1 e_1 + ... + a_n e_n \rangle \\
     &= \lambda_1 a_1 \overline{a_1} \langle e_1, e_1 \rangle + ... + \lambda_n a_n \overline{a_n} \langle e_n, e_n \rangle \\
     &= \lambda_1 |a_1|^2 + ... + \lambda_n |a_n|^2 \\
-    &\in R
+    &\in \mathbb{R}
 \end{aligned}
 $$
 
@@ -226,7 +226,7 @@ $$\lambda v = - \overline{\lambda} v .$$
 
 Since $v \neq 0$, $\lambda = -\overline{\lambda}$. 
 
-Suppose $\lambda = a + bi$ for some $a, b \in R$. Then $a + bi = - (a - bi) = bi - a$. Thus $a = 0$. 
+Suppose $\lambda = a + bi$ for some $a, b \in \mathbb{R}$. Then $a + bi = - (a - bi) = bi - a$. Thus $a = 0$. 
 
 We conclude the eigenvalues are purely imaginary.
 
@@ -235,7 +235,7 @@ Suppose $T$ is a normal operator and all its eigenvalues are purely imaginary.
 
 By 7.31, $V$ has an orthonormal basis consisting of eigenvectors of $T$. Let $e_1, ..., e_n$ be the orthonormal basis consisting of eigenvectors of $T$. Let $\lambda_1, ..., \lambda_n$ be the corresponding eigenvalues. 
 
-Since the eigenvalues are purely imaginary, $\lambda_k = b_k i, b_k \in R, k = 1, ..., n$.
+Since the eigenvalues are purely imaginary, $\lambda_k = b_k i, b_k \in \mathbb{R}, k = 1, ..., n$.
 
 By 7.21, 
 
@@ -342,7 +342,7 @@ Hence $T$ has a diagonal matrix with respect to an orthonormal basis in $V$. By 
 ### (13)
 
 
-### (14) Suppose $F = R$ and $T \in L(V)$. Prove that $T$ is self-adjoint if and only if all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$, where $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$.
+### (14) Suppose $F = \mathbb{R}$ and $T \in L(V)$. Prove that $T$ is self-adjoint if and only if all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$, where $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$.
 
 $\Rightarrow$
 Suppose $T$ is self-adjoint. It follows that $T$ is normal.
