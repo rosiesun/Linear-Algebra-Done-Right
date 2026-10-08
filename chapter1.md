@@ -9,18 +9,18 @@ Rosie Sun <br>
 
 ### 1.19 Definition: addition, scalar multiplcation
 - An addition on a set $V$ is a function that assigns an element $u+v \in V$ to each pair of elements $u,v \in V$.
-- A scalar multiplication on a set $V$ is a function that assigns an element $\lambda v \in V$ to each $\lambda \in F$ and each $v \in V$.
+- A scalar multiplication on a set $V$ is a function that assigns an element $\lambda v \in V$ to each $\lambda \in \mathbb{F}$ and each $v \in V$.
 
 
 ### 1.20 Definition: vector space
 A vector space is a set $V$ along with an addition on $V$ and a scalar multiplcation on $V$ such that the following properties hold.
 
 - commutativity: $u+v=v+u$ for all $u,v \in V$.
-- associativity: $(u+v)+w=u+(v+w)$ and $(ab)v=a(bv)$ for all $u,v,w \in V$ and for all $a,b \in F$.
+- associativity: $(u+v)+w=u+(v+w)$ and $(ab)v=a(bv)$ for all $u,v,w \in V$ and for all $a,b \in \mathbb{F}$.
 - additive identity: There exists an element $0 \in V$ such that $v+0=v$ for all $v \in V$.
 - additive inverse: For every $v \in V$, there exists $w \in V$ such that $v+w=0$.
 - multiplicative identity: $1v=v$ for all $v \in V$.
-- distributive properties: $a(u+v)=au+av$ and $(a+b)v=av+bv$ for all $a,b \in F$ and all $u,v \in V$.
+- distributive properties: $a(u+v)=au+av$ and $(a+b)v=av+bv$ for all $a,b \in \mathbb{F}$ and all $u,v \in V$.
 
 
 ### 1.26 Unique additive identity
@@ -60,11 +60,11 @@ Adding the additive inverse of $0v$ to both sides gives $0 = 0v$ as desired.
 
 
 ### 1.31 A number times the vector 0
-$a0=0$ for every $a \in F$.
+$a0=0$ for every $a \in \mathbb{F}$.
 
 Proof: 
 
-For $a \in F$, we have
+For $a \in \mathbb{F}$, we have
 
 $$a0 = a(0+0) = a0 + a0$$
 
@@ -97,7 +97,7 @@ The last equality comes from multiplicative identity.
 
 
 
-### (2) Suppose $a \in F, v \in V$, and $av=0$. Prove that $a=0$ or $v=0$.
+### (2) Suppose $a \in \mathbb{F}, v \in V$, and $av=0$. Prove that $a=0$ or $v=0$.
 
 Suppose $a \neq 0$, $av=0$.
 
@@ -187,7 +187,7 @@ Associativity is not satisfied.
 
 ### (7) Suppose $S$ is a nonempty set. Let $V^S$ denote the set of functions from $S$ to $V$. Define a natural addition and scalar multiplication on $V^S$, and show that $V^S$ is a vector space with these definitions.
 
-Addition and scalar multiplication are defined as follows: for $f, g \in V^S$, $(f+g)(x) = f(x) + g(x)$ for all $x \in S$; for $a \in F$ and $f \in V^S$, $(af)(x) = af(x)$.
+Addition and scalar multiplication are defined as follows: for $f, g \in V^S$, $(f+g)(x) = f(x) + g(x)$ for all $x \in S$; for $a \in \mathbb{F}$ and $f \in V^S$, $(af)(x) = af(x)$.
 
 The proof for each condition invokes the the fact that $V^S$ maps to $V$ which is a vector space.
 
@@ -219,7 +219,7 @@ $$(1f)(x) = 1 f(x) = f(x)$$
 
 Distributive properties: 
 
-For $a, b \in F$ and $f, g \in V^S$,
+For $a, b \in \mathbb{F}$ and $f, g \in V^S$,
 
 $$(a(f+g))(x) = a (f+g)(x) = a(f(x)+g(x)) = af(x) + ag(x) = (af)(x) + (ag)(x)$$
 
@@ -241,7 +241,7 @@ A subset $U$ of $V$ is a subspace of $V$ if and only if $U$ satisfies the follow
 
 - additive identity: $0 \in U$.
 - closed under addition: $u, w \in U$ implies $u + w \in U$.
-- closed under scalar multiplication: $a \in F$ and $u \in U$ implies $au \in U$.
+- closed under scalar multiplication: $a \in \mathbb{F}$ and $u \in U$ implies $au \in U$.
 
 
 ### 1.36 Definition: Sum of subspaces
@@ -308,9 +308,9 @@ To complete the proof, we only need to show that $u=w=0$ by 1.45. The equation a
 
 ## Exercises
 
-### (1) For each of the following subsets of $F^3$, determine whether it is a subsapce of $F^3$.
+### (1) For each of the following subsets of $\mathbb{F}^3$, determine whether it is a subsapce of $\mathbb{F}^3$.
 
-#### (a) $U = \\{(x_1, x_2, x_3) \in F^3: x_1 + 2x_2 + 3x_3 = 0\\}$
+#### (a) $U = \\{(x_1, x_2, x_3) \in \mathbb{F}^3: x_1 + 2x_2 + 3x_3 = 0\\}$
 
 $(0, 0, 0) \in U$.
 
@@ -321,7 +321,7 @@ $$(x_1+y_1) + 2(x_2+y_2) + 3(x_3+y_3) = x_1+y_1+2x_2+2y_2+3x_3+3y_3 = (x_1+2x_2+
 
 Hence $U$ is closed under addition.
 
-Let $u \in U, a \in F$, and $u=(x_1, x_2, x_3)$. We want to show that
+Let $u \in U, a \in \mathbb{F}$, and $u=(x_1, x_2, x_3)$. We want to show that
 $au = (ax_1, ax_2, ax_3) \in U$.
 
 $$(ax_1) + 2(ax_2) + 3(ax_3) = a(x_1+2x_2+3x_3) = a0 = 0$$
@@ -329,19 +329,19 @@ $$(ax_1) + 2(ax_2) + 3(ax_3) = a(x_1+2x_2+3x_3) = a0 = 0$$
 Hence $U$ is closed under scalar multiplication. By (1.34) $U$ is a subspace.
 
 
-#### (b) $U = \\{(x_1, x_2, x_3) \in F^3: x_1 + 2x_2 + 3x_3 = 4\\}$
+#### (b) $U = \\{(x_1, x_2, x_3) \in \mathbb{F}^3: x_1 + 2x_2 + 3x_3 = 4\\}$
 
 It is not a subspace because $(0,0,0) \notin U$.
 
 
-#### (c) $U = \\{(x_1, x_2, x_3) \in F^3: x_1 x_2 x_3 = 0\\}$
+#### (c) $U = \\{(x_1, x_2, x_3) \in \mathbb{F}^3: x_1 x_2 x_3 = 0\\}$
 
 It is not a subspace because it is not closed under addition.
 
 Counterexample: let $u=(1,0,0) \in U, w=(0,1,1) \in U$. $u+w=(1,1,1) \notin U$.
 
 
-#### (d) $U = \\{(x_1, x_2, x_3) \in F^3: x_1 = 5x_3\\}$
+#### (d) $U = \\{(x_1, x_2, x_3) \in \mathbb{F}^3: x_1 = 5x_3\\}$
 
 $(0, 0, 0) \in U$.
 
@@ -352,7 +352,7 @@ $$(x_1+y_1) - 5(x_3+y_3) = (x_1 - 5x_3) + (y_1 - 5y_3)= 0+0=0$$
 
 Hence $U$ is closed under addition.
 
-Let $u \in U, a \in F$, and $u=(x_1, x_2, x_3)$. We want to show that
+Let $u \in U, a \in \mathbb{F}$, and $u=(x_1, x_2, x_3)$. We want to show that
 $au = (ax_1, ax_2, ax_3) \in U$.
 
 $$ax_1 - 5ax_3 = a(x_1 - 5x_3) = a0 = 0$$
@@ -381,7 +381,7 @@ $(0,0,0) \in U$.
 Let $u=(a,a,c), w=(x,x,y)$. Then $u+w = (a+x, a+x, c+y) \in U$. Hence
 $U$ is closed under addition.
 
-Let $u=(a,a,c), \lambda \in F$. Then $\lambda u = (\lambda a, \lambda a, \lambda c) \in U$. Hence $U$ is
+Let $u=(a,a,c), \lambda \in \mathbb{F}$. Then $\lambda u = (\lambda a, \lambda a, \lambda c) \in U$. Hence $U$ is
 closed under scalar multiplication. By (1.34) $U$ is a subspace.
 
 
@@ -416,7 +416,7 @@ $0 \in V_1$ and $0 \in V_2$, therefore $0 \in V_1 \cap V_2$.
 Let $u,w \in V_1 \cap V_2$. We have $u \in V_1, w \in V_1, u+w \in V_1$,
 $u \in V_2, w \in V_2, u+w \in V_2$. Therefore $u+w \in V_1 \cap V_2$.
 
-Let $u \in V_1 \cap V_2, a \in F$. We have $u \in V_1, au \in V_1$,
+Let $u \in V_1 \cap V_2, a \in \mathbb{F}$. We have $u \in V_1, au \in V_1$,
 $u \in V_2, au \in V_2$. Therefore $au \in V_1 \cap V_2$.
 
 By (1.34) $V_1 \cap V_2$ is a subspace.
@@ -499,25 +499,25 @@ $U=\mathbb{R}^2$.
 
 
 
-### (20) Suppose $U=\\{(x,x,y,y) \in F^4: x,y\in F\\}$. Find a subspace $W$ of $F^4$ such that $F^4=U \oplus W$.
+### (20) Suppose $U=\\{(x,x,y,y) \in \mathbb{F}^4: x,y\in \mathbb{F}\\}$. Find a subspace $W$ of $\mathbb{F}^4$ such that $\mathbb{F}^4=U \oplus W$.
 
-$W=\\{(0,x,0,y): x,y \in F\\}$.
-
-
-
-### (21) Suppose $U=\\{(x,y,x+y,x-y, 2x) \in F^5: x,y\in F \\}$. Find a subspace $W$ of $F^5$ such that $F^5=U \oplus W$.
-
-$W=\\{(0,0,x,y,z): x,y,z \in F\\}$.
+$W=\\{(0,x,0,y): x,y \in \mathbb{F}\\}$.
 
 
 
-### (22) Suppose $U=\\{(x,y,x+y,x-y, 2x) \in F^5: x,y\in F \\}$. Find three subspaces $W_1, W_2, W_3$ of $F^5$, none of which equals $\\{0\\}$, such that $F^5=U \oplus W_1 \oplus W_2 \oplus W_3$.
+### (21) Suppose $U=\\{(x,y,x+y,x-y, 2x) \in \mathbb{F}^5: x,y\in \mathbb{F} \\}$. Find a subspace $W$ of $\mathbb{F}^5$ such that $\mathbb{F}^5=U \oplus W$.
 
-$$W_1=\\{(0,0,x,0,0): x \in F\\}$$
+$W=\\{(0,0,x,y,z): x,y,z \in \mathbb{F}\\}$.
 
-$$W_2=\\{(0,0,0,x,0): x \in F\\}$$
 
-$$W_3=\\{(0,0,0,0,x): x \in F\\}$$
+
+### (22) Suppose $U=\\{(x,y,x+y,x-y, 2x) \in \mathbb{F}^5: x,y\in \mathbb{F} \\}$. Find three subspaces $W_1, W_2, W_3$ of $\mathbb{F}^5$, none of which equals $\\{0\\}$, such that $\mathbb{F}^5=U \oplus W_1 \oplus W_2 \oplus W_3$.
+
+$$W_1=\\{(0,0,x,0,0): x \in \mathbb{F}\\}$$
+
+$$W_2=\\{(0,0,0,x,0): x \in \mathbb{F}\\}$$
+
+$$W_3=\\{(0,0,0,0,x): x \in \mathbb{F}\\}$$
 
 
 
@@ -525,8 +525,8 @@ $$W_3=\\{(0,0,0,0,x): x \in F\\}$$
 
 Counterexample from Ex. 20: 
 
-$$V_1=\\{(x,x,y,y) \in F^4: x,y\in F \\\}$$
+$$V_1=\\{(x,x,y,y) \in \mathbb{F}^4: x,y\in \mathbb{F} \\\}$$
 
-$$V_2=\\{(x,0,y,0) \in F^4: x,y\in F \\\}$$
+$$V_2=\\{(x,0,y,0) \in \mathbb{F}^4: x,y\in \mathbb{F} \\\}$$
 
-$$U=\\{(0,x,0,y) \in F^4: x,y\in F \\\}$$
+$$U=\\{(0,x,0,y) \in \mathbb{F}^4: x,y\in \mathbb{F} \\\}$$
