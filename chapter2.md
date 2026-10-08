@@ -7,11 +7,11 @@ Rosie Sun <br>
 # 2A Span and Linear Independence
 
 ### 2.2 Definition: linear combination
-A linear combination of a list $v_1, ..., v_m$ of vectors in $V$ is a vector of the form $a_1 v_1 + ... + a_m v_m$, where $a_1, ..., a_m \in F$.
+A linear combination of a list $v_1, ..., v_m$ of vectors in $V$ is a vector of the form $a_1 v_1 + ... + a_m v_m$, where $a_1, ..., a_m \in \mathbb{F}$.
 
 
 ### 2.4 Definition: span
-The set of all linear combinations of a list of vectors $v_1, ..., v_m$ in $V$ is called the span of $v_1, ..., v_m$, denoted by $span(v_1, ..., v_m)$. In other words, $span(v_1, ..., v_m) = \\{ a_v v_1 + ... + a_m v_m: a_1, ..., a_m \in F \\}$. 
+The set of all linear combinations of a list of vectors $v_1, ..., v_m$ in $V$ is called the span of $v_1, ..., v_m$, denoted by $span(v_1, ..., v_m)$. In other words, $span(v_1, ..., v_m) = \\{ a_v v_1 + ... + a_m v_m: a_1, ..., a_m \in \mathbb{F} \\}$. 
 
 The span of the empty list () is defined to be $\\{0\\}$
 
@@ -51,15 +51,15 @@ A vector space is called finite-dimensional if some list of vectors in it spans 
 
 
 ### 2.10 Definition: polynomial
-A function $p: F \to F$ is called a polynomial with coefficients in $F$ if there exist $a_0, ..., a_m \in F$ such that $p(z) = a_0 + a_1 z + a_2 z^2 + ... a_m z^m$ for all $z \in F$. $P(F)$ is the set of all polynomials with coefficients in $F$.
+A function $p: \mathbb{F} \to \mathbb{F}$ is called a polynomial with coefficients in $\mathbb{F}$ if there exist $a_0, ..., a_m \in \mathbb{F}$ such that $p(z) = a_0 + a_1 z + a_2 z^2 + ... a_m z^m$ for all $z \in \mathbb{F}$. $P(\mathbb{F})$ is the set of all polynomials with coefficients in $\mathbb{F}$.
 
 
 ### 2.15 Definition: linearly independent
-A list $v_1, ..., v_m$ of vectors in $V$ is called linearly independent if the only choice of $a_1,...,a_m \in F$ that makes $a_1 v_1 + ... + a_m v_m = 0$ is $a_1 = ... = a_m = 0$.
+A list $v_1, ..., v_m$ of vectors in $V$ is called linearly independent if the only choice of $a_1,...,a_m \in \mathbb{F}$ that makes $a_1 v_1 + ... + a_m v_m = 0$ is $a_1 = ... = a_m = 0$.
 
 
 ### 2.17 Definition: linearly dependent
-A list of vectors in $V$ is called linearly dependent if it is not linearly independent. In other words, a list $v_1,..., v_m$ of vectors in $V$ is linearly dependent if there exist $a_1,...,a_m \in F$, not all 0, such that $a_1 v_1 + ... + v_m v_m = 0$.
+A list of vectors in $V$ is called linearly dependent if it is not linearly independent. In other words, a list $v_1,..., v_m$ of vectors in $V$ is linearly dependent if there exist $a_1,...,a_m \in \mathbb{F}$, not all 0, such that $a_1 v_1 + ... + v_m v_m = 0$.
 
 
 ### 2.19 Linear dependence lemma
@@ -67,7 +67,7 @@ Suppose $v_1,...,v_m$ is a linearly dependent list in $V$. Then there exists $k 
 
 Proof:
 
-Because the list $v_1,...,v_m$ is linearly dependent, there exist numbers $a_1,...,a_m \in F$, not all 0, such that $a_1 v_1 + ... + a_m v_m = 0$. 
+Because the list $v_1,...,v_m$ is linearly dependent, there exist numbers $a_1,...,a_m \in \mathbb{F}$, not all 0, such that $a_1 v_1 + ... + a_m v_m = 0$. 
 
 Let $k$ be the largest element of $\\{1,...,m\\}$ such that $a_k \neq 0$. Then 
 
@@ -75,11 +75,11 @@ $$v_k = - \frac{a_1}{a_k} v_1 - ... - \frac{a_{k-1}}{a_k} v_{k-1}$$
 
 which proves that $v_k \in span(v_1,...,v_{k-1})$ as desired.
 
-Now suppose $k$ is an element of $\\{1,...,m\\}$ such that $v_k \in span(v_1,...,v_{k-1})$. Let $b_1,...,b_{k-1} \in F$ be such that
+Now suppose $k$ is an element of $\\{1,...,m\\}$ such that $v_k \in span(v_1,...,v_{k-1})$. Let $b_1,...,b_{k-1} \in \mathbb{F}$ be such that
 
 $$v_k = b_1 v_1 + ... + b_{k-1} v_{k-1}$$
 
-Suppose $u \in span(v_1,...,v_m)$. Then there exist $c_1,...,c_m \in F$ such that 
+Suppose $u \in span(v_1,...,v_m)$. Then there exist $c_1,...,c_m \in \mathbb{F}$ such that 
 
 $$u = c_1 v_1 + ... + c_m v_m = c_1 v_1 + ... + c_k (b_1 v_1 + ... + b_{k-1} v_{k-1}) + ... + c_m v_m$$
 
@@ -132,7 +132,7 @@ After each step, as long as the process continues, we have constructed a list of
 
 ## Exercises
 
-### (1) Find a list of four distinct vectors in $F^3$ whose span equals $\\{(x,y,z) \in F^3: x+y+z=0 \\}$.
+### (1) Find a list of four distinct vectors in $\mathbb{F}^3$ whose span equals $\\{(x,y,z) \in \mathbb{F}^3: x+y+z=0 \\}$.
 
 $(1,-1,0), (1,0,-1), (0,1,-1), (1,-2,1)$. 
 
@@ -140,7 +140,7 @@ $(1,-1,0), (1,0,-1), (0,1,-1), (1,-2,1)$.
 
 ### (2) Prove or give a counterexample: If $v_1, v_2, v_3, v_4$ spans $V$, then the list $v_1 - v_2, v_2 - v_3, v_3 - v_4, v_4$ also spans $V$.
 
-Let $v \in V$. Since $v_1, v_2, v_3, v_4$ spans $V$, we have $v = av_1 + bv_2 + cv_3 + dv_4, a,b,c,d \in F$. 
+Let $v \in V$. Since $v_1, v_2, v_3, v_4$ spans $V$, we have $v = av_1 + bv_2 + cv_3 + dv_4, a,b,c,d \in \mathbb{F}$. 
 
 We can rewrite it as 
 
@@ -166,7 +166,7 @@ Since $V$ is closed under addition and scalar multiplication, $span(v_1 - v_2, v
 
 ### (3) Suppose $v_1, ..., v_m$ is a list of vectors in $V$. For $k \in \\{1,...,m\\}$, let $w_k=v_1+...v_k$. Show that $span(v_1, ..., v_m) = span(w_1, ..., w_m)$.
 
-Let $v \in span(v_1, ..., v_m)$. Then $v=a_1 v_1 + ... +a_m v_m, a_1, ..., a_m \in F$. 
+Let $v \in span(v_1, ..., v_m)$. Then $v=a_1 v_1 + ... +a_m v_m, a_1, ..., a_m \in \mathbb{F}$. 
 
 We can rewrite it as 
 
@@ -174,7 +174,7 @@ $$v=a_1 w_1 + a_2 (w_2 - w_1) + a_3 (w_3-w_2) + ... + a_m (w_m-w_{m-1}) = (a_1-a
 
 Thus $v \in span(w_1, ..., w_m)$, and $span(v_1, ..., v_m) \subseteq span(w_1, ..., w_m)$. 
 
-Let $w \in span(w_1, ..., w_m)$. Then $w=a_1 w_1 + ... +a_m w_m, a_1, ..., a_m \in F$. 
+Let $w \in span(w_1, ..., w_m)$. Then $w=a_1 w_1 + ... +a_m w_m, a_1, ..., a_m \in \mathbb{F}$. 
 
 We can rewrite it as 
 
@@ -234,7 +234,7 @@ Thus $5v_1-4v_2, v_2, ..., v_m$ are linearly independent as desired.
 
 
 
-### (10) Prove or give a counterexample: If $v_1, v_2, ..., v_m$ is a linearly independent list of vectors in $V$ and $\lambda \in F$ with $\lambda \neq 0$, then $\lambda v_1, \lambda v_2, ..., \lambda v_m$ is linearly independent.
+### (10) Prove or give a counterexample: If $v_1, v_2, ..., v_m$ is a linearly independent list of vectors in $V$ and $\lambda \in \mathbb{F}$ with $\lambda \neq 0$, then $\lambda v_1, \lambda v_2, ..., \lambda v_m$ is linearly independent.
 
 Suppose $a_1 (\lambda v_1) + ... + a_m (\lambda v_m) = 0$. 
 
@@ -289,7 +289,7 @@ So $1-a_1-...-a_{k-1}=1$, which is a contradiction, showing that this case is no
 $\Rightarrow$
 Assume towards contradiction that $w \in span(v_1,...,v_m)$. 
 
-Then $w=a_1 v_1 + ... + a_m v_m, a_1, ..., a_m \in F$. We have 
+Then $w=a_1 v_1 + ... + a_m v_m, a_1, ..., a_m \in \mathbb{F}$. We have 
 
 $$a_1 v_1 + ... + a_m v_m + (-1)w = 0$$
 
@@ -354,14 +354,14 @@ A list $v_1,...,v_n$ of vectors in $V$ is a basis of $V$ if and only if every $v
 
 $$(2.29) v=a_1 v_1 + ... a_n v_n$$
 
-where $a_1,...,a_n \in F$.
+where $a_1,...,a_n \in \mathbb{F}$.
 
 Proof:
 
 $\Rightarrow$
 First suppose that $v_1,...,v_n$ is a basis of $V$. Let $v \in V$. 
 
-Because $v_1,...,v_n$ spans $V$, there exist $a_1,...,a_n \in F$ such that 2.29 holds. To show that the representation in 2.29 is unique, suppose $c_1,...,c_n$ are scalars such that we also have $v = c_1 v_1 + ... + c_n v_n$. Subtracting the last equation from 2.29, we get
+Because $v_1,...,v_n$ spans $V$, there exist $a_1,...,a_n \in \mathbb{F}$ such that 2.29 holds. To show that the representation in 2.29 is unique, suppose $c_1,...,c_n$ are scalars such that we also have $v = c_1 v_1 + ... + c_n v_n$. Subtracting the last equation from 2.29, we get
 
 $$0 = (a_1 - c_1) v_1 + ... + (a_n - c_n) v_n$$
 
@@ -370,7 +370,7 @@ This implies that each $a_k - c_k = 0$ (because $v_1,...,v_n$ is linearly indepe
 $\Leftarrow$
 Suppose every $v \in V$ can be written uniquely in the form given by 2.29. 
 
-This implies that the list $v_1,...,v_n$ spans $V$. To show that $v_1,...,v_n$ is linearly independent, suppose $a_1,...,a_n \in F$ are such that $0 = a_1 v_1 + ... + a_n v_n$. The uniqueness of the representation 2.29 (taking $v=0$) now implies that $a_1=...=a_n=0$. Thus $v_1,...,v_n$ is linearly independent and hence is a basis of $V$.
+This implies that the list $v_1,...,v_n$ spans $V$. To show that $v_1,...,v_n$ is linearly independent, suppose $a_1,...,a_n \in \mathbb{F}$ are such that $0 = a_1 v_1 + ... + a_n v_n$. The uniqueness of the representation 2.29 (taking $v=0$) now implies that $a_1=...=a_n=0$. Thus $v_1,...,v_n$ is linearly independent and hence is a basis of $V$.
 
 
 ### 2.30 Every spanning list contains a basis
@@ -418,13 +418,13 @@ Because $V$ is finite-dimensional, so is $U$ by 2.25. Thus there is a basis $u_1
 
 To prove that $V = U \oplus W$, by 1.46 we need to show that $V = U + W$ and $U \cap W = \\{0\\}$. 
 
-To prove that $V = U + W$, suppose $v \in V$. Then, because the list $u_1,...,u_m, w_1,...,w_n$ spans $V$, there exist $a_1,...,a_m, b_1,...,b_n \in F$ such that 
+To prove that $V = U + W$, suppose $v \in V$. Then, because the list $u_1,...,u_m, w_1,...,w_n$ spans $V$, there exist $a_1,...,a_m, b_1,...,b_n \in \mathbb{F}$ such that 
 
 $$v = a_1 u_1 + ... + a_m u_m + b_1 w_1 + ... + b_n w_n$$
 
 We have $v = u + w$, where $u = a_1 u_1 + ... + a_m u_m \in U, w = b_1 w_1 + ... + b_n w_n \in W$. Thus $v \in U + W$, completing the proof that $V = U + W$.
 
-To show that $U \cap W = \\{0\\}$, suppose $v \in U \cap W$. Then there exist scalars $a_1,...,a_m, b_1,...,b_n \in F$ such that 
+To show that $U \cap W = \\{0\\}$, suppose $v \in U \cap W$. Then there exist scalars $a_1,...,a_m, b_1,...,b_n \in \mathbb{F}$ such that 
 
 $$v = a_1 u_1 + ... + a_m u_m = b_1 w_1 + ... + b_n w_n$$
 
@@ -510,7 +510,7 @@ Given that $V$ is a direct sum of $U$ and $W$, we have $v=u+w, u \in U, w \in W$
 
 We can rewrite with basis vectors 
 
-$$v = (a_1 u_1 + ... + a_m u_m) + (b_1 w_1 + ... + b_n w_n), a_1,...,a_m,b_1,...,b_n \in F$$
+$$v = (a_1 u_1 + ... + a_m u_m) + (b_1 w_1 + ... + b_n w_n), a_1,...,a_m,b_1,...,b_n \in \mathbb{F}$$
 
 Then $v \in span(u_1,...,u_m,w_1,...,w_n)$. Thus $u_1, ..., u_m, w_1, ..., w_n$ spans $V$.
 
@@ -540,51 +540,51 @@ Suppose $V$ is finite-dimensional. Let $B_1$ and $B_2$ be two bases of $V$. Then
 
 
 ### 2.35 Definition: dimension
-The dimension of a finite-dimensional vector space is the length of any basis of the vector space. The dimension of a finite-dimensional vector space is denoted by $dim V$.
+The dimension of a finite-dimensional vector space is the length of any basis of the vector space. The dimension of a finite-dimensional vector space is denoted by $\dim V$.
 
 
 ### 2.37 Dimension of a subspace
-If $V$ is finite-dimensional and $U$ is a subspace of $V$, then $dim U \leq dim V$.
+If $V$ is finite-dimensional and $U$ is a subspace of $V$, then $\dim U \leq \dim V$.
 
 Proof:
 
-Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Think of a basis of $U$ as a linearly independent list in $V, and think of a basis of $V$ as a spanning list in $V$. Now use 2.22 to conclude that $dim U \leq dim V$.
+Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Think of a basis of $U$ as a linearly independent list in $V, and think of a basis of $V$ as a spanning list in $V$. Now use 2.22 to conclude that $\dim U \leq \dim V$.
 
 
 ### 2.38 Linearly independent list of the right length is a basis
-Suppose $V$ is finite-dimensional. Then every linearly independent list of vectors in $V$ of length $dim V$ is a basis of $V$.
+Suppose $V$ is finite-dimensional. Then every linearly independent list of vectors in $V$ of length $\dim V$ is a basis of $V$.
 
 Proof:
 
-Suppose $dim V = n$ and $v_1,...,v_n$ is linearly independent in $V$. The list $v_1,...,v_n$ can be extended to a basis of $V$ by 2.32. However, every basis of $V$ has length $n$, so in this case the extension is the trivial one, meaning that no elements are adjoined to $v_1,...,v_n$. Thus $v_1,...,v_n$ is a basis of $V$, as desired.
+Suppose $\dim V = n$ and $v_1,...,v_n$ is linearly independent in $V$. The list $v_1,...,v_n$ can be extended to a basis of $V$ by 2.32. However, every basis of $V$ has length $n$, so in this case the extension is the trivial one, meaning that no elements are adjoined to $v_1,...,v_n$. Thus $v_1,...,v_n$ is a basis of $V$, as desired.
 
 
 ### 2.39 Subspace of full dimension equals the whole space
-Suppose that $V$ is finite-dimensional and $U$ is a subspace of $V$ such that $dim U = dim V$. THen $U = V$.
+Suppose that $V$ is finite-dimensional and $U$ is a subspace of $V$ such that $\dim U = \dim V$. THen $U = V$.
 
 Proof:
 
-Let $u_1,...,u_n$ be a basis of $U$. Thus $dim U = n$, and by hypothesis we also have $dim V = n$. Thus $u_1,...,u_n$ is a linearly independent list of vectors in $V$ (because it is a basis of $U$) of length $dim V$. From 2.38, we see that $u_1,...,u_n$ is a basis of $V$. In particular every vector in $V$ is a linear combination of $u_1,...,u_n$. Thus $U = V$.
+Let $u_1,...,u_n$ be a basis of $U$. Thus $\dim U = n$, and by hypothesis we also have $\dim V = n$. Thus $u_1,...,u_n$ is a linearly independent list of vectors in $V$ (because it is a basis of $U$) of length $\dim V$. From 2.38, we see that $u_1,...,u_n$ is a basis of $V$. In particular every vector in $V$ is a linear combination of $u_1,...,u_n$. Thus $U = V$.
 
 
 ### 2.42 Spanning list of the right length is a basis
-Suppose $V$ is finite-dimensional. Then every list of vectors in $V$ that spans $V$ and has the length $dim V$ is a basis of $V$.
+Suppose $V$ is finite-dimensional. Then every list of vectors in $V$ that spans $V$ and has the length $\dim V$ is a basis of $V$.
 
 Proof:
 
-Suppose $dim V = n$ and $v_1,...,v_n$ spans $V$. The list $v_1,...,v_n$ can be reduced to a basis of $V$ by 2.30. However, every basis of $V$ has length $n$, so in this case the reduction is the trivial one, meaning that no elements are deleted from $v_1,...,v_n$. Thus $v_1,...,v_n$ is a basis of $V$, as desired.
+Suppose $\dim V = n$ and $v_1,...,v_n$ spans $V$. The list $v_1,...,v_n$ can be reduced to a basis of $V$ by 2.30. However, every basis of $V$ has length $n$, so in this case the reduction is the trivial one, meaning that no elements are deleted from $v_1,...,v_n$. Thus $v_1,...,v_n$ is a basis of $V$, as desired.
 
 
 ### 2.43 Dimension of a sum
-If $V_1$ and $V_2$ are subspaces of a finite-dimensional vector space, then $dim (V_1+V_2) = dim V_1 + dim V_2 - dim(v_1 \cap V_2)$.
+If $V_1$ and $V_2$ are subspaces of a finite-dimensional vector space, then $\dim (V_1+V_2) = \dim V_1 + \dim V_2 - \dim(v_1 \cap V_2)$.
 
 Proof:
 
-Let $v_1,...,v_m$ be a basis of $V_1 \cap V_2$; thus $dim (V_1 \cap V_2) = m$. 
+Let $v_1,...,v_m$ be a basis of $V_1 \cap V_2$; thus $\dim (V_1 \cap V_2) = m$. 
 
-Because $v_1,...,v_m$ is a basis of $V_1 \cap V_2$, it is linearly independent in $V_1$. Hence this list can be extended to a basis $v_1,...,v_m, u_1,...,u_j$ of $V_1$ by 2.32. Thus $dim V_1 = m + j$.
+Because $v_1,...,v_m$ is a basis of $V_1 \cap V_2$, it is linearly independent in $V_1$. Hence this list can be extended to a basis $v_1,...,v_m, u_1,...,u_j$ of $V_1$ by 2.32. Thus $\dim V_1 = m + j$.
 
-Also extend $v_1,...,v_m$ to a basis $v_1,...,v_m, w_1,...,w_k$ of $V_2$; thus $dim V_2 = m + k$.
+Also extend $v_1,...,v_m$ to a basis $v_1,...,v_m, w_1,...,w_k$ of $V_2$; thus $\dim V_2 = m + k$.
 
 We will show that 
 
@@ -592,7 +592,7 @@ $$(2.44) v_1,...,v_m, u_1,...,u_j,w_1,...,w_k$$
 
 is a basis of $V_1+V_2$. This will complete the proof, because then we will have 
 
-$$dim (V_1 + V_2) = m + j + k = (m+j)+(m+k)-m = dim V_1 + dim V_2 - dim (V_1 \cap V_2)$$
+$$\dim (V_1 + V_2) = m + j + k = (m+j)+(m+k)-m = \dim V_1 + \dim V_2 - \dim (V_1 \cap V_2)$$
 
 The list 2.44 is contained in $V_1 \cup V_2$ and thus is contained in $V_1 + V_2$. The span of this list contains $V_1$ and contains $V_2$ and hence is equal to $V_1+V_2$. Thus to show that 2.44 is a basis of $V_1+V_2$ we only need to show that it is linearly independent.
 
@@ -619,7 +619,7 @@ Because the list $v_1,...,v_m, u_1,...u_j$ is linearly independent, this equatio
 
 ## Exercises
 
-### (8) Suppose $v_1,...,v_m$ is linearly independent in $V$ and $w \in V$. Prove that $dim span(v_1+w,...,v_m+w) \geq m-1$.
+### (8) Suppose $v_1,...,v_m$ is linearly independent in $V$ and $w \in V$. Prove that $\dim span(v_1+w,...,v_m+w) \geq m-1$.
 
 Consider the list of vectors of length $m-1$ formed by taking the differences 
 
@@ -651,25 +651,65 @@ $$span((v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)) \subset span(v_1+w,...,v_
 
 By 2.37, 
 
-$$m-1=dim span((v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)) \leq dim span(v_1+w,...,v_m+w).$$
+$$m-1=\dim span((v_1+w) - (v_2+w), ..., (v_{m-1} +w) - (v_m+w)) \leq \dim span(v_1+w,...,v_m+w).$$
 
+
+
+### (9) Suppose $m$ is a positive integer and $p_0, p_1, ..., p_m \in \mathcal{P}(\mathbb{F})$ are such that each $p_k$ has degree $k$. Prove that $p_0, p_1, ..., p_m$ is a basis of $\mathcal{P}_m(\mathbb{F})$.
+
+The length of the list equals $m+1$, which equals the dimension of $\mathcal{P}_m(\mathbb{F})$. By 2.38, to show that the list is a basis, we just need to show that the list is linearly independent. 
+
+Suppose $a_0 p_0 + a_1 p_1 + ... + a_m p_m =0$ for some $a_0, ..., a_m \in \mathbb{F}$.
+
+We will use the fact that for two polynomials $p, q$ with $\deg p > \deg q$, $\deg (p+q) = \deg p$.
+
+Assume towards contradiction that not all $a_k, k = 0,...,m$ are 0. 
+
+Let $N = \max \\{k: a_k \neq 0\\}$. We can look at the truncated sum $a_0 p_0 + a_1 p_1 + ... + a_N p_N =0$. The terms after $N$ can be dropped because their coefficients are 0.
+
+Then $\deg p_N = N$. Thus $\deg (a_0 p_0 + a_1 p_1 + ... + a_N p_N) = N$. However this is equal to 0 (which has degree 0), which is a contradiction.
+
+Hence $p_0, p_1, ..., p_m$ is a linearly independent list. By 2.38 it is a basis of $\mathcal{P}_m(\mathbb{F})$.
+
+
+### (10) Suppose $m$ is a positive integer. For $0 \leq k \leq m$, let $p_k(x) = x^k (1-x)^{m-k}$. Show that $p_0, ..., p_m$ is a basis of $\mathcal{P}_m(\mathbb{F})$. Side note: The basis in this exercise leads to what are called Bernstein polynomials, which are used to approximate continuous functions on [0, 1].
+
+The length of the list equals $m+1$, which equals the dimension of $\mathcal{P}_m(\mathbb{F})$. By 2.38, to show that the list is a basis, we just need to show that the list is linearly independent. 
+
+Suppose $a_0 p_0 + a_1 p_1 + ... + a_m p_m = 0$ for some $a_0, ..., a_m \in \mathbb{F}$. Then we have for all $x \in \mathbb{F}$,
+
+$$a_0 (1-x)^m + a_1 x (1-x)^{m-1} + ... + a_m x^m = 0$$
+
+Evaluating the polynomial at $x=0$, we see that $a_0$ must equal $0$. Now we have
+
+$$a_1 x (1-x)^{m-1} + a_2 x^2 (1-x)^{m-2} + ... + a_m x^m = 0$$
+
+Note that we can factor out $x$:
+
+$$x (a_1 (1-x)^{m-1} + a_2 x (1-x)^{m-2} + ... + a_m x^{m-1}) = 0$$
+
+Since $p = x \in \mathcal{P}(\mathbb{F})$ is not a zero polynomial, $a_1 (1-x)^{m-1} + a_2 x (1-x)^{m-2} + ... + a_m x^{m-1}$ has to equal 0. Evaluating it at $x=0$, we see that $a_1$ has to equal 0. 
+
+Repeating the same argument (factor out $x$ and evaluating at $x=0$), we conclude that $a_k = 0, k = 0, ..., m$.
+
+Hence $p_0, ..., p_m$ is a linearly independent list. By 2.38, it is a basis of $\mathcal{P}_m(\mathbb{F})$.
 
 
 ### (13) Suppose $U$ and $W$ are both five-dimensional subspaces of $\mathbb{R}^9$. Prove that $U \cap W \neq \\{0\\}$.
 
-$dim U = dim W = 5$, $dim(U + W) <= 9$. 
+$\dim U = \dim W = 5$, $\dim(U + W) <= 9$. 
 
-By 2.43, $5+5-dim(U \cap W) <= 9$. Thus $dim(U \cap W) >= 1$. 
+By 2.43, $5+5-\dim(U \cap W) <= 9$. Thus $\dim(U \cap W) >= 1$. 
 
 
 
-### (18) Suppose $V$ is finite-dimensional, with $dim V=n \geq 1$. Prove that there exist one-dimensional subspaces $V_1, ..., V_n$ of $V$ such that $V=V_1 \oplus ... \oplus V_n$.
+### (18) Suppose $V$ is finite-dimensional, with $\dim V=n \geq 1$. Prove that there exist one-dimensional subspaces $V_1, ..., V_n$ of $V$ such that $V=V_1 \oplus ... \oplus V_n$.
 
 Let $v_1, ..., v_n$ be a basis of $V$. 
 
 Let $V_1 = span(v1), ..., V_n = span(v_n)$, each space being one-dimensional. 
 
-Let $v \in V$. Then $v = a_1 v_1 + ... +a_n v_n, a_1,...,a_n \in F$. 
+Let $v \in V$. Then $v = a_1 v_1 + ... +a_n v_n, a_1,...,a_n \in \mathbb{F}$. 
 
 Since $a_1 v_1 \in V_1, ..., a_n v_n \in V_n$, $V = V_1 + ... + V_n$. 
 
