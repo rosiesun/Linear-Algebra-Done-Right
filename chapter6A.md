@@ -14,12 +14,12 @@ where $x = (x_1,...,x_n)$ and $y = (y_1, ..., y_n)$.
 
 
 ### 6.2 Definition: inner product
-An inner product on $V$ is a function that takes each ordered pair $(u,v)$ of elements of $V$ to a number $\langle u,v \rangle \in F$ and has the following properties:
+An inner product on $V$ is a function that takes each ordered pair $(u,v)$ of elements of $V$ to a number $\langle u,v \rangle \in \mathbb{F}$ and has the following properties:
 
 - positivity: $\langle v,v \rangle \geq 0$ for all $v \in V$.
 - definiteness: $\langle v,v \rangle=0$ if and only if $v=0$.
 - additivity in the first slot: $\langle u+v,w \rangle = \langle u,w \rangle + \langle v,w \rangle$ for all $u,v,w \in V$.
-- homogeneity in first slot: $\langle \lambda u, v \rangle = \lambda \langle u,v \rangle$ for all $\lambda in F$ and all $u,v \in V$.
+- homogeneity in first slot: $\langle \lambda u, v \rangle = \lambda \langle u,v \rangle$ for all $\lambda in \mathbb{F}$ and all $u,v \in V$.
 - conjugate symmetry: $\langle u,v \rangle = \overline{\langle v,u \rangle}$ for all $u,v \in V$.
 
 
@@ -28,11 +28,11 @@ An inner product space is a vector space $V$ along with an inner product on $V$.
 
 
 ### 6.6
-- For each fixed $v \in V$, the function that takes $u \in V$ to $\langle u,v \rangle$ is a linear map from $V$ to $F$.
+- For each fixed $v \in V$, the function that takes $u \in V$ to $\langle u,v \rangle$ is a linear map from $V$ to $\mathbb{F}$.
 - $\langle 0,v \rangle = 0$ for every $v \in V$.
 - $\langle v,0 \rangle = 0$ for every $v \in V$.
 - $\langle u, v+w \rangle = \langle u,v \rangle + \langle u,w \rangle$ for all $u,v,w \in V$.
-- $\langle u, \lambda v \rangle = \overline{\lambda} \langle u, v \rangle$ for all $\lambda \in F$ and all $u, v \in V$.
+- $\langle u, \lambda v \rangle = \overline{\lambda} \langle u, v \rangle$ for all $\lambda \in \mathbb{F}$ and all $u, v \in V$.
 
 
 ### 6.7 Definition: norm
@@ -43,7 +43,7 @@ For $v \in V$, the norm of $v$, denoted by $\lVert v \rVert$, is defined by $\lV
 Suppose $v \in V$.
 
 - $\lVert v \rVert=0$ if and only if $v=0$.
-- $\lVert \lambda v \rVert = |\lambda| \lVert v \rVert$ for all $\lambda \in F$.
+- $\lVert \lambda v \rVert = |\lambda| \lVert v \rVert$ for all $\lambda \in \mathbb{F}$.
 
 
 ### 6.10 Definition: orthogonal
@@ -143,7 +143,7 @@ from the bilinearity of the inner product.
 
 
 
-### (2) Suppose $S \in L(V)$. Define $\langle .,. \rangle_1$ by $\langle u,v \rangle_1 = \langle Su,Sv \rangle$ for all $u,v \in V$. Show that $\langle .,. \rangle_1$ is an inner product on $V$ if and only if $S$ is injective.
+### (2) Suppose $S \in \mathcal{L}(V)$. Define $\langle .,. \rangle_1$ by $\langle u,v \rangle_1 = \langle Su,Sv \rangle$ for all $u,v \in V$. Show that $\langle .,. \rangle_1$ is an inner product on $V$ if and only if $S$ is injective.
 $\Rightarrow$
 Suppose $\langle .,. \rangle_1$ is an inner product. 
 
@@ -168,7 +168,7 @@ Homogeneity in the first slot satisfied by the homogeneity of $S$:
 
 $$\langle \lambda u, v \rangle_1 = \langle S(\lambda u), Sv \rangle = \langle \lambda Su, Sv \rangle = \lambda \langle Su, Sv \rangle = \lambda \langle u,v \rangle_1$$
 
-for all $\lambda \in F, u,v \in V$.
+for all $\lambda \in \mathbb{F}, u,v \in V$.
 
 Conjugate symmetry satisfied from the property of the inner product: 
 
@@ -198,7 +198,7 @@ The function violates definiteness. $\langle (0,1,0), (0,1,0) \rangle = 0$ but $
 
 
 
-### (4) Suppose $T \in L(V)$ is such that $\lVert Tv \rVert \leq \lVert v \rVert$ for every $v \in V$. Prove that $T - \sqrt{2} I$ is injective.
+### (4) Suppose $T \in \mathcal{L}(V)$ is such that $\lVert Tv \rVert \leq \lVert v \rVert$ for every $v \in V$. Prove that $T - \sqrt{2} I$ is injective.
 
 Assume towards contradiction that $T-\sqrt{2} I$ is not injective. 
 
@@ -234,14 +234,14 @@ The diagonals of the rhombus are $u+v, u-v$, with $\lVert u \rVert=\lVert v \rVe
 
 
 
-### (6) Suppose $u,v \in V$. Prove that $\langle u,v \rangle=0 \iff \lVert u \rVert \leq \lVert u+av \rVert$ for all $a \in F$.
+### (6) Suppose $u,v \in V$. Prove that $\langle u,v \rangle=0 \iff \lVert u \rVert \leq \lVert u+av \rVert$ for all $a \in \mathbb{F}$.
 $\Rightarrow$
 Suppose $\langle u,v \rangle=0$. 
 
 Then $\langle u,av \rangle=\overline{a}\langle u,v \rangle=0$. By the Pythagorean theorem, $\lVert u+av \rVert^2 = \lVert u \rVert^2 + \lVert av \rVert^2$. Thus $\lVert u \rVert^2 \leq \lVert u + av \rVert^2$. Taking square root, we have the desired inequality.
 
 $\Leftarrow$
-Suppose $\lVert u \rVert \leq \lVert u+av \rVert$ for all $a \in F$. 
+Suppose $\lVert u \rVert \leq \lVert u+av \rVert$ for all $a \in \mathbb{F}$. 
 
 Then $\lVert u \rVert^2 \leq \lVert u+av \rVert^2$.
 
@@ -448,5 +448,12 @@ $$(\sum_{k=1}^n a_k b_k)^2 \leq (\sum_{k=1}^n k a_k^2)(\sum_{k=1}^n b_k^2 / k)$$
 
 
 
-### (19) Suppose $v_1,...,v_n$ is a basis of $V$ and $T \in L(V)$. Prove that if $\lambda$ is an eigenvalue of $T$, then $|\lambda|^2 \leq \sum_{j=1}^n \sum_{k=1}^n |M(T)_{j,k}|^2$, where $M(T)_{kl}$ denotes the entry in row j, k of the matrix of $T$ with respect to the basis $v_1,...,v_n$.
+### (19) Suppose $v_1,...,v_n$ is a basis of $V$ and $T \in \mathcal{L}(V)$. Prove that if $\lambda$ is an eigenvalue of $T$, then $|\lambda|^2 \leq \sum_{j=1}^n \sum_{k=1}^n |M(T)_{j,k}|^2$, where $M(T)_{kl}$ denotes the entry in row j, k of the matrix of $T$ with respect to the basis $v_1,...,v_n$.
+
+
+
+### (33)
+
+
+### (35)
 

@@ -8,7 +8,7 @@ Rosie Sun <br>
 # 5C Upper-Triangular Matrices
 
 ### 5.39
-Suppose $T \in L(V)$ and $v_1,...,v_n$ is a basis of $V$. Then the following are equivalent.
+Suppose $T \in \mathcal{L}(V)$ and $v_1,...,v_n$ is a basis of $V$. Then the following are equivalent.
 
 - The matrix of $T$ with respect to $v_1,...,v_n$ is upper triangular. 
 - $span (v_1,...,v_k)$ is invariant under $T$ for each $k = 1,...,n$.
@@ -30,7 +30,7 @@ We have shown that (a) $\Rightarrow$ (b) $\Rightarrow$ (c) $\Rightarrow$ (a), wh
 
 
 ### 5.40
-Suppose $T \in L(V)$ and $V$ has a basis with respect to which $T$ has an upper triangular matrix with diagonal entries $\lambda_1,...,\lambda_n$. Then
+Suppose $T \in \mathcal{L}(V)$ and $V$ has a basis with respect to which $T$ has an upper triangular matrix with diagonal entries $\lambda_1,...,\lambda_n$. Then
 
 $$(T - \lambda_1 I) ... (T - \lambda_n I) = 0$$
 
@@ -74,7 +74,7 @@ Continuing this pattern, we see that $(T-\lambda_1 I)...(T-\lambda_n I)v_k = 0$ 
 
 
 ### 5.41
-Suppose $T \in L(V)$ has an upper-triangular matrix with respect to some basis of $V$. Then the eigenvalues of $T$ are precisely the entries on the diagonal of that upper-triangular matrix.
+Suppose $T \in \mathcal{L}(V)$ has an upper-triangular matrix with respect to some basis of $V$. Then the eigenvalues of $T$ are precisely the entries on the diagonal of that upper-triangular matrix.
 
 Proof:
 
@@ -82,23 +82,23 @@ Suppose $v_1,...,v_n$ is a basis of $V$ with respect to which $T$ has an upper-t
 
 Suppose $k = \{{2,...,n\}}$. Then $(T-\lambda_k I) v_k \in span(v_1,...,v_{k-1})$. Thus $T-\lambda_k I$ maps $span(v_1,...,v_k)$ into $span(v_1,...,v_{k-1})$. 
 
-Beacuse $dim span(v_1,...,v_k) = k$ and $dim span(v_1,...,v_{k-1}) = k-1$, this implies that $T-\lambda_k I$ restricted to $span(v_1,...,v_k)$ is not injective, by 3.22. Thus there exists $v \in span(v_1,...,v_k)$ such that $v \neq 0, (T-\lambda_k I)v=0$. Thus $\lambda_k$ is an eigenvalue of $T$. Hence we have shown that every entry on the diagonal of $M(T)$ is an eigenvalue of $T$.
+Beacuse $\dim span(v_1,...,v_k) = k$ and $\dim span(v_1,...,v_{k-1}) = k-1$, this implies that $T-\lambda_k I$ restricted to $span(v_1,...,v_k)$ is not injective, by 3.22. Thus there exists $v \in span(v_1,...,v_k)$ such that $v \neq 0, (T-\lambda_k I)v=0$. Thus $\lambda_k$ is an eigenvalue of $T$. Hence we have shown that every entry on the diagonal of $M(T)$ is an eigenvalue of $T$.
 
 To prove $T$ has no other eigenvalues, let $q$ be the polynomial defined by $q(z)=(z-\lambda_1)...(z-\lambda_n)$. Then $q(T)=0$ by 5.40. Hence $q$ is a polynomial multiple of the minimal polynomial of $T$, by 5.29. Thus every zero of the minimal polynomial of $T$ is a zero of $q$. Because the zeros of the minimal polynomial of $T$ are the eigenvalues of $T$, by 5.27, this implies that every eigenvalue of $T$ is a zero of $q$. Hence the eigenvalues of $T$ are all contained in the list $\lambda_1,...,\lambda_n$.
 
 
 ### 5.44
-Suppose $V$ is finite-dimensional and $T \in L(V)$. Then $T$ has an upper-triangular matrix with respect to some basis of $V$ if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some $\lambda_1,...,\lambda_m \in F$.
+Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V)$. Then $T$ has an upper-triangular matrix with respect to some basis of $V$ if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some $\lambda_1,...,\lambda_m \in \mathbb{F}$.
 
 Proof:
 
 $\Rightarrow$
 First suppose $T$ has an upper-triangular matrix with respect to some basis of $V$. Let $\alpha_1,...,\alpha_n$ denote the diagonal entries of that matrix. 
 
-Define a polynomial $q \in P(F)$ by $q(z) = (z-\alpha_1)...(z-\alpha_n)$. Then $q(T)=0$, by 5.40. Hence $q$ is a polynomial multiple of the minimal polynomial of $T$, by 5.29. Thus the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some $\lambda_1,...,\lambda_m \in F$ with $\\{\lambda_1,...,\lambda_m\\} \subseteq \\{\alpha_1,...,\alpha_n\\}$.
+Define a polynomial $q \in P(\mathbb{F})$ by $q(z) = (z-\alpha_1)...(z-\alpha_n)$. Then $q(T)=0$, by 5.40. Hence $q$ is a polynomial multiple of the minimal polynomial of $T$, by 5.29. Thus the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some $\lambda_1,...,\lambda_m \in \mathbb{F}$ with $\\{\lambda_1,...,\lambda_m\\} \subseteq \\{\alpha_1,...,\alpha_n\\}$.
 
 $\Leftarrow$
-Suppose the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some $\lambda_1,...,\lambda_m \in F$. 
+Suppose the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some $\lambda_1,...,\lambda_m \in \mathbb{F}$. 
 
 We will use induction on m.
 
@@ -134,7 +134,7 @@ We conclude, using 5.39, that $T$ has an upper-triangular matrix with respect to
 
 
 ### 5.47
-Suppose $V$ is a finite-dimensional complex vector space and $T \in L(V)$. Then $T$ has an upper-triangular matrix with respect to some basis of $V$.
+Suppose $V$ is a finite-dimensional complex vector space and $T \in \mathcal{L}(V)$. Then $T$ has an upper-triangular matrix with respect to some basis of $V$.
 
 Proof:
 
@@ -145,7 +145,7 @@ The desired result follows from 5.44 and the second version of the fundamental t
 
 ## Exercises
 
-### (1) Prove or give a counterexample: If $T \in L(V)$ and $T^2$ has an upper-triangular matrix with respect to some basis of $V$, then $T$ has an upper-triangular matrix with respect to some basis of $V$.
+### (1) Prove or give a counterexample: If $T \in \mathcal{L}(V)$ and $T^2$ has an upper-triangular matrix with respect to some basis of $V$, then $T$ has an upper-triangular matrix with respect to some basis of $V$.
 
 
 ### (2) Suppose $A$ and $B$ are upper-triangular matrices of the same size, with $\alpha_1, ..., \alpha_n$ on the diagonal of $A$ and $\beta_1, ..., \beta_n$ on the diagonal of $B$.
@@ -183,7 +183,7 @@ An operator on $V$ is called diagonalizable if the operator has a diagonal matri
 
 
 ### 5.52 Definition: eigenspace
-Suppose $T \in L(V)$ and $\lambda \in F$. The eigenspace of $T$ corresponding to $\lambda$ is the subspace $E(\lambda, T)$ of $V$ defined by
+Suppose $T \in \mathcal{L}(V)$ and $\lambda \in \mathbb{F}$. The eigenspace of $T$ corresponding to $\lambda$ is the subspace $E(\lambda, T)$ of $V$ defined by
 
 $$E(\lambda, T) = null (T - \lambda I) = \\{v \in V: Tv = \lambda v\\}$$
 
@@ -191,13 +191,13 @@ Hence $E(\lambda, T)$ is the set of all eigenvectors of $T$ corresponding to $\l
 
 
 ### 5.54
-Suppose $T \in L(V)$ and $\lambda_1,...,\lambda_m$ are distinct eigenvalues of $T$. Then 
+Suppose $T \in \mathcal{L}(V)$ and $\lambda_1,...,\lambda_m$ are distinct eigenvalues of $T$. Then 
 
 $$E(\lambda_1, T) + ... + E(\lambda_m, T)$$
 
 is a direct sum. Furthermore, if $V$ is finite-dimensional, then 
 
-$$dim E(\lambda_1, T) + ... + dim E (\lambda_m, T) \leq dim V$$.
+$$\dim E(\lambda_1, T) + ... + \dim E (\lambda_m, T) \leq \dim V$$.
 
 Proof:
 
@@ -205,30 +205,30 @@ To show that $E(\lambda_1, T) + ... + E(\lambda_m, T)$ is a direct sum, suppose 
 
 Now suppose $V$ is finite-dimensional. Then 
 
-$$dim E(\lambda_1, T) + ... + dim E(\lambda_m, T) = dim (E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)) \leq dim V$$
+$$\dim E(\lambda_1, T) + ... + \dim E(\lambda_m, T) = \dim (E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)) \leq \dim V$$
 
 where the first line follows from 3.94 and the second line follows from 2.37.
 
 
 ### 5.55
-Suppose $V$ is finite-dimensional and $T \in L(V)$. Let $\lambda_1,...,\lambda_m$ denote the distinct eigenvalues of $T$. Then the following are equivalent:
+Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V)$. Let $\lambda_1,...,\lambda_m$ denote the distinct eigenvalues of $T$. Then the following are equivalent:
 
 (a) $T$ is diagonalizable.
 (b) $V$ has a basis consisting of eigenvectors of $T$.
 (c) $V = E(\lambda_1,T) \oplus ... \oplus E(\lambda_m, T)$
-(d) $dim V = dim E(\lambda_1, T) + ... + dim E(\lambda_m, T)$.
+(d) $\dim V = \dim E(\lambda_1, T) + ... + \dim E(\lambda_m, T)$.
 
 Proof:
 
-An operator $T \in L(V)$ has a diagonal matrix with respect to a basis $v_1,...,v_n$ of $V$ if and only if $Tv_k = \lambda_k v_k$ for each $k$. Thus (a) and (b) are equivalent.
+An operator $T \in \mathcal{L}(V)$ has a diagonal matrix with respect to a basis $v_1,...,v_n$ of $V$ if and only if $Tv_k = \lambda_k v_k$ for each $k$. Thus (a) and (b) are equivalent.
 
 Suppose (b) holds; thus $V$ has a basis consisting of eigenvectors of $T$. Hence every vector in $V$ is a linear combination of eigenvectors of $T$, which implies that $V = E(\lambda_1, T) + ... + E(\lambda_m, T)$. 5.54 shows that (c) holds, proving that (b) implies (c).
 
 That (c) implies (d) follows immediately from 3.94.
 
-Suppose (d) holds; thus $dim V = dim E(\lambda_1, T) + ... + E(\lambda_m, T)$. Choose a basis of each $E(\lambda_k, T)$; put all these bases together to form a list $v_1,...,v_n$ of eigenvectors of $T$, where $dim V = n$.
+Suppose (d) holds; thus $\dim V = \dim E(\lambda_1, T) + ... + E(\lambda_m, T)$. Choose a basis of each $E(\lambda_k, T)$; put all these bases together to form a list $v_1,...,v_n$ of eigenvectors of $T$, where $\dim V = n$.
 
-To show that this list is linearly independent, suppose $a_1 v_1 + ... + a_n v_n = 0$, where $a_1,...,a_n \in F$. 
+To show that this list is linearly independent, suppose $a_1 v_1 + ... + a_n v_n = 0$, where $a_1,...,a_n \in \mathbb{F}$. 
 
 For each $k = 1,...,m$, let $u_k$ denote the sum of all the terms $a_j v_j$ such that $v_j \in E(\lambda_k, T)$. Thus each $u_k$ is in $E(\lambda_k, T)$, and $u_1+...+u_m=0$. 
 
@@ -240,17 +240,17 @@ Thus (d) implies (b), completing the proof.
 
 
 ### 5.58
-Suppose $V$ is finite-dimensional and $T \in L(V)$ has $dim V$ distinct eigenvalues. Then $T$ is diagonalizable.
+Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V)$ has $\dim V$ distinct eigenvalues. Then $T$ is diagonalizable.
 
 Proof:
 
-Suppose $T$ has distinct eigenvalues $\lambda_1,...,\lambda_{dim V}$. For each $k$, let $v_k \in V$ be an eigenvector corresponding to the eigenvalue $\lambda_k$. Because eigenvectors corresponding to distinct eigenvalues are linearly independent (5.11), $v_1,...,v_{dim V}$ is linearly independent.
+Suppose $T$ has distinct eigenvalues $\lambda_1,...,\lambda_{\dim V}$. For each $k$, let $v_k \in V$ be an eigenvector corresponding to the eigenvalue $\lambda_k$. Because eigenvectors corresponding to distinct eigenvalues are linearly independent (5.11), $v_1,...,v_{\dim V}$ is linearly independent.
 
-A linearly independent list of $dim V$ vectors in $V$ is a basis of $V$ (2.38); thus $v_1,...,v_{dim V}$ is a basis of $V$. With respect to this basis consisting of eigenvectors, $T$ has a diagonal matrix.
+A linearly independent list of $\dim V$ vectors in $V$ is a basis of $V$ (2.38); thus $v_1,...,v_{\dim V}$ is a basis of $V$. With respect to this basis consisting of eigenvectors, $T$ has a diagonal matrix.
 
 
 ### 5.62
-Suppose $V$ is finite-dimensional and $T \in L(V)$. Then $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m \in F$.
+Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V)$. Then $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m \in \mathbb{F}$.
 
 $\Rightarrow$
 Suppose $T$ has diagonalizable. Thus there is a basis $v_1,...,v_n$ of $V$ consisting of eigenvectors of $T$.
@@ -262,7 +262,7 @@ $$(T-\lambda_1 I)...(T-\lambda_m I) v_j = 0$$
 which implies that the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$.
 
 $\Leftarrow$
-Suppose the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m \in F$. Thus
+Suppose the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some list of distinct numbers $\lambda_1,...,\lambda_m \in \mathbb{F}$. Thus
 
 $$(T-\lambda_1 I)...(T-\lambda_m I)=0$$
 
@@ -288,7 +288,7 @@ $$0 = (T-\lambda_1 I)...(T-\lambda_{m-1} I) u = (\lambda_m - \lambda_1)...(\lamb
 
 Because $\lambda_1,...,\lambda_m$ are distinct, the equation above implies that $u=0$. Hence $range (T-\lambda_m I) \cap null (T-\lambda_m I) = \\{0\\}$.
 
-Thus $range (T-\lambda_m I) + null (T-\lambda_m I)$ is a direct sum by 1.46, whose dimension is $dim V$, by 3.94 and 3.21. Hence $range (T-\lambda_m I) \oplus null (T-\lambda_m I) = V$.
+Thus $range (T-\lambda_m I) + null (T-\lambda_m I)$ is a direct sum by 1.46, whose dimension is $\dim V$, by 3.94 and 3.21. Hence $range (T-\lambda_m I) \oplus null (T-\lambda_m I) = V$.
 
 Every nonzero vector in $null (T-\lambda_m I)$ is an eigenvector of $T$ with eigenvalue $\lambda_m$.
 
@@ -296,26 +296,26 @@ Earlier in this proof we saw that there is a basis of $range (T-\lambda_m I)$ co
 
 
 ### 5.65
-Suppose $T \in L(V)$ is diagonalizable and $U$ is a subspace of $V$ that is invariant under $T$. Then $T|_U$ is a diagonalizable operator on $U$.
+Suppose $T \in \mathcal{L}(V)$ is diagonalizable and $U$ is a subspace of $V$ that is invariant under $T$. Then $T|_U$ is a diagonalizable operator on $U$.
 
 
 ### 5.66 Definition: Gershgorin disks
-Suppose $T \in L(V)$ and $v_1,...,v_n$ is a basis of $V$. Let $A$ denote the matrix of $T$ with respect to this basis. A gershgorin disk of $T$ with respect to the basis $v_1,...,v_n$ is a set of the form 
+Suppose $T \in \mathcal{L}(V)$ and $v_1,...,v_n$ is a basis of $V$. Let $A$ denote the matrix of $T$ with respect to this basis. A gershgorin disk of $T$ with respect to the basis $v_1,...,v_n$ is a set of the form 
 
-$$\\{z \in F: |z-A_{j,j}| \leq \sum^n_{k=1, k \neq j} |A_jk| \\}$$
+$$\\{z \in \mathbb{F}: |z-A_{j,j}| \leq \sum^n_{k=1, k \neq j} |A_jk| \\}$$
 
 where $j \in \\{1,...,n\\}$.
 
 
 ### 5.67
-Suppose $T \in L(V)$ and $v_1,...,v_n$ is a basis of $V$. Then each eigenvalue of $T$ is contained in some Gershgorin disk of $T$ with respect to the basis $v_1,...,v_n$.
+Suppose $T \in \mathcal{L}(V)$ and $v_1,...,v_n$ is a basis of $V$. Then each eigenvalue of $T$ is contained in some Gershgorin disk of $T$ with respect to the basis $v_1,...,v_n$.
 
 
 
 
 ## Exercises
 
-### (1) Suppose $V$ is a finite-dimensional complex vector space and $T \in L(V)$.
+### (1) Suppose $V$ is a finite-dimensional complex vector space and $T \in \mathcal{L}(V)$.
 
 #### (a) Prove that if $T^4 = I$, then $T$ is diagonalizable.
 
@@ -351,7 +351,7 @@ Since $p(z)$ is a polynomial multiple of the minimal polynomial, the minimal pol
 Hence $T$ is diagonalizable. 
 
 
-#### (c) Give an example of an operator $T \in L(C^2)$ such that $T^4 = T^2$ and $T$ is not diagonalizable.
+#### (c) Give an example of an operator $T \in \mathcal{L}(C^2)$ such that $T^4 = T^2$ and $T$ is not diagonalizable.
 
 $$
 \begin{pmatrix} 
@@ -362,17 +362,17 @@ $$
 
 We verify that $T^4 = T^2 = 0$. 
 
-0 is the only eigenvalue, and $E(0, T) = span(0,1)$. $dim E(0,T) < dim V = 2$. Hence $T$ is not diagonalizable by 5.55.
+0 is the only eigenvalue, and $E(0, T) = span(0,1)$. $\dim E(0,T) < \dim V = 2$. Hence $T$ is not diagonalizable by 5.55.
 
 
 
-### (2) Suppose $T \in L(V)$ has a diagonal matrix $A$ with respect to some basis of $V$. Prove that if $\lambda \in F$, then $\lambda$ appears on the diagonal of $A$ precisely $dim E(\lambda, T)$ times.
+### (2) Suppose $T \in \mathcal{L}(V)$ has a diagonal matrix $A$ with respect to some basis of $V$. Prove that if $\lambda \in \mathbb{F}$, then $\lambda$ appears on the diagonal of $A$ precisely $\dim E(\lambda, T)$ times.
 
-Suppose $dim V = n$. Let $v_1,...,v_n$ be the basis with respect to which $T$ has a diagonal matrix. 
+Suppose $\dim V = n$. Let $v_1,...,v_n$ be the basis with respect to which $T$ has a diagonal matrix. 
 
 $Tv_i = \lambda_i v_i, i=1,...,n$, where $\lambda_i$'s are the diagonal entries of $A$.
 
-Let $\lambda \in F$. Let $I_\lambda = \\{i: \lambda_i = \lambda \\}$ be the indices where $\lambda$ appears on the diagonal. Let $d$ be the number of times $\lambda$ appears.
+Let $\lambda \in \mathbb{F}$. Let $I_\lambda = \\{i: \lambda_i = \lambda \\}$ be the indices where $\lambda$ appears on the diagonal. Let $d$ be the number of times $\lambda$ appears.
 
 We want to show that $\\{v_i: i \in I_\lambda \\}$ is a basis of $E(\lambda, T)$.
 
@@ -392,13 +392,13 @@ So $u = \sum_{i \in I_\lambda} a_i v_i$. Therefore $v_i: i \in I_\lambda$ spans 
 
 Thus $\\{v_i: i \in I_\lambda \\}$ is a basis of $E(\lambda, T)$. 
 
-$dim E(\lambda, T) = d$, and $\lambda$ appears on the diagonal $d$ times.
+$\dim E(\lambda, T) = d$, and $\lambda$ appears on the diagonal $d$ times.
 
 
 
-### (3) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that if the operator $T$ is diagonalizable, then $V = null T \oplus range T$.
+### (3) Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V)$. Prove that if the operator $T$ is diagonalizable, then $V = null T \oplus range T$.
 
-Suppose $T \in L(V)$ is diagonalizable. We want to show that $V = null T \oplus range T$. 
+Suppose $T \in \mathcal{L}(V)$ is diagonalizable. We want to show that $V = null T \oplus range T$. 
 
 First we will show that $null T + range T$ is a direct sum, and then we will show that it is equal to $V$.
 
@@ -406,7 +406,7 @@ Suppose $v_1, ..., v_n$ is a basis of $V$ with respect to which $T$ has a diagon
 
 Suppose $u \in null T \cap range T$. Then $Tu = 0$ and $Tv = u$ for some $v \in V$. 
 
-We can write $u = a_1 v_1 + ... + a_n v_n$ for some $a_1, ..., a_n \in F$, and $v = b_1 v_1 + ... + b_n v_n$ for some $b_1, ..., b_n \in F$. 
+We can write $u = a_1 v_1 + ... + a_n v_n$ for some $a_1, ..., a_n \in \mathbb{F}$, and $v = b_1 v_1 + ... + b_n v_n$ for some $b_1, ..., b_n \in \mathbb{F}$. 
 
 We have
 
@@ -444,7 +444,7 @@ Thus $null T \cap range T = \\{0\\}$. By 1.46, $null T + range T$ is a direct su
 
 We have
 
-$$dim (null T \oplus range T) = dim null T + dim range T = dim V$$ 
+$$\dim (null T \oplus range T) = \dim null T + \dim range T = \dim V$$ 
 
 where the first equality follows from 3.94 and the second equality follows from the fundamental theorem of linear maps (3.21).
 
@@ -452,7 +452,7 @@ Hence $V = null T \oplus range T$ by 2.39.
 
 
 
-### (4) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that the following are equivalent. (a) $V = null T \oplus range T$. (b) $V = null T + range T$. (c) $null T \cap range T = \\{0\\}$.
+### (4) Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V)$. Prove that the following are equivalent. (a) $V = null T \oplus range T$. (b) $V = null T + range T$. (c) $null T \cap range T = \\{0\\}$.
 
 If (a) holds, then (c) holds from 1.46.
 
@@ -460,10 +460,10 @@ Suppose (c) holds. We have
 
 $$
 \begin{aligned}
-dim (null T + range T) 
-    &= dim null T + dim range T - dim (null T \cap range T) \\
-    &= dim null T + dim range T - 0 \\
-    &= dim V
+\dim (null T + range T) 
+    &= \dim null T + \dim range T - \dim (null T \cap range T) \\
+    &= \dim null T + \dim range T - 0 \\
+    &= \dim V
 \end{aligned}
 $$
 
@@ -473,17 +473,17 @@ Suppose (b) holds. Since $V = null T + range T$,
 
 $$
 \begin{aligned}
-dim V &= dim (null T + range T) \\
-    &= dim null T + dim range T - dim (null T \cap range T) \\
-    &= dim V - dim (null T \cap range T)
+\dim V &= \dim (null T + range T) \\
+    &= \dim null T + \dim range T - \dim (null T \cap range T) \\
+    &= \dim V - \dim (null T \cap range T)
 \end{aligned}
 $$
 
-Therefore $dim (null T \cap range T) = 0$, and (c) holds. (b) and (c) together implies that (a) holds.
+Therefore $\dim (null T \cap range T) = 0$, and (c) holds. (b) and (c) together implies that (a) holds.
 
 
 
-### (5) Suppose $V$ is a finite-dimensional complex vector space and $T \in L(V)$. Prove that $T$ is diagonalizable if and only if $V = null (T-\lambda I) \oplus range (T-\lambda I)$ for every $\lambda \in C$.
+### (5) Suppose $V$ is a finite-dimensional complex vector space and $T \in \mathcal{L}(V)$. Prove that $T$ is diagonalizable if and only if $V = null (T-\lambda I) \oplus range (T-\lambda I)$ for every $\lambda \in C$.
 
 $\Rightarrow$
 Suppose $T$ is diagonalizable. 
@@ -527,10 +527,10 @@ Note that
 
 $$
 \begin{aligned}
-dim range (T-\lambda I) 
-    &= dim V - dim null (T - \lambda I) \\
-    &= dim V - dim E(\lambda, T) \\
-    &= dim E(\lambda_1, T) \oplus ... \oplus E(\lambda_{i-1}, T) \oplus E(\lambda_{i+1}, T) \oplus ... \oplus E(\lambda_m, T)
+\dim range (T-\lambda I) 
+    &= \dim V - \dim null (T - \lambda I) \\
+    &= \dim V - \dim E(\lambda, T) \\
+    &= \dim E(\lambda_1, T) \oplus ... \oplus E(\lambda_{i-1}, T) \oplus E(\lambda_{i+1}, T) \oplus ... \oplus E(\lambda_m, T)
 \end{aligned}
 $$
 
@@ -551,11 +551,11 @@ $$
 $\Leftarrow$
 Suppose $V = null (T-\lambda I) \oplus range (T-\lambda I)$ for every $\lambda \in C$. 
 
-We want to show that $T$ is diagonalizable. We use induction on $dim V$.
+We want to show that $T$ is diagonalizable. We use induction on $\dim V$.
 
-Base case: $dim V = 1$. Every vector in $V$ is an eigenvector, so $T$ is trivially diagonalizable.
+Base case: $\dim V = 1$. Every vector in $V$ is an eigenvector, so $T$ is trivially diagonalizable.
 
-Inductive step: suppose $dim V > 1$ and the desired result holds for all vector spaces of smaller dimension.
+Inductive step: suppose $\dim V > 1$ and the desired result holds for all vector spaces of smaller dimension.
 
 Note that $T$ has at least one eigenvalue by 5.19. Let $\lambda$ be an eigenvalue of $T$.
 
@@ -583,13 +583,13 @@ $$null (T|_U - \mu I) \cap range (T|_U - \mu I) = \\{0\\} .$$
 
 By the fundamental theorem of linear maps (3.21),
 
-$$dim U = dim null (T|_U - \mu I) + dim range (T|_U - \mu I).$$
+$$\dim U = \dim null (T|_U - \mu I) + \dim range (T|_U - \mu I).$$
 
 Thus 
 
 $$U = null (T|_U - \mu I) \oplus range (T|_U - \mu I).$$
 
-Since $dim U < dim V$ and $U$ satisfies the condition in the hypothesis, $T|_U$ is diagonalizable. 
+Since $\dim U < \dim V$ and $U$ satisfies the condition in the hypothesis, $T|_U$ is diagonalizable. 
 
 By hypothesis we have
 
@@ -599,17 +599,17 @@ Adding the eigenvector in $E(\lambda, T)$ to the eigenbasis in $U$ gives us a ba
 
 
 
-### (6) Suppose $T \in L(F^5)$ and $dim E(8,T) = 4$. Prove that $T-2I$ or $T-6I$ is invertible.
+### (6) Suppose $T \in \mathcal{L}(\mathbb{F}^5)$ and $\dim E(8,T) = 4$. Prove that $T-2I$ or $T-6I$ is invertible.
 
 Assume towards contradiction that both $T-2I$ and $T-6I$ are not invertible. 
 
 Then $T-2I$ and $T-6I$ are not injective, by 3.65. $null (T-2I) \neq \\{0\\}, null (T-6I) \neq \\{0\\}$. There exists some $u, w \in V$ such that $(T-2I)u = 0$ and $(T-6I)w = 0$. Therefore $u$ is an eigenvector corresponding to eigenvalue 2, and $w$ is an eigenvector corresponding to eigenvalue 6. 
 
-$$dim E(2,T) + dim E(6,T) + dim E(8,T) = \leq dim V = 5$$
+$$\dim E(2,T) + \dim E(6,T) + \dim E(8,T) = \leq \dim V = 5$$
 
 by 5.54 and
 
-$$dim E(2,T) + dim E(6,T) + dim E(8,T) \geq 1 + 1 + 4 = 6$$
+$$\dim E(2,T) + \dim E(6,T) + \dim E(8,T) \geq 1 + 1 + 4 = 6$$
 
 which is a contradiction. Thus we conclude $T-2I$ or $T-6I$ is invertible.
 
@@ -620,7 +620,7 @@ which is a contradiction. Thus we conclude $T-2I$ or $T-6I$ is invertible.
 ### (13)
 
 
-### (16) Suppose that $T \in L(V)$ is diagonalizable. Let $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$. Prove that a subspace $U$ of $V$ is invariant under $T$ if and only if there exist subspaces $U_1, ..., U_m$ of $V$ such that $U_k \subseteq E(\lambda_k, T)$ for each $k$ and $U = U_1 \oplus ... \oplus U_m$.
+### (16) Suppose that $T \in \mathcal{L}(V)$ is diagonalizable. Let $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$. Prove that a subspace $U$ of $V$ is invariant under $T$ if and only if there exist subspaces $U_1, ..., U_m$ of $V$ such that $U_k \subseteq E(\lambda_k, T)$ for each $k$ and $U = U_1 \oplus ... \oplus U_m$.
 
 $\Leftarrow$
 Suppose there exist subspaces $U_1, ..., U_m$ of $V$ such that $U_k \subseteq E(\lambda_k, T)$ for each $k$ and $U = U_1 \oplus ... \oplus U_m$.

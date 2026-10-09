@@ -6,7 +6,7 @@ Rosie Sun <br>
 
 
 ### 7.26
-Suppose $T \in L(V)$ is self-adjoint and $b, c \in \mathbb{R}$ are such that $b^2 < 4c$. Then
+Suppose $T \in \mathcal{L}(V)$ is self-adjoint and $b, c \in \mathbb{R}$ are such that $b^2 < 4c$. Then
 
 $$T^2 + bT + cI$$
 
@@ -42,13 +42,13 @@ Since $V$ is finite-dimensional (standing assumption of this chapter), $T^2 + bT
 
 
 ### 7.27
-Suppose $T \in L(V)$ is self-adjoint. Then the minimal polynomial of $T$ equals $(z - \lambda_1) ... (z - \lambda_m)$ for some $\lambda_1, ..., \lambda_m \in \mathbb{R}$.
+Suppose $T \in \mathcal{L}(V)$ is self-adjoint. Then the minimal polynomial of $T$ equals $(z - \lambda_1) ... (z - \lambda_m)$ for some $\lambda_1, ..., \lambda_m \in \mathbb{R}$.
 
 Proof:
 
-First suppose $F = C$. The zeros of the minimal polynomial of $T$ are the eigenvalues of $T$ by 5.27. All eigenvalues of $T$ are real by 7.12. Thus the second version of thd fundamental theorem of algebra tells us that the minimal polynomial of $T$ has the desired form.
+First suppose $\mathbb{F} = C$. The zeros of the minimal polynomial of $T$ are the eigenvalues of $T$ by 5.27. All eigenvalues of $T$ are real by 7.12. Thus the second version of thd fundamental theorem of algebra tells us that the minimal polynomial of $T$ has the desired form.
 
-Now suppose $F = \mathbb{R}$. By the factorization of a polynomial over $\mathbb{R}$ (4.16), there exist $\lambda_1, ..., \lambda_m \in \mathbb{R}$, and $b_1, ..., b_N, c_1, ..., c_N \in \mathbb{R}$ with $b_k^2 < 4c_k$ for each $k$ such that the minimal polynomial of $T$ equals 
+Now suppose $\mathbb{F} = \mathbb{R}$. By the factorization of a polynomial over $\mathbb{R}$ (4.16), there exist $\lambda_1, ..., \lambda_m \in \mathbb{R}$, and $b_1, ..., b_N, c_1, ..., c_N \in \mathbb{R}$ with $b_k^2 < 4c_k$ for each $k$ such that the minimal polynomial of $T$ equals 
 
 $$(7.28) (z - \lambda_1) ... (z - \lambda_m) (z^2 + b_1 z+ c_1) ... (z^2 + b_N z + c_N) ;$$
 
@@ -60,7 +60,7 @@ If $N > 0$, then we could multiply both sides of the equation above on the right
 
 
 ### 7.29 Real spectral theorem
-Suppose $F = \mathbb{R}$ and $T \in L(V)$. Then the following are equivalent.
+Suppose $\mathbb{F} = \mathbb{R}$ and $T \in \mathcal{L}(V)$. Then the following are equivalent.
 
 (a) $T$ is self-adjoint.
 
@@ -78,7 +78,7 @@ The equivalence of (b) and (c) follows from the definitions (or see 5.55).
 
 
 ### 7.31 Complex spectral theorem
-Suppose $F = C$ and $T \in L(V)$. Then the following are equivalent.
+Suppose $\mathbb{F} = C$ and $T \in \mathcal{L}(V)$. Then the following are equivalent.
 
 (a) $T$ is normal.
 
@@ -142,7 +142,7 @@ The equivalence of (b) and (c) follows from the definitions (also see 5.55).
 
 ### (1) Prove that a normal operator on a complex inner product space is self-adjoint if and only if all its eigenvalues are real.
 
-Suppose $T \in L(V)$ and $F = C$.
+Suppose $T \in \mathcal{L}(V)$ and $\mathbb{F} = C$.
 
 $\Rightarrow$
 Suppose $T$ is a self-adjoint operator. 
@@ -154,7 +154,7 @@ Suppose $T$ is a normal operator with all real eigenvalues.
 
 By the spectral theorem (7.31), $V$ has an orthonormal basis consisting of eigenvectors of $T$. Let $e_1, ..., e_n$ be the orthonormal basis consisting of eigenvectors. Let $\lambda_1, ..., \lambda_n$ be the corresponding eigenvalues.
 
-For any $v \in V$, we can write $v = a_1 e_1 + ... + a_n e_n$ for some $a_1, ..., a_n \in F$. We have
+For any $v \in V$, we can write $v = a_1 e_1 + ... + a_n e_n$ for some $a_1, ..., a_n \in \mathbb{F}$. We have
 
 $$
 \begin{aligned}
@@ -171,7 +171,7 @@ By 7.14, $T$ is self-adjoint.
 
 
 
-### (2) Suppose $F = C$. Suppose $T \in L(V)$ is normal and has only one eigenvalue. Prove that $T$ is a scalar multiple of the identity operator.
+### (2) Suppose $\mathbb{F} = C$. Suppose $T \in \mathcal{L}(V)$ is normal and has only one eigenvalue. Prove that $T$ is a scalar multiple of the identity operator.
 
 Let $\lambda$ be the (only) eigenvalue of $T$.
 
@@ -181,7 +181,7 @@ We have $Te_k = \lambda e_k, k = 1, ..., n$. Since $Te_k$ is a scalar multiple o
 
 
 
-### (3) Suppose $F = C$ and $T \in L(V)$ is normal. Prove that the set of eigenvalues of $T$ is contained in $\\{0, 1\\}$ if and only if there is a subspace $U$ of $V$ such that $T = P_U$.
+### (3) Suppose $\mathbb{F} = C$ and $T \in \mathcal{L}(V)$ is normal. Prove that the set of eigenvalues of $T$ is contained in $\\{0, 1\\}$ if and only if there is a subspace $U$ of $V$ such that $T = P_U$.
 
 $\Rightarrow$
 Suppose the eigenvalues of $T$ are contained in {0, 1}. 
@@ -213,7 +213,7 @@ The behavior of $T$ is completely determined by its action on the basis. Thus th
 
 ### (4) Prove that a normal operator on a complex inner product space is skew (meaning it equals the negative of its adjoint) if and only if all its eigenvalues are purely imaginary (meaning that they have real part equal to 0).
 
-Suppose $T \in L(V)$ and $F = C$.
+Suppose $T \in \mathcal{L}(V)$ and $\mathbb{F} = C$.
 
 $\Rightarrow$
 Suppose $T$ is a normal operator and $T$ skew ($T = - T^\ast$). 
@@ -250,7 +250,7 @@ Hence $T^\ast = - T$ and $T$ is skew.
 ### (5)
 
 
-### (8) Suppose $F = C$ and $T \in L(V)$. Prove that $T$ is normal if and only if every eigenvector of $T$ is also an eigenvector of $T^\ast$.
+### (8) Suppose $\mathbb{F} = C$ and $T \in \mathcal{L}(V)$. Prove that $T$ is normal if and only if every eigenvector of $T$ is also an eigenvector of $T^\ast$.
 
 $\Rightarrow$
 Suppose $T$ is normal. 
@@ -260,7 +260,7 @@ Suppose $v \in V, v \neq 0$ is an eigenvector of $T$. By 7.21, $v$ is an eigenve
 $\Leftarrow$
 Suppose every eigenvector of $T$ is also an eigenvector of $T^\ast$.
 
-Suppose $v \in V, v \neq 0$ is an eigenvector of $T$. Then $Tv = \lambda v$ for some $\lambda \in F$, and $T^\ast v = \alpha v$ for some $\alpha \in F$. We have
+Suppose $v \in V, v \neq 0$ is an eigenvector of $T$. Then $Tv = \lambda v$ for some $\lambda \in \mathbb{F}$, and $T^\ast v = \alpha v$ for some $\alpha \in \mathbb{F}$. We have
 
 $$
 \begin{aligned}
@@ -342,7 +342,7 @@ Hence $T$ has a diagonal matrix with respect to an orthonormal basis in $V$. By 
 ### (13)
 
 
-### (14) Suppose $F = \mathbb{R}$ and $T \in L(V)$. Prove that $T$ is self-adjoint if and only if all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$, where $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$.
+### (14) Suppose $\mathbb{F} = \mathbb{R}$ and $T \in \mathcal{L}(V)$. Prove that $T$ is self-adjoint if and only if all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$, where $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$.
 
 $\Rightarrow$
 Suppose $T$ is self-adjoint. It follows that $T$ is normal.
@@ -354,13 +354,13 @@ By the spectral theorem (7.29), $V$ has an orthonormal basis consisting of eigen
 $\Leftarrow$
 Suppose all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$, where $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$.
 
-For $j = 1, ..., m$, suppose $dim E (\lambda_j, T) = k_j$. Let $v_{j, 1}, ..., v_{j, k_j}$ be a basis of $E (\lambda_j, T)$. Apply the Gram-Schmidt procedure to each eigenspace to obtain an orthonormal basis $e_{j, 1}, ..., e_{j, k_j}$. Within each eigenspace, $e_{j, 1}, ..., e_{j, k_j}$ is an orthonormal basis. Since we applied the Gram-Schmidt procedure inside each eigenspace, $e_{j, 1}, ..., e_{j, k_j}$ are eigenvectors corresponding to eigenvalue $\lambda_j$. 
+For $j = 1, ..., m$, suppose $\dim E (\lambda_j, T) = k_j$. Let $v_{j, 1}, ..., v_{j, k_j}$ be a basis of $E (\lambda_j, T)$. Apply the Gram-Schmidt procedure to each eigenspace to obtain an orthonormal basis $e_{j, 1}, ..., e_{j, k_j}$. Within each eigenspace, $e_{j, 1}, ..., e_{j, k_j}$ is an orthonormal basis. Since we applied the Gram-Schmidt procedure inside each eigenspace, $e_{j, 1}, ..., e_{j, k_j}$ are eigenvectors corresponding to eigenvalue $\lambda_j$. 
 
 Together, $e_{j, k}, j = 1, ..., m, k = 1, ..., k_j$ is an orthonormal basis of $V$ consisting of eigenvectors of $T$. By 7.29, $T$ is self-adjoint.
 
 
 
-### (15) Suppose $F = C$ and $T \in L(V)$. Prove that $T$ is normal if and only if all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$, where $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$.
+### (15) Suppose $\mathbb{F} = C$ and $T \in \mathcal{L}(V)$. Prove that $T$ is normal if and only if all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$, where $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$.
 
 $\Rightarrow$
 Suppose $T$ is normal.
@@ -372,13 +372,13 @@ By the spectral theorem (7.31), $V$ has an orthonormal basis consisting of eigen
 $\Leftarrow$
 Suppose all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and $V = E(\lambda_1, T) \oplus ... \oplus E(\lambda_m, T)$, where $\lambda_1, ..., \lambda_m$ denote the distinct eigenvalues of $T$.
 
-For $j = 1, ..., m$, suppose $dim E (\lambda_j, T) = k_j$. Let $v_{j, 1}, ..., v_{j, k_j}$ be a basis of $E (\lambda_j, T)$. Apply the Gram-Schmidt procedure to each eigenspace to obtain an orthonormal basis $e_{j, 1}, ..., e_{j, k_j}$. Within each eigenspace, $e_{j, 1}, ..., e_{j, k_j}$ is an orthonormal basis. Since we applied the Gram-Schmidt procedure inside each eigenspace, $e_{j, 1}, ..., e_{j, k_j}$ are eigenvectors corresponding to eigenvalue $\lambda_j$. 
+For $j = 1, ..., m$, suppose $\dim E (\lambda_j, T) = k_j$. Let $v_{j, 1}, ..., v_{j, k_j}$ be a basis of $E (\lambda_j, T)$. Apply the Gram-Schmidt procedure to each eigenspace to obtain an orthonormal basis $e_{j, 1}, ..., e_{j, k_j}$. Within each eigenspace, $e_{j, 1}, ..., e_{j, k_j}$ is an orthonormal basis. Since we applied the Gram-Schmidt procedure inside each eigenspace, $e_{j, 1}, ..., e_{j, k_j}$ are eigenvectors corresponding to eigenvalue $\lambda_j$. 
 
 Together, $e_{j, k}, j = 1, ..., m, k = 1, ..., k_j$ is an orthonormal basis of $V$ consisting of eigenvectors of $T$. By 7.31, $T$ is normal.
 
 
 
-### (19) Suppose $T \in L(V)$ is self-adjoint and $U$ is a subspace of $V$ that is invariant under $T$.
+### (19) Suppose $T \in \mathcal{L}(V)$ is self-adjoint and $U$ is a subspace of $V$ that is invariant under $T$.
 
 #### (a) Prove that $U^\perp$ is invariant under $T$.
 
@@ -387,7 +387,7 @@ In 7A we proved that $U$ is invariant under $T$ $\iff$ $U^\perp$ is invariant un
 Since $T$ is self-adjoint, $T = T^\ast$, so $U^\perp$ is invariant under $T$.
 
 
-#### (b) Prove that $T|_U \in L(U)$ is self-adjoint.
+#### (b) Prove that $T|_U \in \mathcal{L}(U)$ is self-adjoint.
 
 Suppose $u, w \in U$. We have 
 
@@ -403,16 +403,16 @@ $$
 
 for all $u, w \in U$. The first and last equality follow because $U$ is $T$-invariant so we can interchange $T$ and $T|_U$; the third equality follows because $T$ is self-adjoint. 
 
-Hence $T|_U \in L(U)$ is self-adjoint.
+Hence $T|_U \in \mathcal{L}(U)$ is self-adjoint.
 
 
-#### (c) Prove that $T|_{U^\perp} \in L(U^\perp)$ is self-adjoint.
+#### (c) Prove that $T|_{U^\perp} \in \mathcal{L}(U^\perp)$ is self-adjoint.
 
-Since $U^\perp$ is invariant under $T$ (shown in part a), we can use the same argument as part b to show that $T|_{U^\perp} \in L(U^\perp)$ is self-adjoint.
+Since $U^\perp$ is invariant under $T$ (shown in part a), we can use the same argument as part b to show that $T|_{U^\perp} \in \mathcal{L}(U^\perp)$ is self-adjoint.
 
 
 
-### (20) Suppose $T \in L(V)$ is normal and $U$ is a subspace of $V$ that is invariant under $T$. Note: This exercise can be used to give yet another proof of the complex spectral theorem (use induction on $dim V$ and the result that $T$ has an eigenvector).
+### (20) Suppose $T \in \mathcal{L}(V)$ is normal and $U$ is a subspace of $V$ that is invariant under $T$. Note: This exercise can be used to give yet another proof of the complex spectral theorem (use induction on $\dim V$ and the result that $T$ has an eigenvector).
 
 #### (b) Prove that $U$ is invariant under $T^\ast$.
 
@@ -504,11 +504,11 @@ where the third equality follows from the fact that $U$ is invariant under $T^\a
 Hence $(T|_U)^\ast = (T^\ast)|_U$.
 
 
-#### (d) Prove that $T|_U \in L(U)$ and $T|{U^\ast} \in L(U^\perp)$ are normal operators.
+#### (d) Prove that $T|_U \in \mathcal{L}(U)$ and $T|{U^\ast} \in \mathcal{L}(U^\perp)$ are normal operators.
 
 Suppose $v \in U$. 
 
-Since $T \in L(V)$ is normal, $T T^\ast v = T^\ast T v$. We have
+Since $T \in \mathcal{L}(V)$ is normal, $T T^\ast v = T^\ast T v$. We have
 
 $$(T|_U) (T|_U)^\ast v = (T|_U) (T^\ast)|_U v = T T^\ast v$$
 
@@ -518,7 +518,7 @@ and similarly
 
 $$(T|_U)^\ast (T|_U) v = (T^\ast)|_U (T|_U) v = T^\ast T v.$$
 
-Thus $(T|_U) (T|_U)^\ast v = (T|_U)^\ast (T|_U) v$, and $T|_U \in L(U)$ is normal.
+Thus $(T|_U) (T|_U)^\ast v = (T|_U)^\ast (T|_U) v$, and $T|_U \in \mathcal{L}(U)$ is normal.
 
-We can use the same argument to show that $T|{U^\ast} \in L(U^\perp)$ is normal.
+We can use the same argument to show that $T|{U^\ast} \in \mathcal{L}(U^\perp)$ is normal.
 

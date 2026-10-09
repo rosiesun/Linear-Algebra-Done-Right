@@ -15,13 +15,13 @@ Suppose $e_1,...,e_m$ is an orthonormal list of vectors in $V$. Then
 
 $$\lVert a_1 e_1 + ... + a_m e_m \rVert^2 = |a_1|^2 + ... + |a_m|^2$$
 
-for all $a_1,...,a_m \in F$.
+for all $a_1,...,a_m \in \mathbb{F}$.
 
 
 ### 6.25
 Every orthonormal list of vectors is linearly independent.
 
-Proof: Suppose $e_1,...,e_m$ is an orthonormal list of vectors in $V$ and $a_1,...,a_m \in F$ are such that $a_1 e_1 + ... + a_m e_m = 0$. Then $|a_1|^2 + ... + |a_m|^2 = 0$ by 6.24, which means that all the $a_k$'s are 0. Thus $e_1,...,e_m$ is linearly independent.
+Proof: Suppose $e_1,...,e_m$ is an orthonormal list of vectors in $V$ and $a_1,...,a_m \in \mathbb{F}$ are such that $a_1 e_1 + ... + a_m e_m = 0$. Then $|a_1|^2 + ... + |a_m|^2 = 0$ by 6.24, which means that all the $a_k$'s are 0. Thus $e_1,...,e_m$ is linearly independent.
 
 
 ### 6.26 Bessel's inequality
@@ -55,7 +55,7 @@ An orthonormal basis of $V$ is an orthonormal list of vectors in $V$ that is als
 
 
 ### 6.28
-Suppose $V$ is finite-dimensional. Then every orthonormal list of vectors in $V$ of length $dim V$ is an orthonormal basis of $V$.
+Suppose $V$ is finite-dimensional. Then every orthonormal list of vectors in $V$ of length $\dim V$ is an orthonormal basis of $V$.
 
 Proof: 
 
@@ -129,7 +129,7 @@ Suppose $V$ is finite-dimensional. Then every orthonormal list of vectors in $V$
 
 
 ### 6.37
-Suppose $V$ is finite-dimensional and $T \in L(V)$. Then $T$ has an upper-triangular matrix with respect to some orthonormal basis of $V$ if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some $\lambda_1,...,\lambda_m \in F$.
+Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V)$. Then $T$ has an upper-triangular matrix with respect to some orthonormal basis of $V$ if and only if the minimal polynomial of $T$ equals $(z-\lambda_1)...(z-\lambda_m)$ for some $\lambda_1,...,\lambda_m \in \mathbb{F}$.
 
 
 ### 6.38 Schur's theorem
@@ -182,7 +182,7 @@ for every $u \in V$. Taking $u = v_1 - v_2$ shows that $v_1 - v_2 = 0$. Thus $v_
 
 ## Exercises
 
-### (1) Suppose $e_1,...,e_m$ is a list of vectors in $V$ such that $\lVert a_1 e_1 + ... + a_m e_m \rVert^2 = |a_1|^2 + ... + |a_m|^2$ for all $a_1,...,a_m \in F$. Show that $e_1,...,e_m$ is an orthonormal list.
+### (1) Suppose $e_1,...,e_m$ is a list of vectors in $V$ such that $\lVert a_1 e_1 + ... + a_m e_m \rVert^2 = |a_1|^2 + ... + |a_m|^2$ for all $a_1,...,a_m \in \mathbb{F}$. Show that $e_1,...,e_m$ is an orthonormal list.
 
 First we want to show that the norms of each $e_i, i=1,...,m$ is 1.
 
@@ -194,7 +194,7 @@ Therefore $\lVert e_k \rVert = 1$. Since $k$ was arbitrary, all the $e_i, i=1,..
 
 Next we want to show that the inner product of $e_k, e_l$ is 0 for $k \neq l$.
 
-Let $a_k, a_l \in F$, $a_i = 0, i \neq k, i \neq l$. Then 
+Let $a_k, a_l \in \mathbb{F}$, $a_i = 0, i \neq k, i \neq l$. Then 
 
 $$\lVert a_k e_k a_l e_l \rVert^2 = |a_k|^2 + |a_l|^2 + a_k \overline{a_l} \langle e_k, e_l \rangle + a_l \overline{a_k} \langle e_l, e_k \rangle = |a_k|^2 + |a_l|^2$$
 
@@ -202,7 +202,7 @@ Thus
 
 $$a_k \overline{a_l} \langle e_k, e_l \rangle + a_l \overline{a_k} \langle e_l, e_k \rangle = 0$$ 
 
-for all $a_k, a_l \in F$.
+for all $a_k, a_l \in \mathbb{F}$.
 
 Consider $a_k = a_l = 1$. Then 
 
@@ -277,7 +277,12 @@ $$\lVert v \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^
 
 
 
-### (4) Suppose $n$ is a positive integer. Prove ethat $1/\sqrt{2\pi}, cos x / sqrt{\pi}$
+### (4) Suppose $n$ is a positive integer. Prove that $\frac{1}{\sqrt{2\pi}}, \frac{\cos x}{\sqrt{\pi}}, \frac{\cos 2x}{\sqrt{\pi}}, ..., \frac{\cos nx}{\sqrt{\pi}}, \frac{\sin x}{\sqrt{\pi}}, \frac{\sin 2x}{\sqrt{\pi}}, ..., \frac{\sin nx}{\sqrt{\pi}}$ is an orthonormal list of vectors in $C[-\pi, \pi]$, the vector space of continuous real-valued functions on $[-\pi, \pi]$ with inner product $\langle f, g \rangle = \int^{\pi}_{-\pi} fg$.
+
+
+
+### (5)
+
 
 
 
@@ -285,7 +290,7 @@ $$\lVert v \rVert^2 = |\langle v,e_1 \rangle|^2 + ... + |\langle v,e_m \rangle|^
 
 #### (a) Prove that if $v_1,...,v_n$ are vectors in $V$ such that $\lVert e_k - v_k \rVert \langle  1/\sqrt{n}$ for each $k$, then $v_1,...,v_n$ is a basis of $V$.
 
-Suppose $a_1 v_1 + ... + a_n v_n = 0$ for some $a_1,...,a_n \in F$. We can rewrite
+Suppose $a_1 v_1 + ... + a_n v_n = 0$ for some $a_1,...,a_n \in \mathbb{F}$. We can rewrite
 
 $$a_1 (e_1 + v_1 - e_1) + ... + a_n (e_n + v_n - e_n) = 0$$
 
@@ -332,7 +337,7 @@ By the Riesz representation theorem 6.42, there exists unique $u_k \in V$ such t
 
 Since the length of the list $u_1,...,u_n$ is $n$, we need to show that $u_1,...,u_n$ is linearly independent. 
 
-Suppose $a_1 u_1 + ... + a_n u_n = 0$ for some $a_1,...,a_n \in F$.
+Suppose $a_1 u_1 + ... + a_n u_n = 0$ for some $a_1,...,a_n \in \mathbb{F}$.
 
 For each $j=1,...,n$, we have
 

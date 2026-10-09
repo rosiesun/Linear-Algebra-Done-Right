@@ -32,7 +32,7 @@ $$\langle u, v+w \rangle = \langle u,v \rangle + \langle u,w \rangle = 0 + 0 = 0
 
 Thus $v + w \in U^{\perp}$, which shows that $U^{\perp}$ is closed under addition.
 
-Similarly, suppose $\lambda \in F$ and $v \in U^{\perp}$. If $u \in U$, then 
+Similarly, suppose $\lambda \in \mathbb{F}$ and $v \in U^{\perp}$. If $u \in U$, then 
 
 $$\langle u, \lambda v \rangle = \overline{\lambda} \langle u, v \rangle = \overline{\lambda} 0 = 0$$
 
@@ -76,11 +76,11 @@ From 6.48, we know that $U \cap U^{\perp} = \\{0\\}$. This implies that $V = U \
 ### 6.51
 Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Then
 
-$$dim U^{\perp} = dim V - dim U$$
+$$\dim U^{\perp} = \dim V - \dim U$$
 
 Proof: 
 
-The formula for $dim U^{\perp}$ follows from 6.49 and 3.94.
+The formula for $\dim U^{\perp}$ follows from 6.49 and 3.94.
 
 
 ### 6.52
@@ -114,13 +114,13 @@ Conversely, if $U = V$, then $U^{\perp} = V^{\perp} = \\{0\\}$ by 6.48.
 
 
 ### 6.55 Definition: orthogonal projection
-Suppose $U$ is a finite-dimensional subspace of $V$. The orthogonal projection of $V$ onto $U$ is the operator $P_U \in L(V)$ defined as follows: For each $v \in V$, write $v = u + w$, where $u \in U$ and $w \in U^{\perp}$. Then let $P_U v = u$.
+Suppose $U$ is a finite-dimensional subspace of $V$. The orthogonal projection of $V$ onto $U$ is the operator $P_U \in \mathcal{L}(V)$ defined as follows: For each $v \in V$, write $v = u + w$, where $u \in U$ and $w \in U^{\perp}$. Then let $P_U v = u$.
 
 
 ### 6.57
 Suppose $U$ is a finite-dimensional subspace of $V$. Then
 
-(a) $P_U \in L(V)$;
+(a) $P_U \in \mathcal{L}(V)$;
 
 (b) $P_U u = u$ for every $u \in U$;
 
@@ -146,7 +146,7 @@ Proof:
 
 Now $v_1 + v_2 = (u_1 + u_2) + (w_1 + w_2)$ where $(u_1 + u_2) \in U$ and $w_1 + w_2 \in U^{\perp}$. Thus $P_U (v_1 + v_2) = u_1 + u_2 = P_U v_1 + P_U v_2$.
 
-Similarly, suppose $\lambda \in F$ and $v \in V$. Write $v = u + w$, where $u \in U$ and $w \in U^{\perp}$. Then $\lambda v = \lambda u + \lambda w$ with $\lambda u \in U$ and $\lambda w \in U^{\perp}$. Thus $P_U (\lambda v) = \lambda u = \lambda P_U v$. 
+Similarly, suppose $\lambda \in \mathbb{F}$ and $v \in V$. Write $v = u + w$, where $u \in U$ and $w \in U^{\perp}$. Then $\lambda v = \lambda u + \lambda w$ with $\lambda u \in U$ and $\lambda w \in U^{\perp}$. Thus $P_U (\lambda v) = \lambda u = \lambda P_U v$. 
 
 Hence $P_U$ is a linear map from $V to V$.
 
@@ -252,7 +252,7 @@ The inequality proved is an equality if and only if $\lVert v - P_U v \rVert^2 =
 $\subseteq$ 
 Suppose $v \in \\{v_1, ..., v_m\\}^{\perp}$. Then $\langle v_k, v \rangle = 0$ for $k = 1, ... ,m$. 
 
-Let $a_1, ..., a_m \in F$. Then 
+Let $a_1, ..., a_m \in \mathbb{F}$. Then 
 
 $$
 \begin{aligned}
@@ -265,7 +265,7 @@ $$
 Since $a_1,...,a_m$ is arbitrary, $v \in (span(v_1,...,v_m))^{\perp}$.
 
 $\supseteq$ 
-Suppose $v \in (span(v_1, ..., v_m))^{\perp}$. Then $\langle a_1 v_1 + ... + a_m v_m, v \rangle = 0$ for any $a_1, ..., a_m \in F$. 
+Suppose $v \in (span(v_1, ..., v_m))^{\perp}$. Then $\langle a_1 v_1 + ... + a_m v_m, v \rangle = 0$ for any $a_1, ..., a_m \in \mathbb{F}$. 
 
 Since $v_k \in span(v_1, ..., v_m)$ for $k=1, ..., m$, we have $\langle v_k, v \rangle = 0$ for $k=1,...,m$. 
 
@@ -290,7 +290,7 @@ $$P_{U^{\perp}} v = w = v - u = Iv - P_U v = (I - P_U) v$$
 
 
 
-### (6) Suppose $V$ is finite-dimensional and $T \in L(V,W)$. Show that $T = TP_{(null T)^{\perp}} = P_{range T} T$.
+### (6) Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V,W)$. Show that $T = TP_{(null T)^{\perp}} = P_{range T} T$.
 
 First we want to show $T = TP_{(null T)^{\perp}}$.
 
@@ -330,7 +330,7 @@ Therefore $P_X P_Y = 0$.
 
 
 
-### (8) Suppose $U$ is a finite-dimensional subspace of $V$ and $v \in V$. Define a linear functional $\phi: U \to F$ by $\phi(u) = \langle u, v \rangle$ for all $u \in U$. By the Riesz representation theorem, there exists a unique vector $w \in U$ such that $\phi(u) = \langle u, w \rangle$ for all $u \in U$. Show that $w = P_U v$.
+### (8) Suppose $U$ is a finite-dimensional subspace of $V$ and $v \in V$. Define a linear functional $\phi: U \to \mathbb{F}$ by $\phi(u) = \langle u, v \rangle$ for all $u \in U$. By the Riesz representation theorem, there exists a unique vector $w \in U$ such that $\phi(u) = \langle u, w \rangle$ for all $u \in U$. Show that $w = P_U v$.
 
 Since $\phi(u) = \langle u, v \rangle = \langle u, w \rangle$ for all $u \in U$, we have $\langle u, v \rangle - \langle u, w \rangle = \langle u, v-w \rangle = 0$ for all $u \in U$. 
 
@@ -342,7 +342,7 @@ $$P_U v = P_U (v-w+w) = P_U (v-w) + P_U w = 0 + w = w$$
 
 
 
-### (9) Suppose $V$ is finite-dimensional. Suppose $P \in L(V)$ is such that $P^2 = P$ and every vector in $null P$ is orthogonal to every vector in $range P$. Prove that there exists a subspace $U$ of $V$ such that $P = P_U$.
+### (9) Suppose $V$ is finite-dimensional. Suppose $P \in \mathcal{L}(V)$ is such that $P^2 = P$ and every vector in $null P$ is orthogonal to every vector in $range P$. Prove that there exists a subspace $U$ of $V$ such that $P = P_U$.
 
 Let $U = range P$. We will show $P = P_U$ by verifying that, for every $v \in V$, we can write $v = Pv + (v - Pv)$, where $Pv \in U$ and $(v - Pv) \in U^\perp$.
 
@@ -360,11 +360,11 @@ From 6.47 the decomposition is unique, hence $P = P_U$.
 
 
 
-### (10) Suppose $V$ is finite-dimensional and $P \in L(V)$ is such that $P^2 = P$ and $\lVert Pv \rVert \leq \lVert v \rVert$ for every $v \in V$. Prove that there exists a subspace $U$ of $V$ such that $P = P_U$.
+### (10) Suppose $V$ is finite-dimensional and $P \in \mathcal{L}(V)$ is such that $P^2 = P$ and $\lVert Pv \rVert \leq \lVert v \rVert$ for every $v \in V$. Prove that there exists a subspace $U$ of $V$ such that $P = P_U$.
 
 
 
-### (11) Suppose $T \in L(V)$ and $U$ is a finite-dimensional subspace of $V$. Prove that $U$ is invariant under $T$ $\iff$ $P_U T P_U = T P_U$.
+### (11) Suppose $T \in \mathcal{L}(V)$ and $U$ is a finite-dimensional subspace of $V$. Prove that $U$ is invariant under $T$ $\iff$ $P_U T P_U = T P_U$.
 
 $\Rightarrow$
 Suppose $U$ is invariant under $T$.
@@ -411,7 +411,7 @@ Hence $U$ is invariant under $T$.
 
 
 
-### (12) Suppose $V$ is finite-dimensional, $T \in L(V)$, and $U$ is a subspace of $V$. Prove that $U$ and $U^\perp$ are both invariant under $T$ $\iff$ $P_U T = T P_U$.
+### (12) Suppose $V$ is finite-dimensional, $T \in \mathcal{L}(V)$, and $U$ is a subspace of $V$. Prove that $U$ and $U^\perp$ are both invariant under $T$ $\iff$ $P_U T = T P_U$.
 
 $\Rightarrow$
 Suppose $U$ and $U^\perp$ are both invariant under $T$.
@@ -460,11 +460,11 @@ By hypothesis $P_U (Tw) = 0$, thus $Tw \in U^\perp$ by 6.57. Hence $U^\perp$ is 
 
 
 
-### (13) Suppose $F=\mathbb{R}$ and $V$ is finite-dimensional. For each $v \in V$, let $\phi_v$ denote the linear functional on $V$ defined by $\phi_v(u) = \langle u,v \rangle$ for all $u \in V$.
+### (13) Suppose $\mathbb{F}=\mathbb{R}$ and $V$ is finite-dimensional. For each $v \in V$, let $\phi_v$ denote the linear functional on $V$ defined by $\phi_v(u) = \langle u,v \rangle$ for all $u \in V$.
 
 #### (a) Show that $v \to \phi_v$ is an injective linear map from $V$ to $V'$.
 
-Define $T \in L(V, V')$, where $Tv = \phi_v$ where $\phi_v(u) = \langle u,v \rangle$.
+Define $T \in \mathcal{L}(V, V')$, where $Tv = \phi_v$ where $\phi_v(u) = \langle u,v \rangle$.
 
 First we want to show that $T$ is linear. 
 
@@ -478,7 +478,7 @@ Let $\lambda \in \mathbb{R}, v \in V$. Then $T(\lambda v) = \phi_{\lambda v}$.
 
 $$\phi_{\lambda v} (u) = \langle u, \lambda v \rangle = \lambda \langle u, v \rangle = \lambda \phi_v(u)$$
 
-where the second equality follows from the fact that $F = \mathbb{R}$ so $\lambda = \overline{\lambda}$.
+where the second equality follows from the fact that $\mathbb{F} = \mathbb{R}$ so $\lambda = \overline{\lambda}$.
 
 Therefore $T(\lambda v) = \lambda Tv$. Thus $T$ is a linear map.
 
@@ -487,7 +487,7 @@ To show that $T$ is injective, suppose $Tv = 0$. Then $\phi_v = 0$, and $\phi(u)
 
 #### (b) Use (a) and a dimension-counting argument to show that $v \to \phi_v$ is an isomorphism from $V$ to $V'$.
 
-By 3.111, $dim V = dim V'$. From part (a), $T$ is injective, therefore $T$ is surjective by 3.65. Thus it is an isomorphism.
+By 3.111, $\dim V = \dim V'$. From part (a), $T$ is injective, therefore $T$ is surjective by 3.65. Thus it is an isomorphism.
 
 
 

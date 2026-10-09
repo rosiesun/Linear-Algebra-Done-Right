@@ -6,7 +6,7 @@ Rosie Sun <br>
 
 
 ### 7.1 Definition: adjoint
-Suppose $T \in L(V, W)$. The adjoint of $T$ is the function $T^\ast: W \to V$ such that 
+Suppose $T \in \mathcal{L}(V, W)$. The adjoint of $T$ is the function $T^\ast: W \to V$ such that 
 
 $$\langle Tv, w\rangle  = \langle v, T^\ast w\rangle $$
 
@@ -14,11 +14,11 @@ for every $v \in V$ and every $w \in W$.
 
 
 ### 7.4
-If $T \in L(V, W)$, then $T^\ast \in L(W, V)$.
+If $T \in \mathcal{L}(V, W)$, then $T^\ast \in \mathcal{L}(W, V)$.
 
 Proof:
 
-Suppose $T \in L(V, W)$. If $v \in V$ and $w_1, w_2 \in W$, then 
+Suppose $T \in \mathcal{L}(V, W)$. If $v \in V$ and $w_1, w_2 \in W$, then 
 
 $$\langle Tv, w_1 + w_2 \rangle = \langle v, T^\ast (w_1 + w_2) \rangle$$
 
@@ -39,7 +39,7 @@ Since the inner product equality holds for all $v \in V$,
 
 $$T^\ast (w_1 + w_2) = T^\ast w_1 + T^\ast w_2.$$
 
-Similarly, if $v \in V$, $\lambda \in F$, and $w \in W$, then 
+Similarly, if $v \in V$, $\lambda \in \mathbb{F}$, and $w \in W$, then 
 
 $$\langle Tv, \lambda w \rangle = \langle v, T^\ast (\lambda w) \rangle $$
 
@@ -62,15 +62,15 @@ Thus $T^\ast$ satisfies additivity and homogeneity, and therefore is a linear ma
 
 
 ### 7.5
-Suppose $T \in L(V, W)$. Then
+Suppose $T \in \mathcal{L}(V, W)$. Then
 
-(a) $(S+T)^\ast = S^\ast + T^\ast$ for all $S \in L(V, W)$;
+(a) $(S+T)^\ast = S^\ast + T^\ast$ for all $S \in \mathcal{L}(V, W)$;
 
-(b) $(\lambda T)^\ast = \overline{\lambda} T^\ast$ for all $\lambda \in F$;
+(b) $(\lambda T)^\ast = \overline{\lambda} T^\ast$ for all $\lambda \in \mathbb{F}$;
 
 (c) $(T^\ast)^\ast = T$;
 
-(d) $(ST)^\ast = T^\ast S^\ast$ for all $S \in L(W, U)$ (here $U$ is a finite-dimensional inner product space over $F$);
+(d) $(ST)^\ast = T^\ast S^\ast$ for all $S \in \mathcal{L}(W, U)$ (here $U$ is a finite-dimensional inner product space over $\mathbb{F}$);
 
 (e) $I^\ast = I$, where $I$ is the identity operator on $V$;
 
@@ -82,7 +82,7 @@ Suppose $v \in V$ and $w \in W$.
 
 (a) 
 
-If $S \in L(V, W)$, then
+If $S \in \mathcal{L}(V, W)$, then
 
 $$\langle (S + T)v, w \rangle = \langle v, (S + T)^\ast w \rangle .$$
 
@@ -103,7 +103,7 @@ $$(S + T)^\ast w = S^\ast w + T^\ast .$$
 
 (b) 
 
-If $\lambda \in F$, then 
+If $\lambda \in \mathbb{F}$, then 
 
 $$\langle (\lambda T) v, w \rangle s= \langle v, (\lambda T)^\ast w \rangle$$
 
@@ -145,7 +145,7 @@ $$(T^\ast)^\ast v = Tv.$$
 
 (d)
 
-Suppose $S \in L(W, U)$ and $u \in U$. Then 
+Suppose $S \in \mathcal{L}(W, U)$ and $u \in U$. Then 
 
 $$\langle (ST)v, u \rangle = \langle v, (ST)^\ast u \rangle$$
 
@@ -192,7 +192,7 @@ Thus $(T^{-1})^\ast$ is the inverse of $T^\ast$.
 
 
 ### 7.6
-Suppose $T \in L(V, W)$. Then 
+Suppose $T \in \mathcal{L}(V, W)$. Then 
 
 (a) $null T^\ast = (range T)^{\perp}$;
 
@@ -247,7 +247,7 @@ $$(A^\ast)_{j, k} = \overline{A_{k, j}}$$
 
 
 ### 7.9
-Let $T \in L(V, W)$. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ and $f_1, ..., f_m$ is an orthonormal basis of $W$. Then $M(T^\ast, (f_1, ..., f_m), (e_1, ..., e_n))$ is the conjugate transpose of $M(T, (e_1, ..., e_n), (f_1, ..., f_m))$. In other words, 
+Let $T \in \mathcal{L}(V, W)$. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ and $f_1, ..., f_m$ is an orthonormal basis of $W$. Then $M(T^\ast, (f_1, ..., f_m), (e_1, ..., e_n))$ is the conjugate transpose of $M(T, (e_1, ..., e_n), (f_1, ..., f_m))$. In other words, 
 
 $$M(T^\ast) = (M(T))^\ast .$$
 
@@ -269,7 +269,7 @@ Thus $M(T^\ast) = (M(T))^\ast$.
 
 
 ### 7.10 Definition: self-adjoint
-An operator $T \in L(V)$ is called self-adjoint if $T = T^\ast$.
+An operator $T \in \mathcal{L}(V)$ is called self-adjoint if $T = T^\ast$.
 
 
 ### 7.12
@@ -294,7 +294,7 @@ Since $\lvert v \rvert \neq 0$, $\lambda = \overline{\lambda}$, which means that
 
 
 ### 7.13
-Suppose $V$ is a complex inner product space and $T \in L(V)$. Then
+Suppose $V$ is a complex inner product space and $T \in \mathcal{L}(V)$. Then
 
 $$\langle Tv, v \rangle  = 0 \forall v \in V \iff T = 0.$$
 
@@ -310,7 +310,7 @@ Now suppose $\langle Tv, v \rangle = 0$ for all $v \in V$. Then the equation abo
 
 
 ### 7.14
-Suppose $V$ is a complex inner product space and $T \in L(V)$. Then 
+Suppose $V$ is a complex inner product space and $T \in \mathcal{L}(V)$. Then 
 
 $$T = T^\ast \iff \langle Tv, v \rangle \in \mathbb{R} \forall v \in V.$$
 
@@ -359,13 +359,13 @@ Now suppose $\langle Tv, v \rangle = 0$ for every $v \in V$. Because each term o
 
 ### 7.18 Definition: normal
 - An operator on an inner product space is called normal if it commutes with its adjoint.
-- In other words, $T \in L(V)$ is normal $T T^\ast = T^\ast T$.
+- In other words, $T \in \mathcal{L}(V)$ is normal $T T^\ast = T^\ast T$.
 
 Every self-adjoint operator is normal, because if $T$ is self-adjoint then $T^\ast = T$ and hence $T$ commutes with $T^\ast$.
 
 
 ### 7.20 
-Suppose $T \in L(V)$. Then 
+Suppose $T \in \mathcal{L}(V)$. Then 
 
 $$T \text{is normal} \iff \lvert Tv \rvert = \lvert T^\ast v \rvert \forall v \in V .$$
 
@@ -388,7 +388,7 @@ where the second equivalence follows from 7.16.
 
 
 ### 7.21
-Suppose $T \in L(V)$ is normal. Then 
+Suppose $T \in \mathcal{L}(V)$ is normal. Then 
 
 (a) $null T = null T^\ast$;
 
@@ -396,9 +396,9 @@ Suppose $T \in L(V)$ is normal. Then
 
 (c) $V = null T \oplus range T$;
 
-(d) $T - \lambda I$ is normal for every $\lambda \in F$;
+(d) $T - \lambda I$ is normal for every $\lambda \in \mathbb{F}$;
 
-(e) if $v \in V$ and $\lambda \in F$, then $Tv = \lambda$ if and only if $T^\ast v = \overline{\lambda} v$.
+(e) if $v \in V$ and $\lambda \in \mathbb{F}$, then $Tv = \lambda$ if and only if $T^\ast v = \overline{\lambda} v$.
 
 Proof:
 
@@ -449,7 +449,7 @@ where the first equality comes from 6.49, the second equality comes from 7.6, an
 
 (d)
 
-Suppose $\lambda \in F$. Then
+Suppose $\lambda \in \mathbb{F}$. Then
 
 $$
 \begin{aligned}
@@ -466,7 +466,7 @@ Thus $T - \lambda I$ commutes with its adjoint. Hence $T - \lambda I$ is normal.
 
 (e)
 
-Suppose $v \in V$ and $\lambda \in F$. Then (d) and 7.20 imply that 
+Suppose $v \in V$ and $\lambda \in \mathbb{F}$. Then (d) and 7.20 imply that 
 
 $$\lvert (T - \lambda I) v \rvert = \lvert (T - \lambda I)^\ast v \rvert = \lvert (T^\ast - \overline{\lambda} I) v \rvert .$$
 
@@ -487,7 +487,7 @@ Hence $Tv = \lambda v$ if and only if $T^\ast v = \overline{\lambda} v$.
 
 
 ### 7.22
-Suppose $T \in L(V)$ is normal. Then eigenvectors of $T$ corresponding to distinct eigenvalues are orthogonal.
+Suppose $T \in \mathcal{L}(V)$ is normal. Then eigenvectors of $T$ corresponding to distinct eigenvalues are orthogonal.
 
 Because every self-adjoint operator is normal, the result applies in particular to self-adjoint operators.
 
@@ -512,7 +512,7 @@ Because $\alpha \neq \beta$, the equation above implies that $\langle u, v \rang
 
 
 ### 7.23
-Suppose $F = C$ and $T \in L(V)$. Then $T$ is normal if and only if there exist commuting self-adjoint operators $A$ and $B$ such that $T = A + iB$.
+Suppose $\mathbb{F} = C$ and $T \in \mathcal{L}(V)$. Then $T$ is normal if and only if there exist commuting self-adjoint operators $A$ and $B$ such that $T = A + iB$.
 
 
 
@@ -520,9 +520,9 @@ Suppose $F = C$ and $T \in L(V)$. Then $T$ is normal if and only if there exist 
 
 ## Exercises
 
-### (1) Suppose $n$ is a positive integer. Define $T \in L(V)$ by $T(z_1, ..., z_n) = (0, z_1, ..., z_{n-1})$. Find a formula for $T^\ast (z_1, ..., z_n)$.
+### (1) Suppose $n$ is a positive integer. Define $T \in \mathcal{L}(V)$ by $T(z_1, ..., z_n) = (0, z_1, ..., z_{n-1})$. Find a formula for $T^\ast (z_1, ..., z_n)$.
 
-Suppose $(z_1, ..., z_n), (w_1, ..., w_n) \in F^n$. We have 
+Suppose $(z_1, ..., z_n), (w_1, ..., w_n) \in \mathbb{F}^n$. We have 
 
 $$
 \begin{aligned}
@@ -539,7 +539,7 @@ $$T^\ast (w_1, ..., w_n) = (w_2, ..., w_n, 0).$$
 
 
 
-### (2) Suppose $T \in L(V, W)$. Prove that $T = 0 \iff T^\ast = 0 \iff T^\ast T = 0 \iff T T^\ast = 0$.
+### (2) Suppose $T \in \mathcal{L}(V, W)$. Prove that $T = 0 \iff T^\ast = 0 \iff T^\ast T = 0 \iff T T^\ast = 0$.
 
 (1) $T = 0 \Rightarrow T^\ast = 0$
 
@@ -586,16 +586,16 @@ Suppose $T T^\ast = 0$. The result follows from applying the same argument as (5
 
 
 
-### (3) Suppose $T \in L(V)$ and $\lambda \in F$. Prove that $\lambda$ is an eigenvalue of $T$ $\iff$ $\overline{\lambda}$ is an eigenvalue of $T^\ast$.
+### (3) Suppose $T \in \mathcal{L}(V)$ and $\lambda \in \mathbb{F}$. Prove that $\lambda$ is an eigenvalue of $T$ $\iff$ $\overline{\lambda}$ is an eigenvalue of $T^\ast$.
 
 Suppose $\lambda$ is an eigenvalue of $T$. Then $T - \lambda I$ is not injective, i.e. $null (T - \lambda I) \neq \\{0\\}$.
 
 $$
 \begin{aligned}
-dim null (T - \lambda I) \geq 1 
-    &\Rightarrow dim (range (T^\ast - \overline{\lambda} I))^\perp \geq 1 \\
-    &\Rightarrow dim range (T^\ast - \overline{\lambda} I) \leq n - 1 \\
-    &\Rightarrow dim null (T^\ast - \overline{\lambda} I) \geq 1
+\dim null (T - \lambda I) \geq 1 
+    &\Rightarrow \dim (range (T^\ast - \overline{\lambda} I))^\perp \geq 1 \\
+    &\Rightarrow \dim range (T^\ast - \overline{\lambda} I) \leq n - 1 \\
+    &\Rightarrow \dim null (T^\ast - \overline{\lambda} I) \geq 1
 \end{aligned}
 $$
 
@@ -609,7 +609,7 @@ $$V = range (T^\ast - \overline{\lambda} I) \oplus (range (T^\ast - \overline{\l
 
 the third step follows from the fundamental theorem of linear map 3.21,
 
-$$dim V = dim null (T^\ast - \overline{\lambda} I) + dim range (T^\ast - \overline{\lambda} I).$$
+$$\dim V = \dim null (T^\ast - \overline{\lambda} I) + \dim range (T^\ast - \overline{\lambda} I).$$
 
 We conclude that $T^\ast - \overline{\lambda} I$ is not injective. Hence $\overline{\lambda}$ is an eigenvalue of $T^\ast$.
 
@@ -617,7 +617,7 @@ The opposite direction follows from symmetry and the fact that $(T^\ast - \overl
 
 
 
-### (4) Suppose $T \in L(V)$ and $U$ is a subspace of $V$. Prove that $U$ is invariant under $T$ $\iff$ $U^\perp$ is invariant under $T^\ast$.
+### (4) Suppose $T \in \mathcal{L}(V)$ and $U$ is a subspace of $V$. Prove that $U$ is invariant under $T$ $\iff$ $U^\perp$ is invariant under $T^\ast$.
 
 Suppose $u \in U$ and $U$ is invariant under $T$. Then $Tu \in U$.
 
@@ -633,7 +633,7 @@ The opposite direction follows from symmetry and the fact that $(U^\perp)^\perp 
 
 
 
-### (5) Suppose $T \in L(V, W)$. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ and $f_1, ..., f_m$ is an orthonormal basis of $W$. Prove that $\lVert Te_1 \rVert^2 + ... + \lVert Te_n \rVert^2 = \lVert T^\ast f_1 \rVert^2 + ... + \lVert T^\ast f_m \rVert^2$.
+### (5) Suppose $T \in \mathcal{L}(V, W)$. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ and $f_1, ..., f_m$ is an orthonormal basis of $W$. Prove that $\lVert Te_1 \rVert^2 + ... + \lVert Te_n \rVert^2 = \lVert T^\ast f_1 \rVert^2 + ... + \lVert T^\ast f_m \rVert^2$.
 
 Since $f_1, ... f_m$ is an orthonormal basis of $W$, we have
 
@@ -669,7 +669,7 @@ $$\lVert Te_1 \rVert^2 + ... + \lVert Te_n \rVert^2 = \lVert T^\ast f_1 \rVert^2
 
 
 
-### (6) Suppose $T \in L(V, W)$. Prove that 
+### (6) Suppose $T \in \mathcal{L}(V, W)$. Prove that 
 
 #### (a) $T$ is injective $\iff$ $T^\ast$ is surjective.
 
@@ -731,29 +731,29 @@ Then $range T = W$ by 6.48. Hence we conclude $T$ is surjective.
 
 
 
-### (7) Prove that if $T \in L(V, W)$, then 
+### (7) Prove that if $T \in \mathcal{L}(V, W)$, then 
 
-#### (a) $dim null T^\ast = dim null T + dim W - dim V$.
+#### (a) $\dim null T^\ast = \dim null T + \dim W - \dim V$.
 
 $$
 \begin{aligned}
-dim null T^\ast &= dim (range T)^\perp \\
-    &= dim W - dim range T \\
-    &= dim W - (dim V - dim null T) \\
-    &= dim null T + dim W - dim V
+\dim null T^\ast &= \dim (range T)^\perp \\
+    &= \dim W - \dim range T \\
+    &= \dim W - (\dim V - \dim null T) \\
+    &= \dim null T + \dim W - \dim V
 \end{aligned}
 $$
 
 where the first equality follows from 7.6, the second equality follows from 6.51, and the third equality follows from the fundamental theorem of linear maps (3.21).
 
 
-#### (b) $dim range T^\ast = dim range T$.
+#### (b) $\dim range T^\ast = \dim range T$.
 
 $$
 \begin{aligned}
-dim range T^\ast &= dim W - dim null T^\ast \\
-    &= dim W - dim (range T)^\perp \\
-    &= dim range T
+\dim range T^\ast &= \dim W - \dim null T^\ast \\
+    &= \dim W - \dim (range T)^\perp \\
+    &= \dim range T
 \end{aligned}
 $$
 
@@ -763,7 +763,7 @@ where the first equality follows from the fundamental theorem of linear maps (3.
 
 ### (9) Prove that the product of two self-adjoint operators on $V$ is self-adjoint if and only if the two operators commute.
 
-Suppose $S, T \in L(V)$ are self-adjoint.
+Suppose $S, T \in \mathcal{L}(V)$ are self-adjoint.
 
 $\Rightarrow$
 Suppose $ST$ is self-adjoint. Then $(ST)^\ast = ST$. We have
@@ -781,7 +781,7 @@ Thus $ST$ is self-adjoint.
 
 
 
-### (10) Suppose $F = C$ and $T \in L(V)$. Prove that $T$ is self-adjoint if and only if $\langle Tv, v \rangle = \langle T^\ast v, v \rangle$ for all $v \in V$.
+### (10) Suppose $\mathbb{F} = C$ and $T \in \mathcal{L}(V)$. Prove that $T$ is self-adjoint if and only if $\langle Tv, v \rangle = \langle T^\ast v, v \rangle$ for all $v \in V$.
 
 $\Rightarrow$
 Suppose $T$ is self-adjoint. 
@@ -801,15 +801,15 @@ $$
 \end{aligned}
 $$
 
-Since $F= C$ and $T - T^\ast \in L(V)$, $T - T^\ast = 0$ by 7.13. 
+Since $\mathbb{F}= C$ and $T - T^\ast \in \mathcal{L}(V)$, $T - T^\ast = 0$ by 7.13. 
 
 We conclude $T = T^\ast$, and $T$ is self-adjoint.
 
 
 
-### (11) Define an operator $S: F^2 \to F^2$ by $S(w, z) = (-z, w)$. 
+### (11) Define an operator $S: \mathbb{F}^2 \to \mathbb{F}^2$ by $S(w, z) = (-z, w)$. 
 
-Suppose $(z_1, z_2), (w_1, w_2) \in F^2$.
+Suppose $(z_1, z_2), (w_1, w_2) \in \mathbb{F}^2$.
 
 #### (a) Find a formula for $S^\ast$.
 
@@ -826,7 +826,7 @@ Thus we have
 
 $$S^\ast (z_1, z_2) = (z_2, - z_1).$$
 
-Note that if $F = \mathbb{R}$, then $S^\ast$ is the clockwise rotation by 90 degrees.
+Note that if $\mathbb{F} = \mathbb{R}$, then $S^\ast$ is the clockwise rotation by 90 degrees.
 
 
 #### (b) Show that $S$ is normal but not self-adjoint.
@@ -848,23 +848,23 @@ Thus $S$ is normal.
 
 #### (c) Find all eigenvalues of $S$.
 
-We want to find $\lambda \in F$ such that 
+We want to find $\lambda \in \mathbb{F}$ such that 
 
 $$S(z_1, z_2) = (-z_2, z_1) = \lambda (z_1, z_2)$$ 
 
-for some nonzero $(z_1, z_2) \in F^2$. 
+for some nonzero $(z_1, z_2) \in \mathbb{F}^2$. 
 
 Then $\lambda z_1 = -z_2$ and $\lambda z_2 = z_1$. 
 
 We have $\lambda^2 z_2 = -z_2$, and $\lambda^2 = -1$. 
 
-When $F = \mathbb{R}$, $S$ has no eigenvalues. 
+When $\mathbb{F} = \mathbb{R}$, $S$ has no eigenvalues. 
 
-When $F = C$, $S$ has two eigenvalues, $i$ and $-i$. 
+When $\mathbb{F} = C$, $S$ has two eigenvalues, $i$ and $-i$. 
 
 
 
-### (12) An operator $B \in L(V)$ is called skew if $B^\ast = -B$. Suppose that $T \in L(V)$. Prove that $T$ is normal if and only if there exist commuting operators $A$ and $B$ such that $A$ is self-adjoint, $B$ is a skew operator, and $T = A + B$.
+### (12) An operator $B \in \mathcal{L}(V)$ is called skew if $B^\ast = -B$. Suppose that $T \in \mathcal{L}(V)$. Prove that $T$ is normal if and only if there exist commuting operators $A$ and $B$ such that $A$ is self-adjoint, $B$ is a skew operator, and $T = A + B$.
 
 $\Rightarrow$
 Suppose $T$ is normal. Then $T T^\ast = T^\ast T$. Let 
@@ -902,7 +902,7 @@ Hence $T T^\ast = T^\ast T$, and $T$ is normal.
 
 
 
-### (13) Suppose $F = \mathbb{R}$. Define $A \in L(L(V))$ by $AT = T^\ast$ for all $T \in L(V)$.
+### (13) Suppose $\mathbb{F} = \mathbb{R}$. Define $A \in \mathcal{L}(\mathcal{L}(V))$ by $AT = T^\ast$ for all $T \in \mathcal{L}(V)$.
 
 #### (a) Find all eigenvalues of $A$.
 
@@ -921,7 +921,7 @@ Since the eigenvalues are the zeros of the minimal polynomial by 5.27, $p(x) = (
 
 
 
-### (15) Suppose $T \in L(V)$ is invertible. Prove that 
+### (15) Suppose $T \in \mathcal{L}(V)$ is invertible. Prove that 
 
 #### (a) $T$ is self-adjoint $\iff$ $T^{-1}$ is self-adjoint.
 
@@ -954,60 +954,60 @@ The opposite direction follows from symmetry and the fact that $(T^{-1})^{-1} = 
 
 
 
-### (16) Suppose $F = \mathbb{R}$.
+### (16) Suppose $\mathbb{F} = \mathbb{R}$.
 
-#### (a) Show that the set of self-adjoint operators on $V$ is a subspace of $L(V)$.
+#### (a) Show that the set of self-adjoint operators on $V$ is a subspace of $\mathcal{L}(V)$.
 
 Let $U$ be the set of self-adjoint operators on $V$. We want to show that it contains the zero operator, it is closed under addition and closed under scalar multiplication.
 
-Consider $0 \in L(V)$. $0v = 0$ for all $v \in V$. We have
+Consider $0 \in \mathcal{L}(V)$. $0v = 0$ for all $v \in V$. We have
 
 $$\langle 0v, w \rangle = \langle v, 0^\ast w \rangle = 0$$
 
 for all $v, w \in V$. Then $0^\ast = 0$. Hence the zero operator is self-adjoint.
 
-Suppose $S, T \in L(V)$ are self-adjoint operators. Then 
+Suppose $S, T \in \mathcal{L}(V)$ are self-adjoint operators. Then 
 
 $$(S+T)^\ast = S^\ast + T^\ast = S + T$$
 
 Hence $S+T$ is self-adjoint. 
 
-Suppose $T \in L(V)$ and $\lambda \in \mathbb{R}$. Then
+Suppose $T \in \mathcal{L}(V)$ and $\lambda \in \mathbb{R}$. Then
 
 $$(\lambda T)^\ast = \overline{\lambda} T^\ast = \lambda T$$
 
 where the second equality follows from the fact that $\lambda \in \mathbb{R}$.
 
-Thus $U$ is a subspace of $L(V)$ by 1.34.
+Thus $U$ is a subspace of $\mathcal{L}(V)$ by 1.34.
 
 
-#### (b) What is the dimension of the subspace of $L(V)$ in (a) [in terms of $dim V$]?
+#### (b) What is the dimension of the subspace of $\mathcal{L}(V)$ in (a) [in terms of $\dim V$]?
 
-Suppose $dim V = n$. From 3.72 we have $dim L(V) = (dim V) (dim V) = n^2$. 
+Suppose $\dim V = n$. From 3.72 we have $\dim \mathcal{L}(V) = (\dim V) (\dim V) = n^2$. 
 
-Because $L(V)$ is isomorphic with $F^{n, n}$, we can consider $M(T)$ and $M(T^\ast)$. 
+Because $\mathcal{L}(V)$ is isomorphic with $\mathbb{F}^{n, n}$, we can consider $M(T)$ and $M(T^\ast)$. 
 
-If $T = T^\ast$, then $M(T^\ast) = (M(T))^\ast = M(T)$ from 7.9. And since $F = \mathbb{R}$, the conjugate transpose becomes the transpose. Thus the matrix is symmetric. The $n$ diagonal elements and the $\frac{n^2 - n}{2}$ off-diagonal elements are free. We conclude
+If $T = T^\ast$, then $M(T^\ast) = (M(T))^\ast = M(T)$ from 7.9. And since $\mathbb{F} = \mathbb{R}$, the conjugate transpose becomes the transpose. Thus the matrix is symmetric. The $n$ diagonal elements and the $\frac{n^2 - n}{2}$ off-diagonal elements are free. We conclude
 
-$$dim U = \frac{n^2 + n}{2} .$$
+$$\dim U = \frac{n^2 + n}{2} .$$
 
 
 
-### (17) Suppose $F = C$. Show that the set of self-adjoint operators on $V$ is not a subspace of $L(V)$.
+### (17) Suppose $\mathbb{F} = C$. Show that the set of self-adjoint operators on $V$ is not a subspace of $\mathcal{L}(V)$.
 
-Suppose $T \in L(V), T \neq 0$ is self-adjoint. Then 
+Suppose $T \in \mathcal{L}(V), T \neq 0$ is self-adjoint. Then 
 
 $$(iT)^\ast = -iT^\ast = -i T \neq iT .$$ 
 
-Hence the set is not closed under scalar multiplication, and therefore is not a subspace of $L(V)$.
+Hence the set is not closed under scalar multiplication, and therefore is not a subspace of $\mathcal{L}(V)$.
 
 
 
-### (18) Suppose $dim V \geq 2$. Show that the set of normal operators on $V$ is not a subspace of $L(V)$.
+### (18) Suppose $\dim V \geq 2$. Show that the set of normal operators on $V$ is not a subspace of $\mathcal{L}(V)$.
 
 We want to show that the set is not closed under addition.
 
-Suppose $S, T \in L(F^2)$ such that 
+Suppose $S, T \in \mathcal{L}(\mathbb{F}^2)$ such that 
 
 $$
 M(S) = 
@@ -1075,7 +1075,7 @@ A^\ast A =
 \end{pmatrix}
 $$
 
-Note that the assumption that $dim V \geq 2$ is needed. If $dim V = 1$, then every $T \in L(V)$ is a scalar multiple of the identity operator, i.e. $\lambda I$. Then its adjoint is $\overline{\lambda} I$. 
+Note that the assumption that $\dim V \geq 2$ is needed. If $\dim V = 1$, then every $T \in \mathcal{L}(V)$ is a scalar multiple of the identity operator, i.e. $\lambda I$. Then its adjoint is $\overline{\lambda} I$. 
 
 $$(\lambda I) (\lambda I)^\ast = |\lambda|^2 I = (\lambda I)^\ast (\lambda I)$$
 
@@ -1083,9 +1083,9 @@ Every operator on $V$ is normal.
 
 
 
-### (19) Suppose $T \in L(V)$ and $\lVert T^\ast v \rVert \leq \lVert Tv \rVert$ for every $v \in V$. Prove that $T$ is normal.
+### (19) Suppose $T \in \mathcal{L}(V)$ and $\lVert T^\ast v \rVert \leq \lVert Tv \rVert$ for every $v \in V$. Prove that $T$ is normal.
 
-Applying the hypothesis to $T^\ast \in L(V)$, we have
+Applying the hypothesis to $T^\ast \in \mathcal{L}(V)$, we have
 
 $$\lVert T^\ast v \rVert \leq \lVert (T^\ast)^\ast v \rVert = \lVert T v \rVert$$
 
@@ -1096,7 +1096,7 @@ $$\lVert T v \rVert = \lVert T^\ast v \rVert.$$
 By 7.20 $T$ is normal.
 
 
-### (20) Suppose $P \in L(V)$ is such that $P^2 = P$. Prove that the following are equivalent: (a) $P$ is self-adjoint. (b) $P$ is normal. (c) There is a subspace $U$ of $V$ such that $P = P_U$.
+### (20) Suppose $P \in \mathcal{L}(V)$ is such that $P^2 = P$. Prove that the following are equivalent: (a) $P$ is self-adjoint. (b) $P$ is normal. (c) There is a subspace $U$ of $V$ such that $P = P_U$.
 
 $(a) \Rightarrow (b)$
 
@@ -1178,7 +1178,7 @@ Thus $\lvert T (v + w) \rvert = 10$.
 
 
 
-### (27) Suppose $T \in L(V)$ is normal. Prove that $null T^k = null T$ and $range T^k = range T$ for every positive integer $k$.
+### (27) Suppose $T \in \mathcal{L}(V)$ is normal. Prove that $null T^k = null T$ and $range T^k = range T$ for every positive integer $k$.
 
 Note that if $k = 1$ then the statement is vacuously true, so we assume $k \geq 2$.
 
@@ -1210,23 +1210,23 @@ We have
 
 $$
 \begin{aligned}
-dim V &= dim null T + dim range T \\
-    &= dim null T^k + dim range T \\
-    &= dim null T^k + dim range T^k
+\dim V &= \dim null T + \dim range T \\
+    &= \dim null T^k + \dim range T \\
+    &= \dim null T^k + \dim range T^k
 \end{aligned}
 $$
 
 where the first and third equality follow from the fundamental theorem of linear maps (3.21), and the second equality follows from the first part. 
 
-Thus $dim range T = dim range T^k$.
+Thus $\dim range T = \dim range T^k$.
 
 Hence we conclude $range T = range T^k$.
 
 
 
-### (28) Suppose $T \in L(V)$ is normal. Prove that if $\lambda \in F$, then the minimal polynomial of $T$ is not a polynomial multiple of $(x - \lambda)^2$.
+### (28) Suppose $T \in \mathcal{L}(V)$ is normal. Prove that if $\lambda \in \mathbb{F}$, then the minimal polynomial of $T$ is not a polynomial multiple of $(x - \lambda)^2$.
 
-Assume towards contradiction that the minimal polynomial of $T$ is a polynomial multiple of $(x - \lambda)^2$. Then $p(x) = (x - \lambda)^2 q(x)$ for some $q \in P(F)$.
+Assume towards contradiction that the minimal polynomial of $T$ is a polynomial multiple of $(x - \lambda)^2$. Then $p(x) = (x - \lambda)^2 q(x)$ for some $q \in P(\mathbb{F})$.
 
 Let $S = T - \lambda I$. Then $p(T) = (T - \lambda I)^2 q(T) = S^2 q(T)$. 
 
@@ -1238,13 +1238,24 @@ for all $v \in V$. Thus $q(T)v \in null S^2$.
 
 By 7.21, $S$ is normal. From exercise 27 above, we proved that $null S = null S^2$ for a normal operator. We have $q(T)v \in null S$. Then $(S q(T)) v = 0$ for all $v \in V$, which has degree one less than $p(T)$. This contradicts the minimality of $p(T)$.
 
-(Observation: 5.62 states that $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(x - \lambda_1) ... (x - \lambda_m)$ for some list of distinct numbers $\lambda_1, ..., \lambda_m \in F$. This exercise nicely sets up the stage for the next chapter where the spectral theorem states normal operators are diagonalizable.)
+(Observation: 5.62 states that $T$ is diagonalizable if and only if the minimal polynomial of $T$ equals $(x - \lambda_1) ... (x - \lambda_m)$ for some list of distinct numbers $\lambda_1, ..., \lambda_m \in \mathbb{F}$. This exercise nicely sets up the stage for the next chapter where the spectral theorem states normal operators are diagonalizable.)
 
 
 
 ### (29)
 
+
 ### (30)
+
+
+### (31) Fix a positive integer $n$. In the inner product space of continuous real-valued functions on $[-\pi, \pi]$ with inner product $\langle f, g \rangle = \int_{-\pi}^{\pi} fg$, let $V = span(1, \cos x, \cos 2x, ..., \cos nx, \sin x, \sin 2x, ..., \sin nx)$. 
+
+#### (a) Define $D \in \mathcal{L}(V)$ by $Df = f'$. Show that $D^\ast = -D$. Conclude that $D$ is normal but not self-adjoint.
+
+#### (b) Define $T \in \mathcal{L}(V)$ by $Tf = f''$. Show that $T$ is self-adjoint.
+
+
+
 
 ### (32) Suppose $T: V \to W$ is a linear map. Show that under the standard identification of $V$ with $V'$ and the corresponding identification of $W$ and $W'$, the adjoint map $T{\ast}: W \to V$ corresponds to the dual map $T': W' \to V'$. More precisely, show that $T'(\phi_w) = \phi_{T{\ast} w}$. 
 

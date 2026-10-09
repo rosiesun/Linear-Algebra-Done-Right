@@ -6,7 +6,7 @@ Rosie Sun <br>
 
 
 ### 3.87 Definition: product of vector spaces
-Suppose $V_1, ..., V_m$ are vector spaces over $F$. 
+Suppose $V_1, ..., V_m$ are vector spaces over $\mathbb{F}$. 
 
 The product $V_1 \times ... \times V_m$ is defined by
 
@@ -22,13 +22,13 @@ $$\lambda (v_1, ..., v_m) = (\lambda v_1, ..., \lambda v_m)$$
 
 
 ### 3.89
-Suppose $V_1, ..., V_m$ are vector spaces over $F$. Then $V_1 \times ... \times V_m$ is a vector space over $F$.
+Suppose $V_1, ..., V_m$ are vector spaces over $\mathbb{F}$. Then $V_1 \times ... \times V_m$ is a vector space over $\mathbb{F}$.
 
 
 ### 3.92
 Suppose $V_1, ..., V_m$ are finite-dimensional vector spaces. Then $V_1, ..., V_m$ is finite-dimensional and 
 
-$$dim (V_1 \times ... \times V_m) = dim V_1 + ... + dim V_m .$$
+$$\dim (V_1 \times ... \times V_m) = \dim V_1 + ... + \dim V_m .$$
 
 
 ### 3.93
@@ -48,7 +48,7 @@ Thus 1.45 shows that $\Gamma$ is injective if and only if $V_1 + ... + V_m$ is a
 ### 3.94
 Suppose $V$ is finite-dimensional and $V_1, ..., V_m$ are subspaces of $V$. Then $V_1 + ... + V_m$ is a direct sum if and only if 
 
-$$dim (V_1 + ... + V_m) = dim V_1 + ... + dim V_m .$$
+$$\dim (V_1 + ... + V_m) = \dim V_1 + ... + \dim V_m .$$
 
 Proof:
 
@@ -56,15 +56,15 @@ The map $\Gamma$ in 3.93 is surjective, since every $v_1 + ... + v_m \in V_1 + .
 
 Thus by 3.21,
 
-$$dim (V_1 \times ... \times V_m) = dim null \Gamma + dim range \Gamma = dim null \Gamma + dim (V_1 + ... + V_m)$$
+$$\dim (V_1 \times ... \times V_m) = \dim null \Gamma + \dim range \Gamma = \dim null \Gamma + \dim (V_1 + ... + V_m)$$
 
 $\Gamma$ is injective if and only if 
 
-$$dim (V_1 + ... + V_m) = dim (V_1 \times ... \times V_m).$$
+$$\dim (V_1 + ... + V_m) = \dim (V_1 \times ... \times V_m).$$
 
 Combining 3.93 and 3.92 shows that $V_1 + ... + V_m$ is a direct sum if and only if 
 
-$$dim (V_1 + ... V_m) = dim V_1 + ... + dim V_m,$$
+$$\dim (V_1 + ... V_m) = \dim V_1 + ... + \dim V_m,$$
 
 as desired.
 
@@ -118,7 +118,7 @@ $$(v + U) + (w + U) = (v + w) + U$$
 
 $$\lambda (v + U) = (\lambda v) + U$$
 
-for all $v, w \in V$ and all $\lambda \in F$.
+for all $v, w \in V$ and all $\lambda \in \mathbb{F}$.
 
 
 ### 3.103 
@@ -158,7 +158,7 @@ $$(v_1 + w_1) + U = (v_2 + w_2) + U,$$
 
 as desired. Thus the definition of addition on $V/U$ makes sense.
 
-Similarly, suppose $\lambda \in F$. We are still assuming that $v_1 + U = v_2 + U$. 
+Similarly, suppose $\lambda \in \mathbb{F}$. We are still assuming that $v_1 + U = v_2 + U$. 
 
 Because $U$ is a subspace of $V$ and thus is closed under scalar multiplication, we have 
 
@@ -188,7 +188,7 @@ for each $v \in V$.
 ### 3.105 
 Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Then 
 
-$$dim V/U = dim V - dim U.$$
+$$\dim V/U = \dim V - \dim U.$$
 
 Proof:
 
@@ -200,13 +200,13 @@ The definition of $\pi$ implies $range \pi = V/U$.
 
 The fundamental theorem of linera maps (3.21) now implies 
 
-$$dim V = dim null \pi + dim range \pi = dim U + dim V/U,$$ 
+$$\dim V = \dim null \pi + \dim range \pi = \dim U + \dim V/U,$$ 
 
 which gives the desired result. 
 
 
 ### 3.106 Notation
-Suppose $T \in L(V, W)$. Define $\tilde{T}: V/(null T) \to W$ by
+Suppose $T \in \mathcal{L}(V, W)$. Define $\tilde{T}: V/(null T) \to W$ by
 
 $$\tilde{T} (v + null T) = Tv.$$
 
@@ -214,7 +214,7 @@ To show that the definition of $\tilde{T}$ makes sense, suppose $u, v \in V$ are
 
 
 ### 3.107
-Suppose $T \in L(V, W)$. Then 
+Suppose $T \in \mathcal{L}(V, W)$. Then 
 
 (a) $\tilde{T} \circ \pi = T$, where $\pi$ is the quotient map of $V$ onto $V/(null T)$;
 
@@ -297,7 +297,7 @@ Thus $A$ is a translate of $U$.
 
 
 ### (8) 
-#### (a) Suppose $T \in L(V, W)$ and $c \in W$. Prove that $\\{x \in V: Tx = c\\}$ is either the empty set or is a translate of $null T$.
+#### (a) Suppose $T \in \mathcal{L}(V, W)$ and $c \in W$. Prove that $\\{x \in V: Tx = c\\}$ is either the empty set or is a translate of $null T$.
 
 We have 
 
@@ -313,13 +313,13 @@ $$
 If there exists $v \in V$ such that $Tv = c$, then $\\{x \in V: Tx = c\\}$ is a translate of $null T$. Otherwise it is the empty set.
 
 
-#### (b) Explain why the set of solutions to a system of linear equations such as 3.27 is either the empty set or is a translate of some subspace of $F^n$.
+#### (b) Explain why the set of solutions to a system of linear equations such as 3.27 is either the empty set or is a translate of some subspace of $\mathbb{F}^n$.
 
-A system of linear equations is a linear map $T$ from $F^n$ to $F^m$, applied to a vector $x \in F^n$, with some fixed $c \in F^m$. By (a), the solution set is either the empty set or $null T$ (which is a subspace of $F^n$).
+A system of linear equations is a linear map $T$ from $\mathbb{F}^n$ to $\mathbb{F}^m$, applied to a vector $x \in \mathbb{F}^n$, with some fixed $c \in \mathbb{F}^m$. By (a), the solution set is either the empty set or $null T$ (which is a subspace of $\mathbb{F}^n$).
 
 
 
-### (9) Prove that a nonempty subset $A$ of $V$ is a translate of some subspace of $V$ if and only if $\lambda v + (1 - \lambda) w \in A$ for all $v, w \in A$ and all $\lambda \in F$.
+### (9) Prove that a nonempty subset $A$ of $V$ is a translate of some subspace of $V$ if and only if $\lambda v + (1 - \lambda) w \in A$ for all $v, w \in A$ and all $\lambda \in \mathbb{F}$.
 
 $\Rightarrow$
 Suppose $U$ is a subspace of $V$ and suppose $A$ is a translate of $U$. 
@@ -337,7 +337,7 @@ a + (\lambda u_1 + (1 - \lambda) u_2) &\in a + U \\
 $$
 
 $\Leftarrow$
-Suppose $\lambda v + (1 - \lambda) w \in A$ for all $v, w \in A$ and all $\lambda \in F$.
+Suppose $\lambda v + (1 - \lambda) w \in A$ for all $v, w \in A$ and all $\lambda \in \mathbb{F}$.
 
 Define $U = \\{v - a: v \in A\\}$. We want to show that $U$ is a subspace of $V$.
 
@@ -345,7 +345,7 @@ First, $0 \in U$ beacuse $0 = a - a \in U$.
 
 Next we want to show that $U$ is closed under scalar multiplication. 
 
-Suppose $u \in U, \lambda \in F$. Then $u = v - a$ for some $v \in A$. Apply the hypothesis to our choice of $\lambda, v, and w=a$. We have
+Suppose $u \in U, \lambda \in \mathbb{F}$. Then $u = v - a$ for some $v \in A$. Apply the hypothesis to our choice of $\lambda, v, and w=a$. We have
 
 $$\lambda v + (1 - \lambda) a = \lambda (u + a) + (1 - \lambda)a = \lambda u + a \in A$$
 
@@ -401,7 +401,7 @@ We conclude that $A_1 \cap A_2$ is either an empty set or a translate of a subsp
 
 
 
-### (12) Suppose $v_1, ..., v_m \in V$. Let $A = \\{\lambda_1 v_1 + ... + \lambda_m v_m: \lambda_1, ..., \lambda_m \in F, \lambda_1 + ... + \lambda_m = 1\\}$.
+### (12) Suppose $v_1, ..., v_m \in V$. Let $A = \\{\lambda_1 v_1 + ... + \lambda_m v_m: \lambda_1, ..., \lambda_m \in \mathbb{F}, \lambda_1 + ... + \lambda_m = 1\\}$.
 
 #### (a) Prove that $A$ is a translate of some subspace of $V$.
 
@@ -419,13 +419,13 @@ $$
 
 Define 
 
-$$U = \\{\lambda_1 (v_1 - v_m) + ... + \lambda_{m-1} (v_{m-1} - v_m): \lambda_1, ..., \lambda_{m-1} \in F\\}.$$ 
+$$U = \\{\lambda_1 (v_1 - v_m) + ... + \lambda_{m-1} (v_{m-1} - v_m): \lambda_1, ..., \lambda_{m-1} \in \mathbb{F}\\}.$$ 
 
 Since $U = span( (v_1 - v_m), ..., (v_{m-1} - v_m))$, by 2.6, $U$ is a subspace of $V$.
 
 Thus $A \subseteq v_m + U$.
 
-Suppose $w \in v_m + U$. Then for some $\lambda_1, ..., \lambda_{m-1} \in F$, we have
+Suppose $w \in v_m + U$. Then for some $\lambda_1, ..., \lambda_{m-1} \in \mathbb{F}$, we have
 
 $$
 \begin{aligned}
@@ -447,7 +447,7 @@ Suppose $w \in A$. Then $w \in v_m + U$, from part (a).
 
 Suppose $B = b + Y$ for some $b \in V$ and some subspace $Y$ in $V$. Then $v_i \in B$ for $i = 1,...,m$ and $v_i = b + y_i$ for some $y_i \in Y$.
 
-Then for some $\lambda_1, ..., \lambda_{m-1} \in F$, we have 
+Then for some $\lambda_1, ..., \lambda_{m-1} \in \mathbb{F}$, we have 
 
 $$
 \begin{aligned}
@@ -468,7 +468,7 @@ Hence we conclude $A \subseteq B$.
 
 From part (a), we have $A = v_m + U$, where $U = span( (v_1 - v_m), ..., (v_{m-1} - v_m))$. 
 
-By definition $(v_1 - v_m), ..., (v_{m-1} - v_m)$ spans $U$. From 2.22, there are at most $m-1$ linearly independent vectors in this list. Thus $dim U \leq m-1 < m$.
+By definition $(v_1 - v_m), ..., (v_{m-1} - v_m)$ spans $U$. From 2.22, there are at most $m-1$ linearly independent vectors in this list. Thus $\dim U \leq m-1 < m$.
 
 
 
@@ -484,13 +484,13 @@ Suppose $v \in V$. Then $v + U \in V/U$. We can write
 
 $$v + U = a_1 (w_1 + U) + ... + a_m (w_m + U) = (a_1 w_1 + ... + a_m w_m) + U$$
 
-for some $a_1, ..., a_m \in F$. From 3.101, $v - (a_1 w_1 + ... + a_m w_m) \in U$. Thus 
+for some $a_1, ..., a_m \in \mathbb{F}$. From 3.101, $v - (a_1 w_1 + ... + a_m w_m) \in U$. Thus 
 
 $$v = a_1 w_1 + ... + a_m w_m + (v - (a_1 w_1 + ... + a_m w_m))$$
 
 where $a_1 w_1 + ... + a_m w_m \in W$ and $v - (a_1 w_1 + ... + a_m w_m) \in U$. Therefore $V = U + W$. 
 
-Suppose $v \in U \cap W$. Then $v = b_1 w_1 + ... + b_m w_m$ for some $b_1, ..., b_m \in F$. Since $v \in U$, $v + U = 0 + U$ by 3.101. We have
+Suppose $v \in U \cap W$. Then $v = b_1 w_1 + ... + b_m w_m$ for some $b_1, ..., b_m \in \mathbb{F}$. Since $v \in U$, $v + U = 0 + U$ by 3.101. We have
 
 $$
 \begin{aligned}
@@ -512,7 +512,7 @@ Consider the linear map $\pi: W \to V/U$. Suppose $w + U \in V/U$. Then
 
 $$w + U = c_1 (w_1 + U) + ... + c_m (w_m + U) = (c_1 w_1 + ... + c_m w_m) + U = \pi(c_1 w_1 + ... + c_m w_m)$$ 
 
-for some $c_1, ..., c_m \in F$, $c_1 w_1 + ... + c_m w_m \in W$. Thus $\pi$ is surjective. Since $null \pi = \\{0\\}$ (shown previously), $\pi$ is injective. Thus $\pi$ is an isomorphism from $W$ onto $V/U$. 
+for some $c_1, ..., c_m \in \mathbb{F}$, $c_1 w_1 + ... + c_m w_m \in W$. Thus $\pi$ is surjective. Since $null \pi = \\{0\\}$ (shown previously), $\pi$ is injective. Thus $\pi$ is an isomorphism from $W$ onto $V/U$. 
 
 Define map $T: U \times W \to U \times (V/U)$ by $T(u, w) = (u, \pi(w))$. Then $T$ is an isomorphism from $U \times W$ onto $U \times (V/U)$.
 
@@ -524,13 +524,13 @@ Hence $V$ is isomorphic with $U \times V/U$.
 
 We have 
 
-$$dim V/U = dim V - dim U = dim W = m$$ 
+$$\dim V/U = \dim V - \dim U = \dim W = m$$ 
 
 from 3.105 and 3.94. 
 
 Since $w_1 + U, ..., w_m + U$ is a list of length $m$, we just need to show that the list is linearly independent in $V/U$, by 2.38.
 
-Suppose $a_1 (w_1 + U) + ... + a_m (w_m + U) = 0 + U$ for some $a_1, ..., a_m \in F$. Then 
+Suppose $a_1 (w_1 + U) + ... + a_m (w_m + U) = 0 + U$ for some $a_1, ..., a_m \in \mathbb{F}$. Then 
 
 $$a_1 (w_1 + U) + ... + a_m (w_m + U) = (a_1 w_1 + ... + a_m w_m) + U = 0 + U.$$
 
@@ -546,13 +546,13 @@ Hence $w_1 + U, ..., w_m + U$ is linearly independent and is a basis of $V/U$.
 
 ### (15) Suppose $U$ is a subspace of $V$ and $v_1 + U, ..., v_m + U$ is a basis of $V/U$ and $u_1, ..., u_n$ is a basis of $U$. Prove that $v_1, ..., v_m, u_1, ..., u_n$ is a basis of $V$.
 
-Since $dim V = dim U + dim V/U = n + m$, and the length of the list $v_1, ..., v_m, u_1, ..., u_n$ equals $n + m$, we just need to show that $v_1, ..., v_m, u_1, ..., u_n$ is linearly independent in $V$, by 2.38.
+Since $\dim V = \dim U + \dim V/U = n + m$, and the length of the list $v_1, ..., v_m, u_1, ..., u_n$ equals $n + m$, we just need to show that $v_1, ..., v_m, u_1, ..., u_n$ is linearly independent in $V$, by 2.38.
 
 Suppose 
 
 $$a_1 v_1 + ... + a_m v_m + b_1 u_1 + ... + b_n u_n = 0$$
 
-for some $a_1, ..., a_m, b_1, ..., b_n \in F$. 
+for some $a_1, ..., a_m, b_1, ..., b_n \in \mathbb{F}$. 
 
 Applying the quotient map $\pi: V \to V/U$ to both sides, we have
 
@@ -572,31 +572,31 @@ Hence $v_1, ..., v_m, u_1, ..., u_n$ is linearly independent, and we conclude th
 
 
 
-### (16) Suppose $\phi \in L(V, F)$ and $\phi \neq 0$. Prove that $dim (V / null \phi) = 1$.
+### (16) Suppose $\phi \in \mathcal{L}(V, \mathbb{F})$ and $\phi \neq 0$. Prove that $\dim (V / null \phi) = 1$.
 
-Since $\phi \neq 0$, there exists $v \in V$ such that $\phi(v) \neq 0$. Then $dim (range \phi) \geq 1$. Since $range \phi \subseteq F$, $dim (range \phi) \leq dim F = 1$. Thus $dim (range \phi) = 1$.
+Since $\phi \neq 0$, there exists $v \in V$ such that $\phi(v) \neq 0$. Then $\dim (range \phi) \geq 1$. Since $range \phi \subseteq \mathbb{F}$, $\dim (range \phi) \leq \dim \mathbb{F} = 1$. Thus $\dim (range \phi) = 1$.
 
 From 3.107, $V / (null \phi)$ and $range \phi$ are isomorphic. Thus 
 
-$$dim (V / (null \phi)) = dim range \phi = 1.$$
+$$\dim (V / (null \phi)) = \dim range \phi = 1.$$
 
 
 
-### (17) Suppose $U$ is a subspace of $V$ such that $dim V/U = 1$. Prove that there exists $\phi \in L(V, F)$ such that $null \phi = U$.
+### (17) Suppose $U$ is a subspace of $V$ such that $\dim V/U = 1$. Prove that there exists $\phi \in \mathcal{L}(V, \mathbb{F})$ such that $null \phi = U$.
 
-Let $w_1 + U$ be a basis of $V/U$. Define $W = span(w_1)$. We want to show that $V = U \oplus W$ and construct a $\phi: V \to F$. 
+Let $w_1 + U$ be a basis of $V/U$. Define $W = span(w_1)$. We want to show that $V = U \oplus W$ and construct a $\phi: V \to \mathbb{F}$. 
 
 Suppose $v \in V$. Then $v + U \in V/U$, and we can write 
 
 $$v + U = a_1 (w_1 + U) = a_1 w_1 + U$$ 
 
-for some $a_1 \in F$. Then $v - a_1 w_1 \in U$ by 3.101. Thus 
+for some $a_1 \in \mathbb{F}$. Then $v - a_1 w_1 \in U$ by 3.101. Thus 
 
 $$v = a_1 w_1 + (v - a_1 w_1)$$
 
 where $a_1 w_1 \in W$ and $v - a_1 w_1 \in U$. Hence $V = W + U$. 
 
-Suppose $v \in U \cap W$. Then $v \in W$ and $v = b_1 w_1$ for some $b_1 \in F$. Since $v \in U$, by 3.101 we have
+Suppose $v \in U \cap W$. Then $v \in W$ and $v = b_1 w_1$ for some $b_1 \in \mathbb{F}$. Since $v \in U$, by 3.101 we have
 
 $$v + U = b_1 w_1 + U = b_1 (w_1 + U) = 0 + U.$$
 
@@ -604,9 +604,9 @@ Since $w_1 + U$ is a basis of $V/U$, $b_1 = 0$. Thus $v = 0$, and $U \cap W = \\
 
 Since $V = U + W$ and $U \cap W = \\{0\\}$, $V = U \oplus W$ by 1.46.
 
-Define $\phi \in L(V, F)$ such that $\phi(w_1) = 1$ and $\phi(u) = 0$ for all $u \in U$. Every $v \in V$ can be uniquely written as $v = u + a_1 w_1$ for some $a_1 \in F$. Thus $\phi$ is well-defined and $\phi(v) = a_1$. 
+Define $\phi \in \mathcal{L}(V, \mathbb{F})$ such that $\phi(w_1) = 1$ and $\phi(u) = 0$ for all $u \in U$. Every $v \in V$ can be uniquely written as $v = u + a_1 w_1$ for some $a_1 \in \mathbb{F}$. Thus $\phi$ is well-defined and $\phi(v) = a_1$. 
 
-Suppose $v \in null \phi$. Then $\phi(v) = 0$. Since $v = u + a_1 w_1$ for some $a_1 \in F$, $\phi(v) = \phi(u + a_1 w_1) = \phi(u) + a_1 = 0 + a_1$, which implies that $a_1 = 0$. Then $v = u + 0w \in U$. 
+Suppose $v \in null \phi$. Then $\phi(v) = 0$. Since $v = u + a_1 w_1$ for some $a_1 \in \mathbb{F}$, $\phi(v) = \phi(u + a_1 w_1) = \phi(u) + a_1 = 0 + a_1$, which implies that $a_1 = 0$. Then $v = u + 0w \in U$. 
 
 Suppose $v \in U$. Then $\phi(v) = \phi(u + 0w) = 0$. Thus $v \in null \phi$.
 
@@ -616,9 +616,9 @@ Thus $null \phi = U$.
 
 ### (18) Suppose that $U$ is a subspace of $V$ such that $V/U$ is finite-dimensional. 
 
-#### (a) Show that if $W$ is a finite-dimensional subspace of $V$ and $V = U + W$, then $dim W \geq dim V/U$.
+#### (a) Show that if $W$ is a finite-dimensional subspace of $V$ and $V = U + W$, then $\dim W \geq \dim V/U$.
 
 
 
-#### (b) Prove that there exists a finite-dimensional subspace $W$ of $V$ such that $dim W = dim V/U$ and $V = U \oplus W$.
+#### (b) Prove that there exists a finite-dimensional subspace $W$ of $V$ such that $\dim W = \dim V/U$ and $V = U \oplus W$.
 

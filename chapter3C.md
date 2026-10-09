@@ -9,7 +9,7 @@ We know that if $v_1,...,v_n$ is a basis of $V$ and $T: V \to W$ is linear, then
 
 
 ### 3.29 Definition: matrix
-Supppose $m, n$ are nonnegative integers. An m-by-n matrix $A$ is a rectangular array of elements of $F$ with m rows and n columns:
+Supppose $m, n$ are nonnegative integers. An m-by-n matrix $A$ is a rectangular array of elements of $\mathbb{F}$ with m rows and n columns:
 
 $$
 \begin{pmatrix}
@@ -23,7 +23,7 @@ The notation $A_{j,k}$ denotes the entry on row j, column k of $A$.
 
 
 ### 3.31 Definition: matrix of a linear map
-Suppose $T \in L(V,W)$ and $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_m$ is a basis of $W$. The matrix of $T$ with respect to these bases is the m-by-n matrix $M(T)$ whose entries $A_{j,k}$ are defined by
+Suppose $T \in \mathcal{L}(V,W)$ and $v_1,...,v_n$ is a basis of $V$ and $w_1,...,w_m$ is a basis of $W$. The matrix of $T$ with respect to these bases is the m-by-n matrix $M(T)$ whose entries $A_{j,k}$ are defined by
 
 $$Tv_k = A_{1,k} w_1 + ... + A_{m,k} w_m$$
 
@@ -31,19 +31,19 @@ If the bases $v_1,...,v_n$ and $w_1,...,w_m$ are not clear from the context, the
 
 
 ### 3.35 
-Suppose $S, T \in L(V,W)$. Then $M(S+T) = M(S) + M(T)$.
+Suppose $S, T \in \mathcal{L}(V,W)$. Then $M(S+T) = M(S) + M(T)$.
 
 
 ### 3.38
-Suppose $\lambda \in F$ and $T \in L(V,W)$. Then $M(\lambda T) = \lambda M(T)$.
+Suppose $\lambda \in \mathbb{F}$ and $T \in \mathcal{L}(V,W)$. Then $M(\lambda T) = \lambda M(T)$.
 
 
 ### 3.39 Notation
-For m and n positive integers, the set of all m-by-n matrices with entries in $F$ is denoted by $F^{m,n}$. 
+For m and n positive integers, the set of all m-by-n matrices with entries in $\mathbb{F}$ is denoted by $\mathbb{F}^{m,n}$. 
 
 
 ### 3.40
-Suppose m and n are positive integers. With addition and scalar multiplication defined as above, $F^{m,n}$ is a vector space of dimension mn. 
+Suppose m and n are positive integers. With addition and scalar multiplication defined as above, $\mathbb{F}^{m,n}$ is a vector space of dimension mn. 
 
 
 ### 3.41 Definition: matrix multiplication
@@ -55,7 +55,7 @@ Thus the entry in row j, column k, of $AB$ is computed taking row j of $A$ and c
 
 
 ### 3.43
-If $T \in L(U,V)$ and $S \in L(V,W)$, then $M(ST) = M(S)M(T)$.
+If $T \in \mathcal{L}(U,V)$ and $S \in \mathcal{L}(V,W)$, then $M(ST) = M(S)M(T)$.
 
 
 ### 3.48
@@ -75,10 +75,10 @@ In other words, $Ab$ is a linear combination of the columns of $A$, with the sca
 
 
 ### 3.52 Definition: column rank, row rank
-Suppose $A$ is an m-by-n matrix with entries in $F$. 
+Suppose $A$ is an m-by-n matrix with entries in $\mathbb{F}$. 
 
-- The column rank of $A$ is the dimension of the span of the columns of $A$ in $F^{m, 1}$.
-- The row rank of $A$ is the dimension of the span of the rows of $A$ in $F^{1, n}$.
+- The column rank of $A$ is the dimension of the span of the columns of $A$ in $\mathbb{F}^{m, 1}$.
+- The row rank of $A$ is the dimension of the span of the rows of $A$ in $\mathbb{F}^{1, n}$.
 
 
 

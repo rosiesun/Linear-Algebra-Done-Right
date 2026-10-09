@@ -6,7 +6,7 @@ Rosie Sun <br>
 
 
 ### 7.34 Definition: positive operator
-An operator $T \in L(V)$ is called positive if $T$ is self-adjoint and 
+An operator $T \in \mathcal{L}(V)$ is called positive if $T$ is self-adjoint and 
 
 $$\langle Tv, v\rangle  = 0$$
 
@@ -18,7 +18,7 @@ An operator $R$ is called a square root of an operator $T$ if $R^2 = T$.
 
 
 ### 7.38
-Let $T \in L(V)$. Then the following are equivalent.
+Let $T \in \mathcal{L}(V)$. Then the following are equivalent.
 
 (a) $T$ is a positive operator. 
 
@@ -30,7 +30,7 @@ Let $T \in L(V)$. Then the following are equivalent.
 
 (e) $T$ has a self-adjoint square root.
 
-(f) $T = R^\ast R$ for some $R \in L(V)$.
+(f) $T = R^\ast R$ for some $R \in \mathcal{L}(V)$.
 
 Proof:
 
@@ -46,7 +46,7 @@ Since $\langle v, v \rangle \geq 0$, $\lambda$ is a nonnegative number. Hence (b
 
 Now suppose (b) holds, so that $T$ is self-adjoint and all eigenvalues of $T$ are nonnegative. By the spectral theorem (7.29, 7.31), there is an orthonormal basis $e_1, ..., e_n$ of $V$ consisting of eigenvectors of $T$. Let $\lambda_1, ..., \lambda_n$ be the eigenvalues of $T$ corresponding to $e_1, ..., e_n$; thus each $\lambda_k$ is a nonnegative number. The matrix of $T$ with respect to $e_1, ..., e_n$ is the diagonal matrix with $\lambda_1, ..., \lambda_n$ on the diagonal, which shows that (b) implies (c).
 
-Now suppose (c) holds. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ such that the matrix of $T$ with respect to this basis is a diagonal matrix with nonnegative numbers $\lambda_1, ..., \lambda_n$ on the diagonal. The linear map lemma (3.4) implies that there exists $R \in L(V)$ such that 
+Now suppose (c) holds. Suppose $e_1, ..., e_n$ is an orthonormal basis of $V$ such that the matrix of $T$ with respect to this basis is a diagonal matrix with nonnegative numbers $\lambda_1, ..., \lambda_n$ on the diagonal. The linear map lemma (3.4) implies that there exists $R \in \mathcal{L}(V)$ such that 
 
 $$R e_k = \sqrt{\lambda_k} e_k$$
 
@@ -62,7 +62,7 @@ $$
     &\geq 0
 \end{aligned}$$
 
-If $F = C$, $\langle Rv, v \rangle \in \mathbb{R} \forall v \in V$. By 7.14 $R$ is self-adjoint. If $F = \mathbb{R}$, by definition $V$ has an orthonormal basis consisting of eigenvectors of $R$. By the real spectral theorem (7.29), $R$ is self-adjoint.   
+If $\mathbb{F} = C$, $\langle Rv, v \rangle \in \mathbb{R} \forall v \in V$. By 7.14 $R$ is self-adjoint. If $\mathbb{F} = \mathbb{R}$, by definition $V$ has an orthonormal basis consisting of eigenvectors of $R$. By the real spectral theorem (7.29), $R$ is self-adjoint.   
 
 Furthermore, $R^2 e_k = \lambda_k e_k = T e_k$ for each $k$, which implies that $R^2 = T$. Thus $R$ is a positive square root of $T$. Hence (d) holds, which shows that (c) implies (d).
 
@@ -70,7 +70,7 @@ Every positive operator is self-adjoint (by definition of positive operator). Th
 
 Now suppose (e) holds, meaning that there exists a self-adjoint operator $R$ on $V$ such that $T = R^2$. Then $T = R^\ast R$ (because $R^\ast = R$). Hence (e) implies (f).
 
-Finally, suppose (f) holds. Let $R \in L(V)$ be such that $T = R^\ast R$. Then 
+Finally, suppose (f) holds. Let $R \in \mathcal{L}(V)$ be such that $T = R^\ast R$. Then 
 
 $$T^\ast = (R^\ast R)^\ast = R^\ast (R^\ast)^\ast = R^\ast R = T.$$
 
@@ -86,7 +86,7 @@ Every positive operator on $V$ has a unique positive square root.
 
 Proof:
 
-Suppose $T \in L(V)$ is positive. Suppose $v \in V$ is an eigenvector of $T$. Hence there exists a real number $\lambda >= 0$ such that $Tv = \lambda v$. 
+Suppose $T \in \mathcal{L}(V)$ is positive. Suppose $v \in V$ is an eigenvector of $T$. Hence there exists a real number $\lambda >= 0$ such that $Tv = \lambda v$. 
 
 Let $R$ be a positive square root of $T$. We will prove that $Rv = \sqrt{\lambda} v$. This will imply that the behavior of $R$ on the eigenvectors of $T$ is uniquely determined. Because there is a basis of $V$ consisting of eigenvectors of $T$ (by the spectral theorem), this will imply that $R$ is uniquely determined.
 
@@ -96,7 +96,7 @@ Because $e_1, ..., e_n$ is a basis of $V$, we can write
 
 $$v = a_1 e_1 + ... + a_n e_n$$
 
-for some numbers $a_1, ..., a_n \in F$. Thus
+for some numbers $a_1, ..., a_n \in \mathbb{F}$. Thus
 
 $$Rv = a_1 \sqrt{\lambda_1} e_1 + ... a_n \sqrt{\lambda_n} e_n.$$
 
@@ -161,7 +161,7 @@ Hence $\sqrt{T} v = 0$. Thus $Tv = \sqrt{T} (\sqrt{T} v) = 0$, as desired.
 
 ## Exercises
 
-### (1) Suppose $T \in L(V)$. Prove that if both $T$ and $-T$ are positive operators, then $T = 0$.
+### (1) Suppose $T \in \mathcal{L}(V)$. Prove that if both $T$ and $-T$ are positive operators, then $T = 0$.
 
 Suppose $T$ and $-T$ are positive operators. Then 
 
@@ -183,7 +183,7 @@ Since $T$ is positive, hence self-adjoint (by definition), $T = 0$ by 7.16.
 
 
 
-### (2) Suppose $T \in L(F^4)$ is the operator whose matrix (with respect to the standard basis) is $M$ (below). Show that $T$ is an invertible positive operator.
+### (2) Suppose $T \in \mathcal{L}(\mathbb{F}^4)$ is the operator whose matrix (with respect to the standard basis) is $M$ (below). Show that $T$ is an invertible positive operator.
 
 $$
 M =
@@ -197,7 +197,7 @@ $$
 
 First note that the matrix is real symmetric, thus $T$ is self-adjoint.
 
-Suppose $(z_1, z_2, z_3, z_4) \in F^4$. We have
+Suppose $(z_1, z_2, z_3, z_4) \in \mathbb{F}^4$. We have
 
 $$
 \begin{aligned}
@@ -230,7 +230,7 @@ Hence $T$ is a positive operator.
 
 Next we want to show that $T$ is invertible.
 
-Suppose $Tv = 0$ for some $v = (z_1, z_2, z_3, z_4) \in F^4$. 
+Suppose $Tv = 0$ for some $v = (z_1, z_2, z_3, z_4) \in \mathbb{F}^4$. 
 
 Then $\langle Tv, v \rangle = 0$, and 
 
@@ -242,11 +242,11 @@ Therefore $T$ is injective. By 3.65, $T$ is invertible.
 
 
 
-### (3) Suppose $n$ is a positive integer and $T \in L(F^n)$ is the operator whose matrix (with respect to the standard basis) consists of all 1's. Show that $T$ is a positive operator.
+### (3) Suppose $n$ is a positive integer and $T \in \mathcal{L}(\mathbb{F}^n)$ is the operator whose matrix (with respect to the standard basis) consists of all 1's. Show that $T$ is a positive operator.
 
 First note that $T$ is self-adjoint because the matrix is real symmetric.
 
-Suppose $z = (z_1, ..., z_n) \in F^n$. We have
+Suppose $z = (z_1, ..., z_n) \in \mathbb{F}^n$. We have
 
 $$
 \begin{aligned}
@@ -277,7 +277,7 @@ Hence $T$ is a positive operator.
 
 
 
-### (4) Suppose $n$ is an integer with $n > 1$. Show that there exists an n-by-n matrix $A$ such that all of the entries of $A$ are positive numbers and $A = A^\ast$, but the operator on $F^n$ whose matrix (with respect to the standard basis) equals $A$ is not a positive operator.
+### (4) Suppose $n$ is an integer with $n > 1$. Show that there exists an n-by-n matrix $A$ such that all of the entries of $A$ are positive numbers and $A = A^\ast$, but the operator on $\mathbb{F}^n$ whose matrix (with respect to the standard basis) equals $A$ is not a positive operator.
 
 Consider the 2-by-2 matrix
 
@@ -319,7 +319,7 @@ By 7.38(b), $T$ is a positive operator.
 
 ### (6) Prove that the sum of two positive operators on $V$ is a positive operator.
 
-Suppose $S, T \in L(V)$ are positive operators. Then $S, T$ are self-adjoint.
+Suppose $S, T \in \mathcal{L}(V)$ are positive operators. Then $S, T$ are self-adjoint.
 
 We have 
 
@@ -339,7 +339,7 @@ Since $S + T$ is self-adjoint, and for all orthonormal basis of $V$, the diagona
 
 
 
-### (7) Suppose $S \in L(V)$ is an invertible positive operator and $T \in L(V)$ is a positive operator. Prove that $S + T$ is invertible.
+### (7) Suppose $S \in \mathcal{L}(V)$ is an invertible positive operator and $T \in \mathcal{L}(V)$ is a positive operator. Prove that $S + T$ is invertible.
 
 Since $S, T$ are positive operators, $\langle Sv, v \rangle \geq 0$ and $\langle Tv, v \rangle \geq 0$ for all $v \in V$.
 
@@ -363,7 +363,7 @@ Therefore $S + T$ is injective. By 3.65, it is invertible.
 
 
 
-### (9) Suppose $T \in L(V)$ is a positive operator and $S \in L(W, V)$. Prove that $S^\ast TS$ is a positive operator on $W$.
+### (9) Suppose $T \in \mathcal{L}(V)$ is a positive operator and $S \in \mathcal{L}(W, V)$. Prove that $S^\ast TS$ is a positive operator on $W$.
 
 Since $T$ is positive, $T$ is self-adjoint. We have 
 
@@ -403,11 +403,11 @@ If $v - w \neq 0$, then -1 would be an eigenvalue of $T$ which contradicts the f
 
 
 
-### (11) Suppose $T$ is a positive operator on $V$ and $U$ is a subspace of $V$ invariant under $T$. Prove that $T|_U \in L(U)$ is a positive operator on $U$.
+### (11) Suppose $T$ is a positive operator on $V$ and $U$ is a subspace of $V$ invariant under $T$. Prove that $T|_U \in \mathcal{L}(U)$ is a positive operator on $U$.
 
 Since $T$ is a positive operator on $V$, $T$ is self-adjoint. 
 
-By exercise (19) from Section 7B, $T|_U \in L(U)$ is self-adjoint.
+By exercise (19) from Section 7B, $T|_U \in \mathcal{L}(U)$ is self-adjoint.
 
 We have
 

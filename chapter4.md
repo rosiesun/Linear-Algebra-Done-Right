@@ -76,25 +76,25 @@ Taking square roots now gives the desired inequality $|w+z|^2 \leq |w| + |z|$.
 
 
 ### 4.5 Definition: zero of a polynomial
-A number $\lambda \in F$ is called a zero (or root) of a polynomial $p \in P(F)$ if 
+A number $\lambda \in \mathbb{F}$ is called a zero (or root) of a polynomial $p \in P(\mathbb{F})$ if 
 
 $$p(\lambda)=0$$.
 
 
 ### 4.6
-Suppose $m$ is a positive integer and $p \in P(F)$ is a polynomial of degree $m$. Suppose $\lambda \in F$. Then $p(\lambda)=0$ if and only if there exists a polynomial $q \in P(F)$ of degree $m-1$ such that 
+Suppose $m$ is a positive integer and $p \in P(\mathbb{F})$ is a polynomial of degree $m$. Suppose $\lambda \in \mathbb{F}$. Then $p(\lambda)=0$ if and only if there exists a polynomial $q \in P(\mathbb{F})$ of degree $m-1$ such that 
 
 $$p(z) = (z - \lambda) q(z)$$
 
-for every $z \in F$.
+for every $z \in \mathbb{F}$.
 
 
 ### 4.8
-Suppose $m$ is a positive integer and $p \in P(F)$ is a polynomial of degree $m$. Then $p$ has at most $m$ zeros in $F$.
+Suppose $m$ is a positive integer and $p \in P(\mathbb{F})$ is a polynomial of degree $m$. Then $p$ has at most $m$ zeros in $\mathbb{F}$.
 
 
 ### 4.9
-Suppose that $p, s \in P(F)$, with $s \neq 0$. Then there exist unique polynomials $q, r \in P(F)$ such that 
+Suppose that $p, s \in P(\mathbb{F})$, with $s \neq 0$. Then there exist unique polynomials $q, r \in P(\mathbb{F})$ such that 
 
 $$p = sq + r$$
 
