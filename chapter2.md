@@ -667,9 +667,14 @@ Assume towards contradiction that not all $a_k, k = 0,...,m$ are 0.
 
 Let $N = \max \\{k: a_k \neq 0\\}$. We can look at the truncated sum $a_0 p_0 + a_1 p_1 + ... + a_N p_N =0$. The terms after $N$ can be dropped because their coefficients are 0.
 
-Then $\deg p_N = N$. Thus $\deg (a_0 p_0 + a_1 p_1 + ... + a_N p_N) = N$. However this is equal to 0 (which has degree 0), which is a contradiction.
+Then $\deg p_N = N$. Each $\deg p_k = k < N$ for $k=0, ..., N-1$. Let $q = a_0 p_0 + a_1 p_1 + ... a_{N-1} p_{N-1}$. Thus 
+
+$$\deg (a_0 p_0 + a_1 p_1 + ... + a_N p_N) = \deg (q + a_N p_N) = N$$ 
+
+However this is equal to the polynomial 0 (which has degree $-\infty$), which is a contradiction.
 
 Hence $p_0, p_1, ..., p_m$ is a linearly independent list. By 2.38 it is a basis of $\mathcal{P}_m(\mathbb{F})$.
+
 
 
 ### (10) Suppose $m$ is a positive integer. For $0 \leq k \leq m$, let $p_k(x) = x^k (1-x)^{m-k}$. Show that $p_0, ..., p_m$ is a basis of $\mathcal{P}_m(\mathbb{F})$. Side note: The basis in this exercise leads to what are called Bernstein polynomials, which are used to approximate continuous functions on [0, 1].
@@ -684,15 +689,16 @@ Evaluating the polynomial at $x=0$, we see that $a_0$ must equal $0$. Now we hav
 
 $$a_1 x (1-x)^{m-1} + a_2 x^2 (1-x)^{m-2} + ... + a_m x^m = 0$$
 
-Note that we can factor out $x$:
+Note that we can factor out $x$. 
 
 $$x (a_1 (1-x)^{m-1} + a_2 x (1-x)^{m-2} + ... + a_m x^{m-1}) = 0$$
 
-Since $p = x \in \mathcal{P}(\mathbb{F})$ is not a zero polynomial, $a_1 (1-x)^{m-1} + a_2 x (1-x)^{m-2} + ... + a_m x^{m-1}$ has to equal 0. Evaluating it at $x=0$, we see that $a_1$ has to equal 0. 
+Since $p = x \in \mathcal{P}(\mathbb{F})$ is not a zero polynomial and the polynomial above equals 0 for all $x \in \mathbb{F}$, $a_1 (1-x)^{m-1} + a_2 x (1-x)^{m-2} + ... + a_m x^{m-1}$ has to equal 0. Evaluating it at $x=0$, we see that $a_1$ has to equal 0. 
 
 Repeating the same argument (factor out $x$ and evaluating at $x=0$), we conclude that $a_k = 0, k = 0, ..., m$.
 
 Hence $p_0, ..., p_m$ is a linearly independent list. By 2.38, it is a basis of $\mathcal{P}_m(\mathbb{F})$.
+
 
 
 ### (13) Suppose $U$ and $W$ are both five-dimensional subspaces of $\mathbb{R}^9$. Prove that $U \cap W \neq \\{0\\}$.
