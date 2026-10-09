@@ -10,15 +10,15 @@ A linear map from a vector space to itself is called an operator.
 
 
 ### 5.2 Definition: invariant subspace
-Suppose $T \in L(V)$. A subspace $U$ of $V$ is called invariant under $T$ if $Tu \in U$ for every $u \in U$.
+Suppose $T \in \mathcal{L}(V)$. A subspace $U$ of $V$ is called invariant under $T$ if $Tu \in U$ for every $u \in U$.
 
 
 ### 5.5 Definition: eigenvalue
-Suppose $T \in L(V)$. A number $\lambda \in F$ is called an eigenvalue of $T$ if there exists $v \in V$ such that $v \neq 0$ and $Tv = \lambda v$.
+Suppose $T \in \mathcal{L}(V)$. A number $\lambda \in \mathbb{F}$ is called an eigenvalue of $T$ if there exists $v \in V$ such that $v \neq 0$ and $Tv = \lambda v$.
 
 
 ### 5.7
-Suppose $V$ is finite-dimensional, $T \in L(V)$, and $\lambda \in F$. Then the following are equivalent. 
+Suppose $V$ is finite-dimensional, $T \in \mathcal{L}(V)$, and $\lambda \in \mathbb{F}$. Then the following are equivalent. 
 
 - $\lambda$ is an eigenvalue of $T$.
 - $T - \lambda I$ is not injective.
@@ -27,11 +27,11 @@ Suppose $V$ is finite-dimensional, $T \in L(V)$, and $\lambda \in F$. Then the f
 
 
 ### 5.8 Definition: eigenvector
-Suppose $T \in L(V)$ and $\lambda \in F$ is an eigenvalue of $T$. A vector $v \in V$ is called an eigenvector of $T$ corresponding to $\lambda$ if $v \neq 0$ and $Tv = \lambda v$.
+Suppose $T \in \mathcal{L}(V)$ and $\lambda \in \mathbb{F}$ is an eigenvalue of $T$. A vector $v \in V$ is called an eigenvector of $T$ corresponding to $\lambda$ if $v \neq 0$ and $Tv = \lambda v$.
 
 
 ### 5.11 
-Suppose $T \in L(V)$. Then every list of eigenvectors of $T$ corresponding to distinct eigenvalues of $T$ is linearly independent.
+Suppose $T \in \mathcal{L}(V)$. Then every list of eigenvectors of $T$ corresponding to distinct eigenvalues of $T$ is linearly independent.
 
 Proof: 
 
@@ -39,7 +39,7 @@ Suppose the desired result is false.
 
 Then there exists a smallest positive integer $m$ such that there exists a linearly dependent list $v_1,...,v_m$ of eigenvectors of $T$ corresponding to distinct eigenvalues $\lambda_1,...,\lambda_m$ of $T$ (note that $m \geq 2$ because an eigenvector is by definition nonzero). 
 
-Thus there exist $a_1,...,a_m \in F$, none of which are 0 (because of the minimality of $m$), such that 
+Thus there exist $a_1,...,a_m \in \mathbb{F}$, none of which are 0 (because of the minimality of $m$), such that 
 
 $$a_1 v_1 + ... + a_m v_m = 0$$
 
@@ -53,41 +53,41 @@ This contradiction completes the proof.
 
 
 ### 5.12
-Suppose $V$ is finite-dimensional. Then each operator on $V$ has at most $dim V$ distinct eigenvalues.
+Suppose $V$ is finite-dimensional. Then each operator on $V$ has at most $\dim V$ distinct eigenvalues.
 
 Proof:
 
-Let $T \in L(V)$. Suppose $\lambda_1, ..., \lambda_m$ are distinct eigenvalues of $T$. Let $v_1, ..., v_m$ be corresponding eigenvectors. Then 5.11 implies that the list $v_1, ..., v_m$ is linearly independent. Thus $m \leq dim V$ (by 2.22), as desired.
+Let $T \in \mathcal{L}(V)$. Suppose $\lambda_1, ..., \lambda_m$ are distinct eigenvalues of $T$. Let $v_1, ..., v_m$ be corresponding eigenvectors. Then 5.11 implies that the list $v_1, ..., v_m$ is linearly independent. Thus $m \leq \dim V$ (by 2.22), as desired.
 
 
 ### 5.13 Notation
-Suppose $T \in L(V)$ and $m$ is a positive integer.
+Suppose $T \in \mathcal{L}(V)$ and $m$ is a positive integer.
 
-- $T^m \in L(V)$ is defined by $T^m = T ... T$ ($m$ times).
+- $T^m \in \mathcal{L}(V)$ is defined by $T^m = T ... T$ ($m$ times).
 - $T^0$ is defined to be the identity operator $I$ on $V$.
-- If $T$ is invertible with inverse $T^{-1}$, then $T^{-m} \in L(V)$ is defined by $T^{-m} = (T^{-1})^m$.
+- If $T$ is invertible with inverse $T^{-1}$, then $T^{-m} \in \mathcal{L}(V)$ is defined by $T^{-m} = (T^{-1})^m$.
 
 
 ### 5.14
-Suppose $T \in L(V)$ and $p \in P(F)$ is a polynomial given by 
+Suppose $T \in \mathcal{L}(V)$ and $p \in P(\mathbb{F})$ is a polynomial given by 
 
 $$p(z) = a_0 + a_1 z + a_2 z^2 + ... + a_m z^m$$
 
-for all $z \in F$. Then $p(T)$ is the operator on $V$ defined by
+for all $z \in \mathbb{F}$. Then $p(T)$ is the operator on $V$ defined by
 
 $$p(T) = a_0 I + a_1 T + a_2 T^2 + ... + a_m T^m$$
 
 
 ### 5.16 Definition: product of polynomials
-If $p, q \in P(F)$, then $pq \in P(F)$ is the polynomial defined by
+If $p, q \in P(\mathbb{F})$, then $pq \in P(\mathbb{F})$ is the polynomial defined by
 
 $$(pq)(z) = p(z) q(z)$$
 
-for all $z \in F$.
+for all $z \in \mathbb{F}$.
 
 
 ### 5.17
-Suppose $p, q \in P(F)$ and $T \in L(V)$. Then
+Suppose $p, q \in P(\mathbb{F})$ and $T \in \mathcal{L}(V)$. Then
 
 - $(pq)(T) = p(T) q(T)$
 - $p(T) q(T) = q(T) p(T)$
@@ -95,7 +95,7 @@ Suppose $p, q \in P(F)$ and $T \in L(V)$. Then
 
 
 ### 5.18
-Suppose $T \in L(V)$ and $p \in P(F)$. Then $null p(T)$ and $range p(T)$ are invariant under $T$.
+Suppose $T \in \mathcal{L}(V)$ and $p \in P(\mathbb{F})$. Then $null p(T)$ and $range p(T)$ are invariant under $T$.
 
 Proof:
 
@@ -116,7 +116,7 @@ Hence $Tu \in range p(T)$. Thus $range p(T)$ is invariant under $T$, as desired.
 
 ## Exercises
 
-### (1) Suppose $T \in L(V)$ and $U$ is a subspace of $V$. 
+### (1) Suppose $T \in \mathcal{L}(V)$ and $U$ is a subspace of $V$. 
 
 #### (a) Prove that if $U \subseteq null T$, then $U$ is invariant under $T$.
 
@@ -128,7 +128,7 @@ Let $u \in U$. Then $Tu \in range T \subseteq U$. Therefore $U$ is invariant und
 
 
 
-### (2) Suppose that $T \in L(V)$ and $V_1,...,V_m$ are subspaces of $V$ invariant under $T$. Prove that $V_1 + ... + V_m$ is invariant under $T$.
+### (2) Suppose that $T \in \mathcal{L}(V)$ and $V_1,...,V_m$ are subspaces of $V$ invariant under $T$. Prove that $V_1 + ... + V_m$ is invariant under $T$.
 
 Let $v \in V_1 + ... + V_m$. Then we can write $v = v_1 + ... + v_m$ for some $v_1 \in V_1, ..., v_m \in V_m$. Then $Tv = T(v_1 + ... + v_m) = Tv_1 + ... + Tv_m$. By assumption, $V_1,...,V_m$ are invariant under $T$, so $Tv_1 \in V_1, ..., Tv_m \in V_m$. Thus $Tv \in V_1 + ... + V_m$, and we conclude that $V_1 + ... + V_m$ is invariant under $T$.
 
@@ -148,13 +148,13 @@ By assumption, $u \in U$ implies $Tu \in U$. Since $Tu = v$, $v \in U$. But $v \
 
 
 
-### (5) Suppose $T \in L(\mathbb{R}^2)$ is defined by $T(x,y) = (-3y, x)$. Find the eigenvalues of $T$.
+### (5) Suppose $T \in \mathcal{L}(\mathbb{R}^2)$ is defined by $T(x,y) = (-3y, x)$. Find the eigenvalues of $T$.
 
 There are no real eigenvalues.
 
 
 
-### (6) Define $T \in L(F^2)$ by $T(w,z) = (z,w)$. Find all eigenvalues and eigenvectors of $T$.
+### (6) Define $T \in \mathcal{L}(\mathbb{F}^2)$ by $T(w,z) = (z,w)$. Find all eigenvalues and eigenvectors of $T$.
 
 Eigenvalue 1, eigenvectors $\\{(w,z) \in \mathbb{R}^2: w=z\\}$
 
@@ -162,7 +162,7 @@ Eigenvalue -1, eigenvectors $\\{(w,z) in \mathbb{R}^2: w = -z\\}$.
 
 
 
-### (7) Define $T \in L(F^3)$ by $T(z_1,z_2,z_3) = (2z_2, 0, 5z_3)$. Find all eigenvalues and eigenvectors of $T$.
+### (7) Define $T \in \mathcal{L}(\mathbb{F}^3)$ by $T(z_1,z_2,z_3) = (2z_2, 0, 5z_3)$. Find all eigenvalues and eigenvectors of $T$.
 
 Eigenvalue 5, eigenvectors $span(z_3)$.
 
@@ -170,7 +170,7 @@ Eigenvalue 0, eigenvectors $span(z_1)$.
 
 
 
-### (8) Suppose $P \in L(V)$ is such that $P^2 = P$. Prove that if $\lambda$ is an eigenvalue of $P$, then $\lambda = 0$ or $\lambda = 1$.
+### (8) Suppose $P \in \mathcal{L}(V)$ is such that $P^2 = P$. Prove that if $\lambda$ is an eigenvalue of $P$, then $\lambda = 0$ or $\lambda = 1$.
 
 Suppose $\lambda$ is an eigenvalue of $P$. Then $Pv = \lambda v$ for some nonzero $v \in V$. Applying $P$ to both sides, we have 
 
@@ -196,7 +196,7 @@ Since $v \neq 0$, we must have $\lambda (\lambda - 1) = 0$. Thus $\lambda = 1$ o
 
 ### (11)
 
-### (12) Suppose $V = U \oplus W$, where $U$ and $W$ are nonzero subspaces of $V$. Define $P \in L(V)$ by $P(u+w) = u$ for each $u \in U, w \in W$. Find all eigenvalues and eigenvectors of $P$.
+### (12) Suppose $V = U \oplus W$, where $U$ and $W$ are nonzero subspaces of $V$. Define $P \in \mathcal{L}(V)$ by $P(u+w) = u$ for each $u \in U, w \in W$. Find all eigenvalues and eigenvectors of $P$.
 
 Eigenvalue 1, eigenvectors $u \in U, u \neq 0$.
 
@@ -204,7 +204,7 @@ Eigenvalue 0, eigenvectors $w \in W, w \neq 0$.
 
 
 
-### (13) Suppose $T \in L(V)$. Suppose $S \in L(V)$ is invertible.
+### (13) Suppose $T \in \mathcal{L}(V)$. Suppose $S \in \mathcal{L}(V)$ is invertible.
 
 #### (a) Prove that $T$ and $S^{-1} T S$ have the same eigenvalues.
 
@@ -229,19 +229,19 @@ $$T(x_1, x_2, x_3, x_4) = (-x_2, x_1, -x_4, x_3)$$
 
 
 
-### (15) Suppose $V$ is finite-dimensional, $T \in L(V)$, and $\lambda \in F$. Show that $\lambda$ is an eigenvalue of $T$ if and only if $\lambda$ is an eigenvalue of the dual operator $T' \in L(V')$.
+### (15) Suppose $V$ is finite-dimensional, $T \in \mathcal{L}(V)$, and $\lambda \in \mathbb{F}$. Show that $\lambda$ is an eigenvalue of $T$ if and only if $\lambda$ is an eigenvalue of the dual operator $T' \in \mathcal{L}(V')$.
 
 $\Rightarrow$
-Suppose $\lambda \in F$ is an eigenvalue of $T$. Then $T - \lambda I$ is not surjective by 5.7. From 3.129, we have $T' - \lambda I'$ is not injective. Thus $\lambda$ is an eigenvalue of $T'$.
+Suppose $\lambda \in \mathbb{F}$ is an eigenvalue of $T$. Then $T - \lambda I$ is not surjective by 5.7. From 3.129, we have $T' - \lambda I'$ is not injective. Thus $\lambda$ is an eigenvalue of $T'$.
 
 $\Leftarrow$
-Suppose $\lambda \in F$ is an eigenvalue of $T'$. Then $T' - \lambda I'$ is not surjective by 5.7. From 3.131, we have $T - \lambda I$ is not injective. Thus $\lambda$ is an eigenvalue of $T$.
+Suppose $\lambda \in \mathbb{F}$ is an eigenvalue of $T'$. Then $T' - \lambda I'$ is not surjective by 5.7. From 3.131, we have $T - \lambda I$ is not injective. Thus $\lambda$ is an eigenvalue of $T$.
 
 
 
-### (16) Suppose $v_1, ..., v_n$ is a basis of $V$ and $T \in L(V)$. Prove that if $\lambda$ is an eigenvalue of $T$, then $|\lambda| \leq n max { |M(T)_{j,k} }$ where $1 \leq 1, j \leq n$, $M(T)_{j,k}$ denotes the entry in row j, column k of the matrix of $T$ with respect to the basis $v_1, ..., v_n$.
+### (16) Suppose $v_1, ..., v_n$ is a basis of $V$ and $T \in \mathcal{L}(V)$. Prove that if $\lambda$ is an eigenvalue of $T$, then $|\lambda| \leq n max { |M(T)_{j,k} }$ where $1 \leq 1, j \leq n$, $M(T)_{j,k}$ denotes the entry in row j, column k of the matrix of $T$ with respect to the basis $v_1, ..., v_n$.
 
-Suppose $\lambda \in F$ is an eigenvalue of $T$. Suppose $v \in V, v \neq 0$ is the corresponding eigenvector of $T$. Then $Tv = \lambda v$. Since $v_1, ..., v_n$ is a basis of $V$, we can write $v = a_1 v_1 + ... + a_n v_n$ for some $a_1, ..., a_n \in F$. Then 
+Suppose $\lambda \in \mathbb{F}$ is an eigenvalue of $T$. Suppose $v \in V, v \neq 0$ is the corresponding eigenvector of $T$. Then $Tv = \lambda v$. Since $v_1, ..., v_n$ is a basis of $V$, we can write $v = a_1 v_1 + ... + a_n v_n$ for some $a_1, ..., a_n \in \mathbb{F}$. Then 
 
 $$Tv = a_1 Tv_1 + ... + a_n Tv_n$$
 
@@ -302,9 +302,9 @@ $$|\lambda| \leq n |M'| .$$
 
 
 
-### (21) Suppose $T \in L(V)$ is invertible.
+### (21) Suppose $T \in \mathcal{L}(V)$ is invertible.
 
-#### (a) Suppose $\lambda \in F$ with $\lambda \neq 0$. Prove that $\lambda$ is an eigenvalue of $T$ if and only if $1/\lambda$ is an eigenvalue of $T^{-1}$.
+#### (a) Suppose $\lambda \in \mathbb{F}$ with $\lambda \neq 0$. Prove that $\lambda$ is an eigenvalue of $T$ if and only if $1/\lambda$ is an eigenvalue of $T^{-1}$.
 
 $\Rightarrow$
 Let $\lambda$ be an eigenvalue of $T$ corresponding to some $v \in V$. Then $Tv = \lambda v$. Applying $T^{-1}$ to both sides, we have
@@ -335,7 +335,7 @@ From the equations from (a), they have the same eigenvectors.
 
 
 
-### (22) Suppose $T \in L(V)$ and there exist nonzero vectors $u$ and $w$ in $V$ such that $Tu = 3w$ and $Tw = 3u$. Prove that 3 or -3 is an eigenvalue of $T$.
+### (22) Suppose $T \in \mathcal{L}(V)$ and there exist nonzero vectors $u$ and $w$ in $V$ such that $Tu = 3w$ and $Tw = 3u$. Prove that 3 or -3 is an eigenvalue of $T$.
 
 Suppose $u, w \in V$ and $u, w \neq 0$. We have
 
@@ -355,7 +355,7 @@ Thus -3 is an eigenvalue of $T$ and the corresponding eigenvectors are $u$ and $
 
 
 
-### (23) Suppose $V$ is finite-dimensional and $S,T \in L(V)$. Prove that $ST$ and $TS$ have the same eigenvalues.
+### (23) Suppose $V$ is finite-dimensional and $S,T \in \mathcal{L}(V)$. Prove that $ST$ and $TS$ have the same eigenvalues.
 
 Let $\lambda$ be an eigenvalue of $ST$ corresponding to some $v \in V, v \neq 0$. Then 
 
@@ -377,11 +377,11 @@ The other direction follows by switching the order of $S$ and $T$.
 
 
 
-### (24) Suppose $A$ is an n-by-n matrix with entries in $F$. Define $T \in L(F^n)$ by $Tx = Ax$, where elements of $F^n$ are thought of as n-by-1 column vectors.
+### (24) Suppose $A$ is an n-by-n matrix with entries in $\mathbb{F}$. Define $T \in \mathcal{L}(\mathbb{F}^n)$ by $Tx = Ax$, where elements of $\mathbb{F}^n$ are thought of as n-by-1 column vectors.
 
 #### (a) Suppose the sum of the entries in each row of $A$ equals 1. Prove that 1 is an eigenvalue of $T$.
 
-Suppose $e_1, ..., e_n$ is the standard basis of $F^n$. Consider $x = e_1 + ... + e_n, x \neq 0$. Then using matrix multiplication, we have
+Suppose $e_1, ..., e_n$ is the standard basis of $\mathbb{F}^n$. Consider $x = e_1 + ... + e_n, x \neq 0$. Then using matrix multiplication, we have
 
 $$
 A  
@@ -417,11 +417,11 @@ From exercise 15, we showed that $\lambda$ is an eigenvalue of $T$ if and only i
 
 
 
-### (25) Suppose $T \in L(V)$ and $u, w$ are eigenvectors of $T$ such that $u+w$ is also an eigenvector of $T$. Prove that $u$ and $w$ are eigenvectors of $T$ corresponding to the same eigenvalue.
+### (25) Suppose $T \in \mathcal{L}(V)$ and $u, w$ are eigenvectors of $T$ such that $u+w$ is also an eigenvector of $T$. Prove that $u$ and $w$ are eigenvectors of $T$ corresponding to the same eigenvalue.
 
-Since $u, w$ are eigenvectors of $T$, there is some $\lambda_1, \lambda_2 \in F$ such that $Tu = \lambda_1 u$ and $Tw = \lambda_2 w$.
+Since $u, w$ are eigenvectors of $T$, there is some $\lambda_1, \lambda_2 \in \mathbb{F}$ such that $Tu = \lambda_1 u$ and $Tw = \lambda_2 w$.
 
-Since $u+w$ is an eigenvector of $T$, some is some $\lambda_3 \in F$ such that $T(u+w) = \lambda_3 (u+w)$.
+Since $u+w$ is an eigenvector of $T$, some is some $\lambda_3 \in \mathbb{F}$ such that $T(u+w) = \lambda_3 (u+w)$.
 
 Assume towards contradiction that $\lambda_1 \neq \lambda_2$. We have 
 
@@ -437,7 +437,7 @@ Therefore we conclude that $\lambda_1 = \lambda_2$.
 
 
 
-### (26) Suppose $T \in L(V)$ is such that every nonzero vector in $V$ is an eigenvector of $T$. Prove that $T$ is a scalar multiple of the identity operator.
+### (26) Suppose $T \in \mathcal{L}(V)$ is such that every nonzero vector in $V$ is an eigenvector of $T$. Prove that $T$ is a scalar multiple of the identity operator.
 
 Let $u, w \in V, u, w \neq 0$. Then $u, w$ are eigenvectors of $T$. 
 
@@ -451,11 +451,11 @@ Therefore every vector in $V$ has the same eigenvalue. We conclude that $T = \la
 
 
 
-### (27) Suppose that $V$ is finite-dimensional and $k \in \\{1,...,dimV - 1\\}$. Suppose $T \in L(V)$ is such that every subspace of $V$ of dimension $k$ is invariant under $T$. Prove that $T$ is a scalar multiple of the identity operator.
+### (27) Suppose that $V$ is finite-dimensional and $k \in \\{1,...,dimV - 1\\}$. Suppose $T \in \mathcal{L}(V)$ is such that every subspace of $V$ of dimension $k$ is invariant under $T$. Prove that $T$ is a scalar multiple of the identity operator.
 
-Suppose $dim V = n$.
+Suppose $\dim V = n$.
 
-If $k=1$, then every 1-dimensional subspace $U$ is invariant under $T$. For any $u \in U$, $Tu \in U$. Then $Tu = \lambda u$ for some $\lambda \in F$. Then $u$ is an eigenvector of $T$. Since every 1-dimensional subspace $U$ is invariant, every nonzero vector is an eigenvector. We can apply exercise (26) and conclude that $T$ is a scalar multiple of the identity operator.
+If $k=1$, then every 1-dimensional subspace $U$ is invariant under $T$. For any $u \in U$, $Tu \in U$. Then $Tu = \lambda u$ for some $\lambda \in \mathbb{F}$. Then $u$ is an eigenvector of $T$. Since every 1-dimensional subspace $U$ is invariant, every nonzero vector is an eigenvector. We can apply exercise (26) and conclude that $T$ is a scalar multiple of the identity operator.
 
 If $k \neq 1$, assume towards contradiction that there exists $v \in V$ such that $span(v)$ is not invariant under $T$. Then $Tv \notin span(v)$, so $v, Tv$ are linearly independent. Construct two k-dimensional subspaces 
 
@@ -469,30 +469,30 @@ By hypothesis, $U_1$ and $U_2$ are invariant under $T$. Since $v \in U_2$, $Tv \
 
 
 
-### (28) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that $T$ has at most $1 + dim range T$ distinct eigenvalues.
+### (28) Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V)$. Prove that $T$ has at most $1 + \dim range T$ distinct eigenvalues.
 
-By 5.12, $T$ has at most $dim V$ distinct eigenvalues. 
+By 5.12, $T$ has at most $\dim V$ distinct eigenvalues. 
 
-If $dim null T = 0$, then $dim V = dim range T$, so $T$ has at most $dim range T$ eigenvalues.
+If $\dim null T = 0$, then $\dim V = \dim range T$, so $T$ has at most $\dim range T$ eigenvalues.
 
-If $dim null T \neq 0$, then 0 is an eigenvalue of $T$. $range T$ is invariant under $T$ by 5.4. Applying 5.12 to the restriction $T:range T \to range T$, $T|_{range T}$ has at most $dim range T$ distinct eigenvaluges. Therefore $T$ has at most $1 + dim range T$ eigenvalues.
-
-
-
-### (31) Give an example of $T \in L(\mathbb{R}^2)$ such that $T^4 = -I$.
+If $\dim null T \neq 0$, then 0 is an eigenvalue of $T$. $range T$ is invariant under $T$ by 5.4. Applying 5.12 to the restriction $T:range T \to range T$, $T|_{range T}$ has at most $\dim range T$ distinct eigenvaluges. Therefore $T$ has at most $1 + \dim range T$ eigenvalues.
 
 
-### (32) Suppose $T \in L(V)$ has no eigenvalues and $T^4 = I$. Prove that $T^2 = -I$.
+
+### (31) Give an example of $T \in \mathcal{L}(\mathbb{R}^2)$ such that $T^4 = -I$.
 
 
-### (33) Suppose $T \in L(V)$ and $m$ is a positive integer.
+### (32) Suppose $T \in \mathcal{L}(V)$ has no eigenvalues and $T^4 = I$. Prove that $T^2 = -I$.
+
+
+### (33) Suppose $T \in \mathcal{L}(V)$ and $m$ is a positive integer.
 
 #### (a) Prove that $T$ is injective if and only if $T^m$ is injective.
 
 $\Rightarrow$
 Suppose $T$ is injective. 
 
-First we want to show that compositions of injective maps are injective. Let $T_1, T_2 \in L(V)$ be injective linear maps. Suppose $T_1 T_2 v = 0$. Then $T_2 v = 0$ (from the injectivity of $T_1$). Then we have $v = 0$ (from the injectivity of $T_2$). Thus $T_1 T_2$ is injective. 
+First we want to show that compositions of injective maps are injective. Let $T_1, T_2 \in \mathcal{L}(V)$ be injective linear maps. Suppose $T_1 T_2 v = 0$. Then $T_2 v = 0$ (from the injectivity of $T_1$). Then we have $v = 0$ (from the injectivity of $T_2$). Thus $T_1 T_2$ is injective. 
 
 We can apply what we just showed to $T^m$ and conclude that $T^m$ is injective.
 
@@ -507,7 +507,7 @@ Suppose $Tv = 0$. Applying $T$ m times, we have $T^m v = 0$. Since $T^m$ is inje
 $\Rightarrow$
 Suppose $T$ is surjective.
 
-First we want to show that compositions of surjective maps are surjective. Let $T_1, T_2 \in L(V)$ be surjective linear maps. Let $w \in V$. Since $T_1$ is surjective, there exists $u \in V$ such that $T_1 u = w$. Since $T_2$ is surjective, there exists $v \in V$ such that $T_2 v = u$. Then $T_1 T_2 v = T_1 u = w$. Therefore $w \in range (T_1 T_2)$. Hence $T_1 T_2$ is surjective.
+First we want to show that compositions of surjective maps are surjective. Let $T_1, T_2 \in \mathcal{L}(V)$ be surjective linear maps. Let $w \in V$. Since $T_1$ is surjective, there exists $u \in V$ such that $T_1 u = w$. Since $T_2$ is surjective, there exists $v \in V$ such that $T_2 v = u$. Then $T_1 T_2 v = T_1 u = w$. Therefore $w \in range (T_1 T_2)$. Hence $T_1 T_2$ is surjective.
 
 We can apply what we just showed to $T^m$ and conclude that $T^m$ is surjective.
 
@@ -518,24 +518,56 @@ Let $v \in V$. Then there exists some $u \in V$ such that $T^m u = v$. We can wr
 
 
 
-### (34) Suppose $V$ is finite-dimensional and $v_1,...,v_m \in V$. Prove that the list $v_1,...,v_m$ is linearly independent if and only if there exists $T \in L(V)$ such that $v_1,...,v_m$ are eigenvectors of $T$ corresponding to distinct eigenvalues.
+### (34) Suppose $V$ is finite-dimensional and $v_1,...,v_m \in V$. Prove that the list $v_1,...,v_m$ is linearly independent if and only if there exists $T \in \mathcal{L}(V)$ such that $v_1,...,v_m$ are eigenvectors of $T$ corresponding to distinct eigenvalues.
 
 $\Leftarrow$
-Suppose there exists $T \in L(V)$ such that $v_1,...,v_m$ are eigenvectors of $T$ corresponding to distinct eigenvalues. 
+Suppose there exists $T \in \mathcal{L}(V)$ such that $v_1,...,v_m$ are eigenvectors of $T$ corresponding to distinct eigenvalues. 
 
 Then by 5.11, $v_1,...,v_m$ are linearly independent. 
 
 $\Rightarrow$
 Suppose $v_1,...,v_m$ is linearly independent. 
 
-Extend to a basis $v_1,...,v_m, w_1,...,w_n$ of $V$. Define $T \in L(V)$ such that $Tv_i = \lambda_i v_i, i=1,...,m$, $\lambda_i$ all distinct. $Tw_j = 0, j = 1,...,n$. 
+Extend to a basis $v_1,...,v_m, w_1,...,w_n$ of $V$. Define $T \in \mathcal{L}(V)$ such that $Tv_i = \lambda_i v_i, i=1,...,m$, $\lambda_i$ all distinct. $Tw_j = 0, j = 1,...,n$. 
 
 
 
-### (37) Suppose $V$ is finite-dimensional and $T \in L(V)$. Define $A \in L(L(V))$ by $A(S) = TS$ for each $S \in L(V)$. Prove that the set of eigenvalues of $T$ equals the set of eigenvalues of $A$.
+### (35) Suppose that $\lambda_1, ..., \lambda_n$ is a list of distinct real numbers. Prove that the list $e^{\lambda_1 x}, ..., e^{\lambda_n x}$ is linearly independent in the vector space of real-valued functions on $\mathbb{R}$. Hint: Let $V = span(e^{\lambda_1 x}, ..., e^{\lambda_n x})$, and define an operator $D \in \mathcal{L}(V)$ by $Df = f'$. Find eigenvalues and eigenvectors of $D$.
+
+Let $V = span(e^{\lambda_1 x}, ..., e^{\lambda_n x})$. Define $D \in \mathcal{L}(V)$ by $Df = f'$. 
+
+For $k = 1, ..., n$, $D e^{\lambda_k x} = \lambda_k e^{\lambda_k x}$.
+
+Note that $D$ does not leave the span:
+
+$$D (\sum_{k=1}^n a_k e^{\lambda_k x} ) = \sum_{k=1}^n a_k \lambda_k e^{\lambda_k x} \in V$$
+
+Since $e^{\lambda_k x} \neq 0 \forall x \in \mathbb{R}$, we see that each $e^{\lambda_k x}$ is an eigenvector with the corresponding eigenvalue $\lambda_k$. 
+
+Since $\lambda_1, ..., \lambda_n$ is a list of distinct real numbers, by 5.11, $e^{\lambda_1 x}, ..., e^{\lambda_n x}$ is a linearly independent list.
 
 
-### (38) Suppose $V$ is finite-dimensional, $T \in L(V)$, and $U$ is a subspace of $V$ invariant under $T$. The quotient operator $T/U \in L(V/U)$ is defined by $(T/U)(v + U) = Tv + U$ for each $v \in V$. 
+
+### (36) Suppose that $\lambda_1, ..., \lambda_n$ is a list of distinct positive numbers. Prove that the list $\cos (\lambda_1 x), ..., \cos (\lambda_n x)$ is linearly independent in the vector space of real-valued functions on $\mathbb{R}$.
+
+Same argument as Exercise (35). Let $V = span(\cos (\lambda_1 x), ..., \cos (\lambda_n x))$. Define $D^2 \in \mathcal{L}(V)$ by $D^2 f = f''$. 
+
+For $k = 1, ..., n$, $D^2 \cos (\lambda_k x) = -\lambda_k^2 \cos(\lambda_k x)$.
+
+Note that $D^2$ does not leave the span:
+
+$$D^2 (\sum_{k=1}^n a_k \cos(\lambda_k x) ) = \sum_{k=1}^n -a_k \lambda_k^2 \cos (\lambda_k x) \in V$$
+
+Since $\cos (\lambda_k x)$ is not the zero function, we see that each $\cos (\lambda_k x)$ is an eigenvector with the corresponding eigenvalue $-\lambda_k^2$.
+
+Since $\lambda_1, ..., \lambda_n$ are distinct positive numbers, $-\lambda_1^2, ..., -\lambda_n^2$ is a list of distinct real numbers. By 5.11, $\cos (\lambda_1 x), ..., \cos (\lambda_n x)$ is a linearly independent list.
+
+
+
+### (37) Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V)$. Define $A \in \mathcal{L}(\mathcal{L}(V))$ by $A(S) = TS$ for each $S \in \mathcal{L}(V)$. Prove that the set of eigenvalues of $T$ equals the set of eigenvalues of $A$.
+
+
+### (38) Suppose $V$ is finite-dimensional, $T \in \mathcal{L}(V)$, and $U$ is a subspace of $V$ invariant under $T$. The quotient operator $T/U \in \mathcal{L}(V/U)$ is defined by $(T/U)(v + U) = Tv + U$ for each $v \in V$. 
 
 #### (a) Show that the definition of $T/U$ makes sense (which requires using the condition that $U$ is invariant under $T$) and show that $T/U$ is an operator on $V/U$.
 
@@ -561,7 +593,7 @@ $$
 \end{aligned}
 $$
 
-Suppose $v + U \in V/U, \lambda \in F$. Then 
+Suppose $v + U \in V/U, \lambda \in \mathbb{F}$. Then 
 
 $$
 \begin{aligned}
@@ -578,7 +610,7 @@ Thus $T/U$ satisfies additivity and homogeneity. Since $(T/U): V/U \to V/U$, $T/
 
 #### (b) Show that each eigenvalue of $T/U$ is an eigenvalue of $T$.
 
-Suppose $\lambda \in F$ is an eigenvalue of $T/U$. Then there exists $v + U \in V/U$, $v + U \neq 0 + U$ such that 
+Suppose $\lambda \in \mathbb{F}$ is an eigenvalue of $T/U$. Then there exists $v + U \in V/U$, $v + U \neq 0 + U$ such that 
 
 $$(T/U)(v + U) = \lambda (v+ U).$$
 
@@ -600,6 +632,6 @@ Since $Tv - \lambda v \in U$, there exists some $w \in U$ such that $(T - \lambd
 
 
 
-### (39) Suppose $V$ is finite-dimensional and $T \in L(V)$. Prove that $T$ has an eigenvalue if and only if there exists a subspace of $V$ of dimension $dim V - 1$ that is invariant under $T$.
+### (39) Suppose $V$ is finite-dimensional and $T \in \mathcal{L}(V)$. Prove that $T$ has an eigenvalue if and only if there exists a subspace of $V$ of dimension $\dim V - 1$ that is invariant under $T$.
 
 
